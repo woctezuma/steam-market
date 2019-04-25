@@ -24,16 +24,16 @@ TODO
 
 <!-- Definitions -->
 
-[build]: <https://travis-ci.org/woctezuma/steam-cut>
-[build-image]: <https://travis-ci.org/woctezuma/steam-cut.svg?branch=master>
+[build]: <https://travis-ci.org/woctezuma/steam-market>
+[build-image]: <https://travis-ci.org/woctezuma/steam-market.svg?branch=master>
 
-[pyup]: <https://pyup.io/repos/github/woctezuma/steam-cut/>
-[dependency-image]: <https://pyup.io/repos/github/woctezuma/steam-cut/shield.svg>
-[python3-image]: <https://pyup.io/repos/github/woctezuma/steam-cut/python-3-shield.svg>
+[pyup]: <https://pyup.io/repos/github/woctezuma/steam-market/>
+[dependency-image]: <https://pyup.io/repos/github/woctezuma/steam-market/shield.svg>
+[python3-image]: <https://pyup.io/repos/github/woctezuma/steam-market/python-3-shield.svg>
 
-[codecov]: <https://codecov.io/gh/woctezuma/steam-cut>
-[codecov-image]: <https://codecov.io/gh/woctezuma/steam-cut/branch/master/graph/badge.svg>
+[codecov]: <https://codecov.io/gh/woctezuma/steam-market>
+[codecov-image]: <https://codecov.io/gh/woctezuma/steam-market/branch/master/graph/badge.svg>
 
-[codacy]: <https://www.codacy.com/app/woctezuma/steam-cut>
-[codacy-image]: <https://api.codacy.com/project/badge/Grade/a057682969e24d5790ca2e4fa8bfd1b1>
+[codacy]: <https://www.codacy.com/app/woctezuma/steam-market>
+[codacy-image]: <https://api.codacy.com/project/badge/Grade/TODO>
 
