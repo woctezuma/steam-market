@@ -59,6 +59,7 @@ def get_listing_details(listing_hash=None, currency_symbol='€'):
         price_values = [l for l in tokens if currency_symbol in l]
 
         if len(price_headers) > 0 and len(price_headers) != 3:
+            print('Unexpected number of price headers = {}. Likely due to zero sell order.'.format(len(price_headers)))
             print(price_headers)
 
         try:
