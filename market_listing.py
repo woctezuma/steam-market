@@ -14,6 +14,7 @@ from pathlib import Path
 import requests
 
 from market_search import load_all_listings
+from personal_info import get_steam_cookie, get_cookie_dict
 from utils import get_listing_details_output_file_name
 
 
@@ -37,24 +38,40 @@ def get_listing_parameters():
     return params
 
 
-def get_steam_api_rate_limits_for_market_listing():
+def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
     # Objective: return the rate limits of Steam API for the market.
 
-    rate_limits = {
-        'max_num_queries': 25,
-        'cooldown': (5 * 60) + 10,  # 5 minutes plus a cushion
-    }
+    if has_secured_cookie:
+
+        rate_limits = {
+            'max_num_queries': 50,
+            'cooldown': (1 * 60) + 10,  # 1 minute plus a cushion
+        }
+
+    else:
+
+        rate_limits = {
+            'max_num_queries': 25,
+            'cooldown': (5 * 60) + 10,  # 5 minutes plus a cushion
+        }
 
     return rate_limits
 
 
-def get_listing_details(listing_hash=None, currency_symbol='€'):
+def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=None):
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash)
     req_data = get_listing_parameters()
 
-    resp_data = requests.get(url, params=req_data)
+    has_secured_cookie = bool(cookie_value is not None)
+
+    if has_secured_cookie:
+        cookie = get_cookie_dict(cookie_value)
+        resp_data = requests.get(url, params=req_data, cookies=cookie)
+    else:
+        resp_data = requests.get(url, params=req_data)
+
     status_code = resp_data.status_code
 
     if status_code == 200:
@@ -87,7 +104,10 @@ def get_listing_details(listing_hash=None, currency_symbol='€'):
 
 
 def get_listing_details_batch(listing_hashes):
-    rate_limits = get_steam_api_rate_limits_for_market_listing()
+    cookie_value = get_steam_cookie()
+    has_secured_cookie = bool(cookie_value is not None)
+
+    rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
 
     all_listing_details = dict()
     num_listings = len(listing_hashes)
@@ -99,7 +119,7 @@ def get_listing_details_batch(listing_hashes):
         if count + 1 % 100 == 0:
             print('[{}/{}]'.format(count + 1, num_listings))
 
-        listing_details, status_code = get_listing_details(listing_hash=listing_hash)
+        listing_details, status_code = get_listing_details(listing_hash=listing_hash, cookie_value=cookie_value)
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']

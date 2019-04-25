@@ -7,6 +7,7 @@ from pathlib import Path
 
 import requests
 
+from personal_info import get_steam_cookie, get_cookie_dict
 from utils import get_listing_output_file_name
 
 
@@ -28,19 +29,31 @@ def get_search_parameters(start_index=0, delta_index=100):
     return params
 
 
-def get_steam_api_rate_limits_for_market_search():
+def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
     # Objective: return the rate limits of Steam API for the market.
 
-    rate_limits = {
-        'max_num_queries': 23,
-        'cooldown': (5 * 60) + 10,  # 5 minutes plus a cushion
-    }
+    if has_secured_cookie:
+
+        rate_limits = {
+            'max_num_queries': 50,
+            'cooldown': (1 * 60) + 10,  # 1 minute plus a cushion
+        }
+
+    else:
+
+        rate_limits = {
+            'max_num_queries': 20,
+            'cooldown': (5 * 60) + 10,  # 5 minutes plus a cushion
+        }
 
     return rate_limits
 
 
 def get_all_listings(all_listings=None):
-    rate_limits = get_steam_api_rate_limits_for_market_search()
+    cookie_value = get_steam_cookie()
+    has_secured_cookie = bool(cookie_value is not None)
+
+    rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
     if all_listings is None:
         all_listings = dict()
@@ -65,7 +78,11 @@ def get_all_listings(all_listings=None):
             time.sleep(cooldown_duration)
             query_count = 0
 
-        resp_data = requests.get(url, params=req_data)
+        if has_secured_cookie:
+            cookie = get_cookie_dict(cookie_value)
+            resp_data = requests.get(url, params=req_data, cookies=cookie)
+        else:
+            resp_data = requests.get(url, params=req_data)
         status_code = resp_data.status_code
 
         start_index += delta_index
