@@ -112,8 +112,13 @@ def update_all_listings():
 
     listing_output_file_name = get_listing_output_file_name()
 
-    with open(listing_output_file_name, 'r') as f:
-        all_listings = json.load(f)
+    try:
+        with open(listing_output_file_name, 'r') as f:
+            all_listings = json.load(f)
+            print('Loading {} listings from disk.'.format(len(all_listings)))
+    except FileNotFoundError:
+        print('Downloading listings from scratch.')
+        all_listings = None
 
     all_listings = get_all_listings(all_listings)
 
@@ -131,4 +136,4 @@ def load_all_listings():
 
 
 if __name__ == '__main__':
-    download_all_listings()
+    update_all_listings()
