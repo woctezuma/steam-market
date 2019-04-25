@@ -74,7 +74,12 @@ def get_all_listings(all_listings=None):
         if status_code == 200:
             result = resp_data.json()
 
-            num_listings = result['total_count']
+            num_listings_based_on_latest_query = result['total_count']
+
+            if num_listings is not None:
+                num_listings = max(num_listings, num_listings_based_on_latest_query)
+            else:
+                num_listings = num_listings_based_on_latest_query
 
             listings = dict()
             for listing in result['results']:
