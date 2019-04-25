@@ -86,7 +86,7 @@ def get_listing_details(listing_hash=None, currency_symbol='€'):
     return listing_details, status_code
 
 
-def get_all_listing_details(listing_hashes):
+def get_listing_details_batch(listing_hashes):
     rate_limits = get_steam_api_rate_limits_for_market_listing()
 
     all_listing_details = dict()
@@ -124,7 +124,7 @@ def download_all_listing_details():
     if not Path(listing_details__output_file_name).exists():
         all_listings = load_all_listings()
 
-        all_listing_details = get_all_listing_details(all_listings.keys())
+        all_listing_details = get_listing_details_batch(all_listings.keys())
 
         with open(listing_details__output_file_name, 'w') as f:
             json.dump(all_listing_details, f)

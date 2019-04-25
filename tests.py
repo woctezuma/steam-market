@@ -8,14 +8,14 @@ import utils
 
 class TestMarketListingMethods(unittest.TestCase):
 
-    def test_get_all_listing_details(self):
+    def test_get_listing_details_batch(self):
         listing_hashes = [
             "407420-Gabe Newell Simulator Booster Pack",
             "443380-Tokyo Babel Booster Pack",
             "15700-Oddworld: Abe's Oddysee Booster Pack",
         ]
 
-        all_listing_details = market_listing.get_all_listing_details(listing_hashes)
+        all_listing_details = market_listing.get_listing_details_batch(listing_hashes)
 
         self.assertEqual(len(all_listing_details), len(listing_hashes))
 
