@@ -39,24 +39,25 @@ def main():
 
     all_listing_hashes = list(all_listings.keys())
 
-    listing_matches = dict()
+    listing_matches_with_app_ids = dict()
+    listing_matches_with_app_names = dict()
     for listing_hash in all_listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
         app_name = convert_listing_hash_to_app_name(listing_hash)
 
-        listing_matches[app_id] = listing_hash
-        listing_matches[app_name] = listing_hash
+        listing_matches_with_app_ids[app_id] = listing_hash
+        listing_matches_with_app_names[app_name] = listing_hash
 
     badge_matches = dict()
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]['name']
 
         try:
-            badge_matches[app_id] = listing_matches[app_id]
+            badge_matches[app_id] = listing_matches_with_app_ids[app_id]
         except KeyError:
 
             try:
-                badge_matches[app_id] = listing_matches[app_name]
+                badge_matches[app_id] = listing_matches_with_app_names[app_name]
                 print('Match for {} (appID = {}) with name instead of id.'.format(app_name, app_id))
             except KeyError:
                 print('No match found for {} (appID = {})'.format(app_name, app_id))
