@@ -17,7 +17,7 @@ class TestMarketListingMethods(unittest.TestCase):
 
         all_listing_details = market_listing.get_all_listing_details(listing_hashes)
 
-        self.assertEqual(len(all_listing_details) == len(listing_hashes))
+        self.assertEqual(len(all_listing_details), len(listing_hashes))
 
 
 class TestMarketSearchMethods(unittest.TestCase):
