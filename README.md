@@ -35,5 +35,5 @@ TODO
 [codecov-image]: <https://codecov.io/gh/woctezuma/steam-market/branch/master/graph/badge.svg>
 
 [codacy]: <https://www.codacy.com/app/woctezuma/steam-market>
-[codacy-image]: <https://api.codacy.com/project/badge/Grade/TODO>
+[codacy-image]: <https://api.codacy.com/project/badge/Grade/c1b2f9f7a02a47a4baa22f6439be9c8a>
 
