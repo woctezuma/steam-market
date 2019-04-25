@@ -1,3 +1,12 @@
+# Objective:
+# - (done but already available with market_search) retrieve the lowest sell order for 'Booster Packs' & 'Sack of Gems',
+# - (not yet done) retrieve the highest buy order for 'Booster Packs'.
+#
+# Caveat: I recommend using market_search.py instead, because:
+# - regarding sell orders, the information is available with both market_search.py and market_listing.py,
+# - I could not retrieve buy orders, which was the information missing from market_search.py in the first place,
+# - due to rate limits, it is much more time efficient to download batches of 100 entries per page with market_search.py
+
 import json
 import time
 from pathlib import Path

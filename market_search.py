@@ -1,3 +1,6 @@
+# Objective: retrieve all the listings of 'Booster Packs' on the Steam Market,
+#            along with the sell price, and the volume available at this price.
+
 import json
 import time
 from pathlib import Path
