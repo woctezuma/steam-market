@@ -57,7 +57,7 @@ def main():
 
             try:
                 badge_matches[app_id] = listing_matches[app_name]
-                print('Match for {} with name instead of id (appID = {})'.format(app_name, app_id))
+                print('Match for {} (appID = {}) with name instead of id.'.format(app_name, app_id))
             except KeyError:
                 print('No match found for {} (appID = {})'.format(app_name, app_id))
                 continue
