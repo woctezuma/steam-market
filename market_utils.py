@@ -70,3 +70,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# TODO Once matches are fine, aggregate data: owned appID --> (gem PRICE, sell price). NB: ensure same currency.
+# TODO Filter out games for which the sell price (ask) is lower than the gem price, because the bid is necessarily lower
+# TODO Finally, beautifulsoup to get the bid for the remaining games, and rank them according to the highest bid.
