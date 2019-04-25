@@ -32,5 +32,39 @@ def main():
     return True
 
 
+def convert_listing_hash_to_app_id(listing_hash):
+    app_id = int(listing_hash.split('-')[0])
+
+    return app_id
+
+
+def get_listing_hash_suffixe():
+    listing_hash_suffixe = ' Booster Pack'
+
+    return listing_hash_suffixe
+
+
+def convert_listing_hash_to_app_name(listing_hash):
+    tokens = listing_hash.split('-')[1:]
+
+    if len(tokens) > 1:
+        app_name = '-'.join(tokens)
+    else:
+        app_name = tokens[0]
+
+    app_name = app_name.strip(get_listing_hash_suffixe())
+
+    return app_name
+
+
+def convert_to_listing_hash(app_id, app_name, listing_hash_suffixe=None):
+    if listing_hash_suffixe is None:
+        listing_hash_suffixe = get_listing_hash_suffixe()
+
+    listing_hash = str(app_id) + '-' + app_name + listing_hash_suffixe
+
+    return listing_hash
+
+
 if __name__ == '__main__':
     main()
