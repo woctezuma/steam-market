@@ -98,7 +98,7 @@ def download_all_listings():
         with open(listing_output_file_name, 'w') as f:
             json.dump(all_listings, f)
 
-    return
+    return True
 
 
 def load_all_listings():

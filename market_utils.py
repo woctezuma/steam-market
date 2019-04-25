@@ -37,7 +37,7 @@ def main():
 
     print('#badges = {} ; #matching hashes found = {}'.format(len(badge_app_ids), len(listing_hashes)))
 
-    return
+    return True
 
 
 if __name__ == '__main__':

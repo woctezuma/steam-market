@@ -29,7 +29,7 @@ def main():
                       get_listing_details_output_file_name()]:
         print(file_name)
 
-    return
+    return True
 
 
 if __name__ == '__main__':
