@@ -52,7 +52,7 @@ def convert_listing_hash_to_app_name(listing_hash):
     else:
         app_name = tokens[0]
 
-    app_name = app_name.strip(get_listing_hash_suffixe())
+    app_name = app_name[:-len(get_listing_hash_suffixe())]
 
     return app_name
 
