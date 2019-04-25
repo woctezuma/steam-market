@@ -22,6 +22,10 @@ pip install -r requirements.txt
 
 TODO
 
+## References
+
+-   [An example](https://www.resetera.com/threads/pc-gaming-era-april-2019-goodbye-uzzy-is-your-new-king.108742/page-123#post-20167882) of market arbitrage.
+
 <!-- Definitions -->
 
 [build]: <https://travis-ci.org/woctezuma/steam-market>
