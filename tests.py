@@ -8,7 +8,7 @@ import utils
 
 class TestMarketListingMethods(unittest.TestCase):
 
-    def test_main(self):
+    def test_get_all_listing_details(self):
         listing_hashes = [
             "407420-Gabe Newell Simulator Booster Pack",
             "443380-Tokyo Babel Booster Pack",
@@ -22,7 +22,7 @@ class TestMarketListingMethods(unittest.TestCase):
 
 class TestMarketSearchMethods(unittest.TestCase):
 
-    def test_main(self):
+    def test_download_all_listings(self):
         self.assertTrue(market_search.download_all_listings())
 
 
