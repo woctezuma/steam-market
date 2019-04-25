@@ -39,10 +39,12 @@ def get_steam_api_rate_limits_for_market_search():
     return rate_limits
 
 
-def get_all_listings():
+def get_all_listings(all_listings=None):
     rate_limits = get_steam_api_rate_limits_for_market_search()
 
-    all_listings = dict()
+    if all_listings is None:
+        all_listings = dict()
+
     num_listings = None
 
     query_count = 0
@@ -100,6 +102,23 @@ def download_all_listings():
 
         with open(listing_output_file_name, 'w') as f:
             json.dump(all_listings, f)
+
+    return True
+
+
+def update_all_listings():
+    # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
+    # restart the process without risking to lose anything, in case the process fails again.
+
+    listing_output_file_name = get_listing_output_file_name()
+
+    with open(listing_output_file_name, 'r') as f:
+        all_listings = json.load(f)
+
+    all_listings = get_all_listings(all_listings)
+
+    with open(listing_output_file_name, 'w') as f:
+        json.dump(all_listings, f)
 
     return True
 
