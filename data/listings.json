@@ -1237,7 +1237,7 @@
   "602990-Good Archer Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "551580-Goblin and Coins Booster Pack": {
     "sell_listings": 9,
@@ -1416,8 +1416,8 @@
   },
   "554800-Masky Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 28,
-    "sell_price_text": "$0.28"
+    "sell_price": 25,
+    "sell_price_text": "0,25\u20ac"
   },
   "800200-Witching Tower Booster Pack": {
     "sell_listings": 5,
@@ -1426,8 +1426,8 @@
   },
   "332480-Phoenix Force Booster Pack": {
     "sell_listings": 34,
-    "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "263480-Final Rush Booster Pack": {
     "sell_listings": 9,
@@ -1496,8 +1496,8 @@
   },
   "365800-AdvertCity Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 16,
-    "sell_price_text": "$0.16"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "676090-Legend Of Mercy \u795e\u533b\u9b54\u5bfc Booster Pack": {
     "sell_listings": 4,
@@ -1521,18 +1521,18 @@
   },
   "455980-Judgment: Apocalypse Survival Simulation Booster Pack": {
     "sell_listings": 38,
-    "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "539380-Think To Die 2 Booster Pack": {
     "sell_listings": 2,
-    "sell_price": 28,
-    "sell_price_text": "$0.28"
+    "sell_price": 26,
+    "sell_price_text": "0,26\u20ac"
   },
   "105800-PixelJunk Eden Booster Pack": {
     "sell_listings": 41,
     "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price_text": "0,09\u20ac"
   },
   "362130-Ashes of Immortality Booster Pack": {
     "sell_listings": 11,
@@ -1571,38 +1571,38 @@
   },
   "418670-Pankapu Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 15,
-    "sell_price_text": "$0.15"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "739220-Ark Noir Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 43,
-    "sell_price_text": "$0.43"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "545670-Parallyzed Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 21,
-    "sell_price_text": "$0.21"
+    "sell_price": 19,
+    "sell_price_text": "0,19\u20ac"
   },
   "382380-The Amber Throne Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 47,
-    "sell_price_text": "$0.47"
+    "sell_price": 41,
+    "sell_price_text": "0,41\u20ac"
   },
   "362290-The Living Dungeon Booster Pack": {
     "sell_listings": 8,
-    "sell_price": 12,
-    "sell_price_text": "$0.12"
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "365120-Curse of the Crescent Isle DX Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "431840-3DRPG Booster Pack": {
     "sell_listings": 24,
-    "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "291190-Heroes of Steel RPG Booster Pack": {
     "sell_listings": 3,
@@ -2162,47 +2162,47 @@
   "446000-Stellar Monarch Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "561230-Special Delivery Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "363430-D Series OFF ROAD Driving Simulation Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "574590-Koloro Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "600150-Warpaint Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "529360-Void Rangers Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "496960-Shoot Mania VR: Fun Zombies Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "599900-Tower Defense - Fantasy Tower Game Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "310950-Street Fighter V: Arcade Edition Booster Pack": {
     "sell_listings": 51,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "383970-Hentai: Exposed Booster Pack": {
     "sell_listings": 0,
@@ -2256,8 +2256,8 @@
   },
   "585910-Wild Guns Reloaded Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 73,
-    "sell_price_text": "$0.73"
+    "sell_price": 65,
+    "sell_price_text": "0,65\u20ac"
   },
   "458380-Gahkthun of the Golden Lightning Steam Edition Booster Pack": {
     "sell_listings": 0,
@@ -2277,7 +2277,7 @@
   "391150-I Spent Two Years On This :( Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "586450-HIKIBYOU2 Booster Pack": {
     "sell_listings": 3,
@@ -2286,8 +2286,8 @@
   },
   "324270-Revenge: Rhobar's myth Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 53,
-    "sell_price_text": "$0.53"
+    "sell_price": 49,
+    "sell_price_text": "0,49\u20ac"
   },
   "427860-The Next World Booster Pack": {
     "sell_listings": 17,
@@ -2311,8 +2311,8 @@
   },
   "342880-NekoChan Hero - Collection Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 81,
-    "sell_price_text": "$0.81"
+    "sell_price": 73,
+    "sell_price_text": "0,73\u20ac"
   },
   "556740-Legrand Legacy Booster Pack": {
     "sell_listings": 3,
@@ -3926,53 +3926,53 @@
   },
   "671390-Metropolis: Lux Obscura Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 31,
-    "sell_price_text": "$0.31"
+    "sell_price": 28,
+    "sell_price_text": "0,28\u20ac"
   },
   "375170-Gunpowder Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 30,
-    "sell_price_text": "$0.30"
+    "sell_price": 27,
+    "sell_price_text": "0,27\u20ac"
   },
   "318570-Hunters Of The Dead Booster Pack": {
     "sell_listings": 23,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "333880-Braveland Wizard Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "527510-The Legions of Rome Booster Pack": {
     "sell_listings": 8,
-    "sell_price": 53,
-    "sell_price_text": "$0.53"
+    "sell_price": 48,
+    "sell_price_text": "0,48\u20ac"
   },
   "511390-Base Raid Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 16,
-    "sell_price_text": "$0.16"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "356550-East Tower - Kuon (ET Series Vol. 3) Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "541240-Red's Kingdom Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 34,
-    "sell_price_text": "$0.34"
+    "sell_price": 30,
+    "sell_price_text": "0,30\u20ac"
   },
   "589640-Spoids Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 41,
-    "sell_price_text": "$0.41"
+    "sell_price": 37,
+    "sell_price_text": "0,37\u20ac"
   },
   "417060-UnSummoning: the Spectral Horde Booster Pack": {
     "sell_listings": 11,
-    "sell_price": 48,
-    "sell_price_text": "$0.48"
+    "sell_price": 42,
+    "sell_price_text": "0,42\u20ac"
   },
   "538990-SugarMill Booster Pack": {
     "sell_listings": 5,
@@ -3981,8 +3981,8 @@
   },
   "406720-Alekhine's Gun Booster Pack": {
     "sell_listings": 16,
-    "sell_price": 15,
-    "sell_price_text": "$0.15"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "628560-Bebop and Tempo Booster Pack": {
     "sell_listings": 2,
@@ -3991,13 +3991,13 @@
   },
   "450040-Stealth Labyrinth Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 62,
-    "sell_price_text": "$0.62"
+    "sell_price": 55,
+    "sell_price_text": "0,55\u20ac"
   },
   "482990-Heirs And Graces Booster Pack": {
     "sell_listings": 2,
-    "sell_price": 150,
-    "sell_price_text": "$1.50"
+    "sell_price": 134,
+    "sell_price_text": "1,34\u20ac"
   },
   "437690-Venture Kid Booster Pack": {
     "sell_listings": 3,
@@ -5252,7 +5252,7 @@
   "224820-Super House of Dead Ninjas Booster Pack": {
     "sell_listings": 41,
     "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price_text": "0,08\u20ac"
   },
   "364930-Koi-Koi Japan [Hanafuda playing cards] Booster Pack": {
     "sell_listings": 24,
@@ -5306,13 +5306,13 @@
   },
   "397060-Faeria Booster Pack": {
     "sell_listings": 21,
-    "sell_price": 21,
-    "sell_price_text": "$0.21"
+    "sell_price": 19,
+    "sell_price_text": "0,19\u20ac"
   },
   "427490-Shadowhand Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 17,
+    "sell_price_text": "0,17\u20ac"
   },
   "291130-Akane the Kunoichi Booster Pack": {
     "sell_listings": 40,
@@ -5341,8 +5341,8 @@
   },
   "390030-DESYNC Booster Pack": {
     "sell_listings": 23,
-    "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "304650-Sunless Sea Booster Pack": {
     "sell_listings": 64,
@@ -5356,13 +5356,13 @@
   },
   "377190-Pale Echoes Booster Pack": {
     "sell_listings": 16,
-    "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "267490-Batman\u2122: Arkham Origins Blackgate - Deluxe Edition Booster Pack": {
     "sell_listings": 59,
-    "sell_price": 28,
-    "sell_price_text": "$0.28"
+    "sell_price": 25,
+    "sell_price_text": "0,25\u20ac"
   },
   "219890-Antichamber Booster Pack": {
     "sell_listings": 164,
@@ -5406,8 +5406,8 @@
   },
   "466860-\u4e0a\u5e1d\u4e4b\u57ce I\uff1a\u76d1\u72f1\u5e1d\u56fd [City of God I - Prison Empire] Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 20,
-    "sell_price_text": "$0.20"
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "605190-Getaway Island Booster Pack": {
     "sell_listings": 0,
@@ -5556,8 +5556,8 @@
   },
   "369580-NotTheNameWeWanted Booster Pack": {
     "sell_listings": 16,
-    "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "360650-12 Labours of Hercules III: Girl Power Booster Pack": {
     "sell_listings": 56,
@@ -5591,8 +5591,8 @@
   },
   "471010-Seven: Enhanced Edition Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 178,
-    "sell_price_text": "$1.78"
+    "sell_price": 158,
+    "sell_price_text": "1,58\u20ac"
   },
   "457210-SEUM: Speedrunners from Hell Booster Pack": {
     "sell_listings": 29,
@@ -5602,12 +5602,12 @@
   "447800-LostWinds 2: Winter of the Melodias Booster Pack": {
     "sell_listings": 19,
     "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price_text": "0,10\u20ac"
   },
   "577480-Higurashi When They Cry Hou - Ch.5 Meakashi Booster Pack": {
     "sell_listings": 8,
-    "sell_price": 34,
-    "sell_price_text": "$0.34"
+    "sell_price": 30,
+    "sell_price_text": "0,30\u20ac"
   },
   "301520-Robocraft Booster Pack": {
     "sell_listings": 54,
@@ -5616,8 +5616,8 @@
   },
   "262390-Cloudbuilt Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 43,
-    "sell_price_text": "$0.43"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "334620-Soccertron Booster Pack": {
     "sell_listings": 15,
@@ -5701,8 +5701,8 @@
   },
   "300540-Sweet Lily Dreams Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "672860-StellarHub Booster Pack": {
     "sell_listings": 6,
@@ -5996,18 +5996,18 @@
   },
   "543940-Perso Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 55,
-    "sell_price_text": "$0.55"
+    "sell_price": 50,
+    "sell_price_text": "0,50\u20ac"
   },
   "532900-Outskirts Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 770,
-    "sell_price_text": "$7.70"
+    "sell_price": 692,
+    "sell_price_text": "6,92\u20ac"
   },
   "627670-Rocket Wars Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "448400-Hidden Object 6-in-1 bundle Booster Pack": {
     "sell_listings": 24,
@@ -6026,18 +6026,18 @@
   },
   "370620-Onyx Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 100,
-    "sell_price_text": "$1.00"
+    "sell_price": 88,
+    "sell_price_text": "0,88\u20ac"
   },
   "457520-Moustache Mountain Booster Pack": {
     "sell_listings": 15,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "306480-Wildlife Park 2 - Crazy Zoo Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 52,
-    "sell_price_text": "$0.52"
+    "sell_price": 47,
+    "sell_price_text": "0,47\u20ac"
   },
   "434390-Lost Bros Booster Pack": {
     "sell_listings": 7,
@@ -6066,13 +6066,13 @@
   },
   "550840-Fresh Body Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 24,
-    "sell_price_text": "$0.24"
+    "sell_price": 20,
+    "sell_price_text": "0,20\u20ac"
   },
   "408520-FORM Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 250,
-    "sell_price_text": "$2.50"
+    "sell_price": 225,
+    "sell_price_text": "2,25\u20ac"
   },
   "245150-The Novelist Booster Pack": {
     "sell_listings": 31,
@@ -6081,93 +6081,93 @@
   },
   "553150-VR Dungeon Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 277,
-    "sell_price_text": "$2.77"
+    "sell_price": 246,
+    "sell_price_text": "2,46\u20ac"
   },
   "388450-Spooky Bonus Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "579760-The Journey Down: Chapter Three Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 47,
-    "sell_price_text": "$0.47"
+    "sell_price": 40,
+    "sell_price_text": "0,40\u20ac"
   },
   "449450-SPLIT BULLET Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 88,
-    "sell_price_text": "$0.88"
+    "sell_price": 80,
+    "sell_price_text": "0,80\u20ac"
   },
   "308080-Altitude0: Lower & Faster Booster Pack": {
     "sell_listings": 8,
-    "sell_price": 48,
-    "sell_price_text": "$0.48"
+    "sell_price": 42,
+    "sell_price_text": "0,42\u20ac"
   },
   "506590-Sky Valley Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 23,
-    "sell_price_text": "$0.23"
+    "sell_price": 20,
+    "sell_price_text": "0,20\u20ac"
   },
   "362090-Siralim Booster Pack": {
     "sell_listings": 29,
-    "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "259600-Finding Teddy Booster Pack": {
     "sell_listings": 38,
-    "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "252770-Vox Booster Pack": {
     "sell_listings": 29,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "251210-Hive Booster Pack": {
     "sell_listings": 16,
-    "sell_price": 14,
-    "sell_price_text": "$0.14"
+    "sell_price": 13,
+    "sell_price_text": "0,13\u20ac"
   },
   "331510-Amphora Booster Pack": {
     "sell_listings": 13,
-    "sell_price": 43,
-    "sell_price_text": "$0.43"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "288880-Pineview Drive Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 27,
-    "sell_price_text": "$0.27"
+    "sell_price": 24,
+    "sell_price_text": "0,24\u20ac"
   },
   "414060-iso-Sphere Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 142,
-    "sell_price_text": "$1.42"
+    "sell_price": 128,
+    "sell_price_text": "1,28\u20ac"
   },
   "345540-Inbetween Land Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 27,
-    "sell_price_text": "$0.27"
+    "sell_price": 25,
+    "sell_price_text": "0,25\u20ac"
   },
   "226620-Desktop Dungeons Booster Pack": {
     "sell_listings": 45,
-    "sell_price": 15,
-    "sell_price_text": "$0.15"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "416110-Blitz Breaker Booster Pack": {
     "sell_listings": 17,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "396710-The Adventure Pals Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 37,
-    "sell_price_text": "$0.37"
+    "sell_price": 34,
+    "sell_price_text": "0,34\u20ac"
   },
   "434530-Flobe Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 29,
-    "sell_price_text": "$0.29"
+    "sell_price": 26,
+    "sell_price_text": "0,26\u20ac"
   },
   "404070-Lords of New York Booster Pack": {
     "sell_listings": 12,
@@ -6176,33 +6176,33 @@
   },
   "458660-The Slimeking's Tower Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "577000-Witchcraft Booster Pack": {
     "sell_listings": 15,
-    "sell_price": 43,
-    "sell_price_text": "$0.43"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "395900-Backgammon Blitz Booster Pack": {
     "sell_listings": 13,
-    "sell_price": 23,
-    "sell_price_text": "$0.23"
+    "sell_price": 20,
+    "sell_price_text": "0,20\u20ac"
   },
   "390210-FreezeME Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 31,
-    "sell_price_text": "$0.31"
+    "sell_price": 28,
+    "sell_price_text": "0,28\u20ac"
   },
   "591460-Parkasaurus Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 28,
-    "sell_price_text": "$0.28"
+    "sell_price": 25,
+    "sell_price_text": "0,25\u20ac"
   },
   "377100-UnderEarth Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 39,
-    "sell_price_text": "$0.39"
+    "sell_price": 35,
+    "sell_price_text": "0,35\u20ac"
   },
   "453130-Powargrid Booster Pack": {
     "sell_listings": 12,
@@ -6216,13 +6216,13 @@
   },
   "363920-SWR JST DX Selective Memory Erase Effect Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 29,
-    "sell_price_text": "$0.29"
+    "sell_price": 27,
+    "sell_price_text": "0,27\u20ac"
   },
   "558450-Fibrillation HD Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 20,
-    "sell_price_text": "$0.20"
+    "sell_price": 19,
+    "sell_price_text": "0,19\u20ac"
   },
   "301150-The Treasures of Montezuma 4 Booster Pack": {
     "sell_listings": 19,
@@ -6231,8 +6231,8 @@
   },
   "364900-Red Bit Ninja Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 29,
-    "sell_price_text": "$0.29"
+    "sell_price": 27,
+    "sell_price_text": "0,27\u20ac"
   },
   "423900-Dinocide Booster Pack": {
     "sell_listings": 20,
@@ -6241,48 +6241,48 @@
   },
   "503400-Four Last Things Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 37,
-    "sell_price_text": "$0.37"
+    "sell_price": 34,
+    "sell_price_text": "0,34\u20ac"
   },
   "217290-Din's Curse Booster Pack": {
     "sell_listings": 17,
-    "sell_price": 27,
-    "sell_price_text": "$0.27"
+    "sell_price": 25,
+    "sell_price_text": "0,25\u20ac"
   },
   "263200-Signs of Life Booster Pack": {
     "sell_listings": 17,
-    "sell_price": 19,
-    "sell_price_text": "$0.19"
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "368620-Timespinner Booster Pack": {
     "sell_listings": 13,
-    "sell_price": 23,
-    "sell_price_text": "$0.23"
+    "sell_price": 20,
+    "sell_price_text": "0,20\u20ac"
   },
   "343430-Hypnosis Booster Pack": {
     "sell_listings": 13,
-    "sell_price": 42,
-    "sell_price_text": "$0.42"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "329980-ASA: A Space Adventure - Remastered Edition Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 43,
-    "sell_price_text": "$0.43"
+    "sell_price": 40,
+    "sell_price_text": "0,40\u20ac"
   },
   "479150-BoX -containment- Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 37,
-    "sell_price_text": "$0.37"
+    "sell_price": 32,
+    "sell_price_text": "0,32\u20ac"
   },
   "239660-Soldier Front 2 Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 60,
-    "sell_price_text": "$0.60"
+    "sell_price": 54,
+    "sell_price_text": "0,54\u20ac"
   },
   "695600-This Grand Life Booster Pack": {
     "sell_listings": 14,
-    "sell_price": 59,
-    "sell_price_text": "$0.59"
+    "sell_price": 53,
+    "sell_price_text": "0,53\u20ac"
   },
   "260570-Gray Matter Booster Pack": {
     "sell_listings": 33,
@@ -6411,8 +6411,8 @@
   },
   "296470-Mount Your Friends Booster Pack": {
     "sell_listings": 107,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "39800-Nation Red Booster Pack": {
     "sell_listings": 53,
@@ -6691,13 +6691,13 @@
   },
   "603130-Masked Shooters Booster Pack": {
     "sell_listings": 17,
-    "sell_price": 25,
-    "sell_price_text": "$0.25"
+    "sell_price": 23,
+    "sell_price_text": "0,23\u20ac"
   },
   "871990-BattleRush 2 Booster Pack": {
     "sell_listings": 21,
-    "sell_price": 16,
-    "sell_price_text": "$0.16"
+    "sell_price": 15,
+    "sell_price_text": "0,15\u20ac"
   },
   "222750-Wargame: AirLand Battle Booster Pack": {
     "sell_listings": 148,
@@ -8811,8 +8811,8 @@
   },
   "358760-Selenon Rising Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 192,
-    "sell_price_text": "$1.92"
+    "sell_price": 173,
+    "sell_price_text": "1,73\u20ac"
   },
   "448290-Nefarious Booster Pack": {
     "sell_listings": 2,
@@ -8916,8 +8916,8 @@
   },
   "613210-BlobCat Booster Pack": {
     "sell_listings": 14,
-    "sell_price": 51,
-    "sell_price_text": "$0.51"
+    "sell_price": 46,
+    "sell_price_text": "0,46\u20ac"
   },
   "380220-Hover Junkers Booster Pack": {
     "sell_listings": 22,
@@ -9086,8 +9086,8 @@
   },
   "386690-Fantastic Contraption Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 89,
-    "sell_price_text": "$0.89"
+    "sell_price": 81,
+    "sell_price_text": "0,81\u20ac"
   },
   "451600-CounterAttack Booster Pack": {
     "sell_listings": 5,
@@ -10040,7 +10040,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "392820-Wild Island Quest Booster Pack": {
-    "sell_listings": 42,
+    "sell_listings": 41,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -10830,9 +10830,9 @@
     "sell_price_text": "0,08\u20ac"
   },
   "263060-Blockstorm Booster Pack": {
-    "sell_listings": 128,
-    "sell_price": 8,
-    "sell_price_text": "0,08\u20ac"
+    "sell_listings": 129,
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "359100-Q.U.B.E. 2 Booster Pack": {
     "sell_listings": 21,
@@ -11075,7 +11075,7 @@
     "sell_price_text": "0,16\u20ac"
   },
   "339470-Retention Booster Pack": {
-    "sell_listings": 179,
+    "sell_listings": 178,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -12151,53 +12151,53 @@
   },
   "473540-Raise Your Own Clone Booster Pack": {
     "sell_listings": 15,
-    "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "528950-Nekuia Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 49,
-    "sell_price_text": "$0.49"
+    "sell_price": 42,
+    "sell_price_text": "0,42\u20ac"
   },
   "535840-Marblize Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 117,
-    "sell_price_text": "$1.17"
+    "sell_price": 104,
+    "sell_price_text": "1,04\u20ac"
   },
   "257710-Max Gentlemen Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 126,
-    "sell_price_text": "$1.26"
+    "sell_price": 112,
+    "sell_price_text": "1,12\u20ac"
   },
   "550590-Archaica: The Path of Light Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 76,
-    "sell_price_text": "$0.76"
+    "sell_price": 69,
+    "sell_price_text": "0,69\u20ac"
   },
   "218130-Dungeonland Booster Pack": {
     "sell_listings": 25,
-    "sell_price": 14,
-    "sell_price_text": "$0.14"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "231720-Bad Hotel Booster Pack": {
     "sell_listings": 26,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "284200-Robot Rescue Revolution Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 20,
-    "sell_price_text": "$0.20"
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "497580-Agent Walker: Secret Journey Booster Pack": {
     "sell_listings": 15,
-    "sell_price": 21,
-    "sell_price_text": "$0.21"
+    "sell_price": 19,
+    "sell_price_text": "0,19\u20ac"
   },
   "553780-ARK BOX Unlimited Booster Pack": {
     "sell_listings": 14,
-    "sell_price": 15,
-    "sell_price_text": "$0.15"
+    "sell_price": 13,
+    "sell_price_text": "0,13\u20ac"
   },
   "502230-Monsters' Den: Book of Dread Booster Pack": {
     "sell_listings": 5,
@@ -12212,7 +12212,7 @@
   "289220-BorderZone Booster Pack": {
     "sell_listings": 18,
     "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price_text": "0,10\u20ac"
   },
   "357720-Inside My Radio Booster Pack": {
     "sell_listings": 21,
@@ -12226,48 +12226,48 @@
   },
   "447950-Bad Caterpillar Booster Pack": {
     "sell_listings": 29,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "490860-DashBored Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 34,
-    "sell_price_text": "$0.34"
+    "sell_price": 30,
+    "sell_price_text": "0,30\u20ac"
   },
   "511820-Le Havre: The Inland Port Booster Pack": {
     "sell_listings": 24,
-    "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "454430-Crystal Chip Collector Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 31,
-    "sell_price_text": "$0.31"
+    "sell_price": 28,
+    "sell_price_text": "0,28\u20ac"
   },
   "364790-Voyage to Farland Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 101,
-    "sell_price_text": "$1.01"
+    "sell_price": 89,
+    "sell_price_text": "0,89\u20ac"
   },
   "532660-Exteria Booster Pack": {
     "sell_listings": 17,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "470140-Funklift Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 57,
-    "sell_price_text": "$0.57"
+    "sell_price": 51,
+    "sell_price_text": "0,51\u20ac"
   },
   "408440-Dream Factory Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "529420-Crazy Sapper 3D Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 15,
-    "sell_price_text": "$0.15"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "325930-Viking Squad Booster Pack": {
     "sell_listings": 20,
@@ -12357,7 +12357,7 @@
   "377070-Noctropolis Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "921530-Demon King Domination: Deluxe Edition Booster Pack": {
     "sell_listings": 1,
@@ -12367,7 +12367,7 @@
   "428350-Fear Equation Booster Pack": {
     "sell_listings": 19,
     "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price_text": "0,09\u20ac"
   },
   "543430-Brain Booster Booster Pack": {
     "sell_listings": 5,
@@ -12416,8 +12416,8 @@
   },
   "386560-Psycho Starship Rampage Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 84,
-    "sell_price_text": "$0.84"
+    "sell_price": 75,
+    "sell_price_text": "0,75\u20ac"
   },
   "411480-BATTLECREW Space Pirates Booster Pack": {
     "sell_listings": 9,
@@ -13537,12 +13537,12 @@
   "249610-Galactic Arms Race Booster Pack": {
     "sell_listings": 15,
     "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price_text": "0,09\u20ac"
   },
   "473610-Shock Tactics Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 53,
-    "sell_price_text": "$0.53"
+    "sell_price": 48,
+    "sell_price_text": "0,48\u20ac"
   },
   "540690-Hellenica Booster Pack": {
     "sell_listings": 3,
@@ -13676,18 +13676,18 @@
   },
   "244750-Aztez Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 32,
-    "sell_price_text": "$0.32"
+    "sell_price": 29,
+    "sell_price_text": "0,29\u20ac"
   },
   "449820-Daughter of Shadows: An SCP Breach Event Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 41,
-    "sell_price_text": "$0.41"
+    "sell_price": 38,
+    "sell_price_text": "0,38\u20ac"
   },
   "662320-Metro Conflict: The Origin Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 51,
-    "sell_price_text": "$0.51"
+    "sell_price": 46,
+    "sell_price_text": "0,46\u20ac"
   },
   "564050-Bud Spencer & Terence Hill - Slaps And Beans Booster Pack": {
     "sell_listings": 10,
@@ -13696,8 +13696,8 @@
   },
   "572480-Orbiz Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 34,
-    "sell_price_text": "$0.34"
+    "sell_price": 30,
+    "sell_price_text": "0,30\u20ac"
   },
   "662190-The Secret Order 6: Bloodline Booster Pack": {
     "sell_listings": 4,
@@ -14106,18 +14106,18 @@
   },
   "302290-Infinite Game Works Episode 0 Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 35,
-    "sell_price_text": "$0.35"
+    "sell_price": 31,
+    "sell_price_text": "0,31\u20ac"
   },
   "311290-SpellForce 3 Booster Pack": {
     "sell_listings": 44,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 15,
+    "sell_price_text": "0,15\u20ac"
   },
   "328940-The Deer God Booster Pack": {
     "sell_listings": 11,
-    "sell_price": 50,
-    "sell_price_text": "$0.50"
+    "sell_price": 46,
+    "sell_price_text": "0,46\u20ac"
   },
   "409290-Herding Dog Booster Pack": {
     "sell_listings": 10,
@@ -14141,8 +14141,8 @@
   },
   "378750-Sayonara Umihara Kawase Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 52,
-    "sell_price_text": "$0.52"
+    "sell_price": 47,
+    "sell_price_text": "0,47\u20ac"
   },
   "334940-Yoku's Island Express Booster Pack": {
     "sell_listings": 11,
@@ -14311,8 +14311,8 @@
   },
   "500670-Tormentor\u274cPunisher Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "307940-Radiation Island Booster Pack": {
     "sell_listings": 8,
@@ -16111,8 +16111,8 @@
   },
   "547390-Mosaic: Game of Gods Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 30,
-    "sell_price_text": "$0.30"
+    "sell_price": 27,
+    "sell_price_text": "0,27\u20ac"
   },
   "493480-ERISLE Booster Pack": {
     "sell_listings": 1,
@@ -17745,9 +17745,9 @@
     "sell_price_text": "0,62\u20ac"
   },
   "485080-Megapolis Booster Pack": {
-    "sell_listings": 19,
-    "sell_price": 11,
-    "sell_price_text": "0,11\u20ac"
+    "sell_listings": 20,
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "288040-Actual Sunlight Booster Pack": {
     "sell_listings": 13,
@@ -17855,7 +17855,7 @@
     "sell_price_text": "0,09\u20ac"
   },
   "580420-Tourists Kidnapped a Little Bear Booster Pack": {
-    "sell_listings": 42,
+    "sell_listings": 41,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -18360,9 +18360,9 @@
     "sell_price_text": "0,13\u20ac"
   },
   "217100-Dementium II HD Booster Pack": {
-    "sell_listings": 17,
-    "sell_price": 9,
-    "sell_price_text": "0,09\u20ac"
+    "sell_listings": 18,
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "252830-Claire Booster Pack": {
     "sell_listings": 26,
@@ -18561,8 +18561,8 @@
   },
   "829210-AIdol Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 36,
-    "sell_price_text": "$0.36"
+    "sell_price": 31,
+    "sell_price_text": "0,31\u20ac"
   },
   "501940-Hikikomori No Chuunibyou Booster Pack": {
     "sell_listings": 9,
@@ -18840,9 +18840,9 @@
     "sell_price_text": "0,12\u20ac"
   },
   "356650-Death's Gambit Booster Pack": {
-    "sell_listings": 27,
-    "sell_price": 16,
-    "sell_price_text": "0,16\u20ac"
+    "sell_listings": 28,
+    "sell_price": 15,
+    "sell_price_text": "0,15\u20ac"
   },
   "339610-FreeStyle 2: Street Basketball Booster Pack": {
     "sell_listings": 35,
@@ -18930,7 +18930,7 @@
     "sell_price_text": "0,14\u20ac"
   },
   "432350-Epic Battle Fantasy 5 Booster Pack": {
-    "sell_listings": 12,
+    "sell_listings": 13,
     "sell_price": 30,
     "sell_price_text": "0,30\u20ac"
   },
@@ -19206,8 +19206,8 @@
   },
   "643880-Strikey Sisters Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "283660-Rabbit Hole 3D: Steam Edition Booster Pack": {
     "sell_listings": 20,
@@ -19301,48 +19301,48 @@
   },
   "416170-HotLead Booster Pack": {
     "sell_listings": 51,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "671440-Rise of Industry Booster Pack": {
     "sell_listings": 22,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "435400-Hidden Folks Booster Pack": {
     "sell_listings": 67,
-    "sell_price": 12,
-    "sell_price_text": "$0.12"
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "585990-Echoes of the Fey Episode 0: The Immolation Booster Pack": {
     "sell_listings": 2,
-    "sell_price": 43,
-    "sell_price_text": "$0.43"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "448510-Overcooked Booster Pack": {
     "sell_listings": 93,
     "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price_text": "0,09\u20ac"
   },
   "214730-Space Rangers HD: A War Apart Booster Pack": {
     "sell_listings": 66,
-    "sell_price": 24,
-    "sell_price_text": "$0.24"
+    "sell_price": 21,
+    "sell_price_text": "0,21\u20ac"
   },
   "344240-Man O' War: Corsair Booster Pack": {
     "sell_listings": 16,
-    "sell_price": 28,
-    "sell_price_text": "$0.28"
+    "sell_price": 26,
+    "sell_price_text": "0,26\u20ac"
   },
   "492630-Bear With Me Booster Pack": {
     "sell_listings": 32,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "424030-War of Rights Booster Pack": {
     "sell_listings": 14,
-    "sell_price": 38,
-    "sell_price_text": "$0.38"
+    "sell_price": 35,
+    "sell_price_text": "0,35\u20ac"
   },
   "447310-Paper Train: Traffic Booster Pack": {
     "sell_listings": 1,
@@ -19465,7 +19465,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "341940-Hatred Booster Pack": {
-    "sell_listings": 49,
+    "sell_listings": 50,
     "sell_price": 29,
     "sell_price_text": "0,29\u20ac"
   },
@@ -19566,8 +19566,8 @@
   },
   "549810-Bunny & Piggy Booster Pack": {
     "sell_listings": 123,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "365810-Flying Tigers: Shadows Over China Booster Pack": {
     "sell_listings": 3,
@@ -20272,7 +20272,7 @@
   "434500-BATTLE PIXELS Booster Pack": {
     "sell_listings": 40,
     "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price_text": "0,07\u20ac"
   },
   "416250-Tales [PC] Booster Pack": {
     "sell_listings": 14,
@@ -20281,13 +20281,13 @@
   },
   "262690-Little Racers STREET Booster Pack": {
     "sell_listings": 37,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "665360-Comedy Night Booster Pack": {
     "sell_listings": 15,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "475150-Titan Quest Anniversary Edition Booster Pack": {
     "sell_listings": 157,
@@ -21511,8 +21511,8 @@
   },
   "274940-Depth Booster Pack": {
     "sell_listings": 130,
-    "sell_price": 15,
-    "sell_price_text": "$0.15"
+    "sell_price": 13,
+    "sell_price_text": "0,13\u20ac"
   },
   "508170-BlackSmith HIT Booster Pack": {
     "sell_listings": 34,
@@ -21521,8 +21521,8 @@
   },
   "545150-Beastiarium Booster Pack": {
     "sell_listings": 55,
-    "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "457590-Luna Online: Reborn Booster Pack": {
     "sell_listings": 14,
@@ -21640,7 +21640,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "554620-Life is Strange: Before the Storm Booster Pack": {
-    "sell_listings": 159,
+    "sell_listings": 158,
     "sell_price": 21,
     "sell_price_text": "0,21\u20ac"
   },
@@ -21720,9 +21720,9 @@
     "sell_price_text": "0,14\u20ac"
   },
   "581320-Insurgency: Sandstorm Booster Pack": {
-    "sell_listings": 41,
-    "sell_price": 20,
-    "sell_price_text": "0,20\u20ac"
+    "sell_listings": 40,
+    "sell_price": 21,
+    "sell_price_text": "0,21\u20ac"
   },
   "480490-Prey Booster Pack": {
     "sell_listings": 90,
@@ -21965,14 +21965,14 @@
     "sell_price_text": "0,10\u20ac"
   },
   "429660-Tales of Berseria Booster Pack": {
-    "sell_listings": 31,
+    "sell_listings": 32,
     "sell_price": 24,
     "sell_price_text": "0,24\u20ac"
   },
   "356730-The Hole Story Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 46,
-    "sell_price_text": "$0.46"
+    "sell_price": 39,
+    "sell_price_text": "0,39\u20ac"
   },
   "438130-Root Double -Before Crime * After Days- Xtend Edition Booster Pack": {
     "sell_listings": 23,
@@ -22135,9 +22135,9 @@
     "sell_price_text": "0,13\u20ac"
   },
   "601790-Eternal Lore Booster Pack": {
-    "sell_listings": 7,
-    "sell_price": 36,
-    "sell_price_text": "0,36\u20ac"
+    "sell_listings": 5,
+    "sell_price": 85,
+    "sell_price_text": "0,85\u20ac"
   },
   "530550-Bubble Jungle Booster Pack": {
     "sell_listings": 1,
@@ -22630,9 +22630,9 @@
     "sell_price_text": "0,09\u20ac"
   },
   "503480-Mahluk:Dark demon Booster Pack": {
-    "sell_listings": 21,
-    "sell_price": 7,
-    "sell_price_text": "0,07\u20ac"
+    "sell_listings": 19,
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "477290-Magma Tsunami Booster Pack": {
     "sell_listings": 85,
@@ -22660,7 +22660,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "463150-BARRIER X Booster Pack": {
-    "sell_listings": 70,
+    "sell_listings": 69,
     "sell_price": 9,
     "sell_price_text": "0,09\u20ac"
   },
@@ -22830,7 +22830,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "251290-The Legend of Heroes: Trails in the Sky SC Booster Pack": {
-    "sell_listings": 41,
+    "sell_listings": 43,
     "sell_price": 24,
     "sell_price_text": "0,24\u20ac"
   },
@@ -23186,8 +23186,8 @@
   },
   "389140-Horizon Chase Turbo Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 51,
-    "sell_price_text": "$0.51"
+    "sell_price": 46,
+    "sell_price_text": "0,46\u20ac"
   },
   "612740-Bokida - Heartfelt Reunion Booster Pack": {
     "sell_listings": 5,
@@ -23665,9 +23665,9 @@
     "sell_price_text": "0,10\u20ac"
   },
   "537360-JumpBall Booster Pack": {
-    "sell_listings": 94,
-    "sell_price": 7,
-    "sell_price_text": "0,07\u20ac"
+    "sell_listings": 93,
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "546380-Crispy Chicken Booster Pack": {
     "sell_listings": 40,
@@ -23785,7 +23785,7 @@
     "sell_price_text": "0,10\u20ac"
   },
   "273770-Game Tycoon 1.5 Booster Pack": {
-    "sell_listings": 83,
+    "sell_listings": 80,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -23885,7 +23885,7 @@
     "sell_price_text": "0,12\u20ac"
   },
   "631510-Devil May Cry HD Collection Booster Pack": {
-    "sell_listings": 22,
+    "sell_listings": 23,
     "sell_price": 20,
     "sell_price_text": "0,20\u20ac"
   },
@@ -24115,7 +24115,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "393380-Squad Booster Pack": {
-    "sell_listings": 85,
+    "sell_listings": 84,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
@@ -24135,9 +24135,9 @@
     "sell_price_text": "0,08\u20ac"
   },
   "248820-Risk of Rain Booster Pack": {
-    "sell_listings": 96,
-    "sell_price": 20,
-    "sell_price_text": "0,20\u20ac"
+    "sell_listings": 95,
+    "sell_price": 19,
+    "sell_price_text": "0,19\u20ac"
   },
   "93200-Revenge of the Titans Booster Pack": {
     "sell_listings": 51,
@@ -24155,9 +24155,9 @@
     "sell_price_text": "0,09\u20ac"
   },
   "209870-Blacklight: Retribution Booster Pack": {
-    "sell_listings": 15,
-    "sell_price": 60,
-    "sell_price_text": "0,60\u20ac"
+    "sell_listings": 16,
+    "sell_price": 32,
+    "sell_price_text": "0,32\u20ac"
   },
   "274310-Always Sometimes Monsters Booster Pack": {
     "sell_listings": 118,
@@ -24280,7 +24280,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "467310-Rogue Port - Red Nightmare Booster Pack": {
-    "sell_listings": 182,
+    "sell_listings": 178,
     "sell_price": 5,
     "sell_price_text": "0,05\u20ac"
   },
@@ -24555,7 +24555,7 @@
     "sell_price_text": "0,09\u20ac"
   },
   "552700-WORLD OF FINAL FANTASY Booster Pack": {
-    "sell_listings": 30,
+    "sell_listings": 40,
     "sell_price": 14,
     "sell_price_text": "0,14\u20ac"
   },
@@ -24595,7 +24595,7 @@
     "sell_price_text": "0,10\u20ac"
   },
   "203770-Crusader Kings II Booster Pack": {
-    "sell_listings": 350,
+    "sell_listings": 351,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -24650,9 +24650,9 @@
     "sell_price_text": "0,16\u20ac"
   },
   "367020-No One But You Booster Pack": {
-    "sell_listings": 0,
-    "sell_price": 0,
-    "sell_price_text": "0,--\u20ac"
+    "sell_listings": 1,
+    "sell_price": 60,
+    "sell_price_text": "0,60\u20ac"
   },
   "279740-3D ParticleGen Visual FX Booster Pack": {
     "sell_listings": 1569,
@@ -24700,7 +24700,7 @@
     "sell_price_text": "0,23\u20ac"
   },
   "460940-Father\u00b4s Island Booster Pack": {
-    "sell_listings": 16,
+    "sell_listings": 13,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -24957,7 +24957,7 @@
   "302310-Dungeon of Elements Booster Pack": {
     "sell_listings": 57,
     "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price_text": "0,08\u20ac"
   },
   "253860-Earth 2140 HD Booster Pack": {
     "sell_listings": 141,
@@ -25270,7 +25270,7 @@
     "sell_price_text": "0,40\u20ac"
   },
   "43160-Metro: Last Light Booster Pack": {
-    "sell_listings": 167,
+    "sell_listings": 166,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
@@ -25320,7 +25320,7 @@
     "sell_price_text": "0,19\u20ac"
   },
   "322110-20XX Booster Pack": {
-    "sell_listings": 28,
+    "sell_listings": 29,
     "sell_price": 15,
     "sell_price_text": "0,15\u20ac"
   },
@@ -25400,7 +25400,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "576130-State of Anarchy Complete: Master of Mayhem Booster Pack": {
-    "sell_listings": 312,
+    "sell_listings": 311,
     "sell_price": 5,
     "sell_price_text": "0,05\u20ac"
   },
@@ -25420,7 +25420,7 @@
     "sell_price_text": "0,15\u20ac"
   },
   "581100-Langoth Booster Pack": {
-    "sell_listings": 42,
+    "sell_listings": 41,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -25545,9 +25545,9 @@
     "sell_price_text": "0,08\u20ac"
   },
   "343710-KHOLAT Booster Pack": {
-    "sell_listings": 113,
-    "sell_price": 9,
-    "sell_price_text": "0,09\u20ac"
+    "sell_listings": 115,
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "571020-Santa's Big Adventures Booster Pack": {
     "sell_listings": 38,
@@ -25680,7 +25680,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "304390-For Honor Booster Pack": {
-    "sell_listings": 226,
+    "sell_listings": 227,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -25695,9 +25695,9 @@
     "sell_price_text": "0,08\u20ac"
   },
   "437920-Tricky Towers Booster Pack": {
-    "sell_listings": 47,
-    "sell_price": 12,
-    "sell_price_text": "0,12\u20ac"
+    "sell_listings": 48,
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "805940-RUSSIA BATTLEGROUNDS Booster Pack": {
     "sell_listings": 25,
@@ -25800,9 +25800,9 @@
     "sell_price_text": "0,14\u20ac"
   },
   "546080-Coffin of Ashes Booster Pack": {
-    "sell_listings": 188,
-    "sell_price": 17,
-    "sell_price_text": "0,17\u20ac"
+    "sell_listings": 177,
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "398670-Shadow Heroes: Vengeance In Flames Booster Pack": {
     "sell_listings": 1,
@@ -25835,7 +25835,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "204360-Castle Crashers Booster Pack": {
-    "sell_listings": 190,
+    "sell_listings": 189,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
@@ -25860,7 +25860,7 @@
     "sell_price_text": "0,16\u20ac"
   },
   "286690-Metro 2033 Redux Booster Pack": {
-    "sell_listings": 109,
+    "sell_listings": 107,
     "sell_price": 14,
     "sell_price_text": "0,14\u20ac"
   },
@@ -25935,7 +25935,7 @@
     "sell_price_text": "0,11\u20ac"
   },
   "684410-Bridge Constructor Portal Booster Pack": {
-    "sell_listings": 37,
+    "sell_listings": 38,
     "sell_price": 15,
     "sell_price_text": "0,15\u20ac"
   },
@@ -25985,12 +25985,12 @@
     "sell_price_text": "0,09\u20ac"
   },
   "527490-EM: Shader Attack Booster Pack": {
-    "sell_listings": 76,
+    "sell_listings": 75,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
   "287700-METAL GEAR SOLID V: THE PHANTOM PAIN Booster Pack": {
-    "sell_listings": 155,
+    "sell_listings": 157,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -26020,7 +26020,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "635000-Edge of Hearts Booster Pack": {
-    "sell_listings": 75,
+    "sell_listings": 73,
     "sell_price": 5,
     "sell_price_text": "0,05\u20ac"
   },
@@ -26205,7 +26205,7 @@
     "sell_price_text": "0,09\u20ac"
   },
   "253900-Knights and Merchants Booster Pack": {
-    "sell_listings": 233,
+    "sell_listings": 232,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -26216,8 +26216,8 @@
   },
   "282070-This War of Mine Booster Pack": {
     "sell_listings": 198,
-    "sell_price": 11,
-    "sell_price_text": "0,11\u20ac"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "497240-Pool of Death Booster Pack": {
     "sell_listings": 7,
@@ -26300,7 +26300,7 @@
     "sell_price_text": "0,23\u20ac"
   },
   "220-Half-Life 2 Booster Pack": {
-    "sell_listings": 312,
+    "sell_listings": 311,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -26390,7 +26390,7 @@
     "sell_price_text": "0,06\u20ac"
   },
   "882710-\u6771\u65b9\u5e55\u83ef\u796d TouHou Makuka Sai ~ Fantastic Danmaku Festival Booster Pack": {
-    "sell_listings": 8,
+    "sell_listings": 14,
     "sell_price": 19,
     "sell_price_text": "0,19\u20ac"
   },
@@ -26535,9 +26535,9 @@
     "sell_price_text": "0,54\u20ac"
   },
   "265590-The Red Solstice Booster Pack": {
-    "sell_listings": 459,
-    "sell_price": 6,
-    "sell_price_text": "0,06\u20ac"
+    "sell_listings": 457,
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "347290-Rise & Shine Booster Pack": {
     "sell_listings": 52,
@@ -26700,7 +26700,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "462030-BitRay Booster Pack": {
-    "sell_listings": 160,
+    "sell_listings": 161,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -26791,8 +26791,8 @@
   },
   "509110-Spikit Booster Pack": {
     "sell_listings": 109,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "513780-Turbo Pug DX Booster Pack": {
     "sell_listings": 168,
@@ -26955,7 +26955,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "730-Counter-Strike: Global Offensive Booster Pack": {
-    "sell_listings": 1338,
+    "sell_listings": 1290,
     "sell_price": 15,
     "sell_price_text": "0,15\u20ac"
   },
@@ -27030,7 +27030,7 @@
     "sell_price_text": "0,10\u20ac"
   },
   "658560-Zup! 7 Booster Pack": {
-    "sell_listings": 44,
+    "sell_listings": 43,
     "sell_price": 27,
     "sell_price_text": "0,27\u20ac"
   },
@@ -27090,7 +27090,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "383580-Flesh Eaters Booster Pack": {
-    "sell_listings": 205,
+    "sell_listings": 204,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -27275,7 +27275,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "435150-Divinity: Original Sin 2 Booster Pack": {
-    "sell_listings": 164,
+    "sell_listings": 163,
     "sell_price": 15,
     "sell_price_text": "0,15\u20ac"
   },
@@ -27325,7 +27325,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "746650-NEKOPARA OVA Extra Booster Pack": {
-    "sell_listings": 196,
+    "sell_listings": 198,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -27450,7 +27450,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "252490-Rust Booster Pack": {
-    "sell_listings": 174,
+    "sell_listings": 173,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -27535,9 +27535,9 @@
     "sell_price_text": "0,10\u20ac"
   },
   "359870-FINAL FANTASY X-X-2 HD Remaster Booster Pack": {
-    "sell_listings": 37,
-    "sell_price": 20,
-    "sell_price_text": "0,20\u20ac"
+    "sell_listings": 38,
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "533640-VoxreD Booster Pack": {
     "sell_listings": 111,
@@ -27550,7 +27550,7 @@
     "sell_price_text": "0,23\u20ac"
   },
   "400250-Heaven Island - VR MMO Booster Pack": {
-    "sell_listings": 248,
+    "sell_listings": 249,
     "sell_price": 4,
     "sell_price_text": "0,04\u20ac"
   },
@@ -27560,7 +27560,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "459100-Epsilon corp. Booster Pack": {
-    "sell_listings": 116,
+    "sell_listings": 115,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -27615,7 +27615,7 @@
     "sell_price_text": "0,46\u20ac"
   },
   "375010-Energy Balance Booster Pack": {
-    "sell_listings": 126,
+    "sell_listings": 125,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -27795,9 +27795,9 @@
     "sell_price_text": "0,13\u20ac"
   },
   "605520-Running Sausage Booster Pack": {
-    "sell_listings": 35,
-    "sell_price": 8,
-    "sell_price_text": "0,08\u20ac"
+    "sell_listings": 34,
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "440900-Conan Exiles Booster Pack": {
     "sell_listings": 100,
@@ -27925,7 +27925,7 @@
     "sell_price_text": "0,06\u20ac"
   },
   "40390-Risen 2 - Dark Waters Booster Pack": {
-    "sell_listings": 146,
+    "sell_listings": 147,
     "sell_price": 9,
     "sell_price_text": "0,09\u20ac"
   },
@@ -27966,8 +27966,8 @@
   },
   "303610-Suicide Guy Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "542730-Block Blowout Booster Pack": {
     "sell_listings": 33,
@@ -28010,7 +28010,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "834530-Yakuza Kiwami Booster Pack": {
-    "sell_listings": 5,
+    "sell_listings": 6,
     "sell_price": 29,
     "sell_price_text": "0,29\u20ac"
   },
@@ -28095,12 +28095,12 @@
     "sell_price_text": "0,10\u20ac"
   },
   "351940-The Descendant Booster Pack": {
-    "sell_listings": 159,
+    "sell_listings": 160,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
   "346210-Garden Rescue Booster Pack": {
-    "sell_listings": 39,
+    "sell_listings": 38,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -28145,7 +28145,7 @@
     "sell_price_text": "0,05\u20ac"
   },
   "252950-Rocket League Booster Pack": {
-    "sell_listings": 130,
+    "sell_listings": 131,
     "sell_price": 21,
     "sell_price_text": "0,21\u20ac"
   },
@@ -28235,7 +28235,7 @@
     "sell_price_text": "0,09\u20ac"
   },
   "230410-Warframe Booster Pack": {
-    "sell_listings": 180,
+    "sell_listings": 179,
     "sell_price": 14,
     "sell_price_text": "0,14\u20ac"
   },
@@ -28400,7 +28400,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "438030-Dead6hot Booster Pack": {
-    "sell_listings": 131,
+    "sell_listings": 130,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -28535,7 +28535,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "107410-Arma 3 Booster Pack": {
-    "sell_listings": 183,
+    "sell_listings": 182,
     "sell_price": 19,
     "sell_price_text": "0,19\u20ac"
   },
@@ -28585,7 +28585,7 @@
     "sell_price_text": "0,25\u20ac"
   },
   "421060-Age of Steel: Recharge Booster Pack": {
-    "sell_listings": 117,
+    "sell_listings": 115,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -28645,7 +28645,7 @@
     "sell_price_text": "0,16\u20ac"
   },
   "403560-Eaten Alive Booster Pack": {
-    "sell_listings": 163,
+    "sell_listings": 160,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -28655,7 +28655,7 @@
     "sell_price_text": "0,28\u20ac"
   },
   "410210-Ampersand Booster Pack": {
-    "sell_listings": 144,
+    "sell_listings": 145,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -28695,9 +28695,9 @@
     "sell_price_text": "0,23\u20ac"
   },
   "473470-Purgatory Booster Pack": {
-    "sell_listings": 200,
-    "sell_price": 7,
-    "sell_price_text": "0,07\u20ac"
+    "sell_listings": 199,
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "375850-Island Defense Booster Pack": {
     "sell_listings": 195,
@@ -28785,7 +28785,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "374320-DARK SOULS\u2122 III Booster Pack": {
-    "sell_listings": 326,
+    "sell_listings": 325,
     "sell_price": 26,
     "sell_price_text": "0,26\u20ac"
   },
@@ -28810,7 +28810,7 @@
     "sell_price_text": "0,19\u20ac"
   },
   "495990-True Love \uff5eConfide to the Maple\uff5e Booster Pack": {
-    "sell_listings": 423,
+    "sell_listings": 425,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -28825,7 +28825,7 @@
     "sell_price_text": "0,27\u20ac"
   },
   "814380-Sekiro\u2122: Shadows Die Twice Booster Pack": {
-    "sell_listings": 136,
+    "sell_listings": 135,
     "sell_price": 27,
     "sell_price_text": "0,27\u20ac"
   },
@@ -28845,7 +28845,7 @@
     "sell_price_text": "0,29\u20ac"
   },
   "550-Left 4 Dead 2 Booster Pack": {
-    "sell_listings": 1164,
+    "sell_listings": 1161,
     "sell_price": 12,
     "sell_price_text": "0,12\u20ac"
   },
@@ -28905,7 +28905,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "72850-The Elder Scrolls V: Skyrim Booster Pack": {
-    "sell_listings": 370,
+    "sell_listings": 368,
     "sell_price": 21,
     "sell_price_text": "0,21\u20ac"
   },
@@ -29196,13 +29196,13 @@
   },
   "515200-Cliff Hanger Booster Pack": {
     "sell_listings": 13,
-    "sell_price": 162,
-    "sell_price_text": "$1.62"
+    "sell_price": 144,
+    "sell_price_text": "1,44\u20ac"
   },
   "414330-We Are Chicago Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 141,
-    "sell_price_text": "$1.41"
+    "sell_price": 126,
+    "sell_price_text": "1,26\u20ac"
   },
   "536770-THE AWKWARD STEVE DUOLOGY Booster Pack": {
     "sell_listings": 0,
@@ -29437,7 +29437,7 @@
   "436220-A-10 VR Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "611160-Karnage Chronicles Booster Pack": {
     "sell_listings": 0,
@@ -29457,7 +29457,7 @@
   "491710-Gun Range VR Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "572300-Nyheim Booster Pack": {
     "sell_listings": 0,
@@ -30001,23 +30001,23 @@
   },
   "283230-Spoiler Alert Booster Pack": {
     "sell_listings": 25,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "488280-Gun Done Booster Pack": {
     "sell_listings": 14,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "366320-Seasons after Fall Booster Pack": {
     "sell_listings": 31,
-    "sell_price": 25,
-    "sell_price_text": "$0.25"
+    "sell_price": 23,
+    "sell_price_text": "0,23\u20ac"
   },
   "341780-Chronicles of a Dark Lord: Episode II War of The Abyss Booster Pack": {
     "sell_listings": 31,
     "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price_text": "0,07\u20ac"
   },
   "284180-Magicians & Looters Booster Pack": {
     "sell_listings": 29,
@@ -30027,32 +30027,32 @@
   "293940-Kill The Bad Guy Booster Pack": {
     "sell_listings": 49,
     "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price_text": "0,09\u20ac"
   },
   "270750-Realms of Arkania 2 - Star Trail Classic Booster Pack": {
     "sell_listings": 18,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "259390-Ballpoint Universe: Infinite Booster Pack": {
     "sell_listings": 67,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "363510-STAR-BOX: RPG Adventures in Space! Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "22200-Zeno Clash Booster Pack": {
     "sell_listings": 32,
     "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price_text": "0,07\u20ac"
   },
   "591350-Escape the Mazes Booster Pack": {
     "sell_listings": 4,
-    "sell_price": 89,
-    "sell_price_text": "$0.89"
+    "sell_price": 80,
+    "sell_price_text": "0,80\u20ac"
   },
   "500710-Wild Terra Online Booster Pack": {
     "sell_listings": 33,
@@ -30127,12 +30127,12 @@
   "410670-Suits: A Business RPG Booster Pack": {
     "sell_listings": 33,
     "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price_text": "0,08\u20ac"
   },
   "115110-Stacking Booster Pack": {
     "sell_listings": 52,
     "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price_text": "0,07\u20ac"
   },
   "311240-Zero Escape: Zero Time Dilemma Booster Pack": {
     "sell_listings": 5,
@@ -30356,8 +30356,8 @@
   },
   "253330-Neverending Nightmares Booster Pack": {
     "sell_listings": 37,
-    "sell_price": 28,
-    "sell_price_text": "$0.28"
+    "sell_price": 25,
+    "sell_price_text": "0,25\u20ac"
   },
   "464490-The Afterglow of Grisaia Booster Pack": {
     "sell_listings": 11,
@@ -30415,7 +30415,7 @@
     "sell_price_text": "0,28\u20ac"
   },
   "390710-Acceleration of SUGURI 2 Booster Pack": {
-    "sell_listings": 24,
+    "sell_listings": 23,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
@@ -30866,8 +30866,8 @@
   },
   "454220-The Temporal Invasion Booster Pack": {
     "sell_listings": 25,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "325790-Fallen: A2P Protocol Booster Pack": {
     "sell_listings": 10,
@@ -31645,7 +31645,7 @@
     "sell_price_text": "0,10\u20ac"
   },
   "105450-Age of Empires\u00ae III: Complete Collection Booster Pack": {
-    "sell_listings": 185,
+    "sell_listings": 183,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
@@ -33185,9 +33185,9 @@
     "sell_price_text": "0,15\u20ac"
   },
   "532110-Rusty Lake: Roots Booster Pack": {
-    "sell_listings": 31,
-    "sell_price": 12,
-    "sell_price_text": "0,12\u20ac"
+    "sell_listings": 28,
+    "sell_price": 13,
+    "sell_price_text": "0,13\u20ac"
   },
   "410380-HEX: Shards of Fate Booster Pack": {
     "sell_listings": 21,
@@ -34076,8 +34076,8 @@
   },
   "406310-Stop Online - Battle of Words Booster Pack": {
     "sell_listings": 8,
-    "sell_price": 13,
-    "sell_price_text": "$0.13"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "458630-Political Animals Booster Pack": {
     "sell_listings": 7,
@@ -34821,23 +34821,23 @@
   },
   "315340-A.R.E.S. Extinction Agenda EX Booster Pack": {
     "sell_listings": 23,
-    "sell_price": 42,
-    "sell_price_text": "$0.42"
+    "sell_price": 38,
+    "sell_price_text": "0,38\u20ac"
   },
   "785840-Moe Jigsaw Booster Pack": {
     "sell_listings": 7,
-    "sell_price": 32,
-    "sell_price_text": "$0.32"
+    "sell_price": 28,
+    "sell_price_text": "0,28\u20ac"
   },
   "485620-Pick a Hero Booster Pack": {
     "sell_listings": 6,
-    "sell_price": 41,
-    "sell_price_text": "$0.41"
+    "sell_price": 37,
+    "sell_price_text": "0,37\u20ac"
   },
   "360550-Cursed Sight Booster Pack": {
     "sell_listings": 3,
-    "sell_price": 31,
-    "sell_price_text": "$0.31"
+    "sell_price": 28,
+    "sell_price_text": "0,28\u20ac"
   },
   "555760-Adrenaline adventure Booster Pack": {
     "sell_listings": 32,
@@ -35105,7 +35105,7 @@
     "sell_price_text": "0,14\u20ac"
   },
   "92800-SpaceChem Booster Pack": {
-    "sell_listings": 50,
+    "sell_listings": 48,
     "sell_price": 9,
     "sell_price_text": "0,09\u20ac"
   },
@@ -35180,9 +35180,9 @@
     "sell_price_text": "0,66\u20ac"
   },
   "98200-Frozen Synapse Booster Pack": {
-    "sell_listings": 95,
-    "sell_price": 8,
-    "sell_price_text": "0,08\u20ac"
+    "sell_listings": 94,
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "848350-Katamari Damacy REROLL Booster Pack": {
     "sell_listings": 5,
@@ -35311,13 +35311,13 @@
   },
   "562260-WAVESHAPER Booster Pack": {
     "sell_listings": 5,
-    "sell_price": 49,
-    "sell_price_text": "$0.49"
+    "sell_price": 42,
+    "sell_price_text": "0,42\u20ac"
   },
   "421030-Catch Me Booster Pack": {
     "sell_listings": 36,
-    "sell_price": 55,
-    "sell_price_text": "$0.55"
+    "sell_price": 50,
+    "sell_price_text": "0,50\u20ac"
   },
   "226320-Marvel Heroes Omega Booster Pack": {
     "sell_listings": 96,
@@ -35626,8 +35626,8 @@
   },
   "587620-OKAMI HD - \u5927\u795e \u7d76\u666f\u7248 Booster Pack": {
     "sell_listings": 48,
-    "sell_price": 19,
-    "sell_price_text": "$0.19"
+    "sell_price": 17,
+    "sell_price_text": "0,17\u20ac"
   },
   "269790-DreadOut Booster Pack": {
     "sell_listings": 54,
@@ -35960,9 +35960,9 @@
     "sell_price_text": "0,08\u20ac"
   },
   "236090-Dust: An Elysian Tail Booster Pack": {
-    "sell_listings": 200,
-    "sell_price": 11,
-    "sell_price_text": "0,11\u20ac"
+    "sell_listings": 199,
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "575740-Omega One Booster Pack": {
     "sell_listings": 53,
@@ -36116,16 +36116,16 @@
   },
   "259550-Hero of the Kingdom Booster Pack": {
     "sell_listings": 44,
-    "sell_price": 12,
-    "sell_price_text": "$0.12"
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "279260-Richard & Alice Booster Pack": {
     "sell_listings": 38,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "400370-Normality Booster Pack": {
-    "sell_listings": 121,
+    "sell_listings": 119,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -36137,7 +36137,7 @@
   "314710-Mighty No. 9 Booster Pack": {
     "sell_listings": 44,
     "sell_price": 10,
-    "sell_price_text": "$0.10"
+    "sell_price_text": "0,10\u20ac"
   },
   "312750-FINAL FANTASY IV Booster Pack": {
     "sell_listings": 59,
@@ -36160,9 +36160,9 @@
     "sell_price_text": "0,13\u20ac"
   },
   "502140-Drayt Empire Booster Pack": {
-    "sell_listings": 147,
-    "sell_price": 7,
-    "sell_price_text": "0,07\u20ac"
+    "sell_listings": 146,
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "691150-Saku Saku: Love Blooms with the Cherry Blossoms Booster Pack": {
     "sell_listings": 15,
@@ -36175,9 +36175,9 @@
     "sell_price_text": "0,07\u20ac"
   },
   "326480-If My Heart Had Wings Booster Pack": {
-    "sell_listings": 66,
-    "sell_price": 19,
-    "sell_price_text": "0,19\u20ac"
+    "sell_listings": 59,
+    "sell_price": 21,
+    "sell_price_text": "0,21\u20ac"
   },
   "315810-eden* Booster Pack": {
     "sell_listings": 71,
@@ -36291,8 +36291,8 @@
   },
   "609320-FAR: Lone Sails Booster Pack": {
     "sell_listings": 24,
-    "sell_price": 27,
-    "sell_price_text": "$0.27"
+    "sell_price": 24,
+    "sell_price_text": "0,24\u20ac"
   },
   "512020-Box Maze Booster Pack": {
     "sell_listings": 30,
@@ -36451,8 +36451,8 @@
   },
   "668630-Tricolour Lovestory Booster Pack": {
     "sell_listings": 241,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "360970-Heaven Forest NIGHTS Booster Pack": {
     "sell_listings": 38,
@@ -36480,9 +36480,9 @@
     "sell_price_text": "0,30\u20ac"
   },
   "311210-Call of Duty: Black Ops III Booster Pack": {
-    "sell_listings": 173,
-    "sell_price": 11,
-    "sell_price_text": "0,11\u20ac"
+    "sell_listings": 174,
+    "sell_price": 9,
+    "sell_price_text": "0,09\u20ac"
   },
   "416370-Showing Tonight: Mindhunters Incident Booster Pack": {
     "sell_listings": 57,
@@ -36610,7 +36610,7 @@
     "sell_price_text": "0,32\u20ac"
   },
   "362890-Black Mesa Booster Pack": {
-    "sell_listings": 72,
+    "sell_listings": 71,
     "sell_price": 19,
     "sell_price_text": "0,19\u20ac"
   },
@@ -36916,8 +36916,8 @@
   },
   "372490-GROOVY Booster Pack": {
     "sell_listings": 34,
-    "sell_price": 9,
-    "sell_price_text": "$0.09"
+    "sell_price": 8,
+    "sell_price_text": "0,08\u20ac"
   },
   "315070-Blob From Space Booster Pack": {
     "sell_listings": 35,
@@ -37010,7 +37010,7 @@
     "sell_price_text": "0,16\u20ac"
   },
   "883710-RESIDENT EVIL 2 - BIOHAZARD RE:2 Booster Pack": {
-    "sell_listings": 87,
+    "sell_listings": 86,
     "sell_price": 20,
     "sell_price_text": "0,20\u20ac"
   },
@@ -37020,7 +37020,7 @@
     "sell_price_text": "0,48\u20ac"
   },
   "8870-BioShock Infinite Booster Pack": {
-    "sell_listings": 163,
+    "sell_listings": 162,
     "sell_price": 16,
     "sell_price_text": "0,16\u20ac"
   },
@@ -37030,7 +37030,7 @@
     "sell_price_text": "0,10\u20ac"
   },
   "242700-Injustice: Gods Among Us Ultimate Edition Booster Pack": {
-    "sell_listings": 180,
+    "sell_listings": 181,
     "sell_price": 10,
     "sell_price_text": "0,10\u20ac"
   },
@@ -37065,7 +37065,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "454890-Project Starship Booster Pack": {
-    "sell_listings": 198,
+    "sell_listings": 199,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -37110,12 +37110,12 @@
     "sell_price_text": "0,39\u20ac"
   },
   "599480-Flamel's miracle\uff08\u5f17\u62c9\u6885\u5c14\u7684\u5947\u8ff9\uff09 Booster Pack": {
-    "sell_listings": 263,
-    "sell_price": 21,
-    "sell_price_text": "0,21\u20ac"
+    "sell_listings": 258,
+    "sell_price": 23,
+    "sell_price_text": "0,23\u20ac"
   },
   "586140-BlazBlue Centralfiction Booster Pack": {
-    "sell_listings": 120,
+    "sell_listings": 121,
     "sell_price": 17,
     "sell_price_text": "0,17\u20ac"
   },
@@ -37125,7 +37125,7 @@
     "sell_price_text": "0,18\u20ac"
   },
   "511680-Fate-EXTELLA Booster Pack": {
-    "sell_listings": 143,
+    "sell_listings": 146,
     "sell_price": 20,
     "sell_price_text": "0,20\u20ac"
   },
@@ -37240,7 +37240,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "552280-Tayutama 2 -you're the only one- Booster Pack": {
-    "sell_listings": 47,
+    "sell_listings": 48,
     "sell_price": 27,
     "sell_price_text": "0,27\u20ac"
   },
@@ -37286,13 +37286,13 @@
   },
   "889600-The Caligula Effect: Overdose Booster Pack": {
     "sell_listings": 21,
-    "sell_price": 20,
-    "sell_price_text": "$0.20"
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "610810-Your Friend Hana Booster Pack": {
     "sell_listings": 33,
-    "sell_price": 36,
-    "sell_price_text": "$0.36"
+    "sell_price": 31,
+    "sell_price_text": "0,31\u20ac"
   },
   "596870-Drop Hunt Booster Pack": {
     "sell_listings": 95,
@@ -37312,7 +37312,7 @@
   "521940-Space Incident Booster Pack": {
     "sell_listings": 117,
     "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price_text": "0,07\u20ac"
   },
   "528510-Turbo Pug 3D Booster Pack": {
     "sell_listings": 107,
@@ -37350,7 +37350,7 @@
     "sell_price_text": "0,14\u20ac"
   },
   "930910-STEINS;GATE: Linear Bounded Phenogram Booster Pack": {
-    "sell_listings": 17,
+    "sell_listings": 23,
     "sell_price": 26,
     "sell_price_text": "0,26\u20ac"
   },
@@ -37395,7 +37395,7 @@
     "sell_price_text": "0,09\u20ac"
   },
   "407330-Sakura Dungeon Booster Pack": {
-    "sell_listings": 193,
+    "sell_listings": 192,
     "sell_price": 13,
     "sell_price_text": "0,13\u20ac"
   },
@@ -37445,9 +37445,9 @@
     "sell_price_text": "0,06\u20ac"
   },
   "431960-Wallpaper Engine Booster Pack": {
-    "sell_listings": 166,
-    "sell_price": 17,
-    "sell_price_text": "0,17\u20ac"
+    "sell_listings": 160,
+    "sell_price": 18,
+    "sell_price_text": "0,18\u20ac"
   },
   "423760-Hit Tank PRO Booster Pack": {
     "sell_listings": 10,
@@ -37465,9 +37465,9 @@
     "sell_price_text": "0,13\u20ac"
   },
   "321040-DiRT 3 Complete Edition Booster Pack": {
-    "sell_listings": 150,
-    "sell_price": 11,
-    "sell_price_text": "0,11\u20ac"
+    "sell_listings": 148,
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "409710-BioShock Remastered Booster Pack": {
     "sell_listings": 102,
@@ -37570,7 +37570,7 @@
     "sell_price_text": "0,39\u20ac"
   },
   "881560-How To Date A Magical Girl! Booster Pack": {
-    "sell_listings": 18,
+    "sell_listings": 24,
     "sell_price": 24,
     "sell_price_text": "0,24\u20ac"
   },
@@ -37585,7 +37585,7 @@
     "sell_price_text": "0,11\u20ac"
   },
   "365450-Hacknet Booster Pack": {
-    "sell_listings": 320,
+    "sell_listings": 321,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -37790,7 +37790,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "574030-Score a goal (Physical football) Booster Pack": {
-    "sell_listings": 38,
+    "sell_listings": 31,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -37895,7 +37895,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "496870-Inverted Booster Pack": {
-    "sell_listings": 106,
+    "sell_listings": 105,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -37980,9 +37980,9 @@
     "sell_price_text": "0,08\u20ac"
   },
   "413150-Stardew Valley Booster Pack": {
-    "sell_listings": 137,
-    "sell_price": 23,
-    "sell_price_text": "0,23\u20ac"
+    "sell_listings": 136,
+    "sell_price": 24,
+    "sell_price_text": "0,24\u20ac"
   },
   "353640-Train Valley Booster Pack": {
     "sell_listings": 63,
@@ -38165,7 +38165,7 @@
     "sell_price_text": "0,16\u20ac"
   },
   "489220-Unforgiving Trials: The Darkest Crusade Booster Pack": {
-    "sell_listings": 254,
+    "sell_listings": 255,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -38285,7 +38285,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "622220-Fate-EXTELLA LINK Booster Pack": {
-    "sell_listings": 123,
+    "sell_listings": 138,
     "sell_price": 23,
     "sell_price_text": "0,23\u20ac"
   },
@@ -38310,7 +38310,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "1930-Two Worlds: Epic Edition Booster Pack": {
-    "sell_listings": 317,
+    "sell_listings": 318,
     "sell_price": 4,
     "sell_price_text": "0,04\u20ac"
   },
@@ -38495,17 +38495,17 @@
     "sell_price_text": "0,16\u20ac"
   },
   "292030-The Witcher 3: Wild Hunt Booster Pack": {
-    "sell_listings": 450,
+    "sell_listings": 449,
     "sell_price": 26,
     "sell_price_text": "0,26\u20ac"
   },
   "859580-Imperator: Rome Booster Pack": {
-    "sell_listings": 1,
-    "sell_price": 168,
-    "sell_price_text": "1,68\u20ac"
+    "sell_listings": 2,
+    "sell_price": 70,
+    "sell_price_text": "0,70\u20ac"
   },
   "105600-Terraria Booster Pack": {
-    "sell_listings": 209,
+    "sell_listings": 208,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -38515,7 +38515,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "49520-Borderlands 2 Booster Pack": {
-    "sell_listings": 76,
+    "sell_listings": 75,
     "sell_price": 20,
     "sell_price_text": "0,20\u20ac"
   },
@@ -38525,7 +38525,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "366890-Zombie Zoeds Booster Pack": {
-    "sell_listings": 60,
+    "sell_listings": 56,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -38575,7 +38575,7 @@
     "sell_price_text": "0,14\u20ac"
   },
   "863550-HITMAN\u2122 2 Booster Pack": {
-    "sell_listings": 990,
+    "sell_listings": 979,
     "sell_price": 5,
     "sell_price_text": "0,05\u20ac"
   },
@@ -38660,7 +38660,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "222880-Insurgency Booster Pack": {
-    "sell_listings": 532,
+    "sell_listings": 531,
     "sell_price": 8,
     "sell_price_text": "0,08\u20ac"
   },
@@ -38730,9 +38730,9 @@
     "sell_price_text": "0,09\u20ac"
   },
   "223470-POSTAL 2 Booster Pack": {
-    "sell_listings": 112,
-    "sell_price": 12,
-    "sell_price_text": "0,12\u20ac"
+    "sell_listings": 113,
+    "sell_price": 11,
+    "sell_price_text": "0,11\u20ac"
   },
   "418370-RESIDENT EVIL 7 biohazard - BIOHAZARD 7 resident evil Booster Pack": {
     "sell_listings": 82,
@@ -38760,7 +38760,7 @@
     "sell_price_text": "0,25\u20ac"
   },
   "386480-Blood Code Booster Pack": {
-    "sell_listings": 536,
+    "sell_listings": 539,
     "sell_price": 15,
     "sell_price_text": "0,15\u20ac"
   },
@@ -39411,8 +39411,8 @@
   },
   "556340-King Kaiju Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 38,
-    "sell_price_text": "$0.38"
+    "sell_price": 34,
+    "sell_price_text": "0,34\u20ac"
   },
   "312630-OTTTD Booster Pack": {
     "sell_listings": 25,
@@ -40236,8 +40236,8 @@
   },
   "375580-Three Days Booster Pack": {
     "sell_listings": 13,
-    "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price": 10,
+    "sell_price_text": "0,10\u20ac"
   },
   "368610-The Enchanted Cave 2 Booster Pack": {
     "sell_listings": 20,
@@ -40526,8 +40526,8 @@
   },
   "928520-Story of Eve - A Hero's Study Booster Pack": {
     "sell_listings": 1,
-    "sell_price": 54,
-    "sell_price_text": "$0.54"
+    "sell_price": 49,
+    "sell_price_text": "0,49\u20ac"
   },
   "410120-AGON - The Mysterious Codex (Trilogy) Booster Pack": {
     "sell_listings": 32,
@@ -40741,8 +40741,8 @@
   },
   "500980-Endangered Booster Pack": {
     "sell_listings": 43,
-    "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price": 6,
+    "sell_price_text": "0,06\u20ac"
   },
   "497080-Construct: Escape the System Booster Pack": {
     "sell_listings": 15,
@@ -40752,17 +40752,17 @@
   "244730-Divekick Booster Pack": {
     "sell_listings": 107,
     "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price_text": "0,07\u20ac"
   },
   "463000-Hero Battle Booster Pack": {
     "sell_listings": 36,
-    "sell_price": 8,
-    "sell_price_text": "$0.08"
+    "sell_price": 7,
+    "sell_price_text": "0,07\u20ac"
   },
   "361990-Lakeview Cabin Collection Booster Pack": {
     "sell_listings": 22,
     "sell_price": 11,
-    "sell_price_text": "$0.11"
+    "sell_price_text": "0,11\u20ac"
   },
   "705020-Bottom of the 9th Booster Pack": {
     "sell_listings": 5,
@@ -40821,8 +40821,8 @@
   },
   "411590-The Rivers of Alice - Extended Version Booster Pack": {
     "sell_listings": 17,
-    "sell_price": 16,
-    "sell_price_text": "$0.16"
+    "sell_price": 14,
+    "sell_price_text": "0,14\u20ac"
   },
   "356400-Thumper Booster Pack": {
     "sell_listings": 52,
@@ -40836,13 +40836,13 @@
   },
   "435460-NotCoD\u2122 Booster Pack": {
     "sell_listings": 11,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "486720-Bastard Bonds Booster Pack": {
     "sell_listings": 12,
-    "sell_price": 25,
-    "sell_price_text": "$0.25"
+    "sell_price": 23,
+    "sell_price_text": "0,23\u20ac"
   },
   "461780-Moonstone Tavern Booster Pack": {
     "sell_listings": 19,
@@ -40876,8 +40876,8 @@
   },
   "332330-PixelJunk\u2122 Shooter Ultimate Booster Pack": {
     "sell_listings": 10,
-    "sell_price": 14,
-    "sell_price_text": "$0.14"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "514090-Beautiful Japanese Scenery - Animated Jigsaws Booster Pack": {
     "sell_listings": 22,
@@ -40886,18 +40886,18 @@
   },
   "265950-Ether One Booster Pack": {
     "sell_listings": 30,
-    "sell_price": 17,
-    "sell_price_text": "$0.17"
+    "sell_price": 16,
+    "sell_price_text": "0,16\u20ac"
   },
   "413680-Statues Booster Pack": {
     "sell_listings": 8,
-    "sell_price": 24,
-    "sell_price_text": "$0.24"
+    "sell_price": 20,
+    "sell_price_text": "0,20\u20ac"
   },
   "553210-Warhammer 40,000: Space Wolf Booster Pack": {
     "sell_listings": 22,
-    "sell_price": 18,
-    "sell_price_text": "$0.18"
+    "sell_price": 17,
+    "sell_price_text": "0,17\u20ac"
   },
   "446610-Bunny Bounce Booster Pack": {
     "sell_listings": 2,
@@ -40921,8 +40921,8 @@
   },
   "274130-Rambo The Video Game Booster Pack": {
     "sell_listings": 9,
-    "sell_price": 50,
-    "sell_price_text": "$0.50"
+    "sell_price": 46,
+    "sell_price_text": "0,46\u20ac"
   },
   "660920-The Warhorn Booster Pack": {
     "sell_listings": 5,
@@ -41321,18 +41321,18 @@
   },
   "291860-Pit People Booster Pack": {
     "sell_listings": 49,
-    "sell_price": 14,
-    "sell_price_text": "$0.14"
+    "sell_price": 12,
+    "sell_price_text": "0,12\u20ac"
   },
   "460120-Megadimension Neptunia VII Booster Pack": {
     "sell_listings": 99,
-    "sell_price": 26,
-    "sell_price_text": "$0.26"
+    "sell_price": 24,
+    "sell_price_text": "0,24\u20ac"
   },
   "369290-Airport Madness: World Edition Booster Pack": {
     "sell_listings": 19,
-    "sell_price": 19,
-    "sell_price_text": "$0.19"
+    "sell_price": 17,
+    "sell_price_text": "0,17\u20ac"
   },
   "567680-The Pasture Booster Pack": {
     "sell_listings": 387,
@@ -41565,7 +41565,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "336420-Bloodsports.TV Booster Pack": {
-    "sell_listings": 61,
+    "sell_listings": 59,
     "sell_price": 9,
     "sell_price_text": "0,09\u20ac"
   },
@@ -41730,7 +41730,7 @@
     "sell_price_text": "0,21\u20ac"
   },
   "203160-Tomb Raider Booster Pack": {
-    "sell_listings": 194,
+    "sell_listings": 195,
     "sell_price": 14,
     "sell_price_text": "0,14\u20ac"
   },
@@ -41780,7 +41780,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "41010-Serious Sam HD: The Second Encounter Booster Pack": {
-    "sell_listings": 55,
+    "sell_listings": 57,
     "sell_price": 9,
     "sell_price_text": "0,09\u20ac"
   },
@@ -41795,7 +41795,7 @@
     "sell_price_text": "0,13\u20ac"
   },
   "444200-World of Tanks Blitz Booster Pack": {
-    "sell_listings": 35,
+    "sell_listings": 34,
     "sell_price": 14,
     "sell_price_text": "0,14\u20ac"
   },
@@ -41806,16 +41806,16 @@
   },
   "449940-! That Bastard Is Trying To Steal Our Gold ! Booster Pack": {
     "sell_listings": 162,
-    "sell_price": 24,
-    "sell_price_text": "$0.24"
+    "sell_price": 21,
+    "sell_price_text": "0,21\u20ac"
   },
   "368750-Nebula Online Booster Pack": {
     "sell_listings": 43,
-    "sell_price": 7,
-    "sell_price_text": "$0.07"
+    "sell_price": 6,
+    "sell_price_text": "0,06\u20ac"
   },
   "224900-Iron Sky Invasion Booster Pack": {
-    "sell_listings": 886,
+    "sell_listings": 885,
     "sell_price": 5,
     "sell_price_text": "0,05\u20ac"
   },
@@ -41825,7 +41825,7 @@
     "sell_price_text": "0,10\u20ac"
   },
   "463210-State of Anarchy Booster Pack": {
-    "sell_listings": 198,
+    "sell_listings": 195,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -41865,7 +41865,7 @@
     "sell_price_text": "0,09\u20ac"
   },
   "279720-The I of the Dragon Booster Pack": {
-    "sell_listings": 193,
+    "sell_listings": 194,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -41965,9 +41965,9 @@
     "sell_price_text": "0,04\u20ac"
   },
   "812140-Assassin's Creed Odyssey Booster Pack": {
-    "sell_listings": 185,
-    "sell_price": 18,
-    "sell_price_text": "0,18\u20ac"
+    "sell_listings": 184,
+    "sell_price": 19,
+    "sell_price_text": "0,19\u20ac"
   },
   "448630-Rabiez: Epidemic Booster Pack": {
     "sell_listings": 200,
@@ -42040,7 +42040,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "535760-Unforgiving Trials: The Space Crusade Booster Pack": {
-    "sell_listings": 200,
+    "sell_listings": 199,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -42065,7 +42065,7 @@
     "sell_price_text": "0,14\u20ac"
   },
   "893180-Catherine Classic Booster Pack": {
-    "sell_listings": 92,
+    "sell_listings": 93,
     "sell_price": 18,
     "sell_price_text": "0,18\u20ac"
   },
@@ -42150,7 +42150,7 @@
     "sell_price_text": "0,05\u20ac"
   },
   "4000-Garry's Mod Booster Pack": {
-    "sell_listings": 470,
+    "sell_listings": 469,
     "sell_price": 12,
     "sell_price_text": "0,12\u20ac"
   },
@@ -42165,12 +42165,12 @@
     "sell_price_text": "0,05\u20ac"
   },
   "203140-Hitman: Absolution Booster Pack": {
-    "sell_listings": 194,
+    "sell_listings": 195,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
   "889510-SENRAN KAGURA Burst Re:Newal Booster Pack": {
-    "sell_listings": 29,
+    "sell_listings": 40,
     "sell_price": 25,
     "sell_price_text": "0,25\u20ac"
   },
@@ -42182,7 +42182,7 @@
   "456170-Bannerman Booster Pack": {
     "sell_listings": 0,
     "sell_price": 0,
-    "sell_price_text": "$0.00"
+    "sell_price_text": "0,--\u20ac"
   },
   "765640-Change Booster Pack": {
     "sell_listings": 0,
@@ -42760,7 +42760,7 @@
     "sell_price_text": "0,12\u20ac"
   },
   "371970-Barony Booster Pack": {
-    "sell_listings": 36,
+    "sell_listings": 37,
     "sell_price": 11,
     "sell_price_text": "0,11\u20ac"
   },
@@ -42985,7 +42985,7 @@
     "sell_price_text": "0,07\u20ac"
   },
   "354920-Pester Booster Pack": {
-    "sell_listings": 107,
+    "sell_listings": 106,
     "sell_price": 6,
     "sell_price_text": "0,06\u20ac"
   },
@@ -43390,7 +43390,7 @@
     "sell_price_text": "0,08\u20ac"
   },
   "486820-Yellow: The Yellow Artifact Booster Pack": {
-    "sell_listings": 231,
+    "sell_listings": 232,
     "sell_price": 7,
     "sell_price_text": "0,07\u20ac"
   },
@@ -43763,5 +43763,15 @@
     "sell_listings": 3,
     "sell_price": 15,
     "sell_price_text": "0,15\u20ac"
+  },
+  "522740-Oh My Godheads Booster Pack": {
+    "sell_listings": 0,
+    "sell_price": 0,
+    "sell_price_text": "0,--\u20ac"
+  },
+  "278570-Labyrinthine Dreams Booster Pack": {
+    "sell_listings": 28,
+    "sell_price": 13,
+    "sell_price_text": "0,13\u20ac"
   }
 }
