@@ -3,7 +3,7 @@
 # Caveat: this relies on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
 
 from market_search import load_all_listings
-from utils import get_badge_creation_file_name
+from utils import get_badge_creation_file_name, convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
 def get_badge_creation_details():
@@ -37,9 +37,32 @@ def main():
 
     all_listings = load_all_listings()
 
-    listing_hashes = list(filter(lambda s: int(s.split('-')[0]) in badge_app_ids, all_listings.keys()))
+    all_listing_hashes = list(all_listings.keys())
 
-    print('#badges = {} ; #matching hashes found = {}'.format(len(badge_app_ids), len(listing_hashes)))
+    listing_matches = dict()
+    for listing_hash in all_listing_hashes:
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+        app_name = convert_listing_hash_to_app_name(listing_hash)
+
+        listing_matches[app_id] = listing_hash
+        listing_matches[app_name] = listing_hash
+
+    badge_matches = dict()
+    for app_id in badge_app_ids:
+        app_name = badge_creation_details[app_id]['name']
+
+        try:
+            badge_matches[app_id] = listing_matches[app_id]
+        except KeyError:
+
+            try:
+                badge_matches[app_id] = listing_matches[app_name]
+                print('Match for {} with name instead of id (appID = {})'.format(app_name, app_id))
+            except KeyError:
+                print('No match found for {} (appID = {})'.format(app_name, app_id))
+                continue
+
+    print('#badges = {} ; #matching hashes found = {}'.format(len(badge_app_ids), len(badge_matches)))
 
     return True
 
