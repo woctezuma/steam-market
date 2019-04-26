@@ -203,9 +203,12 @@ def get_num_gems_per_sack_of_gems():
 
 
 def get_sack_of_gems_price(currency_symbol='€', verbose=True):
+    cookie_value = get_steam_cookie()
     listing_hash = get_listing_hash_for_gems()
 
-    listing_details, status_code = get_listing_details(listing_hash=listing_hash, currency_symbol=currency_symbol)
+    listing_details, status_code = get_listing_details(listing_hash=listing_hash,
+                                                       currency_symbol=currency_symbol,
+                                                       cookie_value=cookie_value)
 
     if status_code == 200:
         sack_of_gems_price = listing_details[listing_hash]['for_sale']
