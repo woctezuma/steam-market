@@ -9,17 +9,18 @@
 
 import json
 import time
-from pathlib import Path
 
 import requests
+from bs4 import BeautifulSoup
 
 from market_search import load_all_listings
 from personal_info import get_steam_cookie, get_cookie_dict
-from utils import get_listing_details_output_file_name, get_sack_of_gems_listing_file_name
+from utils import get_listing_details_output_file_name
 
 
 def get_steam_market_listing_url(app_id=None, listing_hash=None, render_as_json=True):
     if app_id is None:
+        # AppID for the Steam Store. It is the same for all the booster packs.
         app_id = 753
 
     if listing_hash is None:
@@ -61,10 +62,22 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
     return rate_limits
 
 
-def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=None):
+def parse_item_name_id(html_doc):
+    soup = BeautifulSoup(html_doc, 'html.parser')
+
+    last_script = str(soup.find_all('script')[-1])
+
+    last_script_token = last_script.split('(')[-1]
+
+    item_nameid = int(last_script_token.split(');')[0])
+
+    return item_nameid
+
+
+def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=None, render_as_json=False):
     listing_details = dict()
 
-    url = get_steam_market_listing_url(listing_hash=listing_hash)
+    url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
     req_data = get_listing_parameters()
 
     has_secured_cookie = bool(cookie_value is not None)
@@ -78,30 +91,12 @@ def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=N
     status_code = resp_data.status_code
 
     if status_code == 200:
-        result = resp_data.json()
+        html_doc = resp_data.text
 
-        html = result['results_html']
+        item_nameid = parse_item_name_id(html_doc)
 
-        tokens = html.split()
-
-        price_headers = [l for (c, l) in enumerate(tokens[:-1]) if currency_symbol in tokens[c + 1]]
-        price_values = [l for l in tokens if currency_symbol in l]
-
-        if len(price_headers) > 0 and len(price_headers) != 3:
-            print('Unexpected number of price headers = {}. Likely due to zero sell order.'.format(len(price_headers)))
-            print(price_headers)
-
-        try:
-            chosen_index = 0
-            chosen_price_header = price_headers[chosen_index]  # e.g. 'market_listing_price_with_fee">'
-            chosen_price_value = price_values[chosen_index]  # e.g. '6,64€'
-
-            listing_details[listing_hash] = dict()
-            # listing_details[listing_hash]['price_header'] = chosen_price_header.strip('">')
-            listing_details[listing_hash]['for_sale'] = float(chosen_price_value.strip('€').replace(',', '.'))
-            listing_details[listing_hash]['buy_request'] = -1  # missing from the html code
-        except IndexError:
-            pass
+        listing_details[listing_hash] = dict()
+        listing_details[listing_hash]['item_nameid'] = item_nameid
 
     return listing_details, status_code
 
@@ -152,7 +147,7 @@ def download_all_listing_details(listing_hashes=None):
             all_listings = load_all_listings()
             listing_hashes = list(all_listings.keys())
 
-        all_listing_details = get_listing_details_batch(listing_hashes)
+    all_listing_details = get_listing_details_batch(listing_hashes)
 
         with open(listing_details__output_file_name, 'w') as f:
             json.dump(all_listing_details, f)
@@ -193,71 +188,10 @@ def load_all_listing_details():
     return all_listing_details
 
 
-def get_listing_hash_for_gems():
-    listing_hash_for_gems = '753-Sack of Gems'
-
-    return listing_hash_for_gems
-
-
-def get_num_gems_per_sack_of_gems():
-    num_gems_per_sack_of_gems = 1000
-
-    return num_gems_per_sack_of_gems
-
-
-def download_sack_of_gems_price(currency_symbol='€', verbose=True):
-    cookie_value = get_steam_cookie()
-    listing_hash = get_listing_hash_for_gems()
-
-    listing_details, status_code = get_listing_details(listing_hash=listing_hash,
-                                                       currency_symbol=currency_symbol,
-                                                       cookie_value=cookie_value)
-
-    if status_code == 200:
-        sack_of_gems_price = listing_details[listing_hash]['for_sale']
-
-        with open(get_sack_of_gems_listing_file_name(), 'w') as f:
-            json.dump(listing_details, f)
-    else:
-        sack_of_gems_price = -1
-
-    if verbose:
-        print('A sack of {} gems can be bought for {} €.'.format(get_num_gems_per_sack_of_gems(),
-                                                                 sack_of_gems_price,
-                                                                 currency_symbol))
-
-    return sack_of_gems_price
-
-
-def load_sack_of_gems_price(currency_symbol='€', verbose=True):
-    try:
-        with open(get_sack_of_gems_listing_file_name(), 'r') as f:
-            listing_details = json.load(f)
-
-        listing_hash = get_listing_hash_for_gems()
-
-        sack_of_gems_price = listing_details[listing_hash]['for_sale']
-    except FileNotFoundError:
-        sack_of_gems_price = download_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
-
-    return sack_of_gems_price
-
-
-def get_gem_price(currency_symbol='€', verbose=False):
-    sack_of_gems_price = load_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
-
-    num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
-
-    gem_price = sack_of_gems_price / num_gems_per_sack_of_gems
-
-    return gem_price
-
-
 def main():
-    sack_of_gems_price = load_sack_of_gems_price()
-
     listing_hashes = [
-        get_listing_hash_for_gems(),
+        '290970-1849 Booster Pack',
+        '753-Sack of Gems',
         '511540-MoonQuest Booster Pack',
     ]
     update_all_listing_details(listing_hashes)
@@ -266,11 +200,27 @@ def main():
 
 
 def get_item_nameid(listing_hash):
-    item_nameid = -1
+    try:
+        with open(get_listing_details_output_file_name(), 'r') as f:
+            listing_details = json.load(f)
 
-    item_nameid = 28419077  # TODO
+        item_nameid = listing_details[listing_hash]['item_nameid']
+    except FileNotFoundError:
+        item_nameid = update_all_listing_details(listing_hashes=[listing_hash])
 
     return item_nameid
+
+
+def get_item_nameid_batch(listing_hashes):
+    try:
+        with open(get_listing_details_output_file_name(), 'r') as f:
+            listing_details = json.load(f)
+
+        item_nameids = [listing_details[listing_hash]['item_nameid'] for listing_hash in listing_hashes]
+    except FileNotFoundError:
+        item_nameids = update_all_listing_details(listing_hashes=listing_hashes)
+
+    return item_nameids
 
 
 if __name__ == '__main__':
