@@ -2,8 +2,8 @@
 #
 # Caveat: this relies on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
 
-from market_listing import get_gem_price
 from market_search import load_all_listings
+from sack_of_gems import get_gem_price
 from utils import get_badge_creation_file_name, convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
