@@ -265,5 +265,13 @@ def main():
     return True
 
 
+def get_item_nameid(listing_hash):
+    item_nameid = -1
+
+    item_nameid = 28419077  # TODO
+
+    return item_nameid
+
+
 if __name__ == '__main__':
     main()

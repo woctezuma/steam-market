@@ -3,7 +3,7 @@ import time
 
 import requests
 
-from market_listing import get_steam_api_rate_limits_for_market_listing
+from market_listing import get_item_nameid
 from personal_info import get_steam_cookie, get_cookie_dict
 from utils import get_market_order_file_name
 
@@ -26,10 +26,24 @@ def get_market_order_parameters(item_nameid):
     return params
 
 
-def get_item_nameid(listing_hash):
-    item_nameid = 28419077  # TODO
+def get_steam_api_rate_limits_for_market_order(has_secured_cookie=False):
+    # Objective: return the rate limits of Steam API for the market.
 
-    return item_nameid
+    if has_secured_cookie:
+
+        rate_limits = {
+            'max_num_queries': 50,
+            'cooldown': (1 * 60) + 10,  # 1 minute plus a cushion
+        }
+
+    else:
+
+        rate_limits = {
+            'max_num_queries': 25,
+            'cooldown': (5 * 60) + 10,  # 5 minutes plus a cushion
+        }
+
+    return rate_limits
 
 
 def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
@@ -79,7 +93,7 @@ def download_market_order_data_batch(badge_data, market_order_dict=None):
     cookie_value = get_steam_cookie()
     has_secured_cookie = bool(cookie_value is not None)
 
-    rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
+    rate_limits = get_steam_api_rate_limits_for_market_order(has_secured_cookie)
 
     if market_order_dict is None:
         market_order_dict = dict()
