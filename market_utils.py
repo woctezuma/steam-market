@@ -111,15 +111,16 @@ def aggregate_badge_data(badge_creation_details,
         listing_hash = badge_matches[app_id]
 
         if listing_hash is None:
-            sell_price = -1
+            sell_price_in_euros = -1
         else:
-            sell_price = all_listings[listing_hash]['sell_price']
+            sell_price_in_cents = all_listings[listing_hash]['sell_price']
+            sell_price_in_euros = sell_price_in_cents / 100
 
         aggregated_badge_data[app_id] = dict()
         aggregated_badge_data[app_id]['name'] = app_name
         aggregated_badge_data[app_id]['listing_hash'] = listing_hash
         aggregated_badge_data[app_id]['gem_price'] = gem_amount_required_to_craft_booster_pack * gem_price
-        aggregated_badge_data[app_id]['sell_price'] = sell_price
+        aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
 
     return aggregated_badge_data
 
