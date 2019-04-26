@@ -131,6 +131,8 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
 
     filtered_badge_data = dict()
 
+    unknown_price_counter = 0
+
     for app_id in aggregated_badge_data.keys():
         sell_price_including_fee = aggregated_badge_data[app_id]['sell_price']
         sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
@@ -139,10 +141,13 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
 
         if (sell_price_including_fee < 0) or (gem_price_with_fee < sell_price_without_fee):
             filtered_badge_data[app_id] = aggregated_badge_data[app_id]
+            
+            if sell_price_including_fee < 0:
+                unknown_price_counter += 1
 
     if verbose:
-        print('There are {} booster packs with sell price unknown or strictly higher than gem price.'.format(
-            len(filtered_badge_data)))
+        print('There are {} booster packs with sell price unknown ({}) or strictly higher than gem price ({}).'.format(
+            len(filtered_badge_data), unknown_price_counter, len(filtered_badge_data) - unknown_price_counter))
 
     return filtered_badge_data
 
