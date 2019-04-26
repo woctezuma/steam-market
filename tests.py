@@ -3,6 +3,7 @@ import unittest
 import market_listing
 import market_search
 import market_utils
+import transaction_fee
 import utils
 
 
@@ -44,6 +45,12 @@ class TestUtilsMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(utils.main())
+
+
+class TestTransactionFeeMethods(unittest.TestCase):
+
+    def test_main(self):
+        self.assertTrue(transaction_fee.main())
 
 
 if __name__ == '__main__':
