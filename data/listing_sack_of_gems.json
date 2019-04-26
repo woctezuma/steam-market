@@ -1,6 +1,7 @@
 {
   "753-Sack of Gems": {
-    "for_sale": 0.2,
-    "buy_request": -1
+    "item_nameid": 26463978,
+    "bid": 0.19,
+    "ask": 0.2
   }
 }
