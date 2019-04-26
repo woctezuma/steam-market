@@ -23,30 +23,30 @@ pip install -r requirements.txt
 -   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
 
     1. To do so, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:   
-![drop-down menu](https://i.imgur.com/jU6iI8n.png)
+![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
 
     2. You will be able to copy-paste this line:    
-![inspection](https://i.imgur.com/y1QSzS7.png)
+![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
 
     3. Format it this way:
-![formatting](https://i.imgur.com/YAtWJ5O.png)
+![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
 
     4. For instance, with Visual Studio Code, this requires adding line-breaks with `<Ctrl-H>`
-![Visual Studio Code: replace](https://i.imgur.com/aPKEI7W.png)
+![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
 
 -   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
 
     1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/). 
-![steam community](https://i.imgur.com/K0P9Uxu.png)
+![steam community](https://github.com/woctezuma/steam-market/wiki/img/K0P9Uxu.png)
 
     2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools.
-![storage section](https://i.imgur.com/xGfyU7r.png)
+![storage section](https://github.com/woctezuma/steam-market/wiki/img/xGfyU7r.png)
     
     3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.
-![select any cookie](https://i.imgur.com/YhlPlUy.png)    
+![select any cookie](https://github.com/woctezuma/steam-market/wiki/img/YhlPlUy.png)    
     
     4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).
-![get_steam_cookie()](https://i.imgur.com/cUjUara.png)    
+![get_steam_cookie()](https://github.com/woctezuma/steam-market/wiki/img/cUjUara.png)    
         
 ## Usage
 
