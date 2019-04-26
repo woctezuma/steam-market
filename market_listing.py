@@ -48,8 +48,8 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
     if has_secured_cookie:
 
         rate_limits = {
-            'max_num_queries': 50,
-            'cooldown': (1 * 60) + 10,  # 1 minute plus a cushion
+            'max_num_queries': 20,
+            'cooldown': (5 * 60) + 10,  # 1 minute plus a cushion
         }
 
     else:
