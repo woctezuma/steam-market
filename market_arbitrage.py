@@ -82,15 +82,15 @@ def download_market_order_data(listing_hash):
         result = resp_data.json()
 
         try:
-            bid_price_in_cents = int(result['highest_buy_order'])
-            bid_price = bid_price_in_cents / 100
-        except KeyError:
+            # highest_buy_order
+            bid_price = result['buy_order_graph'][0][0]
+        except KeyError or IndexError:
             bid_price = -1
 
         try:
-            ask_price_in_cents = int(result['lowest_sell_order'])
-            ask_price = ask_price_in_cents / 100
-        except KeyError:
+            # lowest_sell_order
+            ask_price = result['sell_order_graph'][0][0]
+        except KeyError or IndexError:
             ask_price = -1
 
     else:
