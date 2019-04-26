@@ -29,10 +29,17 @@ def get_sack_of_gems_listing_file_name():
     return sack_of_gems_listing_file_name
 
 
+def get_market_order_file_name():
+    market_order_file_name = get_data_folder() + 'market_orders.json'
+
+    return market_order_file_name
+
+
 def main():
     for file_name in [get_badge_creation_file_name(),
                       get_listing_output_file_name(),
                       get_sack_of_gems_listing_file_name(),
+                      get_market_order_file_name(),
                       get_listing_details_output_file_name()]:
         print(file_name)
 
