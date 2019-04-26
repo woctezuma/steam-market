@@ -220,5 +220,15 @@ def get_sack_of_gems_price(currency_symbol='€', verbose=True):
     return sack_of_gems_price
 
 
+def main():
+    listing_hashes = [
+        get_listing_hash_for_gems(),
+        '511540-MoonQuest Booster Pack',
+    ]
+    update_all_listing_details(listing_hashes)
+
+    return True
+
+
 if __name__ == '__main__':
-    download_all_listing_details()
+    main()
