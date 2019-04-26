@@ -18,14 +18,17 @@ from personal_info import get_steam_cookie, get_cookie_dict
 from utils import get_listing_details_output_file_name, get_sack_of_gems_listing_file_name
 
 
-def get_steam_market_listing_url(app_id=None, listing_hash=None):
+def get_steam_market_listing_url(app_id=None, listing_hash=None, render_as_json=True):
     if app_id is None:
         app_id = 753
 
     if listing_hash is None:
         listing_hash = '511540-MoonQuest Booster Pack'
 
-    market_listing_url = 'https://steamcommunity.com/market/listings/' + str(app_id) + '/' + listing_hash + '/render/'
+    market_listing_url = 'https://steamcommunity.com/market/listings/' + str(app_id) + '/' + listing_hash + '/'
+
+    if render_as_json:
+        market_listing_url += 'render/'
 
     return market_listing_url
 
