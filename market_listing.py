@@ -103,13 +103,15 @@ def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=N
     return listing_details, status_code
 
 
-def get_listing_details_batch(listing_hashes):
+def get_listing_details_batch(listing_hashes, all_listing_details=None):
     cookie_value = get_steam_cookie()
     has_secured_cookie = bool(cookie_value is not None)
 
     rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
 
-    all_listing_details = dict()
+    if all_listing_details is None:
+        all_listing_details = dict()
+
     num_listings = len(listing_hashes)
 
     query_count = 0
@@ -148,6 +150,32 @@ def download_all_listing_details():
 
         with open(listing_details__output_file_name, 'w') as f:
             json.dump(all_listing_details, f)
+
+    return True
+
+
+def update_all_listing_details(listing_hashes=None):
+    # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
+    # to restart the process without risking to lose anything, in case the process fails again.
+
+    listing_output_file_name = get_listing_details_output_file_name()
+
+    try:
+        with open(listing_output_file_name, 'r') as f:
+            all_listing_details = json.load(f)
+            print('Loading {} listing details from disk.'.format(len(all_listing_details)))
+    except FileNotFoundError:
+        print('Downloading listing details from scratch.')
+        all_listing_details = None
+
+    if listing_hashes is None:
+        all_listings = load_all_listings()
+        listing_hashes = list(all_listings.keys())
+
+    all_listing_details = get_listing_details_batch(listing_hashes, all_listing_details)
+
+    with open(listing_output_file_name, 'w') as f:
+        json.dump(all_listing_details, f)
 
     return True
 
