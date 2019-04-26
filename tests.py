@@ -1,5 +1,6 @@
 import unittest
 
+import market_arbitrage
 import market_listing
 import market_search
 import market_utils
@@ -37,8 +38,16 @@ class TestMarketSearchMethods(unittest.TestCase):
 
 class TestMarketUtilsMethods(unittest.TestCase):
 
+    def test_load_aggregated_badge_data(self):
+        aggregated_badge_data = market_utils.load_aggregated_badge_data()
+
+        self.assertGreater(len(aggregated_badge_data), 0)
+
+
+class TestMarketArbitrageMethods(unittest.TestCase):
+
     def test_main(self):
-        self.assertTrue(market_utils.main())
+        self.assertTrue(market_arbitrage.main())
 
 
 class TestUtilsMethods(unittest.TestCase):
