@@ -23,9 +23,16 @@ def get_listing_details_output_file_name():
     return listing_details_output_file_name
 
 
+def get_sack_of_gems_listing_file_name():
+    sack_of_gems_listing_file_name = get_data_folder() + 'listing_sack_of_gems.json'
+
+    return sack_of_gems_listing_file_name
+
+
 def main():
     for file_name in [get_badge_creation_file_name(),
                       get_listing_output_file_name(),
+                      get_sack_of_gems_listing_file_name(),
                       get_listing_details_output_file_name()]:
         print(file_name)
 
