@@ -161,7 +161,7 @@ def update_all_listing_details(listing_hashes=None):
     with open(listing_output_file_name, 'w') as f:
         json.dump(all_listing_details, f)
 
-    return True
+    return all_listing_details
 
 
 def load_all_listing_details():
@@ -177,7 +177,7 @@ def main():
         '753-Sack of Gems',
         '511540-MoonQuest Booster Pack',
     ]
-    update_all_listing_details(listing_hashes)
+    listing_details = update_all_listing_details(listing_hashes)
 
     return True
 
@@ -188,8 +188,9 @@ def get_item_nameid(listing_hash):
             listing_details = json.load(f)
 
         item_nameid = listing_details[listing_hash]['item_nameid']
-    except FileNotFoundError:
-        item_nameid = update_all_listing_details(listing_hashes=[listing_hash])
+    except FileNotFoundError or KeyError:
+        listing_details = update_all_listing_details(listing_hashes=[listing_hash])
+        item_nameid = listing_details[listing_hash]['item_nameid']
 
     return item_nameid
 
@@ -199,9 +200,25 @@ def get_item_nameid_batch(listing_hashes):
         with open(get_listing_details_output_file_name(), 'r') as f:
             listing_details = json.load(f)
 
-        item_nameids = [listing_details[listing_hash]['item_nameid'] for listing_hash in listing_hashes]
+        item_nameids = dict()
+        listing_hashes_to_process = []
+        for listing_hash in listing_hashes:
+            try:
+                item_nameid = listing_details[listing_hash]['item_nameid']
+                item_nameids[listing_hash] = item_nameid
+            except KeyError:
+                listing_hashes_to_process.append(listing_hash)
+
+        if len(listing_hashes_to_process) > 0:
+            listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process)
+
+            for listing_hash in listing_hashes_to_process:
+                item_nameid = listing_details[listing_hash]['item_nameid']
+                item_nameids[listing_hash] = item_nameid
+
     except FileNotFoundError:
-        item_nameids = update_all_listing_details(listing_hashes=listing_hashes)
+        listing_details = update_all_listing_details(listing_hashes=listing_hashes)
+        item_nameids = [listing_details[listing_hash]['item_nameid'] for listing_hash in listing_hashes]
 
     return item_nameids
 
