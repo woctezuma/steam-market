@@ -6,7 +6,7 @@ from market_search import load_all_listings
 from utils import get_badge_creation_file_name, convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
-def get_badge_creation_details():
+def parse_badge_creation_details():
     with open(get_badge_creation_file_name(), 'r') as f:
         lines = [l.strip() for l in f.readlines() if l[0] != '#']
 
@@ -34,7 +34,7 @@ def match_badges_with_listing_hashes(badge_creation_details=None, verbose=True):
     # Badges for games which I own
 
     if badge_creation_details is None:
-        badge_creation_details = get_badge_creation_details()
+        badge_creation_details = parse_badge_creation_details()
 
     badge_app_ids = list(badge_creation_details.keys())
 
@@ -81,7 +81,7 @@ def match_badges_with_listing_hashes(badge_creation_details=None, verbose=True):
 
 
 def main():
-    badge_creation_details = get_badge_creation_details()
+    badge_creation_details = parse_badge_creation_details()
 
     badge_matches = match_badges_with_listing_hashes(badge_creation_details)
 
