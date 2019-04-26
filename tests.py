@@ -24,6 +24,9 @@ class TestMarketListingMethods(unittest.TestCase):
 
         self.assertGreater(sack_of_gems_price, 0)
 
+    def test_main(self):
+        self.assertTrue(market_listing.main())
+
 
 class TestMarketSearchMethods(unittest.TestCase):
 
