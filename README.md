@@ -56,6 +56,12 @@ pip install -r requirements.txt
 python market_search.py
 ```
 
+-   To retrieve the price which sellers ask for a sack of gems, run:
+
+```bash
+python market_listing.py
+```
+
 -   To parse all the options to craft 'Booster Packs', for the games you own, run:
 
 ```bash
