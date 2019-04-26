@@ -3,7 +3,7 @@ import time
 
 import requests
 
-from market_listing import get_item_nameid
+from market_listing import get_item_nameid, get_item_nameid_batch
 from personal_info import get_steam_cookie, get_cookie_dict
 from utils import get_market_order_file_name
 
@@ -89,7 +89,15 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
     return bid_price, ask_price
 
 
-def download_market_order_data_batch(badge_data, market_order_dict=None):
+def download_market_order_data_batch(badge_data, market_order_dict=None, verbose=False):
+    # Pre-retrieval of item name ids
+
+    listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
+
+    item_nameids = get_item_nameid_batch(listing_hashes)
+
+    # Retrieval of market orders (bid, ask)
+
     cookie_value = get_steam_cookie()
     has_secured_cookie = bool(cookie_value is not None)
 
@@ -102,10 +110,11 @@ def download_market_order_data_batch(badge_data, market_order_dict=None):
 
     for app_id in badge_data.keys():
         listing_hash = badge_data[app_id]['listing_hash']
-        bid_price, ask_price = download_market_order_data(listing_hash)
+        bid_price, ask_price = download_market_order_data(listing_hash, verbose=verbose)
 
-        market_order_dict[app_id]['bid'] = bid_price
-        market_order_dict[app_id]['ask'] = ask_price
+        market_order_dict[listing_hash] = dict()
+        market_order_dict[listing_hash]['bid'] = bid_price
+        market_order_dict[listing_hash]['ask'] = ask_price
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
@@ -142,9 +151,20 @@ def load_market_order_data():
 
 def main():
     listing_hash = '290970-1849 Booster Pack'
-    item_nameid = 28419077
 
-    bid_price, ask_price = download_market_order_data(listing_hash, item_nameid, verbose=True)
+    # Download based on a listing hash
+
+    bid_price, ask_price = download_market_order_data(listing_hash, verbose=True)
+
+    # Download based on badge data
+
+    app_id = listing_hash.split('-')[0]
+
+    badge_data = dict()
+    badge_data[app_id] = dict()
+    badge_data[app_id]['listing_hash'] = listing_hash
+
+    market_order_dict = download_market_order_data_batch(badge_data, verbose=True)
 
     return True
 

@@ -110,7 +110,7 @@ def aggregate_badge_data(badge_creation_details,
         listing_hash = badge_matches[app_id]
 
         if listing_hash is None:
-            sell_price_in_euros = -1
+            continue
         else:
             sell_price_in_cents = all_listings[listing_hash]['sell_price']
             sell_price_in_euros = sell_price_in_cents / 100
