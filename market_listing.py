@@ -138,23 +138,6 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None):
     return all_listing_details
 
 
-def download_all_listing_details(listing_hashes=None):
-    listing_details__output_file_name = get_listing_details_output_file_name()
-
-    if not Path(listing_details__output_file_name).exists():
-
-        if listing_hashes is None:
-            all_listings = load_all_listings()
-            listing_hashes = list(all_listings.keys())
-
-    all_listing_details = get_listing_details_batch(listing_hashes)
-
-        with open(listing_details__output_file_name, 'w') as f:
-            json.dump(all_listing_details, f)
-
-    return True
-
-
 def update_all_listing_details(listing_hashes=None):
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
     # to restart the process without risking to lose anything, in case the process fails again.
