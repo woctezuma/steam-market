@@ -2,6 +2,7 @@ import unittest
 
 import market_arbitrage
 import market_listing
+import market_order
 import market_search
 import market_utils
 import transaction_fee
@@ -53,6 +54,12 @@ class TestMarketArbitrageMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(market_arbitrage.main())
+
+
+class TestMarketOrderMethods(unittest.TestCase):
+
+    def test_main(self):
+        self.assertTrue(market_order.main())
 
 
 class TestUtilsMethods(unittest.TestCase):
