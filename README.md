@@ -18,9 +18,49 @@ This repository contains Python code to find arbitrages on the Steam Market.
 pip install -r requirements.txt
 ```
 
+## Data acquisition
+
+-   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
+
+    1. To do so, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:   
+![drop-down menu](https://i.imgur.com/jU6iI8n.png)
+
+    2. You will be able to copy-paste this line:    
+![inspection](https://i.imgur.com/y1QSzS7.png)
+
+    3. Format it this way:
+![formatting](https://i.imgur.com/YAtWJ5O.png)
+
+    4. For instance, with Visual Studio Code, this requires adding line-breaks with `<Ctrl-H>`
+![Visual Studio Code: replace](https://i.imgur.com/aPKEI7W.png)
+
+-   To relax the constraints enforced by Steam API's rate limits, fill-in your cookie information in `personal_info.py`:
+
+    1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/). 
+![steam community](https://i.imgur.com/K0P9Uxu.png)
+
+    2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools.
+![storage section](https://i.imgur.com/xGfyU7r.png)
+    
+    3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.
+![select any cookie](https://i.imgur.com/YhlPlUy.png)    
+    
+    4. Copy-paste this cookie value into `get_steam_cookie()` in [`personal_info.py`](personal_info.py).
+![get_steam_cookie()](https://i.imgur.com/cUjUara.png)    
+        
 ## Usage
 
-TODO
+-   To retrieve all the listings of 'Booster Packs' on the Steam Market, along with the sell price and volume, run:
+
+```bash
+python market_search.py
+```
+
+-   To parse all the options to craft 'Booster Packs', for the games you own, run:
+
+```bash
+python market_utils.py
+```
 
 ## References
 
