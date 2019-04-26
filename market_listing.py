@@ -190,9 +190,20 @@ def load_all_listing_details():
     return all_listing_details
 
 
+def get_listing_hash_for_gems():
+    listing_hash_for_gems = '753-Sack of Gems'
+
+    return listing_hash_for_gems
+
+
+def get_num_gems_per_sack_of_gems():
+    num_gems_per_sack_of_gems = 1000
+
+    return num_gems_per_sack_of_gems
+
+
 def get_sack_of_gems_price(currency_symbol='€', verbose=True):
-    listing_hash = '753-Sack of Gems'
-    num_gems = 1000
+    listing_hash = get_listing_hash_for_gems()
 
     listing_details, status_code = get_listing_details(listing_hash=listing_hash, currency_symbol=currency_symbol)
 
@@ -202,7 +213,9 @@ def get_sack_of_gems_price(currency_symbol='€', verbose=True):
         sack_of_gems_price = -1
 
     if verbose:
-        print('A sack of {} gems can be bought for {} €.'.format(num_gems, sack_of_gems_price, currency_symbol))
+        print('A sack of {} gems can be bought for {} €.'.format(get_num_gems_per_sack_of_gems(),
+                                                                 sack_of_gems_price,
+                                                                 currency_symbol))
 
     return sack_of_gems_price
 
