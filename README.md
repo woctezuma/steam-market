@@ -34,7 +34,7 @@ pip install -r requirements.txt
     4. For instance, with Visual Studio Code, this requires adding line-breaks with `<Ctrl-H>`
 ![Visual Studio Code: replace](https://i.imgur.com/aPKEI7W.png)
 
--   To relax the constraints enforced by Steam API's rate limits, fill-in your cookie information in `personal_info.py`:
+-   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
 
     1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/). 
 ![steam community](https://i.imgur.com/K0P9Uxu.png)
@@ -45,7 +45,7 @@ pip install -r requirements.txt
     3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.
 ![select any cookie](https://i.imgur.com/YhlPlUy.png)    
     
-    4. Copy-paste this cookie value into `get_steam_cookie()` in [`personal_info.py`](personal_info.py).
+    4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).
 ![get_steam_cookie()](https://i.imgur.com/cUjUara.png)    
         
 ## Usage
