@@ -18,12 +18,11 @@ def get_num_gems_per_sack_of_gems():
     return num_gems_per_sack_of_gems
 
 
-def download_sack_of_gems_price(currency_symbol='€'):
+def download_sack_of_gems_price():
     cookie_value = get_steam_cookie()
     listing_hash = get_listing_hash_for_gems()
 
     listing_details, status_code = get_listing_details(listing_hash=listing_hash,
-                                                       currency_symbol=currency_symbol,
                                                        cookie_value=cookie_value)
 
     if status_code == 200:
@@ -43,7 +42,7 @@ def download_sack_of_gems_price(currency_symbol='€'):
     return sack_of_gems_price
 
 
-def load_sack_of_gems_price(currency_symbol='€', verbose=True):
+def load_sack_of_gems_price(verbose=True):
     try:
         with open(get_sack_of_gems_listing_file_name(), 'r') as f:
             listing_details = json.load(f)
@@ -52,18 +51,17 @@ def load_sack_of_gems_price(currency_symbol='€', verbose=True):
 
         sack_of_gems_price = listing_details[listing_hash]['ask']
     except FileNotFoundError:
-        sack_of_gems_price = download_sack_of_gems_price(currency_symbol=currency_symbol)
+        sack_of_gems_price = download_sack_of_gems_price()
 
     if verbose:
         print('A sack of {} gems can be bought for {:.2f} €.'.format(get_num_gems_per_sack_of_gems(),
-                                                                     sack_of_gems_price,
-                                                                     currency_symbol))
+                                                                     sack_of_gems_price))
 
     return sack_of_gems_price
 
 
-def get_gem_price(currency_symbol='€', verbose=False):
-    sack_of_gems_price = load_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
+def get_gem_price(verbose=False):
+    sack_of_gems_price = load_sack_of_gems_price(verbose=verbose)
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
