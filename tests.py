@@ -21,8 +21,13 @@ class TestMarketListingMethods(unittest.TestCase):
 
         self.assertEqual(len(all_listing_details), len(listing_hashes))
 
-    def test_get_sack_of_gems_price(self):
-        sack_of_gems_price = market_listing.get_sack_of_gems_price()
+    def test_download_sack_of_gems_price(self):
+        sack_of_gems_price = market_listing.download_sack_of_gems_price()
+
+        self.assertGreater(sack_of_gems_price, 0)
+
+    def test_load_sack_of_gems_price(self):
+        sack_of_gems_price = market_listing.load_sack_of_gems_price()
 
         self.assertGreater(sack_of_gems_price, 0)
 

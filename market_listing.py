@@ -15,7 +15,7 @@ import requests
 
 from market_search import load_all_listings
 from personal_info import get_steam_cookie, get_cookie_dict
-from utils import get_listing_details_output_file_name
+from utils import get_listing_details_output_file_name, get_sack_of_gems_listing_file_name
 
 
 def get_steam_market_listing_url(app_id=None, listing_hash=None):
@@ -202,7 +202,7 @@ def get_num_gems_per_sack_of_gems():
     return num_gems_per_sack_of_gems
 
 
-def get_sack_of_gems_price(currency_symbol='€', verbose=True):
+def download_sack_of_gems_price(currency_symbol='€', verbose=True):
     cookie_value = get_steam_cookie()
     listing_hash = get_listing_hash_for_gems()
 
@@ -212,6 +212,9 @@ def get_sack_of_gems_price(currency_symbol='€', verbose=True):
 
     if status_code == 200:
         sack_of_gems_price = listing_details[listing_hash]['for_sale']
+
+        with open(get_sack_of_gems_listing_file_name(), 'w') as f:
+            json.dump(listing_details, f)
     else:
         sack_of_gems_price = -1
 
@@ -223,8 +226,22 @@ def get_sack_of_gems_price(currency_symbol='€', verbose=True):
     return sack_of_gems_price
 
 
+def load_sack_of_gems_price(currency_symbol='€', verbose=True):
+    try:
+        with open(get_sack_of_gems_listing_file_name(), 'r') as f:
+            listing_details = json.load(f)
+
+        listing_hash = get_listing_hash_for_gems()
+
+        sack_of_gems_price = listing_details[listing_hash]['for_sale']
+    except FileNotFoundError:
+        sack_of_gems_price = download_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
+
+    return sack_of_gems_price
+
+
 def get_gem_price(currency_symbol='€', verbose=False):
-    sack_of_gems_price = get_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
+    sack_of_gems_price = load_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
@@ -234,6 +251,8 @@ def get_gem_price(currency_symbol='€', verbose=False):
 
 
 def main():
+    sack_of_gems_price = load_sack_of_gems_price()
+
     listing_hashes = [
         get_listing_hash_for_gems(),
         '511540-MoonQuest Booster Pack',
