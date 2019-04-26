@@ -220,14 +220,14 @@ def get_sack_of_gems_price(currency_symbol='€', verbose=True):
     return sack_of_gems_price
 
 
-def get_gem_value(currency_symbol='€', verbose=False):
+def get_gem_price(currency_symbol='€', verbose=False):
     sack_of_gems_price = get_sack_of_gems_price(currency_symbol=currency_symbol, verbose=verbose)
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
-    gem_value = sack_of_gems_price / num_gems_per_sack_of_gems
+    gem_price = sack_of_gems_price / num_gems_per_sack_of_gems
 
-    return gem_value
+    return gem_price
 
 
 def main():
