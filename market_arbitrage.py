@@ -50,10 +50,16 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
     return filtered_badge_data
 
 
-def find_badge_arbitrages(badge_data):
+def find_badge_arbitrages(badge_data,
+                          market_order_dict=None):
+    if market_order_dict is None:
+        market_order_dict = update_market_order_data_batch(badge_data)
+
+    badge_arbitrages = dict()
+
     # TODO rank them according to the highest bid
 
-    return
+    return badge_arbitrages
 
 
 def main():
@@ -62,6 +68,9 @@ def main():
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
     market_order_dict = update_market_order_data_batch(filtered_badge_data)
+
+    badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
+                                             market_order_dict)
 
     return True
 
