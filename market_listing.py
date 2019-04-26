@@ -94,7 +94,7 @@ def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=N
             chosen_price_value = price_values[chosen_index]  # e.g. '6,64€'
 
             listing_details[listing_hash] = dict()
-            listing_details[listing_hash]['price_header'] = chosen_price_header.strip('">')
+            # listing_details[listing_hash]['price_header'] = chosen_price_header.strip('">')
             listing_details[listing_hash]['for_sale'] = float(chosen_price_value.strip('€').replace(',', '.'))
             listing_details[listing_hash]['buy_request'] = -1  # missing from the html code
         except IndexError:
