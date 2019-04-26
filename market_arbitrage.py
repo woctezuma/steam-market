@@ -96,7 +96,10 @@ def main():
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
-    bid_dict = download_bid_data_batch(filtered_badge_data)
+    # bid_dict = download_bid_data_batch(filtered_badge_data)
+
+    listing_hash = '290970-1849 Booster Pack'
+    bid_price = download_bid_data(listing_hash)
 
     return True
 
