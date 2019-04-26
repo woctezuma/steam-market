@@ -30,7 +30,8 @@ def get_sack_of_gems_listing_file_name():
 
 
 def get_market_order_file_name():
-    market_order_file_name = get_data_folder() + 'market_orders.json'
+    # market_order_file_name = get_data_folder() + 'market_orders.json'
+    market_order_file_name = get_listing_details_output_file_name()
 
     return market_order_file_name
 
