@@ -30,14 +30,21 @@ def get_badge_creation_details():
     return badge_creation_details
 
 
-def main():
-    badge_creation_details = get_badge_creation_details()
+def match_badges_with_listing_hashes(badge_creation_details=None, verbose=True):
+    # Badges for games which I own
+
+    if badge_creation_details is None:
+        badge_creation_details = get_badge_creation_details()
 
     badge_app_ids = list(badge_creation_details.keys())
+
+    # Listings for ALL the existing Booster Packs
 
     all_listings = load_all_listings()
 
     all_listing_hashes = list(all_listings.keys())
+
+    # Dictionaries to match appIDs or app names with listing hashes
 
     listing_matches_with_app_ids = dict()
     listing_matches_with_app_names = dict()
@@ -47,6 +54,8 @@ def main():
 
         listing_matches_with_app_ids[app_id] = listing_hash
         listing_matches_with_app_names[app_name] = listing_hash
+
+    # Match badges with listing hashes
 
     badge_matches = dict()
     for app_id in badge_app_ids:
@@ -58,12 +67,23 @@ def main():
 
             try:
                 badge_matches[app_id] = listing_matches_with_app_names[app_name]
-                print('Match for {} (appID = {}) with name instead of id.'.format(app_name, app_id))
+                if verbose:
+                    print('Match for {} (appID = {}) with name instead of id.'.format(app_name, app_id))
             except KeyError:
-                print('No match found for {} (appID = {})'.format(app_name, app_id))
+                if verbose:
+                    print('No match found for {} (appID = {})'.format(app_name, app_id))
                 continue
 
-    print('#badges = {} ; #matching hashes found = {}'.format(len(badge_app_ids), len(badge_matches)))
+    if verbose:
+        print('#badges = {} ; #matching hashes found = {}'.format(len(badge_app_ids), len(badge_matches)))
+
+    return badge_matches
+
+
+def main():
+    badge_creation_details = get_badge_creation_details()
+
+    badge_matches = match_badges_with_listing_hashes(badge_creation_details)
 
     return True
 
