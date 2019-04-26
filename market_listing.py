@@ -74,7 +74,7 @@ def parse_item_name_id(html_doc):
     return item_nameid
 
 
-def get_listing_details(listing_hash=None, currency_symbol='€', cookie_value=None, render_as_json=False):
+def get_listing_details(listing_hash=None, cookie_value=None, render_as_json=False):
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
