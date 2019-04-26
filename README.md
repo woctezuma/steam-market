@@ -31,7 +31,7 @@ pip install -r requirements.txt
     3. Format it this way:
 ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
 
-    4. For instance, with Visual Studio Code, this requires adding line-breaks with `<Ctrl-H>`
+    4. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`
 ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
 
 -   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
@@ -43,11 +43,11 @@ pip install -r requirements.txt
 ![storage section](https://github.com/woctezuma/steam-market/wiki/img/xGfyU7r.png)
     
     3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.
-![select any cookie](https://github.com/woctezuma/steam-market/wiki/img/YhlPlUy.png)    
+![filter for steamLoginSecure](https://github.com/woctezuma/steam-market/wiki/img/YhlPlUy.png)    
     
     4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).
-![get_steam_cookie()](https://github.com/woctezuma/steam-market/wiki/img/cUjUara.png)    
-        
+![paste into personal_info.txt](https://github.com/woctezuma/steam-market/wiki/img/hMiqZJH.png)    
+
 ## Usage
 
 -   To retrieve all the listings of 'Booster Packs' on the Steam Market, along with the sell price and volume, run:
