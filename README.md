@@ -9,7 +9,7 @@
 
 This repository contains Python code to find arbitrages on the Steam Market.
 
-![Cover: ranking of market arbitrages](https://github.com/woctezuma/steam-market/wiki/img/nL0glCW.png)
+![Cover: ranking of market arbitrages](https://github.com/woctezuma/steam-market/wiki/img/rBxZxHX.png)
 
 ## Requirements
 
