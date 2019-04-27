@@ -52,16 +52,16 @@ pip install -r requirements.txt
 
 ## Usage
 
+-   To parse all the options to craft 'Booster Packs', for the games you own, run:
+
+```bash
+python market_utils.py
+```
+
 -   To retrieve all the listings of 'Booster Packs' on the Steam Market, along with the sell price and volume, run:
 
 ```bash
 python market_search.py
-```
-
--   To retrieve i) the item name id of a listing, and ii) whether a *crafted* item would really be marketable, run:
-
-```bash
-python market_listing.py
 ```
 
 -   To retrieve the price which sellers ask for a 'Sack of Gems', run:
@@ -70,10 +70,10 @@ python market_listing.py
 python sack_of_gems.py
 ```
 
--   To parse all the options to craft 'Booster Packs', for the games you own, run:
+-   To retrieve i) the "item name id" of a listing, and ii) whether a *crafted* item would really be marketable, run:
 
 ```bash
-python market_utils.py
+python market_listing.py
 ```
 
 -   To retrieve the ask and bid for 'Booster Packs', run:
