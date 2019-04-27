@@ -17,7 +17,10 @@ def determine_whether_an_arbitrage_might_exist(badge_data):
 def determine_whether_sell_price_is_unknown(badge_data):
     sell_price_including_fee = badge_data['sell_price']
 
-    sell_price_is_unknown = bool(sell_price_including_fee < 0)
+    sell_price_was_not_retrieved = bool(sell_price_including_fee < 0)
+    there_is_no_sell_order = bool(sell_price_including_fee == 0)
+
+    sell_price_is_unknown = sell_price_was_not_retrieved or there_is_no_sell_order
 
     return sell_price_is_unknown
 
