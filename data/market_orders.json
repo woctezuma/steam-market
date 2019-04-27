@@ -20,8 +20,8 @@
     "is_marketable": true
   },
   "253230-A Hat in Time Booster Pack": {
-    "bid": 0.15,
-    "ask": 0.19,
+    "bid": 0.14,
+    "ask": 0.18,
     "is_marketable": true
   },
   "279480-Abalone Booster Pack": {
@@ -61,7 +61,7 @@
   },
   "388750-BlazBlue: Chronophantasma Extend Booster Pack": {
     "bid": 0.09,
-    "ask": 0.17,
+    "ask": 0.16,
     "is_marketable": true
   },
   "378660-Blues and Bullets Booster Pack": {
@@ -185,7 +185,7 @@
   },
   "33680-Eversion  Booster Pack": {
     "bid": 0.23,
-    "ask": 0.27,
+    "ask": 0.29,
     "is_marketable": true
   },
   "207370-eXceed - Gun Bullet Children Booster Pack": {
@@ -195,7 +195,7 @@
   },
   "469830-Fable Fortune Booster Pack": {
     "bid": 0.11,
-    "ask": 0.16,
+    "ask": 0.15,
     "is_marketable": true
   },
   "397060-Faeria Booster Pack": {
@@ -314,7 +314,7 @@
   },
   "367520-Hollow Knight Booster Pack": {
     "bid": 0.15,
-    "ask": 0.17,
+    "ask": 0.18,
     "is_marketable": true
   },
   "523680-Honey Rose: Underdog Fighter Extraordinaire Booster Pack": {
@@ -374,7 +374,7 @@
   },
   "520910-Kokurase - Episode 1 Booster Pack": {
     "bid": 0.06,
-    "ask": 0.18,
+    "ask": 0.16,
     "is_marketable": true
   },
   "609940-KROSMAGA Booster Pack": {
@@ -828,8 +828,8 @@
     "is_marketable": true
   },
   "72200-Universe Sandbox Legacy Booster Pack": {
-    "bid": 0.05,
-    "ask": 0.2,
+    "bid": -1,
+    "ask": -1,
     "is_marketable": true
   },
   "414660-Vampire Legends: The True Story of Kisilova Booster Pack": {
@@ -848,13 +848,13 @@
     "is_marketable": true
   },
   "392600-Volvox Booster Pack": {
-    "bid": 0.18,
-    "ask": 1.31,
+    "bid": 0.14,
+    "ask": 0.49,
     "is_marketable": true
   },
   "215080-WAKFU Booster Pack": {
     "bid": 0.09,
-    "ask": 0.16,
+    "ask": 0.15,
     "is_marketable": true
   },
   "359400-Why Am I Dead At Sea Booster Pack": {
@@ -1144,7 +1144,7 @@
   },
   "20920-The Witcher 2: Assassins of Kings Enhanced Edition Booster Pack": {
     "bid": 0.15,
-    "ask": 0.18,
+    "ask": 0.17,
     "is_marketable": true
   },
   "203210-Titan Attacks Booster Pack": {
