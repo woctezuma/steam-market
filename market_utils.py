@@ -111,6 +111,8 @@ def aggregate_badge_data(badge_creation_details,
         listing_hash = badge_matches[app_id]
 
         if listing_hash is None:
+            # For some reason for Conran - The dinky Raccoon (appID = 612150), there is no listing of any "Booster Pack"
+            # Reference: https://steamcommunity.com/market/search?appid=753&category_753_Game%5B0%5D=tag_app_612150
             continue
         else:
             sell_price_in_cents = all_listings[listing_hash]['sell_price']
