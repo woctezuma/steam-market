@@ -5,6 +5,7 @@ import market_listing
 import market_order
 import market_search
 import market_utils
+import sack_of_gems
 import transaction_fee
 import utils
 
@@ -52,8 +53,8 @@ class TestMarketUtilsMethods(unittest.TestCase):
 
 class TestMarketArbitrageMethods(unittest.TestCase):
 
-    def test_main(self):
-        self.assertTrue(market_arbitrage.main())
+    def test_apply_workflow(self):
+        self.assertTrue(market_arbitrage.apply_workflow(retrieve_market_orders_from_scratch=False))
 
 
 class TestMarketOrderMethods(unittest.TestCase):
