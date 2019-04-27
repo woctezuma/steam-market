@@ -949,6 +949,7 @@
 <option value="592200" class="available">Super Army of Tentacles 3: The Search for Army of Tentacles 2 - 400 , Gems</option>
 <option value="341550" class="available">Super Cyborg - 1200 , Gems</option>
 <option value="485870" class="available">Super Duper Party Pooper - 750 , Gems</option>
+<option value="221640" class="available">Super Hexagon - 1000 , Gems</option>
 <option value="271860" class="available">Super Killer Hornet: Resurrection - 600 , Gems</option>
 <option value="40800" class="available">Super Meat Boy - 1200 , Gems</option>
 <option value="311190" class="available">Super Panda Adventures - 1000 , Gems</option>
@@ -1137,6 +1138,7 @@
 <option value="392600" class="available">Volvox - 667 , Gems</option>
 <option value="252770" class="available">Vox - 750 , Gems</option>
 <option value="344040" class="available">Voxelized - 1200 , Gems</option>
+<option value="70300" class="available">VVVVVV - 1000 , Gems</option>
 <option value="233530" class="available">Wake - 462 , Gems</option>
 <option value="215080" class="available">WAKFU - 400 , Gems</option>
 <option value="230190" class="available">War for the Overworld - 667 , Gems</option>
