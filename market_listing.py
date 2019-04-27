@@ -182,6 +182,7 @@ def load_all_listing_details():
 
 def main():
     listing_hashes = [
+        '268830-Doctor Who%3A The Adventure Games Booster Pack',
         '290970-1849 Booster Pack',
         '753-Sack of Gems',
         '511540-MoonQuest Booster Pack',
