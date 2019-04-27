@@ -78,6 +78,18 @@ def find_badge_arbitrages(badge_data,
 
         if delta > 0:
             badge_arbitrages[listing_hash] = dict()
+            badge_arbitrages[listing_hash]['app_id'] = app_id
+
+            badge_arbitrages[listing_hash]['name'] = individual_badge_data['name']
+            badge_arbitrages[listing_hash]['gem_amount'] = individual_badge_data['gem_amount']
+            badge_arbitrages[listing_hash]['gem_price_including_fee'] = individual_badge_data['gem_price']
+            badge_arbitrages[listing_hash]['sell_price'] = individual_badge_data['sell_price']
+
+            badge_arbitrages[listing_hash]['ask_including_fee'] = market_order_dict[listing_hash]['ask']
+            badge_arbitrages[listing_hash]['bid_including_fee'] = market_order_dict[listing_hash]['bid']
+            badge_arbitrages[listing_hash]['is_marketable'] = market_order_dict[listing_hash]['is_marketable']
+
+            badge_arbitrages[listing_hash]['bid_without_fee'] = bid_without_fee
             badge_arbitrages[listing_hash]['profit'] = delta
 
             if verbose:
