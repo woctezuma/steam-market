@@ -118,7 +118,7 @@ def print_arbitrages(badge_arbitrages):
     return
 
 
-def main(retrieve_market_orders_from_scratch=False):
+def apply_workflow(retrieve_market_orders_from_scratch=True):
     aggregated_badge_data = load_aggregated_badge_data()
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
@@ -132,6 +132,14 @@ def main(retrieve_market_orders_from_scratch=False):
                                              market_order_dict)
 
     print_arbitrages(badge_arbitrages)
+
+    return True
+
+
+def main():
+    retrieve_market_orders_from_scratch = False
+
+    apply_workflow(retrieve_market_orders_from_scratch=retrieve_market_orders_from_scratch)
 
     return True
 
