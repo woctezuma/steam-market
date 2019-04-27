@@ -139,7 +139,7 @@ def apply_workflow(retrieve_market_orders_from_scratch=True):
 
 
 def main():
-    retrieve_market_orders_from_scratch = False
+    retrieve_market_orders_from_scratch = True
 
     apply_workflow(retrieve_market_orders_from_scratch=retrieve_market_orders_from_scratch)
 
