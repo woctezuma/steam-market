@@ -121,6 +121,10 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None):
 
         listing_details, status_code = get_listing_details(listing_hash=listing_hash, cookie_value=cookie_value)
 
+        if status_code != 200:
+            print('Wrong status code for {} after {} queries.'.format(listing_hash, query_count))
+            break
+
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
             print('Number of queries {} reached. Cooldown: {} seconds'.format(query_count, cooldown_duration))
@@ -128,10 +132,6 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None):
             query_count = 0
 
         query_count += 1
-
-        if status_code != 200:
-            print('Wrong status code for {} after {} queries.'.format(listing_hash, query_count))
-            break
 
         all_listing_details.update(listing_details)
 
