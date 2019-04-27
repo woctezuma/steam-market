@@ -64,7 +64,7 @@ def find_badge_arbitrages(badge_data,
     for app_id in badge_data.keys():
         individual_badge_data = badge_data[app_id]
 
-        gem_price_with_fee = individual_badge_data['gem_price']
+        gem_price_including_fee = individual_badge_data['gem_price']
 
         listing_hash = individual_badge_data['listing_hash']
 
@@ -74,7 +74,7 @@ def find_badge_arbitrages(badge_data,
         if bid_including_fee < 0:
             continue
 
-        delta = bid_without_fee - gem_price_with_fee
+        delta = bid_without_fee - gem_price_including_fee
 
         if delta > 0:
             badge_arbitrages[listing_hash] = dict()
