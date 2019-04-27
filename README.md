@@ -58,16 +58,34 @@ pip install -r requirements.txt
 python market_search.py
 ```
 
--   To retrieve the price which sellers ask for a sack of gems, run:
+-   To retrieve i) the item name id of a listing, and ii) whether a *crafted* item would really be marketable, run:
 
 ```bash
 python market_listing.py
+```
+
+-   To retrieve the price which sellers ask for a 'Sack of Gems', run:
+
+```bash
+python sack_of_gems.py
 ```
 
 -   To parse all the options to craft 'Booster Packs', for the games you own, run:
 
 ```bash
 python market_utils.py
+```
+
+-   To retrieve the ask and bid for 'Booster Packs', run:
+
+```bash
+python market_order.py
+```
+
+-   To find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included), run:
+
+```bash
+python market_arbitrage.py
 ```
 
 ## References
