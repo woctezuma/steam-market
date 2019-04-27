@@ -50,6 +50,10 @@ pip install -r requirements.txt
     4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).
 ![paste into personal_info.txt](https://github.com/woctezuma/steam-market/wiki/img/hMiqZJH.png)    
 
+> **NB**: In the future, if you notice that the program bugs out due to seemingly very strict rate limits, then it may
+be a sign that the cookie value tied to your session has changed.
+In this case, try to fill-in your cookie information with its new value.
+
 ## Usage
 
 -   To parse all the options to craft 'Booster Packs', for the games you own, run:
