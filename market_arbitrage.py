@@ -55,7 +55,7 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
 
 def find_badge_arbitrages(badge_data,
                           market_order_dict=None,
-                          verbose=True):
+                          verbose=False):
     if market_order_dict is None:
         market_order_dict = update_market_order_data_batch(badge_data)
 
@@ -89,6 +89,26 @@ def find_badge_arbitrages(badge_data,
     return badge_arbitrages
 
 
+def print_arbitrages(badge_arbitrages):
+    for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
+        arbitrage = badge_arbitrages[listing_hash]
+
+        # Skip unmarketable booster packs
+        if not arbitrage['is_marketable']:
+            continue
+
+        print('Profit: {:.2f}€\t{}\tcraft pack for {} gems ({:.2f}€)\t sell for {:.2f}€ ({:.2f}€ including fee)'.format(
+            arbitrage['profit'],
+            listing_hash,
+            arbitrage['gem_amount'],
+            arbitrage['gem_price_including_fee'],
+            arbitrage['bid_without_fee'],
+            arbitrage['bid_including_fee'],
+        ))
+
+    return
+
+
 def main(retrieve_market_orders_from_scratch=False):
     aggregated_badge_data = load_aggregated_badge_data()
 
@@ -101,6 +121,8 @@ def main(retrieve_market_orders_from_scratch=False):
 
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
+
+    print_arbitrages(badge_arbitrages)
 
     return True
 
