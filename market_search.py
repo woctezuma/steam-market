@@ -22,6 +22,7 @@ def get_search_parameters(start_index=0, delta_index=100):
 
     params['norender'] = '1'
     params['category_753_item_class[]'] = 'tag_item_class_5'
+    params['sort_column'] = 'name'
     params['sort_dir'] = 'asc'
     params['start'] = str(start_index)
     params['count'] = str(delta_index)
