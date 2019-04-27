@@ -1,3 +1,5 @@
+# Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
+
 from market_order import update_market_order_data_batch, load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee

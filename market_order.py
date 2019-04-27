@@ -1,3 +1,5 @@
+# Objective: retrieve the ask and bid for Booster Packs.
+
 import json
 import time
 

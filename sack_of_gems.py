@@ -1,3 +1,5 @@
+# Objective: retrieve the price which sellers ask for a 'Sack of Gems'.
+
 import json
 
 from market_listing import get_listing_details
