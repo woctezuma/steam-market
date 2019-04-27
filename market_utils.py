@@ -130,9 +130,9 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False):
     badge_creation_details = parse_badge_creation_details()
 
     if retrieve_listings_from_scratch:
-        all_listings = update_all_listings()
-    else:
-        all_listings = load_all_listings()
+        update_all_listings()
+
+    all_listings = load_all_listings()
 
     badge_matches = match_badges_with_listing_hashes(badge_creation_details,
                                                      all_listings)
