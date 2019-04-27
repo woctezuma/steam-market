@@ -127,6 +127,7 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
         market_order_dict[listing_hash] = dict()
         market_order_dict[listing_hash]['bid'] = bid_price
         market_order_dict[listing_hash]['ask'] = ask_price
+        market_order_dict[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
