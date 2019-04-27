@@ -95,9 +95,6 @@ def find_badge_arbitrages(badge_data,
             if verbose:
                 print('{:.2f}€\t{}'.format(delta, listing_hash))
 
-    # TODO rank them according to the highest bid
-    # TODO manually adapt compute_sell_price_without_fee() to fit Steam's computations perfectly (below 25 cents)
-
     return badge_arbitrages
 
 
