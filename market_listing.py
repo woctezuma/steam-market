@@ -212,9 +212,13 @@ def get_item_nameid_batch(listing_hashes):
         item_nameids = dict()
         listing_hashes_to_process = []
         for listing_hash in listing_hashes:
+            item_nameids[listing_hash] = dict()
             try:
                 item_nameid = listing_details[listing_hash]['item_nameid']
-                item_nameids[listing_hash] = item_nameid
+                is_marketable = listing_details[listing_hash]['is_marketable']
+
+                item_nameids[listing_hash]['item_nameid'] = item_nameid
+                item_nameids[listing_hash]['is_marketable'] = is_marketable
             except KeyError:
                 listing_hashes_to_process.append(listing_hash)
 
@@ -223,11 +227,23 @@ def get_item_nameid_batch(listing_hashes):
 
             for listing_hash in listing_hashes_to_process:
                 item_nameid = listing_details[listing_hash]['item_nameid']
-                item_nameids[listing_hash] = item_nameid
+                is_marketable = listing_details[listing_hash]['is_marketable']
+
+                item_nameids[listing_hash]['item_nameid'] = item_nameid
+                item_nameids[listing_hash]['is_marketable'] = is_marketable
 
     except FileNotFoundError:
         listing_details = update_all_listing_details(listing_hashes=listing_hashes)
-        item_nameids = [listing_details[listing_hash]['item_nameid'] for listing_hash in listing_hashes]
+
+        item_nameids = dict()
+        for listing_hash in listing_hashes:
+            item_nameids[listing_hash] = dict()
+
+            item_nameid = listing_details[listing_hash]['item_nameid']
+            is_marketable = listing_details[listing_hash]['is_marketable']
+
+            item_nameids[listing_hash]['item_nameid'] = item_nameid
+            item_nameids[listing_hash]['is_marketable'] = is_marketable
 
     return item_nameids
 
