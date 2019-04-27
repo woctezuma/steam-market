@@ -44,16 +44,20 @@ def download_sack_of_gems_price():
     return sack_of_gems_price
 
 
-def load_sack_of_gems_price(verbose=True):
-    try:
-        with open(get_sack_of_gems_listing_file_name(), 'r') as f:
-            listing_details = json.load(f)
-
-        listing_hash = get_listing_hash_for_gems()
-
-        sack_of_gems_price = listing_details[listing_hash]['ask']
-    except FileNotFoundError:
+def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False, verbose=True):
+    if retrieve_gem_price_from_scratch:
         sack_of_gems_price = download_sack_of_gems_price()
+    else:
+
+        try:
+            with open(get_sack_of_gems_listing_file_name(), 'r') as f:
+                listing_details = json.load(f)
+
+            listing_hash = get_listing_hash_for_gems()
+
+            sack_of_gems_price = listing_details[listing_hash]['ask']
+        except FileNotFoundError:
+            sack_of_gems_price = download_sack_of_gems_price()
 
     if verbose:
         print('A sack of {} gems can be bought for {:.2f} €.'.format(get_num_gems_per_sack_of_gems(),
@@ -62,8 +66,8 @@ def load_sack_of_gems_price(verbose=True):
     return sack_of_gems_price
 
 
-def get_gem_price(verbose=False):
-    sack_of_gems_price = load_sack_of_gems_price(verbose=verbose)
+def get_gem_price(retrieve_gem_price_from_scratch=False, verbose=False):
+    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
