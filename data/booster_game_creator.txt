@@ -14,7 +14,7 @@
 <option value="284870" class="available">9 Clues: The Secret of Serpent Creek - 1000 , Gems</option>
 <option value="281200" class="available">A Boy and His Blob - 462 , Gems</option>
 <option value="229810" class="available">A Fistful of Gun - 545 , Gems</option>
-<option value="253230" class="unavailable">A Hat in Time - 600 , Gems</option>
+<option value="253230" class="available">A Hat in Time - 600 , Gems</option>
 <option value="278360" class="available">A Story About My Uncle - 1000 , Gems</option>
 <option value="209330" class="available">A Valley Without Wind - 1200 , Gems</option>
 <option value="207650" class="available">A Virus Named TOM - 600 , Gems</option>
@@ -189,7 +189,7 @@
 <option value="349140" class="available">Corrosion: Cold Winter Waiting [Enhanced Edition] - 1200 , Gems</option>
 <option value="209670" class="available">Cortex Command - 1000 , Gems</option>
 <option value="730" class="available">Counter-Strike: Global Offensive - 1200 , Gems</option>
-<option value="731490" class="unavailable">Crash Bandicoot™ N. Sane Trilogy - 667 , Gems</option>
+<option value="731490" class="available">Crash Bandicoot™ N. Sane Trilogy - 667 , Gems</option>
 <option value="508980" class="available">Crashday Redline Edition - 857 , Gems</option>
 <option value="293780" class="available">Crawl - 1000 , Gems</option>
 <option value="292200" class="available">Crazy Plant Shop - 1000 , Gems</option>
@@ -243,7 +243,7 @@
 <option value="635200" class="available">Distrust - 462 , Gems</option>
 <option value="252130" class="available">Divide by Sheep - 1000 , Gems</option>
 <option value="230050" class="available">DLC Quest - 1200 , Gems</option>
-<option value="268830" class="unavailable">Doctor Who: The Adventure Games - 667 , Gems</option>
+<option value="268830" class="available">Doctor Who: The Adventure Games - 667 , Gems</option>
 <option value="340340" class="available">Domestic Dog - 667 , Gems</option>
 <option value="270310" class="available">Dominique Pamplemousse - 1000 , Gems</option>
 <option value="219740" class="available">Don't Starve - 1200 , Gems</option>
@@ -444,7 +444,7 @@
 <option value="236870" class="available">HITMAN™ - 667 , Gems</option>
 <option value="863550" class="available">HITMAN™ 2 - 750 , Gems</option>
 <option value="251210" class="available">Hive - 750 , Gems</option>
-<option value="367520" class="unavailable">Hollow Knight - 667 , Gems</option>
+<option value="367520" class="available">Hollow Knight - 667 , Gems</option>
 <option value="505730" class="available">Holy Potatoes! We’re in Space?! - 400 , Gems</option>
 <option value="215670" class="available">Home - 1000 , Gems</option>
 <option value="244160" class="available">Homeworld Remastered Collection - 857 , Gems</option>
