@@ -133,7 +133,7 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None):
         query_count += 1
 
         if status_code != 200:
-            print('Wrong status code for {} after {} queries.'.format(listing_hash, query_count))
+            print('Wrong status code ({}) for {} after {} queries.'.format(status_code, listing_hash, query_count))
             break
 
         if query_count >= rate_limits['max_num_queries']:
