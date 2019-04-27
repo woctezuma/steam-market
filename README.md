@@ -9,6 +9,8 @@
 
 This repository contains Python code to find arbitrages on the Steam Market.
 
+![Cover: ranking of market arbitrages](https://github.com/woctezuma/steam-market/wiki/img/nL0glCW.png)
+
 ## Requirements
 
 -   Install the latest version of [Python 3.X](https://www.python.org/downloads/).
