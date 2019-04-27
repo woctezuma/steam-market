@@ -646,7 +646,8 @@
     "is_marketable": true
   },
   "206440-To the Moon Booster Pack": {
-    "item_nameid": 8410850
+    "item_nameid": 8410850,
+    "is_marketable": true
   },
   "209950-Triple Town Booster Pack": {
     "item_nameid": 1136436,
