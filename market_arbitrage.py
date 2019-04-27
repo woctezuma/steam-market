@@ -51,13 +51,37 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
 
 
 def find_badge_arbitrages(badge_data,
-                          market_order_dict=None):
+                          market_order_dict=None,
+                          verbose=True):
     if market_order_dict is None:
         market_order_dict = update_market_order_data_batch(badge_data)
 
     badge_arbitrages = dict()
 
+    for app_id in badge_data.keys():
+        individual_badge_data = badge_data[app_id]
+
+        gem_price_with_fee = individual_badge_data['gem_price']
+
+        listing_hash = individual_badge_data['listing_hash']
+
+        bid_including_fee = market_order_dict[listing_hash]['bid']
+        bid_without_fee = compute_sell_price_without_fee(bid_including_fee)
+
+        if bid_including_fee < 0:
+            continue
+
+        delta = bid_without_fee - gem_price_with_fee
+
+        if delta > 0:
+            badge_arbitrages[listing_hash] = dict()
+            badge_arbitrages[listing_hash]['profit'] = delta
+
+            if verbose:
+                print('{:.2f}€\t{}'.format(delta, listing_hash))
+
     # TODO rank them according to the highest bid
+    # TODO manually adapt compute_sell_price_without_fee() to fit Steam's computations perfectly (below 25 cents)
 
     return badge_arbitrages
 
