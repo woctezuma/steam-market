@@ -2,7 +2,7 @@
 #
 # Caveat: this relies on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
 
-from market_search import load_all_listings
+from market_search import load_all_listings, update_all_listings
 from sack_of_gems import get_gem_price
 from utils import get_badge_creation_file_name, convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
@@ -86,7 +86,8 @@ def match_badges_with_listing_hashes(badge_creation_details=None,
 
 def aggregate_badge_data(badge_creation_details,
                          badge_matches,
-                         all_listings=None):
+                         all_listings=None,
+                         retrieve_gem_price_from_scratch=False):
     # Aggregate data:
     #       owned appID --> (gem PRICE, sell price)
     # where:
@@ -98,7 +99,7 @@ def aggregate_badge_data(badge_creation_details,
     if all_listings is None:
         all_listings = load_all_listings()
 
-    gem_price = get_gem_price()
+    gem_price = get_gem_price(retrieve_gem_price_from_scratch)
 
     badge_app_ids = list(badge_creation_details.keys())
 
@@ -125,17 +126,21 @@ def aggregate_badge_data(badge_creation_details,
     return aggregated_badge_data
 
 
-def load_aggregated_badge_data():
+def load_aggregated_badge_data(retrieve_listings_from_scratch=False):
     badge_creation_details = parse_badge_creation_details()
 
-    all_listings = load_all_listings()
+    if retrieve_listings_from_scratch:
+        all_listings = update_all_listings()
+    else:
+        all_listings = load_all_listings()
 
     badge_matches = match_badges_with_listing_hashes(badge_creation_details,
                                                      all_listings)
 
     aggregated_badge_data = aggregate_badge_data(badge_creation_details,
                                                  badge_matches,
-                                                 all_listings)
+                                                 all_listings,
+                                                 retrieve_listings_from_scratch)
 
     return aggregated_badge_data
 
