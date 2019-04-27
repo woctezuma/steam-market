@@ -71,7 +71,15 @@ def parse_item_name_id(html_doc):
 
     item_nameid = int(last_script_token.split(');')[0])
 
-    return item_nameid
+    marketable_key = '"marketable":'
+
+    is_marketable_index = last_script.index(marketable_key)
+
+    is_marketable_as_str = last_script[is_marketable_index + len(marketable_key)]
+
+    is_marketable = bool(int(is_marketable_as_str) != 0)
+
+    return item_nameid, is_marketable
 
 
 def get_listing_details(listing_hash=None, cookie_value=None, render_as_json=False):
@@ -93,10 +101,11 @@ def get_listing_details(listing_hash=None, cookie_value=None, render_as_json=Fal
     if status_code == 200:
         html_doc = resp_data.text
 
-        item_nameid = parse_item_name_id(html_doc)
+        item_nameid, is_marketable = parse_item_name_id(html_doc)
 
         listing_details[listing_hash] = dict()
         listing_details[listing_hash]['item_nameid'] = item_nameid
+        listing_details[listing_hash]['is_marketable'] = is_marketable
 
     return listing_details, status_code
 
