@@ -133,19 +133,16 @@ def update_all_listings():
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
 
-    listing_output_file_name = get_listing_output_file_name()
-
     try:
-        with open(listing_output_file_name, 'r') as f:
-            all_listings = json.load(f)
-            print('Loading {} listings from disk.'.format(len(all_listings)))
+        all_listings = load_all_listings()
+        print('Loading {} listings from disk.'.format(len(all_listings)))
     except FileNotFoundError:
         print('Downloading listings from scratch.')
         all_listings = None
 
     all_listings = get_all_listings(all_listings)
 
-    with open(listing_output_file_name, 'w') as f:
+    with open(get_listing_output_file_name(), 'w') as f:
         json.dump(all_listings, f)
 
     return True
