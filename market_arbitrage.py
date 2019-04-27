@@ -1,4 +1,4 @@
-from market_order import update_market_order_data_batch
+from market_order import update_market_order_data_batch, load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
 
@@ -62,12 +62,15 @@ def find_badge_arbitrages(badge_data,
     return badge_arbitrages
 
 
-def main():
+def main(retrieve_market_orders_from_scratch=False):
     aggregated_badge_data = load_aggregated_badge_data()
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
-    market_order_dict = update_market_order_data_batch(filtered_badge_data)
+    if retrieve_market_orders_from_scratch:
+        market_order_dict = update_market_order_data_batch(filtered_badge_data)
+    else:
+        market_order_dict = load_market_order_data()
 
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
