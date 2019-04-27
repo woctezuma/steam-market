@@ -89,6 +89,8 @@ def find_badge_arbitrages(badge_data,
 
             badge_arbitrages[listing_hash]['ask_including_fee'] = market_order_dict[listing_hash]['ask']
             badge_arbitrages[listing_hash]['bid_including_fee'] = market_order_dict[listing_hash]['bid']
+            badge_arbitrages[listing_hash]['ask_volume'] = market_order_dict[listing_hash]['ask_volume']
+            badge_arbitrages[listing_hash]['bid_volume'] = market_order_dict[listing_hash]['bid_volume']
             badge_arbitrages[listing_hash]['is_marketable'] = market_order_dict[listing_hash]['is_marketable']
 
             badge_arbitrages[listing_hash]['bid_without_fee'] = bid_without_fee
@@ -108,14 +110,16 @@ def print_arbitrages(badge_arbitrages):
         if not arbitrage['is_marketable']:
             continue
 
-        print('Profit: {:.2f}€\t{}\tcraft pack for {} gems ({:.2f}€)\t sell for {:.2f}€ ({:.2f}€ including fee)'.format(
-            arbitrage['profit'],
-            listing_hash,
-            arbitrage['gem_amount'],
-            arbitrage['gem_price_including_fee'],
-            arbitrage['bid_without_fee'],
-            arbitrage['bid_including_fee'],
-        ))
+        print(
+            'Profit: {:.2f}€\t{}\tcraft pack for {} gems ({:.2f}€)\tsell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+                arbitrage['profit'],
+                listing_hash,
+                arbitrage['gem_amount'],
+                arbitrage['gem_price_including_fee'],
+                arbitrage['bid_without_fee'],
+                arbitrage['bid_including_fee'],
+                arbitrage['bid_volume'],
+            ))
 
     return
 

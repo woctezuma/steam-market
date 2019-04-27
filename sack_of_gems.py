@@ -30,9 +30,11 @@ def download_sack_of_gems_price():
     if status_code == 200:
         item_nameid = listing_details[listing_hash]['item_nameid']
 
-        bid_price, ask_price = download_market_order_data(listing_hash, item_nameid)
+        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash, item_nameid)
         listing_details[listing_hash]['bid'] = bid_price
         listing_details[listing_hash]['ask'] = ask_price
+        listing_details[listing_hash]['bid_volume'] = bid_volume
+        listing_details[listing_hash]['ask_volume'] = ask_volume
 
         sack_of_gems_price = ask_price
 

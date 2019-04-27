@@ -76,10 +76,13 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
                 # highest_buy_order
                 bid_info = buy_order_graph[0]
                 bid_price = bid_info[0]
+                bid_volume = bid_info[1]
             except IndexError:
                 bid_price = -1
+                bid_volume = -1
         except KeyError:
             bid_price = -1
+            bid_volume = -1
 
         try:
             sell_order_graph = result['sell_order_graph']
@@ -88,19 +91,29 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
                 # lowest_sell_order
                 ask_info = sell_order_graph[0]
                 ask_price = ask_info[0]
+                ask_volume = ask_info[1]
             except IndexError:
                 ask_price = -1
+                ask_volume = -1
         except KeyError:
             ask_price = -1
+            ask_volume = -1
 
     else:
         bid_price = -1
+        bid_volume = -1
         ask_price = -1
+        ask_volume = -1
 
     if verbose:
-        print('Listing: {} ; item id: {} ; ask: {}€ ; bid: {}€'.format(listing_hash, item_nameid, ask_price, bid_price))
+        print('Listing: {} ; item id: {} ; ask: {:.2f}€ ({}) ; bid: {:.2f}€ ({})'.format(listing_hash,
+                                                                                         item_nameid,
+                                                                                         ask_price,
+                                                                                         ask_volume,
+                                                                                         bid_price,
+                                                                                         bid_volume))
 
-    return bid_price, ask_price
+    return bid_price, ask_price, bid_volume, ask_volume
 
 
 def download_market_order_data_batch(badge_data, market_order_dict=None, verbose=False):
@@ -124,11 +137,13 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
 
     for app_id in badge_data.keys():
         listing_hash = badge_data[app_id]['listing_hash']
-        bid_price, ask_price = download_market_order_data(listing_hash, verbose=verbose)
+        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash, verbose=verbose)
 
         market_order_dict[listing_hash] = dict()
         market_order_dict[listing_hash]['bid'] = bid_price
         market_order_dict[listing_hash]['ask'] = ask_price
+        market_order_dict[listing_hash]['bid_volume'] = bid_volume
+        market_order_dict[listing_hash]['ask_volume'] = ask_volume
         market_order_dict[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
 
         if query_count >= rate_limits['max_num_queries']:
@@ -169,7 +184,7 @@ def main():
 
     # Download based on a listing hash
 
-    bid_price, ask_price = download_market_order_data(listing_hash, verbose=True)
+    bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash, verbose=True)
 
     # Download based on badge data
 
