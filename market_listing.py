@@ -196,6 +196,8 @@ def main():
         '290970-1849 Booster Pack',
         '753-Sack of Gems',
         '511540-MoonQuest Booster Pack',
+        '614910-#monstercakes Booster Pack',
+        '505730-Holy Potatoes! We’re in Space?! Booster Pack',
     ]
     listing_details = update_all_listing_details(listing_hashes)
 
