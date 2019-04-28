@@ -190,6 +190,13 @@ def load_all_listing_details():
     return all_listing_details
 
 
+def fix_app_name_for_url_query(app_name):
+    app_name = app_name.replace('#', '%23')
+    app_name = app_name.replace('?', '%3F')
+
+    return app_name
+
+
 def main():
     listing_hashes = [
         '268830-Doctor Who%3A The Adventure Games Booster Pack',
@@ -203,7 +210,11 @@ def main():
         '614910-%23monstercakes Booster Pack',
         '505730-Holy Potatoes! We’re in Space%3F! Booster Pack',
     ]
-    listing_details = update_all_listing_details(listing_hashes)
+
+    # Fix listing hashes so that there is no special character '#' or '?', which would mess with URL query later on
+    fixed_listing_hashes = [fix_app_name_for_url_query(listing_hash) for listing_hash in listing_hashes]
+
+    listing_details = update_all_listing_details(fixed_listing_hashes)
 
     return True
 
