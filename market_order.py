@@ -55,16 +55,24 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
     if item_nameid is None:
         item_nameid = get_item_nameid(listing_hash)
 
-    url = get_steam_market_order_url()
-    req_data = get_market_order_parameters(item_nameid=item_nameid)
+    if item_nameid is not None:
 
-    if has_secured_cookie:
-        cookie = get_cookie_dict(cookie_value)
-        resp_data = requests.get(url, params=req_data, cookies=cookie)
+        url = get_steam_market_order_url()
+        req_data = get_market_order_parameters(item_nameid=item_nameid)
+
+        if has_secured_cookie:
+            cookie = get_cookie_dict(cookie_value)
+            resp_data = requests.get(url, params=req_data, cookies=cookie)
+        else:
+            resp_data = requests.get(url, params=req_data)
+
+        status_code = resp_data.status_code
+
     else:
-        resp_data = requests.get(url, params=req_data)
+        print('No query to download market orders for {}, because item name ID is unknown.'.format(listing_hash))
 
-    status_code = resp_data.status_code
+        resp_data = None
+        status_code = -1
 
     if status_code == 200:
         result = resp_data.json()
