@@ -156,8 +156,10 @@ def populate_random_samples_of_badge_data(badge_data=None, num_samples=50):
 
     listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
 
+    num_samples = min(num_samples, len(listing_hashes))
+
     listing_hash_samples = [listing_hashes[i]
-                            for i in random.sample(list(range(len(listing_hashes))), k=num_samples)]
+                            for i in random.sample(range(len(listing_hashes)), k=num_samples)]
 
     item_nameids = get_item_nameid_batch(listing_hash_samples)
 
