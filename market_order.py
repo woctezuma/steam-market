@@ -204,6 +204,19 @@ def main():
 
     market_order_dict = download_market_order_data_batch(badge_data, verbose=True)
 
+    # Test listing hashes with special characters
+
+    listing_hashes = [
+        # The item name ID will not be retrieved for the following two listhing hashes due to special characters:
+        '614910-#monstercakes Booster Pack',
+        '505730-Holy Potatoes! We’re in Space?! Booster Pack',
+        # This fixes the aforementioned issue:
+        '614910-%23monstercakes Booster Pack',
+        '505730-Holy Potatoes! We’re in Space%3F! Booster Pack',
+    ]
+    for listing_hash_to_test in listing_hashes:
+        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash_to_test, verbose=True)
+
     return True
 
 
