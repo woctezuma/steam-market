@@ -2,6 +2,9 @@
 #
 # Caveat: this relies on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
 
+import random
+
+from market_listing import get_item_nameid_batch
 from market_search import load_all_listings, update_all_listings
 from sack_of_gems import get_gem_price
 from utils import get_badge_creation_file_name, convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
@@ -147,5 +150,20 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False):
     return aggregated_badge_data
 
 
+def populate_random_samples_of_badge_data(badge_data=None, num_samples=50):
+    if badge_data is None:
+        badge_data = load_aggregated_badge_data()
+
+    listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
+
+    listing_hash_samples = [listing_hashes[i]
+                            for i in random.sample(list(range(len(listing_hashes))), k=num_samples)]
+
+    item_nameids = get_item_nameid_batch(listing_hash_samples)
+
+    return True
+
+
 if __name__ == '__main__':
     aggregated_badge_data = load_aggregated_badge_data()
+    populate_random_samples_of_badge_data(aggregated_badge_data, num_samples=50)
