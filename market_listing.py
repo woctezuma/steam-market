@@ -62,15 +62,26 @@ def parse_item_name_id(html_doc):
 
     last_script_token = last_script.split('(')[-1]
 
-    item_nameid = int(last_script_token.split(');')[0])
+    item_nameid_str = last_script_token.split(');')[0]
+
+    try:
+        item_nameid = int(item_nameid_str)
+    except ValueError:
+        item_nameid = None
 
     marketable_key = '"marketable":'
 
-    is_marketable_index = last_script.index(marketable_key)
+    try:
+        is_marketable_index = last_script.index(marketable_key)
+    except ValueError:
+        is_marketable_index = None
 
-    is_marketable_as_str = last_script[is_marketable_index + len(marketable_key)]
+    if is_marketable_index is not None:
+        is_marketable_as_str = last_script[is_marketable_index + len(marketable_key)]
 
-    is_marketable = bool(int(is_marketable_as_str) != 0)
+        is_marketable = bool(int(is_marketable_as_str) != 0)
+    else:
+        is_marketable = None
 
     return item_nameid, is_marketable
 
@@ -95,6 +106,12 @@ def get_listing_details(listing_hash=None, cookie_value=None, render_as_json=Fal
         html_doc = resp_data.text
 
         item_nameid, is_marketable = parse_item_name_id(html_doc)
+
+        if item_nameid is None:
+            print('Item name ID not found for {}'.format(listing_hash))
+
+        if is_marketable is None:
+            print('Marketable status not found for {}'.format(listing_hash))
 
         listing_details[listing_hash] = dict()
         listing_details[listing_hash]['item_nameid'] = item_nameid
