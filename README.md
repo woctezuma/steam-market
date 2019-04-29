@@ -34,7 +34,7 @@ pip install -r requirements.txt
   ![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
 
     3. Format it this way:
-  ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
+    ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
 
     4. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`
   ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
