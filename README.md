@@ -24,19 +24,19 @@ pip install -r requirements.txt
 
 -   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
 
-    0. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
+    1. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
   ![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
 
-    1. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
+    2. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
   ![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
 
-    2. You will be able to copy-paste this line:<br/>
+    3. You will be able to copy-paste this line:<br/>
   ![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
 
-    3. Format it this way:<br/>
+    4. Format it this way:<br/>
   ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
 
-    4. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`:<br/>
+    5. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`:<br/>
   ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
 
 -   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
