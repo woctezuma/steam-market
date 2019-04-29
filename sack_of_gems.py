@@ -41,7 +41,7 @@ def download_sack_of_gems_price():
         with open(get_sack_of_gems_listing_file_name(), 'w') as f:
             json.dump(listing_details, f)
     else:
-        sack_of_gems_price = -1
+        raise AssertionError()
 
     return sack_of_gems_price
 
