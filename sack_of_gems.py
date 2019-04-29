@@ -68,7 +68,7 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False, verbose=True)
     return sack_of_gems_price
 
 
-def get_gem_price(retrieve_gem_price_from_scratch=False, verbose=False):
+def get_gem_price(retrieve_gem_price_from_scratch=False, verbose=True):
     sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
