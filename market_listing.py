@@ -225,7 +225,7 @@ def get_item_nameid(listing_hash):
             listing_details = json.load(f)
 
         item_nameid = listing_details[listing_hash]['item_nameid']
-    except FileNotFoundError or KeyError:
+    except (FileNotFoundError, KeyError):
         listing_details = update_all_listing_details(listing_hashes=[listing_hash])
         item_nameid = listing_details[listing_hash]['item_nameid']
 
