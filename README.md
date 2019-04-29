@@ -24,7 +24,10 @@ pip install -r requirements.txt
 
 -   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
 
-    1. To do so, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:   
+    0. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:
+![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
+
+    1. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:   
 ![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
 
     2. You will be able to copy-paste this line:    
