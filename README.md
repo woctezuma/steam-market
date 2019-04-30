@@ -24,51 +24,58 @@ pip install -r requirements.txt
 
 ### Cookie
 
--   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
+To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
 
-    1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/).<br/> 
+1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/).<br/> 
   ![steam community](https://github.com/woctezuma/steam-market/wiki/img/K0P9Uxu.png)
 
-    2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools.<br/>
+2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools.<br/>
   ![storage section](https://github.com/woctezuma/steam-market/wiki/img/xGfyU7r.png)
     
-    3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.<br/>
+3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.<br/>
   ![filter for steamLoginSecure](https://github.com/woctezuma/steam-market/wiki/img/YhlPlUy.png)    
     
-    4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).<br/>
+4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).<br/>
   ![paste into personal_info.txt](https://github.com/woctezuma/steam-market/wiki/img/hMiqZJH.png)    
 
 > **NB**: In the future, if you notice that the program bugs out due to seemingly very strict rate limits, then it may
 be a sign that the cookie value tied to your session has changed.
 In this case, try to fill-in your cookie information with its new value.
 
-### Gem cost to craft Booster Packs
+### Gem cost for crafting Booster Packs
 
--   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
+To have access to the gem cost for crafting Booster Packs, you will need to manually copy information available [here](https://steamcommunity.com/tradingcards/boostercreator/).
+There are two solutions:
+-   solution A is my original solution, but it requires a browser extension called *Augemted Steam*,
+-   solution B is a more recent solution, and does not any third-party browser extension.
 
-    1. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
-  ![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
+#### Solution A
+ 
+1. Install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
+![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
 
-    2. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
-  ![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
+2. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
+![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
 
-    3. You will be able to copy-paste this line:<br/>
-  ![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
+3. Copy the following line and paste it to `data/booster_game_creator.txt`:<br/>
+![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
 
-    4. Format it this way:<br/>
-  ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
+4. Add line-breaks, so that the file is formatted in the following way:<br/>
+![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
 
-    5. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`:<br/>
-  ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
+   For instance, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and run:<br/>
+![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
 
-- Alternatively, if you wish not to install any browser extension:
+#### Solution B
 
-    1. Press `<Ctrl-U>` to display the HTML code of [the Booser Creation webpage]([here](https://steamcommunity.com/tradingcards/boostercreator/). 
+Alternatively, if you wish not to install any browser extension:
 
-    2. At the end of the HTML, copy the line below `CBoosterCreatorPage.Init`:
-    ![javascript list of games](https://github.com/woctezuma/steam-market/wiki/img/JBxJue8.png)
+1. Press `<Ctrl-U>` to display the HTML code of [the Booser Creation webpage](https://steamcommunity.com/tradingcards/boostercreator/). 
+
+2. At the end of the HTML code, find and copy the line below `CBoosterCreatorPage.Init`:<br/>
+![javascript list of games](https://github.com/woctezuma/steam-market/wiki/img/JBxJue8.png)
     
-    3. Paste the line, either to `data/booster_game_creator.txt` or `data/booster_game_creator_from_javascript.txt`.
+3. Paste the line to `data/booster_game_creator_from_javascript.txt`.
 
 ## Usage
 
