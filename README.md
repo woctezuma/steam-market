@@ -22,23 +22,6 @@ pip install -r requirements.txt
 
 ## Data acquisition
 
--   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
-
-    1. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
-  ![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
-
-    2. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
-  ![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
-
-    3. You will be able to copy-paste this line:<br/>
-  ![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
-
-    4. Format it this way:<br/>
-  ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
-
-    5. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`:<br/>
-  ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
-
 -   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
 
     1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/).<br/> 
@@ -56,6 +39,23 @@ pip install -r requirements.txt
 > **NB**: In the future, if you notice that the program bugs out due to seemingly very strict rate limits, then it may
 be a sign that the cookie value tied to your session has changed.
 In this case, try to fill-in your cookie information with its new value.
+
+-   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
+
+    1. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
+  ![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
+
+    2. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
+  ![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
+
+    3. You will be able to copy-paste this line:<br/>
+  ![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
+
+    4. Format it this way:<br/>
+  ![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
+
+    5. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`:<br/>
+  ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
 
 ## Usage
 
