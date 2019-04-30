@@ -4,36 +4,11 @@
 
 import random
 
-from market_listing import get_item_nameid_batch, fix_app_name_for_url_query
+from market_listing import get_item_nameid_batch
 from market_search import load_all_listings, update_all_listings
+from parsing_utils import parse_badge_creation_details
 from sack_of_gems import get_gem_price
-from utils import get_badge_creation_file_name, convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
-
-
-def parse_badge_creation_details():
-    with open(get_badge_creation_file_name(), 'r') as f:
-        lines = [l.strip() for l in f.readlines() if l[0] != '#']
-
-    badge_creation_details = dict()
-
-    for l in lines:
-        s = l.split()
-        # e.g. ['<option', 'value="614910"', 'class="available">#monstercakes', '-', '1200', ',', 'Gems</option>']
-
-        # Hard-coded parsing
-        app_id = int(s[1].split('=')[1].strip('"'))
-        app_name = s[2].split('available">')[1] + ' '
-        app_name += ' '.join(s[3:-4])
-        app_name = app_name.strip()
-        gem_value = int(s[-3])
-
-        app_name = fix_app_name_for_url_query(app_name)
-
-        badge_creation_details[app_id] = dict()
-        badge_creation_details[app_id]['name'] = app_name
-        badge_creation_details[app_id]['gem_value'] = gem_value
-
-    return badge_creation_details
+from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
 def match_badges_with_listing_hashes(badge_creation_details=None,

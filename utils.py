@@ -8,8 +8,14 @@ def get_data_folder():
     return data_folder
 
 
-def get_badge_creation_file_name():
-    badge_creation_file_name = get_data_folder() + 'booster_game_creator.txt'
+def get_badge_creation_file_name(from_javascript=False):
+    badge_creation_file_name = get_data_folder() + 'booster_game_creator'
+
+    if from_javascript:
+        badge_creation_file_name += '_from_javascript'
+
+    badge_creation_file_name += '.txt'
+
     return badge_creation_file_name
 
 

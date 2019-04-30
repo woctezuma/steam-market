@@ -5,6 +5,7 @@ import market_listing
 import market_order
 import market_search
 import market_utils
+import parsing_utils
 import sack_of_gems
 import transaction_fee
 import utils
@@ -25,6 +26,12 @@ class TestMarketListingMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(market_listing.main())
+
+
+class TestParsingUtilsMethods(unittest.TestCase):
+
+    def test_main(self):
+        self.assertTrue(parsing_utils.main())
 
 
 class TestSackOfGemsMethods(unittest.TestCase):
