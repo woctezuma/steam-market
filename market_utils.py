@@ -106,8 +106,9 @@ def aggregate_badge_data(badge_creation_details,
     return aggregated_badge_data
 
 
-def load_aggregated_badge_data(retrieve_listings_from_scratch=False):
-    badge_creation_details = parse_badge_creation_details()
+def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
+                               from_javascript=False):
+    badge_creation_details = parse_badge_creation_details(from_javascript=from_javascript)
 
     if retrieve_listings_from_scratch:
         update_all_listings()
