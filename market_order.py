@@ -168,21 +168,13 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
     return market_order_dict
 
 
-def update_market_order_data_batch(badge_data):
-    market_order_dict = load_market_order_data_from_disk()
-
-    market_order_dict = download_market_order_data_batch(badge_data,
-                                                         market_order_dict=market_order_dict)
-
-    return market_order_dict
-
-
 def load_market_order_data(badge_data=None,
                            retrieve_market_orders_online=True):
+    market_order_dict = load_market_order_data_from_disk()
+
     if retrieve_market_orders_online:
-        market_order_dict = update_market_order_data_batch(badge_data)
-    else:
-        market_order_dict = load_market_order_data_from_disk()
+        market_order_dict = download_market_order_data_batch(badge_data,
+                                                             market_order_dict=market_order_dict)
 
     return market_order_dict
 
