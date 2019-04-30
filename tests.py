@@ -64,7 +64,8 @@ class TestMarketUtilsMethods(unittest.TestCase):
 class TestMarketArbitrageMethods(unittest.TestCase):
 
     def test_apply_workflow(self):
-        self.assertTrue(market_arbitrage.apply_workflow(retrieve_market_orders_from_scratch=False))
+        self.assertTrue(market_arbitrage.apply_workflow(retrieve_listings_from_scratch=False,
+                                                        retrieve_market_orders_online=False))
 
 
 class TestMarketOrderMethods(unittest.TestCase):

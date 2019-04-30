@@ -1,6 +1,6 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
-from market_order import update_market_order_data_batch, load_market_order_data
+from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
 
@@ -59,7 +59,8 @@ def find_badge_arbitrages(badge_data,
                           market_order_dict=None,
                           verbose=False):
     if market_order_dict is None:
-        market_order_dict = update_market_order_data_batch(badge_data)
+        market_order_dict = load_market_order_data(badge_data,
+                                                   retrieve_market_orders_online=True)
 
     badge_arbitrages = dict()
 
@@ -124,17 +125,16 @@ def print_arbitrages(badge_arbitrages):
     return
 
 
-def apply_workflow(retrieve_market_orders_from_scratch=True,
+def apply_workflow(retrieve_listings_from_scratch=True,
+                   retrieve_market_orders_online=True,
                    from_javascript=False):
-    aggregated_badge_data = load_aggregated_badge_data(retrieve_market_orders_from_scratch,
+    aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
                                                        from_javascript=from_javascript)
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
-    if retrieve_market_orders_from_scratch:
-        market_order_dict = update_market_order_data_batch(filtered_badge_data)
-    else:
-        market_order_dict = load_market_order_data()
+    market_order_dict = load_market_order_data(filtered_badge_data,
+                                               retrieve_market_orders_online=retrieve_market_orders_online)
 
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
@@ -145,10 +145,12 @@ def apply_workflow(retrieve_market_orders_from_scratch=True,
 
 
 def main():
-    retrieve_market_orders_from_scratch = True
+    retrieve_listings_from_scratch = True
+    retrieve_market_orders_online = True
     from_javascript = False
 
-    apply_workflow(retrieve_market_orders_from_scratch=retrieve_market_orders_from_scratch,
+    apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+                   retrieve_market_orders_online=retrieve_market_orders_online,
                    from_javascript=from_javascript)
 
     return True
