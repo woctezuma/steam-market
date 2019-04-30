@@ -22,6 +22,8 @@ pip install -r requirements.txt
 
 ## Data acquisition
 
+### Cookie
+
 -   To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
 
     1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/).<br/> 
@@ -40,6 +42,8 @@ pip install -r requirements.txt
 be a sign that the cookie value tied to your session has changed.
 In this case, try to fill-in your cookie information with its new value.
 
+### Gem cost to craft Booster Packs
+
 -   To have access to the cost of Booster Packs in gems, copy info from [here](https://steamcommunity.com/tradingcards/boostercreator/) to `data/booster_game_creator.txt`:
 
     1. To do so, install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
@@ -56,6 +60,15 @@ In this case, try to fill-in your cookie information with its new value.
 
     5. For instance, with [Visual Studio Code](https://code.visualstudio.com/), this requires adding line-breaks with `<Ctrl-H>`:<br/>
   ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
+
+- Alternatively, if you wish not to install any browser extension:
+
+    1. Press `<Ctrl-U>` to display the HTML code of [the Booser Creation webpage]([here](https://steamcommunity.com/tradingcards/boostercreator/). 
+
+    2. At the end of the HTML, copy the line below `CBoosterCreatorPage.Init`:
+    ![javascript list of games](https://github.com/woctezuma/steam-market/wiki/img/JBxJue8.png)
+    
+    3. Paste the line, either to `data/booster_game_creator.txt` or `data/booster_game_creator_from_javascript.txt`.
 
 ## Usage
 
