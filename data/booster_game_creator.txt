@@ -1,3 +1,4 @@
+# Account: https://steamcommunity.com/profiles/76561198028705366
 # Reference: https://steamcommunity.com/tradingcards/boostercreator/
 <option value="614910" class="available">#monstercakes - 1200 , Gems</option>
 <option value="271670" class="available">10 Second Ninja - 1200 , Gems</option>
