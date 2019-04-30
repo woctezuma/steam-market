@@ -4,6 +4,8 @@
 # - either on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
 # - or on a previous manual copy-paste of javascript code to data/booster_game_creator_from_javascript.txt
 
+from pathlib import Path
+
 from market_listing import fix_app_name_for_url_query
 from utils import get_badge_creation_file_name
 
@@ -99,9 +101,12 @@ def parse_augmented_steam_drop_down_menu(lines, verbose=False):
     return badge_creation_details
 
 
-def parse_badge_creation_details(badge_creation_file_name=None, verbose=False):
+def parse_badge_creation_details(badge_creation_file_name=None, from_javascript=False, verbose=False):
     if badge_creation_file_name is None:
-        badge_creation_file_name = get_badge_creation_file_name()
+        badge_creation_file_name = get_badge_creation_file_name(from_javascript=from_javascript)
+
+        if not Path(badge_creation_file_name).exists():
+            badge_creation_file_name = get_badge_creation_file_name(from_javascript=not from_javascript)
 
     with open(badge_creation_file_name, 'r') as f:
         lines = [l.strip() for l in f.readlines() if l[0] != '#']
@@ -121,6 +126,14 @@ def main():
     print('#badges = {}'.format(len(badge_creation_details)))
 
     badge_creation_details = parse_badge_creation_details(get_badge_creation_file_name(from_javascript=True))
+
+    print('#badges = {}'.format(len(badge_creation_details)))
+
+    badge_creation_details = parse_badge_creation_details(from_javascript=False)
+
+    print('#badges = {}'.format(len(badge_creation_details)))
+
+    badge_creation_details = parse_badge_creation_details(from_javascript=True)
 
     print('#badges = {}'.format(len(badge_creation_details)))
 
