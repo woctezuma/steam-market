@@ -62,7 +62,7 @@ In this case, try to fill-in your cookie information with its new value.
 -   To parse all the options to craft 'Booster Packs', for the games you own, run:
 
 ```bash
-python market_utils.py
+python parsing_utils.py
 ```
 
 -   To retrieve all the listings of 'Booster Packs' on the Steam Market, along with the sell price and volume, run:
@@ -82,6 +82,13 @@ python sack_of_gems.py
 ```bash
 python market_listing.py
 ```
+
+-   To match listing hashes with badge creation details, run:
+
+```bash
+python market_utils.py
+```
+
 
 -   To retrieve the ask and bid for 'Booster Packs', run:
 

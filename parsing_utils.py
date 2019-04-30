@@ -1,3 +1,9 @@
+# Objective: parse all the options to craft 'Booster Packs', available because I own the corresponding games.
+#
+# Caveat: this relies:
+# - either on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
+# - or on a previous manual copy-paste of javascript code to data/booster_game_creator_from_javascript.txt
+
 from market_listing import fix_app_name_for_url_query
 from utils import get_badge_creation_file_name
 

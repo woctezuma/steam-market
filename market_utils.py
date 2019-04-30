@@ -1,6 +1,4 @@
-# Objective: parse all the options to craft 'Booster Packs', available because I own the corresponding games.
-#
-# Caveat: this relies on a previous manual copy-paste of HTML code to data/booster_game_creator.txt
+# Objective: match listing hashes with badge creation details.
 
 import random
 
