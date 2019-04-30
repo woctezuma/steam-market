@@ -45,8 +45,9 @@ In this case, try to fill-in your cookie information with its new value.
 ### Gem cost for crafting Booster Packs
 
 To have access to the gem cost for crafting Booster Packs, you will need to manually copy information available [here](https://steamcommunity.com/tradingcards/boostercreator/).
+
 There are two solutions:
--   solution A is my original solution, but it requires a browser extension called *Augemted Steam*,
+-   solution A is my original solution, but it requires a browser extension called *Augmented Steam*,
 -   solution B is a more recent solution, and does not any third-party browser extension.
 
 #### Solution A
