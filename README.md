@@ -48,7 +48,7 @@ To have access to the gem cost for crafting Booster Packs, you will need to manu
 
 There are two solutions:
 -   solution A is my original solution, but it requires a browser extension called *Augmented Steam*,
--   solution B is a more recent solution, and does not any third-party browser extension.
+-   solution B is a more recent solution, and does not require any third-party browser extension.
 
 #### Solution A
  
