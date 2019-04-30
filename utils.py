@@ -42,7 +42,8 @@ def get_market_order_file_name():
 
 
 def main():
-    for file_name in [get_badge_creation_file_name(),
+    for file_name in [get_badge_creation_file_name(from_javascript=False),
+                      get_badge_creation_file_name(from_javascript=True),
                       get_listing_output_file_name(),
                       get_sack_of_gems_listing_file_name(),
                       get_market_order_file_name(),
