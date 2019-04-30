@@ -4798,5 +4798,41 @@
   "505730-Holy Potatoes! We\u2019re in Space%3F! Booster Pack": {
     "item_nameid": 175875414,
     "is_marketable": true
+  },
+  "330990-Demon Hunter: Chronicles from Beyond Booster Pack": {
+    "item_nameid": 26133185,
+    "is_marketable": true
+  },
+  "664180-Draw Puzzle Booster Pack": {
+    "item_nameid": 175914048,
+    "is_marketable": true
+  },
+  "403510-Fairy Tale Mysteries 2: The Beanstalk Booster Pack": {
+    "item_nameid": 74245674,
+    "is_marketable": true
+  },
+  "347610-Hidden Object Bundle 4 in 1 Booster Pack": {
+    "item_nameid": 75551479,
+    "is_marketable": true
+  },
+  "855640-My Brother Rabbit Booster Pack": {
+    "item_nameid": 176020849,
+    "is_marketable": true
+  },
+  "385250-Paint it Back Booster Pack": {
+    "item_nameid": 75212793,
+    "is_marketable": true
+  },
+  "568320-Pictopix Booster Pack": {
+    "item_nameid": 175872910,
+    "is_marketable": true
+  },
+  "423220-T-Kara Puzzles Booster Pack": {
+    "item_nameid": 161819389,
+    "is_marketable": true
+  },
+  "517360-The Secret Order 4: Beyond Time Booster Pack": {
+    "item_nameid": 173003743,
+    "is_marketable": true
   }
 }
