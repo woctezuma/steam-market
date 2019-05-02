@@ -92,7 +92,7 @@ python parsing_utils.py
 python market_search.py
 ```
 
--   To retrieve the price which sellers ask for a 'Sack of Gems', run:
+-   To retrieve the price which sellers ask for a ['Sack of Gems'](https://steamcommunity.com/market/listings/753/753-Sack%20of%20Gems), run:
 
 ```bash
 python sack_of_gems.py
