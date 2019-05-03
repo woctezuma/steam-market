@@ -79,7 +79,10 @@ def find_badge_arbitrages(badge_data,
 
         delta = bid_without_fee - gem_price_including_fee
 
-        if delta > 0.009:  # a profit of at least 1 cent (we check 0.99 cent due to floating point rounding)
+        # Check whether there is a profit to be made
+        is_an_arbitrage = bool(delta > 0)
+
+        if is_an_arbitrage:
             badge_arbitrages[listing_hash] = dict()
             badge_arbitrages[listing_hash]['app_id'] = app_id
 
