@@ -130,8 +130,10 @@ def print_arbitrages(badge_arbitrages):
 
 def apply_workflow(retrieve_listings_from_scratch=True,
                    retrieve_market_orders_online=True,
+                   enforced_sack_of_gems_price=None,
                    from_javascript=False):
     aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
+                                                       enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                                                        from_javascript=from_javascript)
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
@@ -150,10 +152,12 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 def main():
     retrieve_listings_from_scratch = True
     retrieve_market_orders_online = True
+    enforced_sack_of_gems_price = None
     from_javascript = False
 
     apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
                    retrieve_market_orders_online=retrieve_market_orders_online,
+                   enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                    from_javascript=from_javascript)
 
     return True

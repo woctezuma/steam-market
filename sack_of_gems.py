@@ -68,8 +68,16 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False, verbose=True)
     return sack_of_gems_price
 
 
-def get_gem_price(retrieve_gem_price_from_scratch=False, verbose=True):
-    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
+def get_gem_price(enforced_sack_of_gems_price=None,
+                  retrieve_gem_price_from_scratch=False,
+                  verbose=True):
+    if enforced_sack_of_gems_price is None:
+        sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
+    else:
+        sack_of_gems_price = enforced_sack_of_gems_price
+        print('[manual input] A sack of {} gems can allegeldy be bought for {:.2f} €.'.format(
+            get_num_gems_per_sack_of_gems(),
+            sack_of_gems_price))
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 

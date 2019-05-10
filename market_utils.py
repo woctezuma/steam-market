@@ -65,6 +65,7 @@ def match_badges_with_listing_hashes(badge_creation_details=None,
 def aggregate_badge_data(badge_creation_details,
                          badge_matches,
                          all_listings=None,
+                         enforced_sack_of_gems_price=None,
                          retrieve_gem_price_from_scratch=False):
     # Aggregate data:
     #       owned appID --> (gem PRICE, sell price)
@@ -77,7 +78,8 @@ def aggregate_badge_data(badge_creation_details,
     if all_listings is None:
         all_listings = load_all_listings()
 
-    gem_price = get_gem_price(retrieve_gem_price_from_scratch)
+    gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                              retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
 
     badge_app_ids = list(badge_creation_details.keys())
 
@@ -107,6 +109,7 @@ def aggregate_badge_data(badge_creation_details,
 
 
 def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
+                               enforced_sack_of_gems_price=None,
                                from_javascript=False):
     badge_creation_details = parse_badge_creation_details(from_javascript=from_javascript)
 
@@ -118,10 +121,13 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
     badge_matches = match_badges_with_listing_hashes(badge_creation_details,
                                                      all_listings)
 
+    retrieve_gem_price_from_scratch = retrieve_listings_from_scratch and bool(enforced_sack_of_gems_price is None)
+
     aggregated_badge_data = aggregate_badge_data(badge_creation_details,
                                                  badge_matches,
-                                                 all_listings,
-                                                 retrieve_listings_from_scratch)
+                                                 all_listings=all_listings,
+                                                 enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                                 retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
 
     return aggregated_badge_data
 
