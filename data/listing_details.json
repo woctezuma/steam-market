@@ -4834,5 +4834,21 @@
   "517360-The Secret Order 4: Beyond Time Booster Pack": {
     "item_nameid": 173003743,
     "is_marketable": true
+  },
+  "330000-Kingdoms CCG Booster Pack": {
+    "item_nameid": 35324471,
+    "is_marketable": true
+  },
+  "807140-Marble Run 2D Booster Pack": {
+    "item_nameid": 175973632,
+    "is_marketable": true
+  },
+  "417910-Street Warriors Online Booster Pack": {
+    "item_nameid": 158890527,
+    "is_marketable": true
+  },
+  "878380-\u4e1c\u65b9\u5927\u6218\u4e89 ~ Touhou Big Big Battle Booster Pack": {
+    "item_nameid": 176023838,
+    "is_marketable": true
   }
 }
