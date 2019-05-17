@@ -33,6 +33,7 @@
 <option value="298890" class="available">Adventure Time: The Secret Of The Nameless Kingdom - 1200 , Gems</option>
 <option value="247830" class="available">Aerena - 750 , Gems</option>
 <option value="224420" class="available">Afterfall InSanity Extended Edition - 1000 , Gems</option>
+<option value="226840" class="available">Age of Wonders III - 750 , Gems</option>
 <option value="345220" class="available">Agent Awesome - 1200 , Gems</option>
 <option value="528180" class="available">Agricola: All Creatures Big and Small - 1200 , Gems</option>
 <option value="40400" class="available">AI War: Fleet Command - 1000 , Gems</option>
@@ -187,6 +188,7 @@
 <option value="386620" class="available">Cook, Serve, Delicious! 2!! - 750 , Gems</option>
 <option value="582620" class="available">Copoka - 1200 , Gems</option>
 <option value="284410" class="available">Cornerstone: The Song Of Tyrim - 1000 , Gems</option>
+<option value="446030" class="available">Corroded - 750 , Gems</option>
 <option value="349140" class="available">Corrosion: Cold Winter Waiting [Enhanced Edition] - 1200 , Gems</option>
 <option value="209670" class="available">Cortex Command - 1000 , Gems</option>
 <option value="730" class="available">Counter-Strike: Global Offensive - 1200 , Gems</option>
@@ -325,6 +327,8 @@
 <option value="38600" class="available">Faerie Solitaire - 667 , Gems</option>
 <option value="282880" class="available">FaeVerse Alchemy - 500 , Gems</option>
 <option value="334300" class="available">Fake Colours - 750 , Gems</option>
+<option value="463110" class="available">Farnham Fables - 1200 , Gems</option>
+<option value="282100" class="available">Fearless Fantasy - 857 , Gems</option>
 <option value="327060" class="available">Feist - 1200 , Gems</option>
 <option value="410590" class="available">Fiends of Imprisonment - 1200 , Gems</option>
 <option value="856880" class="available">Fighting Fantasy Classics - 750 , Gems</option>
@@ -350,6 +354,7 @@
 <option value="301190" class="available">Frederic: Resurrection of Music - 1000 , Gems</option>
 <option value="487220" class="available">Freebie - 857 , Gems</option>
 <option value="262770" class="available">Freedom Fall - 750 , Gems</option>
+<option value="773951" class="available">Freeman: Guerrilla Warfare - 750 , Gems</option>
 <option value="795100" class="available">Friday the 13th: Killer Puzzle - 857 , Gems</option>
 <option value="490950" class="available">Frost - 750 , Gems</option>
 <option value="257890" class="available">Frozen Hearth - 750 , Gems</option>
@@ -507,6 +512,7 @@
 <option value="246420" class="available">Kingdom Rush - 1200 , Gems</option>
 <option value="368230" class="available">Kingdom: Classic - 1000 , Gems</option>
 <option value="496300" class="available">Kingdom: New Lands - 750 , Gems</option>
+<option value="330000" class="available">Kingdoms CCG - 667 , Gems</option>
 <option value="500580" class="available">Kitty Cat: Jigsaw Puzzles - 1000 , Gems</option>
 <option value="587460" class="available">Knightfall™: Rivals - 600 , Gems</option>
 <option value="253900" class="available">Knights and Merchants - 1000 , Gems</option>
@@ -572,6 +578,7 @@
 <option value="264340" class="available">Major Mayhem - 1000 , Gems</option>
 <option value="318860" class="available">Malebolgia - 1000 , Gems</option>
 <option value="338120" class="available">Marble Duel - 667 , Gems</option>
+<option value="807140" class="available">Marble Run 2D - 429 , Gems</option>
 <option value="214560" class="available">Mark of the Ninja - 667 , Gems</option>
 <option value="860950" class="available">Mark of the Ninja: Remastered - 545 , Gems</option>
 <option value="226320" class="available">Marvel Heroes Omega - 667 , Gems</option>
@@ -602,6 +609,7 @@
 <option value="489520" class="available">Minion Masters - 1000 , Gems</option>
 <option value="609490" class="available">Minit - 1200 , Gems</option>
 <option value="368420" class="available">Mirage: Arcane Warfare - 1000 , Gems</option>
+<option value="620530" class="available">Mirt. Tales of the Cold Land - 1200 , Gems</option>
 <option value="395520" class="available">Missing Translation - 1200 , Gems</option>
 <option value="428550" class="available">Momodora: Reverie Under the Moonlight - 1200 , Gems</option>
 <option value="113020" class="available">Monaco - 750 , Gems</option>
@@ -770,6 +778,7 @@
 <option value="204630" class="available">Retro City Rampage™ DX - 400 , Gems</option>
 <option value="222730" class="available">Reus - 857 , Gems</option>
 <option value="93200" class="available">Revenge of the Titans - 1200 , Gems</option>
+<option value="270570" class="available">Reversion - The Escape - 667 , Gems</option>
 <option value="281060" class="available">Reversion - The Meeting - 750 , Gems</option>
 <option value="301540" class="available">Rhythm Destruction - 1000 , Gems</option>
 <option value="493200" class="available">RiME - 750 , Gems</option>
@@ -937,6 +946,7 @@
 <option value="508300" class="available">Strategy &amp; Tactics: Dark Ages - 857 , Gems</option>
 <option value="338130" class="available">Strategy &amp; Tactics: Wargame Collection - 1000 , Gems</option>
 <option value="252850" class="available">Streamline - 750 , Gems</option>
+<option value="417910" class="available">Street Warriors Online - 857 , Gems</option>
 <option value="235210" class="available">Strider - 667 , Gems</option>
 <option value="209540" class="available">Strike Suit Zero - 1200 , Gems</option>
 <option value="232890" class="available">Stronghold Crusader 2 - 1000 , Gems</option>
@@ -1196,3 +1206,4 @@
 <option value="259430" class="available">Zigfrak - 600 , Gems</option>
 <option value="337480" class="available">Zombie Vikings - 750 , Gems</option>
 <option value="297450" class="available">Zombies on a Plane - 1200 , Gems</option>
+<option value="878380" class="available">东方大战争 ~ Touhou Big Big Battle - 400 , Gems</option>
