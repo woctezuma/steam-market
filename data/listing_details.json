@@ -4850,5 +4850,17 @@
   "878380-\u4e1c\u65b9\u5927\u6218\u4e89 ~ Touhou Big Big Battle Booster Pack": {
     "item_nameid": 176023838,
     "is_marketable": true
+  },
+  "550650-Black Squad Booster Pack": {
+    "item_nameid": 175955244,
+    "is_marketable": true
+  },
+  "446030-Corroded Booster Pack": {
+    "item_nameid": 175889363,
+    "is_marketable": true
+  },
+  "595280-Throne of Lies Booster Pack": {
+    "item_nameid": 175951139,
+    "is_marketable": true
   }
 }
