@@ -19,7 +19,10 @@ def get_steam_market_listing_url(app_id=None, listing_hash=None, render_as_json=
     if listing_hash is None:
         listing_hash = '511540-MoonQuest Booster Pack'
 
-    market_listing_url = 'https://steamcommunity.com/market/listings/' + str(app_id) + '/' + listing_hash + '/'
+    # Fix listing hashes so that there is no special character '#' or '?', which would mess with URL query later on
+    fixed_listing_hash = fix_app_name_for_url_query(listing_hash)
+
+    market_listing_url = 'https://steamcommunity.com/market/listings/' + str(app_id) + '/' + fixed_listing_hash + '/'
 
     if render_as_json:
         market_listing_url += 'render/'
@@ -211,10 +214,7 @@ def main():
         '505730-Holy Potatoes! We’re in Space%3F! Booster Pack',
     ]
 
-    # Fix listing hashes so that there is no special character '#' or '?', which would mess with URL query later on
-    fixed_listing_hashes = [fix_app_name_for_url_query(listing_hash) for listing_hash in listing_hashes]
-
-    listing_details = update_all_listing_details(fixed_listing_hashes)
+    listing_details = update_all_listing_details(listing_hashes)
 
     return True
 
