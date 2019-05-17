@@ -203,7 +203,7 @@ def main():
         '290970-1849 Booster Pack',
         '753-Sack of Gems',
         '511540-MoonQuest Booster Pack',
-        # The item name ID will not be retrieved for the following two listhing hashes due to special characters:
+        # The item name ID will not be retrieved for the following two listing hashes due to special characters:
         '614910-#monstercakes Booster Pack',
         '505730-Holy Potatoes! We’re in Space?! Booster Pack',
         # This fixes the aforementioned issue:
