@@ -108,6 +108,7 @@
 <option value="218060" class="available">BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien - 750 , Gems</option>
 <option value="63710" class="available">BIT.TRIP RUNNER - 1000 , Gems</option>
 <option value="362890" class="available">Black Mesa - 750 , Gems</option>
+<option value="550650" class="available">Black Squad - 429 , Gems</option>
 <option value="209870" class="available">Blacklight: Retribution - 1000 , Gems</option>
 <option value="264480" class="available">BlackSoul Extended Edition - 1000 , Gems</option>
 <option value="80350" class="available">Blackwell Convergence - 1000 , Gems</option>
@@ -354,7 +355,6 @@
 <option value="301190" class="available">Frederic: Resurrection of Music - 1000 , Gems</option>
 <option value="487220" class="available">Freebie - 857 , Gems</option>
 <option value="262770" class="available">Freedom Fall - 750 , Gems</option>
-<option value="773951" class="available">Freeman: Guerrilla Warfare - 750 , Gems</option>
 <option value="795100" class="available">Friday the 13th: Killer Puzzle - 857 , Gems</option>
 <option value="490950" class="available">Frost - 750 , Gems</option>
 <option value="257890" class="available">Frozen Hearth - 750 , Gems</option>
@@ -1085,6 +1085,7 @@
 <option value="443810" class="available">This Is the Police - 1200 , Gems</option>
 <option value="282070" class="available">This War of Mine - 1000 , Gems</option>
 <option value="510620" class="available">THOTH - 857 , Gems</option>
+<option value="595280" class="available">Throne of Lies - 600 , Gems</option>
 <option value="418440" class="available">Tick Tock Isle - 600 , Gems</option>
 <option value="108200" class="available">Ticket to Ride - 1200 , Gems</option>
 <option value="398710" class="available">Timberman - 1200 , Gems</option>
