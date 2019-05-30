@@ -57,7 +57,12 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
 
         app_id = int(app_id)
         app_name = fix_unicode_characters_in_app_name_from_javascript_code(app_name.strip('"'))
-        gem_value = int(gem_value.strip('"'))
+        try:
+            gem_value = int(gem_value.strip('"'))
+        except ValueError:
+            # For the last game entry on the line, there is a remaining '}' character
+            gem_value = gem_value.split('}')[0]
+            gem_value = int(gem_value.strip('"'))
 
         badge_creation_details[app_id] = dict()
         badge_creation_details[app_id]['name'] = app_name
