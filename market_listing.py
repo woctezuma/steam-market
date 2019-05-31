@@ -199,6 +199,7 @@ def load_all_listing_details():
 def fix_app_name_for_url_query(app_name):
     app_name = app_name.replace('#', '%23')
     app_name = app_name.replace('?', '%3F')
+    app_name = app_name.replace('%', '%25')
 
     return app_name
 
