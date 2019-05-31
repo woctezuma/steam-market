@@ -20,7 +20,7 @@ class TestMarketListingMethods(unittest.TestCase):
             "15700-Oddworld: Abe's Oddysee Booster Pack",
         ]
 
-        all_listing_details = market_listing.get_listing_details_batch(listing_hashes)
+        all_listing_details = market_listing.get_listing_details_batch(listing_hashes, save_to_disk=False)
 
         self.assertEqual(len(all_listing_details), len(listing_hashes))
 

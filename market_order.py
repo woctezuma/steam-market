@@ -124,7 +124,7 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
     return bid_price, ask_price, bid_volume, ask_volume
 
 
-def download_market_order_data_batch(badge_data, market_order_dict=None, verbose=False):
+def download_market_order_data_batch(badge_data, market_order_dict=None, verbose=False, save_to_disk=True):
     # Pre-retrieval of item name ids
 
     listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
@@ -155,6 +155,10 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
         market_order_dict[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
 
         if query_count >= rate_limits['max_num_queries']:
+            if save_to_disk:
+                with open(get_market_order_file_name(), 'w') as f:
+                    json.dump(market_order_dict, f)
+
             cooldown_duration = rate_limits['cooldown']
             print('Number of queries {} reached. Cooldown: {} seconds'.format(query_count, cooldown_duration))
             time.sleep(cooldown_duration)
@@ -162,8 +166,9 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
 
         query_count += 1
 
-    with open(get_market_order_file_name(), 'w') as f:
-        json.dump(market_order_dict, f)
+    if save_to_disk:
+        with open(get_market_order_file_name(), 'w') as f:
+            json.dump(market_order_dict, f)
 
     return market_order_dict
 
@@ -174,6 +179,7 @@ def load_market_order_data(badge_data=None,
 
     if retrieve_market_orders_online:
         market_order_dict = download_market_order_data_batch(badge_data,
+                                                             save_to_disk=True,
                                                              market_order_dict=market_order_dict)
 
     return market_order_dict
@@ -204,7 +210,9 @@ def main():
     badge_data[app_id] = dict()
     badge_data[app_id]['listing_hash'] = listing_hash
 
-    market_order_dict = download_market_order_data_batch(badge_data, verbose=True)
+    market_order_dict = download_market_order_data_batch(badge_data,
+                                                         save_to_disk=False,
+                                                         verbose=True)
 
     # Test listing hashes with special characters
 
