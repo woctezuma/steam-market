@@ -1,3 +1,5 @@
+# Objective: detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders
+
 from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
