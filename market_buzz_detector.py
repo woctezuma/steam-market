@@ -91,6 +91,8 @@ def main(process_all=False):
 
     all_listings = load_all_listings()
 
+    # *Heuristic* filtering of listing hashes
+
     filtered_listing_hashes = filter_listings(all_listings,
                                               min_sell_price=15,
                                               min_num_listings=0)
