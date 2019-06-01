@@ -76,7 +76,7 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
         if i >= num_packs:
             break
 
-        print(listing_hash)
+        print('{} ({})'.format(listing_hash, get_steamcardexchange_url(convert_listing_hash_to_app_id(listing_hash))))
         print(all_listings[listing_hash])
         print(market_order_dict[listing_hash])
 
