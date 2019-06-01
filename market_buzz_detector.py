@@ -120,12 +120,15 @@ def main(process_all=False):
                                    all_listings,
                                    market_order_dict)
 
-        # NB: a booster pack costs an amount of gems equal to: 6000 / num_cards
-        #
-        # TODO manually check the number of cards, store page, market page at:
-        #  https://www.steamcardexchange.net/index.php?gamepage-appid-427240
-
     return
+
+
+def get_steamcardexchange_url(app_id):
+    # This page shows the number of cards, and provides links to the store page and the market pages.
+    # NB: this allows to compute the crafting cost of a booster pack costs, as an amount of gems equal to 6000/num_cards
+    steamcardexchange_url = 'https://www.steamcardexchange.net/index.php?gamepage-appid-' + str(app_id)
+
+    return steamcardexchange_url
 
 
 if __name__ == '__main__':
