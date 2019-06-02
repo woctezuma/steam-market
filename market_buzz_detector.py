@@ -7,8 +7,8 @@ from utils import convert_listing_hash_to_app_id
 
 
 def filter_listings(all_listings=None,
-                    min_sell_price=15,  # in cents
-                    min_num_listings=0,  # to remove listings with very few sellers, who chose unrealistic sell prices
+                    min_sell_price=30,  # in cents
+                    min_num_listings=20,  # to remove listings with very few sellers, who chose unrealistic sell prices
                     verbose=True):
     if all_listings is None:
         all_listings = load_all_listings()
@@ -94,8 +94,8 @@ def main(process_all=False):
     # *Heuristic* filtering of listing hashes
 
     filtered_listing_hashes = filter_listings(all_listings,
-                                              min_sell_price=15,
-                                              min_num_listings=0)
+                                              min_sell_price=30,
+                                              min_num_listings=20)
 
     # Pre-retrieval of item name ids
 
@@ -134,4 +134,4 @@ def get_steamcardexchange_url(app_id):
 
 
 if __name__ == '__main__':
-    main()
+    main(process_all=True)
