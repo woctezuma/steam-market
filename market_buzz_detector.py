@@ -49,16 +49,28 @@ def convert_to_badges(filtered_listing_hashes,
 
 
 def filter_out_unmarketable_packs(market_order_dict):
-    marketable_market_order_dict = filter(lambda x: market_order_dict[x]['is_marketable'],
-                                          market_order_dict)
+    marketable_market_order_dict = dict()
+    unknown_market_order_dict = dict()
 
-    return marketable_market_order_dict
+    for listing_hash in market_order_dict:
+        try:
+            is_marketable = market_order_dict[listing_hash]['is_marketable']
+        except KeyError:
+            print('Marketable status not found for {}'.format(listing_hash))
+            unknown_market_order_dict[listing_hash] = market_order_dict[listing_hash]
+            
+            is_marketable = False  # avoid taking any risk: ASSUME the booster pack is NOT marketable
+
+        if is_marketable:
+            marketable_market_order_dict[listing_hash] = market_order_dict[listing_hash]
+
+    return marketable_market_order_dict, unknown_market_order_dict
 
 
 def sort_according_to_buzz(market_order_dict,
                            marketable_market_order_dict=None):
     if marketable_market_order_dict is None:
-        marketable_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+        marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
     hashes_for_best_bid = sorted(list(marketable_market_order_dict),
                                  reverse=True,
@@ -113,7 +125,7 @@ def main(retrieve_listings_from_scratch=False,
 
     # Only keep marketable booster packs
 
-    marketable_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+    marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
     # Sort by bid value
     hashes_for_best_bid = sort_according_to_buzz(market_order_dict,
