@@ -83,10 +83,11 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
     return
 
 
-def main(process_all=False):
+def main(retrieve_listings_from_scratch=False,
+         retrieve_market_orders_online=False):
     # Load list of all listing hashes
 
-    if process_all:
+    if retrieve_listings_from_scratch:
         update_all_listings()
 
     all_listings = load_all_listings()
@@ -101,26 +102,26 @@ def main(process_all=False):
 
     item_nameids = get_item_nameid_batch(filtered_listing_hashes)
 
-    if process_all:
-        # Download market orders
+    # Download market orders
 
-        badge_data = convert_to_badges(filtered_listing_hashes)
+    badge_data = convert_to_badges(filtered_listing_hashes)
 
-        market_order_dict = load_market_order_data(badge_data)
+    market_order_dict = load_market_order_data(badge_data,
+                                               retrieve_market_orders_online=retrieve_market_orders_online)
 
-        # Only keep marketable booster packs
+    # Only keep marketable booster packs
 
-        marketable_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+    marketable_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
-        # Sort by bid value
-        hashes_for_best_bid = sort_according_to_buzz(market_order_dict,
-                                                     marketable_market_order_dict)
+    # Sort by bid value
+    hashes_for_best_bid = sort_according_to_buzz(market_order_dict,
+                                                 marketable_market_order_dict)
 
-        # Display the highest ranked booster packs
+    # Display the highest ranked booster packs
 
-        print_packs_with_high_buzz(hashes_for_best_bid,
-                                   all_listings,
-                                   market_order_dict)
+    print_packs_with_high_buzz(hashes_for_best_bid,
+                               all_listings,
+                               market_order_dict)
 
     return
 
@@ -134,4 +135,5 @@ def get_steamcardexchange_url(app_id):
 
 
 if __name__ == '__main__':
-    main(process_all=True)
+    main(retrieve_listings_from_scratch=True,
+         retrieve_market_orders_online=True)
