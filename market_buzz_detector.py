@@ -58,7 +58,7 @@ def filter_out_unmarketable_packs(market_order_dict):
         except KeyError:
             print('Marketable status not found for {}'.format(listing_hash))
             unknown_market_order_dict[listing_hash] = market_order_dict[listing_hash]
-            
+
             is_marketable = False  # avoid taking any risk: ASSUME the booster pack is NOT marketable
 
         if is_marketable:
@@ -80,17 +80,19 @@ def sort_according_to_buzz(market_order_dict,
 
 
 def print_packs_with_high_buzz(hashes_for_best_bid,
-                               all_listings,
                                market_order_dict,
-                               num_packs=10):
+                               num_packs_to_display=10):
     for i, listing_hash in enumerate(hashes_for_best_bid):
 
-        if i >= num_packs:
+        if i >= num_packs_to_display:
             break
 
-        print('{} ({})'.format(listing_hash, get_steamcardexchange_url(convert_listing_hash_to_app_id(listing_hash))))
-        print(all_listings[listing_hash])
-        print(market_order_dict[listing_hash])
+        print('{:3}) [{}]({}) ; bid: {}€ (volume: {})'.format(i + 1,
+                                                              listing_hash,
+                                                              get_steamcardexchange_url(
+                                                                  convert_listing_hash_to_app_id(listing_hash)),
+                                                              market_order_dict[listing_hash]['bid'],
+                                                              market_order_dict[listing_hash]['bid_volume']))
 
     return
 
@@ -98,7 +100,8 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
 def main(retrieve_listings_from_scratch=False,
          retrieve_market_orders_online=False,
          min_sell_price=30,
-         min_num_listings=20):
+         min_num_listings=20,
+         num_packs_to_display=10):
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:
@@ -134,8 +137,8 @@ def main(retrieve_listings_from_scratch=False,
     # Display the highest ranked booster packs
 
     print_packs_with_high_buzz(hashes_for_best_bid,
-                               all_listings,
-                               market_order_dict)
+                               market_order_dict,
+                               num_packs_to_display=num_packs_to_display)
 
     return
 
@@ -152,4 +155,5 @@ if __name__ == '__main__':
     main(retrieve_listings_from_scratch=True,
          retrieve_market_orders_online=True,
          min_sell_price=30,
-         min_num_listings=20)
+         min_num_listings=1,
+         num_packs_to_display=100)
