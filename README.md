@@ -123,6 +123,12 @@ python market_order.py
 python market_arbitrage.py
 ```
 
+-   To look for games which i) are likely to have high bid orders for their booster packs, ii) and which I may not own yet, run:
+
+```bash
+python market_buzz_detector.py
+```
+
 ## References
 
 -   [An example](https://www.resetera.com/threads/pc-gaming-era-april-2019-goodbye-uzzy-is-your-new-king.108742/page-123#post-20167882) of market arbitrage.
