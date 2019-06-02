@@ -84,7 +84,9 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
 
 
 def main(retrieve_listings_from_scratch=False,
-         retrieve_market_orders_online=False):
+         retrieve_market_orders_online=False,
+         min_sell_price=30,
+         min_num_listings=20):
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:
@@ -95,8 +97,8 @@ def main(retrieve_listings_from_scratch=False,
     # *Heuristic* filtering of listing hashes
 
     filtered_listing_hashes = filter_listings(all_listings,
-                                              min_sell_price=30,
-                                              min_num_listings=20)
+                                              min_sell_price=min_sell_price,
+                                              min_num_listings=min_num_listings)
 
     # Pre-retrieval of item name ids
 
@@ -136,4 +138,6 @@ def get_steamcardexchange_url(app_id):
 
 if __name__ == '__main__':
     main(retrieve_listings_from_scratch=True,
-         retrieve_market_orders_online=True)
+         retrieve_market_orders_online=True,
+         min_sell_price=30,
+         min_num_listings=20)
