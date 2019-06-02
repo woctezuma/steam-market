@@ -129,6 +129,10 @@ python market_arbitrage.py
 python market_buzz_detector.py
 ```
 
+## Results
+
+The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
+
 ## References
 
 -   [An example](https://www.resetera.com/threads/pc-gaming-era-april-2019-goodbye-uzzy-is-your-new-king.108742/page-123#post-20167882) of market arbitrage.
