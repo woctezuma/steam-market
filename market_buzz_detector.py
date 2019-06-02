@@ -82,17 +82,24 @@ def sort_according_to_buzz(market_order_dict,
 def print_packs_with_high_buzz(hashes_for_best_bid,
                                market_order_dict,
                                num_packs_to_display=10):
+    print('# Packs with high buy orders\n')
+
     for i, listing_hash in enumerate(hashes_for_best_bid):
 
         if i >= num_packs_to_display:
             break
 
-        print('{:3}) [{}]({}) ; bid: {}€ (volume: {})'.format(i + 1,
-                                                              listing_hash,
-                                                              get_steamcardexchange_url(
-                                                                  convert_listing_hash_to_app_id(listing_hash)),
-                                                              market_order_dict[listing_hash]['bid'],
-                                                              market_order_dict[listing_hash]['bid_volume']))
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+
+        bid = market_order_dict[listing_hash]['bid']
+        bid_volume = market_order_dict[listing_hash]['bid_volume']
+
+        print('{:3}) [{}]({}) ; bid: {}€ (volume: {}) ; [store]({})'.format(i + 1,
+                                                                            listing_hash,
+                                                                            get_steamcardexchange_url(app_id),
+                                                                            bid,
+                                                                            bid_volume,
+                                                                            get_steam_store_url(app_id)))
 
     return
 
@@ -149,6 +156,12 @@ def get_steamcardexchange_url(app_id):
     steamcardexchange_url = 'https://www.steamcardexchange.net/index.php?gamepage-appid-' + str(app_id)
 
     return steamcardexchange_url
+
+
+def get_steam_store_url(app_id):
+    steam_store_url = 'https://store.steampowered.com/app/' + str(app_id) + '/'
+
+    return steam_store_url
 
 
 if __name__ == '__main__':
