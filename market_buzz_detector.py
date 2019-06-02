@@ -94,12 +94,12 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
         bid = market_order_dict[listing_hash]['bid']
         bid_volume = market_order_dict[listing_hash]['bid_volume']
 
-        print('{:3}) [{}]({}) ; bid: {}€ (volume: {}) ; [store]({})'.format(i + 1,
+        print('{:3}) [[store]({})] [{}]({}) ; bid: {}€ (volume: {})'.format(i + 1,
+                                                                            get_steam_store_url(app_id),
                                                                             listing_hash,
                                                                             get_steamcardexchange_url(app_id),
                                                                             bid,
-                                                                            bid_volume,
-                                                                            get_steam_store_url(app_id)))
+                                                                            bid_volume))
 
     return
 
