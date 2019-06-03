@@ -115,7 +115,7 @@ def print_arbitrages(badge_arbitrages):
             continue
 
         print(
-            'Profit: {:.2f}€\t{}\tcraft pack for {} gems ({:.2f}€)\tsell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+            'Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
                 arbitrage['profit'],
                 listing_hash,
                 arbitrage['gem_amount'],
