@@ -3,7 +3,7 @@
 from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
-from utils import convert_listing_hash_to_app_id
+from utils import convert_listing_hash_to_app_id, get_steamcardexchange_url, get_steam_store_url
 
 
 def filter_listings(all_listings=None,
@@ -148,20 +148,6 @@ def main(retrieve_listings_from_scratch=False,
                                num_packs_to_display=num_packs_to_display)
 
     return
-
-
-def get_steamcardexchange_url(app_id):
-    # This page shows the number of cards, and provides links to the store page and the market pages.
-    # NB: this allows to compute the crafting cost of a booster pack costs, as an amount of gems equal to 6000/num_cards
-    steamcardexchange_url = 'https://www.steamcardexchange.net/index.php?gamepage-appid-' + str(app_id)
-
-    return steamcardexchange_url
-
-
-def get_steam_store_url(app_id):
-    steam_store_url = 'https://store.steampowered.com/app/' + str(app_id) + '/'
-
-    return steam_store_url
 
 
 if __name__ == '__main__':
