@@ -21,8 +21,8 @@ def filter_listings(all_listings=None,
 
     # *Heuristic* filtering of listing hashes
 
-    filtered_listing_hashes = list(filter(lambda x: all_listings[x]['sell_price'] > min_sell_price and
-                                                    all_listings[x]['sell_listings'] > min_num_listings,
+    filtered_listing_hashes = list(filter(lambda x: all_listings[x]['sell_price'] >= min_sell_price and
+                                                    all_listings[x]['sell_listings'] >= min_num_listings,
                                           sorted_listing_hashes))
 
     if verbose:
