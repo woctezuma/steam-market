@@ -373,7 +373,7 @@
 <option value="4000" class="available">Garry's Mod - 667 , Gems</option>
 <option value="214420" class="available">Gear Up - 1200 , Gems</option>
 <option value="80310" class="available">Gemini Rue - 1000 , Gems</option>
-<option value="308600" class="available">Geneshift - 600 , Gems</option>
+<option value="308600" class="available">Geneshift Royale - 600 , Gems</option>
 <option value="463270" class="available">Ghost 1.0 - 1000 , Gems</option>
 <option value="353070" class="available">Ghost Encounters: Deadwood - Collector's Edition - 750 , Gems</option>
 <option value="280890" class="available">GhostshipAftermath - 400 , Gems</option>
@@ -740,6 +740,7 @@
 <option value="312640" class="available">Power-Up - 400 , Gems</option>
 <option value="465520" class="available">PRICE - 1200 , Gems</option>
 <option value="215470" class="available">Primal Carnage - 1000 , Gems</option>
+<option value="235340" class="available">Prime World - 750 , Gems</option>
 <option value="227000" class="available">Primordia - 1000 , Gems</option>
 <option value="490220" class="available">Prismata - 600 , Gems</option>
 <option value="233450" class="available">Prison Architect - 750 , Gems</option>
