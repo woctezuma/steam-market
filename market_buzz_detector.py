@@ -107,7 +107,7 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
 def main(retrieve_listings_from_scratch=False,
          retrieve_market_orders_online=False,
          min_sell_price=30,
-         min_num_listings=20,
+         min_num_listings=3,
          num_packs_to_display=10):
     # Load list of all listing hashes
 
@@ -155,5 +155,5 @@ if __name__ == '__main__':
     main(retrieve_listings_from_scratch=True,
          retrieve_market_orders_online=True,
          min_sell_price=30,
-         min_num_listings=1,
+         min_num_listings=3,
          num_packs_to_display=100)
