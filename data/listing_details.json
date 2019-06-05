@@ -35394,5 +35394,29 @@
   "804010-SteamWorld Quest: Hand of Gilgamech Booster Pack": {
     "item_nameid": 176055457,
     "is_marketable": true
+  },
+  "1037590-Neptunia Shooter Booster Pack": {
+    "item_nameid": 176055757,
+    "is_marketable": true
+  },
+  "1051200-Trover Saves the Universe Booster Pack": {
+    "item_nameid": 176055889,
+    "is_marketable": true
+  },
+  "464630-Secret Of The Royal Throne Booster Pack": {
+    "item_nameid": 176055708,
+    "is_marketable": true
+  },
+  "478210-BUDDY Booster Pack": {
+    "item_nameid": 176055692,
+    "is_marketable": true
+  },
+  "496490-Virtual Battlemap Booster Pack": {
+    "item_nameid": 176055745,
+    "is_marketable": true
+  },
+  "866190-Irony Curtain: From Matryoshka with Love Booster Pack": {
+    "item_nameid": 176055984,
+    "is_marketable": true
   }
 }
