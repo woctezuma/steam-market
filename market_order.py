@@ -174,6 +174,7 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
 
 
 def load_market_order_data(badge_data=None,
+                           trim_output=False,
                            retrieve_market_orders_online=True):
     market_order_dict = load_market_order_data_from_disk()
 
@@ -182,7 +183,31 @@ def load_market_order_data(badge_data=None,
                                                              save_to_disk=True,
                                                              market_order_dict=market_order_dict)
 
-    return market_order_dict
+    if trim_output:
+
+        trimmed_market_order_dict = dict()
+
+        for app_id in badge_data.keys():
+            listing_hash = badge_data[app_id]['listing_hash']
+
+            try:
+                market_data = market_order_dict[listing_hash]
+            except KeyError:
+                if retrieve_market_orders_online:
+                    raise AssertionError()
+                else:
+                    print('[{}] Market order data is not available offline. Allow downloading it!'.format(listing_hash))
+                    continue
+
+            trimmed_market_order_dict[listing_hash] = dict()
+            trimmed_market_order_dict[listing_hash] = market_data
+
+        print()
+
+    else:
+        trimmed_market_order_dict = market_order_dict
+
+    return trimmed_market_order_dict
 
 
 def load_market_order_data_from_disk():

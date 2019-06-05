@@ -131,6 +131,7 @@ def main(retrieve_listings_from_scratch=False,
     badge_data = convert_to_badges(filtered_listing_hashes)
 
     market_order_dict = load_market_order_data(badge_data,
+                                               trim_output=True,
                                                retrieve_market_orders_online=retrieve_market_orders_online)
 
     # Only keep marketable booster packs
