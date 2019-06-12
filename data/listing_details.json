@@ -35418,5 +35418,17 @@
   "866190-Irony Curtain: From Matryoshka with Love Booster Pack": {
     "item_nameid": 176055984,
     "is_marketable": true
+  },
+  "1065970-Spice&Wolf VR Booster Pack": {
+    "item_nameid": 176056336,
+    "is_marketable": true
+  },
+  "921570-OCTOPATH TRAVELER Booster Pack": {
+    "item_nameid": 176056342,
+    "is_marketable": true
+  },
+  "1009450-Sankaku Renai: Love Triangle Trouble Booster Pack": {
+    "item_nameid": 176055978,
+    "is_marketable": true
   }
 }
