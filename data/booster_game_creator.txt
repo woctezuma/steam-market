@@ -870,6 +870,7 @@
 <option value="326180" class="available">Sinister City - 1200 , Gems</option>
 <option value="204880" class="available">Sins of a Solar Empire: Rebellion - 400 , Gems</option>
 <option value="455590" class="available">Skedaddle - 1000 , Gems</option>
+<option value="685400" class="available">Skelly Selest - 500 , Gems</option>
 <option value="245170" class="available">Skullgirls - 462 , Gems</option>
 <option value="228960" class="available">Skulls of the Shogun - 857 , Gems</option>
 <option value="278460" class="available">Skyborn - 1200 , Gems</option>
