@@ -129,6 +129,12 @@ python market_arbitrage.py
 python market_buzz_detector.py
 ```
 
+-   To look for **free** games which i) feature trading cards (and thus crafting of booster packs), ii) and which I do not own yet, run:
+
+```bash
+python free_games_with_trading_cards.py
+```
+
 ## Results
 
 The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
