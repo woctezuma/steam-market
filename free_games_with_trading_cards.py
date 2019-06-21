@@ -39,8 +39,8 @@ def download_owned_apps(verbose=True):
     return owned_apps
 
 
-def download_free_apps(method=None, verbose=True):
-    if method is None:
+def download_free_apps(method='price', verbose=True):
+    if method == 'price':
         data = steamspypi.load()
 
         free_apps = [int(game['appid']) for game in data.values()
@@ -62,7 +62,7 @@ def download_free_apps(method=None, verbose=True):
         free_apps = [int(app_id) for app_id in data.keys()]
 
     if verbose:
-        print('Free apps: {}'.format(len(free_apps)))
+        print('Free apps (based on {}): {}'.format(method, len(free_apps)))
 
     return free_apps
 
@@ -78,8 +78,19 @@ def load_apps_with_trading_cards(verbose=True):
     return apps_with_trading_cards
 
 
-def load_free_apps_with_trading_cards(method=None, verbose=True):
-    free_apps = download_free_apps(method=method)
+def load_free_apps_with_trading_cards(list_of_methods=None, verbose=True):
+    if list_of_methods is None:
+        list_of_methods = ['price', 'genre', 'tag']
+
+    free_apps = set()
+
+    for method in list_of_methods:
+        new_free_apps = download_free_apps(method=method)
+
+        free_apps.update(new_free_apps)
+
+    if verbose:
+        print('Free apps: {}'.format(len(free_apps)))
 
     apps_with_trading_cards = load_apps_with_trading_cards()
 
@@ -114,8 +125,7 @@ def write_to_file(data, file_name, verbose=True):
 
 
 def main():
-    method = None  # Choose a value among these three options: None, 'genre', 'tag'
-    free_apps_with_trading_cards = load_free_apps_with_trading_cards(method=method)
+    free_apps_with_trading_cards = load_free_apps_with_trading_cards(list_of_methods=None)
 
     owned_apps = download_owned_apps()
 
