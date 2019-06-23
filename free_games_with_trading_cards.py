@@ -78,11 +78,12 @@ def load_apps_with_trading_cards(verbose=True):
     return apps_with_trading_cards
 
 
-def load_free_apps_with_trading_cards(list_of_methods=None, verbose=True):
+def load_free_apps_with_trading_cards(free_apps=None, list_of_methods=None, verbose=True):
     if list_of_methods is None:
         list_of_methods = ['price', 'genre', 'tag']
 
-    free_apps = set()
+    if free_apps is None:
+        free_apps = set()
 
     for method in list_of_methods:
         new_free_apps = download_free_apps(method=method)
@@ -125,7 +126,12 @@ def write_to_file(data, file_name, verbose=True):
 
 
 def main():
-    free_apps_with_trading_cards = load_free_apps_with_trading_cards(list_of_methods=None)
+    # Based on SteamDB:
+    free_apps = load_file('free_apps.txt')
+
+    # Based on SteamSpy:
+    free_apps_with_trading_cards = load_free_apps_with_trading_cards(free_apps=set(free_apps),
+                                                                     list_of_methods=None)
 
     owned_apps = download_owned_apps()
 
