@@ -2,9 +2,9 @@
   "753-Sack of Gems": {
     "item_nameid": 26463978,
     "is_marketable": true,
-    "bid": 0.2,
-    "ask": 0.21,
-    "bid_volume": 13,
-    "ask_volume": 8210
+    "bid": 0.21,
+    "ask": 0.23,
+    "bid_volume": 6064,
+    "ask_volume": 3323
   }
 }
