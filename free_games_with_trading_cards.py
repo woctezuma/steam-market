@@ -127,7 +127,7 @@ def write_to_file(data, file_name, verbose=True):
 
 def main():
     # Based on SteamDB: https://steamdb.info/search/?a=app_keynames&keyname=243&operator=1
-    free_apps = load_file('free_apps.txt')
+    free_apps = load_file('data/free_apps.txt')
 
     # Based on SteamSpy:
     free_apps_with_trading_cards = load_free_apps_with_trading_cards(free_apps=set(free_apps),
