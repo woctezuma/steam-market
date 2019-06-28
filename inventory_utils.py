@@ -168,6 +168,21 @@ def get_market_sell_parameters(asset_id, price_in_cents, session_id):
     return market_sell_parameters
 
 
+def get_request_headers():
+    # Reference: https://dev.doctormckay.com/topic/287-automatic-market-seller/
+
+    request_headers = {
+        'Origin': 'https://steamcommunity.com',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Referer': 'https://steamcommunity.com/my/inventory/',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3'
+    }
+
+    return request_headers
+
+
 def sell_booster_pack(asset_id, price_in_cents, verbose=True):
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
@@ -183,6 +198,7 @@ def sell_booster_pack(asset_id, price_in_cents, verbose=True):
                                           session_id=session_id)
 
     resp_data = requests.post(url,
+                              headers=get_request_headers(),
                               data=req_data,
                               cookies=cookie)
 
