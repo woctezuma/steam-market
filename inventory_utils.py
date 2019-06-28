@@ -93,6 +93,7 @@ def create_booster_pack(app_id):
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
         result = resp_data.json()
     else:
+        # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         print('Creation of a booster pack failed with status code {} (appID = {})'.format(status_code,
                                                                                           app_id))
         result = None
@@ -144,12 +145,54 @@ def sell_booster_pack(asset_id, price_in_cents):
         # {"success":true,"requires_confirmation":0}
         result = resp_data.json()
     else:
+        # NB: 400 means "Bad Request".
         print('Booster pack {} could not be sold for {} cents. Status code {} was returned.'.format(asset_id,
                                                                                                     price_in_cents,
                                                                                                     status_code))
         result = None
 
     return result
+
+
+def retrieve_asset_id(listing_hash,
+                      steam_inventory=None,
+                      verbose=False):
+    if steam_inventory is None:
+        steam_inventory = load_steam_inventory()
+
+    descriptions = steam_inventory['rgDescriptions']
+
+    matched_element = dict()
+
+    for element in descriptions:
+        if descriptions[element]['market_hash_name'] == listing_hash:
+            matched_element['market_hash_name'] = descriptions[element]['market_hash_name']
+            matched_element['appid'] = descriptions[element]['appid']
+            matched_element['classid'] = descriptions[element]['classid']
+            matched_element['instanceid'] = descriptions[element]['instanceid']
+            matched_element['type'] = descriptions[element]['type']
+            matched_element['marketable'] = descriptions[element]['marketable']
+            break
+
+    community_inventory = steam_inventory['rgInventory']
+
+    for element in community_inventory:
+        if community_inventory[element]['classid'] == matched_element['classid'] \
+                and community_inventory[element]['instanceid'] == matched_element['instanceid']:
+            matched_element['id'] = community_inventory[element]['id']
+            matched_element['amount'] = community_inventory[element]['amount']
+            matched_element['pos'] = community_inventory[element]['pos']
+            break
+
+    if verbose:
+        print(matched_element)
+
+    try:
+        asset_id = matched_element['id']
+    except KeyError:
+        asset_id = None
+
+    return asset_id
 
 
 def main():
@@ -160,7 +203,19 @@ def main():
 
     steam_inventory = load_steam_inventory()
 
-    print(steam_inventory)
+    listing_hash = '211820-Starbound Booster Pack'
+
+    asset_id = retrieve_asset_id(listing_hash=listing_hash,
+                                 steam_inventory=steam_inventory,
+                                 verbose=True)
+
+    price_in_cents = 1000  # A high value (10 euros) for testing, just to be safe.
+
+    if asset_id is not None:
+        result = sell_booster_pack(asset_id=asset_id,
+                                   price_in_cents=price_in_cents)
+
+        print(result)
 
     return
 
