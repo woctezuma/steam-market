@@ -181,15 +181,22 @@ def retrieve_asset_id(listing_hash,
             matched_element['marketable'] = descriptions[element]['marketable']
             break
 
-    community_inventory = steam_inventory['rgInventory']
+    has_been_matched = bool(len(matched_element) > 0)
 
-    for element in community_inventory:
-        if community_inventory[element]['classid'] == matched_element['classid'] \
-                and community_inventory[element]['instanceid'] == matched_element['instanceid']:
-            matched_element['id'] = community_inventory[element]['id']
-            matched_element['amount'] = community_inventory[element]['amount']
-            matched_element['pos'] = community_inventory[element]['pos']
-            break
+    if has_been_matched:
+
+        community_inventory = steam_inventory['rgInventory']
+
+        for element in community_inventory:
+            if community_inventory[element]['classid'] == matched_element['classid'] \
+                    and community_inventory[element]['instanceid'] == matched_element['instanceid']:
+                matched_element['id'] = community_inventory[element]['id']
+                matched_element['amount'] = community_inventory[element]['amount']
+                matched_element['pos'] = community_inventory[element]['pos']
+                break
+
+    else:
+        print('There is no match in the inventory for {}.'.format(listing_hash))
 
     if verbose:
         print(matched_element)
