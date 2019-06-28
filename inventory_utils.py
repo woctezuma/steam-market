@@ -207,7 +207,7 @@ def sell_booster_pack(asset_id, price_in_cents, verbose=True):
 
 def retrieve_asset_id(listing_hash,
                       steam_inventory=None,
-                      verbose=False):
+                      verbose=True):
     if steam_inventory is None:
         steam_inventory = load_steam_inventory()
 
