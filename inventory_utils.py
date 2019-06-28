@@ -195,11 +195,11 @@ def retrieve_asset_id(listing_hash,
                 matched_element['pos'] = community_inventory[element]['pos']
                 break
 
+        if verbose:
+            print(matched_element)
+
     else:
         print('There is no match in the inventory for {}.'.format(listing_hash))
-
-    if verbose:
-        print(matched_element)
 
     try:
         asset_id = matched_element['id']
