@@ -3,6 +3,45 @@ import requests
 from personal_info import get_cookie_dict
 
 
+def get_my_steam_profile_id():
+    my_profile_id = '76561198028705366'
+
+    return my_profile_id
+
+
+def get_steam_inventory_url(profile_id=None, app_id=753, context_id=6):
+    if profile_id is None:
+        profile_id = get_my_steam_profile_id()
+
+    # References:
+    # https://github.com/Alex7Kom/node-steam-tradeoffers/issues/114
+    # https://dev.doctormckay.com/topic/332-identifying-steam-items/
+    steam_inventory_url = 'https://steamcommunity.com/profiles/' + str(profile_id) + '/inventory/json/'
+    steam_inventory_url += str(app_id) + '/' + str(context_id) + '/'
+
+    return steam_inventory_url
+
+
+def load_steam_inventory(profile_id=None):
+    if profile_id is None:
+        profile_id = get_my_steam_profile_id()
+
+    url = get_steam_inventory_url(profile_id=profile_id)
+
+    resp_data = requests.get(url)
+
+    status_code = resp_data.status_code
+
+    if status_code == 200:
+        steam_inventory = resp_data.json()
+    else:
+        print('Inventory for profile {} could not be loaded. Status code {} was returned.'.format(profile_id,
+                                                                                                  status_code))
+        steam_inventory = None
+
+    return steam_inventory
+
+
 def get_session_id(cookie=None):
     if cookie is None:
         cookie = get_cookie_dict()
@@ -115,9 +154,13 @@ def sell_booster_pack(asset_id, price_in_cents):
 
 def main():
     app_id = 685400  # Skelly Selest: https://www.steamcardexchange.net/index.php?gamepage-appid-685400
-    result = create_booster_pack(app_id=app_id)
+    # result = create_booster_pack(app_id=app_id)
+    #
+    # print(result)
 
-    print(result)
+    steam_inventory = load_steam_inventory()
+
+    print(steam_inventory)
 
     return
 
