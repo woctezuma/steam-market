@@ -26,9 +26,16 @@ def load_steam_inventory(profile_id=None):
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
+    cookie = get_cookie_dict()
+    has_secured_cookie = bool(len(cookie) > 0)
+
     url = get_steam_inventory_url(profile_id=profile_id)
 
-    resp_data = requests.get(url)
+    if has_secured_cookie:
+        resp_data = requests.get(url,
+                                 cookies=cookie)
+    else:
+        resp_data = requests.get(url)
 
     status_code = resp_data.status_code
 
