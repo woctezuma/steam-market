@@ -113,7 +113,7 @@ def get_booster_pack_creation_parameters(app_id, session_id):
     return booster_pack_creation_parameters
 
 
-def create_booster_pack(app_id):
+def create_booster_pack(app_id, verbose=True):
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -143,6 +143,9 @@ def create_booster_pack(app_id):
                                                                                           app_id))
         result = None
 
+    if verbose:
+        print(result)
+
     return result
 
 
@@ -165,7 +168,7 @@ def get_market_sell_parameters(asset_id, price_in_cents, session_id):
     return market_sell_parameters
 
 
-def sell_booster_pack(asset_id, price_in_cents):
+def sell_booster_pack(asset_id, price_in_cents, verbose=True):
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -195,6 +198,9 @@ def sell_booster_pack(asset_id, price_in_cents):
                                                                                                     price_in_cents,
                                                                                                     status_code))
         result = None
+
+    if verbose:
+        print(result)
 
     return result
 
