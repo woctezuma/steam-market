@@ -88,9 +88,9 @@ def create_booster_pack(app_id):
     req_data = get_booster_pack_creation_parameters(app_id=app_id,
                                                     session_id=session_id)
 
-    resp_data = requests.get(url,
-                             params=req_data,
-                             cookies=cookie)
+    resp_data = requests.post(url,
+                              data=req_data,
+                              cookies=cookie)
 
     status_code = resp_data.status_code
 
@@ -141,9 +141,9 @@ def sell_booster_pack(asset_id, price_in_cents):
                                           price_in_cents=price_in_cents,
                                           session_id=session_id)
 
-    resp_data = requests.get(url,
-                             params=req_data,
-                             cookies=cookie)
+    resp_data = requests.post(url,
+                              data=req_data,
+                              cookies=cookie)
 
     status_code = resp_data.status_code
 
