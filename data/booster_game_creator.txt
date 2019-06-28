@@ -1226,6 +1226,7 @@
 <option value="526920" class="available">SQUAKE - 1200 , Gems</option>
 <option value="115110" class="available">Stacking - 667 , Gems</option>
 <option value="212070" class="available">Star Conflict - 600 , Gems</option>
+<option value="338830" class="available">Star Nomad - 1200 , Gems</option>
 <option value="610310" class="available">Star Story: The Horizon Escape - 600 , Gems</option>
 <option value="334270" class="available">Star Traders: 4X Empires - 857 , Gems</option>
 <option value="600750" class="available">Star Trek Timelines - 400 , Gems</option>
