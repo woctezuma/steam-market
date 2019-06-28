@@ -155,7 +155,9 @@ def get_steam_market_sell_url():
     return steam_market_sell_url
 
 
-def get_market_sell_parameters(asset_id, price_in_cents, session_id):
+def get_market_sell_parameters(asset_id,
+                               price_in_cents,  # this is the money which you, as the seller, will receive
+                               session_id):
     market_sell_parameters = dict()
 
     market_sell_parameters['sessionid'] = str(session_id)
@@ -183,7 +185,9 @@ def get_request_headers():
     return request_headers
 
 
-def sell_booster_pack(asset_id, price_in_cents, verbose=True):
+def sell_booster_pack(asset_id,
+                      price_in_cents,  # this is the money which you, as the seller, will receive
+                      verbose=True):
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -271,7 +275,7 @@ def retrieve_asset_id(listing_hash,
 
 def main():
     listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
-    price_in_cents = 30  # A high value to be safe during testing
+    price_in_cents = 23  # this is the money which you, as the seller, will receive
     update_steam_inventory = True
 
     app_id = convert_listing_hash_to_app_id(listing_hash)
