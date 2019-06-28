@@ -1,6 +1,9 @@
+import json
+
 import requests
 
 from personal_info import get_cookie_dict
+from utils import get_data_folder
 
 
 def get_my_steam_profile_id():
@@ -22,7 +25,38 @@ def get_steam_inventory_url(profile_id=None, app_id=753, context_id=6):
     return steam_inventory_url
 
 
-def load_steam_inventory(profile_id=None):
+def get_steam_inventory_file_name(profile_id):
+    steam_inventory_file_name = get_data_folder() + 'inventory_' + str(profile_id) + '.json'
+
+    return steam_inventory_file_name
+
+
+def load_steam_inventory_from_disk(profile_id=None):
+    if profile_id is None:
+        profile_id = get_my_steam_profile_id()
+
+    try:
+        with open(get_steam_inventory_file_name(profile_id), 'r') as f:
+            steam_inventory = json.load(f)
+    except FileNotFoundError:
+        steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
+
+    return steam_inventory
+
+
+def load_steam_inventory(profile_id=None, update_steam_inventory=False):
+    if profile_id is None:
+        profile_id = get_my_steam_profile_id()
+
+    if update_steam_inventory:
+        steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
+    else:
+        steam_inventory = load_steam_inventory_from_disk(profile_id=profile_id)
+
+    return steam_inventory
+
+
+def download_steam_inventory(profile_id=None, save_to_disk=True):
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -41,6 +75,10 @@ def load_steam_inventory(profile_id=None):
 
     if status_code == 200:
         steam_inventory = resp_data.json()
+
+        if save_to_disk:
+            with open(get_steam_inventory_file_name(profile_id), 'w') as f:
+                json.dump(steam_inventory, f)
     else:
         print('Inventory for profile {} could not be loaded. Status code {} was returned.'.format(profile_id,
                                                                                                   status_code))
@@ -215,7 +253,8 @@ def main():
     #
     # print(result)
 
-    steam_inventory = load_steam_inventory()
+    update_steam_inventory = False
+    steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
 
     listing_hash = '211820-Starbound Booster Pack'
 
