@@ -120,7 +120,7 @@ def get_market_sell_parameters(asset_id, price_in_cents, session_id):
     market_sell_parameters['sessionid'] = str(session_id)
     market_sell_parameters['appid'] = '753'
     market_sell_parameters['contextid'] = '6'
-    market_sell_parameters['asset_id'] = str(asset_id)  # TODO automatically determine asset ID
+    market_sell_parameters['asset_id'] = str(asset_id)  # To automatically determine asset ID, use retrieve_asset_id().
     market_sell_parameters['amount'] = '1'
     market_sell_parameters['price'] = str(price_in_cents)
 
