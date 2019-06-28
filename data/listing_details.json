@@ -35534,5 +35534,29 @@
   "900270-Reventure Booster Pack": {
     "item_nameid": 176069414,
     "is_marketable": true
+  },
+  "1094930-Ninja Girl and the Mysterious Army of Urban Legend Monsters! ~Hunt of the Headless Horseman~ Booster Pack": {
+    "item_nameid": 176070422,
+    "is_marketable": true
+  },
+  "1038810-GOD WARS The Complete Legend Booster Pack": {
+    "item_nameid": 176070222,
+    "is_marketable": true
+  },
+  "981770-SENRAN KAGURA Reflexions Booster Pack": {
+    "item_nameid": 176070371,
+    "is_marketable": true
+  },
+  "409350-Failed State Booster Pack": {
+    "item_nameid": 176070105,
+    "is_marketable": true
+  },
+  "1045050-Furry Girl \ud83d\udc3a Booster Pack": {
+    "item_nameid": 176069621,
+    "is_marketable": true
+  },
+  "612150-Conran - The dinky Raccoon Booster Pack": {
+    "item_nameid": 176070765,
+    "is_marketable": true
   }
 }
