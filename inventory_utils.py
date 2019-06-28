@@ -273,20 +273,49 @@ def retrieve_asset_id(listing_hash,
     return asset_id
 
 
-def main():
-    listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
-    price_in_cents = 23  # this is the money which you, as the seller, will receive
-    update_steam_inventory = True
+def create_booster_packs_for_batch(listing_hashes):
+    results = dict()
 
-    app_id = convert_listing_hash_to_app_id(listing_hash)
-    result = create_booster_pack(app_id=app_id)
+    for listing_hash in listing_hashes:
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+        result = create_booster_pack(app_id=app_id)
+
+        results[listing_hash] = result
+
+    return results
+
+
+def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
+                                 update_steam_inventory=True):
+    results = dict()
 
     steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
 
-    asset_id = retrieve_asset_id(listing_hash=listing_hash, steam_inventory=steam_inventory)
+    for (listing_hash, price_in_cents) in price_dict_for_listing_hashes.items():
 
-    if asset_id is not None:
-        result = sell_booster_pack(asset_id=asset_id, price_in_cents=price_in_cents)
+        asset_id = retrieve_asset_id(listing_hash=listing_hash,
+                                     steam_inventory=steam_inventory)
+
+        if asset_id is not None:
+            result = sell_booster_pack(asset_id=asset_id, price_in_cents=price_in_cents)
+
+            results[listing_hash] = result
+
+    return results
+
+
+def main():
+    listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
+    price_in_cents = 23  # this is the money which you, as the seller, will receive
+
+    price_dict_for_listing_hashes = {listing_hash: price_in_cents}
+
+    listing_hashes = list(price_dict_for_listing_hashes.keys())
+
+    creation_results = create_booster_packs_for_batch(listing_hashes)
+
+    sale_results = sell_booster_packs_for_batch(price_dict_for_listing_hashes,
+                                                update_steam_inventory=True)
 
     return
 
