@@ -3,6 +3,15 @@ import requests
 from personal_info import get_cookie_dict
 
 
+def get_session_id(cookie=None):
+    if cookie is None:
+        cookie = get_cookie_dict()
+
+    session_id = cookie['sessionid']
+
+    return session_id
+
+
 def get_steam_booster_pack_creation_url():
     booster_pack_creation_url = 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
 
@@ -27,7 +36,7 @@ def create_booster_pack(app_id):
     if not has_secured_cookie:
         raise AssertionError()
 
-    session_id = cookie['sessionid']
+    session_id = get_session_id(cookie=cookie)
 
     url = get_steam_booster_pack_creation_url()
     req_data = get_booster_pack_creation_parameters(app_id=app_id,
@@ -78,7 +87,7 @@ def sell_booster_pack(asset_id, price_in_cents):
     if not has_secured_cookie:
         raise AssertionError()
 
-    session_id = cookie['sessionid']
+    session_id = get_session_id(cookie=cookie)
 
     url = get_steam_market_sell_url()
     req_data = get_market_sell_parameters(asset_id=asset_id,
