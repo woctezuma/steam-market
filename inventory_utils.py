@@ -3,7 +3,7 @@ import json
 import requests
 
 from personal_info import get_cookie_dict
-from utils import get_data_folder
+from utils import get_data_folder, convert_listing_hash_to_app_id
 
 
 def get_my_steam_profile_id():
@@ -254,27 +254,19 @@ def retrieve_asset_id(listing_hash,
 
 
 def main():
-    app_id = 685400  # Skelly Selest: https://www.steamcardexchange.net/index.php?gamepage-appid-685400
-    # result = create_booster_pack(app_id=app_id)
-    #
-    # print(result)
+    listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
+    price_in_cents = 30  # A high value to be safe during testing
+    update_steam_inventory = True
 
-    update_steam_inventory = False
+    app_id = convert_listing_hash_to_app_id(listing_hash)
+    result = create_booster_pack(app_id=app_id)
+
     steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
 
-    listing_hash = '211820-Starbound Booster Pack'
-
-    asset_id = retrieve_asset_id(listing_hash=listing_hash,
-                                 steam_inventory=steam_inventory,
-                                 verbose=True)
-
-    price_in_cents = 1000  # A high value (10 euros) for testing, just to be safe.
+    asset_id = retrieve_asset_id(listing_hash=listing_hash, steam_inventory=steam_inventory)
 
     if asset_id is not None:
-        result = sell_booster_pack(asset_id=asset_id,
-                                   price_in_cents=price_in_cents)
-
-        print(result)
+        result = sell_booster_pack(asset_id=asset_id, price_in_cents=price_in_cents)
 
     return
 
