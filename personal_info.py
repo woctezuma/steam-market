@@ -1,15 +1,33 @@
 # Reference: https://www.blakeporterneuro.com/learning-python-project-3-scrapping-data-from-steams-community-market/
 
-def get_steam_cookie(file_name_with_personal_info='personal_info.txt'):
+import json
+
+
+def load_steam_cookie_from_disk(file_name_with_personal_info='personal_info.json'):
     try:
         with open(file_name_with_personal_info, 'r') as f:
-            cookie_value = f.readlines()[0]
+            cookie = json.load(f)
     except FileNotFoundError:
-        cookie_value = None
+        cookie = dict()
 
-    return cookie_value
-
-
-def get_cookie_dict(cookie_value):
-    cookie = {'steamLoginSecure': cookie_value}
     return cookie
+
+
+def get_cookie_dict(verbose=False):
+    cookie = load_steam_cookie_from_disk()
+
+    if verbose:
+        for field in cookie.keys():
+            print('{}: {}'.format(field, cookie[field]))
+
+    return cookie
+
+
+def main():
+    cookie = get_cookie_dict(verbose=True)
+
+    return
+
+
+if __name__ == '__main__':
+    main()

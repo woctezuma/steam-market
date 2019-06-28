@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from market_search import load_all_listings
-from personal_info import get_steam_cookie, get_cookie_dict
+from personal_info import get_cookie_dict
 from utils import get_listing_details_output_file_name
 
 
@@ -89,16 +89,18 @@ def parse_item_name_id(html_doc):
     return item_nameid, is_marketable
 
 
-def get_listing_details(listing_hash=None, cookie_value=None, render_as_json=False):
+def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
     req_data = get_listing_parameters()
 
-    has_secured_cookie = bool(cookie_value is not None)
+    if cookie is None:
+        cookie = get_cookie_dict()
+
+    has_secured_cookie = bool(len(cookie) > 0)
 
     if has_secured_cookie:
-        cookie = get_cookie_dict(cookie_value)
         resp_data = requests.get(url, params=req_data, cookies=cookie)
     else:
         resp_data = requests.get(url, params=req_data)
@@ -124,8 +126,8 @@ def get_listing_details(listing_hash=None, cookie_value=None, render_as_json=Fal
 
 
 def get_listing_details_batch(listing_hashes, all_listing_details=None, save_to_disk=True):
-    cookie_value = get_steam_cookie()
-    has_secured_cookie = bool(cookie_value is not None)
+    cookie = get_cookie_dict()
+    has_secured_cookie = bool(len(cookie) > 0)
 
     rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
 
@@ -141,7 +143,8 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None, save_to_
         if count + 1 % 100 == 0:
             print('[{}/{}]'.format(count + 1, num_listings))
 
-        listing_details, status_code = get_listing_details(listing_hash=listing_hash, cookie_value=cookie_value)
+        listing_details, status_code = get_listing_details(listing_hash=listing_hash,
+                                                           cookie=cookie)
 
         query_count += 1
 

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import requests
 
-from personal_info import get_steam_cookie, get_cookie_dict
+from personal_info import get_cookie_dict
 from utils import get_listing_output_file_name
 
 
@@ -51,8 +51,8 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
 
 
 def get_all_listings(all_listings=None):
-    cookie_value = get_steam_cookie()
-    has_secured_cookie = bool(cookie_value is not None)
+    cookie = get_cookie_dict()
+    has_secured_cookie = bool(len(cookie) > 0)
 
     rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
@@ -80,7 +80,6 @@ def get_all_listings(all_listings=None):
             query_count = 0
 
         if has_secured_cookie:
-            cookie = get_cookie_dict(cookie_value)
             resp_data = requests.get(url, params=req_data, cookies=cookie)
         else:
             resp_data = requests.get(url, params=req_data)

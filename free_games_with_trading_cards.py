@@ -4,7 +4,7 @@ import requests
 import steamspypi
 
 from market_search import load_all_listings
-from personal_info import get_steam_cookie, get_cookie_dict
+from personal_info import get_cookie_dict
 from utils import convert_listing_hash_to_app_id
 
 
@@ -15,10 +15,8 @@ def get_user_data_url():
 
 
 def download_user_data():
-    cookie_value = get_steam_cookie()
-
     resp_data = requests.get(get_user_data_url(),
-                             cookies=get_cookie_dict(cookie_value))
+                             cookies=get_cookie_dict())
 
     if resp_data.status_code == 200:
         result = resp_data.json()

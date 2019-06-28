@@ -6,7 +6,7 @@ import time
 import requests
 
 from market_listing import get_item_nameid, get_item_nameid_batch
-from personal_info import get_steam_cookie, get_cookie_dict
+from personal_info import get_cookie_dict
 from utils import get_market_order_file_name
 
 
@@ -49,8 +49,8 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie=False):
 
 
 def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
-    cookie_value = get_steam_cookie()
-    has_secured_cookie = bool(cookie_value is not None)
+    cookie = get_cookie_dict()
+    has_secured_cookie = bool(len(cookie) > 0)
 
     if item_nameid is None:
         item_nameid = get_item_nameid(listing_hash)
@@ -61,7 +61,6 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
         req_data = get_market_order_parameters(item_nameid=item_nameid)
 
         if has_secured_cookie:
-            cookie = get_cookie_dict(cookie_value)
             resp_data = requests.get(url, params=req_data, cookies=cookie)
         else:
             resp_data = requests.get(url, params=req_data)
@@ -133,8 +132,8 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
 
     # Retrieval of market orders (bid, ask)
 
-    cookie_value = get_steam_cookie()
-    has_secured_cookie = bool(cookie_value is not None)
+    cookie = get_cookie_dict()
+    has_secured_cookie = bool(len(cookie) > 0)
 
     rate_limits = get_steam_api_rate_limits_for_market_order(has_secured_cookie)
 

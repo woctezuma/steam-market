@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ### Cookie
 
-To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.txt`:
+To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.json`:
 
 1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/).<br/> 
   ![steam community](https://github.com/woctezuma/steam-market/wiki/img/K0P9Uxu.png)
@@ -35,8 +35,12 @@ To relax the rate limits enforced by Steam API, fill-in your cookie information 
 3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.<br/>
   ![filter for steamLoginSecure](https://github.com/woctezuma/steam-market/wiki/img/YhlPlUy.png)    
     
-4. Copy-paste this cookie value into a new file called `personal_info.txt`, which will be read by [`personal_info.py`](personal_info.py).<br/>
-  ![paste into personal_info.txt](https://github.com/woctezuma/steam-market/wiki/img/hMiqZJH.png)    
+4. Copy-paste this cookie value into a new file called `personal_info.json`, which will be read by [`personal_info.py`](personal_info.py).<br/>
+    ```json
+    {
+      "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE"
+    }  
+    ```
 
 > **NB**: In the future, if you notice that the program bugs out due to seemingly very strict rate limits, then it may
 be a sign that the cookie value tied to your session has changed.
