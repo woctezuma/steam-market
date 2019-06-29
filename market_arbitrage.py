@@ -4,6 +4,7 @@ from inventory_utils import create_then_sell_booster_packs_for_batch
 from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
+from utils import convert_listing_hash_to_app_id
 
 
 def determine_whether_an_arbitrage_might_exist(badge_data):
@@ -155,6 +156,32 @@ def convert_arbitrages_for_batch_create_then_sell(badge_arbitrages,
     return price_dict_for_listing_hashes
 
 
+def update_badge_arbitrages_with_latest_market_order_data(badge_data,
+                                                          arbitrage_data,
+                                                          retrieve_market_orders_online=True,
+                                                          verbose=False):
+    # Objective: ensure that we have the latest market orders before trying to automatically create & sell booster packs
+
+    # Based on arbitrage_data, select the badge_data for which we want to download (again) the latest market orders:
+    selected_badge_data = dict()
+
+    for listing_hash in arbitrage_data.keys():
+        arbitrage = arbitrage_data[listing_hash]
+
+        if arbitrage['is_marketable'] and arbitrage['profit'] > 0:
+            app_id = convert_listing_hash_to_app_id(listing_hash)
+            selected_badge_data[app_id] = badge_data[app_id]
+
+    market_order_dict = load_market_order_data(badge_data=selected_badge_data,
+                                               retrieve_market_orders_online=retrieve_market_orders_online)
+
+    latest_badge_arbitrages = find_badge_arbitrages(badge_data=selected_badge_data,
+                                                    market_order_dict=market_order_dict,
+                                                    verbose=verbose)
+
+    return latest_badge_arbitrages
+
+
 def apply_workflow(retrieve_listings_from_scratch=True,
                    retrieve_market_orders_online=True,
                    enforced_sack_of_gems_price=None,
@@ -176,7 +203,13 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     print_arbitrages(badge_arbitrages)
 
     if automatically_create_then_sell_booster_packs:
-        price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(badge_arbitrages,
+        latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(badge_data=filtered_badge_data,
+                                                                                        arbitrage_data=badge_arbitrages,
+                                                                                        retrieve_market_orders_online=True)
+        print('After latest update of market order data:')
+        print_arbitrages(latest_badge_arbitrages)
+
+        price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(latest_badge_arbitrages,
                                                                                       profit_threshold=profit_threshold)
 
         creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes)
