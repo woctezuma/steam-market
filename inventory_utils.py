@@ -304,18 +304,25 @@ def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
     return results
 
 
+def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
+                                             update_steam_inventory=True):
+    listing_hashes = list(price_dict_for_listing_hashes.keys())
+
+    creation_results = create_booster_packs_for_batch(listing_hashes)
+
+    sale_results = sell_booster_packs_for_batch(price_dict_for_listing_hashes,
+                                                update_steam_inventory=update_steam_inventory)
+
+    return creation_results, sale_results
+
+
 def main():
     listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
     price_in_cents = 23  # this is the money which you, as the seller, will receive
 
     price_dict_for_listing_hashes = {listing_hash: price_in_cents}
 
-    listing_hashes = list(price_dict_for_listing_hashes.keys())
-
-    creation_results = create_booster_packs_for_batch(listing_hashes)
-
-    sale_results = sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                                update_steam_inventory=True)
+    create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes)
 
     return
 
