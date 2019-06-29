@@ -200,15 +200,16 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
 
+    print('Results after *slow* update of market order data for *many potential* arbitrages:')
     print_arbitrages(badge_arbitrages)
 
-    if automatically_create_then_sell_booster_packs:
-        latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(badge_data=filtered_badge_data,
-                                                                                        arbitrage_data=badge_arbitrages,
-                                                                                        retrieve_market_orders_online=True)
-        print('After latest update of market order data:')
-        print_arbitrages(latest_badge_arbitrages)
+    latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(badge_data=filtered_badge_data,
+                                                                                    arbitrage_data=badge_arbitrages,
+                                                                                    retrieve_market_orders_online=True)
+    print('Results after *quick* update of market order data for *a few detected* arbitrages:')
+    print_arbitrages(latest_badge_arbitrages)
 
+    if automatically_create_then_sell_booster_packs:
         price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(latest_badge_arbitrages,
                                                                                       profit_threshold=profit_threshold)
 
