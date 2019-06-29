@@ -196,6 +196,12 @@ def sell_booster_pack(asset_id,
 
     session_id = get_session_id(cookie=cookie)
 
+    if price_in_cents < 1:
+        # Fix some price mistakes, typically given as input in euros, with a value like 0.25€ instead of 25 cents.
+        # NB: This check does not work if the intended price is more than 1€, e.g. 1.25€ would not turn into 125 cents.
+        print('Detected price mistake: {} cents. Autofix: input is interpreted in € instead.'.format(price_in_cents))
+        price_in_cents *= 100
+
     url = get_steam_market_sell_url()
     req_data = get_market_sell_parameters(asset_id=asset_id,
                                           price_in_cents=price_in_cents,
