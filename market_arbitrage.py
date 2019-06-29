@@ -1,5 +1,6 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
+from inventory_utils import create_then_sell_booster_packs_for_batch
 from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
@@ -128,9 +129,37 @@ def print_arbitrages(badge_arbitrages):
     return
 
 
+def convert_arbitrages_for_batch_create_then_sell(badge_arbitrages,
+                                                  profit_threshold=0.01,  # profit in euros
+                                                  verbose=True):
+    # Code inspired from print_arbitrages()
+
+    price_dict_for_listing_hashes = dict()
+
+    for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
+        arbitrage = badge_arbitrages[listing_hash]
+
+        # Skip unmarketable booster packs
+        if not arbitrage['is_marketable']:
+            continue
+
+        if arbitrage['profit'] < profit_threshold:
+            break
+
+        price_in_cents = 100 * arbitrage['bid_without_fee']
+        price_dict_for_listing_hashes[listing_hash] = price_in_cents
+
+    if verbose:
+        print(price_dict_for_listing_hashes)
+
+    return price_dict_for_listing_hashes
+
+
 def apply_workflow(retrieve_listings_from_scratch=True,
                    retrieve_market_orders_online=True,
                    enforced_sack_of_gems_price=None,
+                   automatically_create_then_sell_booster_packs=False,
+                   profit_threshold=0.01,  # profit in euros
                    from_javascript=False):
     aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
                                                        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
@@ -146,6 +175,12 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 
     print_arbitrages(badge_arbitrages)
 
+    if automatically_create_then_sell_booster_packs:
+        price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(badge_arbitrages,
+                                                                                      profit_threshold=profit_threshold)
+
+        creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes)
+
     return True
 
 
@@ -153,11 +188,15 @@ def main():
     retrieve_listings_from_scratch = True
     retrieve_market_orders_online = True
     enforced_sack_of_gems_price = None
+    automatically_create_then_sell_booster_packs = True
+    profit_threshold = 0.02  # profit in euros
     from_javascript = False
 
     apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
                    retrieve_market_orders_online=retrieve_market_orders_online,
                    enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                   automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
+                   profit_threshold=profit_threshold,
                    from_javascript=from_javascript)
 
     return True
