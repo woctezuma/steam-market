@@ -136,11 +136,15 @@ def create_booster_pack(app_id, verbose=True):
         # Expected result:
         # {"purchase_result":{"communityitemid":"XXX","appid":685400,"item_type":36, "purchaseid":"XXX",
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
+        print('[appID = {}] Booster pack successfully created.'.format(app_id))
         result = resp_data.json()
     else:
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
-        print('Creation of a booster pack failed with status code {} (appID = {})'.format(status_code,
-                                                                                          app_id))
+        if status_code == 500:
+            print('[appID = {}] Booster pack not created, because a pack was created less than 24h ago.'.format(app_id))
+        else:
+            print('[appID = {}] Booster pack not created, because of status code {}.'.format(app_id,
+                                                                                             status_code))
         result = None
 
     if verbose:
@@ -218,11 +222,16 @@ def sell_booster_pack(asset_id,
         # Expected result:
         # {"success":true,"requires_confirmation":0}
         result = resp_data.json()
+
+        if result['success']:
+            print('Booster pack {} successfully sold for {} cents.'.format(asset_id, price_in_cents))
+        else:
+            print('Booster pack {} not sold for {} cents, despite OK status code.'.format(asset_id, price_in_cents))
     else:
         # NB: 400 means "Bad Request".
-        print('Booster pack {} could not be sold for {} cents. Status code {} was returned.'.format(asset_id,
-                                                                                                    price_in_cents,
-                                                                                                    status_code))
+        print('Booster pack {} not sold for {} cents. Status code {} was returned.'.format(asset_id,
+                                                                                           price_in_cents,
+                                                                                           status_code))
         result = None
 
     if verbose:
@@ -265,11 +274,12 @@ def retrieve_asset_id(listing_hash,
                 matched_element['pos'] = community_inventory[element]['pos']
                 break
 
-        if verbose:
-            print(matched_element)
-
+        print('Item matched in the inventory for {}.'.format(listing_hash))
     else:
-        print('There is no match in the inventory for {}.'.format(listing_hash))
+        print('No matched item in the inventory for {}.'.format(listing_hash))
+
+    if verbose:
+        print(matched_element)
 
     try:
         asset_id = matched_element['id']
