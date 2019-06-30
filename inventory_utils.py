@@ -136,15 +136,16 @@ def create_booster_pack(app_id, verbose=True):
         # Expected result:
         # {"purchase_result":{"communityitemid":"XXX","appid":685400,"item_type":36, "purchaseid":"XXX",
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
-        print('[appID = {}] Booster pack successfully created.'.format(app_id))
+        print('\n[appID = {}] Booster pack successfully created.'.format(app_id))
         result = resp_data.json()
     else:
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         if status_code == 500:
-            print('[appID = {}] Booster pack not created, because a pack was created less than 24h ago.'.format(app_id))
+            print(
+                '\n[appID = {}] Booster pack not created, because a pack was created less than 24h ago.'.format(app_id))
         else:
-            print('[appID = {}] Booster pack not created, because of status code {}.'.format(app_id,
-                                                                                             status_code))
+            print('\n[appID = {}] Booster pack not created, because of status code {}.'.format(app_id,
+                                                                                               status_code))
         result = None
 
     if verbose:
@@ -274,9 +275,9 @@ def retrieve_asset_id(listing_hash,
                 matched_element['pos'] = community_inventory[element]['pos']
                 break
 
-        print('Item matched in the inventory for {}.'.format(listing_hash))
+        print('\nItem matched in the inventory for {}.'.format(listing_hash))
     else:
-        print('No matched item in the inventory for {}.'.format(listing_hash))
+        print('\nNo matched item in the inventory for {}.'.format(listing_hash))
 
     if verbose:
         print(matched_element)
