@@ -35558,5 +35558,53 @@
   "612150-Conran - The dinky Raccoon Booster Pack": {
     "item_nameid": 176070765,
     "is_marketable": true
+  },
+  "984780-MotoGP\u212219 Booster Pack": {
+    "item_nameid": 176057965,
+    "is_marketable": true
+  },
+  "362940-Courier of the Crypts Booster Pack": {
+    "item_nameid": 176070668,
+    "is_marketable": true
+  },
+  "989550-Million Arthur: Arcana Blood Booster Pack": {
+    "item_nameid": 176069511,
+    "is_marketable": true
+  },
+  "257030-Project Nimbus: Complete Edition Booster Pack": {
+    "item_nameid": 176071249,
+    "is_marketable": true
+  },
+  "923810-If My Heart Had Wings -Flight Diary- Booster Pack": {
+    "item_nameid": 176070647,
+    "is_marketable": true
+  },
+  "585420-Trailmakers Booster Pack": {
+    "item_nameid": 176072161,
+    "is_marketable": true
+  },
+  "459160-Allods Online Booster Pack": {
+    "item_nameid": 176072299,
+    "is_marketable": true
+  },
+  "485610-Ball 3D: Racing Soccer & Sports Games Booster Pack": {
+    "item_nameid": 176072049,
+    "is_marketable": true
+  },
+  "831660-Monobeno-HAPPY END- Booster Pack": {
+    "item_nameid": 176072771,
+    "is_marketable": true
+  },
+  "1025070-\u6dd1\u5973\u540c\u840c\uff01-New Division- Booster Pack": {
+    "item_nameid": 176072772,
+    "is_marketable": true
+  },
+  "983150-Sakura no Mori \u2020 Dreamers 2 Booster Pack": {
+    "item_nameid": 176072753,
+    "is_marketable": true
+  },
+  "1097880-Super Naughty Maid 2 Booster Pack": {
+    "item_nameid": 176072056,
+    "is_marketable": true
   }
 }
