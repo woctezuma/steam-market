@@ -107,7 +107,7 @@
 <option value="378480" class="available">Badland Bandits - 750 , Gems</option>
 <option value="269670" class="available">BADLAND: Game of the Year Edition - 750 , Gems</option>
 <option value="509860" class="available">Baezult - 1200 , Gems</option>
-<option value="485610" class="available">Ball 3D: Soccer Online - 500 , Gems</option>
+<option value="485610" class="available">Ball 3D: Racing Soccer &amp; Sports Games - 500 , Gems</option>
 <option value="259390" class="available">Ballpoint Universe: Infinite - 545 , Gems</option>
 <option value="269490" class="available">Bardbarian - 857 , Gems</option>
 <option value="463150" class="available">BARRIER X - 1200 , Gems</option>
@@ -323,7 +323,6 @@
 <option value="455300" class="available">Deuterium Wars - 750 , Gems</option>
 <option value="388870" class="available">Devils Share - 1200 , Gems</option>
 <option value="277870" class="available">Diehard Dungeon - 857 , Gems</option>
-<option value="537180" class="available">Digimon Masters Online - 429 , Gems</option>
 <option value="70000" class="available">Dino D-Day - 857 , Gems</option>
 <option value="321040" class="available">DiRT 3 Complete Edition - 1000 , Gems</option>
 <option value="310560" class="available">DiRT Rally - 750 , Gems</option>
@@ -693,7 +692,7 @@
 <option value="254060" class="available">KnightShift - 857 , Gems</option>
 <option value="250380" class="available">Knock-knock - 1000 , Gems</option>
 <option value="248190" class="available">Knytt Underground - 1000 , Gems</option>
-<option value="520910" class="available">Kokurase - Episode 1 - 400 , Gems</option>
+<option value="520910" class="available">Kokurase Episode 1 - 400 , Gems</option>
 <option value="42170" class="available">Krater - 600 , Gems</option>
 <option value="457940" class="available">Krog Wars - 1200 , Gems</option>
 <option value="609940" class="available">KROSMAGA - 857 , Gems</option>
@@ -816,7 +815,6 @@
 <option value="489520" class="available">Minion Masters - 1000 , Gems</option>
 <option value="609490" class="available">Minit - 1200 , Gems</option>
 <option value="368420" class="available">Mirage: Arcane Warfare - 1000 , Gems</option>
-<option value="620530" class="available">Mirt. Tales of the Cold Land - 1200 , Gems</option>
 <option value="395520" class="available">Missing Translation - 1200 , Gems</option>
 <option value="417920" class="available">Mistfal - 1200 , Gems</option>
 <option value="565110" class="available">Mobile Astro - 1000 , Gems</option>
@@ -967,6 +965,7 @@
 <option value="246620" class="available">Plague Inc: Evolved - 667 , Gems</option>
 <option value="461940" class="available">PlanCon: Space Conflict - 750 , Gems</option>
 <option value="324060" class="available">Planet Ancyra Chronicles - 600 , Gems</option>
+<option value="237870" class="available">Planet Explorers - 857 , Gems</option>
 <option value="350970" class="available">Planet of the Eyes - 1000 , Gems</option>
 <option value="291050" class="available">Planet Stronghold - 600 , Gems</option>
 <option value="218230" class="available">PlanetSide 2 - 1000 , Gems</option>
@@ -1161,7 +1160,6 @@
 <option value="204880" class="available">Sins of a Solar Empire: Rebellion - 400 , Gems</option>
 <option value="455590" class="available">Skedaddle - 1000 , Gems</option>
 <option value="446770" class="available">Skeet: VR Target Shooting - 750 , Gems</option>
-<option value="685400" class="available">Skelly Selest - 500 , Gems</option>
 <option value="245170" class="available">Skullgirls - 462 , Gems</option>
 <option value="228960" class="available">Skulls of the Shogun - 857 , Gems</option>
 <option value="630140" class="available">Sky Clash: Lords of Clans 3D - 1000 , Gems</option>
