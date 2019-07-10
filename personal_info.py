@@ -52,7 +52,12 @@ def update_cookie_dict(original_cookie,
     cookie = original_cookie
 
     for field in dict_with_new_values.keys():
-        cookie[field] = dict_with_new_values[field]
+        current_value = cookie[field]
+        new_value = dict_with_new_values[field]
+
+        if new_value != current_value:
+            print('Updating value for cookie field {} from {} to {}.'.format(field, current_value, new_value))
+            cookie[field] = new_value
 
     if verbose:
         for field in cookie.keys():
