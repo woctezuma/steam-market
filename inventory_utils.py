@@ -2,7 +2,7 @@ import json
 
 import requests
 
-from personal_info import get_cookie_dict
+from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
 from utils import get_data_folder, convert_listing_hash_to_app_id
 
 
@@ -76,6 +76,10 @@ def download_steam_inventory(profile_id=None, save_to_disk=True):
     if status_code == 200:
         steam_inventory = resp_data.json()
 
+        if has_secured_cookie:
+            jar = dict(resp_data.cookies)
+            cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
+
         if save_to_disk:
             with open(get_steam_inventory_file_name(profile_id), 'w') as f:
                 json.dump(steam_inventory, f)
@@ -138,6 +142,9 @@ def create_booster_pack(app_id, verbose=True):
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
         print('\n[appID = {}] Booster pack successfully created.'.format(app_id))
         result = resp_data.json()
+
+        jar = dict(resp_data.cookies)
+        cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
     else:
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         if status_code == 500:
@@ -221,6 +228,9 @@ def sell_booster_pack(asset_id,
         # Expected result:
         # {"success":true,"requires_confirmation":0}
         result = resp_data.json()
+
+        jar = dict(resp_data.cookies)
+        cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if result['success']:
             print('Booster pack {} successfully sold for {} cents.'.format(asset_id, price_in_cents))

@@ -6,7 +6,7 @@ import time
 import requests
 
 from market_listing import get_item_nameid, get_item_nameid_batch
-from personal_info import get_cookie_dict
+from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
 from utils import get_market_order_file_name
 
 
@@ -75,6 +75,10 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
 
     if status_code == 200:
         result = resp_data.json()
+
+        if has_secured_cookie:
+            jar = dict(resp_data.cookies)
+            cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         try:
             buy_order_graph = result['buy_order_graph']

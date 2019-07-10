@@ -7,7 +7,7 @@ from pathlib import Path
 
 import requests
 
-from personal_info import get_cookie_dict
+from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
 from utils import get_listing_output_file_name
 
 
@@ -90,6 +90,10 @@ def get_all_listings(all_listings=None):
 
         if status_code == 200:
             result = resp_data.json()
+
+            if has_secured_cookie:
+                jar = dict(resp_data.cookies)
+                cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
             num_listings_based_on_latest_query = result['total_count']
 

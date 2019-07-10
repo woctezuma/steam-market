@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from market_search import load_all_listings
-from personal_info import get_cookie_dict
+from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
 from utils import get_listing_details_output_file_name
 
 
@@ -109,6 +109,10 @@ def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
 
     if status_code == 200:
         html_doc = resp_data.text
+
+        if has_secured_cookie:
+            jar = dict(resp_data.cookies)
+            cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         item_nameid, is_marketable = parse_item_name_id(html_doc)
 
