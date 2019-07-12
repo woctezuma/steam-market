@@ -224,7 +224,7 @@ def main():
     enforced_sack_of_gems_price = None
     automatically_create_then_sell_booster_packs = True
     profit_threshold = 0.01  # profit in euros
-    from_javascript = False
+    from_javascript = True
 
     apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
                    retrieve_market_orders_online=retrieve_market_orders_online,
