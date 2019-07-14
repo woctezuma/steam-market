@@ -47,7 +47,7 @@ be a sign that the cookie value tied to your session has changed.
 In this case, try to fill-in your cookie information with its new value.
 
 > **NB²**: If you want to automate the creation and sale of booster packs, you may need to fill-in more information.
-I have been using the following entries, but you might not need to use all of them:
+I have been using the following entries, but you might not need to use all of them. Except for `steamLoginSecure` and `sessionid`, the values of the other entries are set in stone and do not need to be updated afterwards.
 ```json
 {
   "browserid": "PASTE_YOUR_COOKIE_VALUE_HERE",
