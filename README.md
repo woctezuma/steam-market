@@ -46,6 +46,21 @@ To relax the rate limits enforced by Steam API, fill-in your cookie information 
 be a sign that the cookie value tied to your session has changed.
 In this case, try to fill-in your cookie information with its new value.
 
+> **NB²**: If you want to automate the creation and sale of booster packs, you may need to fill-in more information.
+I have been using the following entries, but you might not need to use all of them.
+    ```json
+    {
+      "browserid": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "sessionid": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "steamCountry": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "steamMachineAuth_PASTE_YOUR_STEAM_ID_HERE": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "steamRememberLogin": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "timezoneOffset": "PASTE_YOUR_COOKIE_VALUE_HERE",
+      "webTradeEligibility": "PASTE_YOUR_COOKIE_VALUE_HERE"
+    }
+    ```
+
 ### Gem cost for crafting Booster Packs
 
 To have access to the gem cost for crafting Booster Packs, you will need to manually copy information available [here](https://steamcommunity.com/tradingcards/boostercreator/).
