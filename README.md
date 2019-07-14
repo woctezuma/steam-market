@@ -47,7 +47,8 @@ be a sign that the cookie value tied to your session has changed.
 In this case, try to fill-in your cookie information with its new value.
 
 > **NB²**: If you want to automate the creation and sale of booster packs, you may need to fill-in more information.
-I have been using the following entries, but you might not need to use all of them.<br/>
+I have been using the following entries, but you might not need to use all of them:
+
     ```json
     {
       "browserid": "PASTE_YOUR_COOKIE_VALUE_HERE",
