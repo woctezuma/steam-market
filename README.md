@@ -48,19 +48,18 @@ In this case, try to fill-in your cookie information with its new value.
 
 > **NB²**: If you want to automate the creation and sale of booster packs, you may need to fill-in more information.
 I have been using the following entries, but you might not need to use all of them:
-
-    ```json
-    {
-      "browserid": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "sessionid": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "steamCountry": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "steamMachineAuth_PASTE_YOUR_STEAM_ID_HERE": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "steamRememberLogin": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "timezoneOffset": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "webTradeEligibility": "PASTE_YOUR_COOKIE_VALUE_HERE"
-    }
-    ```
+```json
+{
+  "browserid": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "sessionid": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "steamCountry": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "steamMachineAuth_PASTE_YOUR_STEAM_ID_HERE": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "steamRememberLogin": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "timezoneOffset": "PASTE_YOUR_COOKIE_VALUE_HERE",
+  "webTradeEligibility": "PASTE_YOUR_COOKIE_VALUE_HERE"
+}
+```
 
 ### Gem cost for crafting Booster Packs
 
