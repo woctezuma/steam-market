@@ -144,13 +144,13 @@ python market_order.py
 python market_arbitrage.py
 ```
 
--   To look for games which i) are likely to have high bid orders for their booster packs, ii) and which I may not own yet, run:
+-   To look for games which i) are likely to have high bid orders for their booster packs, and ii) which I may not own yet, run:
 
 ```bash
 python market_buzz_detector.py
 ```
 
--   To look for **free** games which i) feature trading cards (and thus crafting of booster packs), ii) and which I do not own yet, run:
+-   To look for **free** games which i) feature trading cards (and thus crafting of booster packs), and ii) which I do not own, run:
 
 ```bash
 python free_games_with_trading_cards.py
