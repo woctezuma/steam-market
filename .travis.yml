@@ -6,7 +6,9 @@ python:
 install:
  - pip install codecov
  - pip install -r requirements.txt
+ - pip install flake8
 script:
  - coverage run tests.py
+ - flake8 --ignore=E501 --exclude=venv/
 after_success:
  - codecov
