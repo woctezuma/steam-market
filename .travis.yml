@@ -9,6 +9,6 @@ install:
  - pip install flake8
 script:
  - coverage run tests.py
- - flake8 --ignore=E501 --exclude=venv/
+ - flake8 --ignore=E127,E501,F841,W503,W504 --exclude=venv/
 after_success:
  - codecov
