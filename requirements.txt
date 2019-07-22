@@ -1,4 +1,4 @@
 requests==2.22.0
-beautifulsoup4==4.7.1
+beautifulsoup4==4.8.0
 steamspypi==1.0.0
 steampi==0.4.0
