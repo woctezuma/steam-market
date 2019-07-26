@@ -35606,5 +35606,37 @@
   "1097880-Super Naughty Maid 2 Booster Pack": {
     "item_nameid": 176072056,
     "is_marketable": true
+  },
+  "520910-Kokurase Episode 1 Booster Pack": {
+    "item_nameid": 176073250,
+    "is_marketable": true
+  },
+  "338830-Star Nomad Booster Pack": {
+    "item_nameid": 176071400,
+    "is_marketable": true
+  },
+  "395620-Ittle Dew 2+ Booster Pack": {
+    "item_nameid": 176070689,
+    "is_marketable": true
+  },
+  "587180-Wulverblade Booster Pack": {
+    "item_nameid": 176070591,
+    "is_marketable": true
+  },
+  "658550-Zup! Zero 2 Booster Pack": {
+    "item_nameid": 176074379,
+    "is_marketable": true
+  },
+  "887060-Asterix & Obelix XXL 2 Booster Pack": {
+    "item_nameid": 176071122,
+    "is_marketable": true
+  },
+  "916050-Clocker Booster Pack": {
+    "item_nameid": 176072527,
+    "is_marketable": true
+  },
+  "1034900-Blaster Master Zero Booster Pack": {
+    "item_nameid": 176070235,
+    "is_marketable": true
   }
 }
