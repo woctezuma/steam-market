@@ -116,6 +116,17 @@ def load_file(file_name, verbose=True):
     return data
 
 
+def format_for_asf_command_line(app_ids,
+                                app_prefix=None):
+    if app_prefix is None:
+        # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
+        app_prefix = 'app/'
+
+    output = [app_prefix + str(app_id) for app_id in sorted(app_ids)]
+
+    return output
+
+
 def write_to_file(data, file_name, verbose=True):
     output = '\n'.join(str(app_id) for app_id in data)
 
@@ -140,7 +151,9 @@ def main():
 
     free_apps_not_owned = set(free_apps_with_trading_cards).difference(owned_apps)
 
-    write_to_file(sorted(free_apps_not_owned), 'output.txt')
+    output = format_for_asf_command_line(free_apps_not_owned)
+
+    write_to_file(output, 'output.txt')
 
 
 if __name__ == '__main__':
