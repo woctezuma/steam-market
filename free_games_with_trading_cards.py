@@ -127,8 +127,30 @@ def format_for_asf_command_line(app_ids,
     return output
 
 
+def chunks(l, n):
+    """Yield successive n-sized chunks from l."""
+    # Reference: https://stackoverflow.com/a/312464
+    for i in range(0, len(l), n):
+        yield l[i:i + n]
+
+
+def group_concatenate_to_str(data,
+                             group_size=50):
+    group_sep = '\n'
+    inner_sep = ' '
+
+    output = group_sep.join([
+        inner_sep.join([
+            str(app_id) for app_id in group
+        ])
+        for group in chunks(data, group_size)
+    ])
+
+    return output
+
+
 def write_to_file(data, file_name, verbose=True):
-    output = '\n'.join(str(app_id) for app_id in data)
+    output = group_concatenate_to_str(data)
 
     with open(file_name, 'w') as f:
         print(output, file=f)
