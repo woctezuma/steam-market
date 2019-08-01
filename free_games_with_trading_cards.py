@@ -135,7 +135,7 @@ def chunks(l, n):
 
 
 def group_concatenate_to_str(data,
-                             group_size=50):
+                             group_size=25):
     group_sep = '\n'
     inner_sep = ' '
 
