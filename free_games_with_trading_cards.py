@@ -120,7 +120,7 @@ def format_for_asf_command_line(app_ids,
                                 app_prefix=None):
     if app_prefix is None:
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
-        app_prefix = 'app/'
+        app_prefix = 'a/'
 
     output = [app_prefix + str(app_id) for app_id in sorted(app_ids)]
 
