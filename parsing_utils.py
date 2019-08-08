@@ -11,16 +11,31 @@ from utils import get_badge_creation_file_name
 
 
 def fix_unicode_characters_in_app_name_from_javascript_code(app_name):
-    app_name = app_name.replace('\\u2122', '™')
-    app_name = app_name.replace('\\u00fc', 'ü')
-    app_name = app_name.replace('\\u00e9', 'é')
+    app_name = app_name.replace('\\u00ae', '®')
     app_name = app_name.replace('\\u00db', 'Û')
-    app_name = app_name.replace('\\u795e', '神')
-    app_name = app_name.replace('\\u5927', '大')
+    app_name = app_name.replace('\\u00e9', 'é')
+    app_name = app_name.replace('\\u00fc', 'ü')
     app_name = app_name.replace('\\u2019', '’')
-    app_name = app_name.replace('\\u7d76', '絶')
+    app_name = app_name.replace('\\u2122', '™')
+    app_name = app_name.replace('\\u4e1c', '东')
+    app_name = app_name.replace('\\u4e89', '争')
+    app_name = app_name.replace('\\u4e94', '五')
+    app_name = app_name.replace('\\u5927', '大')
+    app_name = app_name.replace('\\u5e08', '师')
+    app_name = app_name.replace('\\u6218', '战')
+    app_name = app_name.replace('\\u62ef', '拯')
+    app_name = app_name.replace('\\u6551', '救')
+    app_name = app_name.replace('\\u65b9', '方')
     app_name = app_name.replace('\\u666f', '景')
+    app_name = app_name.replace('\\u708e', '炎')
     app_name = app_name.replace('\\u7248', '版')
+    app_name = app_name.replace('\\u738b', '王')
+    app_name = app_name.replace('\\u795e', '神')
+    app_name = app_name.replace('\\u7d76', '絶')
+    app_name = app_name.replace('\\u7eaa', '纪')
+    app_name = app_name.replace('\\u884c', '行')
+    app_name = app_name.replace('\\u9b54', '魔')
+    app_name = app_name.replace('\\u9ec4', '黄')
 
     return app_name
 
