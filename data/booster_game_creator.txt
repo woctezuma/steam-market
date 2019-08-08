@@ -123,6 +123,7 @@
 <option value="394230" class="available">Battleborn - 667 , Gems</option>
 <option value="411480" class="available">BATTLECREW Space Pirates - 750 , Gems</option>
 <option value="296050" class="available">Battlepaths - 545 , Gems</option>
+<option value="392060" class="available">BattleSouls - 1200 , Gems</option>
 <option value="306930" class="available">BattleSpace - 1000 , Gems</option>
 <option value="492630" class="available">Bear With Me - 857 , Gems</option>
 <option value="49600" class="available">Beat Hazard - 857 , Gems</option>
@@ -266,9 +267,11 @@
 <option value="535690" class="available">Crash Force - 750 , Gems</option>
 <option value="508980" class="available">Crashday Redline Edition - 857 , Gems</option>
 <option value="293780" class="available">Crawl - 1000 , Gems</option>
+<option value="448460" class="available">Crazy Killer - 1200 , Gems</option>
 <option value="292200" class="available">Crazy Plant Shop - 1000 , Gems</option>
 <option value="280790" class="available">Creativerse - 1000 , Gems</option>
 <option value="465170" class="available">Crime Secrets: Crimson Lily - 1200 , Gems</option>
+<option value="497560" class="available">Crimson Sword Saga: The Peloran Wars - 1200 , Gems</option>
 <option value="386180" class="available">Crossout - 667 , Gems</option>
 <option value="203770" class="available">Crusader Kings II - 750 , Gems</option>
 <option value="402840" class="available">Crusaders of the Lost Idols - 1200 , Gems</option>
@@ -302,6 +305,7 @@
 <option value="247660" class="available">Deadly Premonition: The Director's Cut - 667 , Gems</option>
 <option value="344750" class="available">Deadly Profits - 1200 , Gems</option>
 <option value="338760" class="available">Death Ray Manta - 1200 , Gems</option>
+<option value="471810" class="available">Death Squared - 1000 , Gems</option>
 <option value="466240" class="available">Deceit - 1000 , Gems</option>
 <option value="374830" class="available">Defend The Highlands - 750 , Gems</option>
 <option value="18500" class="available">Defense Grid: The Awakening - 667 , Gems</option>
@@ -333,6 +337,7 @@
 <option value="635200" class="available">Distrust - 462 , Gems</option>
 <option value="252130" class="available">Divide by Sheep - 1000 , Gems</option>
 <option value="300040" class="available">Divine Souls - 750 , Gems</option>
+<option value="315640" class="available">Dizzel - 1000 , Gems</option>
 <option value="230050" class="available">DLC Quest - 1200 , Gems</option>
 <option value="268830" class="available">Doctor Who: The Adventure Games - 667 , Gems</option>
 <option value="219700" class="available">Dogs of War Online - Beta - 1000 , Gems</option>
@@ -360,6 +365,7 @@
 <option value="314330" class="available">DROD: Gunthro and the Epic Blunder - 1000 , Gems</option>
 <option value="219200" class="available">Droid Assault - 1200 , Gems</option>
 <option value="572520" class="available">Dropzone - 600 , Gems</option>
+<option value="237630" class="available">DuckTales Remastered - 857 , Gems</option>
 <option value="291410" class="available">Duelyst - 500 , Gems</option>
 <option value="292600" class="available">Duet - 750 , Gems</option>
 <option value="225140" class="available">Duke Nukem 3D: Megaton Edition - 1000 , Gems</option>
@@ -379,6 +385,7 @@
 <option value="234920" class="available">Dyscourse - 1000 , Gems</option>
 <option value="232050" class="available">Eador. Masters of the Broken World - 750 , Gems</option>
 <option value="1900" class="available">Earth 2160 - 400 , Gems</option>
+<option value="290140" class="available">Echo of Soul - 750 , Gems</option>
 <option value="305780" class="available">Echo of the Wilds - 462 , Gems</option>
 <option value="585990" class="available">Echoes of the Fey Episode 0: The Immolation - 1000 , Gems</option>
 <option value="345330" class="available">Eden Rising - 857 , Gems</option>
@@ -387,6 +394,7 @@
 <option value="214550" class="available">Eets Munchies - 1000 , Gems</option>
 <option value="363790" class="available">Egg Returns Home - 1200 , Gems</option>
 <option value="509840" class="available">El Ninja (Beta) - 1200 , Gems</option>
+<option value="257670" class="available">Elder Sign: Omens - 750 , Gems</option>
 <option value="298160" class="available">Eldevin - 600 , Gems</option>
 <option value="252630" class="available">Eldritch - 750 , Gems</option>
 <option value="244870" class="available">Electronic Super Joy - 1200 , Gems</option>
@@ -434,6 +442,7 @@
 <option value="273350" class="available">Evolve Stage 2 - 1000 , Gems</option>
 <option value="207370" class="available">eXceed - Gun Bullet Children - 1000 , Gems</option>
 <option value="505740" class="available">Eximius: Seize the Frontline - 750 , Gems</option>
+<option value="223650" class="available">F.E.A.R. Online - 667 , Gems</option>
 <option value="286570" class="available">F1 2015 - 600 , Gems</option>
 <option value="469830" class="available">Fable Fortune - 429 , Gems</option>
 <option value="244690" class="available">Face Noir - 750 , Gems</option>
@@ -500,11 +509,13 @@
 <option value="260410" class="available">Get Off My Lawn! - 1000 , Gems</option>
 <option value="463270" class="available">Ghost 1.0 - 1000 , Gems</option>
 <option value="353070" class="available">Ghost Encounters: Deadwood - Collector's Edition - 750 , Gems</option>
+<option value="369200" class="available">Ghost in the Shell: Stand Alone Complex - First Assault Online - 667 , Gems</option>
 <option value="280890" class="available">GhostshipAftermath - 400 , Gems</option>
 <option value="223220" class="available">Giana Sisters: Twisted Dreams - 857 , Gems</option>
 <option value="246960" class="available">Giana Sisters: Twisted Dreams - Rise of the Owlverlord - 1200 , Gems</option>
 <option value="327690" class="available">Gigantic - 400 , Gems</option>
 <option value="263460" class="available">Girls Like Robots - 1000 , Gems</option>
+<option value="385880" class="available">Gladiators Online: Death Before Dishonor - 667 , Gems</option>
 <option value="565020" class="available">Global Adventures - 857 , Gems</option>
 <option value="341120" class="available">Glorkian Warrior: The Trials Of Glork - 1000 , Gems</option>
 <option value="486340" class="available">Gnarltoof's Revenge - 1200 , Gems</option>
@@ -529,6 +540,7 @@
 <option value="206210" class="available">Gotham City Impostors: Free To Play - 1200 , Gems</option>
 <option value="685420" class="available">Grace of Zordan - 600 , Gems</option>
 <option value="663090" class="available">Granado Espada - 750 , Gems</option>
+<option value="304270" class="available">Grand Chase - 857 , Gems</option>
 <option value="41800" class="available">Gratuitous Space Battles - 600 , Gems</option>
 <option value="247310" class="available">Gravi - 1200 , Gems</option>
 <option value="260570" class="available">Gray Matter - 750 , Gems</option>
@@ -574,10 +586,12 @@
 <option value="342130" class="available">Hashtag Dungeon - 1000 , Gems</option>
 <option value="271290" class="available">HAWKEN - 857 , Gems</option>
 <option value="340000" class="available">Headlander - 1000 , Gems</option>
+<option value="441020" class="available">Heavenstrike Rivals® - 400 , Gems</option>
 <option value="305980" class="available">Heavy Fire: Afghanistan - 1200 , Gems</option>
 <option value="331360" class="available">Heavy Metal Machines - 750 , Gems</option>
 <option value="305490" class="available">Heileen 3: New Horizons - 500 , Gems</option>
 <option value="334070" class="available">Hektor - 1200 , Gems</option>
+<option value="293420" class="available">Heldric - The legend of the shoemaker - 1000 , Gems</option>
 <option value="524970" class="available">Helmet Heroes - 857 , Gems</option>
 <option value="368370" class="available">Her Story - 857 , Gems</option>
 <option value="259550" class="available">Hero of the Kingdom - 1200 , Gems</option>
@@ -636,12 +650,14 @@
 <option value="246980" class="available">InFlux - 1200 , Gems</option>
 <option value="385710" class="available">INK - 1000 , Gems</option>
 <option value="393530" class="available">Insanity Clicker - 500 , Gems</option>
+<option value="335950" class="available">Insecters War - 1200 , Gems</option>
 <option value="592890" class="available">Insidia - 600 , Gems</option>
 <option value="222880" class="available">Insurgency - 1000 , Gems</option>
 <option value="237760" class="available">Intake - 1000 , Gems</option>
 <option value="356420" class="available">Interloper - 667 , Gems</option>
 <option value="520530" class="available">INTERSHELTER - 600 , Gems</option>
 <option value="590380" class="available">Into the Breach - 750 , Gems</option>
+<option value="432980" class="available">INVERSUS Deluxe - 1000 , Gems</option>
 <option value="502090" class="available">Invisible Mind - 1200 , Gems</option>
 <option value="243970" class="available">Invisible, Inc. - 600 , Gems</option>
 <option value="287120" class="available">Ionball 2 : Ionstorm - 1200 , Gems</option>
@@ -674,6 +690,7 @@
 <option value="1250" class="available">Killing Floor - 600 , Gems</option>
 <option value="232090" class="available">Killing Floor 2 - 750 , Gems</option>
 <option value="219830" class="available">King Arthur's Gold - 1000 , Gems</option>
+<option value="576690" class="available">King of Crowns Chess Online - 600 , Gems</option>
 <option value="352220" class="available">King of Dragon Pass - 667 , Gems</option>
 <option value="615020" class="available">King of the World - 1000 , Gems</option>
 <option value="203350" class="available">King's Bounty: Warriors of the North - 600 , Gems</option>
@@ -700,6 +717,7 @@
 <option value="270330" class="available">Ku: Shroud of the Morrigan - 857 , Gems</option>
 <option value="513000" class="available">Kuboom - 1000 , Gems</option>
 <option value="844870" class="available">KurtzPel - 1000 , Gems</option>
+<option value="264360" class="available">La Tale - 600 , Gems</option>
 <option value="230700" class="available">La-Mulana - 600 , Gems</option>
 <option value="412310" class="available">Labyrinth - 1000 , Gems</option>
 <option value="543650" class="available">Last Days - 1200 , Gems</option>
@@ -795,6 +813,7 @@
 <option value="287700" class="available">METAL GEAR SOLID V: THE PHANTOM PAIN - 857 , Gems</option>
 <option value="581130" class="available">Metal Waltz - 400 , Gems</option>
 <option value="550900" class="available">Metin2 - 750 , Gems</option>
+<option value="356640" class="available">Metro Conflict - 750 , Gems</option>
 <option value="662320" class="available">Metro Conflict: The Origin - 667 , Gems</option>
 <option value="513580" class="available">Miaou Moon - 750 , Gems</option>
 <option value="529870" class="available">Microgons - 750 , Gems</option>
@@ -852,6 +871,7 @@
 <option value="404540" class="available">Nex Machina - 667 , Gems</option>
 <option value="572660" class="available">Nick - 1200 , Gems</option>
 <option value="94400" class="available">Nidhogg - 1200 , Gems</option>
+<option value="338340" class="available">Nightbanes - 600 , Gems</option>
 <option value="284790" class="available">Nightmares from the Deep 2: The Siren`s Call - 857 , Gems</option>
 <option value="284810" class="available">Nightmares from the Deep 3: Davy Jones - 1000 , Gems</option>
 <option value="259740" class="available">Nightmares from the Deep: The Cursed Heart - 1000 , Gems</option>
@@ -986,6 +1006,7 @@
 <option value="91900" class="available">Post Apocalyptic Mayhem - 1000 , Gems</option>
 <option value="312640" class="available">Power-Up - 400 , Gems</option>
 <option value="201210" class="available">Pox Nora - 667 , Gems</option>
+<option value="434110" class="available">Premium Pool - 1000 , Gems</option>
 <option value="465520" class="available">PRICE - 1200 , Gems</option>
 <option value="215470" class="available">Primal Carnage - 1000 , Gems</option>
 <option value="235340" class="available">Prime World - 750 , Gems</option>
@@ -1157,6 +1178,7 @@
 <option value="324470" class="available">SinaRun - 1200 , Gems</option>
 <option value="606730" class="available">Sine Mora EX - 600 , Gems</option>
 <option value="326180" class="available">Sinister City - 1200 , Gems</option>
+<option value="251970" class="available">Sins of a Dark Age - 667 , Gems</option>
 <option value="204880" class="available">Sins of a Solar Empire: Rebellion - 400 , Gems</option>
 <option value="455590" class="available">Skedaddle - 1000 , Gems</option>
 <option value="446770" class="available">Skeet: VR Target Shooting - 750 , Gems</option>
@@ -1202,6 +1224,7 @@
 <option value="574070" class="available">Space Wars: Interstellar Empires - 500 , Gems</option>
 <option value="92800" class="available">SpaceChem - 1000 , Gems</option>
 <option value="436180" class="available">Spacelords - 750 , Gems</option>
+<option value="600630" class="available">Spaceship Looter - 750 , Gems</option>
 <option value="361190" class="available">Sparkle 3 Genesis - 1200 , Gems</option>
 <option value="18300" class="available">Spectraball - 857 , Gems</option>
 <option value="346430" class="available">Spectrum: First Light - 1200 , Gems</option>
@@ -1332,6 +1355,7 @@
 <option value="235980" class="available">Tetrobot and Co. - 1000 , Gems</option>
 <option value="323060" class="available">Tharsis - 667 , Gems</option>
 <option value="234940" class="available">The 39 Steps - 1200 , Gems</option>
+<option value="396710" class="available">The Adventure Pals - 400 , Gems</option>
 <option value="628760" class="available">The Adventurer - Episode 1: Beginning of the End - 1200 , Gems</option>
 <option value="375420" class="available">The Architect - 1200 , Gems</option>
 <option value="608990" class="available">The Archotek Project - 857 , Gems</option>
@@ -1419,6 +1443,7 @@
 <option value="319740" class="available">There Came an Echo - 1200 , Gems</option>
 <option value="432150" class="available">They Came From The Moon - 667 , Gems</option>
 <option value="331220" class="available">Thief Town - 1000 , Gems</option>
+<option value="573600" class="available">Think of the Children - 1200 , Gems</option>
 <option value="533690" class="available">Think To Die - 1200 , Gems</option>
 <option value="539380" class="available">Think To Die 2 - 1200 , Gems</option>
 <option value="443810" class="available">This Is the Police - 1200 , Gems</option>
@@ -1439,6 +1464,7 @@
 <option value="324710" class="available">To Be or Not To Be - 600 , Gems</option>
 <option value="206440" class="available">To the Moon - 1000 , Gems</option>
 <option value="201420" class="available">Toki Tori 2+ - 1000 , Gems</option>
+<option value="293560" class="available">TOME: Immortal Arena - 667 , Gems</option>
 <option value="248570" class="available">Toribash - 857 , Gems</option>
 <option value="364360" class="available">Total War: WARHAMMER - 1000 , Gems</option>
 <option value="266110" class="available">Tower of Guns - 600 , Gems</option>
@@ -1481,6 +1507,7 @@
 <option value="331580" class="available">ULTRAWORLD EXODUS - 1000 , Gems</option>
 <option value="421180" class="available">Umbra: Shadow of Death - 1200 , Gems</option>
 <option value="359580" class="available">Uncanny Valley - 1000 , Gems</option>
+<option value="317110" class="available">Uncharted Waters Online: Episode Atlantis - 857 , Gems</option>
 <option value="714050" class="available">Undead - 1200 , Gems</option>
 <option value="391540" class="available">Undertale - 1200 , Gems</option>
 <option value="263680" class="available">Unearthed: Trail of Ibn Battuta - Episode 1 - Gold Edition - 1000 , Gems</option>
@@ -1553,6 +1580,7 @@
 <option value="500710" class="available">Wild Terra Online - 750 , Gems</option>
 <option value="842150" class="available">Wild West Saga - 1000 , Gems</option>
 <option value="287200" class="available">Wildlife Park 3 - 400 , Gems</option>
+<option value="380770" class="available">Wind of Luck: Arena - 400 , Gems</option>
 <option value="473620" class="available">Winged Knights: Penetration - 1200 , Gems</option>
 <option value="803220" class="available">Winions: Mana Champions - 1200 , Gems</option>
 <option value="72900" class="available">Winter Voices - 750 , Gems</option>
@@ -1564,6 +1592,7 @@
 <option value="259830" class="available">Wooden Sen'SeY - 1000 , Gems</option>
 <option value="299460" class="available">Woodle Tree Adventures - 1000 , Gems</option>
 <option value="602930" class="available">Wordlase - 750 , Gems</option>
+<option value="421960" class="available">World of Fishing - 600 , Gems</option>
 <option value="262410" class="available">World of Guns: Gun Disassembly - 429 , Gems</option>
 <option value="444200" class="available">World of Tanks Blitz - 667 , Gems</option>
 <option value="790710" class="available">World of Warplanes - 600 , Gems</option>
