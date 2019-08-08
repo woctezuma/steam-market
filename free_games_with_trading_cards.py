@@ -135,9 +135,19 @@ def chunks(l, n):
 
 
 def group_concatenate_to_str(data,
+                             asf_username='ASF',
                              group_size=25):
-    group_sep = '\n'
-    inner_sep = ' '
+    asf_command = 'addlicense'
+    asf_complete_command = '{} {} '.format(asf_command, asf_username)
+
+    line_sep = '\n'
+    space_sep = ' '
+
+    group_sep = line_sep
+    if asf_username is not None:
+        group_sep += asf_complete_command
+
+    inner_sep = space_sep
 
     output = group_sep.join([
         inner_sep.join([
@@ -146,11 +156,21 @@ def group_concatenate_to_str(data,
         for group in chunks(data, group_size)
     ])
 
+    if asf_username is not None:
+        # Prepend the ASF command to the first line (missed by .join() calls)
+        output = asf_complete_command + output
+
     return output
 
 
-def write_to_file(data, file_name, verbose=True):
-    output = group_concatenate_to_str(data)
+def write_to_file(data,
+                  file_name,
+                  asf_username=None,
+                  group_size=25,
+                  verbose=True):
+    output = group_concatenate_to_str(data,
+                                      asf_username=asf_username,
+                                      group_size=group_size)
 
     with open(file_name, 'w') as f:
         print(output, file=f)
@@ -175,7 +195,7 @@ def main():
 
     output = format_for_asf_command_line(free_apps_not_owned)
 
-    write_to_file(output, 'output.txt')
+    write_to_file(output, 'output.txt', asf_username='Wok')
 
 
 if __name__ == '__main__':
