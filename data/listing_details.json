@@ -35638,5 +35638,57 @@
   "1034900-Blaster Master Zero Booster Pack": {
     "item_nameid": 176070235,
     "is_marketable": true
+  },
+  "243300-Centration Development Build Booster Pack": {
+    "item_nameid": 176073110,
+    "is_marketable": true
+  },
+  "454390-Rally Copters Booster Pack": {
+    "item_nameid": 176072475,
+    "is_marketable": true
+  },
+  "1097800-Stranger Things 3: The Game Booster Pack": {
+    "item_nameid": 176072676,
+    "is_marketable": true
+  },
+  "972160-The Witch's Love Diary Booster Pack": {
+    "item_nameid": 176076341,
+    "is_marketable": true
+  },
+  "1047440-DATE A LIVE: Rio Reincarnation Booster Pack": {
+    "item_nameid": 176075666,
+    "is_marketable": true
+  },
+  "331460-ROOMS: The Toymaker's Mansion Booster Pack": {
+    "item_nameid": 176073109,
+    "is_marketable": true
+  },
+  "922500-KILL la KILL -IF Booster Pack": {
+    "item_nameid": 176076233,
+    "is_marketable": true
+  },
+  "1010600-The Princess, the Stray Cat, and Matters of the Heart Booster Pack": {
+    "item_nameid": 176075965,
+    "is_marketable": true
+  },
+  "1006250-Love in the Limelight Booster Pack": {
+    "item_nameid": 176076188,
+    "is_marketable": true
+  },
+  "817540-SpellForce 3: Soul Harvest Booster Pack": {
+    "item_nameid": 176074609,
+    "is_marketable": true
+  },
+  "1002560-Tiny Snow Booster Pack": {
+    "item_nameid": 176075575,
+    "is_marketable": true
+  },
+  "621000-\u5f02\u5e38 | Exception Booster Pack": {
+    "item_nameid": 176074267,
+    "is_marketable": true
+  },
+  "460950-Katana ZERO Booster Pack": {
+    "item_nameid": 176077205,
+    "is_marketable": true
   }
 }
