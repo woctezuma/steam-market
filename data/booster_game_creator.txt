@@ -87,6 +87,7 @@
 <option value="558100" class="available">Art of War: Red Tides - 667  Gems</option>
 <option value="598230" class="available">Ascender - 1000  Gems</option>
 <option value="507490" class="available">Ashes of the Singularity: Escalation - 1000  Gems</option>
+<option value="612290" class="available">ASTA Online - 667  Gems</option>
 <option value="542560" class="available">Astro Boy: Edge of Time - 667  Gems</option>
 <option value="385530" class="available">Astro Lords - 1000  Gems</option>
 <option value="357490" class="available">Astroloco: Worst Contact - 1000  Gems</option>
@@ -211,6 +212,7 @@
 <option value="29800" class="available">Caster - 1000  Gems</option>
 <option value="704040" class="available">Castle Clicker - 400  Gems</option>
 <option value="204360" class="available">Castle Crashers - 1000  Gems</option>
+<option value="384740" class="available">CAT Interstellar - 1200  Gems</option>
 <option value="593280" class="available">Cat Quest - 1000  Gems</option>
 <option value="544730" class="available">Catan Universe - 1000  Gems</option>
 <option value="451880" class="available">Catch a Falling Star - 1000  Gems</option>
@@ -240,6 +242,7 @@
 <option value="377330" class="available">Close Your Eyes - 1200  Gems</option>
 <option value="215830" class="available">Closers - 1200  Gems</option>
 <option value="72000" class="available">Closure - 1000  Gems</option>
+<option value="559460" class="available">Cloud Pirates - 750  Gems</option>
 <option value="242780" class="available">Cognition: An Erica Reed Thriller - 500  Gems</option>
 <option value="264690" class="available">Coin Crypt - 1200  Gems</option>
 <option value="565640" class="available">Colorful Life - 1200  Gems</option>
@@ -381,6 +384,7 @@
 <option value="98800" class="available">Dungeons of Dredmor - 1000  Gems</option>
 <option value="236090" class="available">Dust: An Elysian Tail - 750  Gems</option>
 <option value="65300" class="available">Dustforce - 750  Gems</option>
+<option value="730310" class="available">DYNASTY WARRIORS 9 - 400  Gems</option>
 <option value="303410" class="available">Dysan the Shapeshifter - 1200  Gems</option>
 <option value="234920" class="available">Dyscourse - 1000  Gems</option>
 <option value="232050" class="available">Eador. Masters of the Broken World - 750  Gems</option>
@@ -809,6 +813,7 @@
 <option value="408280" class="available">Message Quest - 1200  Gems</option>
 <option value="564080" class="available">Metagalactic Blitz - 1000  Gems</option>
 <option value="499950" class="available">Metal Assault - Gigaslave - Europe - 1000  Gems</option>
+<option value="512200" class="available">Metal Carnage - 667  Gems</option>
 <option value="32200" class="available">Metal Drift - 1000  Gems</option>
 <option value="287700" class="available">METAL GEAR SOLID V: THE PHANTOM PAIN - 857  Gems</option>
 <option value="581130" class="available">Metal Waltz - 400  Gems</option>
@@ -1301,6 +1306,7 @@
 <option value="271860" class="available">Super Killer Hornet: Resurrection - 600  Gems</option>
 <option value="40800" class="available">Super Meat Boy - 1200  Gems</option>
 <option value="311190" class="available">Super Panda Adventures - 1000  Gems</option>
+<option value="629420" class="available">Super Perspective - 1000  Gems</option>
 <option value="675630" class="available">Super POTUS Trump - 1000  Gems</option>
 <option value="384250" class="available">Super Rude Bear Resurrection - 600  Gems</option>
 <option value="235250" class="available">Super Sanctum TD - 1200  Gems</option>
