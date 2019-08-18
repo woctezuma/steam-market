@@ -609,6 +609,7 @@
 <option value="283880" class="available">Heroine's Quest: The Herald of Ragnarok - 750  Gems</option>
 <option value="410380" class="available">HEX: Shards of Fate - 1000  Gems</option>
 <option value="480430" class="available">Hide and Shriek - 1200  Gems</option>
+<option value="374280" class="available">Hired Ops - 429  Gems</option>
 <option value="342570" class="available">HIS (Heroes In the Sky) - 1200  Gems</option>
 <option value="341890" class="available">Hitbox - 1000  Gems</option>
 <option value="203140" class="available">Hitman: Absolution - 667  Gems</option>
@@ -1224,6 +1225,7 @@
 <option value="630100" class="available">SoulWorker - 750  Gems</option>
 <option value="247140" class="available">Soundodger+ - 1200  Gems</option>
 <option value="244850" class="available">Space Engineers - 667  Gems</option>
+<option value="429470" class="available">Space Pilgrim Episode I: Alpha Centauri - 1200  Gems</option>
 <option value="107200" class="available">Space Pirates and Zombies - 1000  Gems</option>
 <option value="355800" class="available">Space Run Galaxy - 857  Gems</option>
 <option value="574070" class="available">Space Wars: Interstellar Empires - 500  Gems</option>
@@ -1416,6 +1418,7 @@
 <option value="327310" class="available">The Marvellous Miss Take - 1000  Gems</option>
 <option value="313080" class="available">The Masterplan - 1200  Gems</option>
 <option value="239220" class="available">The Mighty Quest For Epic Loot - 667  Gems</option>
+<option value="412540" class="available">The Minotaur - 857  Gems</option>
 <option value="245150" class="available">The Novelist - 1000  Gems</option>
 <option value="386700" class="available">The Oil Blue - 1000  Gems</option>
 <option value="265590" class="available">The Red Solstice - 1000  Gems</option>
