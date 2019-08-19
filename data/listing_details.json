@@ -35690,5 +35690,65 @@
   "460950-Katana ZERO Booster Pack": {
     "item_nameid": 176077205,
     "is_marketable": true
+  },
+  "419700-AT SUNDOWN: Shots in the Dark Booster Pack": {
+    "item_nameid": 176079095,
+    "is_marketable": true
+  },
+  "599080-The Blackout Club Booster Pack": {
+    "item_nameid": 176078262,
+    "is_marketable": true
+  },
+  "940680-The Textorcist: The Story of Ray Bibbia Booster Pack": {
+    "item_nameid": 176078910,
+    "is_marketable": true
+  },
+  "859340-Seeking Dawn Booster Pack": {
+    "item_nameid": 176071028,
+    "is_marketable": true
+  },
+  "510540-Long Gone Days Booster Pack": {
+    "item_nameid": 176078919,
+    "is_marketable": true
+  },
+  "630060-Consummate:Missing World \u5bc7\u838e\u6885\u7279\uff1a\u56f0\u4e16\u8ff7\u60c5 Booster Pack": {
+    "item_nameid": 176076465,
+    "is_marketable": true
+  },
+  "718850-Age of Wonders: Planetfall Booster Pack": {
+    "item_nameid": 176078133,
+    "is_marketable": true
+  },
+  "1088650-Dance Dance Girl Booster Pack": {
+    "item_nameid": 176078339,
+    "is_marketable": true
+  },
+  "627350-London Detective Mysteria Booster Pack": {
+    "item_nameid": 176077509,
+    "is_marketable": true
+  },
+  "383240-Angels That Kill - The Final Cut Booster Pack": {
+    "item_nameid": 176073101,
+    "is_marketable": true
+  },
+  "754850-The Spy Who Shrunk Me Booster Pack": {
+    "item_nameid": 176074111,
+    "is_marketable": true
+  },
+  "745330-StrikeForce Kitty Booster Pack": {
+    "item_nameid": 176072368,
+    "is_marketable": true
+  },
+  "943980-The logic of the miniature garden Booster Pack": {
+    "item_nameid": 176072956,
+    "is_marketable": true
+  },
+  "1007040-EARTH DEFENSE FORCE 5 Booster Pack": {
+    "item_nameid": 176074627,
+    "is_marketable": true
+  },
+  "730310-DYNASTY WARRIORS 9 Booster Pack": {
+    "item_nameid": 176078388,
+    "is_marketable": true
   }
 }
