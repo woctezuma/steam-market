@@ -36,6 +36,7 @@
 <option value="298890" class="available">Adventure Time: The Secret Of The Nameless Kingdom - 1200 , Gems</option>
 <option value="247830" class="available">Aerena - 750 , Gems</option>
 <option value="224420" class="available">Afterfall InSanity Extended Edition - 1000 , Gems</option>
+<option value="344260" class="available">Agapan - 1200 , Gems</option>
 <option value="454600" class="available">Age of Cavemen - 857 , Gems</option>
 <option value="314970" class="available">Age of Conquest IV - 1000 , Gems</option>
 <option value="599060" class="available">Age of Heroes: Conquest - 1000 , Gems</option>
@@ -318,6 +319,7 @@
 <option value="63800" class="available">Delve Deeper - 400 , Gems</option>
 <option value="338810" class="available">Demise of Nations - 1000 , Gems</option>
 <option value="245470" class="available">Democracy 3 - 1000 , Gems</option>
+<option value="330990" class="available">Demon Hunter: Chronicles from Beyond - 1000 , Gems</option>
 <option value="215630" class="available">Demonicon - 667 , Gems</option>
 <option value="214340" class="available">Deponia - 750 , Gems</option>
 <option value="421050" class="available">Deponia Doomsday - 750 , Gems</option>
@@ -509,7 +511,7 @@
 <option value="370590" class="available">Gem Wars: Attack of the Jiblets - 1200 , Gems</option>
 <option value="80310" class="available">Gemini Rue - 1000 , Gems</option>
 <option value="329110" class="available">Gems of War - 667 , Gems</option>
-<option value="308600" class="available">Geneshift Royale - 600 , Gems</option>
+<option value="308600" class="available">Geneshift: Battle Royale Turbo - 600 , Gems</option>
 <option value="260410" class="available">Get Off My Lawn! - 1000 , Gems</option>
 <option value="463270" class="available">Ghost 1.0 - 1000 , Gems</option>
 <option value="353070" class="available">Ghost Encounters: Deadwood - Collector's Edition - 750 , Gems</option>
@@ -684,6 +686,7 @@
 <option value="352080" class="available">Judge Dredd: Countdown Sector 106 - 750 , Gems</option>
 <option value="431930" class="available">Kabounce - 1000 , Gems</option>
 <option value="233230" class="available">Kairo - 1000 , Gems</option>
+<option value="1048540" class="available">Kao the Kangaroo: Round 2 - 1200 , Gems</option>
 <option value="370910" class="available">Kathy Rain - 1000 , Gems</option>
 <option value="234270" class="available">Ken Follett's The Pillars of the Earth - 857 , Gems</option>
 <option value="292500" class="available">Kero Blaster - 857 , Gems</option>
@@ -837,6 +840,7 @@
 <option value="649900" class="available">Mini Guns - 1000 , Gems</option>
 <option value="287980" class="available">Mini Metro - 1200 , Gems</option>
 <option value="209520" class="available">Mini Motor Racing EVO - 750 , Gems</option>
+<option value="914700" class="available">MINImax Tinyverse - 750 , Gems</option>
 <option value="489520" class="available">Minion Masters - 1000 , Gems</option>
 <option value="609490" class="available">Minit - 1200 , Gems</option>
 <option value="368420" class="available">Mirage: Arcane Warfare - 1000 , Gems</option>
@@ -862,8 +866,10 @@
 <option value="638070" class="available">Murderous Pursuits - 667 , Gems</option>
 <option value="243160" class="available">Mushroom 11 - 857 , Gems</option>
 <option value="247370" class="available">Mutant Mudds Deluxe - 750 , Gems</option>
+<option value="855640" class="available">My Brother Rabbit - 1200 , Gems</option>
 <option value="799240" class="available">My Free Farm 2 - 1200 , Gems</option>
 <option value="694130" class="available">My Free Zoo - 400 , Gems</option>
+<option value="431510" class="available">Mystic Destinies: Serendipity of Aeons - 1200 , Gems</option>
 <option value="615340" class="available">Mystic Journey: Tri Peaks Solitaire - 1200 , Gems</option>
 <option value="270090" class="available">N.P.P.D. RUSH - The milk of Ultra violet - 1200 , Gems</option>
 <option value="4920" class="available">Natural Selection 2 - 750 , Gems</option>
@@ -1242,6 +1248,7 @@
 <option value="429680" class="available">Spellweaver - 1000 , Gems</option>
 <option value="239350" class="available">Spelunky - 750 , Gems</option>
 <option value="397040" class="available">Sphere III: Enchanted World - 667 , Gems</option>
+<option value="263280" class="available">Spintires® - 857 , Gems</option>
 <option value="99900" class="available">Spiral Knights - 500 , Gems</option>
 <option value="210170" class="available">Spirits - 1000 , Gems</option>
 <option value="281920" class="available">Splatter - Blood Red Edition - 857 , Gems</option>
@@ -1251,6 +1258,7 @@
 <option value="311720" class="available">Sproggiwood - 750 , Gems</option>
 <option value="297490" class="available">Spy Chameleon - RGB Agent - 1200 , Gems</option>
 <option value="283980" class="available">SPY Fox in: Dry Cereal - 750 , Gems</option>
+<option value="996580" class="available">Spyro™ Reignited Trilogy - 400 , Gems</option>
 <option value="526920" class="available">SQUAKE - 1200 , Gems</option>
 <option value="115110" class="available">Stacking - 667 , Gems</option>
 <option value="212070" class="available">Star Conflict - 600 , Gems</option>
@@ -1465,6 +1473,7 @@
 <option value="398710" class="available">Timberman - 1200 , Gems</option>
 <option value="500150" class="available">Time Gap - 857 , Gems</option>
 <option value="313650" class="available">Time Mysteries 2: The Ancient Spectres - 1000 , Gems</option>
+<option value="319320" class="available">Time Mysteries 3: The Final Enigma - 1000 , Gems</option>
 <option value="205910" class="available">Tiny and Big: Grandpa's Leftovers - 1200 , Gems</option>
 <option value="629770" class="available">Tiny Echo - 1200 , Gems</option>
 <option value="614630" class="available">Tiny Rails - 1200 , Gems</option>
@@ -1608,6 +1617,7 @@
 <option value="552990" class="available">World of Warships - 600 , Gems</option>
 <option value="530020" class="available">World to the West - 429 , Gems</option>
 <option value="254080" class="available">World War III: Black Gold - 857 , Gems</option>
+<option value="434300" class="available">Wormhole City - 1200 , Gems</option>
 <option value="327030" class="available">Worms W.M.D - 857 , Gems</option>
 <option value="253610" class="available">Wrack - 857 , Gems</option>
 <option value="400630" class="available">Wuppo - 1000 , Gems</option>
