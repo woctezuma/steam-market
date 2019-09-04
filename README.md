@@ -88,6 +88,20 @@ There are two solutions:
    For instance, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and run:<br/>
 ![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
 
+5. Strip the following unnecessary lines:
+
+   - three lines (including an empty line) at the beginning:
+   ```html
+   <select id="booster_game_selector">
+                           <option value="">Select a game...</option>
+    
+   ```
+
+   - one line at the end:
+   ```html
+   </select>
+   ```
+
 #### Solution B
 
 Alternatively, if you wish not to install any browser extension:
@@ -98,6 +112,22 @@ Alternatively, if you wish not to install any browser extension:
 ![javascript list of games](https://github.com/woctezuma/steam-market/wiki/img/JBxJue8.png)
     
 3. Paste the line to `data/booster_game_creator_from_javascript.txt`.
+
+4. Strip mentions of packs unavailable because they were crafted less than 24 hours ago. For instance:
+   ```json
+   {"appid":996580,"name":"Spyro\u2122 Reignited Trilogy","series":1,"price":"400",
+   "unavailable":true,"available_at_time":"4 Sep @ 7:06pm"}
+    ```
+    should be replaced with:
+   ```json
+   {"appid":996580,"name":"Spyro\u2122 Reignited Trilogy","series":1,"price":"400"}
+    ```    
+
+   To do so, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and remove occurences of :<br/>
+![Visual Studio Code: remove mentions of unavailability](https://github.com/woctezuma/steam-market/wiki/img/sw2fFnT.png)
+   ```regexp
+   ,"unavailable":true,"available_at_time":"[\w ]*@[\w :]*"
+   ```
 
 ## Usage
 
