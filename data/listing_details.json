@@ -35750,5 +35750,65 @@
   "730310-DYNASTY WARRIORS 9 Booster Pack": {
     "item_nameid": 176078388,
     "is_marketable": true
+  },
+  "522050-Torsion Booster Pack": {
+    "item_nameid": 176081195,
+    "is_marketable": true
+  },
+  "762830-Telling Lies Booster Pack": {
+    "item_nameid": 176081724,
+    "is_marketable": true
+  },
+  "1074080-SENRAN KAGURA Peach Ball Booster Pack": {
+    "item_nameid": 176079627,
+    "is_marketable": true
+  },
+  "987720-ONINAKI Booster Pack": {
+    "item_nameid": 176081486,
+    "is_marketable": true
+  },
+  "1067720-Hellsinker. Booster Pack": {
+    "item_nameid": 176079166,
+    "is_marketable": true
+  },
+  "1072150-Hedon Booster Pack": {
+    "item_nameid": 176077438,
+    "is_marketable": true
+  },
+  "726360-Boobs Saga Booster Pack": {
+    "item_nameid": 176081776,
+    "is_marketable": true
+  },
+  "1042800-Warhammer 40,000: Inquisitor - Prophecy Booster Pack": {
+    "item_nameid": 176077868,
+    "is_marketable": true
+  },
+  "1069230-\u6708\u5f71\u9b45\u50cf-\u89e3\u653e\u4e4b\u7fbd- Booster Pack": {
+    "item_nameid": 176078377,
+    "is_marketable": true
+  },
+  "960980-Apsulov: End of Gods Booster Pack": {
+    "item_nameid": 176080234,
+    "is_marketable": true
+  },
+  "1084400-Hentai Arena | Battle Royale Booster Pack": {
+    "item_nameid": 176080415,
+    "is_marketable": true
+  },
+  "263280-Spintires\u00ae Booster Pack": {
+    "item_nameid": 176083617,
+    "is_marketable": true
+  },
+  "914700-MINImax Tinyverse Booster Pack": {
+    "item_nameid": 176082461,
+    "is_marketable": true
+  },
+  "996580-Spyro\u2122 Reignited Trilogy Booster Pack": {
+    "item_nameid": 176083497,
+    "is_marketable": true
+  },
+  "1048540-Kao the Kangaroo: Round 2 Booster Pack": {
+    "item_nameid": 176082110,
+    "is_marketable": true
   }
 }
