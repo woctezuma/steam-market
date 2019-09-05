@@ -140,11 +140,13 @@ def group_concatenate_to_str(data,
     asf_command = 'addlicense'
     asf_complete_command = '{} {} '.format(asf_command, asf_username)
 
+    prepend_asf_command = bool(asf_username is not None) and bool(len(data) > 0)
+
     line_sep = '\n'
     space_sep = ' '
 
     group_sep = line_sep
-    if asf_username is not None:
+    if prepend_asf_command:
         group_sep += asf_complete_command
 
     inner_sep = space_sep
@@ -156,7 +158,7 @@ def group_concatenate_to_str(data,
         for group in chunks(data, group_size)
     ])
 
-    if asf_username is not None:
+    if prepend_asf_command:
         # Prepend the ASF command to the first line (missed by .join() calls)
         output = asf_complete_command + output
 
