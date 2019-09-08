@@ -148,6 +148,20 @@ def populate_random_samples_of_badge_data(badge_data=None, num_samples=50):
     return True
 
 
+def main(populate_all_item_name_ids=False):
+    if populate_all_item_name_ids:
+        # Pre-retrieval of ALL of the MISSING item name ids.
+        # Caveat: this may require a long time, due to API rate limits.
+
+        all_listings = load_all_listings()
+        item_nameids = get_item_nameid_batch(listing_hashes=all_listings)
+
+    else:
+        aggregated_badge_data = load_aggregated_badge_data()
+        populate_random_samples_of_badge_data(aggregated_badge_data, num_samples=50)
+
+    return True
+
+
 if __name__ == '__main__':
-    aggregated_badge_data = load_aggregated_badge_data()
-    populate_random_samples_of_badge_data(aggregated_badge_data, num_samples=50)
+    main(populate_all_item_name_ids=False)
