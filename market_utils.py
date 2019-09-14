@@ -88,6 +88,10 @@ def aggregate_badge_data(badge_creation_details,
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]['name']
         gem_amount_required_to_craft_booster_pack = badge_creation_details[app_id]['gem_value']
+        try:
+            next_creation_time = badge_creation_details[app_id]['next_creation_time']
+        except KeyError:
+            next_creation_time = None
         listing_hash = badge_matches[app_id]
 
         if listing_hash is None:
@@ -104,6 +108,7 @@ def aggregate_badge_data(badge_creation_details,
         aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
         aggregated_badge_data[app_id]['gem_price'] = gem_amount_required_to_craft_booster_pack * gem_price
         aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
+        aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
 
     return aggregated_badge_data
 
