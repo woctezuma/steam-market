@@ -72,6 +72,7 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
         app_id = get_sub_string(badge_as_str, '"appid":', field_separator + '"name":')
         app_name = get_sub_string(badge_as_str, '"name":', field_separator + '"series":')
         gem_value = get_sub_string(badge_as_str, '"price":', field_separator + '"unavailable":')
+        next_creation_time = get_sub_string(badge_as_str, '"available_at_time":', '}')
 
         app_id = int(app_id)
         app_name = fix_unicode_characters_in_app_name_from_javascript_code(app_name.strip('"'))
@@ -85,9 +86,11 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
         badge_creation_details[app_id] = dict()
         badge_creation_details[app_id]['name'] = app_name
         badge_creation_details[app_id]['gem_value'] = gem_value
+        if len(next_creation_time) > 0:
+            badge_creation_details[app_id]['next_creation_time'] = next_creation_time
 
         if verbose:
-            print('{}\t{}\t{}'.format(app_id, app_name, gem_value))
+            print('{}\t{}\t{} gems\t{}'.format(app_id, app_name, gem_value, next_creation_time))
 
         if '\\u' in app_name:
             # Manually add the characters to replace in fix_unicode_characters_in_app_name_from_javascript_code()
