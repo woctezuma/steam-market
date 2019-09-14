@@ -41,9 +41,12 @@ def fix_unicode_characters_in_app_name_from_javascript_code(app_name):
 
 
 def get_sub_string(input_str, key_start_str, key_end_str=None):
-    search_start_index = input_str.index(key_start_str)
-    sub_string_start_index = search_start_index + len(key_start_str)
-    sub_string = input_str[sub_string_start_index:]
+    try:
+        search_start_index = input_str.index(key_start_str)
+        sub_string_start_index = search_start_index + len(key_start_str)
+        sub_string = input_str[sub_string_start_index:]
+    except ValueError:
+        sub_string = ''
 
     try:
         search_end_index = sub_string.index(key_end_str)
