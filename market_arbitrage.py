@@ -1,10 +1,89 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
+import datetime
+
 from inventory_utils import create_then_sell_booster_packs_for_batch
 from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
+
+
+def get_current_time():
+    current_time = datetime.datetime.today()
+
+    return current_time
+
+
+def get_creation_time_format():
+    # Reference: https://docs.python.org/3/library/time.html#time.strftime
+
+    # The format used in: '14 Sep @ 10:48pm'
+    time_format = '%d %b @ %I:%M%p'
+
+    return time_format
+
+
+def get_crafting_cooldown_duration_in_seconds():
+    # For every game, a booster pack can be crafted every day.
+    crafting_cooldown_duration_in_seconds = 24 * 3600
+
+    return crafting_cooldown_duration_in_seconds
+
+
+def determine_whether_a_booster_pack_can_be_crafted(badge_data,
+                                                    current_time=None):
+    if current_time is None:
+        current_time = get_current_time()
+
+    next_creation_time = badge_data['next_creation_time']
+
+    if next_creation_time is None:
+        a_booster_pack_can_be_crafted = True
+    else:
+        parsed_next_creation_time = datetime.datetime.strptime(next_creation_time,
+                                                               get_creation_time_format())
+
+        # Manually set the year, because it was not stored at creation time, following Valve's time format.
+        parsed_next_creation_time = parsed_next_creation_time.replace(year=current_time.year)
+
+        delta = parsed_next_creation_time - current_time
+        delta_in_seconds = delta.total_seconds()
+
+        # parsed_next_creation_time < current_time
+        cooldown_has_ended = bool(delta_in_seconds < 0)
+
+        # current_time + cooldown < parsed_next_creation_time
+        # NB: this is necessary because we do not keep track of the year.
+        cooldown_actually_ended_last_year = bool(get_crafting_cooldown_duration_in_seconds() < delta_in_seconds)
+
+        a_booster_pack_can_be_crafted = cooldown_has_ended or cooldown_actually_ended_last_year
+
+    return a_booster_pack_can_be_crafted
+
+
+def filter_out_badges_recently_crafted(aggregated_badge_data, verbose=True):
+    # Filter out games for which a booster pack was crafted less than 24 hours ago,
+    # and thus which cannot be immediately crafted.
+
+    filtered_badge_data = dict()
+
+    current_time = get_current_time()
+
+    for app_id in aggregated_badge_data.keys():
+        individual_badge_data = aggregated_badge_data[app_id]
+
+        booster_pack_can_be_crafted = determine_whether_a_booster_pack_can_be_crafted(individual_badge_data,
+                                                                                      current_time)
+
+        if booster_pack_can_be_crafted:
+            filtered_badge_data[app_id] = individual_badge_data
+
+    if verbose:
+        print('There are {} booster packs which can be immediately crafted. ({} excluded because on cooldown)'.format(
+            len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data)))
+
+    return filtered_badge_data
 
 
 def determine_whether_an_arbitrage_might_exist(badge_data):
@@ -193,6 +272,8 @@ def apply_workflow(retrieve_listings_from_scratch=True,
                                                        from_javascript=from_javascript)
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+
+    filtered_badge_data = filter_out_badges_recently_crafted(filtered_badge_data)
 
     market_order_dict = load_market_order_data(filtered_badge_data,
                                                retrieve_market_orders_online=retrieve_market_orders_online)
