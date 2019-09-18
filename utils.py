@@ -41,12 +41,19 @@ def get_market_order_file_name():
     return market_order_file_name
 
 
+def get_next_creation_time_file_name():
+    next_creation_time_file_name = get_data_folder() + 'next_creation_times.json'
+
+    return next_creation_time_file_name
+
+
 def main():
     for file_name in [get_badge_creation_file_name(from_javascript=False),
                       get_badge_creation_file_name(from_javascript=True),
                       get_listing_output_file_name(),
                       get_sack_of_gems_listing_file_name(),
                       get_market_order_file_name(),
+                      get_next_creation_time_file_name(),
                       get_listing_details_output_file_name()]:
         print(file_name)
 
