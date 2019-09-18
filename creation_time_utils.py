@@ -1,4 +1,32 @@
 import datetime
+import json
+
+from utils import get_next_creation_time_file_name
+
+
+def load_next_creation_time_data():
+    try:
+        with open(get_next_creation_time_file_name(), 'r') as f:
+            next_creation_times = json.load(f)
+    except FileNotFoundError:
+        next_creation_times = dict()
+
+    return next_creation_times
+
+
+def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data):
+    next_creation_times_loaded_from_disk = load_next_creation_time_data()
+
+    for app_id in aggregated_badge_data.keys():
+        try:
+            next_creation_time = next_creation_times_loaded_from_disk[app_id]
+        except KeyError:
+            next_creation_time = None
+
+        if next_creation_time is not None:
+            aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
+
+    return aggregated_badge_data
 
 
 def get_current_time():

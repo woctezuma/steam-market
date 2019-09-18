@@ -1,6 +1,7 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
 
+from creation_time_utils import fill_in_badges_with_next_creation_times_loaded_from_disk
 from creation_time_utils import get_current_time, determine_whether_a_booster_pack_can_be_crafted
 from inventory_utils import create_then_sell_booster_packs_for_batch
 from market_order import load_market_order_data
@@ -217,6 +218,8 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
                                                        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                                                        from_javascript=from_javascript)
+
+    aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
