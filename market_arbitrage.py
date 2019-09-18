@@ -80,7 +80,7 @@ def filter_out_badges_recently_crafted(aggregated_badge_data, verbose=True):
             filtered_badge_data[app_id] = individual_badge_data
 
     if verbose:
-        print('There are {} booster packs which can be immediately crafted. ({} excluded because on cooldown)'.format(
+        print('There are {} booster packs which can be immediately crafted. ({} excluded because of cooldown)'.format(
             len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data)))
 
     return filtered_badge_data
