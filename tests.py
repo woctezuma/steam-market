@@ -1,5 +1,6 @@
 import unittest
 
+import creation_time_utils
 import market_arbitrage
 import market_listing
 import market_order
@@ -32,6 +33,12 @@ class TestParsingUtilsMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(parsing_utils.main())
+
+
+class TestCreationTimeUtilsMethods(unittest.TestCase):
+
+    def test_main(self):
+        self.assertTrue(creation_time_utils.main())
 
 
 class TestSackOfGemsMethods(unittest.TestCase):
