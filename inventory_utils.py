@@ -2,8 +2,10 @@ import json
 
 import requests
 
+from creation_time_utils import get_formatted_current_time, get_crafting_cooldown_duration_in_days
+from creation_time_utils import load_next_creation_time_data
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
-from utils import get_data_folder, convert_listing_hash_to_app_id
+from utils import get_data_folder, convert_listing_hash_to_app_id, get_next_creation_time_file_name
 
 
 def get_my_steam_profile_id():
@@ -338,7 +340,39 @@ def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
     sale_results = sell_booster_packs_for_batch(price_dict_for_listing_hashes,
                                                 update_steam_inventory=update_steam_inventory)
 
+    next_creation_times = update_and_save_next_creation_times(creation_results)
+
     return creation_results, sale_results
+
+
+def update_and_save_next_creation_times(creation_results,
+                                        verbose=True):
+    next_creation_times = load_next_creation_time_data()
+
+    delay_in_days = get_crafting_cooldown_duration_in_days()
+    formatted_next_creation_time = get_formatted_current_time(delay_in_days=delay_in_days)
+
+    save_to_disk = False
+
+    for listing_hash in creation_results:
+        result = creation_results[listing_hash]
+
+        if result is not None:
+            app_id = convert_listing_hash_to_app_id(listing_hash)
+            next_creation_times[app_id] = formatted_next_creation_time
+
+            save_to_disk = True
+
+            if verbose:
+                print('Updating next creation time for {} (appID={}): {}.'.format(listing_hash,
+                                                                                  app_id,
+                                                                                  formatted_next_creation_time))
+
+    if save_to_disk:
+        with open(get_next_creation_time_file_name(), 'w') as f:
+            json.dump(next_creation_times, f)
+
+    return next_creation_times
 
 
 def main():
