@@ -44,9 +44,36 @@ def get_creation_time_format():
     return time_format
 
 
-def get_crafting_cooldown_duration_in_seconds():
+def get_formatted_time(time_struct=None):
+    if time_struct is None:
+        time_struct = get_current_time()
+
+    formatted_time_as_str = datetime.datetime.strftime(time_struct,
+                                                       get_creation_time_format())
+
+    return formatted_time_as_str
+
+
+def get_formatted_current_time(delay_in_days=0):
+    current_time = get_current_time()
+
+    if delay_in_days != 0:
+        current_time += datetime.timedelta(days=delay_in_days)
+
+    formatted_current_time_as_str = get_formatted_time(current_time)
+
+    return formatted_current_time_as_str
+
+
+def get_crafting_cooldown_duration_in_days():
     # For every game, a booster pack can be crafted every day.
-    crafting_cooldown_duration_in_seconds = 24 * 3600
+    crafting_cooldown_duration_in_days = 1
+
+    return crafting_cooldown_duration_in_days
+
+
+def get_crafting_cooldown_duration_in_seconds():
+    crafting_cooldown_duration_in_seconds = 24 * 3600 * get_crafting_cooldown_duration_in_days()
 
     return crafting_cooldown_duration_in_seconds
 
@@ -83,10 +110,7 @@ def determine_whether_a_booster_pack_can_be_crafted(badge_data,
 
 
 def main():
-    formatted_current_date = datetime.datetime.strftime(get_current_time(),
-                                                        get_creation_time_format())
-
-    print(formatted_current_date)
+    print(get_formatted_current_time())
 
     return True
 
