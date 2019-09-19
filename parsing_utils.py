@@ -113,14 +113,14 @@ def parse_augmented_steam_drop_down_menu(lines, verbose=False):
 
     for l in lines:
         s = l.split()
-        # e.g. ['<option', 'value="614910"', 'class="available">#monstercakes', '-', '1200', ',', 'Gems</option>']
+        # e.g. ['<option', 'value="614910"', 'class="available">#monstercakes', '-', '1200', 'Gems</option>']
 
         # Hard-coded parsing
         app_id = int(s[1].split('=')[1].strip('"'))
         app_name = s[2].split('available">')[1] + ' '
-        app_name += ' '.join(s[3:-4])
+        app_name += ' '.join(s[3:-3])
         app_name = app_name.strip()
-        gem_value = int(s[-3])
+        gem_value = int(s[-2])
 
         app_name = fix_app_name_for_url_query(app_name)
 
