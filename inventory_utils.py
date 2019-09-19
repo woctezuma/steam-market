@@ -5,6 +5,7 @@ import requests
 from creation_time_utils import get_formatted_current_time, get_crafting_cooldown_duration_in_days
 from creation_time_utils import load_next_creation_time_data
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
+from utils import convert_listing_hash_to_app_name
 from utils import get_data_folder, convert_listing_hash_to_app_id, get_next_creation_time_file_name
 
 
@@ -364,9 +365,11 @@ def update_and_save_next_creation_times(creation_results,
             save_to_disk = True
 
             if verbose:
-                print('Updating next creation time for {} (appID={}): {}.'.format(listing_hash,
-                                                                                  app_id,
-                                                                                  formatted_next_creation_time))
+                app_name = convert_listing_hash_to_app_name(listing_hash)
+                print('Saving the next creation time ({}) for {} (appID = {}) to disk.'.format(
+                    formatted_next_creation_time,
+                    app_name,
+                    app_id))
 
     if save_to_disk:
         with open(get_next_creation_time_file_name(), 'w') as f:

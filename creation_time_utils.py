@@ -29,9 +29,11 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
             aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
 
             if verbose:
+                app_name = aggregated_badge_data[app_id]['name']
                 if previously_loaded_next_creation_time is None:
-                    print('Loading next creation time ({}) from disk for appID={}.'.format(
+                    print('Loading the next creation time ({}) for {} (appID = {}) from disk.'.format(
                         next_creation_time,
+                        app_name,
                         app_id))
                 else:
                     # NB: Data stored in data/next_creation_times.json is assumed to be more up-to-date compared to
@@ -39,10 +41,11 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
                     #     file with data found on your Booster Pack Creator page, then the .json file would be useless,
                     #     and you should delete it. Therefore, if the .json file is present on your disk, it can be
                     #     assumed that it was created by running this program, thus is more recent than the .txt file.
-                    print('Replacing next creation time ({}) with one loaded from disk ({}) for appID={}.'.format(
+                    print('Replacing the next creation time ({}) for {} (appID = {}) with {}, loaded from disk.'.format(
                         previously_loaded_next_creation_time,
-                        next_creation_time,
-                        app_id))
+                        app_name,
+                        app_id,
+                        next_creation_time))
 
     return aggregated_badge_data
 
