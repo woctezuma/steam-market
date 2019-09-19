@@ -36314,5 +36314,13 @@
   "417400-LeftWay Booster Pack": {
     "item_nameid": 176084367,
     "is_marketable": true
+  },
+  "344260-Agapan Booster Pack": {
+    "item_nameid": 176084662,
+    "is_marketable": true
+  },
+  "316390-Anomaly Zone Booster Pack": {
+    "item_nameid": 176084997,
+    "is_marketable": true
   }
 }
