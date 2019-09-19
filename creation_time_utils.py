@@ -34,6 +34,11 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
                         next_creation_time,
                         app_id))
                 else:
+                    # NB: Data stored in data/next_creation_times.json is assumed to be more up-to-date compared to
+                    #     data stored in data/booster_game_creator_from_javascript.txt. Indeed, if you  update the .txt
+                    #     file with data found on your Booster Pack Creator page, then the .json file would be useless,
+                    #     and you should delete it. Therefore, if the .json file is present on your disk, it can be
+                    #     assumed that it was created by running this program, thus is more recent than the .txt file.
                     print('Replacing next creation time ({}) with one loaded from disk ({}) for appID={}.'.format(
                         previously_loaded_next_creation_time,
                         next_creation_time,
