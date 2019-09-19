@@ -14,7 +14,8 @@ def load_next_creation_time_data():
     return next_creation_times
 
 
-def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data):
+def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data,
+                                                             verbose=True):
     next_creation_times_loaded_from_disk = load_next_creation_time_data()
 
     for app_id in aggregated_badge_data.keys():
@@ -24,7 +25,19 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
             next_creation_time = None
 
         if next_creation_time is not None:
+            previously_loaded_next_creation_time = aggregated_badge_data[app_id]['next_creation_time']
             aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
+
+            if verbose:
+                if previously_loaded_next_creation_time is None:
+                    print('Loading next creation time ({}) from disk for appID={}.'.format(
+                        next_creation_time,
+                        app_id))
+                else:
+                    print('Replacing next creation time ({}) with one loaded from disk ({}) for appID={}.'.format(
+                        previously_loaded_next_creation_time,
+                        next_creation_time,
+                        app_id))
 
     return aggregated_badge_data
 

@@ -92,6 +92,10 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
             next_creation_time_inner_str = next_creation_time[1:-1]
             badge_creation_details[app_id]['next_creation_time'] = next_creation_time_inner_str
 
+            print('Loading next creation time ({}) from list of craftable booster packs for appID={}.'.format(
+                next_creation_time_inner_str,
+                app_id))
+
         if verbose:
             print('{}\t{}\t{} gems\t{}'.format(app_id, app_name, gem_value, next_creation_time))
 
