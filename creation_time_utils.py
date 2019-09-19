@@ -11,7 +11,16 @@ def load_next_creation_time_data():
     except FileNotFoundError:
         next_creation_times = dict()
 
-    return next_creation_times
+    # NB: the keys in a dictionary loaded from a .json file are always str. We want to convert them to int now.
+
+    next_creation_times_with_keys_as_int = dict()
+
+    for app_id_as_str in next_creation_times.keys():
+        app_id_as_int = int(app_id_as_str)
+
+        next_creation_times_with_keys_as_int[app_id_as_int] = next_creation_times[app_id_as_str]
+
+    return next_creation_times_with_keys_as_int
 
 
 def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data,
