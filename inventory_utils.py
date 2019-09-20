@@ -354,6 +354,7 @@ def update_and_save_next_creation_times(creation_results,
     formatted_next_creation_time = get_formatted_current_time(delay_in_days=delay_in_days)
 
     save_to_disk = False
+    is_first_displayed_line = True
 
     for listing_hash in creation_results:
         result = creation_results[listing_hash]
@@ -365,6 +366,12 @@ def update_and_save_next_creation_times(creation_results,
             save_to_disk = True
 
             if verbose:
+
+                # Print an empty line the first time, to clearly separate the block from what was previously displayed.
+                if is_first_displayed_line:
+                    print('')
+                    is_first_displayed_line = False
+
                 app_name = convert_listing_hash_to_app_name(listing_hash)
                 print('Saving the next creation time ({}) for {} (appID = {}) to disk.'.format(
                     formatted_next_creation_time,
