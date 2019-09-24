@@ -10,6 +10,35 @@ from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
 
 
+def determine_whether_booster_pack_was_crafted_at_least_once(badge_data):
+    next_creation_time = badge_data['next_creation_time']
+
+    booster_pack_has_been_crafted_at_least_once = bool(next_creation_time is not None)
+
+    return booster_pack_has_been_crafted_at_least_once
+
+
+def filter_out_badges_never_crafted(aggregated_badge_data, verbose=True):
+    # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
+    # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
+
+    filtered_badge_data = dict()
+
+    for app_id in aggregated_badge_data.keys():
+        individual_badge_data = aggregated_badge_data[app_id]
+
+        booster_pack_is_tracked = determine_whether_booster_pack_was_crafted_at_least_once(individual_badge_data)
+
+        if booster_pack_is_tracked:
+            filtered_badge_data[app_id] = individual_badge_data
+
+    if verbose:
+        print('There are {} booster packs which are tracked, as they were crafted at least once. ({} omitted)'.format(
+            len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data)))
+
+    return filtered_badge_data
+
+
 def filter_out_badges_recently_crafted(aggregated_badge_data, verbose=True):
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
     # and thus which cannot be immediately crafted.
@@ -214,7 +243,19 @@ def apply_workflow(retrieve_listings_from_scratch=True,
                    enforced_sack_of_gems_price=None,
                    automatically_create_then_sell_booster_packs=False,
                    profit_threshold=0.01,  # profit in euros
+                   quick_check_with_tracked_booster_packs=False,
                    from_javascript=False):
+    if quick_check_with_tracked_booster_packs:
+        print('Quick-check of booster packs with a track record.')
+
+        retrieve_listings_from_scratch = False
+        retrieve_market_orders_online = True
+
+        print('Overwriting two arguments:\n\ti) retrieve listings: {},\n\tii) retrieve market orders: {}.'.format(
+            retrieve_listings_from_scratch,
+            retrieve_market_orders_online
+        ))
+
     aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
                                                        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                                                        from_javascript=from_javascript)
@@ -224,6 +265,9 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
     filtered_badge_data = filter_out_badges_recently_crafted(filtered_badge_data)
+
+    if quick_check_with_tracked_booster_packs:
+        filtered_badge_data = filter_out_badges_never_crafted(filtered_badge_data)
 
     market_order_dict = load_market_order_data(filtered_badge_data,
                                                retrieve_market_orders_online=retrieve_market_orders_online)
@@ -255,6 +299,7 @@ def main():
     enforced_sack_of_gems_price = None
     automatically_create_then_sell_booster_packs = True
     profit_threshold = 0.01  # profit in euros
+    quick_check_with_tracked_booster_packs = False
     from_javascript = True
 
     apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
@@ -262,6 +307,7 @@ def main():
                    enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                    automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
                    profit_threshold=profit_threshold,
+                   quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
                    from_javascript=from_javascript)
 
     return True
