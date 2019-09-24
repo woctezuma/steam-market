@@ -11,7 +11,10 @@ from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_val
 from utils import get_listing_details_output_file_name
 
 
-def get_steam_market_listing_url(app_id=None, listing_hash=None, render_as_json=True):
+def get_steam_market_listing_url(app_id=None,
+                                 listing_hash=None,
+                                 render_as_json=True,
+                                 replace_spaces=False):
     if app_id is None:
         # AppID for the Steam Store. It is the same for all the booster packs.
         app_id = 753
@@ -21,6 +24,10 @@ def get_steam_market_listing_url(app_id=None, listing_hash=None, render_as_json=
 
     # Fix listing hashes so that there is no special character '#' or '?', which would mess with URL query later on
     fixed_listing_hash = fix_app_name_for_url_query(listing_hash)
+
+    if replace_spaces:
+        # For Markdown compatibility, replaces the spaces from the str to be used in hyperlinks:
+        fixed_listing_hash = fixed_listing_hash.replace(' ', '%20')
 
     market_listing_url = 'https://steamcommunity.com/market/listings/' + str(app_id) + '/' + fixed_listing_hash + '/'
 
