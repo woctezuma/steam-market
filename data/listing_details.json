@@ -36322,5 +36322,53 @@
   "316390-Anomaly Zone Booster Pack": {
     "item_nameid": 176084997,
     "is_marketable": true
+  },
+  "858940-Flowers -Le volume sur ete- Booster Pack": {
+    "item_nameid": 176086279,
+    "is_marketable": true
+  },
+  "606880-GreedFall Booster Pack": {
+    "item_nameid": 176084542,
+    "is_marketable": true
+  },
+  "798460-Ni no Kuni Wrath of the White Witch\u2122 Remastered Booster Pack": {
+    "item_nameid": 176085829,
+    "is_marketable": true
+  },
+  "590790-Snowballer Booster Pack": {
+    "item_nameid": 176085742,
+    "is_marketable": true
+  },
+  "833360-Star Valor Booster Pack": {
+    "item_nameid": 176085037,
+    "is_marketable": true
+  },
+  "948740-AI: The Somnium Files Booster Pack": {
+    "item_nameid": 176085577,
+    "is_marketable": true
+  },
+  "1117630-I got a cat maid Booster Pack": {
+    "item_nameid": 176085120,
+    "is_marketable": true
+  },
+  "467720-Roomie Romance Booster Pack": {
+    "item_nameid": 176085283,
+    "is_marketable": true
+  },
+  "702050-The Song of Saya Booster Pack": {
+    "item_nameid": 176085484,
+    "is_marketable": true
+  },
+  "865090-AHEGAL Booster Pack": {
+    "item_nameid": 176084400,
+    "is_marketable": true
+  },
+  "1083210-\u7b26\u6587\u5973\u5b69-Rune Girl Booster Pack": {
+    "item_nameid": 176085777,
+    "is_marketable": true
+  },
+  "873940-Crying Suns Booster Pack": {
+    "item_nameid": 176085841,
+    "is_marketable": true
   }
 }
