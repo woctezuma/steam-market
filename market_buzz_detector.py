@@ -1,9 +1,10 @@
 # Objective: detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders
 
-from market_listing import get_item_nameid_batch
+from market_listing import get_item_nameid_batch, get_steam_market_listing_url
 from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
 from utils import convert_listing_hash_to_app_id, get_steamcardexchange_url, get_steam_store_url
+from utils import convert_listing_hash_to_app_name
 
 
 def filter_listings(all_listings=None,
@@ -90,16 +91,23 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
             break
 
         app_id = convert_listing_hash_to_app_id(listing_hash)
+        app_name = convert_listing_hash_to_app_name(listing_hash)
 
         bid = market_order_dict[listing_hash]['bid']
         bid_volume = market_order_dict[listing_hash]['bid_volume']
 
-        print('{:3}) [[store]({})] [{}]({}) ; bid: {}€ (volume: {})'.format(i + 1,
-                                                                            get_steam_store_url(app_id),
-                                                                            listing_hash,
-                                                                            get_steamcardexchange_url(app_id),
-                                                                            bid,
-                                                                            bid_volume))
+        markdown_compatible_steam_market_url = get_steam_market_listing_url(listing_hash=listing_hash,
+                                                                            render_as_json=False,
+                                                                            replace_spaces=True)
+
+        print('{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {})'.format(
+            i + 1,
+            get_steam_store_url(app_id),
+            markdown_compatible_steam_market_url,
+            app_name,
+            get_steamcardexchange_url(app_id),
+            bid,
+            bid_volume))
 
     return
 
