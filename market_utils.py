@@ -9,6 +9,40 @@ from sack_of_gems import get_gem_price
 from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
+def determine_whether_listing_hash_is_dubious(listing_hash):
+    dubious_str = '#Economy_TradingCards_'
+
+    listing_hash_is_dubious = bool(dubious_str in listing_hash)
+
+    return listing_hash_is_dubious
+
+
+def filter_out_dubious_listing_hashes(all_listings,
+                                      verbose=True):
+    # Filter out listing hashes which hint at a dubious market listing for the booster pack. For instance:
+    #   362680-Fran Bow #Economy_TradingCards_ItemType_BoosterPack
+    #   844870-#Economy_TradingCards_Type_GameType
+
+    filtered_listings = dict()
+
+    for listing_hash in all_listings.keys():
+        individual_market_listing = all_listings[listing_hash]
+
+        booster_pack_is_dubious = determine_whether_listing_hash_is_dubious(listing_hash)
+
+        if not booster_pack_is_dubious:
+            filtered_listings[listing_hash] = individual_market_listing
+        else:
+            if verbose:
+                print('Omitting dubious listing hash: {}'.format(listing_hash))
+
+    if verbose:
+        print('There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)'.format(
+            len(filtered_listings), len(all_listings) - len(filtered_listings)))
+
+    return filtered_listings
+
+
 def match_badges_with_listing_hashes(badge_creation_details=None,
                                      all_listings=None,
                                      verbose=True):
@@ -122,6 +156,8 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
         update_all_listings()
 
     all_listings = load_all_listings()
+
+    all_listings = filter_out_dubious_listing_hashes(all_listings)
 
     badge_matches = match_badges_with_listing_hashes(badge_creation_details,
                                                      all_listings)
