@@ -49,12 +49,12 @@ In this case, try to fill-in your cookie information with its new value.
 > **NB²**: If you want to automate the creation and sale of booster packs, you may need:
 > 1. to have a [mobile authenticator app](https://github.com/Jessecar96/SteamDesktopAuthenticator) running in the background and auto-confirming market transactions,
 > 2. to fill-in more cookie information:
-    ```json
-    {
-      "sessionid": "PASTE_YOUR_COOKIE_VALUE_HERE",
-      "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE"
-    }
-    ```
+>    ```json
+>    {
+>      "sessionid": "PASTE_YOUR_COOKIE_VALUE_HERE",
+>      "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE"
+>    }
+>    ```
 
 ### Gem cost for crafting Booster Packs
 
