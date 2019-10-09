@@ -69,6 +69,7 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False, verbose=True)
 
 
 def get_gem_price(enforced_sack_of_gems_price=None,
+                  minimum_allowed_sack_of_gems_price=None,
                   retrieve_gem_price_from_scratch=False,
                   verbose=True):
     if enforced_sack_of_gems_price is None:
@@ -78,6 +79,12 @@ def get_gem_price(enforced_sack_of_gems_price=None,
         print('[manual input] A sack of {} gems can allegedly be bought for {:.2f} €.'.format(
             get_num_gems_per_sack_of_gems(),
             sack_of_gems_price))
+
+    if minimum_allowed_sack_of_gems_price is not None:
+        sack_of_gems_price = max(minimum_allowed_sack_of_gems_price, sack_of_gems_price)
+        print('[manual adjustment] The price of a sack of gems is set to {:.2f} € (minimum allowed: {:.2f} €).'.format(
+            sack_of_gems_price,
+            minimum_allowed_sack_of_gems_price))
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 

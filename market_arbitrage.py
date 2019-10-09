@@ -241,6 +241,7 @@ def update_badge_arbitrages_with_latest_market_order_data(badge_data,
 def apply_workflow(retrieve_listings_from_scratch=True,
                    retrieve_market_orders_online=True,
                    enforced_sack_of_gems_price=None,
+                   minimum_allowed_sack_of_gems_price=None,
                    automatically_create_then_sell_booster_packs=False,
                    profit_threshold=0.01,  # profit in euros
                    quick_check_with_tracked_booster_packs=False,
@@ -258,6 +259,7 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 
     aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
                                                        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                                       minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
                                                        from_javascript=from_javascript)
 
     aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
@@ -297,6 +299,7 @@ def main():
     retrieve_listings_from_scratch = True
     retrieve_market_orders_online = True
     enforced_sack_of_gems_price = None
+    minimum_allowed_sack_of_gems_price = 0.29
     automatically_create_then_sell_booster_packs = True
     profit_threshold = 0.01  # profit in euros
     quick_check_with_tracked_booster_packs = False
@@ -305,6 +308,7 @@ def main():
     apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
                    retrieve_market_orders_online=retrieve_market_orders_online,
                    enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                   minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
                    automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
                    profit_threshold=profit_threshold,
                    quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
