@@ -165,7 +165,7 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
     badge_matches = match_badges_with_listing_hashes(badge_creation_details,
                                                      all_listings)
 
-    retrieve_gem_price_from_scratch = retrieve_listings_from_scratch and bool(enforced_sack_of_gems_price is None)
+    retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
     aggregated_badge_data = aggregate_badge_data(badge_creation_details,
                                                  badge_matches,
