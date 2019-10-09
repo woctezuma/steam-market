@@ -94,7 +94,12 @@ def get_gem_price(enforced_sack_of_gems_price=None,
 
 
 def main():
-    sack_of_gems_price = load_sack_of_gems_price(verbose=True)
+    print('Loaded from the disk:')
+    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
+                                                 verbose=True)
+    print('\nDownloaded as a market listing:')
+    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=True,
+                                                 verbose=True)
 
     return True
 
