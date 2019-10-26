@@ -36502,5 +36502,61 @@
   "831980-Out of the Park Baseball 20 Booster Pack": {
     "item_nameid": 176089400,
     "is_marketable": true
+  },
+  "632470-Disco Elysium Booster Pack": {
+    "item_nameid": 176091366,
+    "is_marketable": true
+  },
+  "829660-No Time to Relax Booster Pack": {
+    "item_nameid": 176090502,
+    "is_marketable": true
+  },
+  "623340-Stars End Booster Pack": {
+    "item_nameid": 176092101,
+    "is_marketable": true
+  },
+  "623180-Zombie Solitaire 2 Chapter 3 Booster Pack": {
+    "item_nameid": 176091070,
+    "is_marketable": true
+  },
+  "733800-Frosty Nights Booster Pack": {
+    "item_nameid": 176085597,
+    "is_marketable": true
+  },
+  "1148150-Man of the House Booster Pack": {
+    "item_nameid": 176090065,
+    "is_marketable": true
+  },
+  "824830-Corpse Party: Blood Drive Booster Pack": {
+    "item_nameid": 176090548,
+    "is_marketable": true
+  },
+  "663670-Killer Queen Black Booster Pack": {
+    "item_nameid": 176091414,
+    "is_marketable": true
+  },
+  "746580-HARDCORE MECHA Booster Pack": {
+    "item_nameid": 176091669,
+    "is_marketable": true
+  },
+  "346760-ProtoMasons Booster Pack": {
+    "item_nameid": 176090861,
+    "is_marketable": true
+  },
+  "433170-Die Young Booster Pack": {
+    "item_nameid": 176090779,
+    "is_marketable": true
+  },
+  "599990-SecondSpeed Booster Pack": {
+    "item_nameid": 176092187,
+    "is_marketable": true
+  },
+  "1045520-Acting Lessons Booster Pack": {
+    "item_nameid": 176090243,
+    "is_marketable": true
+  },
+  "914710-Cat Quest II Booster Pack": {
+    "item_nameid": 176090581,
+    "is_marketable": true
   }
 }
