@@ -36558,5 +36558,101 @@
   "914710-Cat Quest II Booster Pack": {
     "item_nameid": 176090581,
     "is_marketable": true
+  },
+  "748940-Rise of Legions Booster Pack": {
+    "item_nameid": 176093736,
+    "is_marketable": true
+  },
+  "959520-Fantasy Blacksmith Booster Pack": {
+    "item_nameid": 176093507,
+    "is_marketable": true
+  },
+  "574720-Little Big Workshop Booster Pack": {
+    "item_nameid": 176091696,
+    "is_marketable": true
+  },
+  "1088790-Rebel Inc: Escalation Booster Pack": {
+    "item_nameid": 176092219,
+    "is_marketable": true
+  },
+  "842100-Daymare: 1998 Booster Pack": {
+    "item_nameid": 176090684,
+    "is_marketable": true
+  },
+  "1021070-Spaceland Booster Pack": {
+    "item_nameid": 176091672,
+    "is_marketable": true
+  },
+  "1129250-NEKO-NIN exHeart 3 Booster Pack": {
+    "item_nameid": 176092315,
+    "is_marketable": true
+  },
+  "734730-Ancient Frontier: Steel Shadows Booster Pack": {
+    "item_nameid": 176091008,
+    "is_marketable": true
+  },
+  "859570-Secret Neighbor Booster Pack": {
+    "item_nameid": 176092847,
+    "is_marketable": true
+  },
+  "1015090-Last Day of Rome Booster Pack": {
+    "item_nameid": 176089303,
+    "is_marketable": true
+  },
+  "273110-Counter-Strike Nexon: Studio Booster Pack": {
+    "item_nameid": 176093898,
+    "is_marketable": true
+  },
+  "388490-One Way To Die Booster Pack": {
+    "item_nameid": 176094582,
+    "is_marketable": true
+  },
+  "1005300-The Jackbox Party Pack 6 Booster Pack": {
+    "item_nameid": 176092384,
+    "is_marketable": true
+  },
+  "679900-Swords & Souls: Neverseen Booster Pack": {
+    "item_nameid": 176094839,
+    "is_marketable": true
+  },
+  "717850-Sable's Grimoire Booster Pack": {
+    "item_nameid": 176093982,
+    "is_marketable": true
+  },
+  "1106940-How to Raise a Wolf Girl Booster Pack": {
+    "item_nameid": 176094684,
+    "is_marketable": true
+  },
+  "340150-Basement Booster Pack": {
+    "item_nameid": 176095066,
+    "is_marketable": true
+  },
+  "669950-BDSM: Big Drunk Satanic Massacre Booster Pack": {
+    "item_nameid": 176094592,
+    "is_marketable": true
+  },
+  "1042550-Digimon Story Cyber Sleuth: Complete Edition Booster Pack": {
+    "item_nameid": 176094540,
+    "is_marketable": true
+  },
+  "654690-Bermuda - Lost Survival Booster Pack": {
+    "item_nameid": 176093815,
+    "is_marketable": true
+  },
+  "703080-Planet Zoo Booster Pack": {
+    "item_nameid": 176094568,
+    "is_marketable": true
+  },
+  "969680-Steel Circus Booster Pack": {
+    "item_nameid": 176095559,
+    "is_marketable": true
+  },
+  "587540-Deliverace - Battle Racing Booster Pack": {
+    "item_nameid": 176095572,
+    "is_marketable": true
+  },
+  "439350-Kritika:REBOOT Booster Pack": {
+    "item_nameid": 176095863,
+    "is_marketable": true
   }
 }
