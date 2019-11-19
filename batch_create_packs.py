@@ -56,6 +56,13 @@ def create_packs_for_app_ids(manually_selected_app_ids,
 
     next_creation_times = update_and_save_next_creation_times(creation_results)
 
+    if verbose:
+        ignored_app_ids = set(manually_selected_app_ids).difference(app_ids)
+        print('There are {} ignored appIDs: {}'.format(
+            len(ignored_app_ids),
+            ignored_app_ids)
+        )
+
     return creation_results, next_creation_times
 
 
