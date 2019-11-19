@@ -89,4 +89,4 @@ def main(is_a_simulation=True):  # Caveat: if False, then packs will be crafted,
 
 
 if __name__ == '__main__':
-    main(is_a_simulation=True)
+    main(is_a_simulation=False)
