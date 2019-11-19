@@ -50,7 +50,11 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
     return rate_limits
 
 
-def get_all_listings(all_listings=None):
+def get_all_listings(all_listings=None,
+                     url=None):
+    if url is None:
+        url = get_steam_market_search_url()
+
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -70,7 +74,6 @@ def get_all_listings(all_listings=None):
         if num_listings is not None:
             print('[{}/{}]'.format(start_index, num_listings))
 
-        url = get_steam_market_search_url()
         req_data = get_search_parameters(start_index=start_index, delta_index=delta_index)
 
         if query_count >= rate_limits['max_num_queries']:
@@ -120,11 +123,13 @@ def get_all_listings(all_listings=None):
     return all_listings
 
 
-def download_all_listings():
-    listing_output_file_name = get_listing_output_file_name()
+def download_all_listings(listing_output_file_name=None,
+                          url=None):
+    if listing_output_file_name is None:
+        listing_output_file_name = get_listing_output_file_name()
 
     if not Path(listing_output_file_name).exists():
-        all_listings = get_all_listings()
+        all_listings = get_all_listings(url=url)
 
         with open(listing_output_file_name, 'w') as f:
             json.dump(all_listings, f)
@@ -132,27 +137,35 @@ def download_all_listings():
     return True
 
 
-def update_all_listings():
+def update_all_listings(listing_output_file_name=None,
+                        url=None):
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
 
+    if listing_output_file_name is None:
+        listing_output_file_name = get_listing_output_file_name()
+
     try:
-        all_listings = load_all_listings()
+        all_listings = load_all_listings(listing_output_file_name=listing_output_file_name)
         print('Loading {} listings from disk.'.format(len(all_listings)))
     except FileNotFoundError:
         print('Downloading listings from scratch.')
         all_listings = None
 
-    all_listings = get_all_listings(all_listings)
+    all_listings = get_all_listings(all_listings,
+                                    url=url)
 
-    with open(get_listing_output_file_name(), 'w') as f:
+    with open(listing_output_file_name, 'w') as f:
         json.dump(all_listings, f)
 
     return True
 
 
-def load_all_listings():
-    with open(get_listing_output_file_name(), 'r') as f:
+def load_all_listings(listing_output_file_name=None):
+    if listing_output_file_name is None:
+        listing_output_file_name = get_listing_output_file_name()
+
+    with open(listing_output_file_name, 'r') as f:
         all_listings = json.load(f)
 
     return all_listings
