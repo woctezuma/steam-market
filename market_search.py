@@ -17,13 +17,32 @@ def get_steam_market_search_url():
     return market_search_url
 
 
-def get_search_parameters(start_index=0, delta_index=100):
+def get_search_parameters(start_index=0,
+                          delta_index=100,
+                          tag_item_class_no=None):
+    if tag_item_class_no is None:
+        # Typically, one of the following numbers:
+        # 3: Profile Background
+        # 4: Emoticon
+        # 5: Booster Pack
+        tag_item_class_no = 5
+
+    if tag_item_class_no == 5:
+        column_to_sort_by = 'name'
+        sort_direction = 'asc'
+    else:
+        column_to_sort_by = 'price'
+        sort_direction = 'desc'
+
     params = dict()
 
     params['norender'] = '1'
-    params['category_753_item_class[]'] = 'tag_item_class_5'
-    params['sort_column'] = 'name'
-    params['sort_dir'] = 'asc'
+    params['category_753_Game[]'] = 'any'
+    params['category_753_droprate[]'] = 'tag_droprate_0'  # Rarity: Common
+    params['category_753_item_class[]'] = 'tag_item_class_' + str(tag_item_class_no)
+    params['appid'] = '753'
+    params['sort_column'] = column_to_sort_by
+    params['sort_dir'] = sort_direction
     params['start'] = str(start_index)
     params['count'] = str(delta_index)
 
@@ -51,7 +70,8 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
 
 
 def get_all_listings(all_listings=None,
-                     url=None):
+                     url=None,
+                     tag_item_class_no=None):
     if url is None:
         url = get_steam_market_search_url()
 
@@ -74,7 +94,9 @@ def get_all_listings(all_listings=None,
         if num_listings is not None:
             print('[{}/{}]'.format(start_index, num_listings))
 
-        req_data = get_search_parameters(start_index=start_index, delta_index=delta_index)
+        req_data = get_search_parameters(start_index=start_index,
+                                         delta_index=delta_index,
+                                         tag_item_class_no=tag_item_class_no)
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
@@ -124,12 +146,14 @@ def get_all_listings(all_listings=None,
 
 
 def download_all_listings(listing_output_file_name=None,
-                          url=None):
+                          url=None,
+                          tag_item_class_no=None):
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
 
     if not Path(listing_output_file_name).exists():
-        all_listings = get_all_listings(url=url)
+        all_listings = get_all_listings(url=url,
+                                        tag_item_class_no=tag_item_class_no)
 
         with open(listing_output_file_name, 'w') as f:
             json.dump(all_listings, f)
@@ -138,7 +162,8 @@ def download_all_listings(listing_output_file_name=None,
 
 
 def update_all_listings(listing_output_file_name=None,
-                        url=None):
+                        url=None,
+                        tag_item_class_no=None):
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
 
@@ -153,7 +178,8 @@ def update_all_listings(listing_output_file_name=None,
         all_listings = None
 
     all_listings = get_all_listings(all_listings,
-                                    url=url)
+                                    url=url,
+                                    tag_item_class_no=tag_item_class_no)
 
     with open(listing_output_file_name, 'w') as f:
         json.dump(all_listings, f)
