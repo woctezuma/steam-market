@@ -238,6 +238,28 @@ def update_badge_arbitrages_with_latest_market_order_data(badge_data,
     return latest_badge_arbitrages
 
 
+def get_filtered_badge_data(retrieve_listings_from_scratch=True,
+                            enforced_sack_of_gems_price=None,
+                            minimum_allowed_sack_of_gems_price=None,
+                            quick_check_with_tracked_booster_packs=False,
+                            from_javascript=False):
+    aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
+                                                       enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                                       minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+                                                       from_javascript=from_javascript)
+
+    aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
+
+    filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+
+    filtered_badge_data = filter_out_badges_recently_crafted(filtered_badge_data)
+
+    if quick_check_with_tracked_booster_packs:
+        filtered_badge_data = filter_out_badges_never_crafted(filtered_badge_data)
+
+    return filtered_badge_data
+
+
 def apply_workflow(retrieve_listings_from_scratch=True,
                    retrieve_market_orders_online=True,
                    enforced_sack_of_gems_price=None,
@@ -257,19 +279,11 @@ def apply_workflow(retrieve_listings_from_scratch=True,
             retrieve_market_orders_online
         ))
 
-    aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
-                                                       enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                       minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                       from_javascript=from_javascript)
-
-    aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
-
-    filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
-
-    filtered_badge_data = filter_out_badges_recently_crafted(filtered_badge_data)
-
-    if quick_check_with_tracked_booster_packs:
-        filtered_badge_data = filter_out_badges_never_crafted(filtered_badge_data)
+    filtered_badge_data = get_filtered_badge_data(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+                                                  enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+                                                  quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+                                                  from_javascript=from_javascript)
 
     market_order_dict = load_market_order_data(filtered_badge_data,
                                                retrieve_market_orders_online=retrieve_market_orders_online)
