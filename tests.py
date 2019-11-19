@@ -1,5 +1,6 @@
 import unittest
 
+import batch_create_packs
 import creation_time_utils
 import market_arbitrage
 import market_listing
@@ -91,6 +92,12 @@ class TestTransactionFeeMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(transaction_fee.main())
+
+
+class TestBatchCreatePacks(unittest.TestCase):
+
+    def test_main(self):
+        self.assertTrue(batch_create_packs.main(is_a_simulation=True))
 
 
 if __name__ == '__main__':
