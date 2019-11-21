@@ -17,6 +17,21 @@ def get_steam_market_search_url():
     return market_search_url
 
 
+def get_tag_item_class_no_for_profile_backgrounds():
+    tag_item_class_no = 3
+    return tag_item_class_no
+
+
+def get_tag_item_class_no_for_emoticons():
+    tag_item_class_no = 4
+    return tag_item_class_no
+
+
+def get_tag_item_class_no_for_booster_packs():
+    tag_item_class_no = 5
+    return tag_item_class_no
+
+
 def get_search_parameters(start_index=0,
                           delta_index=100,
                           tag_item_class_no=None):
@@ -25,9 +40,9 @@ def get_search_parameters(start_index=0,
         # 3: Profile Background
         # 4: Emoticon
         # 5: Booster Pack
-        tag_item_class_no = 5
+        tag_item_class_no = get_tag_item_class_no_for_booster_packs()
 
-    if tag_item_class_no == 5:
+    if tag_item_class_no == get_tag_item_class_no_for_booster_packs():
         column_to_sort_by = 'name'
         sort_direction = 'asc'
     else:
