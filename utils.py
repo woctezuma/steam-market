@@ -34,6 +34,15 @@ def get_listing_output_file_name():
     return listing_output_file_name
 
 
+def get_listing_details_output_file_name_for_profile_backgrounds():
+    listing_details_output_file_name = get_data_folder() + 'listing_details_for_profile_backgrounds.json'
+    return listing_details_output_file_name
+
+
+def get_listing_details_output_file_name_for_emoticons():
+    listing_details_output_file_name = get_data_folder() + 'listing_details_for_emoticons.json'
+    return listing_details_output_file_name
+
 def get_listing_details_output_file_name():
     listing_details_output_file_name = get_data_folder() + 'listing_details.json'
     return listing_details_output_file_name
@@ -44,6 +53,15 @@ def get_sack_of_gems_listing_file_name():
 
     return sack_of_gems_listing_file_name
 
+
+def get_market_order_file_name_for_profile_backgrounds():
+    market_order_file_name = get_data_folder() + 'market_orders_for_profile_backgrounds.json'
+    return market_order_file_name
+
+
+def get_market_order_file_name_for_emoticons():
+    market_order_file_name = get_data_folder() + 'market_orders_for_emoticons.json'
+    return market_order_file_name
 
 def get_market_order_file_name():
     market_order_file_name = get_data_folder() + 'market_orders.json'
