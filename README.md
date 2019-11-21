@@ -183,6 +183,18 @@ python market_buzz_detector.py
 python free_games_with_trading_cards.py
 ```
 
+-   To look for potentially profitable gambles on profile backgrounds and emoticons of "Common" rarity, run:
+
+```bash
+python market_gamble_detector.py
+```
+
+-   To create packs for a **manual** selection of games, e.g. if you want to create these specific packs every day, run:
+
+```bash
+python batch_create_packs.py
+```
+
 ## Results
 
 The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
