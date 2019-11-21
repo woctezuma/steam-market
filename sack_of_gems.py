@@ -20,7 +20,10 @@ def get_num_gems_per_sack_of_gems():
     return num_gems_per_sack_of_gems
 
 
-def download_sack_of_gems_price():
+def download_sack_of_gems_price(sack_of_gems_listing_file_name=None):
+    if sack_of_gems_listing_file_name is None:
+        sack_of_gems_listing_file_name = get_sack_of_gems_listing_file_name()
+
     cookie = get_cookie_dict()
     listing_hash = get_listing_hash_for_gems()
 
@@ -38,7 +41,7 @@ def download_sack_of_gems_price():
 
         sack_of_gems_price = ask_price
 
-        with open(get_sack_of_gems_listing_file_name(), 'w') as f:
+        with open(sack_of_gems_listing_file_name, 'w') as f:
             json.dump(listing_details, f)
     else:
         raise AssertionError()
@@ -46,20 +49,25 @@ def download_sack_of_gems_price():
     return sack_of_gems_price
 
 
-def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False, verbose=True):
+def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
+                            verbose=True,
+                            sack_of_gems_listing_file_name=None):
+    if sack_of_gems_listing_file_name is None:
+        sack_of_gems_listing_file_name = get_sack_of_gems_listing_file_name()
+
     if retrieve_gem_price_from_scratch:
-        sack_of_gems_price = download_sack_of_gems_price()
+        sack_of_gems_price = download_sack_of_gems_price(sack_of_gems_listing_file_name)
     else:
 
         try:
-            with open(get_sack_of_gems_listing_file_name(), 'r') as f:
+            with open(sack_of_gems_listing_file_name, 'r') as f:
                 listing_details = json.load(f)
 
             listing_hash = get_listing_hash_for_gems()
 
             sack_of_gems_price = listing_details[listing_hash]['ask']
         except FileNotFoundError:
-            sack_of_gems_price = download_sack_of_gems_price()
+            sack_of_gems_price = download_sack_of_gems_price(sack_of_gems_listing_file_name)
 
     if verbose:
         print('A sack of {} gems can be bought for {:.2f} €.'.format(get_num_gems_per_sack_of_gems(),

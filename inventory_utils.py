@@ -347,8 +347,12 @@ def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
 
 
 def update_and_save_next_creation_times(creation_results,
-                                        verbose=True):
-    next_creation_times = load_next_creation_time_data()
+                                        verbose=True,
+                                        next_creation_time_file_name=None):
+    if next_creation_time_file_name is None:
+        next_creation_time_file_name = get_next_creation_time_file_name()
+
+    next_creation_times = load_next_creation_time_data(next_creation_time_file_name)
 
     delay_in_days = get_crafting_cooldown_duration_in_days()
     formatted_next_creation_time = get_formatted_current_time(delay_in_days=delay_in_days)
@@ -379,7 +383,7 @@ def update_and_save_next_creation_times(creation_results,
                     app_id))
 
     if save_to_disk:
-        with open(get_next_creation_time_file_name(), 'w') as f:
+        with open(next_creation_time_file_name, 'w') as f:
             json.dump(next_creation_times, f)
 
     return next_creation_times

@@ -4,9 +4,12 @@ import json
 from utils import get_next_creation_time_file_name
 
 
-def load_next_creation_time_data():
+def load_next_creation_time_data(next_creation_time_file_name=None):
+    if next_creation_time_file_name is None:
+        next_creation_time_file_name = get_next_creation_time_file_name()
+
     try:
-        with open(get_next_creation_time_file_name(), 'r') as f:
+        with open(next_creation_time_file_name, 'r') as f:
             next_creation_times = json.load(f)
     except FileNotFoundError:
         next_creation_times = dict()

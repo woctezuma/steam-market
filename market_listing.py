@@ -136,7 +136,13 @@ def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
     return listing_details, status_code
 
 
-def get_listing_details_batch(listing_hashes, all_listing_details=None, save_to_disk=True):
+def get_listing_details_batch(listing_hashes,
+                              all_listing_details=None,
+                              save_to_disk=True,
+                              listing_details_output_file_name=None):
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name()
+
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -165,7 +171,7 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None, save_to_
 
         if query_count >= rate_limits['max_num_queries']:
             if save_to_disk:
-                with open(get_listing_details_output_file_name(), 'w') as f:
+                with open(listing_details_output_file_name, 'w') as f:
                     json.dump(all_listing_details, f)
 
             cooldown_duration = rate_limits['cooldown']
@@ -176,18 +182,22 @@ def get_listing_details_batch(listing_hashes, all_listing_details=None, save_to_
         all_listing_details.update(listing_details)
 
     if save_to_disk:
-        with open(get_listing_details_output_file_name(), 'w') as f:
+        with open(listing_details_output_file_name, 'w') as f:
             json.dump(all_listing_details, f)
 
     return all_listing_details
 
 
-def update_all_listing_details(listing_hashes=None):
+def update_all_listing_details(listing_hashes=None,
+                               listing_details_output_file_name=None):
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
     # to restart the process without risking to lose anything, in case the process fails again.
 
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name()
+
     try:
-        with open(get_listing_details_output_file_name(), 'r') as f:
+        with open(listing_details_output_file_name, 'r') as f:
             all_listing_details = json.load(f)
             print('Loading {} listing details from disk.'.format(len(all_listing_details)))
     except FileNotFoundError:
@@ -198,13 +208,19 @@ def update_all_listing_details(listing_hashes=None):
         all_listings = load_all_listings()
         listing_hashes = list(all_listings.keys())
 
-    all_listing_details = get_listing_details_batch(listing_hashes, all_listing_details, save_to_disk=True)
+    all_listing_details = get_listing_details_batch(listing_hashes,
+                                                    all_listing_details,
+                                                    save_to_disk=True,
+                                                    listing_details_output_file_name=listing_details_output_file_name)
 
     return all_listing_details
 
 
-def load_all_listing_details():
-    with open(get_listing_details_output_file_name(), 'r') as f:
+def load_all_listing_details(listing_details_output_file_name=None):
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name()
+
+    with open(listing_details_output_file_name, 'r') as f:
         all_listing_details = json.load(f)
 
     return all_listing_details
@@ -238,22 +254,31 @@ def main():
     return True
 
 
-def get_item_nameid(listing_hash):
+def get_item_nameid(listing_hash,
+                    listing_details_output_file_name=None):
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name()
+
     try:
-        with open(get_listing_details_output_file_name(), 'r') as f:
+        with open(listing_details_output_file_name, 'r') as f:
             listing_details = json.load(f)
 
         item_nameid = listing_details[listing_hash]['item_nameid']
     except (FileNotFoundError, KeyError):
-        listing_details = update_all_listing_details(listing_hashes=[listing_hash])
+        listing_details = update_all_listing_details(listing_hashes=[listing_hash],
+                                                     listing_details_output_file_name=listing_details_output_file_name)
         item_nameid = listing_details[listing_hash]['item_nameid']
 
     return item_nameid
 
 
-def get_item_nameid_batch(listing_hashes):
+def get_item_nameid_batch(listing_hashes,
+                          listing_details_output_file_name=None):
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name()
+
     try:
-        with open(get_listing_details_output_file_name(), 'r') as f:
+        with open(listing_details_output_file_name, 'r') as f:
             listing_details = json.load(f)
 
         item_nameids = dict()
@@ -270,7 +295,8 @@ def get_item_nameid_batch(listing_hashes):
                 listing_hashes_to_process.append(listing_hash)
 
         if len(listing_hashes_to_process) > 0:
-            listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process)
+            listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
+                                                         listing_details_output_file_name=listing_details_output_file_name)
 
             for listing_hash in listing_hashes_to_process:
                 item_nameid = listing_details[listing_hash]['item_nameid']
@@ -280,7 +306,8 @@ def get_item_nameid_batch(listing_hashes):
                 item_nameids[listing_hash]['is_marketable'] = is_marketable
 
     except FileNotFoundError:
-        listing_details = update_all_listing_details(listing_hashes=listing_hashes)
+        listing_details = update_all_listing_details(listing_hashes=listing_hashes,
+                                                     listing_details_output_file_name=listing_details_output_file_name)
 
         item_nameids = dict()
         for listing_hash in listing_hashes:

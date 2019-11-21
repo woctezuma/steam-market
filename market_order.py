@@ -48,12 +48,16 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie=False):
     return rate_limits
 
 
-def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
+def download_market_order_data(listing_hash,
+                               item_nameid=None,
+                               verbose=False,
+                               listing_details_output_file_name=None):
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
     if item_nameid is None:
-        item_nameid = get_item_nameid(listing_hash)
+        item_nameid = get_item_nameid(listing_hash,
+                                      listing_details_output_file_name=listing_details_output_file_name)
 
     if item_nameid is not None:
 
@@ -127,12 +131,21 @@ def download_market_order_data(listing_hash, item_nameid=None, verbose=False):
     return bid_price, ask_price, bid_volume, ask_volume
 
 
-def download_market_order_data_batch(badge_data, market_order_dict=None, verbose=False, save_to_disk=True):
+def download_market_order_data_batch(badge_data,
+                                     market_order_dict=None,
+                                     verbose=False,
+                                     save_to_disk=True,
+                                     market_order_output_file_name=None,
+                                     listing_details_output_file_name=None):
+    if market_order_output_file_name is None:
+        market_order_output_file_name = get_market_order_file_name()
+
     # Pre-retrieval of item name ids
 
     listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
 
-    item_nameids = get_item_nameid_batch(listing_hashes)
+    item_nameids = get_item_nameid_batch(listing_hashes,
+                                         listing_details_output_file_name=listing_details_output_file_name)
 
     # Retrieval of market orders (bid, ask)
 
@@ -148,7 +161,9 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
 
     for app_id in badge_data.keys():
         listing_hash = badge_data[app_id]['listing_hash']
-        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash, verbose=verbose)
+        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash,
+                                                                                  verbose=verbose,
+                                                                                  listing_details_output_file_name=listing_details_output_file_name)
 
         market_order_dict[listing_hash] = dict()
         market_order_dict[listing_hash]['bid'] = bid_price
@@ -159,7 +174,7 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
 
         if query_count >= rate_limits['max_num_queries']:
             if save_to_disk:
-                with open(get_market_order_file_name(), 'w') as f:
+                with open(market_order_output_file_name, 'w') as f:
                     json.dump(market_order_dict, f)
 
             cooldown_duration = rate_limits['cooldown']
@@ -170,7 +185,7 @@ def download_market_order_data_batch(badge_data, market_order_dict=None, verbose
         query_count += 1
 
     if save_to_disk:
-        with open(get_market_order_file_name(), 'w') as f:
+        with open(market_order_output_file_name, 'w') as f:
             json.dump(market_order_dict, f)
 
     return market_order_dict
@@ -222,9 +237,12 @@ def trim_market_order_data(badge_data,
     return trimmed_market_order_dict, app_ids_with_missing_data
 
 
-def load_market_order_data_from_disk():
+def load_market_order_data_from_disk(market_order_output_file_name=None):
+    if market_order_output_file_name is None:
+        market_order_output_file_name = get_market_order_file_name()
+
     try:
-        with open(get_market_order_file_name(), 'r') as f:
+        with open(market_order_output_file_name, 'r') as f:
             market_order_dict = json.load(f)
     except FileNotFoundError:
         market_order_dict = None
