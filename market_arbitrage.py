@@ -63,13 +63,24 @@ def filter_out_badges_recently_crafted(aggregated_badge_data, verbose=True):
     return filtered_badge_data
 
 
-def determine_whether_an_arbitrage_might_exist(badge_data):
+def determine_whether_an_arbitrage_might_exist(badge_data,
+                                               user_chosen_price_threshold=None):
     sell_price_including_fee = badge_data['sell_price']
     sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
 
     gem_price_with_fee = badge_data['gem_price']
 
-    an_arbitrage_might_exist = bool(gem_price_with_fee < sell_price_without_fee)
+    if user_chosen_price_threshold is None:
+        # Variable price threshold, automatically computed for each game.
+        # Always use this option if you work with BOOSTER PACKS, because the cost to craft a pack changes for each game!
+        price_threshold = gem_price_with_fee
+    else:
+        # Constant price threshold, enforced by the user.
+        # Caveat: this is only useful to prune out candidates for PROFILE BACKGROUNDS or EMOTICONS, because the cost to
+        #         craft a **badge** does not depend on the game, contrary to the cost to craft a **booster pack**.
+        price_threshold = user_chosen_price_threshold
+
+    an_arbitrage_might_exist = bool(price_threshold < sell_price_without_fee)
 
     return an_arbitrage_might_exist
 
@@ -85,7 +96,9 @@ def determine_whether_sell_price_is_unknown(badge_data):
     return sell_price_is_unknown
 
 
-def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
+def filter_out_badges_with_low_sell_price(aggregated_badge_data,
+                                          user_chosen_price_threshold=None,
+                                          verbose=True):
     # Filter out games for which the sell price (ask) is lower than the gem price,
     # because the bid is necessarily lower than the ask, so it will not be worth downloading bid data for these games.
 
@@ -98,7 +111,8 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data, verbose=True):
 
         sell_price_is_unknown = determine_whether_sell_price_is_unknown(individual_badge_data)
 
-        an_arbitrage_might_exist = determine_whether_an_arbitrage_might_exist(individual_badge_data)
+        an_arbitrage_might_exist = determine_whether_an_arbitrage_might_exist(individual_badge_data,
+                                                                              user_chosen_price_threshold=user_chosen_price_threshold)
 
         if sell_price_is_unknown or an_arbitrage_might_exist:
             filtered_badge_data[app_id] = individual_badge_data
