@@ -11,9 +11,15 @@
 # Therefore, the cost of crafting a badge is identical for every game: that is twice the price of a sack of 1000 gems.
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
+from market_arbitrage import filter_out_badges_with_low_sell_price
+from market_listing import get_item_nameid_batch
+from market_order import load_market_order_data_from_disk, download_market_order_data_batch
 from market_search import get_tag_item_class_no_for_profile_backgrounds, get_tag_item_class_no_for_emoticons
-from market_search import update_all_listings
+from market_search import update_all_listings, load_all_listings
+from utils import get_listing_details_output_file_name_for_emoticons
+from utils import get_listing_details_output_file_name_for_profile_backgrounds
 from utils import get_listing_output_file_name_for_profile_backgrounds, get_listing_output_file_name_for_emoticons
+from utils import get_market_order_file_name_for_profile_backgrounds, get_market_order_file_name_for_emoticons
 
 
 def update_all_listings_for_profile_backgrounds():
@@ -39,11 +45,56 @@ def update_all_listings_for_emoticons():
 
 
 def main():
-    update_all_listings_for_profile_backgrounds()
-    update_all_listings_for_emoticons()
+    look_for_profile_backgrounds = True
+    price_threshold_in_cents = 100
 
-    # TODO maybe stop early, since listings are sorted by descending price.
-    # TODO get the bid values for some of these.
+    retrieve_listings_from_scratch = False
+    retrieve_market_orders_online = True
+
+    if retrieve_listings_from_scratch:
+        update_all_listings_for_profile_backgrounds()
+        update_all_listings_for_emoticons()
+
+    all_listings_for_profile_backgrounds = load_all_listings(get_listing_output_file_name_for_profile_backgrounds())
+    all_listings_for_emoticons = load_all_listings(get_listing_output_file_name_for_emoticons())
+
+    if look_for_profile_backgrounds:
+        all_listings = all_listings_for_profile_backgrounds
+        listing_details_output_file_name = get_listing_details_output_file_name_for_profile_backgrounds()
+        market_order_output_file_name = get_market_order_file_name_for_profile_backgrounds()
+    else:
+        all_listings = all_listings_for_emoticons
+        listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
+        market_order_output_file_name = get_market_order_file_name_for_emoticons()
+
+    # Build dummy badge data, in order to reuse functions developed for the analysis of Booster Packs
+
+    badge_data = dict()
+    for listing_hash in all_listings:
+        dummy_app_id = listing_hash
+        badge_data[dummy_app_id] = dict()
+        badge_data[dummy_app_id]['listing_hash'] = listing_hash
+
+    # Filter out candidates for which the ask is below a given threshold
+
+    filtered_badge_data = filter_out_badges_with_low_sell_price(badge_data,
+                                                                user_chosen_price_threshold=price_threshold_in_cents)
+
+    # Pre-retrieval of item name ids
+
+    selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
+
+    item_nameids = get_item_nameid_batch(selected_listing_hashes,
+                                         listing_details_output_file_name=listing_details_output_file_name)
+
+    # Retrieval of market orders (bid, ask)
+
+    market_order_dict = load_market_order_data_from_disk(market_order_output_file_name=market_order_output_file_name)
+
+    if retrieve_market_orders_online:
+        market_order_dict = download_market_order_data_batch(filtered_badge_data,
+                                                             market_order_dict=market_order_dict,
+                                                             market_order_output_file_name=market_order_output_file_name)
 
     return True
 
