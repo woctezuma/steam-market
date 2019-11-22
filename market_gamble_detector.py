@@ -111,7 +111,7 @@ def main():
     else:
         badge_data_to_process = filtered_badge_data
 
-    if retrieve_market_orders_online:
+    if retrieve_market_orders_online and len(badge_data_to_process) > 0:
         market_order_dict = download_market_order_data_batch(badge_data_to_process,
                                                              market_order_dict=market_order_dict,
                                                              market_order_output_file_name=market_order_output_file_name,
