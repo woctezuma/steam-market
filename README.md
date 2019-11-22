@@ -199,6 +199,10 @@ python batch_create_packs.py
 
 The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
 
+Rankings are also available for gambles with items of "Common" rarity, obtained after crafting a badge:
+-   [profile backgrounds](https://github.com/woctezuma/steam-market/wiki/Profile_backgrounds),
+-   [emoticons](https://github.com/woctezuma/steam-market/wiki/Emoticons).
+
 ## References
 
 -   [An example](https://www.resetera.com/threads/pc-gaming-era-april-2019-goodbye-uzzy-is-your-new-king.108742/page-123#post-20167882) of market arbitrage.
