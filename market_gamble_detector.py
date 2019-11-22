@@ -98,7 +98,8 @@ def main():
     if retrieve_market_orders_online:
         market_order_dict = download_market_order_data_batch(filtered_badge_data,
                                                              market_order_dict=market_order_dict,
-                                                             market_order_output_file_name=market_order_output_file_name)
+                                                             market_order_output_file_name=market_order_output_file_name,
+                                                             listing_details_output_file_name=listing_details_output_file_name)
 
     return True
 
