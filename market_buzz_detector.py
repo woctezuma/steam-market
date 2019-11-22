@@ -105,6 +105,12 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
                                                                             render_as_json=False,
                                                                             replace_spaces=True)
 
+        if category_name != get_category_name_for_booster_packs():
+            # Display the listing hash, because we cannot extract the app name from the listing hash for:
+            # - profile backgrounds,
+            # - and emoticons.
+            app_name = listing_hash
+
         print('{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {})'.format(
             i + 1,
             get_steam_store_url(app_id),
