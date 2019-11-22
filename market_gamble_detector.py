@@ -82,13 +82,6 @@ def get_market_orders(filtered_badge_data,
                       focus_on_listing_hashes_never_seen_before,
                       listing_details_output_file_name,
                       market_order_output_file_name):
-    # Pre-retrieval of item name ids
-
-    selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
-
-    item_nameids = get_item_nameid_batch(selected_listing_hashes,
-                                         listing_details_output_file_name=listing_details_output_file_name)
-
     # Load market orders (bid, ask) from disk
 
     market_order_dict = load_market_order_data_from_disk(market_order_output_file_name=market_order_output_file_name)
@@ -144,6 +137,13 @@ def main():
     filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                                                    price_threshold_in_cents,
                                                                                    category_name)
+
+    # Pre-retrieval of item name ids
+
+    selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
+
+    item_nameids = get_item_nameid_batch(selected_listing_hashes,
+                                         listing_details_output_file_name=listing_details_output_file_name)
 
     market_order_dict = get_market_orders(filtered_badge_data,
                                           retrieve_market_orders_online,
