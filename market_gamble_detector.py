@@ -76,6 +76,7 @@ def main():
         dummy_app_id = listing_hash
         badge_data[dummy_app_id] = dict()
         badge_data[dummy_app_id]['listing_hash'] = listing_hash
+        badge_data[dummy_app_id]['sell_price'] = all_listings[listing_hash]['sell_price']
 
     # Filter out candidates for which the ask is below a given threshold
 
