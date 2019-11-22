@@ -59,10 +59,12 @@ def main():
     all_listings_for_emoticons = load_all_listings(get_listing_output_file_name_for_emoticons())
 
     if look_for_profile_backgrounds:
+        category_name = 'profile backgrounds'
         all_listings = all_listings_for_profile_backgrounds
         listing_details_output_file_name = get_listing_details_output_file_name_for_profile_backgrounds()
         market_order_output_file_name = get_market_order_file_name_for_profile_backgrounds()
     else:
+        category_name = 'emoticons'
         all_listings = all_listings_for_emoticons
         listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
         market_order_output_file_name = get_market_order_file_name_for_emoticons()
@@ -78,6 +80,7 @@ def main():
     # Filter out candidates for which the ask is below a given threshold
 
     filtered_badge_data = filter_out_badges_with_low_sell_price(badge_data,
+                                                                category_name=category_name,
                                                                 user_chosen_price_threshold=price_threshold_in_cents)
 
     # Pre-retrieval of item name ids

@@ -98,9 +98,20 @@ def determine_whether_sell_price_is_unknown(badge_data):
 
 def filter_out_badges_with_low_sell_price(aggregated_badge_data,
                                           user_chosen_price_threshold=None,
+                                          category_name=None,
                                           verbose=True):
     # Filter out games for which the sell price (ask) is lower than the gem price,
     # because the bid is necessarily lower than the ask, so it will not be worth downloading bid data for these games.
+
+    if category_name is None:
+        category_name = 'booster packs'
+
+    if user_chosen_price_threshold is None:
+        threshold_name = 'gem price'
+    else:
+        threshold_name = 'user-chosen price threshold {:.2f} €'.format(
+            user_chosen_price_threshold / 100
+        )
 
     filtered_badge_data = dict()
 
@@ -121,8 +132,12 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data,
                 unknown_price_counter += 1
 
     if verbose:
-        print('There are {} booster packs with sell price unknown ({}) or strictly higher than gem price ({}).'.format(
-            len(filtered_badge_data), unknown_price_counter, len(filtered_badge_data) - unknown_price_counter))
+        print('There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).'.format(
+            len(filtered_badge_data),
+            category_name,
+            unknown_price_counter,
+            threshold_name,
+            len(filtered_badge_data) - unknown_price_counter))
 
     return filtered_badge_data
 
