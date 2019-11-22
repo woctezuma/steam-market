@@ -131,8 +131,12 @@ def main():
         listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
         market_order_output_file_name = get_market_order_file_name_for_emoticons()
 
+    # Load list of all listing hashes
+
     all_listings = get_listings(retrieve_listings_from_scratch,
                                 listing_output_file_name)
+
+    # *Heuristic* filtering of listing hashes
 
     filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                                                    price_threshold_in_cents,
@@ -144,6 +148,8 @@ def main():
 
     item_nameids = get_item_nameid_batch(selected_listing_hashes,
                                          listing_details_output_file_name=listing_details_output_file_name)
+
+    # Download market orders
 
     market_order_dict = get_market_orders(filtered_badge_data,
                                           retrieve_market_orders_online,
