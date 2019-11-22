@@ -82,8 +82,12 @@ def sort_according_to_buzz(market_order_dict,
 
 def print_packs_with_high_buzz(hashes_for_best_bid,
                                market_order_dict,
+                               category_name=None,
                                num_packs_to_display=10):
-    print('# Packs with high buy orders\n')
+    if category_name is None:
+        category_name = 'booster packs'
+
+    print('# {} with high buy orders\n'.format(category_name.capitalize()))
 
     for i, listing_hash in enumerate(hashes_for_best_bid):
 
