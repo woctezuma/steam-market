@@ -136,5 +136,23 @@ def get_steam_store_url(app_id):
     return steam_store_url
 
 
+def get_category_name_for_booster_packs():
+    category_name = 'booster packs'
+
+    return category_name
+
+
+def get_category_name_for_profile_backgrounds():
+    category_name = 'profile backgrounds'
+
+    return category_name
+
+
+def get_category_name_for_emoticons():
+    category_name = 'emoticons'
+
+    return category_name
+
+
 if __name__ == '__main__':
     main()

@@ -17,6 +17,7 @@ from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data_from_disk, download_market_order_data_batch
 from market_search import get_tag_item_class_no_for_profile_backgrounds, get_tag_item_class_no_for_emoticons
 from market_search import update_all_listings, load_all_listings
+from utils import get_category_name_for_profile_backgrounds, get_category_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_profile_backgrounds
 from utils import get_listing_output_file_name_for_profile_backgrounds, get_listing_output_file_name_for_emoticons
@@ -121,12 +122,12 @@ def main():
     num_packs_to_display = 100
 
     if look_for_profile_backgrounds:
-        category_name = 'profile backgrounds'
+        category_name = get_category_name_for_profile_backgrounds()
         listing_output_file_name = get_listing_output_file_name_for_profile_backgrounds()
         listing_details_output_file_name = get_listing_details_output_file_name_for_profile_backgrounds()
         market_order_output_file_name = get_market_order_file_name_for_profile_backgrounds()
     else:
-        category_name = 'emoticons'
+        category_name = get_category_name_for_emoticons()
         listing_output_file_name = get_listing_output_file_name_for_emoticons()
         listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
         market_order_output_file_name = get_market_order_file_name_for_emoticons()

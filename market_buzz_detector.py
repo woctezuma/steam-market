@@ -5,6 +5,7 @@ from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
 from utils import convert_listing_hash_to_app_id, get_steamcardexchange_url, get_steam_store_url
 from utils import convert_listing_hash_to_app_name
+from utils import get_category_name_for_booster_packs
 
 
 def filter_listings(all_listings=None,
@@ -85,7 +86,7 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
                                category_name=None,
                                num_packs_to_display=10):
     if category_name is None:
-        category_name = 'booster packs'
+        category_name = get_category_name_for_booster_packs()
 
     print('# {} with high buy orders\n'.format(category_name.capitalize()))
 
