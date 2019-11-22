@@ -50,6 +50,7 @@ def main():
 
     retrieve_listings_from_scratch = False
     retrieve_market_orders_online = True
+    focus_on_listing_hashes_never_seen_before = True
 
     if retrieve_listings_from_scratch:
         update_all_listings_for_profile_backgrounds()
@@ -91,12 +92,27 @@ def main():
     item_nameids = get_item_nameid_batch(selected_listing_hashes,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
-    # Retrieval of market orders (bid, ask)
+    # Load market orders (bid, ask) from disk
 
     market_order_dict = load_market_order_data_from_disk(market_order_output_file_name=market_order_output_file_name)
 
+    # Filter out listing hashes which have already been encountered at least once
+
+    first_encountered_filtered_badge_data = dict()
+
+    for dummy_app_id in filtered_badge_data:
+        if filtered_badge_data[dummy_app_id]['listing_hash'] not in market_order_dict:
+            first_encountered_filtered_badge_data[dummy_app_id] = filtered_badge_data[dummy_app_id]
+
+    # Retrieval of market orders (bid, ask)
+
+    if focus_on_listing_hashes_never_seen_before:
+        badge_data_to_process = first_encountered_filtered_badge_data
+    else:
+        badge_data_to_process = filtered_badge_data
+
     if retrieve_market_orders_online:
-        market_order_dict = download_market_order_data_batch(filtered_badge_data,
+        market_order_dict = download_market_order_data_batch(badge_data_to_process,
                                                              market_order_dict=market_order_dict,
                                                              market_order_output_file_name=market_order_output_file_name,
                                                              listing_details_output_file_name=listing_details_output_file_name)
