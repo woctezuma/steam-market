@@ -68,7 +68,13 @@ def determine_whether_an_arbitrage_might_exist(badge_data,
     sell_price_including_fee = badge_data['sell_price']
     sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
 
-    gem_price_with_fee = badge_data['gem_price']
+    try:
+        gem_price_with_fee = badge_data['gem_price']
+    except KeyError:
+        # This should only happen if the badge data is dummy (for profile backgrounds and emoticons). Typically, the
+        # user prefers to rely on a user-chosen price threshold, and did not take the time to fill-in a dummy value for
+        # the 'gem_price' field in badge_data.
+        gem_price_with_fee = None
 
     if user_chosen_price_threshold is None:
         # Variable price threshold, automatically computed for each game.
