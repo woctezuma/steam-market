@@ -43,6 +43,7 @@ def get_listing_details_output_file_name_for_emoticons():
     listing_details_output_file_name = get_data_folder() + 'listing_details_for_emoticons.json'
     return listing_details_output_file_name
 
+
 def get_listing_details_output_file_name():
     listing_details_output_file_name = get_data_folder() + 'listing_details.json'
     return listing_details_output_file_name
@@ -62,6 +63,7 @@ def get_market_order_file_name_for_profile_backgrounds():
 def get_market_order_file_name_for_emoticons():
     market_order_file_name = get_data_folder() + 'market_orders_for_emoticons.json'
     return market_order_file_name
+
 
 def get_market_order_file_name():
     market_order_file_name = get_data_folder() + 'market_orders.json'
