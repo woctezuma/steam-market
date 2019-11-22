@@ -44,32 +44,20 @@ def update_all_listings_for_emoticons():
     return
 
 
-def main():
-    look_for_profile_backgrounds = True
-    price_threshold_in_cents = 100
-
-    retrieve_listings_from_scratch = False
-    retrieve_market_orders_online = True
-    focus_on_listing_hashes_never_seen_before = True
-
+def get_listings(retrieve_listings_from_scratch,
+                 listing_output_file_name):
     if retrieve_listings_from_scratch:
         update_all_listings_for_profile_backgrounds()
         update_all_listings_for_emoticons()
 
-    all_listings_for_profile_backgrounds = load_all_listings(get_listing_output_file_name_for_profile_backgrounds())
-    all_listings_for_emoticons = load_all_listings(get_listing_output_file_name_for_emoticons())
+    all_listings = load_all_listings(listing_output_file_name)
 
-    if look_for_profile_backgrounds:
-        category_name = 'profile backgrounds'
-        all_listings = all_listings_for_profile_backgrounds
-        listing_details_output_file_name = get_listing_details_output_file_name_for_profile_backgrounds()
-        market_order_output_file_name = get_market_order_file_name_for_profile_backgrounds()
-    else:
-        category_name = 'emoticons'
-        all_listings = all_listings_for_emoticons
-        listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
-        market_order_output_file_name = get_market_order_file_name_for_emoticons()
+    return all_listings
 
+
+def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
+                                                             price_threshold_in_cents,
+                                                             category_name):
     # Build dummy badge data, in order to reuse functions developed for the analysis of Booster Packs
 
     badge_data = dict()
@@ -85,6 +73,14 @@ def main():
                                                                 category_name=category_name,
                                                                 user_chosen_price_threshold=price_threshold_in_cents)
 
+    return filtered_badge_data
+
+
+def get_market_orders(filtered_badge_data,
+                      retrieve_market_orders_online,
+                      focus_on_listing_hashes_never_seen_before,
+                      listing_details_output_file_name,
+                      market_order_output_file_name):
     # Pre-retrieval of item name ids
 
     selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
@@ -116,6 +112,41 @@ def main():
                                                              market_order_dict=market_order_dict,
                                                              market_order_output_file_name=market_order_output_file_name,
                                                              listing_details_output_file_name=listing_details_output_file_name)
+
+    return market_order_dict
+
+
+def main():
+    look_for_profile_backgrounds = True
+    price_threshold_in_cents = 100
+
+    retrieve_listings_from_scratch = False
+    retrieve_market_orders_online = True
+    focus_on_listing_hashes_never_seen_before = True
+
+    if look_for_profile_backgrounds:
+        category_name = 'profile backgrounds'
+        listing_output_file_name = get_listing_output_file_name_for_profile_backgrounds()
+        listing_details_output_file_name = get_listing_details_output_file_name_for_profile_backgrounds()
+        market_order_output_file_name = get_market_order_file_name_for_profile_backgrounds()
+    else:
+        category_name = 'emoticons'
+        listing_output_file_name = get_listing_output_file_name_for_emoticons()
+        listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
+        market_order_output_file_name = get_market_order_file_name_for_emoticons()
+
+    all_listings = get_listings(retrieve_listings_from_scratch,
+                                listing_output_file_name)
+
+    filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
+                                                                                   price_threshold_in_cents,
+                                                                                   category_name)
+
+    market_order_dict = get_market_orders(filtered_badge_data,
+                                          retrieve_market_orders_online,
+                                          focus_on_listing_hashes_never_seen_before,
+                                          listing_details_output_file_name,
+                                          market_order_output_file_name)
 
     return True
 
