@@ -86,6 +86,9 @@ def determine_whether_an_arbitrage_might_exist(badge_data,
         #         craft a **badge** does not depend on the game, contrary to the cost to craft a **booster pack**.
         price_threshold = user_chosen_price_threshold
 
+    if price_threshold is None:
+        raise AssertionError()
+
     an_arbitrage_might_exist = bool(price_threshold < sell_price_without_fee)
 
     return an_arbitrage_might_exist
