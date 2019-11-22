@@ -12,6 +12,7 @@
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
 from market_arbitrage import filter_out_badges_with_low_sell_price
+from market_buzz_detector import filter_out_unmarketable_packs, sort_according_to_buzz, print_packs_with_high_buzz
 from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data_from_disk, download_market_order_data_batch
 from market_search import get_tag_item_class_no_for_profile_backgrounds, get_tag_item_class_no_for_emoticons
@@ -124,6 +125,8 @@ def main():
     retrieve_market_orders_online = True
     focus_on_listing_hashes_never_seen_before = True
 
+    num_packs_to_display = 100
+
     if look_for_profile_backgrounds:
         category_name = 'profile backgrounds'
         listing_output_file_name = get_listing_output_file_name_for_profile_backgrounds()
@@ -147,6 +150,21 @@ def main():
                                           focus_on_listing_hashes_never_seen_before,
                                           listing_details_output_file_name,
                                           market_order_output_file_name)
+
+    # Only keep marketable booster packs
+
+    marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+
+    # Sort by bid value
+    hashes_for_best_bid = sort_according_to_buzz(market_order_dict,
+                                                 marketable_market_order_dict)
+
+    # Display the highest ranked booster packs
+
+    print_packs_with_high_buzz(hashes_for_best_bid,
+                               market_order_dict,
+                               category_name=category_name,
+                               num_packs_to_display=num_packs_to_display)
 
     return True
 
