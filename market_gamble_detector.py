@@ -17,6 +17,8 @@ from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data_from_disk, download_market_order_data_batch
 from market_search import get_tag_item_class_no_for_profile_backgrounds, get_tag_item_class_no_for_emoticons
 from market_search import update_all_listings, load_all_listings
+from sack_of_gems import get_gem_price, get_gem_amount_required_to_craft_badge
+from utils import convert_listing_hash_to_app_id
 from utils import get_category_name_for_profile_backgrounds, get_category_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_profile_backgrounds
@@ -58,16 +60,28 @@ def get_listings(retrieve_listings_from_scratch,
 
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
-                                                             price_threshold_in_cents,
-                                                             category_name):
+                                                             listing_hashes_per_app_id=None,
+                                                             price_threshold_in_cents=None,
+                                                             category_name=None,
+                                                             gem_price=None):
+    if gem_price is None:
+        gem_price = get_gem_price()
+
+    gem_amount_required_to_craft_badge = get_gem_amount_required_to_craft_badge()
+
     # Build dummy badge data, in order to reuse functions developed for the analysis of Booster Packs
 
     badge_data = dict()
     for listing_hash in all_listings:
-        dummy_app_id = listing_hash
-        badge_data[dummy_app_id] = dict()
-        badge_data[dummy_app_id]['listing_hash'] = listing_hash
-        badge_data[dummy_app_id]['sell_price'] = all_listings[listing_hash]['sell_price']
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+        
+        num_items_of_common_rarity = listing_hashes_per_app_id[app_id]
+        item_price_by_crafting_badges = num_items_of_common_rarity * gem_amount_required_to_craft_badge * gem_price
+
+        badge_data[app_id] = dict()
+        badge_data[app_id]['listing_hash'] = listing_hash
+        badge_data[app_id]['sell_price'] = all_listings[listing_hash]['sell_price']
+        badge_data[app_id]['gem_price'] = item_price_by_crafting_badges
 
     # Filter out candidates for which the ask is below a given threshold
 
@@ -165,8 +179,9 @@ def main():
     # *Heuristic* filtering of listing hashes
 
     filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
-                                                                                   price_threshold_in_cents,
-                                                                                   category_name)
+                                                                                   listing_hashes_per_app_id=listing_hashes_per_app_id,
+                                                                                   price_threshold_in_cents=price_threshold_in_cents,
+                                                                                   category_name=category_name)
 
     # Pre-retrieval of item name ids
 
