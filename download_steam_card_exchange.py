@@ -95,12 +95,16 @@ def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set):
 
 
 def parse_data_from_steam_card_exchange(response=None,
+                                        force_update_from_steam_card_exchange=False,
                                         steam_card_exchange_file_name=None):
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
     if response is None:
-        response = load_data_from_steam_card_exchange(steam_card_exchange_file_name=steam_card_exchange_file_name)
+        if force_update_from_steam_card_exchange:
+            response = download_data_from_steam_card_exchange(steam_card_exchange_file_name)
+        else:
+            response = load_data_from_steam_card_exchange(steam_card_exchange_file_name)
 
     # Build dict: app_id -> num_cards_per_set
 
