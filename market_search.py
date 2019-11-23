@@ -42,12 +42,11 @@ def get_search_parameters(start_index=0,
         # 5: Booster Pack
         tag_item_class_no = get_tag_item_class_no_for_booster_packs()
 
-    if tag_item_class_no == get_tag_item_class_no_for_booster_packs():
-        column_to_sort_by = 'name'
-        sort_direction = 'asc'
-    else:
-        column_to_sort_by = 'price'
-        sort_direction = 'desc'
+    # Sort by name to ensure that the download of listings is not affected by people buying/selling during the process.
+    # Otherwise, it would be possible to sort columns by 'price' instead of by 'name',
+    #                                 and in 'desc'-ending order rather than in 'asc'-ending order.
+    column_to_sort_by = 'name'
+    sort_direction = 'asc'
 
     params = dict()
 
