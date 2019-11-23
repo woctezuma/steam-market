@@ -1,8 +1,12 @@
 # Objective: detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders
 
+from download_steam_card_exchange import parse_data_from_steam_card_exchange
+from market_arbitrage import filter_out_badges_with_low_sell_price
+from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_listing import get_item_nameid_batch, get_steam_market_listing_url
 from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
+from sack_of_gems import get_gem_price
 from utils import convert_listing_hash_to_app_id, get_steamcardexchange_url, get_steam_store_url
 from utils import convert_listing_hash_to_app_name
 from utils import get_category_name_for_booster_packs
@@ -134,11 +138,57 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
     return
 
 
+def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
+                                                          aggregated_badge_data=None,
+                                                          force_update_from_steam_card_exchange=False,
+                                                          enforced_sack_of_gems_price=None,
+                                                          minimum_allowed_sack_of_gems_price=None,
+                                                          retrieve_gem_price_from_scratch=False):
+    if aggregated_badge_data is None:
+        aggregated_badge_data = convert_to_badges(all_listings)
+
+    dico = parse_data_from_steam_card_exchange(
+        force_update_from_steam_card_exchange=force_update_from_steam_card_exchange)
+
+    gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                              minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+                              retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+
+    for app_id in aggregated_badge_data:
+        listing_hash = aggregated_badge_data[app_id]['listing_hash']
+
+        sell_price_in_cents = all_listings[listing_hash]['sell_price']
+        sell_price_in_euros = sell_price_in_cents / 100
+
+        try:
+            data_from_steam_card_exchange = dico[app_id]
+        except KeyError:
+            print('No data found for appID={}.'.format(app_id))
+            data_from_steam_card_exchange = {
+                'name': None,
+                'gem_amount': 1200,  # by default, use the highest possible value
+            }
+
+        aggregated_badge_data[app_id]['name'] = data_from_steam_card_exchange['name']
+        gem_amount_required_to_craft_booster_pack = data_from_steam_card_exchange['gem_amount']
+
+        aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
+        aggregated_badge_data[app_id]['gem_price'] = gem_amount_required_to_craft_booster_pack * gem_price
+        aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
+
+    return aggregated_badge_data
+
+
 def main(retrieve_listings_from_scratch=False,
          retrieve_market_orders_online=False,
          min_sell_price=30,
          min_num_listings=3,
-         num_packs_to_display=10):
+         num_packs_to_display=10,
+         use_a_constant_price_threshold=False,
+         force_update_from_steam_card_exchange=False,
+         enforced_sack_of_gems_price=None,
+         minimum_allowed_sack_of_gems_price=None,
+         retrieve_gem_price_from_scratch=False):
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:
@@ -146,11 +196,32 @@ def main(retrieve_listings_from_scratch=False,
 
     all_listings = load_all_listings()
 
+    # Import information from SteamCardExchange
+
+    aggregated_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
+                                                                                  force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
+                                                                                  enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+                                                                                  retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+
     # *Heuristic* filtering of listing hashes
 
-    filtered_listing_hashes = filter_listings(all_listings,
-                                              min_sell_price=min_sell_price,
-                                              min_num_listings=min_num_listings)
+    if use_a_constant_price_threshold:
+        filtered_listing_hashes = filter_listings(all_listings,
+                                                  min_sell_price=min_sell_price,
+                                                  min_num_listings=min_num_listings)
+
+        filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(filtered_listing_hashes,
+                                                                                    force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
+                                                                                    enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                                                                    minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+                                                                                    retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+
+    else:
+        filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+
+        filtered_listing_hashes = [filtered_badge_data[app_id]['listing_hash']
+                                   for app_id in filtered_badge_data]
 
     # Pre-retrieval of item name ids
 
@@ -158,9 +229,7 @@ def main(retrieve_listings_from_scratch=False,
 
     # Download market orders
 
-    badge_data = convert_to_badges(filtered_listing_hashes)
-
-    market_order_dict = load_market_order_data(badge_data,
+    market_order_dict = load_market_order_data(filtered_badge_data,
                                                trim_output=True,
                                                retrieve_market_orders_online=retrieve_market_orders_online)
 
@@ -177,6 +246,14 @@ def main(retrieve_listings_from_scratch=False,
     print_packs_with_high_buzz(hashes_for_best_bid,
                                market_order_dict,
                                num_packs_to_display=num_packs_to_display)
+
+    # Detect potential arbitrages
+
+    badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
+                                             market_order_dict)
+
+    print('# Results for detected *potential* arbitrages')
+    print_arbitrages(badge_arbitrages)
 
     return
 
