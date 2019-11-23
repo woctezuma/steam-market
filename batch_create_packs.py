@@ -32,6 +32,7 @@ def filter_app_ids_based_on_badge_data(manually_selected_app_ids,
 def create_packs_for_app_ids(manually_selected_app_ids,
                              filtered_badge_data=None,
                              is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
+                             is_marketable=True,  # Caveat: if False, packs will be crafted with un-marketable gems!
                              verbose=True):
     app_ids, filtered_badge_data = filter_app_ids_based_on_badge_data(manually_selected_app_ids,
                                                                       filtered_badge_data=filtered_badge_data)
@@ -43,7 +44,8 @@ def create_packs_for_app_ids(manually_selected_app_ids,
         if is_a_simulation:
             result = None
         else:
-            result = create_booster_pack(app_id=app_id)
+            result = create_booster_pack(app_id=app_id,
+                                         is_marketable=is_marketable)
 
         listing_hash = filtered_badge_data[app_id]['listing_hash']
         creation_results[listing_hash] = result
@@ -66,7 +68,8 @@ def create_packs_for_app_ids(manually_selected_app_ids,
     return creation_results, next_creation_times
 
 
-def main(is_a_simulation=True):  # Caveat: if False, then packs will be crafted, which costs money!
+def main(is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
+         is_marketable=True):  # Caveat: if False, packs will be crafted with unmarketable gems!
     retrieve_listings_from_scratch = False
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
@@ -83,7 +86,8 @@ def main(is_a_simulation=True):  # Caveat: if False, then packs will be crafted,
 
     creation_results, next_creation_times = create_packs_for_app_ids(manually_selected_app_ids,
                                                                      filtered_badge_data=filtered_badge_data,
-                                                                     is_a_simulation=is_a_simulation)
+                                                                     is_a_simulation=is_a_simulation,
+                                                                     is_marketable=is_marketable)
 
     return True
 

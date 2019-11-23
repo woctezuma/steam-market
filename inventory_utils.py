@@ -109,18 +109,27 @@ def get_steam_booster_pack_creation_url():
     return booster_pack_creation_url
 
 
-def get_booster_pack_creation_parameters(app_id, session_id):
+def get_booster_pack_creation_parameters(app_id,
+                                         session_id,
+                                         is_marketable=True):
     booster_pack_creation_parameters = dict()
+
+    if is_marketable:
+        tradability_preference = 2
+    else:
+        tradability_preference = 3
 
     booster_pack_creation_parameters['sessionid'] = str(session_id)
     booster_pack_creation_parameters['appid'] = str(app_id)
     booster_pack_creation_parameters['series'] = '1'
-    booster_pack_creation_parameters['tradability_preference'] = '2'
+    booster_pack_creation_parameters['tradability_preference'] = str(tradability_preference)
 
     return booster_pack_creation_parameters
 
 
-def create_booster_pack(app_id, verbose=True):
+def create_booster_pack(app_id,
+                        is_marketable=True,
+                        verbose=True):
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -131,7 +140,8 @@ def create_booster_pack(app_id, verbose=True):
 
     url = get_steam_booster_pack_creation_url()
     req_data = get_booster_pack_creation_parameters(app_id=app_id,
-                                                    session_id=session_id)
+                                                    session_id=session_id,
+                                                    is_marketable=is_marketable)
 
     resp_data = requests.post(url,
                               data=req_data,
