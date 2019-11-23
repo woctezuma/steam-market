@@ -180,6 +180,12 @@ def find_badge_arbitrages(badge_data,
 
         if is_an_arbitrage:
             badge_arbitrages[listing_hash] = dict()
+
+            # Warning: for profile backgrounds and emoticons, you cannot trust the value of app_id stored here,
+            #          because app_id is a dummy variable, which is simply a copy of listing_hash.
+            #
+            #          However, for booster packs, app_id is correct, because there is a one-to-one mapping between
+            #          appIDs and listing hashes of booster packs.
             badge_arbitrages[listing_hash]['app_id'] = app_id
 
             try:
