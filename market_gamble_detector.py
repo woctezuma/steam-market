@@ -82,10 +82,13 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
         sell_price_in_cents = all_listings[listing_hash]['sell_price']
         sell_price_in_euros = sell_price_in_cents / 100
 
-        badge_data[app_id] = dict()
-        badge_data[app_id]['listing_hash'] = listing_hash
-        badge_data[app_id]['sell_price'] = sell_price_in_euros
-        badge_data[app_id]['gem_price'] = item_price_by_crafting_badges
+        # In order to distinguish items linked to the same appID, dummy appIDs are introduced:
+        dummy_app_id = listing_hash
+
+        badge_data[dummy_app_id] = dict()
+        badge_data[dummy_app_id]['listing_hash'] = listing_hash
+        badge_data[dummy_app_id]['sell_price'] = sell_price_in_euros
+        badge_data[dummy_app_id]['gem_price'] = item_price_by_crafting_badges
 
     # Filter out candidates for which the ask is below a given threshold
 
