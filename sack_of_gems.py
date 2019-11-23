@@ -101,6 +101,15 @@ def get_gem_price(enforced_sack_of_gems_price=None,
     return gem_price
 
 
+def get_gem_amount_required_to_craft_badge():
+    # This is a constant value of 2000 gems for a badge, because a badge requires a set of N cards, which are obtained
+    # after opening N/3 booster packs, and a booster pack costs 6000/N gems.
+
+    gem_amount_required_to_craft_badge = 2000
+
+    return gem_amount_required_to_craft_badge
+
+
 def main():
     print('Loaded from the disk:')
     sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
