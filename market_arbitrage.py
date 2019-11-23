@@ -182,8 +182,14 @@ def find_badge_arbitrages(badge_data,
             badge_arbitrages[listing_hash] = dict()
             badge_arbitrages[listing_hash]['app_id'] = app_id
 
-            badge_arbitrages[listing_hash]['name'] = individual_badge_data['name']
-            badge_arbitrages[listing_hash]['gem_amount'] = individual_badge_data['gem_amount']
+            try:
+                badge_arbitrages[listing_hash]['name'] = individual_badge_data['name']
+            except KeyError:
+                badge_arbitrages[listing_hash]['name'] = None
+            try:
+                badge_arbitrages[listing_hash]['gem_amount'] = individual_badge_data['gem_amount']
+            except KeyError:
+                badge_arbitrages[listing_hash]['gem_amount'] = None
             badge_arbitrages[listing_hash]['gem_price_including_fee'] = individual_badge_data['gem_price']
             badge_arbitrages[listing_hash]['sell_price'] = individual_badge_data['sell_price']
 
