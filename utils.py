@@ -19,6 +19,12 @@ def get_badge_creation_file_name(from_javascript=False):
     return badge_creation_file_name
 
 
+def get_steam_card_exchange_file_name():
+    steam_card_exchange_file_name = get_data_folder() + 'steam_card_exchange.json'
+
+    return steam_card_exchange_file_name
+
+
 def get_listing_output_file_name_for_profile_backgrounds():
     listing_output_file_name = get_data_folder() + 'listings_for_profile_backgrounds.json'
     return listing_output_file_name
