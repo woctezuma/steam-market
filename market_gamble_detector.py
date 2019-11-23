@@ -150,7 +150,7 @@ def count_listing_hashes_per_app_id(all_listings):
 
 def main():
     look_for_profile_backgrounds = True
-    price_threshold_in_cents = 100
+    price_threshold_in_cents = None
 
     retrieve_listings_from_scratch = False
     retrieve_market_orders_online = True
