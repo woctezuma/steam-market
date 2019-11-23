@@ -12,6 +12,7 @@
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
 from market_arbitrage import filter_out_badges_with_low_sell_price
+from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_buzz_detector import filter_out_unmarketable_packs, sort_according_to_buzz, print_packs_with_high_buzz
 from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data_from_disk, download_market_order_data_batch
@@ -217,6 +218,14 @@ def main():
                                listing_hashes_per_app_id=listing_hashes_per_app_id,
                                category_name=category_name,
                                num_packs_to_display=num_packs_to_display)
+
+    # Detect potential arbitrages
+
+    badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
+                                             market_order_dict)
+
+    print('Results for detected *potential* arbitrages:')
+    print_arbitrages(badge_arbitrages)
 
     return True
 
