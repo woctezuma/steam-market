@@ -210,6 +210,7 @@ def main():
 
     print_packs_with_high_buzz(hashes_for_best_bid,
                                market_order_dict,
+                               listing_hashes_per_app_id=listing_hashes_per_app_id,
                                category_name=category_name,
                                num_packs_to_display=num_packs_to_display)
 
