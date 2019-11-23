@@ -63,10 +63,9 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                              listing_hashes_per_app_id=None,
                                                              price_threshold_in_cents=None,
                                                              category_name=None,
-                                                             gem_price_in_cents=None):
-    if gem_price_in_cents is None:
+                                                             gem_price_in_euros=None):
+    if gem_price_in_euros is None:
         gem_price_in_euros = get_gem_price()
-        gem_price_in_cents = gem_price_in_euros * 100
 
     gem_amount_required_to_craft_badge = get_gem_amount_required_to_craft_badge()
 
@@ -77,11 +76,14 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
         num_items_of_common_rarity = listing_hashes_per_app_id[app_id]
-        item_price_by_crafting_badges = num_items_of_common_rarity * gem_amount_required_to_craft_badge * gem_price_in_cents
+        item_price_by_crafting_badges = num_items_of_common_rarity * gem_amount_required_to_craft_badge * gem_price_in_euros
+
+        sell_price_in_cents = all_listings[listing_hash]['sell_price']
+        sell_price_in_euros = sell_price_in_cents / 100
 
         badge_data[app_id] = dict()
         badge_data[app_id]['listing_hash'] = listing_hash
-        badge_data[app_id]['sell_price'] = all_listings[listing_hash]['sell_price']
+        badge_data[app_id]['sell_price'] = sell_price_in_euros
         badge_data[app_id]['gem_price'] = item_price_by_crafting_badges
 
     # Filter out candidates for which the ask is below a given threshold
