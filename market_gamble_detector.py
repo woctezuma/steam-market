@@ -111,6 +111,27 @@ def get_market_orders(filtered_badge_data,
     return market_order_dict
 
 
+def count_listing_hashes_per_app_id(all_listings):
+    # For each appID, count the number of known listing hashes.
+    #
+    # If 'all_listings' is constrained to items of 'Common' rarity, then this is the number of **different** items of
+    # such rarity. This information is useful to know whether a gamble is worth a try: the more items of Common rarity,
+    # the harder it is to receive the item which you are specifically after, by crafting a badge.
+    #
+    # NB: Currently, this information is only used for display.
+
+    listing_hashes_per_app_id = dict()
+
+    for listing_hash in all_listings:
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+        try:
+            listing_hashes_per_app_id[app_id] += 1
+        except KeyError:
+            listing_hashes_per_app_id[app_id] = 1
+
+    return listing_hashes_per_app_id
+
+
 def main():
     look_for_profile_backgrounds = True
     price_threshold_in_cents = 100
@@ -136,6 +157,10 @@ def main():
 
     all_listings = get_listings(retrieve_listings_from_scratch,
                                 listing_output_file_name)
+
+    # Count the number of **different** items for each appID
+
+    listing_hashes_per_app_id = count_listing_hashes_per_app_id(all_listings)
 
     # *Heuristic* filtering of listing hashes
 
