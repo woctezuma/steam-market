@@ -227,7 +227,7 @@ def main():
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
 
-    print('Results for detected *potential* arbitrages:')
+    print('# Results for detected *potential* arbitrages')
     print_arbitrages(badge_arbitrages)
 
     return True

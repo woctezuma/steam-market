@@ -215,6 +215,8 @@ def find_badge_arbitrages(badge_data,
 
 
 def print_arbitrages(badge_arbitrages):
+    bullet_point = '*   '
+
     for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
         arbitrage = badge_arbitrages[listing_hash]
 
@@ -223,7 +225,8 @@ def print_arbitrages(badge_arbitrages):
             continue
 
         print(
-            'Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+            '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+                bullet_point,
                 arbitrage['profit'],
                 listing_hash,
                 arbitrage['gem_amount'],
@@ -341,13 +344,13 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
 
-    print('Results after *slow* update of market order data for *many potential* arbitrages:')
+    print('# Results after *slow* update of market order data for *many potential* arbitrages')
     print_arbitrages(badge_arbitrages)
 
     latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(badge_data=filtered_badge_data,
                                                                                     arbitrage_data=badge_arbitrages,
                                                                                     retrieve_market_orders_online=True)
-    print('Results after *quick* update of market order data for *a few detected* arbitrages:')
+    print('# Results after *quick* update of market order data for *a few detected* arbitrages')
     print_arbitrages(latest_badge_arbitrages)
 
     if automatically_create_then_sell_booster_packs:
