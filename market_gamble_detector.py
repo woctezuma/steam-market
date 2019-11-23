@@ -129,11 +129,12 @@ def get_market_orders(filtered_badge_data,
 def count_listing_hashes_per_app_id(all_listings):
     # For each appID, count the number of known listing hashes.
     #
+    # Caveat: this piece of information relies on the downloaded listings, it is NOT NECESSARILY accurate!
+    #         Errors can happen, so manually double-check any information before using it for critical usage!
+    #
     # If 'all_listings' is constrained to items of 'Common' rarity, then this is the number of **different** items of
     # such rarity. This information is useful to know whether a gamble is worth a try: the more items of Common rarity,
     # the harder it is to receive the item which you are specifically after, by crafting a badge.
-    #
-    # NB: Currently, this information is only used for display.
 
     listing_hashes_per_app_id = dict()
 
