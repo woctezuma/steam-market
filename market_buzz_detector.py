@@ -6,6 +6,7 @@ from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_listing import get_item_nameid_batch, get_steam_market_listing_url
 from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
+from market_utils import filter_out_dubious_listing_hashes
 from sack_of_gems import get_gem_price
 from utils import convert_listing_hash_to_app_id, get_steamcardexchange_url, get_steam_store_url
 from utils import convert_listing_hash_to_app_name
@@ -195,6 +196,8 @@ def main(retrieve_listings_from_scratch=False,
         update_all_listings()
 
     all_listings = load_all_listings()
+
+    all_listings = filter_out_dubious_listing_hashes(all_listings)
 
     # Import information from SteamCardExchange
 
