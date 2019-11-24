@@ -154,16 +154,12 @@ def count_listing_hashes_per_app_id(all_listings):
     return listing_hashes_per_app_id
 
 
-def main():
-    look_for_profile_backgrounds = True
-    price_threshold_in_cents = None
-
-    retrieve_listings_from_scratch = False
-    retrieve_market_orders_online = True
-    focus_on_listing_hashes_never_seen_before = True
-
-    num_packs_to_display = 100
-
+def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
+         retrieve_listings_from_scratch=False,
+         retrieve_market_orders_online=True,
+         focus_on_listing_hashes_never_seen_before=True,
+         price_threshold_in_cents=None,
+         num_packs_to_display=10):
     if look_for_profile_backgrounds:
         category_name = get_category_name_for_profile_backgrounds()
         listing_output_file_name = get_listing_output_file_name_for_profile_backgrounds()
@@ -235,4 +231,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
+         retrieve_listings_from_scratch=False,
+         retrieve_market_orders_online=True,
+         focus_on_listing_hashes_never_seen_before=True,
+         price_threshold_in_cents=None,
+         num_packs_to_display=100)
