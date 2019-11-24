@@ -236,12 +236,19 @@ def print_arbitrages(badge_arbitrages,
         else:
             listing_hash_formatted_for_markdown = listing_hash
 
+        gem_amount = arbitrage['gem_amount']
+
+        if gem_amount is None:
+            gem_amount_as_str = gem_amount
+        else:
+            gem_amount_as_str = '{:.0f}'.format(gem_amount)
+
         print(
-            '{}Profit: {:.2f}€\t{}\t| craft pack: {:.0f} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+            '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
                 bullet_point,
                 arbitrage['profit'],
                 listing_hash_formatted_for_markdown,
-                arbitrage['gem_amount'],
+                gem_amount_as_str,
                 arbitrage['gem_price_including_fee'],
                 arbitrage['bid_without_fee'],
                 arbitrage['bid_including_fee'],
