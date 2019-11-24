@@ -143,13 +143,14 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
                                                           aggregated_badge_data=None,
                                                           force_update_from_steam_card_exchange=False,
                                                           enforced_sack_of_gems_price=None,
-                                                          minimum_allowed_sack_of_gems_price=None,
-                                                          retrieve_gem_price_from_scratch=False):
+                                                          minimum_allowed_sack_of_gems_price=None):
     if aggregated_badge_data is None:
         aggregated_badge_data = convert_to_badges(all_listings)
 
     dico = parse_data_from_steam_card_exchange(
         force_update_from_steam_card_exchange=force_update_from_steam_card_exchange)
+
+    retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
     gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                               minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
@@ -188,8 +189,7 @@ def main(retrieve_listings_from_scratch=False,
          use_a_constant_price_threshold=False,
          force_update_from_steam_card_exchange=False,
          enforced_sack_of_gems_price=None,
-         minimum_allowed_sack_of_gems_price=None,
-         retrieve_gem_price_from_scratch=False):
+         minimum_allowed_sack_of_gems_price=None):
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:
@@ -204,8 +204,7 @@ def main(retrieve_listings_from_scratch=False,
     aggregated_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
                                                                                   force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
                                                                                   enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                                                  retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+                                                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
 
     # *Heuristic* filtering of listing hashes
 
@@ -217,8 +216,7 @@ def main(retrieve_listings_from_scratch=False,
         filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(filtered_listing_hashes,
                                                                                     force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
                                                                                     enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                                                    minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                                                    retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+                                                                                    minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
 
     else:
         filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
