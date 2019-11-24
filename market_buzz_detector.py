@@ -183,13 +183,13 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
 
 def main(retrieve_listings_from_scratch=False,
          retrieve_market_orders_online=False,
-         min_sell_price=30,
-         min_num_listings=3,
-         num_packs_to_display=10,
-         use_a_constant_price_threshold=False,
          force_update_from_steam_card_exchange=False,
          enforced_sack_of_gems_price=None,
-         minimum_allowed_sack_of_gems_price=None):
+         minimum_allowed_sack_of_gems_price=None,
+         use_a_constant_price_threshold=False,
+         min_sell_price=30,
+         min_num_listings=3,
+         num_packs_to_display=10):
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:
@@ -262,6 +262,10 @@ def main(retrieve_listings_from_scratch=False,
 if __name__ == '__main__':
     main(retrieve_listings_from_scratch=True,
          retrieve_market_orders_online=True,
+         force_update_from_steam_card_exchange=True,
+         enforced_sack_of_gems_price=None,
+         minimum_allowed_sack_of_gems_price=None,
+         use_a_constant_price_threshold=False,
          min_sell_price=30,
          min_num_listings=3,
          num_packs_to_display=100)
