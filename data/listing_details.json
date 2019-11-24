@@ -36654,5 +36654,265 @@
   "439350-Kritika:REBOOT Booster Pack": {
     "item_nameid": 176095863,
     "is_marketable": true
+  },
+  "535480-Sundered: Eldritch Edition Booster Pack": {
+    "item_nameid": 176088532,
+    "is_marketable": true
+  },
+  "389670-Pacer Booster Pack": {
+    "item_nameid": 176098074,
+    "is_marketable": true
+  },
+  "542700-\u529b\u91cf\u7684\u4ee3\u50f9 Power Overwhelming Booster Pack": {
+    "item_nameid": 176095898,
+    "is_marketable": false
+  },
+  "330390-GRANDIA II HD Remaster Booster Pack": {
+    "item_nameid": 176094231,
+    "is_marketable": true
+  },
+  "963690-Hentai Girl Hime Booster Pack": {
+    "item_nameid": 176095661,
+    "is_marketable": true
+  },
+  "730-#Economy_TradingCards_Type_GameType": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "704910-Tenta Shooter Booster Pack": {
+    "item_nameid": 176090782,
+    "is_marketable": true
+  },
+  "790820-Valkyria Chronicles 4 Complete Edition Booster Pack": {
+    "item_nameid": 176094954,
+    "is_marketable": true
+  },
+  "218620-#Economy_TradingCards_Type_GameType": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "951000-Trap Shrine Booster Pack": {
+    "item_nameid": 176089982,
+    "is_marketable": true
+  },
+  "464760-#Economy_TradingCards_Type_GameType": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "279720-The I of the Dragon #Economy_TradingCards_ItemType_BoosterPack": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "278360-#Economy_TradingCards_Type_GameType": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "570-Dota 2 #Economy_TradingCards_ItemType_BoosterPack": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "219740-#Economy_TradingCards_Type_GameType": {
+    "item_nameid": null,
+    "is_marketable": null
+  },
+  "1058130-Queen's Wish: The Conqueror Booster Pack": {
+    "item_nameid": 176085254,
+    "is_marketable": true
+  },
+  "459370-Riverbond Booster Pack": {
+    "item_nameid": 176085263,
+    "is_marketable": true
+  },
+  "908070-Mystic Vale Booster Pack": {
+    "item_nameid": 176086356,
+    "is_marketable": true
+  },
+  "779290-Stygian: Reign of the Old Ones Booster Pack": {
+    "item_nameid": 176088389,
+    "is_marketable": true
+  },
+  "846870-Yooka-Laylee and the Impossible Lair Booster Pack": {
+    "item_nameid": 176090169,
+    "is_marketable": true
+  },
+  "793680-Fission Superstar X Booster Pack": {
+    "item_nameid": 176090963,
+    "is_marketable": true
+  },
+  "774651-Mighty Gunvolt Burst Booster Pack": {
+    "item_nameid": 176090956,
+    "is_marketable": true
+  },
+  "690640-Trine 4: The Nightmare Prince Booster Pack": {
+    "item_nameid": 176091130,
+    "is_marketable": true
+  },
+  "627570-VentureVerse: Legend of Ulora Booster Pack": {
+    "item_nameid": 176091038,
+    "is_marketable": true
+  },
+  "1055310-The Myth Seekers 2: The Sunken City Booster Pack": {
+    "item_nameid": 176092064,
+    "is_marketable": true
+  },
+  "372320-LOST ORBIT: Terminal Velocity Booster Pack": {
+    "item_nameid": 176092470,
+    "is_marketable": true
+  },
+  "954610-Onii-chan Asobo Booster Pack": {
+    "item_nameid": 176092514,
+    "is_marketable": true
+  },
+  "1012840-Moons of Madness Booster Pack": {
+    "item_nameid": 176092590,
+    "is_marketable": true
+  },
+  "359510-Tangle Tower Booster Pack": {
+    "item_nameid": 176092731,
+    "is_marketable": true
+  },
+  "914020-Gibbous - A Cthulhu Adventure Booster Pack": {
+    "item_nameid": 176093582,
+    "is_marketable": true
+  },
+  "595270-Million to One Hero Booster Pack": {
+    "item_nameid": 176093312,
+    "is_marketable": true
+  },
+  "813540-Scheming Through The Zombie Apocalypse: The Beginning Booster Pack": {
+    "item_nameid": 176093490,
+    "is_marketable": true
+  },
+  "916100-Telefrag VR Booster Pack": {
+    "item_nameid": 176093253,
+    "is_marketable": true
+  },
+  "647570-Transference Booster Pack": {
+    "item_nameid": 176093679,
+    "is_marketable": true
+  },
+  "940310-Corpse Party 2: Dead Patient Booster Pack": {
+    "item_nameid": 176094121,
+    "is_marketable": true
+  },
+  "939400-LoveChoice \u62e3\u7231 Booster Pack": {
+    "item_nameid": 176094338,
+    "is_marketable": true
+  },
+  "762610-Russian Subway Dogs Booster Pack": {
+    "item_nameid": 176094238,
+    "is_marketable": true
+  },
+  "795160-Tsundere Idol Booster Pack": {
+    "item_nameid": 176094409,
+    "is_marketable": true
+  },
+  "581210-Dungeon Manager ZV 2 Booster Pack": {
+    "item_nameid": 176094641,
+    "is_marketable": true
+  },
+  "943260-Stranded Sails - Explorers of the Cursed Islands Booster Pack": {
+    "item_nameid": 176094693,
+    "is_marketable": true
+  },
+  "1078510-Alluris Booster Pack": {
+    "item_nameid": 176094840,
+    "is_marketable": true
+  },
+  "1109360-Hentai Mosaique Fix-IT Shoppe Booster Pack": {
+    "item_nameid": 176094833,
+    "is_marketable": true
+  },
+  "1018160-MXGP 2019 - The Official Motocross Videogame Booster Pack": {
+    "item_nameid": 176094787,
+    "is_marketable": true
+  },
+  "404890-U-Boats Booster Pack": {
+    "item_nameid": 176094786,
+    "is_marketable": true
+  },
+  "1032790-Journey of Greed Booster Pack": {
+    "item_nameid": 176095132,
+    "is_marketable": true
+  },
+  "1104660-MO:Astray Booster Pack": {
+    "item_nameid": 176095332,
+    "is_marketable": true
+  },
+  "849740-Love Esquire Booster Pack": {
+    "item_nameid": 176095450,
+    "is_marketable": true
+  },
+  "952540-ROMANCING SAGA 3\u2122 Booster Pack": {
+    "item_nameid": 176095551,
+    "is_marketable": true
+  },
+  "919410-Felix the Reaper Booster Pack": {
+    "item_nameid": 176095575,
+    "is_marketable": true
+  },
+  "1147510-Hentai Asmodeus Booster Pack": {
+    "item_nameid": 176095717,
+    "is_marketable": true
+  },
+  "1107370-Demoniaca: Everlasting Night Booster Pack": {
+    "item_nameid": 176095791,
+    "is_marketable": true
+  },
+  "896750-Koral Booster Pack": {
+    "item_nameid": 176095789,
+    "is_marketable": true
+  },
+  "756530-TOKYO GHOUL\uff1are [CALL to EXIST] Booster Pack": {
+    "item_nameid": 176096200,
+    "is_marketable": true
+  },
+  "877810-Anodyne 2: Return to Dust Booster Pack": {
+    "item_nameid": 176096378,
+    "is_marketable": true
+  },
+  "965230-DORAEMON  STORY OF SEASONS Booster Pack": {
+    "item_nameid": 176097627,
+    "is_marketable": true
+  },
+  "914110-Narcos: Rise of the Cartels Booster Pack": {
+    "item_nameid": 176097846,
+    "is_marketable": true
+  },
+  "1094530-\u7231\u4e3d\u5a05\u7684\u660e\u65e5\u76db\u5178\uff01 Booster Pack": {
+    "item_nameid": 176097914,
+    "is_marketable": true
+  },
+  "928440-Azure Reflections Booster Pack": {
+    "item_nameid": 176097967,
+    "is_marketable": true
+  },
+  "1070580-Drift86 Booster Pack": {
+    "item_nameid": 176097965,
+    "is_marketable": true
+  },
+  "636700-Crappy Day Enhanced Edition Booster Pack": {
+    "item_nameid": 176098040,
+    "is_marketable": true
+  },
+  "678900-Farmer's Dynasty Booster Pack": {
+    "item_nameid": 176098076,
+    "is_marketable": true
+  },
+  "1100600-Football Manager 2020 Booster Pack": {
+    "item_nameid": 176097995,
+    "is_marketable": true
+  },
+  "1023740-7 Sexy Sins Booster Pack": {
+    "item_nameid": 176098338,
+    "is_marketable": true
+  },
+  "1102990-Otaku Puzzle Booster Pack": {
+    "item_nameid": 176098723,
+    "is_marketable": true
+  },
+  "954740-Terminator: Resistance Booster Pack": {
+    "item_nameid": 176098461,
+    "is_marketable": true
   }
 }

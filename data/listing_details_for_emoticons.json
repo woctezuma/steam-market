@@ -7434,5 +7434,2377 @@
   "1014440-:Vivienne_Right:": {
     "item_nameid": 176043576,
     "is_marketable": false
+  },
+  "375170-:madpig:": {
+    "item_nameid": 88244596,
+    "is_marketable": true
+  },
+  "676910-:Potion_of_Affinity:": {
+    "item_nameid": 176096156,
+    "is_marketable": true
+  },
+  "339640-:DeadSmile:": {
+    "item_nameid": 74314552,
+    "is_marketable": true
+  },
+  "437060-:m3handshake:": {
+    "item_nameid": 138422993,
+    "is_marketable": true
+  },
+  "650110-:White_Cat:": {
+    "item_nameid": 175910534,
+    "is_marketable": true
+  },
+  "619270-:GameOver01:": {
+    "item_nameid": 176084402,
+    "is_marketable": true
+  },
+  "392620-:lucadia:": {
+    "item_nameid": 89504500,
+    "is_marketable": true
+  },
+  "510520-:lrlsarah:": {
+    "item_nameid": 175947797,
+    "is_marketable": true
+  },
+  "1087720-:chick_kimi:": {
+    "item_nameid": 176090666,
+    "is_marketable": true
+  },
+  "559280-:WaterElement:": {
+    "item_nameid": 176011793,
+    "is_marketable": true
+  },
+  "582960-:lit:": {
+    "item_nameid": 175879618,
+    "is_marketable": true
+  },
+  "290990-:rosepink:": {
+    "item_nameid": 13134382,
+    "is_marketable": true
+  },
+  "356530-:heartframe:": {
+    "item_nameid": 38655256,
+    "is_marketable": true
+  },
+  "448570-:oodButterfly:": {
+    "item_nameid": 159184639,
+    "is_marketable": true
+  },
+  "585190-:gummybear:": {
+    "item_nameid": 175993323,
+    "is_marketable": true
+  },
+  "636700-:second_take:": {
+    "item_nameid": 176098119,
+    "is_marketable": true
+  },
+  "538330-:rustykey:": {
+    "item_nameid": 176010211,
+    "is_marketable": true
+  },
+  "450950-:du3_dan:": {
+    "item_nameid": 175892509,
+    "is_marketable": true
+  },
+  "717850-:HelSablesGrimoire:": {
+    "item_nameid": 176096052,
+    "is_marketable": true
+  },
+  "549700-:PetroglyphPorcupine:": {
+    "item_nameid": 176076691,
+    "is_marketable": true
+  },
+  "390560-:fs_Valerie:": {
+    "item_nameid": 175968824,
+    "is_marketable": true
+  },
+  "851930-:coffee_cup:": {
+    "item_nameid": 176083472,
+    "is_marketable": true
+  },
+  "496490-:EmoteSnow:": {
+    "item_nameid": 175962064,
+    "is_marketable": true
+  },
+  "446000-:GalacticPirate:": {
+    "item_nameid": 175989799,
+    "is_marketable": true
+  },
+  "610410-:pawsand:": {
+    "item_nameid": 176020890,
+    "is_marketable": true
+  },
+  "565640-:colorCool:": {
+    "item_nameid": 176016924,
+    "is_marketable": true
+  },
+  "491700-:gggas:": {
+    "item_nameid": 175985758,
+    "is_marketable": true
+  },
+  "788210-:gemIcon:": {
+    "item_nameid": 175979446,
+    "is_marketable": true
+  },
+  "293220-:Decal:": {
+    "item_nameid": 175885234,
+    "is_marketable": true
+  },
+  "532980-:musicalnote:": {
+    "item_nameid": 175990142,
+    "is_marketable": true
+  },
+  "546330-:PC8001PLAYER:": {
+    "item_nameid": 175861671,
+    "is_marketable": true
+  },
+  "403300-:gbyellow:": {
+    "item_nameid": 90512860,
+    "is_marketable": true
+  },
+  "394430-:vera:": {
+    "item_nameid": 175976170,
+    "is_marketable": true
+  },
+  "307150-:sofia:": {
+    "item_nameid": 176023932,
+    "is_marketable": true
+  },
+  "440740-:ttl1:": {
+    "item_nameid": 157917777,
+    "is_marketable": true
+  },
+  "538990-:industrializeer:": {
+    "item_nameid": 175989864,
+    "is_marketable": true
+  },
+  "463510-:Purposefulness:": {
+    "item_nameid": 176086221,
+    "is_marketable": true
+  },
+  "490930-:webhistory:": {
+    "item_nameid": 176073457,
+    "is_marketable": true
+  },
+  "513460-:VotingSystemBreakdown:": {
+    "item_nameid": 175869031,
+    "is_marketable": true
+  },
+  "513560-:Emoticons06:": {
+    "item_nameid": 175873023,
+    "is_marketable": true
+  },
+  "397860-:buckethead:": {
+    "item_nameid": 73815928,
+    "is_marketable": true
+  },
+  "1092000-:ruri_tie:": {
+    "item_nameid": 176092773,
+    "is_marketable": true
+  },
+  "441020-:HSRScout:": {
+    "item_nameid": 153643801,
+    "is_marketable": true
+  },
+  "506260-:Heal_Trap:": {
+    "item_nameid": 176014511,
+    "is_marketable": true
+  },
+  "884090-:SkullHood:": {
+    "item_nameid": 176011878,
+    "is_marketable": true
+  },
+  "858060-:WarMedal:": {
+    "item_nameid": 176006721,
+    "is_marketable": true
+  },
+  "908070-:MysticValeOwl:": {
+    "item_nameid": 176086218,
+    "is_marketable": true
+  },
+  "486350-:Bazooka:": {
+    "item_nameid": 175956533,
+    "is_marketable": true
+  },
+  "568460-:punned:": {
+    "item_nameid": 176018947,
+    "is_marketable": true
+  },
+  "756530-:tgcte_juzo:": {
+    "item_nameid": 176098472,
+    "is_marketable": true
+  },
+  "637920-:wl1ts:": {
+    "item_nameid": 176023061,
+    "is_marketable": true
+  },
+  "552000-:BHballoon:": {
+    "item_nameid": 175966224,
+    "is_marketable": true
+  },
+  "463470-:PhobiaK:": {
+    "item_nameid": 175854919,
+    "is_marketable": true
+  },
+  "575050-:TriangleClappingGreat:": {
+    "item_nameid": 175916773,
+    "is_marketable": true
+  },
+  "939400-:LoveChoiceSweat:": {
+    "item_nameid": 176095232,
+    "is_marketable": true
+  },
+  "630790-:ppsk_Kagari:": {
+    "item_nameid": 175912086,
+    "is_marketable": true
+  },
+  "513680-:tripleshot:": {
+    "item_nameid": 175954070,
+    "is_marketable": true
+  },
+  "651500-:cherrysling:": {
+    "item_nameid": 176032819,
+    "is_marketable": true
+  },
+  "584940-:amberpebble:": {
+    "item_nameid": 175914510,
+    "is_marketable": true
+  },
+  "621010-:NuclearPower:": {
+    "item_nameid": 176019077,
+    "is_marketable": true
+  },
+  "486430-:FaceGuy:": {
+    "item_nameid": 175999411,
+    "is_marketable": true
+  },
+  "370870-:vehikle:": {
+    "item_nameid": 176084539,
+    "is_marketable": true
+  },
+  "564040-:bemeye:": {
+    "item_nameid": 175967344,
+    "is_marketable": true
+  },
+  "587920-:phholywater:": {
+    "item_nameid": 175947013,
+    "is_marketable": true
+  },
+  "741250-:thesandman_anne:": {
+    "item_nameid": 176003195,
+    "is_marketable": true
+  },
+  "705020-:high:": {
+    "item_nameid": 176038129,
+    "is_marketable": true
+  },
+  "625430-:dgb_train:": {
+    "item_nameid": 176017648,
+    "is_marketable": true
+  },
+  "522020-:be_logo:": {
+    "item_nameid": 175970906,
+    "is_marketable": true
+  },
+  "486490-:glum:": {
+    "item_nameid": 176023419,
+    "is_marketable": true
+  },
+  "544400-:USP:": {
+    "item_nameid": 176046825,
+    "is_marketable": true
+  },
+  "497880-:DoodleCake:": {
+    "item_nameid": 176017649,
+    "is_marketable": true
+  },
+  "742520-:emilia:": {
+    "item_nameid": 176082044,
+    "is_marketable": true
+  },
+  "650570-:c7xd:": {
+    "item_nameid": 176054317,
+    "is_marketable": true
+  },
+  "340150-:basementjunkie:": {
+    "item_nameid": 176096265,
+    "is_marketable": true
+  },
+  "442810-:UFO_Lights:": {
+    "item_nameid": 175878516,
+    "is_marketable": true
+  },
+  "376240-:sad_flask:": {
+    "item_nameid": 176085354,
+    "is_marketable": true
+  },
+  "803220-:winionscrown:": {
+    "item_nameid": 176023415,
+    "is_marketable": true
+  },
+  "942580-:rucksack_bag:": {
+    "item_nameid": 176086050,
+    "is_marketable": true
+  },
+  "437030-:Memento_bee:": {
+    "item_nameid": 161124273,
+    "is_marketable": true
+  },
+  "619270-:ChickenWing:": {
+    "item_nameid": 176094208,
+    "is_marketable": true
+  },
+  "323020-:adoma:": {
+    "item_nameid": 32661856,
+    "is_marketable": true
+  },
+  "359420-:meganlove:": {
+    "item_nameid": 175976380,
+    "is_marketable": true
+  },
+  "503370-:joyful:": {
+    "item_nameid": 175960532,
+    "is_marketable": true
+  },
+  "589670-:snareNote:": {
+    "item_nameid": 175984644,
+    "is_marketable": true
+  },
+  "453300-:MinorManaPotion:": {
+    "item_nameid": 173974745,
+    "is_marketable": true
+  },
+  "503980-:DisgruntledTomoe:": {
+    "item_nameid": 175858520,
+    "is_marketable": true
+  },
+  "699740-:WorkerUnit:": {
+    "item_nameid": 176083471,
+    "is_marketable": true
+  },
+  "436230-:dastronaut:": {
+    "item_nameid": 175917097,
+    "is_marketable": true
+  },
+  "545600-:EMTKIT:": {
+    "item_nameid": 175995832,
+    "is_marketable": true
+  },
+  "443450-:firebarrel:": {
+    "item_nameid": 161246384,
+    "is_marketable": true
+  },
+  "439530-:Piracy:": {
+    "item_nameid": 175876154,
+    "is_marketable": true
+  },
+  "612820-:wyvern:": {
+    "item_nameid": 175986210,
+    "is_marketable": true
+  },
+  "439420-:metal_thump_down:": {
+    "item_nameid": 176051416,
+    "is_marketable": true
+  },
+  "530110-:toasEmerald:": {
+    "item_nameid": 176093536,
+    "is_marketable": true
+  },
+  "568180-:SKCrystal:": {
+    "item_nameid": 176093216,
+    "is_marketable": true
+  },
+  "710760-:hncatdead:": {
+    "item_nameid": 176054590,
+    "is_marketable": true
+  },
+  "505140-:pokmeat:": {
+    "item_nameid": 176079011,
+    "is_marketable": true
+  },
+  "344190-:valkyrie:": {
+    "item_nameid": 141244648,
+    "is_marketable": true
+  },
+  "617270-:hoggysmile:": {
+    "item_nameid": 175994838,
+    "is_marketable": true
+  },
+  "571660-:skullhorns:": {
+    "item_nameid": 176010919,
+    "is_marketable": true
+  },
+  "362940-:CotcBloodPotion:": {
+    "item_nameid": 176084664,
+    "is_marketable": true
+  },
+  "397160-:structuralsteel:": {
+    "item_nameid": 176043340,
+    "is_marketable": true
+  },
+  "468250-:worus:": {
+    "item_nameid": 175901847,
+    "is_marketable": true
+  },
+  "842120-:arcaspath:": {
+    "item_nameid": 176030185,
+    "is_marketable": true
+  },
+  "525590-:Hockeyer:": {
+    "item_nameid": 175983755,
+    "is_marketable": true
+  },
+  "575710-:BobTheRobot:": {
+    "item_nameid": 175949261,
+    "is_marketable": true
+  },
+  "549910-:keycard:": {
+    "item_nameid": 175922595,
+    "is_marketable": true
+  },
+  "288670-:SilverCharm:": {
+    "item_nameid": 175905195,
+    "is_marketable": true
+  },
+  "299380-:ScaredJaxx:": {
+    "item_nameid": 176082049,
+    "is_marketable": true
+  },
+  "374150-:plan_target:": {
+    "item_nameid": 91415459,
+    "is_marketable": true
+  },
+  "329980-:C5Processor:": {
+    "item_nameid": 175907024,
+    "is_marketable": true
+  },
+  "456170-:practicedummy:": {
+    "item_nameid": 175957688,
+    "is_marketable": true
+  },
+  "540770-:bonesubject:": {
+    "item_nameid": 176090393,
+    "is_marketable": true
+  },
+  "689700-:lufaattack:": {
+    "item_nameid": 176041059,
+    "is_marketable": true
+  },
+  "546870-:MandMWarrior:": {
+    "item_nameid": 175987211,
+    "is_marketable": true
+  },
+  "792710-:lh_package:": {
+    "item_nameid": 176084956,
+    "is_marketable": true
+  },
+  "419020-:pandyshocked:": {
+    "item_nameid": 175938131,
+    "is_marketable": true
+  },
+  "431280-:discontenttall:": {
+    "item_nameid": 176013218,
+    "is_marketable": true
+  },
+  "532900-:purplecombo:": {
+    "item_nameid": 176048635,
+    "is_marketable": true
+  },
+  "666820-:slmolotov:": {
+    "item_nameid": 176023998,
+    "is_marketable": true
+  },
+  "613850-:bombacrusta:": {
+    "item_nameid": 176011130,
+    "is_marketable": true
+  },
+  "603840-:hazzard:": {
+    "item_nameid": 175907669,
+    "is_marketable": true
+  },
+  "631490-:Creamy:": {
+    "item_nameid": 175962088,
+    "is_marketable": true
+  },
+  "871530-:FindMe:": {
+    "item_nameid": 176094695,
+    "is_marketable": true
+  },
+  "603790-:ninjaavengerstar:": {
+    "item_nameid": 175896813,
+    "is_marketable": true
+  },
+  "658320-:kingnice:": {
+    "item_nameid": 175975294,
+    "is_marketable": true
+  },
+  "422860-:Holo_H:": {
+    "item_nameid": 175933587,
+    "is_marketable": true
+  },
+  "552060-:mastercrawler:": {
+    "item_nameid": 176084706,
+    "is_marketable": true
+  },
+  "590570-:paperstar:": {
+    "item_nameid": 176092990,
+    "is_marketable": true
+  },
+  "496290-:dddunamused:": {
+    "item_nameid": 176084705,
+    "is_marketable": true
+  },
+  "603330-:BRTscrews:": {
+    "item_nameid": 176016486,
+    "is_marketable": true
+  },
+  "649810-:ostwindkaan:": {
+    "item_nameid": 176021494,
+    "is_marketable": true
+  },
+  "569290-:zoi:": {
+    "item_nameid": 176019685,
+    "is_marketable": true
+  },
+  "598480-:woo_other:": {
+    "item_nameid": 175912513,
+    "is_marketable": true
+  },
+  "626010-:oscofeeboost:": {
+    "item_nameid": 175949937,
+    "is_marketable": true
+  },
+  "538550-:partytime:": {
+    "item_nameid": 175911643,
+    "is_marketable": true
+  },
+  "543390-:aeonwhatever:": {
+    "item_nameid": 175977730,
+    "is_marketable": true
+  },
+  "556440-:vccharged:": {
+    "item_nameid": 176082133,
+    "is_marketable": true
+  },
+  "564100-:dimminer:": {
+    "item_nameid": 175944858,
+    "is_marketable": true
+  },
+  "627530-:chippysgreen:": {
+    "item_nameid": 175912486,
+    "is_marketable": true
+  },
+  "690460-:COPTERCOCKPIT:": {
+    "item_nameid": 175995121,
+    "is_marketable": true
+  },
+  "511540-:moonpick:": {
+    "item_nameid": 176075909,
+    "is_marketable": true
+  },
+  "464440-:Ms_Jupiter:": {
+    "item_nameid": 173739176,
+    "is_marketable": true
+  },
+  "1048100-:Hidden_Smile:": {
+    "item_nameid": 176091221,
+    "is_marketable": true
+  },
+  "562250-:red_potion:": {
+    "item_nameid": 176016384,
+    "is_marketable": true
+  },
+  "494000-:anthclone:": {
+    "item_nameid": 175858179,
+    "is_marketable": true
+  },
+  "537760-:arizonastarfish:": {
+    "item_nameid": 175887217,
+    "is_marketable": true
+  },
+  "384200-:cuffs:": {
+    "item_nameid": 175991249,
+    "is_marketable": true
+  },
+  "601200-:pixstand:": {
+    "item_nameid": 176001310,
+    "is_marketable": true
+  },
+  "432110-:innerfiredemon:": {
+    "item_nameid": 176045468,
+    "is_marketable": true
+  },
+  "733460-:cows_head:": {
+    "item_nameid": 175994136,
+    "is_marketable": true
+  },
+  "577230-:BambooTome:": {
+    "item_nameid": 175917665,
+    "is_marketable": true
+  },
+  "414760-:bomb_red:": {
+    "item_nameid": 175882455,
+    "is_marketable": true
+  },
+  "427240-:cosmicheart:": {
+    "item_nameid": 175904513,
+    "is_marketable": true
+  },
+  "466030-:OWclose:": {
+    "item_nameid": 175864361,
+    "is_marketable": true
+  },
+  "368980-:kihappy:": {
+    "item_nameid": 118444075,
+    "is_marketable": true
+  },
+  "487040-:barkbark:": {
+    "item_nameid": 175887712,
+    "is_marketable": true
+  },
+  "613790-:rc_drone:": {
+    "item_nameid": 175909268,
+    "is_marketable": true
+  },
+  "449100-:hatmerchant:": {
+    "item_nameid": 176046136,
+    "is_marketable": true
+  },
+  "628560-:tempo:": {
+    "item_nameid": 175908994,
+    "is_marketable": true
+  },
+  "437550-:MelonSimulator:": {
+    "item_nameid": 175985774,
+    "is_marketable": true
+  },
+  "734550-:rulesl:": {
+    "item_nameid": 176023068,
+    "is_marketable": true
+  },
+  "813540-:CoyoteZombie:": {
+    "item_nameid": 176094455,
+    "is_marketable": true
+  },
+  "428660-:dutmpowercell:": {
+    "item_nameid": 176013284,
+    "is_marketable": true
+  },
+  "406860-:BlindGear:": {
+    "item_nameid": 176032817,
+    "is_marketable": true
+  },
+  "572240-:Stop_it:": {
+    "item_nameid": 175977709,
+    "is_marketable": true
+  },
+  "563330-:mt2_crystal:": {
+    "item_nameid": 175863287,
+    "is_marketable": true
+  },
+  "338830-:Space_Tiger:": {
+    "item_nameid": 176071090,
+    "is_marketable": true
+  },
+  "699780-:ef2_claudia:": {
+    "item_nameid": 176014851,
+    "is_marketable": true
+  },
+  "464190-:parasite:": {
+    "item_nameid": 175867670,
+    "is_marketable": true
+  },
+  "593850-:EternalSword:": {
+    "item_nameid": 175984634,
+    "is_marketable": true
+  },
+  "622880-:swevenbunny:": {
+    "item_nameid": 175905596,
+    "is_marketable": true
+  },
+  "327060-:FeistFight:": {
+    "item_nameid": 77142525,
+    "is_marketable": true
+  },
+  "389190-:thegoblin:": {
+    "item_nameid": 175874753,
+    "is_marketable": true
+  },
+  "453660-:ShotgunShooter:": {
+    "item_nameid": 175872092,
+    "is_marketable": true
+  },
+  "473540-:ryoc_candy:": {
+    "item_nameid": 168285974,
+    "is_marketable": true
+  },
+  "492410-:rluLogo:": {
+    "item_nameid": 176093102,
+    "is_marketable": true
+  },
+  "340500-:skull_kragg:": {
+    "item_nameid": 176048092,
+    "is_marketable": true
+  },
+  "553470-:bluemedic:": {
+    "item_nameid": 176043237,
+    "is_marketable": true
+  },
+  "522340-:wizardghost:": {
+    "item_nameid": 175997692,
+    "is_marketable": true
+  },
+  "514570-:p_A_rlor:": {
+    "item_nameid": 175987846,
+    "is_marketable": true
+  },
+  "699700-:DyingTV:": {
+    "item_nameid": 176017237,
+    "is_marketable": true
+  },
+  "919410-:felixkill:": {
+    "item_nameid": 176098568,
+    "is_marketable": true
+  },
+  "568840-:ghbox:": {
+    "item_nameid": 176047334,
+    "is_marketable": true
+  },
+  "774651-:MightyGunvoltBurst_Gunvolt:": {
+    "item_nameid": 176093179,
+    "is_marketable": true
+  },
+  "314630-:hook_tts:": {
+    "item_nameid": 176022699,
+    "is_marketable": true
+  },
+  "270610-:darcfire:": {
+    "item_nameid": 176044858,
+    "is_marketable": true
+  },
+  "432130-:rabureta:": {
+    "item_nameid": 143316654,
+    "is_marketable": true
+  },
+  "582530-:purplespores:": {
+    "item_nameid": 176050687,
+    "is_marketable": true
+  },
+  "618630-:at_pulsar:": {
+    "item_nameid": 175941353,
+    "is_marketable": true
+  },
+  "629860-:SpelunkerGhost:": {
+    "item_nameid": 176014534,
+    "is_marketable": true
+  },
+  "388600-:ad_sick:": {
+    "item_nameid": 175984705,
+    "is_marketable": true
+  },
+  "589370-:Bearmoji:": {
+    "item_nameid": 175905489,
+    "is_marketable": false
+  },
+  "340820-:GoldYelaxotKey:": {
+    "item_nameid": 49487242,
+    "is_marketable": false
+  },
+  "545230-:DrGavin:": {
+    "item_nameid": 174549849,
+    "is_marketable": false
+  },
+  "395980-:coolpolice:": {
+    "item_nameid": 63643133,
+    "is_marketable": false
+  },
+  "460660-:em03:": {
+    "item_nameid": 152301944,
+    "is_marketable": false
+  },
+  "397620-:orangejelly:": {
+    "item_nameid": 65543108,
+    "is_marketable": false
+  },
+  "376910-:HGPedro:": {
+    "item_nameid": 175917798,
+    "is_marketable": false
+  },
+  "423920-:Etaria_Wonder:": {
+    "item_nameid": 145422291,
+    "is_marketable": false
+  },
+  "540310-:GS_Man:": {
+    "item_nameid": 175879904,
+    "is_marketable": false
+  },
+  "501880-:sb_tail:": {
+    "item_nameid": 175874921,
+    "is_marketable": false
+  },
+  "586400-:megaswordy:": {
+    "item_nameid": 175873721,
+    "is_marketable": false
+  },
+  "448130-:showel:": {
+    "item_nameid": 144868590,
+    "is_marketable": false
+  },
+  "293280-:uproz:": {
+    "item_nameid": 53406540,
+    "is_marketable": false
+  },
+  "361400-:5GSocialStudies:": {
+    "item_nameid": 82644998,
+    "is_marketable": false
+  },
+  "527570-:tankrocket:": {
+    "item_nameid": 173627425,
+    "is_marketable": false
+  },
+  "513970-:ProtoBullHead:": {
+    "item_nameid": 174020912,
+    "is_marketable": false
+  },
+  "569330-:aircustoms:": {
+    "item_nameid": 175874846,
+    "is_marketable": false
+  },
+  "432150-:earth1:": {
+    "item_nameid": 92049752,
+    "is_marketable": false
+  },
+  "462060-:goldenstarsmile:": {
+    "item_nameid": 151924431,
+    "is_marketable": false
+  },
+  "516230-:NeckShaver:": {
+    "item_nameid": 166205806,
+    "is_marketable": false
+  },
+  "475250-:ashtower:": {
+    "item_nameid": 175888136,
+    "is_marketable": false
+  },
+  "467530-:atorb_e5:": {
+    "item_nameid": 152546673,
+    "is_marketable": false
+  },
+  "449280-:Map_DO:": {
+    "item_nameid": 175876657,
+    "is_marketable": false
+  },
+  "548950-:Knight2:": {
+    "item_nameid": 175902713,
+    "is_marketable": false
+  },
+  "569540-:volley_balls:": {
+    "item_nameid": 175859901,
+    "is_marketable": false
+  },
+  "568890-:yuko:": {
+    "item_nameid": 175859397,
+    "is_marketable": false
+  },
+  "512200-:Piston_MTG:": {
+    "item_nameid": 171034186,
+    "is_marketable": false
+  },
+  "473620-:dhruby:": {
+    "item_nameid": 154222453,
+    "is_marketable": false
+  },
+  "558600-:churaka:": {
+    "item_nameid": 175868918,
+    "is_marketable": false
+  },
+  "459510-:zula:": {
+    "item_nameid": 166625481,
+    "is_marketable": false
+  },
+  "566290-:pyramid_billiard:": {
+    "item_nameid": 175858472,
+    "is_marketable": false
+  },
+  "306830-:silverbullet:": {
+    "item_nameid": 20688598,
+    "is_marketable": false
+  },
+  "473640-:rewind:": {
+    "item_nameid": 154735894,
+    "is_marketable": false
+  },
+  "407740-:blam23:": {
+    "item_nameid": 167915914,
+    "is_marketable": false
+  },
+  "453220-:bllilly:": {
+    "item_nameid": 175934925,
+    "is_marketable": true
+  },
+  "585720-:grenpl:": {
+    "item_nameid": 175873409,
+    "is_marketable": false
+  },
+  "382240-:BOshield:": {
+    "item_nameid": 77604948,
+    "is_marketable": false
+  },
+  "440260-:weaponchest:": {
+    "item_nameid": 158197692,
+    "is_marketable": false
+  },
+  "521190-:bollo_sad:": {
+    "item_nameid": 172998917,
+    "is_marketable": false
+  },
+  "458900-:s_mediator:": {
+    "item_nameid": 175074919,
+    "is_marketable": false
+  },
+  "227700-:tikitorch:": {
+    "item_nameid": 15976642,
+    "is_marketable": false
+  },
+  "533120-:vcb_gamepad:": {
+    "item_nameid": 175857214,
+    "is_marketable": false
+  },
+  "713380-:chaliceofwine:": {
+    "item_nameid": 176080890,
+    "is_marketable": true
+  },
+  "463620-:poison_ls:": {
+    "item_nameid": 175857858,
+    "is_marketable": false
+  },
+  "444860-:bttn:": {
+    "item_nameid": 175856315,
+    "is_marketable": false
+  },
+  "224220-:soap:": {
+    "item_nameid": 8059536,
+    "is_marketable": false
+  },
+  "581050-:bulletyellow:": {
+    "item_nameid": 175866753,
+    "is_marketable": false
+  },
+  "485700-:c_red:": {
+    "item_nameid": 169439061,
+    "is_marketable": false
+  },
+  "310760-:sncoin:": {
+    "item_nameid": 15860079,
+    "is_marketable": false
+  },
+  "586250-:CCCP:": {
+    "item_nameid": 175870571,
+    "is_marketable": false
+  },
+  "364960-:hoshi:": {
+    "item_nameid": 160037186,
+    "is_marketable": false
+  },
+  "436300-:shereeimpulse:": {
+    "item_nameid": 154495681,
+    "is_marketable": false
+  },
+  "562650-:cubemasterkey:": {
+    "item_nameid": 175859298,
+    "is_marketable": false
+  },
+  "431000-:oneeyedslime:": {
+    "item_nameid": 171694333,
+    "is_marketable": false
+  },
+  "454150-:recruitsoldier:": {
+    "item_nameid": 169530781,
+    "is_marketable": false
+  },
+  "383030-:SentenceSplitter:": {
+    "item_nameid": 56258009,
+    "is_marketable": false
+  },
+  "486840-:sergeantmedal:": {
+    "item_nameid": 175885740,
+    "is_marketable": false
+  },
+  "1016760-:CoS_panicalien:": {
+    "item_nameid": 176073487,
+    "is_marketable": true
+  },
+  "447700-:sparkcrystal:": {
+    "item_nameid": 176084735,
+    "is_marketable": true
+  },
+  "565880-:sport:": {
+    "item_nameid": 175891185,
+    "is_marketable": false
+  },
+  "344750-:crossb:": {
+    "item_nameid": 47563049,
+    "is_marketable": false
+  },
+  "592490-:RustyCat:": {
+    "item_nameid": 175885087,
+    "is_marketable": false
+  },
+  "360950-:mayhem:": {
+    "item_nameid": 137488871,
+    "is_marketable": false
+  },
+  "448870-:OneStar:": {
+    "item_nameid": 159596688,
+    "is_marketable": false
+  },
+  "492660-:fhealth:": {
+    "item_nameid": 167750235,
+    "is_marketable": false
+  },
+  "538660-:darkorge:": {
+    "item_nameid": 175875286,
+    "is_marketable": false
+  },
+  "419700-:duskgrimace:": {
+    "item_nameid": 176049138,
+    "is_marketable": true
+  },
+  "1088650-:ddgcam:": {
+    "item_nameid": 176079137,
+    "is_marketable": false
+  },
+  "554900-:deadinsidez:": {
+    "item_nameid": 175903800,
+    "is_marketable": false
+  },
+  "486340-:DinnerTime:": {
+    "item_nameid": 156647375,
+    "is_marketable": false
+  },
+  "367990-:Discoverer:": {
+    "item_nameid": 62339405,
+    "is_marketable": true
+  },
+  "356330-:dmhwow:": {
+    "item_nameid": 85197322,
+    "is_marketable": false
+  },
+  "407750-:saphr:": {
+    "item_nameid": 157231281,
+    "is_marketable": false
+  },
+  "578120-:goodjobbro:": {
+    "item_nameid": 175909865,
+    "is_marketable": false
+  },
+  "290710-:Upvoter:": {
+    "item_nameid": 17648450,
+    "is_marketable": false
+  },
+  "612010-:DuelDollar:": {
+    "item_nameid": 176084835,
+    "is_marketable": true
+  },
+  "200110-:Ironguard:": {
+    "item_nameid": 48817415,
+    "is_marketable": false
+  },
+  "426970-:humcard:": {
+    "item_nameid": 146755316,
+    "is_marketable": false
+  },
+  "314700-:shield12:": {
+    "item_nameid": 31517514,
+    "is_marketable": false
+  },
+  "268830-:shadows:": {
+    "item_nameid": 7790143,
+    "is_marketable": false
+  },
+  "324450-:eusearth:": {
+    "item_nameid": 28187225,
+    "is_marketable": false
+  },
+  "546450-:survfire:": {
+    "item_nameid": 174527386,
+    "is_marketable": false
+  },
+  "508220-:Extender:": {
+    "item_nameid": 171589901,
+    "is_marketable": false
+  },
+  "475060-:EZ_Zombie:": {
+    "item_nameid": 156499018,
+    "is_marketable": false
+  },
+  "579010-:headcoach:": {
+    "item_nameid": 175893300,
+    "is_marketable": false
+  },
+  "488680-:venomthrowertdu:": {
+    "item_nameid": 175890684,
+    "is_marketable": false
+  },
+  "473650-:frostb:": {
+    "item_nameid": 154564359,
+    "is_marketable": false
+  },
+  "473580-:medipak:": {
+    "item_nameid": 154741657,
+    "is_marketable": false
+  },
+  "563510-:skull_danger:": {
+    "item_nameid": 175858823,
+    "is_marketable": false
+  },
+  "543420-:gbullet:": {
+    "item_nameid": 173702045,
+    "is_marketable": false
+  },
+  "373110-:gcandy:": {
+    "item_nameid": 48831679,
+    "is_marketable": false
+  },
+  "592620-:vacdoor:": {
+    "item_nameid": 175950270,
+    "is_marketable": true
+  },
+  "374140-:StealthSystem:": {
+    "item_nameid": 57379466,
+    "is_marketable": false
+  },
+  "392870-:sstarz:": {
+    "item_nameid": 60777160,
+    "is_marketable": false
+  },
+  "327680-:grindzones_woodenshield:": {
+    "item_nameid": 163532296,
+    "is_marketable": false
+  },
+  "581350-:gsmilell:": {
+    "item_nameid": 175867468,
+    "is_marketable": false
+  },
+  "581860-:luci:": {
+    "item_nameid": 175870269,
+    "is_marketable": false
+  },
+  "552980-:sosheli:": {
+    "item_nameid": 175854108,
+    "is_marketable": false
+  },
+  "596440-:KeepBO:": {
+    "item_nameid": 175898639,
+    "is_marketable": false
+  },
+  "563140-:hooisnail:": {
+    "item_nameid": 175855861,
+    "is_marketable": false
+  },
+  "609180-:hotelhq:": {
+    "item_nameid": 175907497,
+    "is_marketable": false
+  },
+  "375400-:icyknife:": {
+    "item_nameid": 84317118,
+    "is_marketable": false
+  },
+  "266450-:ironpaladin:": {
+    "item_nameid": 9106889,
+    "is_marketable": false
+  },
+  "575730-:trololo:": {
+    "item_nameid": 175878952,
+    "is_marketable": false
+  },
+  "568650-:mygold:": {
+    "item_nameid": 175859934,
+    "is_marketable": false
+  },
+  "581280-:kolyazared:": {
+    "item_nameid": 175867551,
+    "is_marketable": false
+  },
+  "501830-:ListRing:": {
+    "item_nameid": 164036822,
+    "is_marketable": false
+  },
+  "415490-:lemur_potato:": {
+    "item_nameid": 140640228,
+    "is_marketable": false
+  },
+  "501720-:ntshwarele:": {
+    "item_nameid": 162686902,
+    "is_marketable": false
+  },
+  "581680-:LightGun:": {
+    "item_nameid": 175869517,
+    "is_marketable": false
+  },
+  "546920-:orange_brains:": {
+    "item_nameid": 175799177,
+    "is_marketable": false
+  },
+  "457930-:WellDone:": {
+    "item_nameid": 148929020,
+    "is_marketable": false
+  },
+  "533910-:offroadtools:": {
+    "item_nameid": 175875123,
+    "is_marketable": false
+  },
+  "473630-:mammo:": {
+    "item_nameid": 154735897,
+    "is_marketable": false
+  },
+  "444240-:ltsmile:": {
+    "item_nameid": 175891309,
+    "is_marketable": false
+  },
+  "491250-:skulha:": {
+    "item_nameid": 157299327,
+    "is_marketable": false
+  },
+  "611080-:MakinaeD:": {
+    "item_nameid": 175919865,
+    "is_marketable": true
+  },
+  "540120-:RedBoar:": {
+    "item_nameid": 173883906,
+    "is_marketable": false
+  },
+  "445880-:StarShip_CL:": {
+    "item_nameid": 175875536,
+    "is_marketable": false
+  },
+  "396400-:mhpumpkin:": {
+    "item_nameid": 90517362,
+    "is_marketable": false
+  },
+  "524680-:nazimonster:": {
+    "item_nameid": 175854431,
+    "is_marketable": false
+  },
+  "602220-:skull_s:": {
+    "item_nameid": 175879162,
+    "is_marketable": false
+  },
+  "329950-:oldpaper:": {
+    "item_nameid": 43959166,
+    "is_marketable": false
+  },
+  "485220-:Orbie:": {
+    "item_nameid": 154835784,
+    "is_marketable": false
+  },
+  "567940-:skobkalol:": {
+    "item_nameid": 175861000,
+    "is_marketable": false
+  },
+  "467560-:UglyScreamingFace:": {
+    "item_nameid": 153888075,
+    "is_marketable": false
+  },
+  "575470-:psicocross:": {
+    "item_nameid": 175864477,
+    "is_marketable": false
+  },
+  "396390-:ringtoy:": {
+    "item_nameid": 90101452,
+    "is_marketable": false
+  },
+  "602940-:steamy:": {
+    "item_nameid": 175888923,
+    "is_marketable": false
+  },
+  "928440-:remilia_a:": {
+    "item_nameid": 176098152,
+    "is_marketable": true
+  },
+  "562710-:rheartr:": {
+    "item_nameid": 175858216,
+    "is_marketable": false
+  },
+  "475990-:SnabbFrame:": {
+    "item_nameid": 175855188,
+    "is_marketable": false
+  },
+  "545320-:shipshield:": {
+    "item_nameid": 175859029,
+    "is_marketable": false
+  },
+  "548930-:swordtwo:": {
+    "item_nameid": 175869170,
+    "is_marketable": false
+  },
+  "535250-:sjsatellite:": {
+    "item_nameid": 175409214,
+    "is_marketable": false
+  },
+  "589490-:somicro:": {
+    "item_nameid": 175905355,
+    "is_marketable": false
+  },
+  "457940-:SpendKrogs:": {
+    "item_nameid": 149027277,
+    "is_marketable": false
+  },
+  "518160-:tanks:": {
+    "item_nameid": 175895772,
+    "is_marketable": false
+  },
+  "582480-:Universe2:": {
+    "item_nameid": 175872509,
+    "is_marketable": false
+  },
+  "601580-:tokmp:": {
+    "item_nameid": 175920021,
+    "is_marketable": false
+  },
+  "585780-:ultraburger:": {
+    "item_nameid": 175871859,
+    "is_marketable": false
+  },
+  "555970-:trampoline:": {
+    "item_nameid": 175902868,
+    "is_marketable": true
+  },
+  "409310-:TRBM_Smile:": {
+    "item_nameid": 77319169,
+    "is_marketable": false
+  },
+  "410560-:TWSword:": {
+    "item_nameid": 143331979,
+    "is_marketable": false
+  },
+  "317110-:uwosword:": {
+    "item_nameid": 23286829,
+    "is_marketable": false
+  },
+  "440330-:wam_willpower:": {
+    "item_nameid": 175909849,
+    "is_marketable": false
+  },
+  "330110-:wf8:": {
+    "item_nameid": 174687860,
+    "is_marketable": false
+  },
+  "574630-:wordkiller_re_red_zorg:": {
+    "item_nameid": 175868680,
+    "is_marketable": false
+  },
+  "574620-:wordkiller_zg_zorg:": {
+    "item_nameid": 175866878,
+    "is_marketable": false
+  },
+  "467460-:zr_bone:": {
+    "item_nameid": 151924427,
+    "is_marketable": false
+  },
+  "560870-:Soangry:": {
+    "item_nameid": 175874456,
+    "is_marketable": true
+  },
+  "846870-:ylilhivemind:": {
+    "item_nameid": 176092246,
+    "is_marketable": true
+  },
+  "914700-:mmax_sword:": {
+    "item_nameid": 176092673,
+    "is_marketable": true
+  },
+  "299380-:AngryJaxx:": {
+    "item_nameid": 176092677,
+    "is_marketable": true
+  },
+  "777770-:wpfood:": {
+    "item_nameid": 176045070,
+    "is_marketable": true
+  },
+  "472830-:SweatUNK:": {
+    "item_nameid": 158177089,
+    "is_marketable": true
+  },
+  "627530-:tacoxblue:": {
+    "item_nameid": 176090390,
+    "is_marketable": true
+  },
+  "423730-:gilga:": {
+    "item_nameid": 176086131,
+    "is_marketable": true
+  },
+  "207400-:remedy:": {
+    "item_nameid": 1321872,
+    "is_marketable": true
+  },
+  "602790-:fs3man:": {
+    "item_nameid": 175885221,
+    "is_marketable": true
+  },
+  "514640-:3xBomba:": {
+    "item_nameid": 176022496,
+    "is_marketable": true
+  },
+  "361400-:5GMath:": {
+    "item_nameid": 83691605,
+    "is_marketable": false
+  },
+  "527570-:abswall:": {
+    "item_nameid": 173316659,
+    "is_marketable": false
+  },
+  "513970-:AD:": {
+    "item_nameid": 174770244,
+    "is_marketable": false
+  },
+  "388600-:ad_sad:": {
+    "item_nameid": 176050833,
+    "is_marketable": true
+  },
+  "569330-:airclouds:": {
+    "item_nameid": 175876350,
+    "is_marketable": false
+  },
+  "432150-:alien1:": {
+    "item_nameid": 91005144,
+    "is_marketable": false
+  },
+  "462060-:ammobullet:": {
+    "item_nameid": 151419846,
+    "is_marketable": false
+  },
+  "408880-:AngryVirus:": {
+    "item_nameid": 176023907,
+    "is_marketable": true
+  },
+  "516230-:Archashot:": {
+    "item_nameid": 166223846,
+    "is_marketable": false
+  },
+  "475250-:ashboat:": {
+    "item_nameid": 175884353,
+    "is_marketable": false
+  },
+  "475250-:ashdrink:": {
+    "item_nameid": 175886527,
+    "is_marketable": false
+  },
+  "475250-:ashtavern:": {
+    "item_nameid": 175886526,
+    "is_marketable": false
+  },
+  "513460-:AssassinationAgenda:": {
+    "item_nameid": 175977734,
+    "is_marketable": true
+  },
+  "467530-:atorb_e1:": {
+    "item_nameid": 154222455,
+    "is_marketable": false
+  },
+  "467530-:atorb_e2:": {
+    "item_nameid": 154465333,
+    "is_marketable": false
+  },
+  "467530-:atorb_e3:": {
+    "item_nameid": 154461549,
+    "is_marketable": false
+  },
+  "467530-:atorb_e4:": {
+    "item_nameid": 153579641,
+    "is_marketable": false
+  },
+  "449280-:automat_DO:": {
+    "item_nameid": 175875517,
+    "is_marketable": false
+  },
+  "563910-:Azumaraja:": {
+    "item_nameid": 175867887,
+    "is_marketable": true
+  },
+  "340150-:basementgun:": {
+    "item_nameid": 176098403,
+    "is_marketable": true
+  },
+  "548950-:Barrelwood:": {
+    "item_nameid": 175902684,
+    "is_marketable": false
+  },
+  "569540-:basket_balls:": {
+    "item_nameid": 175859899,
+    "is_marketable": false
+  },
+  "568890-:batakun:": {
+    "item_nameid": 175859889,
+    "is_marketable": false
+  },
+  "512200-:Battery_MTG:": {
+    "item_nameid": 175858201,
+    "is_marketable": false
+  },
+  "473620-:bbb:": {
+    "item_nameid": 154760049,
+    "is_marketable": false
+  },
+  "558600-:bdhappy:": {
+    "item_nameid": 175871761,
+    "is_marketable": false
+  },
+  "558600-:bdneutral:": {
+    "item_nameid": 175869972,
+    "is_marketable": false
+  },
+  "517210-:beezout:": {
+    "item_nameid": 176016468,
+    "is_marketable": true
+  },
+  "459510-:bicak:": {
+    "item_nameid": 161246389,
+    "is_marketable": false
+  },
+  "566290-:billiard_cue:": {
+    "item_nameid": 175858424,
+    "is_marketable": false
+  },
+  "306830-:bio:": {
+    "item_nameid": 20942766,
+    "is_marketable": false
+  },
+  "473640-:blackfl:": {
+    "item_nameid": 154741658,
+    "is_marketable": false
+  },
+  "397160-:blueberries:": {
+    "item_nameid": 176047909,
+    "is_marketable": true
+  },
+  "397620-:bluejelly:": {
+    "item_nameid": 65528510,
+    "is_marketable": false
+  },
+  "585720-:bluepl:": {
+    "item_nameid": 175874581,
+    "is_marketable": false
+  },
+  "382240-:BOapple:": {
+    "item_nameid": 77614955,
+    "is_marketable": false
+  },
+  "440260-:bobhead:": {
+    "item_nameid": 158737658,
+    "is_marketable": false
+  },
+  "521190-:bollo_happy:": {
+    "item_nameid": 173003749,
+    "is_marketable": false
+  },
+  "851930-:bomb_brt:": {
+    "item_nameid": 176090831,
+    "is_marketable": true
+  },
+  "459510-:bombaci:": {
+    "item_nameid": 175882046,
+    "is_marketable": false
+  },
+  "458900-:bombhead:": {
+    "item_nameid": 174846949,
+    "is_marketable": false
+  },
+  "548950-:BOOK2:": {
+    "item_nameid": 175902648,
+    "is_marketable": false
+  },
+  "449280-:BOOM_DO:": {
+    "item_nameid": 175876266,
+    "is_marketable": false
+  },
+  "227700-:BoonBoon:": {
+    "item_nameid": 16085303,
+    "is_marketable": false
+  },
+  "533120-:boooooooom:": {
+    "item_nameid": 175857484,
+    "is_marketable": false
+  },
+  "462060-:booooooooom:": {
+    "item_nameid": 151364611,
+    "is_marketable": false
+  },
+  "382240-:BOpeasant:": {
+    "item_nameid": 77620643,
+    "is_marketable": false
+  },
+  "851930-:bottle_brt:": {
+    "item_nameid": 176089489,
+    "is_marketable": true
+  },
+  "713380-:bottleofbeer:": {
+    "item_nameid": 176081249,
+    "is_marketable": true
+  },
+  "463620-:boutle_ls:": {
+    "item_nameid": 175857949,
+    "is_marketable": false
+  },
+  "444860-:brdge:": {
+    "item_nameid": 175854094,
+    "is_marketable": false
+  },
+  "586400-:bready:": {
+    "item_nameid": 175873720,
+    "is_marketable": false
+  },
+  "603330-:BRTclose:": {
+    "item_nameid": 176016484,
+    "is_marketable": true
+  },
+  "224220-:bucket:": {
+    "item_nameid": 8059538,
+    "is_marketable": false
+  },
+  "581050-:bulletblue:": {
+    "item_nameid": 175866751,
+    "is_marketable": false
+  },
+  "530130-:bulletimpact:": {
+    "item_nameid": 176077022,
+    "is_marketable": true
+  },
+  "581050-:bulletred:": {
+    "item_nameid": 175866752,
+    "is_marketable": false
+  },
+  "485700-:c_blue:": {
+    "item_nameid": 169417467,
+    "is_marketable": false
+  },
+  "485700-:c_green:": {
+    "item_nameid": 169368324,
+    "is_marketable": false
+  },
+  "310760-:cball:": {
+    "item_nameid": 15857784,
+    "is_marketable": false
+  },
+  "364960-:choki:": {
+    "item_nameid": 155331852,
+    "is_marketable": false
+  },
+  "436300-:chrisimpulse:": {
+    "item_nameid": 154136289,
+    "is_marketable": false
+  },
+  "645830-:cnn:": {
+    "item_nameid": 175913388,
+    "is_marketable": true
+  },
+  "562650-:cmcursor:": {
+    "item_nameid": 175858796,
+    "is_marketable": false
+  },
+  "548950-:COINS2:": {
+    "item_nameid": 175904221,
+    "is_marketable": false
+  },
+  "431000-:colorb:": {
+    "item_nameid": 147513607,
+    "is_marketable": false
+  },
+  "454150-:Commandos:": {
+    "item_nameid": 173393525,
+    "is_marketable": false
+  },
+  "746140-:CoolBoris:": {
+    "item_nameid": 176075315,
+    "is_marketable": true
+  },
+  "511540-:coolglasses:": {
+    "item_nameid": 176036041,
+    "is_marketable": true
+  },
+  "383030-:ConversationEnder:": {
+    "item_nameid": 57502230,
+    "is_marketable": false
+  },
+  "699740-:Convict:": {
+    "item_nameid": 176078106,
+    "is_marketable": true
+  },
+  "486840-:corporalmedal:": {
+    "item_nameid": 175883699,
+    "is_marketable": false
+  },
+  "447700-:countercrystal:": {
+    "item_nameid": 176080560,
+    "is_marketable": true
+  },
+  "565880-:coupe:": {
+    "item_nameid": 175889105,
+    "is_marketable": false
+  },
+  "432150-:crash1:": {
+    "item_nameid": 91140367,
+    "is_marketable": false
+  },
+  "592490-:CryCat:": {
+    "item_nameid": 175888538,
+    "is_marketable": false
+  },
+  "548950-:crystal2:": {
+    "item_nameid": 175902710,
+    "is_marketable": false
+  },
+  "360950-:ctc:": {
+    "item_nameid": 99233035,
+    "is_marketable": false
+  },
+  "562650-:cubemaster:": {
+    "item_nameid": 175858794,
+    "is_marketable": false
+  },
+  "448870-:Cubistry:": {
+    "item_nameid": 161109780,
+    "is_marketable": false
+  },
+  "492660-:cyberammo:": {
+    "item_nameid": 167750234,
+    "is_marketable": false
+  },
+  "548950-:dagger2:": {
+    "item_nameid": 175902711,
+    "is_marketable": false
+  },
+  "1088650-:ddgbluestar:": {
+    "item_nameid": 176078852,
+    "is_marketable": false
+  },
+  "1088650-:ddgbomb:": {
+    "item_nameid": 176079281,
+    "is_marketable": false
+  },
+  "554900-:deadinsidecfire:": {
+    "item_nameid": 175903813,
+    "is_marketable": false
+  },
+  "625430-:dgb_apple:": {
+    "item_nameid": 175959690,
+    "is_marketable": true
+  },
+  "625430-:dgb_pumpkin:": {
+    "item_nameid": 175959692,
+    "is_marketable": true
+  },
+  "356330-:dmhbomb:": {
+    "item_nameid": 83680931,
+    "is_marketable": false
+  },
+  "356330-:dmhlove:": {
+    "item_nameid": 83996948,
+    "is_marketable": false
+  },
+  "407750-:dontaxe:": {
+    "item_nameid": 157885358,
+    "is_marketable": false
+  },
+  "578120-:dontpushme:": {
+    "item_nameid": 175909561,
+    "is_marketable": false
+  },
+  "497880-:DoodleBox:": {
+    "item_nameid": 175929378,
+    "is_marketable": true
+  },
+  "607400-:doorblue:": {
+    "item_nameid": 175981327,
+    "is_marketable": true
+  },
+  "293280-:down:": {
+    "item_nameid": 61740352,
+    "is_marketable": false
+  },
+  "290710-:Downvoter:": {
+    "item_nameid": 17480319,
+    "is_marketable": false
+  },
+  "657860-:dpejderha:": {
+    "item_nameid": 175995044,
+    "is_marketable": true
+  },
+  "657860-:dpklan:": {
+    "item_nameid": 175935734,
+    "is_marketable": true
+  },
+  "200110-:Dumahim:": {
+    "item_nameid": 48871021,
+    "is_marketable": false
+  },
+  "797410-:dustin_head:": {
+    "item_nameid": 176004178,
+    "is_marketable": true
+  },
+  "426970-:elfcard:": {
+    "item_nameid": 146670285,
+    "is_marketable": false
+  },
+  "460660-:em02:": {
+    "item_nameid": 152157262,
+    "is_marketable": false
+  },
+  "314700-:emlo:": {
+    "item_nameid": 31522056,
+    "is_marketable": false
+  },
+  "268830-:entity:": {
+    "item_nameid": 7790626,
+    "is_marketable": false
+  },
+  "423920-:Etaria_Suspicious:": {
+    "item_nameid": 145443908,
+    "is_marketable": false
+  },
+  "324450-:eusalliance:": {
+    "item_nameid": 27651097,
+    "is_marketable": false
+  },
+  "546450-:evilwolf:": {
+    "item_nameid": 173822059,
+    "is_marketable": false
+  },
+  "512200-:Extinguisher_MTG:": {
+    "item_nameid": 171791724,
+    "is_marketable": false
+  },
+  "475060-:EZ_CoolMan:": {
+    "item_nameid": 156403791,
+    "is_marketable": false
+  },
+  "475060-:EZ_DarkZombie:": {
+    "item_nameid": 155485704,
+    "is_marketable": false
+  },
+  "492660-:fboost:": {
+    "item_nameid": 171329565,
+    "is_marketable": false
+  },
+  "512200-:Filter_MTG:": {
+    "item_nameid": 175858735,
+    "is_marketable": false
+  },
+  "638780-:FireBoss:": {
+    "item_nameid": 175998029,
+    "is_marketable": true
+  },
+  "227700-:Fireworks:": {
+    "item_nameid": 15993626,
+    "is_marketable": false
+  },
+  "579010-:footacrobat:": {
+    "item_nameid": 175894483,
+    "is_marketable": false
+  },
+  "488680-:freezertdu:": {
+    "item_nameid": 175896215,
+    "is_marketable": false
+  },
+  "473580-:frozenf:": {
+    "item_nameid": 154760052,
+    "is_marketable": false
+  },
+  "563510-:gas_mask:": {
+    "item_nameid": 175856885,
+    "is_marketable": false
+  },
+  "512200-:Gas_MTG:": {
+    "item_nameid": 171791725,
+    "is_marketable": false
+  },
+  "578120-:givemeacandy:": {
+    "item_nameid": 175909848,
+    "is_marketable": false
+  },
+  "459510-:gladyo:": {
+    "item_nameid": 165071871,
+    "is_marketable": false
+  },
+  "578120-:gooddwarf:": {
+    "item_nameid": 175909649,
+    "is_marketable": false
+  },
+  "374140-:GravityRockets:": {
+    "item_nameid": 57522593,
+    "is_marketable": false
+  },
+  "486840-:greenonemedal:": {
+    "item_nameid": 175883698,
+    "is_marketable": false
+  },
+  "585720-:greenpl:": {
+    "item_nameid": 175872981,
+    "is_marketable": false
+  },
+  "392870-:Grenade1:": {
+    "item_nameid": 60793632,
+    "is_marketable": false
+  },
+  "327680-:grindzones_metalshield:": {
+    "item_nameid": 167004919,
+    "is_marketable": false
+  },
+  "327680-:grindzones_sword:": {
+    "item_nameid": 166009583,
+    "is_marketable": false
+  },
+  "516230-:GruntAxed:": {
+    "item_nameid": 166217633,
+    "is_marketable": false
+  },
+  "579010-:gushinymedal:": {
+    "item_nameid": 175920792,
+    "is_marketable": false
+  },
+  "268830-:guyfawkes:": {
+    "item_nameid": 7792224,
+    "is_marketable": false
+  },
+  "426970-:hbcard:": {
+    "item_nameid": 145728720,
+    "is_marketable": false
+  },
+  "581860-:heart1:": {
+    "item_nameid": 175869504,
+    "is_marketable": false
+  },
+  "463620-:heart_ls:": {
+    "item_nameid": 175857979,
+    "is_marketable": false
+  },
+  "552980-:heavywaves:": {
+    "item_nameid": 175852569,
+    "is_marketable": false
+  },
+  "376910-:HGBobby:": {
+    "item_nameid": 175903294,
+    "is_marketable": false
+  },
+  "746580-:HMpokerface:": {
+    "item_nameid": 176093642,
+    "is_marketable": true
+  },
+  "710760-:hncat:": {
+    "item_nameid": 176055459,
+    "is_marketable": true
+  },
+  "497710-:holocrying:": {
+    "item_nameid": 175997886,
+    "is_marketable": true
+  },
+  "596440-:HomeBO:": {
+    "item_nameid": 175898756,
+    "is_marketable": false
+  },
+  "407750-:honeypot:": {
+    "item_nameid": 157473906,
+    "is_marketable": false
+  },
+  "563140-:hooihealth:": {
+    "item_nameid": 175855863,
+    "is_marketable": false
+  },
+  "609180-:hotel1995:": {
+    "item_nameid": 175907691,
+    "is_marketable": false
+  },
+  "360950-:hotrock:": {
+    "item_nameid": 137299605,
+    "is_marketable": false
+  },
+  "538990-:houseer:": {
+    "item_nameid": 176014339,
+    "is_marketable": true
+  },
+  "548950-:HP2:": {
+    "item_nameid": 175902712,
+    "is_marketable": false
+  },
+  "441020-:HSRPriest:": {
+    "item_nameid": 164863177,
+    "is_marketable": true
+  },
+  "375400-:icybinoculars:": {
+    "item_nameid": 78754843,
+    "is_marketable": false
+  },
+  "375400-:icyhammer:": {
+    "item_nameid": 84270781,
+    "is_marketable": false
+  },
+  "511540-:iloveeggplant:": {
+    "item_nameid": 176029132,
+    "is_marketable": true
+  },
+  "392870-:impact1:": {
+    "item_nameid": 60723738,
+    "is_marketable": false
+  },
+  "463510-:Insight:": {
+    "item_nameid": 176086222,
+    "is_marketable": true
+  },
+  "533120-:karina_stream:": {
+    "item_nameid": 175856288,
+    "is_marketable": false
+  },
+  "436300-:joeimpulse:": {
+    "item_nameid": 154528833,
+    "is_marketable": false
+  },
+  "539340-:jumpupwards:": {
+    "item_nameid": 175888769,
+    "is_marketable": true
+  },
+  "575730-:kekk:": {
+    "item_nameid": 175878666,
+    "is_marketable": false
+  },
+  "592490-:KingCat:": {
+    "item_nameid": 175896029,
+    "is_marketable": false
+  },
+  "568650-:kolona:": {
+    "item_nameid": 175859935,
+    "is_marketable": false
+  },
+  "581280-:kolyazagreen:": {
+    "item_nameid": 175868457,
+    "is_marketable": false
+  },
+  "293280-:leftroz:": {
+    "item_nameid": 53745034,
+    "is_marketable": false
+  },
+  "415490-:lemur_burger:": {
+    "item_nameid": 140640229,
+    "is_marketable": false
+  },
+  "415490-:lemur_cola:": {
+    "item_nameid": 136971784,
+    "is_marketable": false
+  },
+  "415490-:lemur_ice_cream:": {
+    "item_nameid": 139302206,
+    "is_marketable": false
+  },
+  "501720-:lesapo:": {
+    "item_nameid": 167188381,
+    "is_marketable": false
+  },
+  "546920-:lime_brains:": {
+    "item_nameid": 175799178,
+    "is_marketable": false
+  },
+  "457930-:LiquidCourage:": {
+    "item_nameid": 149032092,
+    "is_marketable": false
+  },
+  "533910-:loadingtruck:": {
+    "item_nameid": 175875121,
+    "is_marketable": false
+  },
+  "473630-:locon:": {
+    "item_nameid": 154136287,
+    "is_marketable": false
+  },
+  "595560-:LOHCreateLife:": {
+    "item_nameid": 175922087,
+    "is_marketable": true
+  },
+  "444240-:ltevil:": {
+    "item_nameid": 175896080,
+    "is_marketable": false
+  },
+  "444240-:ltserious:": {
+    "item_nameid": 175884316,
+    "is_marketable": false
+  },
+  "491250-:luf:": {
+    "item_nameid": 156871167,
+    "is_marketable": false
+  },
+  "310760-:magmasite:": {
+    "item_nameid": 15866636,
+    "is_marketable": false
+  },
+  "540120-:Manicurist:": {
+    "item_nameid": 173902969,
+    "is_marketable": false
+  },
+  "454150-:medicgirl:": {
+    "item_nameid": 169136670,
+    "is_marketable": false
+  },
+  "439420-:metal_ok:": {
+    "item_nameid": 176093434,
+    "is_marketable": true
+  },
+  "445880-:Meteor_CL:": {
+    "item_nameid": 175876523,
+    "is_marketable": false
+  },
+  "396400-:mhigh:": {
+    "item_nameid": 90232176,
+    "is_marketable": false
+  },
+  "488680-:miniguntdu:": {
+    "item_nameid": 175905202,
+    "is_marketable": false
+  },
+  "491250-:mpow:": {
+    "item_nameid": 157015897,
+    "is_marketable": false
+  },
+  "565880-:muscle:": {
+    "item_nameid": 175890969,
+    "is_marketable": false
+  },
+  "227700-:Nanu:": {
+    "item_nameid": 15981881,
+    "is_marketable": false
+  },
+  "524680-:nazimonster2:": {
+    "item_nameid": 175871202,
+    "is_marketable": false
+  },
+  "602220-:neutral_s:": {
+    "item_nameid": 175879163,
+    "is_marketable": false
+  },
+  "535630-:omnrip:": {
+    "item_nameid": 175867744,
+    "is_marketable": true
+  },
+  "501850-:onDCR:": {
+    "item_nameid": 176031888,
+    "is_marketable": true
+  },
+  "513680-:OnTarget:": {
+    "item_nameid": 175949562,
+    "is_marketable": true
+  },
+  "528730-:orc_csk:": {
+    "item_nameid": 175907585,
+    "is_marketable": true
+  },
+  "227700-:oi:": {
+    "item_nameid": 15990096,
+    "is_marketable": false
+  },
+  "512200-:Oil_MTG:": {
+    "item_nameid": 171791726,
+    "is_marketable": false
+  },
+  "575730-:oloolo:": {
+    "item_nameid": 175878951,
+    "is_marketable": false
+  },
+  "473640-:openflame:": {
+    "item_nameid": 154434914,
+    "is_marketable": false
+  },
+  "546330-:PC8001MOUSE:": {
+    "item_nameid": 175854131,
+    "is_marketable": true
+  },
+  "567940-:penemy1p:": {
+    "item_nameid": 175860757,
+    "is_marketable": false
+  },
+  "467560-:PixelPortal:": {
+    "item_nameid": 154368098,
+    "is_marketable": false
+  },
+  "467560-:pixelskull:": {
+    "item_nameid": 153781411,
+    "is_marketable": false
+  },
+  "458900-:plastickey:": {
+    "item_nameid": 174258346,
+    "is_marketable": false
+  },
+  "566290-:player_billiard:": {
+    "item_nameid": 175858474,
+    "is_marketable": false
+  },
+  "527570-:powerball:": {
+    "item_nameid": 173453622,
+    "is_marketable": false
+  },
+  "575470-:psicocactus:": {
+    "item_nameid": 175864541,
+    "is_marketable": false
+  },
+  "396390-:puppylove:": {
+    "item_nameid": 89559871,
+    "is_marketable": false
+  },
+  "602940-:purplepattern:": {
+    "item_nameid": 175889441,
+    "is_marketable": false
+  },
+  "563510-:radiation_danger:": {
+    "item_nameid": 175857057,
+    "is_marketable": false
+  },
+  "568890-:raizy:": {
+    "item_nameid": 175859396,
+    "is_marketable": false
+  },
+  "546450-:rescueheli:": {
+    "item_nameid": 174527388,
+    "is_marketable": false
+  },
+  "306830-:revive:": {
+    "item_nameid": 20812381,
+    "is_marketable": false
+  },
+  "293280-:rightroz:": {
+    "item_nameid": 61269390,
+    "is_marketable": false
+  },
+  "492410-:rluBird:": {
+    "item_nameid": 176011136,
+    "is_marketable": true
+  },
+  "475990-:RocdayTshirt:": {
+    "item_nameid": 175860157,
+    "is_marketable": false
+  },
+  "501880-:sb_Egg:": {
+    "item_nameid": 175874920,
+    "is_marketable": false
+  },
+  "548930-:shieldone:": {
+    "item_nameid": 175869902,
+    "is_marketable": false
+  },
+  "548930-:shieldtwo:": {
+    "item_nameid": 175869136,
+    "is_marketable": false
+  },
+  "440260-:sickloot:": {
+    "item_nameid": 158368258,
+    "is_marketable": false
+  },
+  "535250-:sjalien:": {
+    "item_nameid": 175404864,
+    "is_marketable": false
+  },
+  "440260-:skullove:": {
+    "item_nameid": 158368259,
+    "is_marketable": false
+  },
+  "666820-:slbanana:": {
+    "item_nameid": 176013940,
+    "is_marketable": true
+  },
+  "666820-:slmedal:": {
+    "item_nameid": 176049880,
+    "is_marketable": true
+  },
+  "589490-:soatom:": {
+    "item_nameid": 175905041,
+    "is_marketable": false
+  },
+  "592620-:spaceins:": {
+    "item_nameid": 175991000,
+    "is_marketable": true
+  },
+  "290710-:Sparring_Partner:": {
+    "item_nameid": 18503908,
+    "is_marketable": false
+  },
+  "699740-:SpearmanUnit:": {
+    "item_nameid": 176052536,
+    "is_marketable": true
+  },
+  "548930-:swordone:": {
+    "item_nameid": 175870156,
+    "is_marketable": false
+  },
+  "569540-:tennis_balls:": {
+    "item_nameid": 175859900,
+    "is_marketable": false
+  },
+  "582480-:TennisPlayer:": {
+    "item_nameid": 175872510,
+    "is_marketable": false
+  },
+  "601580-:tokgold:": {
+    "item_nameid": 175922176,
+    "is_marketable": false
+  },
+  "601580-:tokhp:": {
+    "item_nameid": 175922177,
+    "is_marketable": false
+  },
+  "585780-:ultrabone:": {
+    "item_nameid": 175872781,
+    "is_marketable": false
+  },
+  "409310-:TRBM_Cry:": {
+    "item_nameid": 77319162,
+    "is_marketable": false
+  },
+  "409310-:TRBM_Shy:": {
+    "item_nameid": 77319163,
+    "is_marketable": false
+  },
+  "317110-:uwoexit:": {
+    "item_nameid": 23686922,
+    "is_marketable": false
+  },
+  "317110-:uwoskull:": {
+    "item_nameid": 22160838,
+    "is_marketable": false
+  },
+  "440330-:wam_hp:": {
+    "item_nameid": 175909612,
+    "is_marketable": false
+  },
+  "440330-:wam_toughness:": {
+    "item_nameid": 175909484,
+    "is_marketable": false
+  },
+  "330110-:wf1:": {
+    "item_nameid": 174969797,
+    "is_marketable": false
+  },
+  "330110-:wf5:": {
+    "item_nameid": 174699929,
+    "is_marketable": false
+  },
+  "330110-:wf6:": {
+    "item_nameid": 174609191,
+    "is_marketable": false
+  },
+  "330110-:wf7:": {
+    "item_nameid": 174660548,
+    "is_marketable": false
+  },
+  "574630-:wordkiller_re_blue_zorg:": {
+    "item_nameid": 175868990,
+    "is_marketable": false
+  },
+  "574620-:wordkiller_zg_human:": {
+    "item_nameid": 175865873,
+    "is_marketable": false
+  },
+  "488950-:wwastrologer:": {
+    "item_nameid": 175962314,
+    "is_marketable": true
+  },
+  "467460-:zr_blood:": {
+    "item_nameid": 151924426,
+    "is_marketable": false
   }
 }
