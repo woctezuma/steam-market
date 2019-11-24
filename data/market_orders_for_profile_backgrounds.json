@@ -36,7 +36,7 @@
   },
   "856880-Fighting Fantasy Classics I": {
     "bid": 0.06,
-    "ask": 89.38,
+    "ask": 89.6,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -204,7 +204,7 @@
   },
   "625580-The Magnus background": {
     "bid": 0.1,
-    "ask": 14.91,
+    "ask": 15,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -260,8 +260,8 @@
   },
   "591390-a nifty floor 1": {
     "bid": 0.05,
-    "ask": 12.37,
-    "bid_volume": 5,
+    "ask": 12.38,
+    "bid_volume": 7,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -309,7 +309,7 @@
   },
   "532070-Bear Miner": {
     "bid": 0.05,
-    "ask": 11.19,
+    "ask": 11.24,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -330,7 +330,7 @@
   },
   "491350-Cave Background": {
     "bid": 0.11,
-    "ask": 11.19,
+    "ask": 11.24,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -434,7 +434,7 @@
     "is_marketable": true
   },
   "243300-Space (Profile Background)": {
-    "bid": 2.23,
+    "bid": 2.24,
     "ask": 8.86,
     "bid_volume": 1,
     "ask_volume": 1,
@@ -561,7 +561,7 @@
   },
   "896750-Sea Weed": {
     "bid": 0.15,
-    "ask": 7.07,
+    "ask": 7.09,
     "bid_volume": 1,
     "ask_volume": 2,
     "is_marketable": true
@@ -632,7 +632,7 @@
   "534230-Slug Drone Army": {
     "bid": 0.03,
     "ask": 6.64,
-    "bid_volume": 13,
+    "bid_volume": 16,
     "ask_volume": 2,
     "is_marketable": true
   },
@@ -799,7 +799,7 @@
   },
   "516870-Cubes": {
     "bid": 0.06,
-    "ask": 5.66,
+    "ask": 5.67,
     "bid_volume": 2,
     "ask_volume": 1,
     "is_marketable": true
@@ -841,7 +841,7 @@
   },
   "339570-Castle": {
     "bid": 0.06,
-    "ask": 5.42,
+    "ask": 5.43,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -863,7 +863,7 @@
   "664250-Winter Spell (Profile Background)": {
     "bid": 0.05,
     "ask": 5.35,
-    "bid_volume": 6,
+    "bid_volume": 10,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -1044,7 +1044,7 @@
   },
   "520370-Park": {
     "bid": 0.05,
-    "ask": 4.8,
+    "ask": 4.83,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -1058,8 +1058,8 @@
   },
   "591130-All Hail the King": {
     "bid": 0.09,
-    "ask": 4.8,
-    "bid_volume": 5,
+    "ask": 4.83,
+    "bid_volume": 9,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -1191,8 +1191,8 @@
   },
   "631490-Sky": {
     "bid": 0.42,
-    "ask": 4.34,
-    "bid_volume": 6,
+    "ask": 4.37,
+    "bid_volume": 9,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -1345,7 +1345,7 @@
   },
   "428920-Lemuria (Profile Background)": {
     "bid": 0.05,
-    "ask": 4.03,
+    "ask": 4,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -1400,7 +1400,7 @@
     "is_marketable": true
   },
   "436410-Profile Background 1 Profile Background 1": {
-    "bid": 1.58,
+    "bid": 1.22,
     "ask": 3.75,
     "bid_volume": 1,
     "ask_volume": 1,
@@ -1429,7 +1429,7 @@
   },
   "534210-Explorer's Background": {
     "bid": 0.08,
-    "ask": 3.73,
+    "ask": 3.75,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -1464,7 +1464,7 @@
   },
   "523970-Atomic Butcher with Barrel of Nuclear Waste": {
     "bid": 0.06,
-    "ask": 3.73,
+    "ask": 3.75,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -1527,7 +1527,7 @@
   },
   "459370-Pirate Parrots Invasion": {
     "bid": 0.06,
-    "ask": 3.53,
+    "ask": 3.54,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -1709,7 +1709,7 @@
   },
   "543940-Cloud": {
     "bid": 0.52,
-    "ask": 3.1,
+    "ask": 3.11,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -1848,7 +1848,7 @@
     "is_marketable": true
   },
   "554660-Puzzle Poker Card": {
-    "bid": 1.28,
+    "bid": 1.29,
     "ask": 3.02,
     "bid_volume": 1,
     "ask_volume": 3,
@@ -1870,8 +1870,8 @@
   },
   "561230-The Neighborhood": {
     "bid": 0.07,
-    "ask": 3,
-    "bid_volume": 8,
+    "ask": 3.01,
+    "bid_volume": 9,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -2107,16 +2107,16 @@
     "is_marketable": true
   },
   "513190-Valley of the Dawnriders": {
-    "bid": 0.7,
-    "ask": 2.61,
+    "bid": 0.71,
+    "ask": 2.62,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
   },
   "546330-Playing PC-8001 original": {
-    "bid": 0.47,
+    "bid": 0.5,
     "ask": 2.62,
-    "bid_volume": 3,
+    "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -2235,7 +2235,7 @@
   "521510-Medianne (Profile Background)": {
     "bid": 0.15,
     "ask": 2.5,
-    "bid_volume": 6,
+    "bid_volume": 8,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -2255,7 +2255,7 @@
   },
   "448460-Biker (Profile Background)": {
     "bid": 0.12,
-    "ask": 2.47,
+    "ask": 2.48,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -2416,9 +2416,9 @@
   },
   "523060-Night Sky": {
     "bid": 1.56,
-    "ask": 2,
-    "bid_volume": 1,
-    "ask_volume": 1,
+    "ask": 2.35,
+    "bid_volume": 5,
+    "ask_volume": 4,
     "is_marketable": true
   },
   "386560-Space": {
@@ -2478,7 +2478,7 @@
     "is_marketable": true
   },
   "582350-Snowman Wallpaper": {
-    "bid": 1.7,
+    "bid": 1.72,
     "ask": 2.27,
     "bid_volume": 1,
     "ask_volume": 2,
@@ -2499,10 +2499,10 @@
     "is_marketable": true
   },
   "307050-Path in the Woods": {
-    "bid": 1.47,
-    "ask": 2,
-    "bid_volume": 2,
-    "ask_volume": 2,
+    "bid": 1.12,
+    "ask": 1.58,
+    "bid_volume": 12,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "549850-Sakuragi High School": {
@@ -2556,7 +2556,7 @@
   },
   "1016760-Translator & Chef": {
     "bid": 0.05,
-    "ask": 2.25,
+    "ask": 2.26,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -2585,14 +2585,14 @@
   "417400-Cabinet": {
     "bid": 0.06,
     "ask": 2.25,
-    "bid_volume": 5,
-    "ask_volume": 2,
+    "bid_volume": 7,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "552210-burn": {
     "bid": 0.07,
     "ask": 2.24,
-    "bid_volume": 1,
+    "bid_volume": 4,
     "ask_volume": 2,
     "is_marketable": true
   },
@@ -2611,10 +2611,10 @@
     "is_marketable": true
   },
   "499950-Beauty Ai": {
-    "bid": 0.81,
+    "bid": 0.82,
     "ask": 2.21,
-    "bid_volume": 2,
-    "ask_volume": 2,
+    "bid_volume": 1,
+    "ask_volume": 3,
     "is_marketable": true
   },
   "521340-Snowflakes": {
@@ -2751,9 +2751,9 @@
     "is_marketable": true
   },
   "473920-Next to Me": {
-    "bid": 0.25,
+    "bid": 0.26,
     "ask": 2.12,
-    "bid_volume": 2,
+    "bid_volume": 1,
     "ask_volume": 3,
     "is_marketable": true
   },
@@ -2836,7 +2836,7 @@
   },
   "526350-ConsoleApplication (Profile Background)": {
     "bid": 0.92,
-    "ask": 2.09,
+    "ask": 2.01,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -2863,9 +2863,9 @@
     "is_marketable": true
   },
   "348840-UFHO2 Characters": {
-    "bid": 0.74,
+    "bid": 0.75,
     "ask": 2.04,
-    "bid_volume": 4,
+    "bid_volume": 3,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -2886,7 +2886,7 @@
   "432230-Valley": {
     "bid": 0.05,
     "ask": 2.03,
-    "bid_volume": 5,
+    "bid_volume": 11,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -2963,7 +2963,7 @@
   "352810-Mizukagami": {
     "bid": 0.05,
     "ask": 2,
-    "bid_volume": 6,
+    "bid_volume": 7,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -2991,13 +2991,13 @@
   "554280-Teleport Carnage": {
     "bid": 0.13,
     "ask": 1.98,
-    "bid_volume": 1,
+    "bid_volume": 7,
     "ask_volume": 1,
     "is_marketable": true
   },
   "495230-Hypnorain City": {
     "bid": 0.83,
-    "ask": 1.96,
+    "ask": 2.27,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -3158,7 +3158,7 @@
   },
   "468150-A House Unseen": {
     "bid": 0.07,
-    "ask": 1.87,
+    "ask": 1.88,
     "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
@@ -3187,7 +3187,7 @@
   "320590-Warside: City infiltration": {
     "bid": 0.54,
     "ask": 1.84,
-    "bid_volume": 7,
+    "bid_volume": 11,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -3270,9 +3270,9 @@
   },
   "532980-Franklin & Newton": {
     "bid": 0.07,
-    "ask": 1.78,
+    "ask": 1.79,
     "bid_volume": 7,
-    "ask_volume": 1,
+    "ask_volume": 2,
     "is_marketable": true
   },
   "456170-Friar Kurtz": {
@@ -3348,7 +3348,7 @@
   "267790-Warrior": {
     "bid": 0.08,
     "ask": 1.75,
-    "bid_volume": 8,
+    "bid_volume": 9,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -3384,7 +3384,7 @@
     "bid": 0.99,
     "ask": 1.72,
     "bid_volume": 1,
-    "ask_volume": 2,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "517210-Square Outline": {
@@ -3405,7 +3405,7 @@
     "bid": 0.08,
     "ask": 1.72,
     "bid_volume": 3,
-    "ask_volume": 2,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "387090-Cameel Salgarn (Profile Background)": {
@@ -3472,9 +3472,9 @@
     "is_marketable": true
   },
   "566780-Beats Fever": {
-    "bid": 1.3,
-    "ask": 1.69,
-    "bid_volume": 1,
+    "bid": 1.28,
+    "ask": 1.72,
+    "bid_volume": 6,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -3608,7 +3608,7 @@
     "bid": 0.06,
     "ask": 1.63,
     "bid_volume": 1,
-    "ask_volume": 1,
+    "ask_volume": 2,
     "is_marketable": true
   },
   "534680-Glacier Sky": {
@@ -3633,7 +3633,7 @@
     "is_marketable": true
   },
   "812840-Littlest Robot K-T": {
-    "bid": 0.62,
+    "bid": 0.63,
     "ask": 1.63,
     "bid_volume": 1,
     "ask_volume": 1,
@@ -3676,7 +3676,7 @@
   },
   "565660-Tokyo": {
     "bid": 1.06,
-    "ask": 1.62,
+    "ask": 1.77,
     "bid_volume": 2,
     "ask_volume": 1,
     "is_marketable": true
@@ -3696,9 +3696,9 @@
     "is_marketable": true
   },
   "398140-Red Fog": {
-    "bid": 0.86,
+    "bid": 0.88,
     "ask": 1.58,
-    "bid_volume": 1,
+    "bid_volume": 2,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -3712,8 +3712,8 @@
   "615020-Medieval Combo": {
     "bid": 0.07,
     "ask": 1.58,
-    "bid_volume": 2,
-    "ask_volume": 1,
+    "bid_volume": 7,
+    "ask_volume": 2,
     "is_marketable": true
   },
   "505270-Peppers": {
@@ -3759,10 +3759,10 @@
     "is_marketable": true
   },
   "434780-The Galaxy": {
-    "bid": 1.09,
+    "bid": 1.06,
     "ask": 1.22,
-    "bid_volume": 1,
-    "ask_volume": 1,
+    "bid_volume": 2,
+    "ask_volume": 3,
     "is_marketable": true
   },
   "428460-Grain": {
@@ -3780,10 +3780,10 @@
     "is_marketable": true
   },
   "531780-Village": {
-    "bid": 0.12,
+    "bid": 0.04,
     "ask": 1.54,
-    "bid_volume": 1,
-    "ask_volume": 1,
+    "bid_volume": 26,
+    "ask_volume": 2,
     "is_marketable": true
   },
   "905690-\u660e\u4eae\u591c\u7a7a": {
@@ -3794,8 +3794,8 @@
     "is_marketable": true
   },
   "765640-ChangeSky": {
-    "bid": 0.39,
-    "ask": 1.53,
+    "bid": 0.4,
+    "ask": 1.54,
     "bid_volume": 10,
     "ask_volume": 1,
     "is_marketable": true
@@ -3864,10 +3864,10 @@
     "is_marketable": true
   },
   "454480-Artificial Maze BG1": {
-    "bid": -1,
-    "ask": -1,
-    "bid_volume": -1,
-    "ask_volume": -1,
+    "bid": 0.63,
+    "ask": 1.63,
+    "bid_volume": 8,
+    "ask_volume": 2,
     "is_marketable": true
   },
   "522610-Ocean": {
@@ -4083,7 +4083,7 @@
   "454230-The Dimension": {
     "bid": 0.52,
     "ask": 1.41,
-    "bid_volume": 2,
+    "bid_volume": 3,
     "ask_volume": 2,
     "is_marketable": true
   },
@@ -4173,9 +4173,9 @@
   },
   "210170-Forest": {
     "bid": 1,
-    "ask": 1.4,
+    "ask": 1.39,
     "bid_volume": 6,
-    "ask_volume": 4,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "564950-Starfighter Type-Y": {
@@ -4189,7 +4189,7 @@
     "bid": 0.77,
     "ask": 1.4,
     "bid_volume": 1,
-    "ask_volume": 2,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "555580-Mari and Litty": {
@@ -4222,9 +4222,9 @@
   },
   "335000-Echoes in the Darkness (Profile Background)": {
     "bid": 0.92,
-    "ask": 1.35,
-    "bid_volume": 3,
-    "ask_volume": 2,
+    "ask": 1.5,
+    "bid_volume": 4,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "522900-Final Destination": {
@@ -4412,8 +4412,8 @@
   "450060-Insanity": {
     "bid": 0.71,
     "ask": 1.77,
-    "bid_volume": 3,
-    "ask_volume": 2,
+    "bid_volume": 4,
+    "ask_volume": 3,
     "is_marketable": true
   },
   "557860-Flower": {
@@ -4446,9 +4446,9 @@
   },
   "414470-Silent One": {
     "bid": 0.49,
-    "ask": 1.3,
+    "ask": 1.2,
     "bid_volume": 1,
-    "ask_volume": 2,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "540690-Thebes": {
@@ -4613,8 +4613,8 @@
     "is_marketable": true
   },
   "509860-Background - Bricks": {
-    "bid": 0.34,
-    "ask": 1.26,
+    "bid": 0.35,
+    "ask": 1.27,
     "bid_volume": 10,
     "ask_volume": 1,
     "is_marketable": true
@@ -4671,14 +4671,14 @@
   "434290-Black": {
     "bid": 0.71,
     "ask": 1.23,
-    "bid_volume": 1,
+    "bid_volume": 2,
     "ask_volume": 3,
     "is_marketable": true
   },
   "585820-The Portal": {
     "bid": 0.31,
-    "ask": 1.22,
-    "bid_volume": 45,
+    "ask": 1.23,
+    "bid_volume": 25,
     "ask_volume": 3,
     "is_marketable": true
   },
@@ -4732,9 +4732,9 @@
     "is_marketable": true
   },
   "352960-Eagle Nebula": {
-    "bid": 0.77,
+    "bid": 0.78,
     "ask": 1.19,
-    "bid_volume": 2,
+    "bid_volume": 1,
     "ask_volume": 1,
     "is_marketable": true
   },
@@ -4866,7 +4866,7 @@
   },
   "690640-tombs": {
     "bid": 0.05,
-    "ask": 28.3,
+    "ask": 2.83,
     "bid_volume": 6,
     "ask_volume": 1,
     "is_marketable": true
@@ -4942,10 +4942,10 @@
     "is_marketable": true
   },
   "849740-Love Esquire BG 1": {
-    "bid": 0.14,
-    "ask": -1,
+    "bid": 0.2,
+    "ask": 1.42,
     "bid_volume": 1,
-    "ask_volume": -1,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "388900-Construction Yard": {
@@ -5160,9 +5160,9 @@
   },
   "623640-Tata (Profile Background)": {
     "bid": 1,
-    "ask": -1,
+    "ask": 4.89,
     "bid_volume": 1,
-    "ask_volume": -1,
+    "ask_volume": 1,
     "is_marketable": true
   },
   "984800-Robots and Cogs": {
@@ -5691,7 +5691,7 @@
     "is_marketable": false
   },
   "200110-Deceiver Vs Prophet": {
-    "bid": 1.12,
+    "bid": 1.15,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -5819,7 +5819,7 @@
   "385200-Camera Background": {
     "bid": 0.16,
     "ask": -1,
-    "bid_volume": 2,
+    "bid_volume": 1,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -5875,7 +5875,7 @@
   "431270-Smear The Structure": {
     "bid": 0.16,
     "ask": -1,
-    "bid_volume": 2,
+    "bid_volume": 3,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -5915,7 +5915,7 @@
     "is_marketable": false
   },
   "447880-Rocket Beasts Flying": {
-    "bid": 124.22,
+    "bid": 124.82,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -6055,7 +6055,7 @@
     "is_marketable": false
   },
   "449630-Stop Stop!": {
-    "bid": 41.08,
+    "bid": 41.19,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -6064,7 +6064,7 @@
   "505440-Voiding": {
     "bid": 0.28,
     "ask": -1,
-    "bid_volume": 1,
+    "bid_volume": 2,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -6141,7 +6141,7 @@
   "603740-Himiko common": {
     "bid": 0.41,
     "ask": -1,
-    "bid_volume": 1,
+    "bid_volume": 2,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -6162,7 +6162,7 @@
   "540370-Goro (Profile Background)": {
     "bid": 0.1,
     "ask": -1,
-    "bid_volume": 5,
+    "bid_volume": 6,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -6258,7 +6258,7 @@
     "is_marketable": false
   },
   "617330-Endless expanses": {
-    "bid": 0.72,
+    "bid": 0.71,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -6419,7 +6419,7 @@
     "is_marketable": false
   },
   "503090-Gnorbert (Profile Background)": {
-    "bid": 0.69,
+    "bid": 0.7,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -6638,7 +6638,7 @@
   "614550-Golden Panic - Dwarf's plan": {
     "bid": 0.11,
     "ask": -1,
-    "bid_volume": 5,
+    "bid_volume": 6,
     "ask_volume": -1,
     "is_marketable": true
   },
@@ -6895,7 +6895,7 @@
     "is_marketable": true
   },
   "467790-Dungeon Path": {
-    "bid": 0.08,
+    "bid": 0.07,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -7114,7 +7114,7 @@
   "485220-MAIN TITLE": {
     "bid": 1.58,
     "ask": -1,
-    "bid_volume": 1,
+    "bid_volume": 3,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -7350,7 +7350,7 @@
     "is_marketable": false
   },
   "596440-Inn": {
-    "bid": 38.08,
+    "bid": 38.18,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -7420,7 +7420,7 @@
     "is_marketable": false
   },
   "293280-Azertash (Profile Background)": {
-    "bid": 0.58,
+    "bid": 0.59,
     "ask": -1,
     "bid_volume": 3,
     "ask_volume": -1,
@@ -7441,7 +7441,7 @@
     "is_marketable": false
   },
   "375400-The White Wasteland": {
-    "bid": 1.39,
+    "bid": 1.4,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -7581,7 +7581,7 @@
     "is_marketable": false
   },
   "310760-Starry Starry Night": {
-    "bid": 5.23,
+    "bid": 5.24,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -7625,7 +7625,7 @@
   "459510-Zula": {
     "bid": 0.15,
     "ask": -1,
-    "bid_volume": 4,
+    "bid_volume": 3,
     "ask_volume": -1,
     "is_marketable": false
   },
@@ -7770,7 +7770,7 @@
     "is_marketable": false
   },
   "543420-Pick a Heart": {
-    "bid": 40.28,
+    "bid": 40.38,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -7786,12 +7786,12 @@
   "581280-OiBackground 2": {
     "bid": 0.21,
     "ask": -1,
-    "bid_volume": 2,
+    "bid_volume": 3,
     "ask_volume": -1,
     "is_marketable": false
   },
   "516230-Evil Grounds": {
-    "bid": 2.07,
+    "bid": 2.08,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -8099,7 +8099,7 @@
     "is_marketable": true
   },
   "628450-U-boat Type VII-C-41 (U-659) (Profile Background)": {
-    "bid": 0.25,
+    "bid": 0.24,
     "ask": -1,
     "bid_volume": 1,
     "ask_volume": -1,
@@ -8185,7 +8185,7 @@
   "522740-Godheads": {
     "bid": 0.05,
     "ask": -1,
-    "bid_volume": 9,
+    "bid_volume": 8,
     "ask_volume": -1,
     "is_marketable": true
   },
@@ -8202,5 +8202,2553 @@
     "bid_volume": 2,
     "ask_volume": -1,
     "is_marketable": false
+  },
+  "562250-Air & Earth": {
+    "bid": 0.05,
+    "ask": 1.15,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "405960-Sunken Background": {
+    "bid": 0.12,
+    "ask": 1.15,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "469610-Rick and Morty": {
+    "bid": 0.24,
+    "ask": 0.94,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "473840-Fire and Lightning": {
+    "bid": 0.62,
+    "ask": 0.89,
+    "bid_volume": 3,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "352120-Sunset": {
+    "bid": 0.37,
+    "ask": 0.7,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "365680-Welcome in Emporium": {
+    "bid": 0.39,
+    "ask": 0.7,
+    "bid_volume": 2,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "462130-City": {
+    "bid": 0.46,
+    "ask": 0.92,
+    "bid_volume": 11,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "792040-Face Off": {
+    "bid": 0.03,
+    "ask": 0.92,
+    "bid_volume": 10,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "539640-The Grid": {
+    "bid": 0.1,
+    "ask": 0.92,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "595430-Tinsel (Profile Background)": {
+    "bid": 0.06,
+    "ask": 0.92,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "550560-Let's go, let's go!": {
+    "bid": 0.06,
+    "ask": 0.92,
+    "bid_volume": 8,
+    "ask_volume": 3,
+    "is_marketable": true
+  },
+  "611050-Skybox Background": {
+    "bid": 0.05,
+    "ask": 0.89,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "545960-Penguin": {
+    "bid": 0.11,
+    "ask": 0.89,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "485650-Freedom": {
+    "bid": 0.51,
+    "ask": 0.89,
+    "bid_volume": 3,
+    "ask_volume": 3,
+    "is_marketable": true
+  },
+  "566190-Alley Cafe (Profile Background)": {
+    "bid": 0.07,
+    "ask": 0.86,
+    "bid_volume": 6,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "612160-Neon Wall": {
+    "bid": 0.11,
+    "ask": 0.77,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "845880-Touhou: Scarlet Curiosity": {
+    "bid": 0.65,
+    "ask": 0.95,
+    "bid_volume": 4,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "566530-The Alcoves": {
+    "bid": 0.38,
+    "ask": 0.89,
+    "bid_volume": 10,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "370560-Sci-Fi (Profile Background)": {
+    "bid": 0.05,
+    "ask": 0.86,
+    "bid_volume": 3,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "650570-Code 7 Galaxy": {
+    "bid": 0.37,
+    "ask": -1,
+    "bid_volume": 15,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "603380-Chi An (Profile Background)": {
+    "bid": 0.27,
+    "ask": 0.86,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "625860-God Awe-Full Clicker - Aphrodite's Temple": {
+    "bid": 0.11,
+    "ask": 0.83,
+    "bid_volume": 3,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "517770-Cake Bread": {
+    "bid": 0.28,
+    "ask": 0.81,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "424260-Black Hole": {
+    "bid": 0.42,
+    "ask": 0.86,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "457770-Red dots": {
+    "bid": 0.08,
+    "ask": 0.46,
+    "bid_volume": 3,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "259430-Nautilus Stars": {
+    "bid": 0.51,
+    "ask": 0.86,
+    "bid_volume": 2,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "471400-Skulls": {
+    "bid": 0.24,
+    "ask": 0.85,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "549740-Death and fans": {
+    "bid": 0.06,
+    "ask": 0.85,
+    "bid_volume": 6,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "515980-Red Background": {
+    "bid": 0.21,
+    "ask": 0.71,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "432130-Masaharu Amamiya": {
+    "bid": 0.06,
+    "ask": 0.82,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "528260-Guardians": {
+    "bid": 0.08,
+    "ask": 0.81,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "583030-Eraser & Builder Wallpaper 1": {
+    "bid": 0.23,
+    "ask": 0.81,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "629240-Moai (Profile Background)": {
+    "bid": -1,
+    "ask": 0.81,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "537760-Mystery Cave (Profile Background)": {
+    "bid": 0.1,
+    "ask": 0.78,
+    "bid_volume": 4,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "493480-background Avalon": {
+    "bid": 0.28,
+    "ask": 0.81,
+    "bid_volume": 12,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "636700-Crappy Day 1": {
+    "bid": -1,
+    "ask": 0.8,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "502120-Cat (Profile Background)": {
+    "bid": 0.27,
+    "ask": 0.77,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "505400-Aztec Ruins": {
+    "bid": 0.12,
+    "ask": 0.8,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "599510-SpaceOne": {
+    "bid": 0.03,
+    "ask": 0.77,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "463470-Inmate Nikola": {
+    "bid": -1,
+    "ask": 0.75,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "297660-New York": {
+    "bid": 0.21,
+    "ask": 0.76,
+    "bid_volume": 9,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "446000-Tundra World": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "519980-Board with tunnels": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "570790-Boar (Profile Background)": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "618190-The Corpse": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "532900-Laser Background": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 31,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "376240-Marcher Labs": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "494000-Commander": {
+    "bid": 0.16,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "394950-Background Monty": {
+    "bid": 0.32,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "868260-Cape Bufallo - Big5 (Profile Background)": {
+    "bid": -1,
+    "ask": 3.99,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "592620-Vacuum Hatch": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 15,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "543410-B.I.G. Drone": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "622890-Graveyard background": {
+    "bid": 0.15,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "965230-Fossil": {
+    "bid": 0.03,
+    "ask": 4.98,
+    "bid_volume": 10,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "544400-Sunset": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "556990-Room": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "645830-Rivals on the Sea": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "564950-CDF Starfighter": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "382130-The void": {
+    "bid": 0.13,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "598880-Xand (Profile Background)": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "589670-James (Profile Background)": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "690460-Night sky": {
+    "bid": 0.21,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "458630-Courier and Lawyer": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "484930-Wasp I": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "770100-Forest Foes": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "370560-Techno (Profile Background)": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "432130-Shuuki Amamiya": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "528260- Yuru Chara TITAN SLAYER": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "513920-Gas Giant": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "306000-Lars in the cave": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "424200-Forest (Profile Background)": {
+    "bid": 0.25,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "619310-Airplane": {
+    "bid": 0.8,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "523680-Honey Background - Challenger": {
+    "bid": 0.15,
+    "ask": 2.3,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "486430-Black Eyes": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "649810-Herr Kaan (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "611630-Shovel Storm": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "372480-Dorado System": {
+    "bid": 0.21,
+    "ask": 0.77,
+    "bid_volume": 2,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "625700-Star player 2 (Profile Background)": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "438320-Junker": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "529360-Basic Droids": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 7,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "601110-Blue Sparks": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "595270-God of Time": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "916050-Sleep on the grass": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "522130-Polished Tiles": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "553470-Rocket to the Red Planet": {
+    "bid": 0.09,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "408900-Health Station": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 12,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "389510-Disco Time!": {
+    "bid": 0.15,
+    "ask": 0.92,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "610980-Jyuan and Kurosu": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "537020-Valkyrie (Profile Background)": {
+    "bid": 0.47,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "517460-St Pauls Looms": {
+    "bid": 0.27,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "605490-Bamboo woods bg": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "532690-Antonio G\u00f3mez (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "348570-Blue Streak": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "427050-Cards I": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "540010-The Robot (Profile Background)": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "377550-Victory backdrop": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "479110-The Legacy": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "270190-drawings": {
+    "bid": 0.78,
+    "ask": 2.13,
+    "bid_volume": 2,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "496490-Interlaced River Rock": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "331460-The Puzzle Piece": {
+    "bid": 0.58,
+    "ask": 2.1,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "564040-Zigma Satellite Orbit": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "515260-Handstand (Profile Background)": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "795160-Rui's College days": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "882020-Dean Wilson": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "344190-Tigress (Profile Background)": {
+    "bid": 0.32,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "380920-Background Professor": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "783190-Cemetery": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "538330-Julia": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "582920-Vampire run to coach": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "352790-Cube background": {
+    "bid": 0.2,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "552610-Robot Ninja (Profile Background)": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "833360-Star Valor - Civilian Station": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "464630-The Throne Room": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "485750-Holographic": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "459520-Simple Lines": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "504380-Western": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "603280-TAROTICA MAP 1F": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "876650-Alchemist (Profile Background)": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "393220-Cape Town": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "535630-Necromancer": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "622700-Steel Rider": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "724390-Rigid Force Alpha -- Profile Background #2": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": null
+  },
+  "449100-The Temple": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "857440-Reading Hentai Girl": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "306830-Our Heroes": {
+    "bid": 0.86,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "464190-Johnny Alpha": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "396390-Stacie and Her Pups": {
+    "bid": 0.55,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "438450-3Dflow Red background": {
+    "bid": 0.27,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "447700-Helen (Profile Background)": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "704550-Lonely Hentai": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "603770-A Magical Sword (Arcane RERaise)": {
+    "bid": 11,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "383970-Hentai running": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "603780-A Starless Nightmare (Arcane preRaise)": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "335830-A'Kari v Orthani": {
+    "bid": 0.47,
+    "ask": 0.98,
+    "bid_volume": 7,
+    "ask_volume": 3,
+    "is_marketable": true
+  },
+  "496600-Aircrafts in the Corners": {
+    "bid": 0.09,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "291030-Amy's ice cream shop": {
+    "bid": 0.36,
+    "ask": 1.1,
+    "bid_volume": 18,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "587750-Ancient mural": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "373410-Animal Families": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "878420-Mar\u00eda de M\u00e9dici (Profile Background)": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "589370-Cat Background": {
+    "bid": 0.58,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "457930-Asteroid Belt": {
+    "bid": 0.32,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "255500-Nebula": {
+    "bid": 2.8,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "612290-Hwangcheon Rogue (Profile Background)": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "501720-Awesome squares": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "463620-Zak Background": {
+    "bid": 1.29,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "271290-Prosk": {
+    "bid": 0.36,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "470250-Beach": {
+    "bid": 0.69,
+    "ask": 1.06,
+    "bid_volume": 1,
+    "ask_volume": 4,
+    "is_marketable": true
+  },
+  "1023740-Belubelu Background": {
+    "bid": 0.63,
+    "ask": 1.63,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "437510-Shocksquatch (Profile Background)": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "586250-Sickle and Hammer": {
+    "bid": 2.38,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "473500-RWBY": {
+    "bid": 0.11,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "404810-Topen (Profile Background)": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "367260-Brewer vs Bureau": {
+    "bid": 0.05,
+    "ask": 1.12,
+    "bid_volume": 7,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "511700-Cargo Containment Field": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "421030-Catch Me": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "482730-Dressing Room": {
+    "bid": 0.27,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "407750-Cemetary Blues": {
+    "bid": 3.26,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "552060-Combustion Chamber": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "591090-Taxi Cab": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "225220-Three Wide": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 7,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "788210-Town": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "242800-Humoncoulous": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "496290-Deep Dark Corridor": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 19,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "486340-Defeat The Minions": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "394830-For Science!": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 13,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "258030-Sentient Robot": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "540120-Diesel Rabbit": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "385900-Dragon": {
+    "bid": 0.55,
+    "ask": 0.76,
+    "bid_volume": 2,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "538390-Dungeon Background": {
+    "bid": 2.62,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "627570-Dungeons": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "844050-Earth": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "542700-Whaler Golem (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "570550-Fearful Symmetry": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "939760-Fist of love bg_01": {
+    "bid": 0.75,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "350020-Fire and Ice": {
+    "bid": 0.24,
+    "ask": 1.06,
+    "bid_volume": 20,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "333830-Wing Mask (Profile Background)": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "601580-Philomath Noton": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "45500-The Jungle (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 14,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "570090-Flow (Profile Background)": {
+    "bid": 0.05,
+    "ask": 0.09,
+    "bid_volume": 4,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "388600-Flow (Profile Background)": {
+    "bid": 0.26,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "264360-Vanaheim": {
+    "bid": 1.29,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "448130-Forest": {
+    "bid": 0.24,
+    "ask": -1,
+    "bid_volume": 12,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "462060-Forest Of Monsters": {
+    "bid": 0.54,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "581050-friend": {
+    "bid": 0.19,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "391400-Game of Dragons - Profile Background1": {
+    "bid": 0.18,
+    "ask": 1.06,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "599670-Game of Kings": {
+    "bid": 0.05,
+    "ask": 1,
+    "bid_volume": 1,
+    "ask_volume": 3,
+    "is_marketable": true
+  },
+  "610250-Glitch Jump": {
+    "bid": 0.03,
+    "ask": 0.98,
+    "bid_volume": 14,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "582820-Gravity Vector": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 14,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "463520-Zombieeeee": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "463680-Guardian of Ember Dark Crypt": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 21,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "568810-Training Day": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "467530-Like a planetary system": {
+    "bid": 1,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "563570-Svartaheim (Profile Background)": {
+    "bid": 0.69,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "527570-Herbert Base (Profile Background)": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "585720-Hills": {
+    "bid": 0.2,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "467460-Hobo and Mosquito": {
+    "bid": 0.29,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "928440-Patchouli Knowledge": {
+    "bid": 0.66,
+    "ask": 6.26,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "616580-Hunter Evader": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "369300-Princess Bubblegum": {
+    "bid": 0.13,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "858060-Idle City": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "399580-In coming!": {
+    "bid": 0.7,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "457940-Into Battle": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "301380-Janet Wallpaper": {
+    "bid": 0.1,
+    "ask": 1.1,
+    "bid_volume": 19,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "637940-Tranquility (Profile Background)": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "373110-Johnny is Unstoppable!": {
+    "bid": 1.1,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "575730-kek back 1": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "534500-White Horse": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "321110-Relics Collection": {
+    "bid": 0.31,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "467560-LOD DESERT": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "543720-Logging Post": {
+    "bid": 0.07,
+    "ask": 1.04,
+    "bid_volume": 8,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "746400-Love Skull Background": {
+    "bid": 0.46,
+    "ask": 1.12,
+    "bid_volume": 3,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "581860-Luci wait": {
+    "bid": 0.5,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "298890-Princess Bubblegum (Profile Background)": {
+    "bid": 1.43,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "1045050-New Main Menu": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "556200-Max Weapon Blue Crystal": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "407740-Missile Cruiser": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "607090-Monopoly Money": {
+    "bid": 0.07,
+    "ask": 1.06,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "369200-Section 9": {
+    "bid": 2.7,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "526790-Mountains": {
+    "bid": 1.9,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "449830-Muv-Luv Waifus": {
+    "bid": 1.2,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "568890-Night home with Raizy": {
+    "bid": 0.6,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "466030-Otherworld: Spring of Shadows CE Goblin": {
+    "bid": 0.05,
+    "ask": 1.11,
+    "bid_volume": 3,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "473580-Old Mining Town": {
+    "bid": 0.55,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "568650-only Hello from Indiana": {
+    "bid": 0.09,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "473640-Open Desert": {
+    "bid": 0.94,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "340820-Zayten and Dentia Art (Profile Background)-8": {
+    "bid": 1.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "528250-Patchwork Cats": {
+    "bid": 0.55,
+    "ask": 0.76,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "473620-Pegasus in Service": {
+    "bid": 1.03,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "581690-Phase cube": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "663670-Pod": {
+    "bid": 0.13,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "392870-Polaris missile": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "491250-Polarized Population": {
+    "bid": 0.58,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "434110-Pool": {
+    "bid": 0.2,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "545230-Professor Nasty Time: Level 1-1 (Grass Plains)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 14,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "444550-Purple Skyies": {
+    "bid": 0.61,
+    "ask": 1.04,
+    "bid_volume": 8,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "415490-Pursuit": {
+    "bid": 0.47,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "428430-Red": {
+    "bid": 5.26,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "542030-RuneSage_Library": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "546450-Sadnes": {
+    "bid": 0.12,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "473630-Sea Life": {
+    "bid": 0.72,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "521190-Sirkel skitter": {
+    "bid": 1.33,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "635070-Slave (Profile Background)": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "581680-Space": {
+    "bid": 0.7,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "604570-Space Attack (Profile Background)": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "562650-Space cube": {
+    "bid": 0.13,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "572180-Space Fight": {
+    "bid": 0.05,
+    "ask": 1.04,
+    "bid_volume": 7,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "458900-Space Refinery": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "618640-Spaze (Profile Background)": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "282010-Splat": {
+    "bid": 0.48,
+    "ask": 0.96,
+    "bid_volume": 1,
+    "ask_volume": 4,
+    "is_marketable": true
+  },
+  "383030-Stone Guardian (Profile Background)": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "627530-Strata Shapes": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "576010-Subtraction": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "585010-Tie": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 7,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "314700-Sunny Day": {
+    "bid": 0.41,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "431280-The Library": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "396870-The frogs of Saad": {
+    "bid": 0.07,
+    "ask": 1.1,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "405040-The Church": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "868740-The Cursed love_bg_01": {
+    "bid": 0.74,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "464830-The Frisians": {
+    "bid": 0.27,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "421960-The world": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "303410-The Mage (Profile Background)": {
+    "bid": 0.31,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "676910-The Tower": {
+    "bid": 0.05,
+    "ask": 1.15,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "504560-The Unwelcomed Background": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "388870-The Raven Knows": {
+    "bid": 0.12,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "550310-The Virgin (Profile Background)": {
+    "bid": 0.05,
+    "ask": 4.56,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "503710-The Void": {
+    "bid": 0.47,
+    "ask": 0.89,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "427970-Thunder World": {
+    "bid": 0.25,
+    "ask": 1.1,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "993690-Train (Profile Background)": {
+    "bid": -1,
+    "ask": 6.07,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "344750-Two Trolls": {
+    "bid": 38.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "582480-Universes": {
+    "bid": 0.11,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "542560-Uran and Professor Ochanomizu": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "338930-Versus": {
+    "bid": 0.78,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "385880-Victory": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "525630-Walker Pattern": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "410560-War in Delka": {
+    "bid": 0.23,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "324470-White Purity": {
+    "bid": 0.14,
+    "ask": 0.95,
+    "bid_volume": 3,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "473650-Witches of Magic": {
+    "bid": 3.4,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "392050-Zegri Pirates": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "475060-Zombie Tile": {
+    "bid": 0.09,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "329950-Zombies": {
+    "bid": 0.21,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "850910-\u84b8\u6c7d\u59ec (Profile Background)-22": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 16,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "451080-Granny (Profile Background)": {
+    "bid": 0.03,
+    "ask": 3,
+    "bid_volume": 11,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "877810-Center Sanctuary": {
+    "bid": 0.03,
+    "ask": 0.37,
+    "bid_volume": 10,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "680390-A Worthy Rival": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "1017900-A New Age Rises": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "668350-Secret Meeting": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "704550-A classic view": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "603770-A Dark Spell (Arcane RERaise)": {
+    "bid": 0.4,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "383970-A nice view": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 9,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "603780-A Nuclear Explosion (Arcane preRaise)": {
+    "bid": 0.23,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "645830-Ahoy Matey": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "878420-Aquinas & Theo": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "589370-Armored Bear Background": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "255500-Asteroid belt": {
+    "bid": 0.13,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "612290-Asu Mage (Profile Background)-13": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "612290-Asu TigerTribe": {
+    "bid": 0.72,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "463620-Base Background": {
+    "bid": 1.28,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "532900-Basic Background": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "271290-Bazaar": {
+    "bid": 0.09,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "589370-Bear Background": {
+    "bid": 0.28,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "437510-Ben (Profile Background)": {
+    "bid": 0.21,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "586250-Blood": {
+    "bid": 3.06,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "444530-Blue Receiver": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "473500-boards": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "404810-Boulekeet (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 18,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "645830-Caught in a Storm": {
+    "bid": 0.14,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "482730-Celebration": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "225220-Danica Patrick": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 13,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "242800-Daughter": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "394830-Descending": {
+    "bid": 0.11,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "258030-Desert Scavenger": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "553470-Diptera": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "473500-discs": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "542700-Elaine Holopainen (Profile Background)": {
+    "bid": 0.51,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "501020-Evolution (Profile Background)": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "333830-Flame Mask (Profile Background)": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "601580-Flamest Gooper, Butcher Goof": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "45500-Floating": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "264360-Foe Mansion": {
+    "bid": 0.69,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "537180-Gaomon (Profile Background)": {
+    "bid": 0.6,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "242800-Garry Infected": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 5,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "598880-Glomorf (Profile Background)": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "463520-Granddad Ignatius": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "437510-Gravattack (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 18,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "553020-Guildenschtern (Profile Background)": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 6,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "568810-Halloween": {
+    "bid": 0.26,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "463620-Hangar Background": {
+    "bid": 1.03,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "467530-Hard fail": {
+    "bid": 0.21,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "463520-Heartseeker (Profile Background)": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "437510-Heatblast (Profile Background)": {
+    "bid": 0.17,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "563570-Helheim": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 14,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "563570-hervor (Profile Background)": {
+    "bid": 0.24,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "928440-Hong Meiling": {
+    "bid": 0.1,
+    "ask": 7.31,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "640210-Hunter (Profile Background)": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 11,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "369300-Ice King & Gunter": {
+    "bid": 1,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "690460-In clouds": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "462860-Islands": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "637940-Jarag Khonak (Profile Background)": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "542700-Joan Oswin (Profile Background)": {
+    "bid": 0.13,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "563570-JotunHeim": {
+    "bid": 0.34,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "534500-Kendo": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "321110-Ketchup Stains": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "396390-Lab": {
+    "bid": 0.55,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "264360-LaTale STORM": {
+    "bid": 0.43,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "581860-Luci": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "298890-Lumpy Space Princess (Profile Background)": {
+    "bid": 1.01,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "1045050-Main Menu Night": {
+    "bid": 0.21,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "45500-Medival": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "369200-Motoko (Profile Background)": {
+    "bid": 5.43,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "349450-Myforest": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "552610-Ninja (Profile Background)": {
+    "bid": 0.2,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "340820-Oritall Village (Profile Background)-19": {
+    "bid": 0.09,
+    "ask": -1,
+    "bid_volume": 7,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "258030-Rebellious Princess": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "333830-Skull Mask (Profile Background)": {
+    "bid": 0.06,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "383030-Spore Attack": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 4,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "585010-Suit": {
+    "bid": 0.16,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "431280-The Forest": {
+    "bid": 0.25,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "464830-The Danes": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "464830-The Franks": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "421960-The island": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "534500-Tiger Knight": {
+    "bid": 0.07,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "637940-To the rescue! (Profile Background)": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "463620-Weapons Background": {
+    "bid": 1.66,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "630790-\u516d\u5408\u585a\u3000\u5f25\u751f (Profile Background)": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 3,
+    "ask_volume": -1,
+    "is_marketable": true
   }
 }
