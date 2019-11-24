@@ -223,7 +223,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
 
-    print('# Results for detected *potential* arbitrages')
+    print('\n# Results for detected *potential* arbitrages\n')
     print_arbitrages(badge_arbitrages,
                      use_hyperlink=True)
 
