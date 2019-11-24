@@ -237,7 +237,7 @@ def print_arbitrages(badge_arbitrages,
             listing_hash_formatted_for_markdown = listing_hash
 
         print(
-            '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+            '{}Profit: {:.2f}€\t{}\t| craft pack: {:.0f} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
                 bullet_point,
                 arbitrage['profit'],
                 listing_hash_formatted_for_markdown,
