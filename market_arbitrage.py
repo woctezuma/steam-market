@@ -8,6 +8,7 @@ from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
+from utils import get_steamcardexchange_url
 
 
 def determine_whether_booster_pack_was_crafted_at_least_once(badge_data):
@@ -214,7 +215,8 @@ def find_badge_arbitrages(badge_data,
     return badge_arbitrages
 
 
-def print_arbitrages(badge_arbitrages):
+def print_arbitrages(badge_arbitrages,
+                     use_hyperlink=False):
     bullet_point = '*   '
 
     for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
@@ -224,11 +226,21 @@ def print_arbitrages(badge_arbitrages):
         if not arbitrage['is_marketable']:
             continue
 
+        if use_hyperlink:
+            app_id = convert_listing_hash_to_app_id(listing_hash)
+
+            listing_hash_formatted_for_markdown = '[{}]({})'.format(
+                listing_hash,
+                get_steamcardexchange_url(app_id),
+            )
+        else:
+            listing_hash_formatted_for_markdown = listing_hash
+
         print(
             '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
                 bullet_point,
                 arbitrage['profit'],
-                listing_hash,
+                listing_hash_formatted_for_markdown,
                 arbitrage['gem_amount'],
                 arbitrage['gem_price_including_fee'],
                 arbitrage['bid_without_fee'],

@@ -228,7 +228,8 @@ def main():
                                              market_order_dict)
 
     print('# Results for detected *potential* arbitrages')
-    print_arbitrages(badge_arbitrages)
+    print_arbitrages(badge_arbitrages,
+                     use_hyperlink=True)
 
     return True
 
