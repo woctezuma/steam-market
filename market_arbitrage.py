@@ -4,10 +4,12 @@
 from creation_time_utils import fill_in_badges_with_next_creation_times_loaded_from_disk
 from creation_time_utils import get_current_time, determine_whether_a_booster_pack_can_be_crafted
 from inventory_utils import create_then_sell_booster_packs_for_batch
+from market_listing import get_steam_market_listing_url
 from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
+from utils import get_steam_store_url
 from utils import get_steamcardexchange_url
 
 
@@ -229,7 +231,13 @@ def print_arbitrages(badge_arbitrages,
         if use_hyperlink:
             app_id = convert_listing_hash_to_app_id(listing_hash)
 
-            listing_hash_formatted_for_markdown = '[{}]({})'.format(
+            markdown_compatible_steam_market_url = get_steam_market_listing_url(listing_hash=listing_hash,
+                                                                                render_as_json=False,
+                                                                                replace_spaces=True)
+
+            listing_hash_formatted_for_markdown = '[[store]({})][[market]({})] [{}]({})'.format(
+                get_steam_store_url(app_id),
+                markdown_compatible_steam_market_url,
                 listing_hash,
                 get_steamcardexchange_url(app_id),
             )
