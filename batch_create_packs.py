@@ -1,5 +1,6 @@
 # Create many booster packs (without being sure to sell them)
 
+from creation_time_utils import get_formatted_time, get_time_struct_from_str
 from inventory_utils import update_and_save_next_creation_times, create_booster_pack
 from market_arbitrage import get_filtered_badge_data
 
@@ -64,6 +65,21 @@ def create_packs_for_app_ids(manually_selected_app_ids,
             len(ignored_app_ids),
             ignored_app_ids)
         )
+
+        next_creation_times_for_manually_selected_app_ids = [
+            get_time_struct_from_str(
+                next_creation_times[app_id]
+            )
+            for app_id in manually_selected_app_ids
+        ]
+
+        soonest_creation_time = min(
+            next_creation_times_for_manually_selected_app_ids
+        )
+
+        print('The soonest creation time is {}.'.format(
+            get_formatted_time(soonest_creation_time)
+        ))
 
     return creation_results, next_creation_times
 
