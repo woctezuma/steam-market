@@ -85,6 +85,13 @@ def get_formatted_time(time_struct=None):
     return formatted_time_as_str
 
 
+def get_time_struct_from_str(formatted_time_as_str):
+    time_struct = datetime.datetime.strptime(formatted_time_as_str,
+                                             get_creation_time_format())
+
+    return time_struct
+
+
 def get_formatted_current_time(delay_in_days=0):
     current_time = get_current_time()
 
@@ -119,8 +126,7 @@ def determine_whether_a_booster_pack_can_be_crafted(badge_data,
     if next_creation_time is None:
         a_booster_pack_can_be_crafted = True
     else:
-        parsed_next_creation_time = datetime.datetime.strptime(next_creation_time,
-                                                               get_creation_time_format())
+        parsed_next_creation_time = get_time_struct_from_str(next_creation_time)
 
         # Manually set the year, because it was not stored at creation time, following Valve's time format.
         parsed_next_creation_time = parsed_next_creation_time.replace(year=current_time.year)
