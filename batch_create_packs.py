@@ -12,12 +12,14 @@ def get_manually_selected_app_ids():
 
 
 def filter_app_ids_based_on_badge_data(manually_selected_app_ids,
+                                       check_ask_price=False,
                                        filtered_badge_data=None):
     if filtered_badge_data is None:
         filtered_badge_data = get_filtered_badge_data(retrieve_listings_from_scratch=False,
                                                       enforced_sack_of_gems_price=None,
                                                       minimum_allowed_sack_of_gems_price=None,
                                                       quick_check_with_tracked_booster_packs=False,
+                                                      check_ask_price=check_ask_price,
                                                       from_javascript=True)
 
     # Only keep appIDs found in badge data, so that we have access to fields like the name, the hash, and the gem price.
@@ -32,10 +34,12 @@ def filter_app_ids_based_on_badge_data(manually_selected_app_ids,
 
 def create_packs_for_app_ids(manually_selected_app_ids,
                              filtered_badge_data=None,
+                             check_ask_price=False,
                              is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
                              is_marketable=True,  # Caveat: if False, packs will be crafted with un-marketable gems!
                              verbose=True):
     app_ids, filtered_badge_data = filter_app_ids_based_on_badge_data(manually_selected_app_ids,
+                                                                      check_ask_price=check_ask_price,
                                                                       filtered_badge_data=filtered_badge_data)
 
     creation_results = dict()
@@ -90,6 +94,14 @@ def main(is_a_simulation=True,  # Caveat: if False, then packs will be crafted, 
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     quick_check_with_tracked_booster_packs = False
+    check_ask_price = False
+    #
+    # NB: check_ask_price is set to False so that booster packs are created even if the creation cost is close to the
+    #     lowest sell order. Otherwise, booster packs could be skipped if (creation cost) > ((lowest sell order) - fees)
+    #
+    # NB²: It only makes sense to set check_ask_price to True in market_arbitrage.py,
+    #      because, in this case, we want to SELL the packs which we create rather than opening them for their content.
+    #
     from_javascript = True
 
     manually_selected_app_ids = get_manually_selected_app_ids()
@@ -98,10 +110,12 @@ def main(is_a_simulation=True,  # Caveat: if False, then packs will be crafted, 
                                                   enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                                                   minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
                                                   quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+                                                  check_ask_price=check_ask_price,
                                                   from_javascript=from_javascript)
 
     creation_results, next_creation_times = create_packs_for_app_ids(manually_selected_app_ids,
                                                                      filtered_badge_data=filtered_badge_data,
+                                                                     check_ask_price=check_ask_price,
                                                                      is_a_simulation=is_a_simulation,
                                                                      is_marketable=is_marketable)
 

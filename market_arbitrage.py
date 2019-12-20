@@ -322,6 +322,7 @@ def get_filtered_badge_data(retrieve_listings_from_scratch=True,
                             enforced_sack_of_gems_price=None,
                             minimum_allowed_sack_of_gems_price=None,
                             quick_check_with_tracked_booster_packs=False,
+                            check_ask_price=True,
                             from_javascript=False):
     aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
                                                        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
@@ -330,7 +331,10 @@ def get_filtered_badge_data(retrieve_listings_from_scratch=True,
 
     aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
 
-    filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+    if check_ask_price:
+        filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+    else:
+        filtered_badge_data = aggregated_badge_data
 
     filtered_badge_data = filter_out_badges_recently_crafted(filtered_badge_data)
 
@@ -363,6 +367,7 @@ def apply_workflow(retrieve_listings_from_scratch=True,
                                                   enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                                                   minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
                                                   quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+                                                  check_ask_price=True,  # only set to False in batch_create_packs.py
                                                   from_javascript=from_javascript)
 
     market_order_dict = load_market_order_data(filtered_badge_data,
