@@ -36914,5 +36914,13 @@
   "954740-Terminator: Resistance Booster Pack": {
     "item_nameid": 176098461,
     "is_marketable": true
+  },
+  "520910-Kokurase Booster Pack": {
+    "item_nameid": 176100291,
+    "is_marketable": true
+  },
+  "400630-Wuppo - Definitive Edition Booster Pack": {
+    "item_nameid": 176102199,
+    "is_marketable": true
   }
 }
