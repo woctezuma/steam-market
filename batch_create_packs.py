@@ -6,7 +6,23 @@ from market_arbitrage import get_filtered_badge_data
 
 
 def get_manually_selected_app_ids():
-    manually_selected_app_ids = [381640, 290140, 338340, 272330, 451230, 359400, 318090, 304170, 499950, 307050, 521340]
+    manually_selected_app_ids = [
+        318090,  # Dicetiny
+        523060,  # Planet Smasher
+        # 325120,  # Notch - The Innocent LunA: Eclipsed SinnerS
+        254880,  # Moonbase Commander
+        307050,  # Shan Gui
+        # 210170,  # Spirits
+        # 448720,  # Puzzle Box
+        434780,  # The Renegades of Orion 2.0
+        582350,  # Zombie Killin'
+        409070,  # Fist Slash: Of Ultimate Fury
+        270010,  # Time Rifters
+        554660,  # Puzzle Poker
+        398140,  # Ino
+        351090,  # Regency Solitaire
+        495230,  # Hypnorain
+    ]
 
     return manually_selected_app_ids
 
