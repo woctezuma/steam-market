@@ -264,6 +264,7 @@ def sell_booster_pack(asset_id,
 
 def retrieve_asset_id(listing_hash,
                       steam_inventory=None,
+                      focus_on_marketable_items=True,
                       verbose=True):
     if steam_inventory is None:
         steam_inventory = load_steam_inventory()
@@ -280,7 +281,14 @@ def retrieve_asset_id(listing_hash,
             matched_element['instanceid'] = descriptions[element]['instanceid']
             matched_element['type'] = descriptions[element]['type']
             matched_element['marketable'] = descriptions[element]['marketable']
-            break
+
+            is_marketable_as_int = matched_element['marketable']
+            is_marketable = bool(is_marketable_as_int != 0)
+
+            if is_marketable or (not focus_on_marketable_items):
+                if verbose:
+                    print('Item found without requiring to go through the entire inventory.')
+                break
 
     has_been_matched = bool(len(matched_element) > 0)
 
@@ -324,7 +332,8 @@ def create_booster_packs_for_batch(listing_hashes):
 
 
 def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                 update_steam_inventory=True):
+                                 update_steam_inventory=True,
+                                 focus_on_marketable_items=True):
     results = dict()
 
     steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
@@ -332,7 +341,8 @@ def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
     for (listing_hash, price_in_cents) in price_dict_for_listing_hashes.items():
 
         asset_id = retrieve_asset_id(listing_hash=listing_hash,
-                                     steam_inventory=steam_inventory)
+                                     steam_inventory=steam_inventory,
+                                     focus_on_marketable_items=focus_on_marketable_items)
 
         if asset_id is not None:
             result = sell_booster_pack(asset_id=asset_id, price_in_cents=price_in_cents)
@@ -343,13 +353,15 @@ def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
 
 
 def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                             update_steam_inventory=True):
+                                             update_steam_inventory=True,
+                                             focus_on_marketable_items=True):
     listing_hashes = list(price_dict_for_listing_hashes.keys())
 
     creation_results = create_booster_packs_for_batch(listing_hashes)
 
     sale_results = sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                                update_steam_inventory=update_steam_inventory)
+                                                update_steam_inventory=update_steam_inventory,
+                                                focus_on_marketable_items=focus_on_marketable_items)
 
     next_creation_times = update_and_save_next_creation_times(creation_results)
 

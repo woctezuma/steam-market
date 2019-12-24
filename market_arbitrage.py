@@ -389,7 +389,8 @@ def apply_workflow(retrieve_listings_from_scratch=True,
         price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(latest_badge_arbitrages,
                                                                                       profit_threshold=profit_threshold)
 
-        creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes)
+        creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
+                                                                                  focus_on_marketable_items=True)
 
     return True
 
