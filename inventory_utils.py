@@ -287,7 +287,7 @@ def retrieve_asset_id(listing_hash,
 
             if is_marketable or (not focus_on_marketable_items):
                 if verbose:
-                    print('Item found without requiring to go through the entire inventory.')
+                    print('\nItem found without requiring to go through the entire inventory.')
                 break
 
     has_been_matched = bool(len(matched_element) > 0)
