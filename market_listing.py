@@ -1,5 +1,5 @@
 # Objective: retrieve i) the item name id of a listing, and ii) whether a *crafted* item would really be marketable.
-
+import ast
 import json
 import time
 
@@ -65,20 +65,75 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
     return rate_limits
 
 
-def parse_item_name_id(html_doc):
-    soup = BeautifulSoup(html_doc, 'html.parser')
+def parse_item_type_no_from_script(last_script):
+    start_str = 'var g_rgAssets ='
+    end_str = 'var g_rgListingInfo ='
 
-    last_script = str(soup.find_all('script')[-1])
+    asset_ending = ';'
+    link_argument_separator = ','
 
-    last_script_token = last_script.split('(')[-1]
-
-    item_nameid_str = last_script_token.split(');')[0]
+    token_no_of_interest = 2
 
     try:
-        item_nameid = int(item_nameid_str)
+        start_index = last_script.index(start_str)
     except ValueError:
-        item_nameid = None
+        start_index = None
 
+    try:
+        end_index = last_script.index(end_str)
+    except ValueError:
+        end_index = None
+
+    if start_index is not None and end_index is not None:
+        assets_raw = last_script[start_index + len(start_str):end_index]
+        assets_stripped = assets_raw.strip().strip(asset_ending)
+
+        assets = ast.literal_eval(assets_stripped)
+
+        app_ids = list(assets.keys())
+        app_id = app_ids[0]
+
+        context_ids = list(assets[app_id].keys())
+        context_id = context_ids[0]
+
+        ids = list(assets[app_id][context_id].keys())
+        id = ids[0]
+
+        # There should only be one appID, one contextID, and one ID.
+        if len(app_ids) > 1 or len(context_ids) > 1 or len(ids) > 1:
+            raise AssertionError()
+
+        owner_actions = assets[app_id][context_id][id]['owner_actions']
+        links = [owner_action['link'] for owner_action in owner_actions]
+        javascript_links = [link for link in links if link.startswith('javascript:')]
+
+        # There should only be one javascript link.
+        if len(javascript_links) > 1:
+            raise AssertionError()
+
+        try:
+            link_of_interest = javascript_links[0]
+        except KeyError:
+            link_of_interest = ''
+
+        tokens = link_of_interest.split(link_argument_separator)
+
+        try:
+            item_type_no_as_str = tokens[token_no_of_interest]
+        except KeyError:
+            item_type_no_as_str = None
+
+        try:
+            item_type_no = int(item_type_no_as_str)
+        except ValueError:
+            item_type_no = None
+    else:
+        item_type_no = None
+
+    return item_type_no
+
+
+def parse_marketability_from_script(last_script):
     marketable_key = '"marketable":'
 
     try:
@@ -92,6 +147,33 @@ def parse_item_name_id(html_doc):
         is_marketable = bool(int(is_marketable_as_str) != 0)
     else:
         is_marketable = None
+
+    return is_marketable
+
+
+def parse_item_name_id_from_script(last_script):
+    last_script_token = last_script.split('(')[-1]
+
+    item_nameid_str = last_script_token.split(');')[0]
+
+    try:
+        item_nameid = int(item_nameid_str)
+    except ValueError:
+        item_nameid = None
+
+    return item_nameid
+
+
+def parse_item_name_id(html_doc):
+    soup = BeautifulSoup(html_doc, 'html.parser')
+
+    last_script = str(soup.find_all('script')[-1])
+
+    item_nameid = parse_item_name_id_from_script(last_script)
+
+    is_marketable = parse_marketability_from_script(last_script)
+
+    item_type_no = parse_item_type_no_from_script(last_script)
 
     return item_nameid, is_marketable
 
