@@ -66,6 +66,8 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
 
 
 def parse_item_type_no_from_script(last_script):
+    # Reference: https://gaming.stackexchange.com/a/351941
+
     start_str = 'var g_rgAssets ='
     end_str = 'var g_rgListingInfo ='
 
@@ -116,6 +118,8 @@ def parse_item_type_no_from_script(last_script):
         except KeyError:
             link_of_interest = ''
 
+        # The link of interest should be like:
+        #   "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )"
         tokens = link_of_interest.split(link_argument_separator)
 
         try:
