@@ -75,7 +75,7 @@ def parse_item_type_no_from_script(last_script):
     link_argument_separator = ','
 
     owner_action_name_of_interest = 'Turn into Gems...'
-    token_no_of_interest = 2
+    token_no_of_interest = 3
 
     try:
         start_index = last_script.index(start_str)
