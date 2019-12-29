@@ -115,7 +115,7 @@ def parse_item_type_no_from_script(last_script):
 
         try:
             link_of_interest = javascript_links[0]
-        except KeyError:
+        except IndexError:
             link_of_interest = ''
 
         # The link of interest should be like:
@@ -124,12 +124,12 @@ def parse_item_type_no_from_script(last_script):
 
         try:
             item_type_no_as_str = tokens[token_no_of_interest]
-        except KeyError:
+        except IndexError:
             item_type_no_as_str = None
 
         try:
             item_type_no = int(item_type_no_as_str)
-        except ValueError:
+        except TypeError:
             item_type_no = None
     else:
         item_type_no = None
