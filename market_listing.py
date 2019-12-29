@@ -141,6 +141,12 @@ def parse_item_type_no_from_script(last_script):
 
         # The link of interest should be like:
         #   "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )"
+        # where:
+        #   - '%contextid%' is a variable containing the context id,
+        #   - '%assetid%' is a variable containing the asset id,
+        #   - 1017900 is the app id,
+        #   - 3 is the item type,
+        #   - 1 is the border color.
         tokens = link_of_interest.split(link_argument_separator)
 
         try:
