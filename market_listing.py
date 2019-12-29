@@ -74,6 +74,7 @@ def parse_item_type_no_from_script(last_script):
     asset_ending = ';'
     link_argument_separator = ','
 
+    owner_action_name_of_interest = 'Turn into Gems...'
     token_no_of_interest = 2
 
     try:
@@ -106,8 +107,28 @@ def parse_item_type_no_from_script(last_script):
             raise AssertionError()
 
         owner_actions = assets[app_id][context_id][id]['owner_actions']
-        links = [owner_action['link'] for owner_action in owner_actions]
-        javascript_links = [link for link in links if link.startswith('javascript:')]
+
+        # The owner actions should be like:
+        #     "owner_actions": [
+        #         {
+        #             "link": "https://steamcommunity.com/my/gamecards/1017900/?border=1",
+        #             "name": "View badge progress"
+        #         },
+        #         {
+        #             "link": "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )",
+        #             "name": "Turn into Gems..."
+        #         }
+        #     ]
+
+        actions_of_interest = [owner_action for owner_action in owner_actions
+                               if owner_action['name'] == owner_action_name_of_interest
+                               ]
+
+        links = [owner_action['link'] for owner_action in actions_of_interest]
+
+        javascript_links = [link for link in links
+                            if link.startswith('javascript:')
+                            ]
 
         # There should only be one javascript link.
         if len(javascript_links) > 1:
