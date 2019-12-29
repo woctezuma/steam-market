@@ -175,7 +175,7 @@ def parse_item_name_id(html_doc):
 
     item_type_no = parse_item_type_no_from_script(last_script)
 
-    return item_nameid, is_marketable
+    return item_nameid, is_marketable, item_type_no
 
 
 def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
@@ -203,7 +203,7 @@ def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
             jar = dict(resp_data.cookies)
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
-        item_nameid, is_marketable = parse_item_name_id(html_doc)
+        item_nameid, is_marketable, item_type_no = parse_item_name_id(html_doc)
 
         if item_nameid is None:
             print('Item name ID not found for {}'.format(listing_hash))
@@ -211,9 +211,13 @@ def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
         if is_marketable is None:
             print('Marketable status not found for {}'.format(listing_hash))
 
+        if item_type_no is None:
+            print('Item type not found for {}'.format(listing_hash))
+
         listing_details[listing_hash] = dict()
         listing_details[listing_hash]['item_nameid'] = item_nameid
         listing_details[listing_hash]['is_marketable'] = is_marketable
+        listing_details[listing_hash]['item_type_no'] = item_type_no
 
     return listing_details, status_code
 
