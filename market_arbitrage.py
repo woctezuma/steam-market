@@ -170,7 +170,16 @@ def find_badge_arbitrages(badge_data,
 
         listing_hash = individual_badge_data['listing_hash']
 
-        bid_including_fee = market_order_dict[listing_hash]['bid']
+        try:
+            bid_including_fee = market_order_dict[listing_hash]['bid']
+        except KeyError:
+            bid_including_fee = -1
+
+            if verbose:
+                print('Bid not found for {}. Reason is likely that you asked not to retrieve market orders.'.format(
+                    listing_hash
+                ))
+
         bid_without_fee = compute_sell_price_without_fee(bid_including_fee)
 
         if bid_including_fee < 0:
