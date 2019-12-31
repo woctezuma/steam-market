@@ -128,8 +128,14 @@ def determine_whether_a_booster_pack_can_be_crafted(badge_data,
     else:
         parsed_next_creation_time = get_time_struct_from_str(next_creation_time)
 
+        if current_time.month == 12 and current_time.day == 31 and parsed_next_creation_time.month == 1 and parsed_next_creation_time.day == 1:
+            # Today is the Dec 31, and the next creation time is the day after, on January 1.
+            year_to_be_manually_set = current_time.year + 1
+        else:
+            year_to_be_manually_set = current_time.year
+
         # Manually set the year, because it was not stored at creation time, following Valve's time format.
-        parsed_next_creation_time = parsed_next_creation_time.replace(year=current_time.year)
+        parsed_next_creation_time = parsed_next_creation_time.replace(year=year_to_be_manually_set)
 
         delta = parsed_next_creation_time - current_time
         delta_in_seconds = delta.total_seconds()
