@@ -17,14 +17,27 @@ from market_buzz_detector import filter_out_unmarketable_packs, sort_according_t
 from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data_from_disk, download_market_order_data_batch
 from market_search import get_tag_item_class_no_for_profile_backgrounds, get_tag_item_class_no_for_emoticons
+from market_search import get_tag_item_class_no_for_trading_cards
 from market_search import update_all_listings, load_all_listings
 from sack_of_gems import get_gem_price, get_gem_amount_required_to_craft_badge
 from utils import convert_listing_hash_to_app_id
 from utils import get_category_name_for_profile_backgrounds, get_category_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_emoticons
+from utils import get_listing_details_output_file_name_for_foil_cards
 from utils import get_listing_details_output_file_name_for_profile_backgrounds
 from utils import get_listing_output_file_name_for_profile_backgrounds, get_listing_output_file_name_for_emoticons
 from utils import get_market_order_file_name_for_profile_backgrounds, get_market_order_file_name_for_emoticons
+
+
+def update_all_listings_for_foil_cards():
+    print('Downloading listings for foil cards.')
+
+    update_all_listings(
+        listing_output_file_name=get_listing_details_output_file_name_for_foil_cards(),
+        tag_item_class_no=get_tag_item_class_no_for_trading_cards()
+    )
+
+    return
 
 
 def update_all_listings_for_profile_backgrounds():

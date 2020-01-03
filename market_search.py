@@ -17,6 +17,11 @@ def get_steam_market_search_url():
     return market_search_url
 
 
+def get_tag_item_class_no_for_trading_cards():
+    tag_item_class_no = 2
+    return tag_item_class_no
+
+
 def get_tag_item_class_no_for_profile_backgrounds():
     tag_item_class_no = 3
     return tag_item_class_no
@@ -34,9 +39,11 @@ def get_tag_item_class_no_for_booster_packs():
 
 def get_search_parameters(start_index=0,
                           delta_index=100,
-                          tag_item_class_no=None):
+                          tag_item_class_no=None,
+                          is_foil_trading_card=True):
     if tag_item_class_no is None:
         # Typically, one of the following numbers:
+        # 2: Trading Card
         # 3: Profile Background
         # 4: Emoticon
         # 5: Booster Pack
@@ -59,6 +66,13 @@ def get_search_parameters(start_index=0,
     params['sort_dir'] = sort_direction
     params['start'] = str(start_index)
     params['count'] = str(delta_index)
+
+    if tag_item_class_no == get_tag_item_class_no_for_trading_cards():
+
+        if is_foil_trading_card:
+            params['category_753_cardborder[]'] = 'tag_cardborder_1'
+        else:
+            params['category_753_cardborder[]'] = 'tag_cardborder_0'
 
     return params
 
