@@ -50,6 +50,11 @@ def get_listing_details_output_file_name_for_emoticons():
     return listing_details_output_file_name
 
 
+def get_listing_details_output_file_name_for_foil_cards():
+    listing_details_output_file_name = get_data_folder() + 'listing_details_for_foil_cards.json'
+    return listing_details_output_file_name
+
+
 def get_listing_details_output_file_name():
     listing_details_output_file_name = get_data_folder() + 'listing_details.json'
     return listing_details_output_file_name
