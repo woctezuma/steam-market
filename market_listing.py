@@ -91,73 +91,79 @@ def parse_item_type_no_from_script(last_script):
         assets_raw = last_script[start_index + len(start_str):end_index]
         assets_stripped = assets_raw.strip().strip(asset_ending)
 
-        assets = ast.literal_eval(assets_stripped)
-
-        app_ids = list(assets.keys())
-        app_id = app_ids[0]
-
-        context_ids = list(assets[app_id].keys())
-        context_id = context_ids[0]
-
-        ids = list(assets[app_id][context_id].keys())
-        id = ids[0]
-
-        # There should only be one appID, one contextID, and one ID.
-        if len(app_ids) > 1 or len(context_ids) > 1 or len(ids) > 1:
-            raise AssertionError()
-
-        owner_actions = assets[app_id][context_id][id]['owner_actions']
-
-        # The owner actions should be like:
-        #     "owner_actions": [
-        #         {
-        #             "link": "https://steamcommunity.com/my/gamecards/1017900/?border=1",
-        #             "name": "View badge progress"
-        #         },
-        #         {
-        #             "link": "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )",
-        #             "name": "Turn into Gems..."
-        #         }
-        #     ]
-
-        actions_of_interest = [owner_action for owner_action in owner_actions
-                               if owner_action['name'] == owner_action_name_of_interest
-                               ]
-
-        links = [owner_action['link'] for owner_action in actions_of_interest]
-
-        javascript_links = [link for link in links
-                            if link.startswith('javascript:')
-                            ]
-
-        # There should only be one javascript link.
-        if len(javascript_links) > 1:
-            raise AssertionError()
-
         try:
-            link_of_interest = javascript_links[0]
-        except IndexError:
-            link_of_interest = ''
+            assets = ast.literal_eval(assets_stripped)
+        except SyntaxError:
+            assets = None
 
-        # The link of interest should be like:
-        #   "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )"
-        # where:
-        #   - '%contextid%' is a variable containing the context id,
-        #   - '%assetid%' is a variable containing the asset id,
-        #   - 1017900 is the app id,
-        #   - 3 is the item type,
-        #   - 1 is the border color.
-        tokens = link_of_interest.split(link_argument_separator)
-
-        try:
-            item_type_no_as_str = tokens[token_no_of_interest]
-        except IndexError:
-            item_type_no_as_str = None
-
-        try:
-            item_type_no = int(item_type_no_as_str)
-        except TypeError:
+        if assets is None:
             item_type_no = None
+        else:
+            app_ids = list(assets.keys())
+            app_id = app_ids[0]
+
+            context_ids = list(assets[app_id].keys())
+            context_id = context_ids[0]
+
+            ids = list(assets[app_id][context_id].keys())
+            id = ids[0]
+
+            # There should only be one appID, one contextID, and one ID.
+            if len(app_ids) > 1 or len(context_ids) > 1 or len(ids) > 1:
+                raise AssertionError()
+
+            owner_actions = assets[app_id][context_id][id]['owner_actions']
+
+            # The owner actions should be like:
+            #     "owner_actions": [
+            #         {
+            #             "link": "https://steamcommunity.com/my/gamecards/1017900/?border=1",
+            #             "name": "View badge progress"
+            #         },
+            #         {
+            #             "link": "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )",
+            #             "name": "Turn into Gems..."
+            #         }
+            #     ]
+
+            actions_of_interest = [owner_action for owner_action in owner_actions
+                                   if owner_action['name'] == owner_action_name_of_interest
+                                   ]
+
+            links = [owner_action['link'] for owner_action in actions_of_interest]
+
+            javascript_links = [link for link in links
+                                if link.startswith('javascript:')
+                                ]
+
+            # There should only be one javascript link.
+            if len(javascript_links) > 1:
+                raise AssertionError()
+
+            try:
+                link_of_interest = javascript_links[0]
+            except IndexError:
+                link_of_interest = ''
+
+            # The link of interest should be like:
+            #   "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )"
+            # where:
+            #   - '%contextid%' is a variable containing the context id,
+            #   - '%assetid%' is a variable containing the asset id,
+            #   - 1017900 is the app id,
+            #   - 3 is the item type,
+            #   - 1 is the border color.
+            tokens = link_of_interest.split(link_argument_separator)
+
+            try:
+                item_type_no_as_str = tokens[token_no_of_interest]
+            except IndexError:
+                item_type_no_as_str = None
+
+            try:
+                item_type_no = int(item_type_no_as_str)
+            except TypeError:
+                item_type_no = None
     else:
         item_type_no = None
 
