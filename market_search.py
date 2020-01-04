@@ -219,7 +219,7 @@ def load_all_listings(listing_output_file_name=None):
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
 
-    with open(listing_output_file_name, 'r') as f:
+    with open(listing_output_file_name, 'r', encoding='utf-8') as f:
         all_listings = json.load(f)
 
     return all_listings
