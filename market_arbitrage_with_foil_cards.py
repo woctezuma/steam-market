@@ -202,6 +202,7 @@ def find_cheapest_listing_hashes(all_listings,
 
 def main(retrieve_listings_from_scratch=False,
          filter_out_empty_listings=True,
+         price_threshold_in_cents_for_a_foil_card=15,
          verbose=True):
     listing_output_file_name = get_listing_output_file_name_for_foil_cards()
     listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
@@ -217,9 +218,25 @@ def main(retrieve_listings_from_scratch=False,
     cheapest_listing_hashes = find_cheapest_listing_hashes(all_listings,
                                                            groups_by_app_id)
 
+    # Filter listings with an arbitrary price threshold
+
+    if price_threshold_in_cents_for_a_foil_card is not None:
+
+        filtered_cheapest_listing_hashes = []
+
+        for listing_hash in cheapest_listing_hashes:
+            ask = all_listings[listing_hash]['sell_price']
+
+            if ask < price_threshold_in_cents_for_a_foil_card:
+                filtered_cheapest_listing_hashes.append(listing_hash)
+
+    else:
+
+        filtered_cheapest_listing_hashes = cheapest_listing_hashes
+
     # Pre-retrieval of item name ids (and item types at the same time)
 
-    item_nameids = get_item_nameid_batch(cheapest_listing_hashes,
+    item_nameids = get_item_nameid_batch(filtered_cheapest_listing_hashes,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
     process_all = False
