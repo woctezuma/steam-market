@@ -177,6 +177,29 @@ def group_listing_hashes_by_app_id(all_listings,
     return groups_by_app_id
 
 
+def find_cheapest_listing_hashes(all_listings,
+                                 groups_by_app_id):
+    cheapest_listing_hashes = []
+
+    for app_id in groups_by_app_id:
+        listing_hashes = groups_by_app_id[app_id]
+
+        # Sort with respect to two attributes:
+        #   - ascending sell prices,
+        #   - **descending** volumes.
+        #  So that, in case the sell price is equal for two listings, the listing with the highest volume is favored.
+
+        sorted_listing_hashes = sorted(listing_hashes,
+                                       key=lambda x: (all_listings[x]['sell_price'],
+                                                      - all_listings[x]['sell_listings'],))
+
+        cheapest_listing_hash = sorted_listing_hashes[0]
+
+        cheapest_listing_hashes.append(cheapest_listing_hash)
+
+    return cheapest_listing_hashes
+
+
 def main(retrieve_listings_from_scratch=False,
          filter_out_empty_listings=True,
          verbose=True):
@@ -191,10 +214,13 @@ def main(retrieve_listings_from_scratch=False,
                                                       filter_out_empty_listings=filter_out_empty_listings,
                                                       verbose=verbose)
 
-    for app_id in groups_by_app_id:
-        first_listing_hash = groups_by_app_id[app_id][0]
-        # TODO sort by price and volume?
-        # TODO find item type no
+    cheapest_listing_hashes = find_cheapest_listing_hashes(all_listings,
+                                                           groups_by_app_id)
+
+    # Pre-retrieval of item name ids (and item types at the same time)
+
+    item_nameids = get_item_nameid_batch(cheapest_listing_hashes,
+                                         listing_details_output_file_name=listing_details_output_file_name)
 
     process_all = False
 
