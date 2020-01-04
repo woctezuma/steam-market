@@ -135,7 +135,8 @@ def query_goo_value(app_id,
 
 
 def get_listings_for_foil_cards(retrieve_listings_from_scratch,
-                                listing_output_file_name=None):
+                                listing_output_file_name=None,
+                                verbose=True):
     if retrieve_listings_from_scratch:
         update_all_listings_for_foil_cards()
 
@@ -144,28 +145,45 @@ def get_listings_for_foil_cards(retrieve_listings_from_scratch,
 
     all_listings = load_all_listings(listing_output_file_name)
 
+    if verbose:
+        print('#listings = {}'.format(all_listings))
+
     return all_listings
 
 
-def main():
-    listing_output_file_name = get_listing_details_output_file_name_for_foil_cards()
-
-    retrieve_listings_from_scratch = False
-
-    all_listings = get_listings_for_foil_cards(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-                                               listing_output_file_name=listing_output_file_name)
-
-    print('#listings = {}'.format(all_listings))
-
+def group_listing_hashes_by_app_id(all_listings,
+                                   filter_out_empty_listings=True,
+                                   verbose=True):
     groups_by_app_id = dict()
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
+
+        if filter_out_empty_listings:
+            volume = all_listings[listing_hash]['sell_listings']
+
+            if volume == 0:
+                continue
+
         try:
             groups_by_app_id[app_id].append(listing_hash)
         except KeyError:
             groups_by_app_id[app_id] = [listing_hash]
 
-    print('#app_ids = {}'.format(groups_by_app_id))
+    if verbose:
+        print('#app_ids = {}'.format(groups_by_app_id))
+
+    return groups_by_app_id
+
+
+def main(retrieve_listings_from_scratch=False,
+         filter_out_empty_listings=True,
+         verbose=True):
+    all_listings = get_listings_for_foil_cards(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+                                               verbose=verbose)
+
+    groups_by_app_id = group_listing_hashes_by_app_id(all_listings,
+                                                      filter_out_empty_listings=filter_out_empty_listings,
+                                                      verbose=verbose)
 
     for app_id in groups_by_app_id:
         first_listing_hash = groups_by_app_id[app_id][0]
