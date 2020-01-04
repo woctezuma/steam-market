@@ -146,7 +146,7 @@ def get_listings_for_foil_cards(retrieve_listings_from_scratch,
     all_listings = load_all_listings(listing_output_file_name)
 
     if verbose:
-        print('#listings = {}'.format(all_listings))
+        print('#listings = {}'.format(len(all_listings)))
 
     return all_listings
 
@@ -170,7 +170,7 @@ def group_listing_hashes_by_app_id(all_listings,
             groups_by_app_id[app_id] = [listing_hash]
 
     if verbose:
-        print('#app_ids = {}'.format(groups_by_app_id))
+        print('#app_ids = {}'.format(len(groups_by_app_id)))
 
     return groups_by_app_id
 
