@@ -8,11 +8,13 @@
 import requests
 
 from market_gamble_detector import update_all_listings_for_foil_cards
+from market_listing import get_item_nameid_batch
 from market_listing import get_listing_details
 from market_search import load_all_listings
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
 from utils import convert_listing_hash_to_app_id
 from utils import get_listing_details_output_file_name_for_foil_cards
+from utils import get_listing_output_file_name_for_foil_cards
 
 
 def get_steam_goo_value_url():
@@ -141,7 +143,7 @@ def get_listings_for_foil_cards(retrieve_listings_from_scratch,
         update_all_listings_for_foil_cards()
 
     if listing_output_file_name is None:
-        listing_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+        listing_output_file_name = get_listing_output_file_name_for_foil_cards()
 
     all_listings = load_all_listings(listing_output_file_name)
 
@@ -178,7 +180,11 @@ def group_listing_hashes_by_app_id(all_listings,
 def main(retrieve_listings_from_scratch=False,
          filter_out_empty_listings=True,
          verbose=True):
+    listing_output_file_name = get_listing_output_file_name_for_foil_cards()
+    listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+
     all_listings = get_listings_for_foil_cards(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+                                               listing_output_file_name=listing_output_file_name,
                                                verbose=verbose)
 
     groups_by_app_id = group_listing_hashes_by_app_id(all_listings,

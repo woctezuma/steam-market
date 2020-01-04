@@ -34,6 +34,9 @@ def get_listing_output_file_name_for_emoticons():
     listing_output_file_name = get_data_folder() + 'listings_for_emoticons.json'
     return listing_output_file_name
 
+def get_listing_output_file_name_for_foil_cards():
+    listing_output_file_name = get_data_folder() + 'listings_for_foil_cards.json'
+    return listing_output_file_name
 
 def get_listing_output_file_name():
     listing_output_file_name = get_data_folder() + 'listings.json'
