@@ -294,7 +294,7 @@ def get_listing_details_batch(listing_hashes,
 
         if query_count >= rate_limits['max_num_queries']:
             if save_to_disk:
-                with open(listing_details_output_file_name, 'w') as f:
+                with open(listing_details_output_file_name, 'w', encoding='utf-8') as f:
                     json.dump(all_listing_details, f)
 
             cooldown_duration = rate_limits['cooldown']
@@ -305,7 +305,7 @@ def get_listing_details_batch(listing_hashes,
         all_listing_details.update(listing_details)
 
     if save_to_disk:
-        with open(listing_details_output_file_name, 'w') as f:
+        with open(listing_details_output_file_name, 'w', encoding='utf-8') as f:
             json.dump(all_listing_details, f)
 
     return all_listing_details
@@ -320,7 +320,7 @@ def update_all_listing_details(listing_hashes=None,
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, 'r') as f:
+        with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
             all_listing_details = json.load(f)
             print('Loading {} listing details from disk.'.format(len(all_listing_details)))
     except FileNotFoundError:
@@ -343,7 +343,7 @@ def load_all_listing_details(listing_details_output_file_name=None):
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
-    with open(listing_details_output_file_name, 'r') as f:
+    with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
         all_listing_details = json.load(f)
 
     return all_listing_details
@@ -383,7 +383,7 @@ def get_item_nameid(listing_hash,
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, 'r') as f:
+        with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
             listing_details = json.load(f)
 
         item_nameid = listing_details[listing_hash]['item_nameid']
@@ -401,7 +401,7 @@ def get_item_nameid_batch(listing_hashes,
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, 'r') as f:
+        with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
             listing_details = json.load(f)
 
         item_nameids = dict()

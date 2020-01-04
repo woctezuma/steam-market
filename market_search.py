@@ -183,7 +183,7 @@ def download_all_listings(listing_output_file_name=None,
         all_listings = get_all_listings(url=url,
                                         tag_item_class_no=tag_item_class_no)
 
-        with open(listing_output_file_name, 'w') as f:
+        with open(listing_output_file_name, 'w', encoding='utf-8') as f:
             json.dump(all_listings, f)
 
     return True
@@ -209,7 +209,7 @@ def update_all_listings(listing_output_file_name=None,
                                     url=url,
                                     tag_item_class_no=tag_item_class_no)
 
-    with open(listing_output_file_name, 'w') as f:
+    with open(listing_output_file_name, 'w', encoding='utf-8') as f:
         json.dump(all_listings, f)
 
     return True
