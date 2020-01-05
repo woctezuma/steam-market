@@ -200,6 +200,26 @@ def find_cheapest_listing_hashes(all_listings,
     return cheapest_listing_hashes
 
 
+def filter_listings_with_arbitrary_price_threshold(all_listings,
+                                                   listing_hashes_to_filter_from,
+                                                   price_threshold_in_cents=None):
+    if price_threshold_in_cents is not None:
+
+        filtered_cheapest_listing_hashes = []
+
+        for listing_hash in listing_hashes_to_filter_from:
+            ask = all_listings[listing_hash]['sell_price']
+
+            if ask < price_threshold_in_cents:
+                filtered_cheapest_listing_hashes.append(listing_hash)
+
+    else:
+
+        filtered_cheapest_listing_hashes = listing_hashes_to_filter_from
+
+    return filtered_cheapest_listing_hashes
+
+
 def main(retrieve_listings_from_scratch=False,
          filter_out_empty_listings=True,
          price_threshold_in_cents_for_a_foil_card=15,
@@ -220,19 +240,10 @@ def main(retrieve_listings_from_scratch=False,
 
     # Filter listings with an arbitrary price threshold
 
-    if price_threshold_in_cents_for_a_foil_card is not None:
-
-        filtered_cheapest_listing_hashes = []
-
-        for listing_hash in cheapest_listing_hashes:
-            ask = all_listings[listing_hash]['sell_price']
-
-            if ask < price_threshold_in_cents_for_a_foil_card:
-                filtered_cheapest_listing_hashes.append(listing_hash)
-
-    else:
-
-        filtered_cheapest_listing_hashes = cheapest_listing_hashes
+    filtered_cheapest_listing_hashes = filter_listings_with_arbitrary_price_threshold(
+        all_listings=all_listings,
+        listing_hashes_to_filter_from=cheapest_listing_hashes,
+        price_threshold_in_cents=price_threshold_in_cents_for_a_foil_card)
 
     # Pre-retrieval of item name ids (and item types at the same time)
 
