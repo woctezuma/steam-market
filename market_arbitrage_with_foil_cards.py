@@ -202,7 +202,8 @@ def find_cheapest_listing_hashes(all_listings,
 
 def filter_listings_with_arbitrary_price_threshold(all_listings,
                                                    listing_hashes_to_filter_from,
-                                                   price_threshold_in_cents=None):
+                                                   price_threshold_in_cents=None,
+                                                   verbose=True):
     if price_threshold_in_cents is not None:
 
         filtered_cheapest_listing_hashes = []
@@ -216,6 +217,9 @@ def filter_listings_with_arbitrary_price_threshold(all_listings,
     else:
 
         filtered_cheapest_listing_hashes = listing_hashes_to_filter_from
+
+    if verbose:
+        print('#listings (after filtering) = {}'.format(len(filtered_cheapest_listing_hashes)))
 
     return filtered_cheapest_listing_hashes
 
@@ -243,7 +247,8 @@ def main(retrieve_listings_from_scratch=False,
     filtered_cheapest_listing_hashes = filter_listings_with_arbitrary_price_threshold(
         all_listings=all_listings,
         listing_hashes_to_filter_from=cheapest_listing_hashes,
-        price_threshold_in_cents=price_threshold_in_cents_for_a_foil_card)
+        price_threshold_in_cents=price_threshold_in_cents_for_a_foil_card,
+        verbose=verbose)
 
     # Pre-retrieval of item name ids (and item types at the same time)
 
