@@ -5,14 +5,18 @@
 #
 # In summary, we do not care about buy orders here! We only care about sell orders!
 
+import json
+
 import requests
 
 from market_gamble_detector import update_all_listings_for_foil_cards
 from market_listing import get_item_nameid_batch
-from market_listing import get_listing_details
+from market_listing import load_all_listing_details
 from market_search import load_all_listings
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
+from sack_of_gems import load_sack_of_gems_price
 from utils import convert_listing_hash_to_app_id
+from utils import get_goo_details_file_nam_for_for_foil_cards
 from utils import get_listing_details_output_file_name_for_foil_cards
 from utils import get_listing_output_file_name_for_foil_cards
 
@@ -224,25 +228,71 @@ def filter_listings_with_arbitrary_price_threshold(all_listings,
     return filtered_cheapest_listing_hashes
 
 
+def load_all_goo_details(goo_details_file_name=None):
+    if goo_details_file_name is None:
+        goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
+
+    try:
+        with open(goo_details_file_name, 'r', encoding='utf-8') as f:
+            all_goo_details = json.load(f)
+    except FileNotFoundError:
+        all_goo_details = dict()
+
+    return all_goo_details
+
+
+def save_all_goo_details(all_goo_details,
+                         goo_details_file_name=None):
+    if goo_details_file_name is None:
+        goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
+
+    with open(goo_details_file_name, 'w', encoding='utf-8') as f:
+        json.dump(all_goo_details, f)
+
+    return
+
+
+def update_all_goo_details(new_goo_details,
+                           goo_details_file_name=None):
+    if goo_details_file_name is None:
+        goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
+
+    all_goo_details = load_all_goo_details(goo_details_file_name)
+    all_goo_details.update(new_goo_details)
+
+    save_all_goo_details(all_goo_details,
+                         goo_details_file_name)
+
+    return
+
+
 def main(retrieve_listings_from_scratch=False,
          filter_out_empty_listings=True,
-         price_threshold_in_cents_for_a_foil_card=15,
+         price_threshold_in_cents_for_a_foil_card=None,
+         retrieve_gem_price_from_scratch=False,
          verbose=True):
     listing_output_file_name = get_listing_output_file_name_for_foil_cards()
     listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+
+    # Fetch all the listings of foil cards
 
     all_listings = get_listings_for_foil_cards(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
                                                listing_output_file_name=listing_output_file_name,
                                                verbose=verbose)
 
+    # Group listings by appID
+
     groups_by_app_id = group_listing_hashes_by_app_id(all_listings,
                                                       filter_out_empty_listings=filter_out_empty_listings,
                                                       verbose=verbose)
+
+    # Find the cheapest listing in each group
 
     cheapest_listing_hashes = find_cheapest_listing_hashes(all_listings,
                                                            groups_by_app_id)
 
     # Filter listings with an arbitrary price threshold
+    # NB: This is only useful to speed up the pre-retrieval below, by focusing on the most interesting listings.
 
     filtered_cheapest_listing_hashes = filter_listings_with_arbitrary_price_threshold(
         all_listings=all_listings,
@@ -255,27 +305,93 @@ def main(retrieve_listings_from_scratch=False,
     item_nameids = get_item_nameid_batch(filtered_cheapest_listing_hashes,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
-    process_all = False
+    # Load the price of a sack of 1000 gems
 
-    if process_all:
+    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+                                                 verbose=verbose)
 
-        listing_hash = '1017900-Minoan Labrys (Foil)'
-        listing_details, status_code = get_listing_details(listing_hash=listing_hash)
+    # Fetch goo values
 
-        print(listing_details)
+    all_listing_details = load_all_listing_details(listing_details_output_file_name=listing_details_output_file_name)
 
-        listing_hash = '753-Sack of Gems'
-        listing_details, status_code = get_listing_details(listing_hash=listing_hash)
+    goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
 
-        print(listing_details)
-
-        app_id = 232770
-        max_num_items = 30
-        for item_type in range(max_num_items):
-            query_goo_value(app_id=app_id,
-                            item_type=item_type)
+    all_goo_details = download_missing_goo_details(groups_by_app_id=groups_by_app_id,
+                                                   cheapest_listing_hashes=cheapest_listing_hashes,
+                                                   all_listing_details=all_listing_details,
+                                                   listing_details_output_file_name=listing_details_output_file_name,
+                                                   goo_details_file_name_for_for_foil_cards=goo_details_file_name_for_for_foil_cards,
+                                                   verbose=verbose)
 
     return True
+
+
+def download_missing_goo_details(groups_by_app_id,
+                                 cheapest_listing_hashes,
+                                 all_listing_details=None,
+                                 listing_details_output_file_name=None,
+                                 goo_details_file_name_for_for_foil_cards=None,
+                                 num_queries_between_save=100,
+                                 verbose=True):
+    if goo_details_file_name_for_for_foil_cards is None:
+        goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
+
+    all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards)
+
+    query_count = 0
+
+    for app_id in groups_by_app_id:
+
+        if app_id not in all_goo_details:
+            goo_value = download_goo_value_for_app_id(app_id=app_id,
+                                                      groups_by_app_id=groups_by_app_id,
+                                                      cheapest_listing_hashes=cheapest_listing_hashes,
+                                                      all_listing_details=all_listing_details,
+                                                      listing_details_output_file_name=listing_details_output_file_name,
+                                                      verbose=verbose)
+            query_count += 1
+
+            all_goo_details[app_id] = goo_value
+
+            if query_count % num_queries_between_save == 0:
+                print('Saving after {} queries.'.format(query_count))
+                save_all_goo_details(all_goo_details,
+                                     goo_details_file_name_for_for_foil_cards)
+
+    # Final save
+
+    save_all_goo_details(all_goo_details,
+                         goo_details_file_name_for_for_foil_cards)
+
+    return all_goo_details
+
+
+def download_goo_value_for_app_id(app_id,
+                                  groups_by_app_id,
+                                  cheapest_listing_hashes,
+                                  all_listing_details=None,
+                                  listing_details_output_file_name=None,
+                                  verbose=True):
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+
+    if all_listing_details is None:
+        all_listing_details = load_all_listing_details(
+            listing_details_output_file_name=listing_details_output_file_name)
+
+    listing_hashes_for_app_id = groups_by_app_id[app_id]
+    cheapest_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(cheapest_listing_hashes)
+
+    cheapest_listing_hash_for_app_id = list(cheapest_listing_hash_for_app_id_as_a_set)[0]
+
+    listing_details = all_listing_details[cheapest_listing_hash_for_app_id]
+    item_type = listing_details['item_type_no']
+
+    goo_value = query_goo_value(app_id=app_id,
+                                item_type=item_type,
+                                verbose=verbose)
+
+    return goo_value
 
 
 if __name__ == '__main__':

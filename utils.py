@@ -34,9 +34,11 @@ def get_listing_output_file_name_for_emoticons():
     listing_output_file_name = get_data_folder() + 'listings_for_emoticons.json'
     return listing_output_file_name
 
+
 def get_listing_output_file_name_for_foil_cards():
     listing_output_file_name = get_data_folder() + 'listings_for_foil_cards.json'
     return listing_output_file_name
+
 
 def get_listing_output_file_name():
     listing_output_file_name = get_data_folder() + 'listings.json'
@@ -61,6 +63,11 @@ def get_listing_details_output_file_name_for_foil_cards():
 def get_listing_details_output_file_name():
     listing_details_output_file_name = get_data_folder() + 'listing_details.json'
     return listing_details_output_file_name
+
+
+def get_goo_details_file_nam_for_for_foil_cards():
+    goo_details_file_nam_for_for_foil_cards = get_data_folder() + 'goo_details_for_foil_cards.json'
+    return goo_details_file_nam_for_for_foil_cards
 
 
 def get_sack_of_gems_listing_file_name():
