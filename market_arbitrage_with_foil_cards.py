@@ -397,12 +397,22 @@ def download_missing_goo_details(groups_by_app_id,
     return all_goo_details
 
 
-def download_goo_value_for_app_id(app_id,
-                                  groups_by_app_id,
-                                  cheapest_listing_hashes,
-                                  all_listing_details=None,
-                                  listing_details_output_file_name=None,
-                                  verbose=True):
+def find_cheapest_listing_hash_for_app_id(app_id,
+                                          groups_by_app_id,
+                                          cheapest_listing_hashes):
+    listing_hashes_for_app_id = groups_by_app_id[app_id]
+    cheapest_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(cheapest_listing_hashes)
+
+    cheapest_listing_hash_for_app_id = list(cheapest_listing_hash_for_app_id_as_a_set)[0]
+
+    return cheapest_listing_hash_for_app_id
+
+
+def find_item_type_for_app_id(app_id,
+                              groups_by_app_id,
+                              cheapest_listing_hashes,
+                              all_listing_details=None,
+                              listing_details_output_file_name=None):
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
 
@@ -410,13 +420,27 @@ def download_goo_value_for_app_id(app_id,
         all_listing_details = load_all_listing_details(
             listing_details_output_file_name=listing_details_output_file_name)
 
-    listing_hashes_for_app_id = groups_by_app_id[app_id]
-    cheapest_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(cheapest_listing_hashes)
-
-    cheapest_listing_hash_for_app_id = list(cheapest_listing_hash_for_app_id_as_a_set)[0]
+    cheapest_listing_hash_for_app_id = find_cheapest_listing_hash_for_app_id(app_id,
+                                                                             groups_by_app_id,
+                                                                             cheapest_listing_hashes)
 
     listing_details = all_listing_details[cheapest_listing_hash_for_app_id]
     item_type = listing_details['item_type_no']
+
+    return item_type
+
+
+def download_goo_value_for_app_id(app_id,
+                                  groups_by_app_id,
+                                  cheapest_listing_hashes,
+                                  all_listing_details=None,
+                                  listing_details_output_file_name=None,
+                                  verbose=True):
+    item_type = find_item_type_for_app_id(app_id,
+                                          groups_by_app_id,
+                                          cheapest_listing_hashes,
+                                          all_listing_details,
+                                          listing_details_output_file_name)
 
     goo_value = query_goo_value(app_id=app_id,
                                 item_type=item_type,
