@@ -356,7 +356,57 @@ def main(retrieve_listings_from_scratch=False,
                                                    goo_details_file_name_for_for_foil_cards=goo_details_file_name_for_for_foil_cards,
                                                    verbose=verbose)
 
+    # List unknown item types
+
+    listing_hashes_with_unknown_item_types = find_listing_hashes_with_unknown_item_types(
+        groups_by_app_id=groups_by_app_id,
+        cheapest_listing_hashes=cheapest_listing_hashes,
+        all_listing_details=all_listing_details,
+        listing_details_output_file_name=listing_details_output_file_name,
+        verbose=verbose)
+
     return True
+
+
+def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
+                                                cheapest_listing_hashes,
+                                                all_listing_details=None,
+                                                listing_details_output_file_name=None,
+                                                try_again_to_find_item_type=False,
+                                                verbose=True):
+    listing_hashes_with_unknown_item_types = []
+
+    for app_id in groups_by_app_id:
+        cheapest_listing_hash_for_app_id = find_cheapest_listing_hash_for_app_id(app_id,
+                                                                                 groups_by_app_id=groups_by_app_id,
+                                                                                 cheapest_listing_hashes=cheapest_listing_hashes)
+
+        item_type = find_item_type_for_app_id(app_id,
+                                              groups_by_app_id=groups_by_app_id,
+                                              cheapest_listing_hashes=cheapest_listing_hashes,
+                                              all_listing_details=all_listing_details,
+                                              listing_details_output_file_name=listing_details_output_file_name)
+        if item_type is None:
+            listing_hashes_with_unknown_item_types.append(cheapest_listing_hash_for_app_id)
+
+    if verbose:
+        print('Unknown item types for:\n{}\nTotal: {} listing hashes with unknown item types.'.format(
+            listing_hashes_with_unknown_item_types,
+            len(listing_hashes_with_unknown_item_types),
+        ))
+
+    if try_again_to_find_item_type:
+        listing_hashes_to_process = listing_hashes_with_unknown_item_types
+
+        if verbose:
+            print('Trying again to find item types for {} listing hashes.'.format(
+                len(listing_hashes_to_process),
+            ))
+
+            updated_all_listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
+                                                                     listing_details_output_file_name=listing_details_output_file_name)
+
+    return listing_hashes_with_unknown_item_types
 
 
 def download_missing_goo_details(groups_by_app_id,
