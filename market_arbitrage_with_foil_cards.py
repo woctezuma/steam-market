@@ -358,11 +358,14 @@ def main(retrieve_listings_from_scratch=False,
 
     # List unknown item types
 
+    try_again_to_find_item_type = True
+
     listing_hashes_with_unknown_item_types = find_listing_hashes_with_unknown_item_types(
         groups_by_app_id=groups_by_app_id,
         cheapest_listing_hashes=cheapest_listing_hashes,
         all_listing_details=all_listing_details,
         listing_details_output_file_name=listing_details_output_file_name,
+        try_again_to_find_item_type=try_again_to_find_item_type,
         verbose=verbose)
 
     return True
