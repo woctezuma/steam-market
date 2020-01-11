@@ -364,10 +364,14 @@ def download_missing_goo_details(groups_by_app_id,
                                  all_listing_details=None,
                                  listing_details_output_file_name=None,
                                  goo_details_file_name_for_for_foil_cards=None,
+                                 enforced_app_ids_to_process=None,
                                  num_queries_between_save=100,
                                  verbose=True):
     if goo_details_file_name_for_for_foil_cards is None:
         goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
+
+    if enforced_app_ids_to_process is None:
+        enforced_app_ids_to_process = []
 
     all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards,
                                            verbose=verbose)
@@ -378,11 +382,16 @@ def download_missing_goo_details(groups_by_app_id,
     app_ids_with_known_goo_details = [int(app_id)
                                       for app_id in all_goo_details.keys()]
 
-    app_ids_with_unknown_goo_details = set(groups_by_app_id).difference(app_ids_with_known_goo_details)
+    all_app_ids = set(groups_by_app_id)
+    app_ids_with_unknown_goo_details = all_app_ids.difference(app_ids_with_known_goo_details)
+
+    eligible_enforced_app_ids_to_process = all_app_ids.intersection(enforced_app_ids_to_process)
+
+    app_ids_to_process = app_ids_with_unknown_goo_details.union(eligible_enforced_app_ids_to_process)
 
     query_count = 0
 
-    for app_id in app_ids_with_unknown_goo_details:
+    for app_id in app_ids_to_process:
 
         goo_value = download_goo_value_for_app_id(app_id=app_id,
                                                   groups_by_app_id=groups_by_app_id,
