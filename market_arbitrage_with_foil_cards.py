@@ -372,11 +372,17 @@ def download_missing_goo_details(groups_by_app_id,
     all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards,
                                            verbose=verbose)
 
+    # Convert appIDs to integers, because:
+    # - dictionary keys are strings in 'all_goo_details',
+    # - appIDs are stored as integers in 'groups_by_app_id'.
+    app_ids_with_known_goo_details = [int(app_id)
+                                      for app_id in all_goo_details.keys()]
+
     query_count = 0
 
     for app_id in groups_by_app_id:
 
-        if app_id not in all_goo_details:
+        if app_id not in app_ids_with_known_goo_details:
             goo_value = download_goo_value_for_app_id(app_id=app_id,
                                                       groups_by_app_id=groups_by_app_id,
                                                       cheapest_listing_hashes=cheapest_listing_hashes,
