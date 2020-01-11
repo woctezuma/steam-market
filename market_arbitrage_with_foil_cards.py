@@ -15,6 +15,7 @@ from market_listing import load_all_listing_details
 from market_listing import update_all_listing_details
 from market_search import load_all_listings
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
+from sack_of_gems import get_num_gems_per_sack_of_gems
 from sack_of_gems import load_sack_of_gems_price
 from utils import convert_listing_hash_to_app_id
 from utils import get_goo_details_file_nam_for_for_foil_cards
@@ -339,9 +340,9 @@ def main(retrieve_listings_from_scratch=False,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
     # Load the price of a sack of 1000 gems
-
-    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
-                                                 verbose=verbose)
+    sack_of_gems_price_in_euros = load_sack_of_gems_price(
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+        verbose=verbose)
 
     # Fetch goo values
 
@@ -358,7 +359,7 @@ def main(retrieve_listings_from_scratch=False,
 
     # List unknown item types
 
-    try_again_to_find_item_type = True
+    try_again_to_find_item_type = False
 
     listing_hashes_with_unknown_item_types = find_listing_hashes_with_unknown_item_types(
         groups_by_app_id=groups_by_app_id,
@@ -368,7 +369,100 @@ def main(retrieve_listings_from_scratch=False,
         try_again_to_find_item_type=try_again_to_find_item_type,
         verbose=verbose)
 
+    arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
+                                                                           listing_hashes_with_unknown_item_types,
+                                                                           all_goo_details,
+                                                                           all_listings=all_listings,
+                                                                           listing_output_file_name=listing_output_file_name,
+                                                                           sack_of_gems_price_in_euros=sack_of_gems_price_in_euros,
+                                                                           retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+                                                                           verbose=verbose)
+
     return True
+
+
+def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
+                                                              listing_hashes_with_unknown_item_types,
+                                                              all_goo_details,
+                                                              all_listings=None,
+                                                              listing_output_file_name=None,
+                                                              sack_of_gems_price_in_euros=None,
+                                                              retrieve_gem_price_from_scratch=True,
+                                                              verbose=True):
+    if sack_of_gems_price_in_euros is None:
+        # Load the price of a sack of 1000 gems
+        sack_of_gems_price_in_euros = load_sack_of_gems_price(
+            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+            verbose=verbose)
+
+    if listing_output_file_name is None:
+        listing_output_file_name = get_listing_output_file_name_for_foil_cards()
+
+    if all_listings is None:
+        all_listings = load_all_listings(
+            listing_output_file_name=listing_output_file_name)
+
+    app_ids_with_unreliable_goo_details = [convert_listing_hash_to_app_id(listing_hash)
+                                           for listing_hash in listing_hashes_with_unknown_item_types]
+
+    num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
+
+    sack_of_gems_price_in_cents = 100 * sack_of_gems_price_in_euros
+
+    print('# Results for arbitrages with foil cards')
+
+    bullet_point = '*   '
+
+    arbitrages = dict()
+
+    for listing_hash in cheapest_listing_hashes:
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+
+        if app_id in app_ids_with_unreliable_goo_details:
+            # NB: This is for goo details which were retrieved with the default item type n° (=2), which can be wrong.
+            if verbose:
+                print('[X]\tUnreliable goo details for {}'.format(listing_hash))
+            continue
+
+        goo_value_in_gems = all_goo_details[str(app_id)]
+
+        if goo_value_in_gems is None:
+            # NB: This is when the goo value is unknown, despite a correct item type n° used to download goo details.
+            if verbose:
+                print('[?]\tUnknown goo value for {}'.format(listing_hash))
+            continue
+
+        goo_value_in_cents = goo_value_in_gems / num_gems_per_sack_of_gems * sack_of_gems_price_in_cents
+
+        current_listing = all_listings[listing_hash]
+        ask_in_cents = current_listing['sell_price']
+
+        if ask_in_cents == 0:
+            # NB: The ask cannot be equal to zero. So, we skip the listing because of there must be a bug.
+            if verbose:
+                print('[!]\tImpossible ask price ({:.2f}€) for {}'.format(
+                    ask_in_cents / 100,
+                    listing_hash,
+                ))
+            continue
+
+        profit_in_cents = goo_value_in_cents - ask_in_cents
+        is_arbitrage = bool(profit_in_cents > 0)
+
+        if is_arbitrage:
+            arbitrages[listing_hash] = profit_in_cents
+
+            print(
+                '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€)'.format(
+                    bullet_point,
+                    profit_in_cents / 100,
+                    listing_hash,
+                    ask_in_cents / 100,
+                    goo_value_in_gems,
+                    goo_value_in_cents / 100,
+                ))
+
+    return arbitrages
 
 
 def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
