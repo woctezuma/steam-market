@@ -257,7 +257,8 @@ def filter_listings_with_arbitrary_price_threshold(all_listings,
     return filtered_cheapest_listing_hashes
 
 
-def load_all_goo_details(goo_details_file_name=None):
+def load_all_goo_details(goo_details_file_name=None,
+                         verbose=True):
     if goo_details_file_name is None:
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
 
@@ -266,6 +267,9 @@ def load_all_goo_details(goo_details_file_name=None):
             all_goo_details = json.load(f)
     except FileNotFoundError:
         all_goo_details = dict()
+
+    if verbose:
+        print('Loading {} goo details from disk.'.format(len(all_goo_details)))
 
     return all_goo_details
 
@@ -365,7 +369,8 @@ def download_missing_goo_details(groups_by_app_id,
     if goo_details_file_name_for_for_foil_cards is None:
         goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
 
-    all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards)
+    all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards,
+                                           verbose=verbose)
 
     query_count = 0
 
