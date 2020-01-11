@@ -369,6 +369,15 @@ def main(retrieve_listings_from_scratch=False,
         try_again_to_find_item_type=try_again_to_find_item_type,
         verbose=verbose)
 
+    try_again_to_find_goo_value = True
+
+    listing_hashes_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
+                                                                                       listing_hashes_with_unknown_item_types,
+                                                                                       all_goo_details,
+                                                                                       groups_by_app_id=groups_by_app_id,
+                                                                                       try_again_to_find_goo_value=try_again_to_find_goo_value,
+                                                                                       verbose=verbose)
+
     arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
                                                                            listing_hashes_with_unknown_item_types,
                                                                            all_goo_details,
@@ -379,6 +388,49 @@ def main(retrieve_listings_from_scratch=False,
                                                                            verbose=verbose)
 
     return True
+
+
+def find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
+                                               listing_hashes_with_unknown_item_types,
+                                               all_goo_details,
+                                               groups_by_app_id,
+                                               try_again_to_find_goo_value=False,
+                                               verbose=True):
+    app_ids_with_unreliable_goo_details = [convert_listing_hash_to_app_id(listing_hash)
+                                           for listing_hash in listing_hashes_with_unknown_item_types]
+
+    listing_hashes_with_unknown_goo_value = []
+
+    for listing_hash in cheapest_listing_hashes:
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+
+        if app_id in app_ids_with_unreliable_goo_details:
+            continue
+
+        goo_value_in_gems = all_goo_details[str(app_id)]
+
+        if goo_value_in_gems is None:
+            listing_hashes_with_unknown_goo_value.append(listing_hash)
+
+    if verbose:
+        print('Unknown goo values for:\n{}\nTotal: {} listing hashes with unknown goo value.'.format(
+            listing_hashes_with_unknown_goo_value,
+            len(listing_hashes_with_unknown_goo_value),
+        ))
+
+    if try_again_to_find_goo_value:
+        listing_hashes_to_process = listing_hashes_with_unknown_goo_value
+
+        if verbose:
+            print('Trying again to find goo values for {} listing hashes.'.format(
+                len(listing_hashes_to_process),
+            ))
+
+            download_missing_goo_details(groups_by_app_id=groups_by_app_id,
+                                         cheapest_listing_hashes=cheapest_listing_hashes,
+                                         enforced_app_ids_to_process=listing_hashes_to_process)
+
+    return listing_hashes_with_unknown_goo_value
 
 
 def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
