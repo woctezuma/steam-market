@@ -389,8 +389,10 @@ def download_missing_goo_details(groups_by_app_id,
 
     # Final save
 
-    save_all_goo_details(all_goo_details,
-                         goo_details_file_name_for_for_foil_cards)
+    if query_count > 0:
+        print('Final save after {} queries.'.format(query_count))
+        save_all_goo_details(all_goo_details,
+                             goo_details_file_name_for_for_foil_cards)
 
     return all_goo_details
 
