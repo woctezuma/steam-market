@@ -378,25 +378,26 @@ def download_missing_goo_details(groups_by_app_id,
     app_ids_with_known_goo_details = [int(app_id)
                                       for app_id in all_goo_details.keys()]
 
+    app_ids_with_unknown_goo_details = set(groups_by_app_id).difference(app_ids_with_known_goo_details)
+
     query_count = 0
 
-    for app_id in groups_by_app_id:
+    for app_id in app_ids_with_unknown_goo_details:
 
-        if app_id not in app_ids_with_known_goo_details:
-            goo_value = download_goo_value_for_app_id(app_id=app_id,
-                                                      groups_by_app_id=groups_by_app_id,
-                                                      cheapest_listing_hashes=cheapest_listing_hashes,
-                                                      all_listing_details=all_listing_details,
-                                                      listing_details_output_file_name=listing_details_output_file_name,
-                                                      verbose=verbose)
-            query_count += 1
+        goo_value = download_goo_value_for_app_id(app_id=app_id,
+                                                  groups_by_app_id=groups_by_app_id,
+                                                  cheapest_listing_hashes=cheapest_listing_hashes,
+                                                  all_listing_details=all_listing_details,
+                                                  listing_details_output_file_name=listing_details_output_file_name,
+                                                  verbose=verbose)
+        query_count += 1
 
-            all_goo_details[app_id] = goo_value
+        all_goo_details[app_id] = goo_value
 
-            if query_count % num_queries_between_save == 0:
-                print('Saving after {} queries.'.format(query_count))
-                save_all_goo_details(all_goo_details,
-                                     goo_details_file_name_for_for_foil_cards)
+        if query_count % num_queries_between_save == 0:
+            print('Saving after {} queries.'.format(query_count))
+            save_all_goo_details(all_goo_details,
+                                 goo_details_file_name_for_for_foil_cards)
 
     # Final save
 
