@@ -12,6 +12,7 @@ import requests
 from market_gamble_detector import update_all_listings_for_foil_cards
 from market_listing import get_item_nameid_batch
 from market_listing import load_all_listing_details
+from market_listing import update_all_listing_details
 from market_search import load_all_listings
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
 from sack_of_gems import load_sack_of_gems_price
@@ -28,6 +29,8 @@ def get_steam_goo_value_url():
 
 
 def get_item_type_no_for_trading_cards(listing_hash=None,
+                                       all_listing_details=None,
+                                       listing_details_output_file_name=None,
                                        verbose=True):
     # Caveat: the item type is not always equal to 2. Check appID 232770 (POSTAL) for example!
     # Reference: https://gaming.stackexchange.com/a/351941
@@ -59,7 +62,33 @@ def get_item_type_no_for_trading_cards(listing_hash=None,
             ))
 
     else:
-        item_type_no = None  # TODO not always equal to 2! CHANGE THIS
+        if listing_details_output_file_name is None:
+            listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+
+        if all_listing_details is None:
+            all_listing_details = load_all_listing_details(
+                listing_details_output_file_name=listing_details_output_file_name)
+
+        try:
+            listing_details = all_listing_details[listing_hash]
+        except KeyError:
+            # Caveat: the code below is not the intended way to find item types, because we do not take into account
+            #         rate limits! This is okay for one listing hash, but this would be an issue for many of them!
+            #
+            #         Ideally, you should have called update_all_listing_details() with
+            #         the FULL list of listing hashes to be processed, stored in variable 'listing_hashes_to_process',
+            #         rather than with just ONE listing hash.
+            listing_hashes_to_process = [listing_hash]
+
+            if verbose:
+                print('A query is necessary to download listing details for {}.'.format(listing_hash))
+
+            updated_all_listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
+                                                                     listing_details_output_file_name=listing_details_output_file_name)
+
+            listing_details = updated_all_listing_details[listing_hash]
+
+        item_type_no = listing_details['item_type_no']
 
         if verbose:
             print('Retrieving item type {} for {}.'.format(
