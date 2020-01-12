@@ -341,9 +341,13 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
     # Load the price of a sack of 1000 gems
-    sack_of_gems_price_in_euros = load_sack_of_gems_price(
-        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
-        verbose=verbose)
+
+    if enforced_sack_of_gems_price is None:
+        sack_of_gems_price_in_euros = load_sack_of_gems_price(
+            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+            verbose=verbose)
+    else:
+        sack_of_gems_price_in_euros = enforced_sack_of_gems_price
 
     # Fetch goo values
 
