@@ -195,6 +195,12 @@ python market_gamble_detector.py
 python batch_create_packs.py
 ```
 
+-   To find market arbitrages with foil cards, e.g. buy a foil card to turn it into more gems than its cost, run:
+
+```bash
+python market_arbitrage_with_foil_cards.py
+```
+
 ## Results
 
 The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
