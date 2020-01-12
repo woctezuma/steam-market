@@ -234,6 +234,23 @@ def find_cheapest_listing_hashes(all_listings,
     return cheapest_listing_hashes
 
 
+def find_representative_listing_hashes(groups_by_app_id):
+    representative_listing_hashes = []
+
+    for app_id in groups_by_app_id:
+        listing_hashes = groups_by_app_id[app_id]
+
+        # Sort with respect to lexicographical order.
+
+        sorted_listing_hashes = sorted(listing_hashes)
+
+        representative_listing_hash = sorted_listing_hashes[0]
+
+        representative_listing_hashes.append(representative_listing_hash)
+
+    return representative_listing_hashes
+
+
 def filter_listings_with_arbitrary_price_threshold(all_listings,
                                                    listing_hashes_to_filter_from,
                                                    price_threshold_in_cents=None,
@@ -351,6 +368,10 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     cheapest_listing_hashes = find_cheapest_listing_hashes(all_listings,
                                                            groups_by_app_id)
+
+    # Find the representative listing in each group
+
+    representative_listing_hashes = find_representative_listing_hashes(groups_by_app_id)
 
     # Filter listings with an arbitrary price threshold
     # NB: This is only useful to speed up the pre-retrieval below, by focusing on the most interesting listings.
