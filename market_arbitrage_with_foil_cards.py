@@ -300,6 +300,31 @@ def update_all_goo_details(new_goo_details,
     return
 
 
+def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(filtered_cheapest_listing_hashes,
+                                                                          goo_details_file_name_for_for_foil_cards=None,
+                                                                          verbose=True):
+    # Filter out listings associated with an appID for which we already know the goo details.
+
+    if goo_details_file_name_for_for_foil_cards is None:
+        goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
+
+    previously_downloaded_all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards,
+                                                                 verbose=verbose)
+
+    app_ids_with_previously_downloaded_goo_details = [
+        int(app_id)
+        for app_id in previously_downloaded_all_goo_details
+    ]
+
+    filtered_cheapest_listing_hashes = [
+        listing_hash
+        for listing_hash in filtered_cheapest_listing_hashes
+        if convert_listing_hash_to_app_id(listing_hash) not in app_ids_with_previously_downloaded_goo_details
+    ]
+
+    return filtered_cheapest_listing_hashes
+
+
 def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                   filter_out_empty_listings=True,
                                   price_threshold_in_cents_for_a_foil_card=None,
@@ -308,6 +333,7 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                   verbose=True):
     listing_output_file_name = get_listing_output_file_name_for_foil_cards()
     listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+    goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
 
     # Fetch all the listings of foil cards
 
@@ -335,6 +361,13 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
         price_threshold_in_cents=price_threshold_in_cents_for_a_foil_card,
         verbose=verbose)
 
+    # Filter out listings associated with an appID for which we already know the goo details.
+
+    filtered_cheapest_listing_hashes = filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
+        filtered_cheapest_listing_hashes,
+        goo_details_file_name_for_for_foil_cards=goo_details_file_name_for_for_foil_cards,
+        verbose=verbose)
+
     # Pre-retrieval of item name ids (and item types at the same time)
 
     item_nameids = get_item_nameid_batch(filtered_cheapest_listing_hashes,
@@ -352,8 +385,6 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
     # Fetch goo values
 
     all_listing_details = load_all_listing_details(listing_details_output_file_name=listing_details_output_file_name)
-
-    goo_details_file_name_for_for_foil_cards = get_goo_details_file_nam_for_for_foil_cards()
 
     all_goo_details = download_missing_goo_details(groups_by_app_id=groups_by_app_id,
                                                    cheapest_listing_hashes=cheapest_listing_hashes,
