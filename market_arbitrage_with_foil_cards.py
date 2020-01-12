@@ -300,11 +300,12 @@ def update_all_goo_details(new_goo_details,
     return
 
 
-def main(retrieve_listings_from_scratch=False,
-         filter_out_empty_listings=True,
-         price_threshold_in_cents_for_a_foil_card=None,
-         retrieve_gem_price_from_scratch=False,
-         verbose=True):
+def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
+                                  filter_out_empty_listings=True,
+                                  price_threshold_in_cents_for_a_foil_card=None,
+                                  retrieve_gem_price_from_scratch=False,
+                                  enforced_sack_of_gems_price=None,  # price in euros
+                                  verbose=True):
     listing_output_file_name = get_listing_output_file_name_for_foil_cards()
     listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
 
@@ -690,6 +691,24 @@ def download_goo_value_for_app_id(app_id,
                                 verbose=verbose)
 
     return goo_value
+
+
+def main():
+    retrieve_listings_from_scratch = False
+    filter_out_empty_listings = True
+    price_threshold_in_cents_for_a_foil_card = None
+    retrieve_gem_price_from_scratch = False
+    enforced_sack_of_gems_price = None  # price in euros
+    verbose = True
+
+    apply_workflow_for_foil_cards(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+                                  filter_out_empty_listings=filter_out_empty_listings,
+                                  price_threshold_in_cents_for_a_foil_card=price_threshold_in_cents_for_a_foil_card,
+                                  retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+                                  enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                                  verbose=verbose)
+
+    return True
 
 
 if __name__ == '__main__':
