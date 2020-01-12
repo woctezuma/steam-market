@@ -391,6 +391,8 @@ def main(retrieve_listings_from_scratch=False,
                                                                            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
                                                                            verbose=verbose)
 
+    print_arbitrages_for_foil_cards(arbitrages)
+
     return True
 
 
@@ -465,10 +467,6 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_h
 
     sack_of_gems_price_in_cents = 100 * sack_of_gems_price_in_euros
 
-    print('# Results for arbitrages with foil cards')
-
-    bullet_point = '*   '
-
     arbitrages = dict()
 
     for listing_hash in cheapest_listing_hashes:
@@ -506,19 +504,40 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_h
         is_arbitrage = bool(profit_in_cents > 0)
 
         if is_arbitrage:
-            arbitrages[listing_hash] = profit_in_cents
+            arbitrage = dict()
+            arbitrage['profit'] = profit_in_cents / 100
+            arbitrage['ask'] = ask_in_cents / 100
+            arbitrage['goo_amount'] = goo_value_in_gems
+            arbitrage['goo_value'] = goo_value_in_cents / 100
 
-            print(
-                '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€)'.format(
-                    bullet_point,
-                    profit_in_cents / 100,
-                    listing_hash,
-                    ask_in_cents / 100,
-                    goo_value_in_gems,
-                    goo_value_in_cents / 100,
-                ))
+            arbitrages[listing_hash] = arbitrage
 
     return arbitrages
+
+
+def print_arbitrages_for_foil_cards(arbitrages):
+    bullet_point = '*   '
+
+    sorted_arbitrages = sorted(arbitrages.keys(),
+                               key=lambda x: arbitrages[x]['profit'],
+                               reverse=True)
+
+    print('# Results for arbitrages with foil cards')
+
+    for listing_hash in sorted_arbitrages:
+        arbitrage = arbitrages[listing_hash]
+
+        print(
+            '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€)'.format(
+                bullet_point,
+                arbitrage['profit'],
+                listing_hash,
+                arbitrage['ask'],
+                arbitrage['goo_amount'],
+                arbitrage['goo_value'],
+            ))
+
+    return
 
 
 def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
