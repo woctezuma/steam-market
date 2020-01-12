@@ -385,6 +385,21 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                                                                        try_again_to_find_goo_value=try_again_to_find_goo_value,
                                                                                        verbose=verbose)
 
+    # Solely for information purpose, count the number of potentially rewarding appIDs.
+    #
+    # NB: this information is not used, but one could imagine only retrieving the ask price of potentially rewarding
+    #     appIDs, so that time is not lost retrieving the ask price of necessarily unrewarding appIDs.
+    #     Indeed, this could halve the number of queries, e.g. as of January 2020, there are:
+    #     - 8872 appIDs in total,
+    #     - out of which 4213 to 4257 are potentially rewarding appIDs, so 47% - 48% of the appIDs.
+
+    potentially_rewarding_app_ids = discard_necessarily_unrewarding_app_ids(all_goo_details,
+                                                                            listing_hashes_with_unknown_item_types=listing_hashes_with_unknown_item_types,
+                                                                            listing_hashes_with_unknown_goo_value=listing_hashes_with_unknown_goo_value,
+                                                                            sack_of_gems_price_in_euros=sack_of_gems_price_in_euros,
+                                                                            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+                                                                            verbose=verbose)
+
     # Find market arbitrages
 
     arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
@@ -399,6 +414,88 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
     print_arbitrages_for_foil_cards(arbitrages)
 
     return True
+
+
+def get_minimal_ask_price_in_euros_on_steam_market():
+    minimal_ask_price_on_steam_market = 0.03  # in euros
+
+    return minimal_ask_price_on_steam_market
+
+
+def compute_unrewarding_threshold_in_gems(sack_of_gems_price_in_euros=None,
+                                          retrieve_gem_price_from_scratch=False,
+                                          verbose=True):
+    # The minimal price of a card is 0.03€. A sack of 1000 gems can be bought from the Steam Market at the 'ask' price.
+    #
+    # Therefore, we can safely discard appIDs for which the cards are unrewarding, i.e. cards would be turned into fewer
+    # gems than: get_minimal_ask_price_on_steam_market() * get_num_gems_per_sack_of_gems() / load_sack_of_gems_price().
+    #
+    # For instance, if a sack of 1000 gems costs 0.30€, then a card is unrewarding if it cannot be turned into more than
+    # 0.03*1000/0.30 = 100 gems.
+
+    if sack_of_gems_price_in_euros is None:
+        # Load the price of a sack of 1000 gems
+        sack_of_gems_price_in_euros = load_sack_of_gems_price(
+            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+            verbose=verbose)
+
+    num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
+
+    minimal_ask = get_minimal_ask_price_in_euros_on_steam_market()
+
+    unrewarding_threshold_in_gems = minimal_ask * num_gems_per_sack_of_gems / sack_of_gems_price_in_euros
+
+    return unrewarding_threshold_in_gems
+
+
+def discard_necessarily_unrewarding_app_ids(all_goo_details,
+                                            listing_hashes_with_unknown_item_types=None,
+                                            listing_hashes_with_unknown_goo_value=None,
+                                            sack_of_gems_price_in_euros=None,
+                                            retrieve_gem_price_from_scratch=False,
+                                            verbose=True):
+    if listing_hashes_with_unknown_item_types is None:
+        listing_hashes_with_unknown_item_types = []
+
+    if listing_hashes_with_unknown_goo_value is None:
+        listing_hashes_with_unknown_goo_value = []
+
+    listing_hashes_to_omit = listing_hashes_with_unknown_item_types + listing_hashes_with_unknown_goo_value
+
+    app_ids_to_omit = [
+        convert_listing_hash_to_app_id(listing_hash)
+        for listing_hash in listing_hashes_to_omit
+    ]
+
+    unrewarding_threshold_in_gems = compute_unrewarding_threshold_in_gems(
+        sack_of_gems_price_in_euros=sack_of_gems_price_in_euros,
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+        verbose=verbose)
+
+    potentially_rewarding_app_ids = []
+
+    for app_id in all_goo_details:
+        goo_value_in_gems = all_goo_details[app_id]
+
+        app_id_as_int = int(app_id)
+
+        if app_id_as_int in app_ids_to_omit:
+            continue
+
+        if goo_value_in_gems is None:
+            continue
+
+        if goo_value_in_gems >= unrewarding_threshold_in_gems:
+            potentially_rewarding_app_ids.append(app_id_as_int)
+
+    potentially_rewarding_app_ids = sorted(potentially_rewarding_app_ids)
+
+    if verbose:
+        print('There are {} potentially rewarding appIDs.'.format(
+            len(potentially_rewarding_app_ids),
+        ))
+
+    return potentially_rewarding_app_ids
 
 
 def find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
