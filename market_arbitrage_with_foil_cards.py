@@ -369,7 +369,9 @@ def main(retrieve_listings_from_scratch=False,
         try_again_to_find_item_type=try_again_to_find_item_type,
         verbose=verbose)
 
-    try_again_to_find_goo_value = True
+    # List unknown goo values
+
+    try_again_to_find_goo_value = False
 
     listing_hashes_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
                                                                                        listing_hashes_with_unknown_item_types,
@@ -377,6 +379,8 @@ def main(retrieve_listings_from_scratch=False,
                                                                                        groups_by_app_id=groups_by_app_id,
                                                                                        try_again_to_find_goo_value=try_again_to_find_goo_value,
                                                                                        verbose=verbose)
+
+    # Find market arbitrages
 
     arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
                                                                            listing_hashes_with_unknown_item_types,
