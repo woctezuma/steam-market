@@ -355,6 +355,22 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(filter
     return filtered_cheapest_listing_hashes
 
 
+def propagate_filter_to_representative_listing_hashes(listing_hashes_to_propagate_to,
+                                                      listing_hashes_to_propagate_from):
+    filtered_app_ids_based_on_price_threshold = [
+        convert_listing_hash_to_app_id(listing_hash)
+        for listing_hash in listing_hashes_to_propagate_from
+    ]
+
+    filtered_representative_listing_hashes = [
+        listing_hash
+        for listing_hash in listing_hashes_to_propagate_to
+        if convert_listing_hash_to_app_id(listing_hash) in filtered_app_ids_based_on_price_threshold
+    ]
+
+    return filtered_representative_listing_hashes
+
+
 def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                   filter_out_empty_listings=True,
                                   price_threshold_in_cents_for_a_foil_card=None,
@@ -399,16 +415,21 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
         price_threshold_in_cents=price_threshold_in_cents_for_a_foil_card,
         verbose=verbose)
 
+    filtered_representative_listing_hashes = propagate_filter_to_representative_listing_hashes(
+        listing_hashes_to_propagate_to=representative_listing_hashes,
+        listing_hashes_to_propagate_from=filtered_cheapest_listing_hashes,
+    )
+
     # Filter out listings associated with an appID for which we already know the goo details.
 
-    filtered_cheapest_listing_hashes = filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
-        filtered_cheapest_listing_hashes,
+    filtered_representative_listing_hashes = filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
+        filtered_representative_listing_hashes,
         goo_details_file_name_for_for_foil_cards=goo_details_file_name_for_for_foil_cards,
         verbose=verbose)
 
     # Pre-retrieval of item name ids (and item types at the same time)
 
-    item_nameids = get_item_nameid_batch(filtered_cheapest_listing_hashes,
+    item_nameids = get_item_nameid_batch(filtered_representative_listing_hashes,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
     # Load the price of a sack of 1000 gems
