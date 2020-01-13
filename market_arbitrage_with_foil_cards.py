@@ -371,6 +371,37 @@ def propagate_filter_to_representative_listing_hashes(listing_hashes_to_propagat
     return filtered_representative_listing_hashes
 
 
+def try_again_to_download_item_type(app_ids_with_unreliable_goo_details,
+                                    filtered_representative_listing_hashes,
+                                    listing_details_output_file_name):
+    listing_hashes_to_process = [
+        listing_hash
+        for listing_hash in filtered_representative_listing_hashes
+        if convert_listing_hash_to_app_id(listing_hash) in app_ids_with_unreliable_goo_details
+    ]
+
+    updated_all_listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
+                                                             listing_details_output_file_name=listing_details_output_file_name)
+
+    return
+
+
+def try_again_to_download_goo_value(app_ids_with_unknown_goo_value,
+                                    filtered_representative_listing_hashes,
+                                    groups_by_app_id):
+    listing_hashes_to_process = [
+        listing_hash
+        for listing_hash in filtered_representative_listing_hashes
+        if convert_listing_hash_to_app_id(listing_hash) in app_ids_with_unknown_goo_value
+    ]
+
+    download_missing_goo_details(groups_by_app_id=groups_by_app_id,
+                                 listing_candidates=filtered_representative_listing_hashes,
+                                 enforced_app_ids_to_process=listing_hashes_to_process)
+
+    return
+
+
 def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                   filter_out_empty_listings=True,
                                   price_threshold_in_cents_for_a_foil_card=None,
@@ -454,6 +485,8 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     # List unknown item types
 
+    try_again_to_find_item_type = False
+
     app_ids_with_unreliable_goo_details = find_app_ids_with_unknown_item_type_for_their_representatives(
         groups_by_app_id=groups_by_app_id,
         listing_candidates=filtered_representative_listing_hashes,
@@ -461,13 +494,25 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
         listing_details_output_file_name=listing_details_output_file_name,
         verbose=verbose)
 
+    if try_again_to_find_item_type:
+        try_again_to_download_item_type(app_ids_with_unreliable_goo_details,
+                                        filtered_representative_listing_hashes,
+                                        listing_details_output_file_name)
+
     # List unknown goo values
+
+    try_again_to_find_goo_value = False
 
     app_ids_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(
         listing_candidates=filtered_representative_listing_hashes,
         app_ids_with_unreliable_goo_details=app_ids_with_unreliable_goo_details,
         all_goo_details=all_goo_details,
         verbose=verbose)
+
+    if try_again_to_find_goo_value:
+        try_again_to_download_goo_value(app_ids_with_unknown_goo_value,
+                                        filtered_representative_listing_hashes,
+                                        groups_by_app_id)
 
     # Solely for information purpose, count the number of potentially rewarding appIDs.
     #
