@@ -228,10 +228,21 @@ def find_cheapest_listing_hashes(all_listings,
     return cheapest_listing_hashes
 
 
-def find_representative_listing_hashes(groups_by_app_id):
+def find_representative_listing_hashes(groups_by_app_id,
+                                       dictionary_of_representative_listing_hashes=None):
     representative_listing_hashes = []
 
     for app_id in groups_by_app_id:
+
+        if dictionary_of_representative_listing_hashes is not None:
+            try:
+                # For retro-compatibility, we try to use representative for which we previously downloaded item name ids
+                previously_used_listing_hashes_for_app_id = dictionary_of_representative_listing_hashes[app_id]
+            except KeyError:
+                previously_used_listing_hashes_for_app_id = None
+        else:
+            previously_used_listing_hashes_for_app_id = None
+
         listing_hashes = groups_by_app_id[app_id]
 
         # Sort with respect to lexicographical order.
@@ -240,7 +251,12 @@ def find_representative_listing_hashes(groups_by_app_id):
 
         representative_listing_hash = sorted_listing_hashes[0]
 
-        representative_listing_hashes.append(representative_listing_hash)
+        if previously_used_listing_hashes_for_app_id is None or len(previously_used_listing_hashes_for_app_id) == 0:
+            # Append the first element found in groups_by_app_id, after sorting by lexicographical order:
+            representative_listing_hashes.append(representative_listing_hash)
+        else:
+            # Concatenate the list of elements previously used, i.e. for which we should already have the item name ids.
+            representative_listing_hashes += previously_used_listing_hashes_for_app_id
 
     return representative_listing_hashes
 
@@ -422,7 +438,12 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     # Find the representative listing in each group
 
-    representative_listing_hashes = find_representative_listing_hashes(groups_by_app_id)
+    # For retro-compatibility, we try to use representative for which we previously downloaded item name ids
+    dictionary_of_representative_listing_hashes = build_dictionary_of_representative_listing_hashes(
+        listing_details_output_file_name=listing_details_output_file_name)
+
+    representative_listing_hashes = find_representative_listing_hashes(groups_by_app_id,
+                                                                       dictionary_of_representative_listing_hashes)
 
     # List eligible listing hashes (positive ask volume, and positive ask price)
 
@@ -764,6 +785,9 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(groups_by_app_
                                                                   all_listing_details=None,
                                                                   listing_details_output_file_name=None,
                                                                   verbose=True):
+    dictionary_of_representative_listing_hashes = build_dictionary_of_representative_listing_hashes(all_listing_details,
+                                                                                                    listing_details_output_file_name)
+
     app_ids_with_unreliable_goo_details = []
 
     for app_id in groups_by_app_id:
@@ -771,7 +795,8 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(groups_by_app_
                                               groups_by_app_id=groups_by_app_id,
                                               listing_candidates=listing_candidates,
                                               all_listing_details=all_listing_details,
-                                              listing_details_output_file_name=listing_details_output_file_name)
+                                              listing_details_output_file_name=listing_details_output_file_name,
+                                              dictionary_of_representative_listing_hashes=dictionary_of_representative_listing_hashes)
         if item_type is None:
             app_id_as_int = int(app_id)
             app_ids_with_unreliable_goo_details.append(app_id_as_int)
@@ -800,6 +825,9 @@ def download_missing_goo_details(groups_by_app_id,
     if enforced_app_ids_to_process is None:
         enforced_app_ids_to_process = []
 
+    dictionary_of_representative_listing_hashes = build_dictionary_of_representative_listing_hashes(all_listing_details,
+                                                                                                    listing_details_output_file_name)
+
     all_goo_details = load_all_goo_details(goo_details_file_name_for_for_foil_cards,
                                            verbose=verbose)
 
@@ -825,6 +853,7 @@ def download_missing_goo_details(groups_by_app_id,
                                                   listing_candidates=listing_candidates,
                                                   all_listing_details=all_listing_details,
                                                   listing_details_output_file_name=listing_details_output_file_name,
+                                                  dictionary_of_representative_listing_hashes=dictionary_of_representative_listing_hashes,
                                                   verbose=verbose)
         query_count += 1
 
@@ -858,12 +887,27 @@ def find_cheapest_listing_hash_for_app_id(app_id,
 
 def find_representative_listing_hash_for_app_id(app_id,
                                                 groups_by_app_id,
-                                                listing_candidates=None):
+                                                listing_candidates=None,
+                                                dictionary_of_representative_listing_hashes=None):
     if listing_candidates is None:
-        listing_candidates = find_representative_listing_hashes(groups_by_app_id)
+        listing_candidates = find_representative_listing_hashes(groups_by_app_id,
+                                                                dictionary_of_representative_listing_hashes)
+
+    if dictionary_of_representative_listing_hashes is not None:
+        try:
+            # For retro-compatibility, we try to use representative for which we previously downloaded item name ids
+            previously_used_listing_hashes_for_app_id = dictionary_of_representative_listing_hashes[app_id]
+        except KeyError:
+            previously_used_listing_hashes_for_app_id = None
+    else:
+        previously_used_listing_hashes_for_app_id = None
 
     listing_hashes_for_app_id = groups_by_app_id[app_id]
     representative_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(listing_candidates)
+
+    if previously_used_listing_hashes_for_app_id is not None and len(previously_used_listing_hashes_for_app_id) > 0:
+        representative_listing_hash_for_app_id_as_a_set = representative_listing_hash_for_app_id_as_a_set.intersection(
+            previously_used_listing_hashes_for_app_id)
 
     # Sort with respect to lexicographical order.
     sorted_representative_listing_hash_for_app_id_as_list = sorted(representative_listing_hash_for_app_id_as_a_set)
@@ -877,7 +921,8 @@ def find_item_type_for_app_id(app_id,
                               groups_by_app_id,
                               listing_candidates,
                               all_listing_details=None,
-                              listing_details_output_file_name=None):
+                              listing_details_output_file_name=None,
+                              dictionary_of_representative_listing_hashes=None):
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
 
@@ -887,7 +932,8 @@ def find_item_type_for_app_id(app_id,
 
     representative_listing_hash_for_app_id = find_representative_listing_hash_for_app_id(app_id,
                                                                                          groups_by_app_id,
-                                                                                         listing_candidates)
+                                                                                         listing_candidates,
+                                                                                         dictionary_of_representative_listing_hashes)
 
     listing_details = all_listing_details[representative_listing_hash_for_app_id]
     item_type = listing_details['item_type_no']
@@ -900,18 +946,49 @@ def download_goo_value_for_app_id(app_id,
                                   listing_candidates,
                                   all_listing_details=None,
                                   listing_details_output_file_name=None,
+                                  dictionary_of_representative_listing_hashes=None,
                                   verbose=True):
     item_type = find_item_type_for_app_id(app_id,
                                           groups_by_app_id,
                                           listing_candidates,
                                           all_listing_details,
-                                          listing_details_output_file_name)
+                                          listing_details_output_file_name,
+                                          dictionary_of_representative_listing_hashes)
 
     goo_value = query_goo_value(app_id=app_id,
                                 item_type=item_type,
                                 verbose=verbose)
 
     return goo_value
+
+
+def build_dictionary_of_representative_listing_hashes(all_listing_details=None,
+                                                      listing_details_output_file_name=None):
+    if listing_details_output_file_name is None:
+        listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
+
+    if all_listing_details is None:
+        all_listing_details = load_all_listing_details(
+            listing_details_output_file_name=listing_details_output_file_name)
+
+    dictionary_of_representative_listing_hashes = dict()
+
+    for listing_hash in all_listing_details:
+        app_id = convert_listing_hash_to_app_id(listing_hash)
+
+        listing_details = all_listing_details[listing_hash]
+
+        try:
+            item_type_no = listing_details['item_type_no']
+        except KeyError:
+            continue
+
+        try:
+            dictionary_of_representative_listing_hashes[app_id].append(listing_hash)
+        except KeyError:
+            dictionary_of_representative_listing_hashes[app_id] = [listing_hash]
+
+    return dictionary_of_representative_listing_hashes
 
 
 def main():
