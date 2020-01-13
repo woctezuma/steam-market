@@ -251,6 +251,18 @@ def find_representative_listing_hashes(groups_by_app_id):
     return representative_listing_hashes
 
 
+def find_eligible_listing_hashes(all_listings):
+    # List eligible listing hashes (positive ask volume, and positive ask price)
+
+    eligible_listing_hashes = [listing_hash
+                               for listing_hash in all_listings
+                               if all_listings[listing_hash]['sell_listings'] > 0
+                               and all_listings[listing_hash]['sell_price'] > 0
+                               ]
+
+    return eligible_listing_hashes
+
+
 def filter_listings_with_arbitrary_price_threshold(all_listings,
                                                    listing_hashes_to_filter_from,
                                                    price_threshold_in_cents=None,
@@ -373,6 +385,10 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     representative_listing_hashes = find_representative_listing_hashes(groups_by_app_id)
 
+    # List eligible listing hashes (positive ask volume, and positive ask price)
+
+    eligible_listing_hashes = find_eligible_listing_hashes(all_listings)
+
     # Filter listings with an arbitrary price threshold
     # NB: This is only useful to speed up the pre-retrieval below, by focusing on the most interesting listings.
 
@@ -454,7 +470,7 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     # Find market arbitrages
 
-    arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
+    arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_hashes,
                                                                            listing_hashes_with_unknown_item_types,
                                                                            all_goo_details,
                                                                            all_listings=all_listings,
