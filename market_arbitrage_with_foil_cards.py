@@ -454,26 +454,19 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     # List unknown item types
 
-    try_again_to_find_item_type = False
-
-    listing_hashes_with_unknown_item_types = find_listing_hashes_with_unknown_item_types(
+    app_ids_with_unreliable_goo_details = find_app_ids_with_unknown_item_type_for_their_representatives(
         groups_by_app_id=groups_by_app_id,
         listing_candidates=filtered_representative_listing_hashes,
         all_listing_details=all_listing_details,
         listing_details_output_file_name=listing_details_output_file_name,
-        try_again_to_find_item_type=try_again_to_find_item_type,
         verbose=verbose)
 
     # List unknown goo values
 
-    try_again_to_find_goo_value = False
-
-    listing_hashes_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(
-        filtered_representative_listing_hashes,
-        listing_hashes_with_unknown_item_types,
-        all_goo_details,
-        groups_by_app_id=groups_by_app_id,
-        try_again_to_find_goo_value=try_again_to_find_goo_value,
+    app_ids_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(
+        listing_candidates=filtered_representative_listing_hashes,
+        app_ids_with_unreliable_goo_details=app_ids_with_unreliable_goo_details,
+        all_goo_details=all_goo_details,
         verbose=verbose)
 
     # Solely for information purpose, count the number of potentially rewarding appIDs.
@@ -484,9 +477,9 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
     #     - 8872 appIDs in total,
     #     - out of which 4213 to 4257 are potentially rewarding appIDs, so 47% - 48% of the appIDs.
 
-    potentially_rewarding_app_ids = discard_necessarily_unrewarding_app_ids(all_goo_details,
-                                                                            listing_hashes_with_unknown_item_types=listing_hashes_with_unknown_item_types,
-                                                                            listing_hashes_with_unknown_goo_value=listing_hashes_with_unknown_goo_value,
+    potentially_rewarding_app_ids = discard_necessarily_unrewarding_app_ids(all_goo_details=all_goo_details,
+                                                                            app_ids_with_unreliable_goo_details=app_ids_with_unreliable_goo_details,
+                                                                            app_ids_with_unknown_goo_value=app_ids_with_unknown_goo_value,
                                                                             sack_of_gems_price_in_euros=sack_of_gems_price_in_euros,
                                                                             retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
                                                                             verbose=verbose)
@@ -494,8 +487,9 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
     # Find market arbitrages
 
     arbitrages = determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_hashes,
-                                                                           listing_hashes_with_unknown_item_types,
-                                                                           all_goo_details,
+                                                                           all_goo_details=all_goo_details,
+                                                                           app_ids_with_unreliable_goo_details=app_ids_with_unreliable_goo_details,
+                                                                           app_ids_with_unknown_goo_value=app_ids_with_unknown_goo_value,
                                                                            all_listings=all_listings,
                                                                            listing_output_file_name=listing_output_file_name,
                                                                            sack_of_gems_price_in_euros=sack_of_gems_price_in_euros,
@@ -540,23 +534,18 @@ def compute_unrewarding_threshold_in_gems(sack_of_gems_price_in_euros=None,
 
 
 def discard_necessarily_unrewarding_app_ids(all_goo_details,
-                                            listing_hashes_with_unknown_item_types=None,
-                                            listing_hashes_with_unknown_goo_value=None,
+                                            app_ids_with_unreliable_goo_details=None,
+                                            app_ids_with_unknown_goo_value=None,
                                             sack_of_gems_price_in_euros=None,
                                             retrieve_gem_price_from_scratch=False,
                                             verbose=True):
-    if listing_hashes_with_unknown_item_types is None:
-        listing_hashes_with_unknown_item_types = []
+    if app_ids_with_unreliable_goo_details is None:
+        app_ids_with_unreliable_goo_details = []
 
-    if listing_hashes_with_unknown_goo_value is None:
-        listing_hashes_with_unknown_goo_value = []
+    if app_ids_with_unknown_goo_value is None:
+        app_ids_with_unknown_goo_value = []
 
-    listing_hashes_to_omit = listing_hashes_with_unknown_item_types + listing_hashes_with_unknown_goo_value
-
-    app_ids_to_omit = [
-        convert_listing_hash_to_app_id(listing_hash)
-        for listing_hash in listing_hashes_to_omit
-    ]
+    app_ids_to_omit = app_ids_with_unreliable_goo_details + app_ids_with_unknown_goo_value
 
     unrewarding_threshold_in_gems = compute_unrewarding_threshold_in_gems(
         sack_of_gems_price_in_euros=sack_of_gems_price_in_euros,
@@ -590,15 +579,10 @@ def discard_necessarily_unrewarding_app_ids(all_goo_details,
 
 
 def find_listing_hashes_with_unknown_goo_value(listing_candidates,
-                                               listing_hashes_with_unknown_item_types,
+                                               app_ids_with_unreliable_goo_details,
                                                all_goo_details,
-                                               groups_by_app_id,
-                                               try_again_to_find_goo_value=False,
                                                verbose=True):
-    app_ids_with_unreliable_goo_details = [convert_listing_hash_to_app_id(listing_hash)
-                                           for listing_hash in listing_hashes_with_unknown_item_types]
-
-    listing_hashes_with_unknown_goo_value = []
+    app_ids_with_unknown_goo_value = []
 
     for listing_hash in listing_candidates:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -609,32 +593,22 @@ def find_listing_hashes_with_unknown_goo_value(listing_candidates,
         goo_value_in_gems = all_goo_details[str(app_id)]
 
         if goo_value_in_gems is None:
-            listing_hashes_with_unknown_goo_value.append(listing_hash)
+            app_id_as_int = int(app_id)
+            app_ids_with_unknown_goo_value.append(app_id_as_int)
 
     if verbose:
-        print('Unknown goo values for:\n{}\nTotal: {} listing hashes with unknown goo value.'.format(
-            listing_hashes_with_unknown_goo_value,
-            len(listing_hashes_with_unknown_goo_value),
+        print('Unknown goo values for:\n{}\nTotal: {} appIDs with unknown goo value.'.format(
+            app_ids_with_unknown_goo_value,
+            len(app_ids_with_unknown_goo_value),
         ))
 
-    if try_again_to_find_goo_value:
-        listing_hashes_to_process = listing_hashes_with_unknown_goo_value
-
-        if verbose:
-            print('Trying again to find goo values for {} listing hashes.'.format(
-                len(listing_hashes_to_process),
-            ))
-
-            download_missing_goo_details(groups_by_app_id=groups_by_app_id,
-                                         listing_candidates=listing_candidates,
-                                         enforced_app_ids_to_process=listing_hashes_to_process)
-
-    return listing_hashes_with_unknown_goo_value
+    return app_ids_with_unknown_goo_value
 
 
-def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_hashes,
-                                                              listing_hashes_with_unknown_item_types,
+def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_hashes,
                                                               all_goo_details,
+                                                              app_ids_with_unreliable_goo_details=None,
+                                                              app_ids_with_unknown_goo_value=None,
                                                               all_listings=None,
                                                               listing_output_file_name=None,
                                                               sack_of_gems_price_in_euros=None,
@@ -653,8 +627,11 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_h
         all_listings = load_all_listings(
             listing_output_file_name=listing_output_file_name)
 
-    app_ids_with_unreliable_goo_details = [convert_listing_hash_to_app_id(listing_hash)
-                                           for listing_hash in listing_hashes_with_unknown_item_types]
+    if app_ids_with_unreliable_goo_details is None:
+        app_ids_with_unreliable_goo_details = []
+
+    if app_ids_with_unknown_goo_value is None:
+        app_ids_with_unknown_goo_value = []
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
@@ -662,7 +639,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_h
 
     arbitrages = dict()
 
-    for listing_hash in cheapest_listing_hashes:
+    for listing_hash in eligible_listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
         if app_id in app_ids_with_unreliable_goo_details:
@@ -673,7 +650,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(cheapest_listing_h
 
         goo_value_in_gems = all_goo_details[str(app_id)]
 
-        if goo_value_in_gems is None:
+        if app_id in app_ids_with_unknown_goo_value or goo_value_in_gems is None:
             # NB: This is when the goo value is unknown, despite a correct item type n° used to download goo details.
             if verbose:
                 print('[?]\tUnknown goo value for {}'.format(listing_hash))
@@ -746,45 +723,31 @@ def print_arbitrages_for_foil_cards(arbitrages):
     return
 
 
-def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
-                                                listing_candidates,
-                                                all_listing_details=None,
-                                                listing_details_output_file_name=None,
-                                                try_again_to_find_item_type=False,
-                                                verbose=True):
-    listing_hashes_with_unknown_item_types = []
+def find_app_ids_with_unknown_item_type_for_their_representatives(groups_by_app_id,
+                                                                  listing_candidates,
+                                                                  all_listing_details=None,
+                                                                  listing_details_output_file_name=None,
+                                                                  verbose=True):
+    app_ids_with_unreliable_goo_details = []
 
     for app_id in groups_by_app_id:
-        representative_listing_hash_for_app_id = find_representative_listing_hash_for_app_id(app_id,
-                                                                                             groups_by_app_id,
-                                                                                             listing_candidates)
-
         item_type = find_item_type_for_app_id(app_id,
                                               groups_by_app_id=groups_by_app_id,
                                               listing_candidates=listing_candidates,
                                               all_listing_details=all_listing_details,
                                               listing_details_output_file_name=listing_details_output_file_name)
         if item_type is None:
-            listing_hashes_with_unknown_item_types.append(representative_listing_hash_for_app_id)
+            app_id_as_int = int(app_id)
+            app_ids_with_unreliable_goo_details.append(app_id_as_int)
 
     if verbose:
-        print('Unknown item types for:\n{}\nTotal: {} listing hashes with unknown item types.'.format(
-            listing_hashes_with_unknown_item_types,
-            len(listing_hashes_with_unknown_item_types),
-        ))
-
-    if try_again_to_find_item_type:
-        listing_hashes_to_process = listing_hashes_with_unknown_item_types
-
-        if verbose:
-            print('Trying again to find item types for {} listing hashes.'.format(
-                len(listing_hashes_to_process),
+        print(
+            'Unknown item types for:\n{}\nTotal: {} appIDs with unknown item type for their representative listing hashes.'.format(
+                app_ids_with_unreliable_goo_details,
+                len(app_ids_with_unreliable_goo_details),
             ))
 
-            updated_all_listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
-                                                                     listing_details_output_file_name=listing_details_output_file_name)
-
-    return listing_hashes_with_unknown_item_types
+    return app_ids_with_unreliable_goo_details
 
 
 def download_missing_goo_details(groups_by_app_id,
