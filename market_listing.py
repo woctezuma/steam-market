@@ -14,7 +14,8 @@ from utils import get_listing_details_output_file_name
 def get_steam_market_listing_url(app_id=None,
                                  listing_hash=None,
                                  render_as_json=True,
-                                 replace_spaces=False):
+                                 replace_spaces=False,
+                                 replace_parenthesis=False):
     if app_id is None:
         # AppID for the Steam Store. It is the same for all the booster packs.
         app_id = 753
@@ -28,6 +29,12 @@ def get_steam_market_listing_url(app_id=None,
     if replace_spaces:
         # For Markdown compatibility, replaces the spaces from the str to be used in hyperlinks:
         fixed_listing_hash = fixed_listing_hash.replace(' ', '%20')
+
+    if replace_parenthesis:
+        # To fix links in PyCharm's display to listings of **foil** cards, which have '(Foil)' at the end of the url
+        # ASCII Encoding Reference: https://www.w3schools.com/tags/ref_urlencode.ASP
+        fixed_listing_hash = fixed_listing_hash.replace('(', '%28')
+        fixed_listing_hash = fixed_listing_hash.replace(')', '%29')
 
     market_listing_url = 'https://steamcommunity.com/market/listings/' + str(app_id) + '/' + fixed_listing_hash + '/'
 

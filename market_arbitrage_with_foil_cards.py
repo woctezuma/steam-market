@@ -11,6 +11,7 @@ import requests
 
 from market_gamble_detector import update_all_listings_for_foil_cards
 from market_listing import get_item_nameid_batch
+from market_listing import get_steam_market_listing_url
 from market_listing import load_all_listing_details
 from market_listing import update_all_listing_details
 from market_search import load_all_listings
@@ -696,13 +697,24 @@ def print_arbitrages_for_foil_cards(arbitrages):
 
     for listing_hash in sorted_arbitrages:
         arbitrage = arbitrages[listing_hash]
+
+        markdown_compatible_steam_market_url = get_steam_market_listing_url(listing_hash=listing_hash,
+                                                                            render_as_json=False,
+                                                                            replace_spaces=True,
+                                                                            replace_parenthesis=True)
+
+        listing_hash_formatted_for_markdown = '[{}]({})'.format(
+            listing_hash,
+            markdown_compatible_steam_market_url,
+        )
+
         equivalent_price_for_sack_of_gems = arbitrage['ask'] / arbitrage['goo_amount'] * get_num_gems_per_sack_of_gems()
 
         print(
             '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€) | ~ {:.3f}€ per gem sack'.format(
                 bullet_point,
                 arbitrage['profit'],
-                listing_hash,
+                listing_hash_formatted_for_markdown,
                 arbitrage['ask'],
                 arbitrage['goo_amount'],
                 arbitrage['goo_value'],
