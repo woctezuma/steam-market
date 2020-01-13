@@ -189,17 +189,10 @@ def get_listings_for_foil_cards(retrieve_listings_from_scratch,
 
 
 def group_listing_hashes_by_app_id(all_listings,
-                                   filter_out_empty_listings=True,
                                    verbose=True):
     groups_by_app_id = dict()
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
-
-        if filter_out_empty_listings:
-            volume = all_listings[listing_hash]['sell_listings']
-
-            if volume == 0:
-                continue
 
         try:
             groups_by_app_id[app_id].append(listing_hash)
@@ -403,7 +396,6 @@ def try_again_to_download_goo_value(app_ids_with_unknown_goo_value,
 
 
 def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
-                                  filter_out_empty_listings=True,
                                   price_threshold_in_cents_for_a_foil_card=None,
                                   retrieve_gem_price_from_scratch=False,
                                   enforced_sack_of_gems_price=None,  # price in euros
@@ -421,7 +413,6 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
     # Group listings by appID
 
     groups_by_app_id = group_listing_hashes_by_app_id(all_listings,
-                                                      filter_out_empty_listings=filter_out_empty_listings,
                                                       verbose=verbose)
 
     # Find the cheapest listing in each group
@@ -925,14 +916,12 @@ def download_goo_value_for_app_id(app_id,
 
 def main():
     retrieve_listings_from_scratch = False
-    filter_out_empty_listings = True
     price_threshold_in_cents_for_a_foil_card = None
     retrieve_gem_price_from_scratch = False
     enforced_sack_of_gems_price = None  # price in euros
     verbose = True
 
     apply_workflow_for_foil_cards(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-                                  filter_out_empty_listings=filter_out_empty_listings,
                                   price_threshold_in_cents_for_a_foil_card=price_threshold_in_cents_for_a_foil_card,
                                   retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
                                   enforced_sack_of_gems_price=enforced_sack_of_gems_price,
