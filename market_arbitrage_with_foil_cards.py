@@ -422,14 +422,14 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     # Filter out listings associated with an appID for which we already know the goo details.
 
-    filtered_representative_listing_hashes = filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
+    filtered_representative_listing_hashes_with_missing_goo_details = filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
         filtered_representative_listing_hashes,
         goo_details_file_name_for_for_foil_cards=goo_details_file_name_for_for_foil_cards,
         verbose=verbose)
 
     # Pre-retrieval of item name ids (and item types at the same time)
 
-    item_nameids = get_item_nameid_batch(filtered_representative_listing_hashes,
+    item_nameids = get_item_nameid_batch(filtered_representative_listing_hashes_with_missing_goo_details,
                                          listing_details_output_file_name=listing_details_output_file_name)
 
     # Load the price of a sack of 1000 gems
@@ -446,7 +446,7 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
     all_listing_details = load_all_listing_details(listing_details_output_file_name=listing_details_output_file_name)
 
     all_goo_details = download_missing_goo_details(groups_by_app_id=groups_by_app_id,
-                                                   cheapest_listing_hashes=cheapest_listing_hashes,
+                                                   listing_candidates=filtered_representative_listing_hashes_with_missing_goo_details,
                                                    all_listing_details=all_listing_details,
                                                    listing_details_output_file_name=listing_details_output_file_name,
                                                    goo_details_file_name_for_for_foil_cards=goo_details_file_name_for_for_foil_cards,
@@ -458,7 +458,7 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     listing_hashes_with_unknown_item_types = find_listing_hashes_with_unknown_item_types(
         groups_by_app_id=groups_by_app_id,
-        cheapest_listing_hashes=cheapest_listing_hashes,
+        listing_candidates=filtered_representative_listing_hashes,
         all_listing_details=all_listing_details,
         listing_details_output_file_name=listing_details_output_file_name,
         try_again_to_find_item_type=try_again_to_find_item_type,
@@ -468,12 +468,13 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
 
     try_again_to_find_goo_value = False
 
-    listing_hashes_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
-                                                                                       listing_hashes_with_unknown_item_types,
-                                                                                       all_goo_details,
-                                                                                       groups_by_app_id=groups_by_app_id,
-                                                                                       try_again_to_find_goo_value=try_again_to_find_goo_value,
-                                                                                       verbose=verbose)
+    listing_hashes_with_unknown_goo_value = find_listing_hashes_with_unknown_goo_value(
+        filtered_representative_listing_hashes,
+        listing_hashes_with_unknown_item_types,
+        all_goo_details,
+        groups_by_app_id=groups_by_app_id,
+        try_again_to_find_goo_value=try_again_to_find_goo_value,
+        verbose=verbose)
 
     # Solely for information purpose, count the number of potentially rewarding appIDs.
     #
@@ -588,7 +589,7 @@ def discard_necessarily_unrewarding_app_ids(all_goo_details,
     return potentially_rewarding_app_ids
 
 
-def find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
+def find_listing_hashes_with_unknown_goo_value(listing_candidates,
                                                listing_hashes_with_unknown_item_types,
                                                all_goo_details,
                                                groups_by_app_id,
@@ -599,7 +600,7 @@ def find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
 
     listing_hashes_with_unknown_goo_value = []
 
-    for listing_hash in cheapest_listing_hashes:
+    for listing_hash in listing_candidates:
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
         if app_id in app_ids_with_unreliable_goo_details:
@@ -625,7 +626,7 @@ def find_listing_hashes_with_unknown_goo_value(cheapest_listing_hashes,
             ))
 
             download_missing_goo_details(groups_by_app_id=groups_by_app_id,
-                                         cheapest_listing_hashes=cheapest_listing_hashes,
+                                         listing_candidates=listing_candidates,
                                          enforced_app_ids_to_process=listing_hashes_to_process)
 
     return listing_hashes_with_unknown_goo_value
@@ -746,7 +747,7 @@ def print_arbitrages_for_foil_cards(arbitrages):
 
 
 def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
-                                                cheapest_listing_hashes,
+                                                listing_candidates,
                                                 all_listing_details=None,
                                                 listing_details_output_file_name=None,
                                                 try_again_to_find_item_type=False,
@@ -754,17 +755,17 @@ def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
     listing_hashes_with_unknown_item_types = []
 
     for app_id in groups_by_app_id:
-        cheapest_listing_hash_for_app_id = find_cheapest_listing_hash_for_app_id(app_id,
-                                                                                 groups_by_app_id=groups_by_app_id,
-                                                                                 cheapest_listing_hashes=cheapest_listing_hashes)
+        representative_listing_hash_for_app_id = find_representative_listing_hash_for_app_id(app_id,
+                                                                                             groups_by_app_id,
+                                                                                             listing_candidates)
 
         item_type = find_item_type_for_app_id(app_id,
                                               groups_by_app_id=groups_by_app_id,
-                                              cheapest_listing_hashes=cheapest_listing_hashes,
+                                              listing_candidates=listing_candidates,
                                               all_listing_details=all_listing_details,
                                               listing_details_output_file_name=listing_details_output_file_name)
         if item_type is None:
-            listing_hashes_with_unknown_item_types.append(cheapest_listing_hash_for_app_id)
+            listing_hashes_with_unknown_item_types.append(representative_listing_hash_for_app_id)
 
     if verbose:
         print('Unknown item types for:\n{}\nTotal: {} listing hashes with unknown item types.'.format(
@@ -787,7 +788,7 @@ def find_listing_hashes_with_unknown_item_types(groups_by_app_id,
 
 
 def download_missing_goo_details(groups_by_app_id,
-                                 cheapest_listing_hashes,
+                                 listing_candidates,
                                  all_listing_details=None,
                                  listing_details_output_file_name=None,
                                  goo_details_file_name_for_for_foil_cards=None,
@@ -822,7 +823,7 @@ def download_missing_goo_details(groups_by_app_id,
 
         goo_value = download_goo_value_for_app_id(app_id=app_id,
                                                   groups_by_app_id=groups_by_app_id,
-                                                  cheapest_listing_hashes=cheapest_listing_hashes,
+                                                  listing_candidates=listing_candidates,
                                                   all_listing_details=all_listing_details,
                                                   listing_details_output_file_name=listing_details_output_file_name,
                                                   verbose=verbose)
@@ -856,9 +857,26 @@ def find_cheapest_listing_hash_for_app_id(app_id,
     return cheapest_listing_hash_for_app_id
 
 
+def find_representative_listing_hash_for_app_id(app_id,
+                                                groups_by_app_id,
+                                                listing_candidates=None):
+    if listing_candidates is None:
+        listing_candidates = find_representative_listing_hashes(groups_by_app_id)
+
+    listing_hashes_for_app_id = groups_by_app_id[app_id]
+    representative_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(listing_candidates)
+
+    # Sort with respect to lexicographical order.
+    sorted_representative_listing_hash_for_app_id_as_list = sorted(representative_listing_hash_for_app_id_as_a_set)
+
+    representative_listing_hash_for_app_id = list(sorted_representative_listing_hash_for_app_id_as_list)[0]
+
+    return representative_listing_hash_for_app_id
+
+
 def find_item_type_for_app_id(app_id,
                               groups_by_app_id,
-                              cheapest_listing_hashes,
+                              listing_candidates,
                               all_listing_details=None,
                               listing_details_output_file_name=None):
     if listing_details_output_file_name is None:
@@ -868,11 +886,11 @@ def find_item_type_for_app_id(app_id,
         all_listing_details = load_all_listing_details(
             listing_details_output_file_name=listing_details_output_file_name)
 
-    cheapest_listing_hash_for_app_id = find_cheapest_listing_hash_for_app_id(app_id,
-                                                                             groups_by_app_id,
-                                                                             cheapest_listing_hashes)
+    representative_listing_hash_for_app_id = find_representative_listing_hash_for_app_id(app_id,
+                                                                                         groups_by_app_id,
+                                                                                         listing_candidates)
 
-    listing_details = all_listing_details[cheapest_listing_hash_for_app_id]
+    listing_details = all_listing_details[representative_listing_hash_for_app_id]
     item_type = listing_details['item_type_no']
 
     return item_type
@@ -880,13 +898,13 @@ def find_item_type_for_app_id(app_id,
 
 def download_goo_value_for_app_id(app_id,
                                   groups_by_app_id,
-                                  cheapest_listing_hashes,
+                                  listing_candidates,
                                   all_listing_details=None,
                                   listing_details_output_file_name=None,
                                   verbose=True):
     item_type = find_item_type_for_app_id(app_id,
                                           groups_by_app_id,
-                                          cheapest_listing_hashes,
+                                          listing_candidates,
                                           all_listing_details,
                                           listing_details_output_file_name)
 
