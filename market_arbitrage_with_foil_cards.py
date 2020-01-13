@@ -683,7 +683,7 @@ def print_arbitrages_for_foil_cards(arbitrages):
         equivalent_price_for_sack_of_gems = arbitrage['ask'] / arbitrage['goo_amount'] * get_num_gems_per_sack_of_gems()
 
         print(
-            '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€) | ~ {:.2f}€ per gem sack'.format(
+            '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€) | ~ {:.3f}€ per gem sack'.format(
                 bullet_point,
                 arbitrage['profit'],
                 listing_hash,
