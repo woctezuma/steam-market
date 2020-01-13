@@ -201,6 +201,16 @@ python batch_create_packs.py
 python market_arbitrage_with_foil_cards.py
 ```
 
+**Caveat**: make sure to manually check the goo value of cards with a tool such as [this bookmarklet](https://gaming.stackexchange.com/a/351941).
+Indeed, if an arbitrage with foil cards looks too good to be true, it is likely that the goo value was bugged,
+because of a wrong item type.
+It can happen for instance if the goo value actually corresponds to emoticon or a profile background, and was then
+multiplied by 10 to get the value of the non-existent "foil" version of this emoticon or profile background.
+
+**Caveat²**: the bookmarklet linked above does not account for foil versions, so you should multiply by 10 the goo value
+if you are interested in foil cards. You can check by yourself that the bookmarklet returns the same goo values for 
+normal cards and for foil cards.
+
 ## Results
 
 The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
