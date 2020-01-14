@@ -992,9 +992,9 @@ def build_dictionary_of_representative_listing_hashes(all_listing_details=None,
 
 
 def main():
-    retrieve_listings_from_scratch = False
+    retrieve_listings_from_scratch = True
     price_threshold_in_cents_for_a_foil_card = None
-    retrieve_gem_price_from_scratch = False
+    retrieve_gem_price_from_scratch = True
     enforced_sack_of_gems_price = None  # price in euros
     verbose = True
 
