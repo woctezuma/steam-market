@@ -165,7 +165,10 @@ def get_all_listings(all_listings=None,
                 listings[listing_hash]['sell_price_text'] = listing['sell_price_text']
 
         else:
-            print('Wrong status code for start_index = {} after {} queries.'.format(start_index, query_count))
+            print('Wrong status code ({}) for start_index = {} after {} queries.'.format(status_code,
+                                                                                         start_index,
+                                                                                         query_count,
+                                                                                         ))
             break
 
         all_listings.update(listings)
