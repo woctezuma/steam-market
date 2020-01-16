@@ -7,6 +7,7 @@ from inventory_utils import create_then_sell_booster_packs_for_batch
 from market_listing import get_steam_market_listing_url
 from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
+from sack_of_gems import print_gem_price_reminder
 from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
 from utils import get_steam_store_url
@@ -384,6 +385,10 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 
     badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
                                              market_order_dict)
+
+    print('# Reminder of the gem price')
+    print_gem_price_reminder(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+                             minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
 
     print('# Results after *slow* update of market order data for *many potential* arbitrages')
     print_arbitrages(badge_arbitrages)
