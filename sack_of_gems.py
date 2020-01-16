@@ -102,8 +102,10 @@ def get_gem_price(enforced_sack_of_gems_price=None,
 
 
 def print_gem_price_reminder(enforced_sack_of_gems_price=None,
-                             minimum_allowed_sack_of_gems_price=None):
-    retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
+                             minimum_allowed_sack_of_gems_price=None,
+                             retrieve_gem_price_from_scratch=None):
+    if retrieve_gem_price_from_scratch is None:
+        retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
     gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                               minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,

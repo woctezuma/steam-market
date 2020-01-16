@@ -388,7 +388,12 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 
     print('# Reminder of the gem price')
     print_gem_price_reminder(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                             minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
+                             minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+                             retrieve_gem_price_from_scratch=False)
+    # NB: Here, we set 'retrieve_gem_price_from_scratch' to False, so that:
+    # - we ensure that the price displayed is equal to the price used for the computations of the arbitrages,
+    # - we avoid any issue with status codes, which could happen due to rate limits, after we downloaded the last batch
+    #   of market orders, because there was no cooldown at the end.
 
     print('# Results after *slow* update of market order data for *many potential* arbitrages')
     print_arbitrages(badge_arbitrages)
