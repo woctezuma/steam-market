@@ -635,6 +635,18 @@ def discard_necessarily_unrewarding_app_ids(all_goo_details,
     return potentially_rewarding_app_ids
 
 
+def safe_read_from_dict(input_dict,
+                        input_key):
+    input_key_as_str = str(input_key)
+
+    try:
+        value = input_dict[input_key_as_str]
+    except KeyError:
+        value = None
+
+    return value
+
+
 def find_listing_hashes_with_unknown_goo_value(listing_candidates,
                                                app_ids_with_unreliable_goo_details,
                                                all_goo_details,
@@ -647,7 +659,8 @@ def find_listing_hashes_with_unknown_goo_value(listing_candidates,
         if app_id in app_ids_with_unreliable_goo_details:
             continue
 
-        goo_value_in_gems = all_goo_details[str(app_id)]
+        goo_value_in_gems = safe_read_from_dict(input_dict=all_goo_details,
+                                                input_key=app_id)
 
         if goo_value_in_gems is None:
             app_id_as_int = int(app_id)
@@ -705,7 +718,8 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
                 print('[X]\tUnreliable goo details for {}'.format(listing_hash))
             continue
 
-        goo_value_in_gems = all_goo_details[str(app_id)]
+        goo_value_in_gems = safe_read_from_dict(input_dict=all_goo_details,
+                                                input_key=app_id)
 
         if app_id in app_ids_with_unknown_goo_value or goo_value_in_gems is None:
             # NB: This is when the goo value is unknown, despite a correct item type n° used to download goo details.
