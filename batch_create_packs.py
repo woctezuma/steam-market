@@ -7,21 +7,21 @@ from market_arbitrage import get_filtered_badge_data
 
 def get_manually_selected_app_ids():
     manually_selected_app_ids = [
-        318090,  # Dicetiny
-        523060,  # Planet Smasher
-        # 325120,  # Notch - The Innocent LunA: Eclipsed SinnerS
-        254880,  # Moonbase Commander
-        307050,  # Shan Gui
-        # 210170,  # Spirits
-        # 448720,  # Puzzle Box
-        434780,  # The Renegades of Orion 2.0
-        582350,  # Zombie Killin'
-        409070,  # Fist Slash: Of Ultimate Fury
-        270010,  # Time Rifters
-        554660,  # Puzzle Poker
-        398140,  # Ino
-        351090,  # Regency Solitaire
-        495230,  # Hypnorain
+        270010,  # Time Rifters (6 cards, 3 C, 1 UC, 1 R)
+        # 325120,  # Notch - The Innocent LunA: Eclipsed SinnerS (7 cards, 2 C, 5 UC, 2 R)
+        # 409070,  # Fist Slash: Of Ultimate Fury (6 cards, 3 C, 2 UC, 1R)
+        254880,  # MoonBase Commander (6 cards, 2 C, 1 UC, 1 R)
+        554660,  # Puzzle Poker (6 cards, 1 C, 1 UC, 1 R)
+        # 307050,  # Shan Gui (5 cards, 1 C, 2 UC, 2 R)
+        # 339000,  # Ukrainian Ninja (5 cards, 2 C, 3 UC, 1 R)
+        210170,  # Spirits (6 cards, 1 C, 1 UC, 1 R)
+        351090,  # Regency Solitaire (6 cards, 3 C, 1 UC, 1 R)
+        # 499950,  # Metal Assault - Gigaslave - Europe (6 cards, 1 C, 2 UC, 1 R)
+        # 272330,  # Shadow Blade: Reload (6 cards, 3 C, 1 UC, 1 R)
+        # 398140,  # Ino (5 cards, 1 C, 1 UC, 1 R)
+
+        395620,  # Ittle Dew 2+ (do not open it!)
+        522340,  # Ghostlords (8 cards, emoticons: 4C, 3 UC, 3R)
     ]
 
     return manually_selected_app_ids
