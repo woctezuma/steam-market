@@ -2,6 +2,7 @@ import unittest
 
 import batch_create_packs
 import creation_time_utils
+import drop_rate_estimates
 import market_arbitrage
 import market_listing
 import market_order
@@ -98,6 +99,12 @@ class TestBatchCreatePacksMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(batch_create_packs.main(is_a_simulation=True))
+
+
+class TestDropRateEstimatesMethods(unittest.TestCase):
+
+    def test_main(self):
+        self.assertTrue(drop_rate_estimates.main())
 
 
 if __name__ == '__main__':
