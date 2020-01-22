@@ -94,7 +94,7 @@ class TestTransactionFeeMethods(unittest.TestCase):
         self.assertTrue(transaction_fee.main())
 
 
-class TestBatchCreatePacks(unittest.TestCase):
+class TestBatchCreatePacksMethods(unittest.TestCase):
 
     def test_main(self):
         self.assertTrue(batch_create_packs.main(is_a_simulation=True))
