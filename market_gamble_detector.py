@@ -11,6 +11,7 @@
 # Therefore, the cost of crafting a badge is identical for every game: that is twice the price of a sack of 1000 gems.
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
+from drop_rate_estimates import get_drop_rate_estimates, get_drop_rate_field
 from market_arbitrage import filter_out_badges_with_low_sell_price
 from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_buzz_detector import filter_out_unmarketable_packs, sort_according_to_buzz, print_packs_with_high_buzz
@@ -21,6 +22,7 @@ from market_search import get_tag_item_class_no_for_trading_cards
 from market_search import update_all_listings, load_all_listings
 from sack_of_gems import get_gem_price, get_gem_amount_required_to_craft_badge
 from utils import convert_listing_hash_to_app_id
+from utils import get_category_name_for_booster_packs
 from utils import get_category_name_for_profile_backgrounds, get_category_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_emoticons
 from utils import get_listing_details_output_file_name_for_profile_backgrounds
@@ -77,11 +79,24 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                              listing_hashes_per_app_id=None,
                                                              price_threshold_in_cents=None,
                                                              category_name=None,
-                                                             gem_price_in_euros=None):
+                                                             drop_rate_for_common_rarity=None,
+                                                             gem_price_in_euros=None,
+                                                             verbose=True):
     if gem_price_in_euros is None:
         gem_price_in_euros = get_gem_price()
 
+    if drop_rate_for_common_rarity is None:
+        if category_name is not None and category_name != get_category_name_for_booster_packs():
+            drop_rate_estimates = get_drop_rate_estimates(verbose=verbose)
+            drop_rate_field = get_drop_rate_field()
+            rarity_field = 'common'
+            drop_rate_for_common_rarity = drop_rate_estimates[category_name][drop_rate_field][rarity_field]
+        else:
+            drop_rate_for_common_rarity = 1  # Here, 1 would represent 100% chance to receive an item of common rarity.
+
     gem_amount_required_to_craft_badge = get_gem_amount_required_to_craft_badge()
+
+    badge_price = gem_amount_required_to_craft_badge * gem_price_in_euros
 
     # Build dummy badge data, in order to reuse functions developed for the analysis of Booster Packs
 
@@ -90,7 +105,7 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
         num_items_of_common_rarity = listing_hashes_per_app_id[app_id]
-        item_price_by_crafting_badges = num_items_of_common_rarity * gem_amount_required_to_craft_badge * gem_price_in_euros
+        item_price_by_crafting_badges = num_items_of_common_rarity * badge_price / drop_rate_for_common_rarity
 
         sell_price_in_cents = all_listings[listing_hash]['sell_price']
         sell_price_in_euros = sell_price_in_cents / 100
