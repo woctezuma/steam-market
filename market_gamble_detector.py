@@ -187,6 +187,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
          retrieve_market_orders_online=True,
          focus_on_listing_hashes_never_seen_before=True,
          price_threshold_in_cents=None,
+         drop_rate_for_common_rarity=None,
          num_packs_to_display=10):
     if look_for_profile_backgrounds:
         category_name = get_category_name_for_profile_backgrounds()
@@ -213,6 +214,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
     filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                                                    listing_hashes_per_app_id=listing_hashes_per_app_id,
                                                                                    price_threshold_in_cents=price_threshold_in_cents,
+                                                                                   drop_rate_for_common_rarity=drop_rate_for_common_rarity,
                                                                                    category_name=category_name)
 
     # Pre-retrieval of item name ids
@@ -264,4 +266,5 @@ if __name__ == '__main__':
          retrieve_market_orders_online=True,
          focus_on_listing_hashes_never_seen_before=True,
          price_threshold_in_cents=None,
+         drop_rate_for_common_rarity=None,
          num_packs_to_display=100)
