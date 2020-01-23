@@ -11,7 +11,7 @@
 # Therefore, the cost of crafting a badge is identical for every game: that is twice the price of a sack of 1000 gems.
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
-from drop_rate_estimates import get_drop_rate_estimates, get_drop_rate_field
+from drop_rate_estimates import get_drop_rate_estimates, get_drop_rate_field, clamp_proportion
 from market_arbitrage import filter_out_badges_with_low_sell_price
 from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_buzz_detector import filter_out_unmarketable_packs, sort_according_to_buzz, print_packs_with_high_buzz
@@ -93,6 +93,8 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
             drop_rate_for_common_rarity = drop_rate_estimates[category_name][drop_rate_field][rarity_field]
         else:
             drop_rate_for_common_rarity = 1  # Here, 1 would represent 100% chance to receive an item of common rarity.
+
+    drop_rate_for_common_rarity = clamp_proportion(drop_rate_for_common_rarity)
 
     gem_amount_required_to_craft_badge = get_gem_amount_required_to_craft_badge()
 
