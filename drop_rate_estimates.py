@@ -15,6 +15,19 @@ def get_drop_rate_field():
     return drop_rate_field
 
 
+def get_rarity_fields():
+    rarity_fields = ['common', 'uncommon', 'rare']
+
+    return rarity_fields
+
+
+def clamp_proportion(input_proportion):
+    # Reference: https://en.wikipedia.org/wiki/Clamping_(graphics)
+    clampped_proportion = min(1, max(0, input_proportion))
+
+    return clampped_proportion
+
+
 def get_drop_rate_estimates(verbose=True):
     drop_rate_estimates = dict()
 
@@ -22,12 +35,17 @@ def get_drop_rate_estimates(verbose=True):
 
     category_field = get_category_name_for_profile_backgrounds()
     drop_rate_field = get_drop_rate_field()
+    rarity_fields = get_rarity_fields()
 
     drop_rate_estimates[category_field] = dict()
     drop_rate_estimates[category_field][drop_rate_field] = dict()
     drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.6271
     drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2585
     drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.1144
+
+    for rarity in rarity_fields:
+        current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
+        drop_rate_estimates[category_field][drop_rate_field][rarity] = clamp_proportion(current_drop_rate)
 
     category_field = get_category_name_for_emoticons()
 
@@ -36,6 +54,10 @@ def get_drop_rate_estimates(verbose=True):
     drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.7458
     drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2034
     drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.0508
+
+    for rarity in rarity_fields:
+        current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
+        drop_rate_estimates[category_field][drop_rate_field][rarity] = clamp_proportion(current_drop_rate)
 
     if verbose:
         print('Drop-rate estimates after crafting {} badges:'.format(
@@ -46,7 +68,7 @@ def get_drop_rate_estimates(verbose=True):
             get_category_name_for_profile_backgrounds(),
             get_category_name_for_emoticons(),
         ]:
-            print('- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f}'.format(
+            print('- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f} (expected: 1.00)'.format(
                 category_field,
                 drop_rate_estimates[category_field][drop_rate_field]['common'],
                 drop_rate_estimates[category_field][drop_rate_field]['uncommon'],
