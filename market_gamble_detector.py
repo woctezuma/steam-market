@@ -231,6 +231,7 @@ def count_listing_hashes_per_app_id(all_listings):
 
 def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
          retrieve_listings_from_scratch=False,
+         retrieve_listings_with_another_rarity_tag_from_scratch=False,
          retrieve_market_orders_online=True,
          focus_on_listing_hashes_never_seen_before=True,
          price_threshold_in_cents=None,
@@ -252,9 +253,17 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
     all_listings = get_listings(listing_output_file_name=listing_output_file_name,
                                 retrieve_listings_from_scratch=retrieve_listings_from_scratch)
 
-    # Count the number of **different** items for each appID
+    # Count the number of **different** items with common rarity tag for each appID
 
     listing_hashes_per_app_id = count_listing_hashes_per_app_id(all_listings)
+
+    # Count the number of **different** items with other rarity tags (uncommon and rare)  for each appID
+
+    if retrieve_listings_with_another_rarity_tag_from_scratch:
+        for rarity_tag in ['rare', 'uncommon']:
+            update_all_listings_for_items_other_than_cards(rarity=rarity_tag)
+
+    # TODO count listings and use this info!
 
     # *Heuristic* filtering of listing hashes
 
@@ -310,6 +319,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
 if __name__ == '__main__':
     main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
          retrieve_listings_from_scratch=False,
+         retrieve_listings_with_another_rarity_tag_from_scratch=False,
          retrieve_market_orders_online=True,
          focus_on_listing_hashes_never_seen_before=True,
          price_threshold_in_cents=None,
