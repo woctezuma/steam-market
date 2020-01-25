@@ -63,12 +63,8 @@ def get_listing_output_file_name_for_foil_cards():
     return listing_output_file_name
 
 
-def get_listing_output_file_name(tag_drop_rate_str=None,
-                                 rarity=None):
-    suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
-                                                 rarity=rarity)
-
-    listing_output_file_name = get_data_folder() + 'listings' + suffix + '.json'
+def get_listing_output_file_name():
+    listing_output_file_name = get_data_folder() + 'listings.json'
     return listing_output_file_name
 
 
