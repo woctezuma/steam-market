@@ -109,8 +109,8 @@ def update_all_listings_for_items_other_than_cards(tag_drop_rate_str=None,
     return
 
 
-def get_listings(retrieve_listings_from_scratch,
-                 listing_output_file_name):
+def get_listings(listing_output_file_name,
+                 retrieve_listings_from_scratch=False):
     if retrieve_listings_from_scratch:
         # Caveat: this update is only for items of Common rarity!
         update_all_listings_for_items_other_than_cards(rarity='common')
@@ -249,8 +249,8 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
 
     # Load list of all listing hashes
 
-    all_listings = get_listings(retrieve_listings_from_scratch,
-                                listing_output_file_name)
+    all_listings = get_listings(listing_output_file_name=listing_output_file_name,
+                                retrieve_listings_from_scratch=retrieve_listings_from_scratch)
 
     # Count the number of **different** items for each appID
 
