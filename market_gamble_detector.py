@@ -14,6 +14,7 @@
 import time
 
 from drop_rate_estimates import get_drop_rate_estimates, get_drop_rate_field, clamp_proportion
+from drop_rate_estimates import get_rarity_fields
 from market_arbitrage import filter_out_badges_with_low_sell_price
 from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_buzz_detector import filter_out_unmarketable_packs, sort_according_to_buzz, print_packs_with_high_buzz
@@ -260,7 +261,8 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
     # Count the number of **different** items with other rarity tags (uncommon and rare)  for each appID
 
     if retrieve_listings_with_another_rarity_tag_from_scratch:
-        for rarity_tag in ['rare', 'uncommon']:
+        other_rarity_fields = set(get_rarity_fields()).difference({'common'})
+        for rarity_tag in other_rarity_fields:
             update_all_listings_for_items_other_than_cards(rarity=rarity_tag)
 
     # TODO count listings and use this info!
