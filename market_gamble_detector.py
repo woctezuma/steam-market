@@ -11,15 +11,19 @@
 # Therefore, the cost of crafting a badge is identical for every game: that is twice the price of a sack of 1000 gems.
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
+import time
+
 from drop_rate_estimates import get_drop_rate_estimates, get_drop_rate_field, clamp_proportion
 from market_arbitrage import filter_out_badges_with_low_sell_price
 from market_arbitrage import find_badge_arbitrages, print_arbitrages
 from market_buzz_detector import filter_out_unmarketable_packs, sort_according_to_buzz, print_packs_with_high_buzz
 from market_listing import get_item_nameid_batch
 from market_order import load_market_order_data_from_disk, download_market_order_data_batch
+from market_search import get_steam_api_rate_limits_for_market_search
 from market_search import get_tag_item_class_no_for_profile_backgrounds, get_tag_item_class_no_for_emoticons
 from market_search import get_tag_item_class_no_for_trading_cards
 from market_search import update_all_listings, load_all_listings
+from personal_info import get_cookie_dict
 from sack_of_gems import get_gem_price, get_gem_amount_required_to_craft_badge
 from utils import convert_listing_hash_to_app_id
 from utils import get_category_name_for_booster_packs
@@ -81,8 +85,24 @@ def update_all_listings_for_emoticons(tag_drop_rate_str=None,
 
 def update_all_listings_for_items_other_than_cards(tag_drop_rate_str=None,
                                                    rarity=None):
+    # Profile Backgrounds
+
     update_all_listings_for_profile_backgrounds(tag_drop_rate_str=tag_drop_rate_str,
                                                 rarity=rarity)
+
+    # Forced cooldown
+
+    cookie = get_cookie_dict()
+    has_secured_cookie = bool(len(cookie) > 0)
+
+    rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
+
+    cooldown_duration = rate_limits['cooldown']
+    print('Forced cooldown between profile backgrounds and emoticons. Cooldown: {} seconds'.format(cooldown_duration))
+    time.sleep(cooldown_duration)
+
+    # Emoticons
+
     update_all_listings_for_emoticons(tag_drop_rate_str=tag_drop_rate_str,
                                       rarity=rarity)
 
