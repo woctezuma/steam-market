@@ -37,10 +37,34 @@ def get_tag_item_class_no_for_booster_packs():
     return tag_item_class_no
 
 
+def get_tag_drop_rate_str(rarity=None):
+    if rarity is None:
+        rarity = 'common'
+
+    if rarity == 'extraordinary':
+        tag_drop_rate_str = 'tag_droprate_3'
+    elif rarity == 'rare':
+        tag_drop_rate_str = 'tag_droprate_2'
+    elif rarity == 'uncommon':
+        tag_drop_rate_str = 'tag_droprate_1'
+    else:
+        tag_drop_rate_str = 'tag_droprate_0'  # Rarity: Common
+
+    return tag_drop_rate_str
+
+
 def get_search_parameters(start_index=0,
                           delta_index=100,
                           tag_item_class_no=None,
+                          tag_drop_rate_str=None,
+                          rarity=None,
                           is_foil_trading_card=True):
+    if rarity is None:
+        rarity = 'common'
+
+    if tag_drop_rate_str is None:
+        tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)
+
     if tag_item_class_no is None:
         # Typically, one of the following numbers:
         # 2: Trading Card
@@ -59,7 +83,7 @@ def get_search_parameters(start_index=0,
 
     params['norender'] = '1'
     params['category_753_Game[]'] = 'any'
-    params['category_753_droprate[]'] = 'tag_droprate_0'  # Rarity: Common
+    params['category_753_droprate[]'] = tag_drop_rate_str
     params['category_753_item_class[]'] = 'tag_item_class_' + str(tag_item_class_no)
     params['appid'] = '753'
     params['sort_column'] = column_to_sort_by
