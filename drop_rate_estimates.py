@@ -3,7 +3,7 @@
 # NB: with 95% confidence, drop-rates are different for profile backgrounds and for emoticons.
 # Reference: http://udsmed.u-strasbg.fr/labiostat/IMG/pdf/proportions-2.pdf (in French)
 #
-# NB²: we assume that the drop-rates are identical for every games. However, I have suspicions that the drop-rates may
+# NB²: we assume that the drop-rates are identical for every game. However, I have suspicions that the drop-rates may
 # vary based on the number of items of each rarity.
 
 from utils import get_category_name_for_profile_backgrounds, get_category_name_for_emoticons
