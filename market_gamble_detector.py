@@ -230,6 +230,24 @@ def count_listing_hashes_per_app_id(all_listings):
     return listing_hashes_per_app_id
 
 
+def enumerate_rarity_patterns(listing_hashes_per_app_id,
+                              listing_hashes_per_app_id_for_uncommon,
+                              listing_hashes_per_app_id_for_rare):
+    all_app_ids = set(listing_hashes_per_app_id)
+    all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_uncommon)
+    all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_rare)
+
+    patterns_per_app_id = dict()
+
+    for app_id in all_app_ids:
+        patterns_per_app_id[app_id] = dict()
+        patterns_per_app_id[app_id]['common'] = listing_hashes_per_app_id[app_id]
+        patterns_per_app_id[app_id]['uncommon'] = listing_hashes_per_app_id_for_uncommon[app_id]
+        patterns_per_app_id[app_id]['rare'] = listing_hashes_per_app_id_for_rare[app_id]
+
+    return patterns_per_app_id
+
+
 def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
          retrieve_listings_from_scratch=False,
          retrieve_listings_with_another_rarity_tag_from_scratch=False,
@@ -249,7 +267,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
         listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
         market_order_output_file_name = get_market_order_file_name_for_emoticons()
 
-    # Load list of all listing hashes
+    # Load list of all listing hashes with common rarity tag
 
     all_listings = get_listings(listing_output_file_name=listing_output_file_name,
                                 retrieve_listings_from_scratch=retrieve_listings_from_scratch)
@@ -258,14 +276,40 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
 
     listing_hashes_per_app_id = count_listing_hashes_per_app_id(all_listings)
 
-    # Count the number of **different** items with other rarity tags (uncommon and rare)  for each appID
+    # Load list of all listing hashes with other rarity tags (uncommon and rare)
 
     if retrieve_listings_with_another_rarity_tag_from_scratch:
         other_rarity_fields = set(get_rarity_fields()).difference({'common'})
         for rarity_tag in other_rarity_fields:
             update_all_listings_for_items_other_than_cards(rarity=rarity_tag)
 
-    # TODO count listings and use this info!
+    if look_for_profile_backgrounds:
+        all_listings_for_uncommon = load_all_listings(
+            listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(rarity='uncommon')
+        )
+        all_listings_for_rare = load_all_listings(
+            listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(rarity='rare')
+        )
+
+    else:
+        all_listings_for_uncommon = load_all_listings(
+            listing_output_file_name=get_listing_output_file_name_for_emoticons(rarity='uncommon')
+        )
+        all_listings_for_rare = load_all_listings(
+            listing_output_file_name=get_listing_output_file_name_for_emoticons(rarity='rare')
+        )
+
+    # Count the number of **different** items with other rarity tags (uncommon and rare)  for each appID
+
+    listing_hashes_per_app_id_for_uncommon = count_listing_hashes_per_app_id(all_listings_for_uncommon)
+    listing_hashes_per_app_id_for_rare = count_listing_hashes_per_app_id(all_listings_for_rare)
+
+    # Enumerate patterns C/UC/R for each appID
+
+    # TODO use this info
+    patterns_per_app_id = enumerate_rarity_patterns(listing_hashes_per_app_id,
+                                                    listing_hashes_per_app_id_for_uncommon,
+                                                    listing_hashes_per_app_id_for_rare)
 
     # *Heuristic* filtering of listing hashes
 
