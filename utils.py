@@ -25,13 +25,36 @@ def get_steam_card_exchange_file_name():
     return steam_card_exchange_file_name
 
 
-def get_listing_output_file_name_for_profile_backgrounds():
-    listing_output_file_name = get_data_folder() + 'listings_for_profile_backgrounds.json'
+def get_listing_output_file_name_suffix(tag_drop_rate_str=None,
+                                        rarity=None):
+    from market_search import get_tag_drop_rate_str
+
+    if tag_drop_rate_str is None:
+        tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)
+
+    if tag_drop_rate_str == get_tag_drop_rate_str(rarity == 'common'):
+        suffix = ''
+    else:
+        suffix = '_rarity_tag_{}'.format(tag_drop_rate_str)
+
+    return suffix
+
+
+def get_listing_output_file_name_for_profile_backgrounds(tag_drop_rate_str=None,
+                                                         rarity=None):
+    suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
+                                                 rarity=rarity)
+
+    listing_output_file_name = get_data_folder() + 'listings_for_profile_backgrounds' + suffix + '.json'
     return listing_output_file_name
 
 
-def get_listing_output_file_name_for_emoticons():
-    listing_output_file_name = get_data_folder() + 'listings_for_emoticons.json'
+def get_listing_output_file_name_for_emoticons(tag_drop_rate_str=None,
+                                               rarity=None):
+    suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
+                                                 rarity=rarity)
+
+    listing_output_file_name = get_data_folder() + 'listings_for_emoticons' + suffix + '.json'
     return listing_output_file_name
 
 
@@ -40,8 +63,12 @@ def get_listing_output_file_name_for_foil_cards():
     return listing_output_file_name
 
 
-def get_listing_output_file_name():
-    listing_output_file_name = get_data_folder() + 'listings.json'
+def get_listing_output_file_name(tag_drop_rate_str=None,
+                                 rarity=None):
+    suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
+                                                 rarity=rarity)
+
+    listing_output_file_name = get_data_folder() + 'listings' + suffix + '.json'
     return listing_output_file_name
 
 
