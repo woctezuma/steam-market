@@ -42,13 +42,16 @@ def get_tag_drop_rate_str(rarity=None):
         rarity = 'common'
 
     if rarity == 'extraordinary':
-        tag_drop_rate_str = 'tag_droprate_3'
+        tag_drop_rate_no = 3
     elif rarity == 'rare':
-        tag_drop_rate_str = 'tag_droprate_2'
+        tag_drop_rate_no = 2
     elif rarity == 'uncommon':
-        tag_drop_rate_str = 'tag_droprate_1'
+        tag_drop_rate_no = 1
     else:
-        tag_drop_rate_str = 'tag_droprate_0'  # Rarity: Common
+        # Rarity: Common
+        tag_drop_rate_no = 0
+
+    tag_drop_rate_str = 'tag_droprate_{}'.format(tag_drop_rate_no)
 
     return tag_drop_rate_str
 
