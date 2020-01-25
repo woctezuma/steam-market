@@ -62,9 +62,6 @@ def get_search_parameters(start_index=0,
                           tag_drop_rate_str=None,
                           rarity=None,
                           is_foil_trading_card=True):
-    if rarity is None:
-        rarity = 'common'
-
     if tag_drop_rate_str is None:
         tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)
 
@@ -126,7 +123,9 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
 
 def get_all_listings(all_listings=None,
                      url=None,
-                     tag_item_class_no=None):
+                     tag_item_class_no=None,
+                     tag_drop_rate_str=None,
+                     rarity=None):
     if url is None:
         url = get_steam_market_search_url()
 
@@ -151,7 +150,9 @@ def get_all_listings(all_listings=None,
 
         req_data = get_search_parameters(start_index=start_index,
                                          delta_index=delta_index,
-                                         tag_item_class_no=tag_item_class_no)
+                                         tag_item_class_no=tag_item_class_no,
+                                         tag_drop_rate_str=tag_drop_rate_str,
+                                         rarity=rarity)
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
@@ -221,7 +222,9 @@ def download_all_listings(listing_output_file_name=None,
 
 def update_all_listings(listing_output_file_name=None,
                         url=None,
-                        tag_item_class_no=None):
+                        tag_item_class_no=None,
+                        tag_drop_rate_str=None,
+                        rarity=None):
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
 
@@ -237,7 +240,9 @@ def update_all_listings(listing_output_file_name=None,
 
     all_listings = get_all_listings(all_listings,
                                     url=url,
-                                    tag_item_class_no=tag_item_class_no)
+                                    tag_item_class_no=tag_item_class_no,
+                                    tag_drop_rate_str=tag_drop_rate_str,
+                                    rarity=rarity)
 
     with open(listing_output_file_name, 'w', encoding='utf-8') as f:
         json.dump(all_listings, f)

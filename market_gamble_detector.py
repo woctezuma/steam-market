@@ -42,24 +42,49 @@ def update_all_listings_for_foil_cards():
     return
 
 
-def update_all_listings_for_profile_backgrounds():
-    print('Downloading listings for profile backgrounds.')
+def update_all_listings_for_profile_backgrounds(tag_drop_rate_str=None,
+                                                rarity=None):
+    print('Downloading listings for profile backgrounds (rarity_tag={} ; rarity={}).'.format(
+        tag_drop_rate_str,
+        rarity,
+    ))
 
     update_all_listings(
-        listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(),
-        tag_item_class_no=get_tag_item_class_no_for_profile_backgrounds()
+        listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
+            tag_drop_rate_str=tag_drop_rate_str,
+            rarity=rarity),
+        tag_item_class_no=get_tag_item_class_no_for_profile_backgrounds(),
+        tag_drop_rate_str=tag_drop_rate_str,
+        rarity=rarity
     )
 
     return
 
 
-def update_all_listings_for_emoticons():
-    print('Downloading listings for emoticons.')
+def update_all_listings_for_emoticons(tag_drop_rate_str=None,
+                                      rarity=None):
+    print('Downloading listings for emoticons (rarity_tag={} ; rarity={}).'.format(
+        tag_drop_rate_str,
+        rarity,
+    ))
 
     update_all_listings(
-        listing_output_file_name=get_listing_output_file_name_for_emoticons(),
-        tag_item_class_no=get_tag_item_class_no_for_emoticons()
+        listing_output_file_name=get_listing_output_file_name_for_emoticons(tag_drop_rate_str=tag_drop_rate_str,
+                                                                            rarity=rarity),
+        tag_item_class_no=get_tag_item_class_no_for_emoticons(),
+        tag_drop_rate_str=tag_drop_rate_str,
+        rarity=rarity
     )
+
+    return
+
+
+def update_all_listings_for_items_other_than_cards(tag_drop_rate_str=None,
+                                                   rarity=None):
+    update_all_listings_for_profile_backgrounds(tag_drop_rate_str=tag_drop_rate_str,
+                                                rarity=rarity)
+    update_all_listings_for_emoticons(tag_drop_rate_str=tag_drop_rate_str,
+                                      rarity=rarity)
 
     return
 
@@ -67,8 +92,8 @@ def update_all_listings_for_emoticons():
 def get_listings(retrieve_listings_from_scratch,
                  listing_output_file_name):
     if retrieve_listings_from_scratch:
-        update_all_listings_for_profile_backgrounds()
-        update_all_listings_for_emoticons()
+        # Caveat: this update is only for items of Common rarity!
+        update_all_listings_for_items_other_than_cards(rarity='common')
 
     all_listings = load_all_listings(listing_output_file_name)
 
