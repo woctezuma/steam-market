@@ -273,17 +273,17 @@ def enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common,
 
         try:
             num_common = listing_hashes_per_app_id_for_common[app_id]
-        except IndexError:
+        except KeyError:
             num_common = None
 
         try:
             num_uncommon = listing_hashes_per_app_id_for_uncommon[app_id]
-        except IndexError:
+        except KeyError:
             num_uncommon = None
 
         try:
             num_rare = listing_hashes_per_app_id_for_rare[app_id]
-        except IndexError:
+        except KeyError:
             num_rare = None
 
         item_rarity_patterns_per_app_id[app_id]['common'] = num_common
