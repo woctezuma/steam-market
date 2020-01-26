@@ -267,9 +267,25 @@ def enumerate_rarity_patterns(listing_hashes_per_app_id_for_common,
 
     for app_id in all_app_ids:
         patterns_per_app_id[app_id] = dict()
-        patterns_per_app_id[app_id]['common'] = listing_hashes_per_app_id_for_common[app_id]
-        patterns_per_app_id[app_id]['uncommon'] = listing_hashes_per_app_id_for_uncommon[app_id]
-        patterns_per_app_id[app_id]['rare'] = listing_hashes_per_app_id_for_rare[app_id]
+
+        try:
+            num_common = listing_hashes_per_app_id_for_common[app_id]
+        except IndexError:
+            num_common = None
+
+        try:
+            num_uncommon = listing_hashes_per_app_id_for_uncommon[app_id]
+        except IndexError:
+            num_uncommon = None
+
+        try:
+            num_rare = listing_hashes_per_app_id_for_rare[app_id]
+        except IndexError:
+            num_rare = None
+
+        patterns_per_app_id[app_id]['common'] = num_common
+        patterns_per_app_id[app_id]['uncommon'] = num_uncommon
+        patterns_per_app_id[app_id]['rare'] = num_rare
 
     return patterns_per_app_id
 
