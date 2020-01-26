@@ -13,7 +13,8 @@
 
 import time
 
-from drop_rate_estimates import get_drop_rate_estimates, get_drop_rate_field, clamp_proportion
+from drop_rate_estimates import get_drop_rate_estimates_based_on_item_rarity_pattern
+from drop_rate_estimates import get_drop_rate_field, clamp_proportion
 from drop_rate_estimates import get_rarity_fields
 from market_arbitrage import filter_out_badges_with_low_sell_price
 from market_arbitrage import find_badge_arbitrages, print_arbitrages
@@ -125,22 +126,20 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                              item_rarity_patterns_per_app_id=None,
                                                              price_threshold_in_cents=None,
                                                              category_name=None,
-                                                             drop_rate_for_common_rarity=None,
+                                                             drop_rate_estimates_for_common_rarity=None,
                                                              gem_price_in_euros=None,
                                                              verbose=True):
     if gem_price_in_euros is None:
         gem_price_in_euros = get_gem_price()
 
-    if drop_rate_for_common_rarity is None:
+    if drop_rate_estimates_for_common_rarity is None:
         if category_name is not None and category_name != get_category_name_for_booster_packs():
-            drop_rate_estimates = get_drop_rate_estimates(verbose=verbose)
+            drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=verbose)
             drop_rate_field = get_drop_rate_field()
             rarity_field = 'common'
-            drop_rate_for_common_rarity = drop_rate_estimates[category_name][drop_rate_field][rarity_field]
+            drop_rate_estimates_for_common_rarity = drop_rate_estimates[drop_rate_field][rarity_field]
         else:
-            drop_rate_for_common_rarity = 1  # Here, 1 would represent 100% chance to receive an item of common rarity.
-
-    drop_rate_for_common_rarity = clamp_proportion(drop_rate_for_common_rarity)
+            drop_rate_estimates_for_common_rarity = dict()
 
     gem_amount_required_to_craft_badge = get_gem_amount_required_to_craft_badge()
 
@@ -155,6 +154,19 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
         item_rarity_pattern = item_rarity_patterns_per_app_id[app_id]
 
         num_items_of_common_rarity = item_rarity_pattern['common']
+        num_items_of_uncommon_rarity = item_rarity_pattern['uncommon']
+        num_items_of_rare_rarity = item_rarity_pattern['rare']
+
+        item_rarity_pattern_as_tuple = (num_items_of_common_rarity,
+                                        num_items_of_uncommon_rarity,
+                                        num_items_of_rare_rarity)
+
+        try:
+            drop_rate_for_common_rarity = drop_rate_estimates_for_common_rarity[item_rarity_pattern_as_tuple]
+        except KeyError:
+            drop_rate_for_common_rarity = 1  # Here, 1 would represent 100% chance to receive an item of common rarity.
+
+        drop_rate_for_common_rarity = clamp_proportion(drop_rate_for_common_rarity)
 
         item_price_by_crafting_badges = num_items_of_common_rarity * badge_price / drop_rate_for_common_rarity
 
@@ -299,7 +311,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
          retrieve_market_orders_online=True,
          focus_on_listing_hashes_never_seen_before=True,
          price_threshold_in_cents=None,
-         drop_rate_for_common_rarity=None,
+         drop_rate_estimates_for_common_rarity=None,
          num_packs_to_display=10):
     if look_for_profile_backgrounds:
         category_name = get_category_name_for_profile_backgrounds()
@@ -344,7 +356,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
     filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
                                                                                    item_rarity_patterns_per_app_id=item_rarity_patterns_per_app_id,
                                                                                    price_threshold_in_cents=price_threshold_in_cents,
-                                                                                   drop_rate_for_common_rarity=drop_rate_for_common_rarity,
+                                                                                   drop_rate_estimates_for_common_rarity=drop_rate_estimates_for_common_rarity,
                                                                                    category_name=category_name)
 
     # Pre-retrieval of item name ids
@@ -397,5 +409,5 @@ if __name__ == '__main__':
          retrieve_market_orders_online=True,
          focus_on_listing_hashes_never_seen_before=True,
          price_threshold_in_cents=None,
-         drop_rate_for_common_rarity=None,
+         drop_rate_estimates_for_common_rarity=None,
          num_packs_to_display=100)
