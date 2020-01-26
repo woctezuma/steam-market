@@ -211,6 +211,19 @@ multiplied by 10 to get the value of the non-existent "foil" version of this emo
 if you are interested in foil cards. You can check by yourself that the bookmarklet returns the same goo values for 
 normal cards and for foil cards.
 
+## Drop-rate estimates
+
+For the gamble detector, we are interested in drop-rate estimates, when crafting badges, for items of Common rarity.
+
+Based on the data so far (239 crafed badges):
+-   the drop-rates for Profile Backgrounds and for Emoticons are different (reject null hypothesis with 95% confidence),
+-   conditionally to C/UC/R patterns, the drop-rates may be similar (fail to reject null hypothesis with 95% confidence).
+where:
+-   C/UC/R patterns are the numbers of Common/Uncommon/Rare items associated with each appID.
+
+Therefore, we choose to estimate the drop-rates for Common rarity, conditionally to C/UC/R patterns.  
+The values hard-coded in `drop_rate_estimates.py` are the centers of the [Wilson score intervals](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval) with 95% confidence.
+
 ## Results
 
 The [Wiki](https://github.com/woctezuma/steam-market/wiki) shows a ranking of packs with high buy orders.
