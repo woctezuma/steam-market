@@ -41,6 +41,9 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
     drop_rate_estimates[drop_rate_field] = dict()
 
     # Drop rates for common rarity based on the item rarity pattern (C, UC, R):
+    #
+    # NB: these are the centers of the binomial proportion confidence intervals (Wilson score intervals)
+    # Reference: https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval
     drop_rate_estimates[drop_rate_field][rarity_field] = {
         (1, 1, 1): 0.6294,
         (1, 2, 1): 0.3832,
