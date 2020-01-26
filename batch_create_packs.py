@@ -20,7 +20,11 @@ def get_manually_selected_app_ids():
         # 272330,  # Shadow Blade: Reload (6 cards, 3 C, 1 UC, 1 R)
         # 398140,  # Ino (5 cards, 1 C, 1 UC, 1 R)
 
-        395620,  # Ittle Dew 2+ (do not open it!)
+        562260,  # WAVESHAPER
+        383690,  # Mu Complex
+        558490,  # Crossroad Mysteries: The Broken Deal
+
+        342250,  # Aspectus: Rinascimento Chronicles
         522340,  # Ghostlords (8 cards, emoticons: 4C, 3 UC, 3R)
     ]
 
