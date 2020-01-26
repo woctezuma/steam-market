@@ -25387,5 +25387,313 @@
     "bid_volume": -1,
     "ask_volume": -1,
     "is_marketable": true
+  },
+  "513560-:Emoticons02:": {
+    "bid": 0.09,
+    "ask": 115,
+    "bid_volume": 2,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "563680-:dwvr_target:": {
+    "bid": -1,
+    "ask": 2.27,
+    "bid_volume": -1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "628800-:shmupheart:": {
+    "bid": 0.29,
+    "ask": 2.1,
+    "bid_volume": 1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "1006250-:litlheartbreak:": {
+    "bid": 1,
+    "ask": 9.47,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "444190-:momoconfused:": {
+    "bid": 0.12,
+    "ask": 5.89,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "583240-:CoffeeMug:": {
+    "bid": 0.1,
+    "ask": 7.09,
+    "bid_volume": 2,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "501530-:Siegfried_Emoticon:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "523870-:scared_egg:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "632250-:WhiteTriangle:": {
+    "bid": -1,
+    "ask": 1.53,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "530110-:SilverBullion:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "560150-:pithin:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 20,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "785780-:rat_snd:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 30,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "625700-:starplayer_4:": {
+    "bid": 0.04,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "593740-:coffeed:": {
+    "bid": 0.08,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "578300-:devdiary:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "596650-:taheart:": {
+    "bid": 0.03,
+    "ask": 1.46,
+    "bid_volume": 15,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "495680-:ovr1up:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "774241-:wcbempire:": {
+    "bid": 0.1,
+    "ask": 4.53,
+    "bid_volume": 2,
+    "ask_volume": 3,
+    "is_marketable": true
+  },
+  "584370-:trailmushroom:": {
+    "bid": 0.03,
+    "ask": 14.65,
+    "bid_volume": 11,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "556050-:hjvampirism:": {
+    "bid": 0.04,
+    "ask": 3.37,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "405960-:SunkenN:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "696590-:health_up:": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "528080-:nf_worm:": {
+    "bid": 0.1,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "555600-:8shooter:": {
+    "bid": 0.07,
+    "ask": 3.88,
+    "bid_volume": 1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "516940-:Colonel_sw:": {
+    "bid": 0.05,
+    "ask": -1,
+    "bid_volume": 1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "543070-:gusclock:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "528080-:nf_disk:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "370440-:No0:": {
+    "bid": 0.07,
+    "ask": 3.51,
+    "bid_volume": 2,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "636960-:samuraihelmet:": {
+    "bid": -1,
+    "ask": 14,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "459100-:zzzombie:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": false
+  },
+  "649950-:AshenHeal:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 7,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "969680-:capx02:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 10,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "427950-:WTLion:": {
+    "bid": -1,
+    "ask": 11.75,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "1034910-:Blaster_Master_Zero_2_Kanna:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "872410-:emoticon_Warlord:": {
+    "bid": 0.03,
+    "ask": 2.24,
+    "bid_volume": 121,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "622540-:HatchetF:": {
+    "bid": -1,
+    "ask": 1.45,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "1190110-:hentaiterrorist3:": {
+    "bid": -1,
+    "ask": 0.5,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "994140-:LMsmile:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "948640-:NyaAA:": {
+    "bid": -1,
+    "ask": 2.27,
+    "bid_volume": -1,
+    "ask_volume": 2,
+    "is_marketable": true
+  },
+  "547250-:omvrbsite:": {
+    "bid": -1,
+    "ask": 11.89,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "1094000-:sharksmile:": {
+    "bid": 0.03,
+    "ask": -1,
+    "bid_volume": 2,
+    "ask_volume": -1,
+    "is_marketable": true
+  },
+  "1217390-:some_suhui_1:": {
+    "bid": -1,
+    "ask": 1.68,
+    "bid_volume": -1,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "1217390-:some_yena_1:": {
+    "bid": 0.08,
+    "ask": 5.06,
+    "bid_volume": 5,
+    "ask_volume": 1,
+    "is_marketable": true
+  },
+  "1113780-:ut1_jack:": {
+    "bid": -1,
+    "ask": -1,
+    "bid_volume": -1,
+    "ask_volume": -1,
+    "is_marketable": true
   }
 }
