@@ -58,6 +58,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
         (3, 4, 3): 0.5337,
         (4, 1, 1): 0.7726,
         (4, 2, 1): 0.7828,
+        (4, 3, 3): 0.5731,
     }
 
     common_drop_rate = drop_rate_estimates[drop_rate_field][rarity_field]
