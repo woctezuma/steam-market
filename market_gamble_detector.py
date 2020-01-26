@@ -122,7 +122,7 @@ def get_listings(listing_output_file_name,
 
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
-                                                             listing_hashes_per_app_id_for_common=None,
+                                                             item_rarity_patterns_per_app_id=None,
                                                              price_threshold_in_cents=None,
                                                              category_name=None,
                                                              drop_rate_for_common_rarity=None,
@@ -152,7 +152,10 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
-        num_items_of_common_rarity = listing_hashes_per_app_id_for_common[app_id]
+        item_rarity_pattern = item_rarity_patterns_per_app_id[app_id]
+
+        num_items_of_common_rarity = item_rarity_pattern['common']
+
         item_price_by_crafting_badges = num_items_of_common_rarity * badge_price / drop_rate_for_common_rarity
 
         sell_price_in_cents = all_listings[listing_hash]['sell_price']
@@ -256,17 +259,17 @@ def get_listings_with_other_rarity_tags(look_for_profile_backgrounds,
     return all_listings_for_uncommon, all_listings_for_rare
 
 
-def enumerate_rarity_patterns(listing_hashes_per_app_id_for_common,
-                              listing_hashes_per_app_id_for_uncommon,
-                              listing_hashes_per_app_id_for_rare):
+def enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common,
+                                   listing_hashes_per_app_id_for_uncommon,
+                                   listing_hashes_per_app_id_for_rare):
     all_app_ids = set(listing_hashes_per_app_id_for_common)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_uncommon)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_rare)
 
-    patterns_per_app_id = dict()
+    item_rarity_patterns_per_app_id = dict()
 
     for app_id in all_app_ids:
-        patterns_per_app_id[app_id] = dict()
+        item_rarity_patterns_per_app_id[app_id] = dict()
 
         try:
             num_common = listing_hashes_per_app_id_for_common[app_id]
@@ -283,11 +286,11 @@ def enumerate_rarity_patterns(listing_hashes_per_app_id_for_common,
         except IndexError:
             num_rare = None
 
-        patterns_per_app_id[app_id]['common'] = num_common
-        patterns_per_app_id[app_id]['uncommon'] = num_uncommon
-        patterns_per_app_id[app_id]['rare'] = num_rare
+        item_rarity_patterns_per_app_id[app_id]['common'] = num_common
+        item_rarity_patterns_per_app_id[app_id]['uncommon'] = num_uncommon
+        item_rarity_patterns_per_app_id[app_id]['rare'] = num_rare
 
-    return patterns_per_app_id
+    return item_rarity_patterns_per_app_id
 
 
 def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
@@ -332,15 +335,14 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
 
     # Enumerate patterns C/UC/R for each appID
 
-    # TODO use this info
-    patterns_per_app_id = enumerate_rarity_patterns(listing_hashes_per_app_id_for_common,
-                                                    listing_hashes_per_app_id_for_uncommon,
-                                                    listing_hashes_per_app_id_for_rare)
+    item_rarity_patterns_per_app_id = enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common,
+                                                                     listing_hashes_per_app_id_for_uncommon,
+                                                                     listing_hashes_per_app_id_for_rare)
 
     # *Heuristic* filtering of listing hashes
 
     filtered_badge_data = filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
-                                                                                   listing_hashes_per_app_id_for_common=listing_hashes_per_app_id_for_common,
+                                                                                   item_rarity_patterns_per_app_id=item_rarity_patterns_per_app_id,
                                                                                    price_threshold_in_cents=price_threshold_in_cents,
                                                                                    drop_rate_for_common_rarity=drop_rate_for_common_rarity,
                                                                                    category_name=category_name)
@@ -372,7 +374,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
 
     print_packs_with_high_buzz(hashes_for_best_bid,
                                market_order_dict,
-                               listing_hashes_per_app_id_for_common=listing_hashes_per_app_id_for_common,
+                               item_rarity_patterns_per_app_id=item_rarity_patterns_per_app_id,
                                category_name=category_name,
                                num_packs_to_display=num_packs_to_display)
 
