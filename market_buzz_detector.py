@@ -88,7 +88,7 @@ def sort_according_to_buzz(market_order_dict,
 
 def print_packs_with_high_buzz(hashes_for_best_bid,
                                market_order_dict,
-                               listing_hashes_per_app_id=None,
+                               listing_hashes_per_app_id_for_common=None,
                                category_name=None,
                                num_packs_to_display=10):
     if category_name is None:
@@ -118,7 +118,7 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
             app_name = listing_hash
 
         try:
-            num_different_items_of_common_rarity = listing_hashes_per_app_id[app_id]
+            num_different_items_of_common_rarity = listing_hashes_per_app_id_for_common[app_id]
 
             common_rarity_info = ' ; common rarity: {} items'.format(
                 num_different_items_of_common_rarity
