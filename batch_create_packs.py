@@ -95,6 +95,7 @@ def create_packs_for_app_ids(manually_selected_app_ids,
                 next_creation_times[app_id]
             )
             for app_id in manually_selected_app_ids
+            if app_id in next_creation_times
         ]
 
         soonest_creation_time = min(
