@@ -15,6 +15,12 @@ def get_drop_rate_field():
     return drop_rate_field
 
 
+def get_badge_count_field():
+    badge_count_field = 'badge_count'
+
+    return badge_count_field
+
+
 def get_rarity_fields():
     rarity_fields = ['common', 'uncommon', 'rare']
 
@@ -33,35 +39,38 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
 
     drop_rate_estimates = dict()
 
-    drop_rate_estimates['badges'] = 239
+    drop_rate_estimates['badges'] = 240
 
     drop_rate_field = get_drop_rate_field()
+    badge_count_field = get_badge_count_field()
     rarity_field = 'common'
 
     drop_rate_estimates[drop_rate_field] = dict()
+    drop_rate_estimates[badge_count_field] = dict()
 
     # Drop rates for common rarity based on the item rarity pattern (C, UC, R):
     #
     # NB: these are the centers of the binomial proportion confidence intervals (Wilson score intervals)
     # Reference: https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval
     drop_rate_estimates[drop_rate_field][rarity_field] = {
-        (1, 1, 1): 0.6294,
+        (1, 1, 1): 0.6304,
         (1, 2, 1): 0.3832,
         (1, 2, 2): 0.5560,
         (2, 1, 1): 0.5916,
-        (2, 2, 1): 0.5060,
+        (2, 2, 1): 0.5067,
         (2, 2, 2): 0.5722,
         (2, 2, 5): 0.5000,
-        (2, 3, 1): 0.5566,
+        (2, 3, 1): 0.5796,
         (2, 5, 2): 0.3989,
-        (3, 1, 1): 0.7911,
+        (3, 1, 1): 0.8013,
         (3, 2, 1): 0.7726,
-        (4, 3, 2): 0.5413,
-        (5, 1, 1): 0.6676,
-        (3, 4, 3): 0.5337,
+        (4, 3, 2): 0.6384,
+        (5, 1, 1): 0.7049,
+        (3, 4, 3): 0.5000,
         (4, 1, 1): 0.7726,
         (4, 2, 1): 0.7828,
         (4, 3, 3): 0.5731,
+        (6, 2, 2): 0.6033,
     }
 
     common_drop_rate = drop_rate_estimates[drop_rate_field][rarity_field]
@@ -69,6 +78,36 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
     for pattern in common_drop_rate:
         current_drop_rate = common_drop_rate[pattern]
         drop_rate_estimates[drop_rate_field][rarity_field][pattern] = clamp_proportion(current_drop_rate)
+
+    drop_rate_estimates[badge_count_field][rarity_field] = {
+        (1, 1, 1): 69,
+        (1, 2, 1): 9,
+        (1, 2, 2): 14,
+        (2, 1, 1): 18,
+        (2, 2, 1): 71,
+        (2, 2, 2): 10,
+        (2, 2, 5): 2,
+        (2, 3, 1): 15,
+        (2, 5, 2): 11,
+        (3, 1, 1): 192,
+        (3, 2, 1): 9,
+        (4, 3, 2): 7,
+        (5, 1, 1): 23,
+        (3, 4, 3): 12,
+        (4, 1, 1): 9,
+        (4, 2, 1): 5,
+        (4, 3, 3): 3,
+        (6, 2, 2): 1,
+    }
+
+    num_crafted_badges_to_compute_estimates = drop_rate_estimates['badges']
+    num_crafted_items_to_compute_estimates = sum(drop_rate_estimates[badge_count_field][rarity_field].values())
+
+    # For each crafted badge, the user receives two items: one emoticon and one profile background.
+    num_items_crafted_per_badge = 2
+
+    if num_crafted_items_to_compute_estimates != num_crafted_badges_to_compute_estimates * num_items_crafted_per_badge:
+        raise AssertionError()
 
     if verbose:
         print('Drop-rate estimates after crafting {} badges:'.format(
