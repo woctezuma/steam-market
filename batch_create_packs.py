@@ -98,9 +98,12 @@ def create_packs_for_app_ids(manually_selected_app_ids,
             if app_id in next_creation_times
         ]
 
-        soonest_creation_time = min(
-            next_creation_times_for_manually_selected_app_ids
-        )
+        try:
+            soonest_creation_time = min(
+                next_creation_times_for_manually_selected_app_ids
+            )
+        except ValueError:
+            soonest_creation_time = None
 
         print('The soonest creation time is {}.'.format(
             get_formatted_time(soonest_creation_time)
