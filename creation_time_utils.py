@@ -66,11 +66,14 @@ def get_current_time():
     return current_time
 
 
-def get_creation_time_format():
+def get_creation_time_format(prepend_year=False):
     # Reference: https://docs.python.org/3/library/time.html#time.strftime
 
     # The format used in: '14 Sep @ 10:48pm'
     time_format = '%d %b @ %I:%M%p'
+
+    if prepend_year:
+        time_format = '%Y ' + time_format
 
     return time_format
 
@@ -85,9 +88,27 @@ def get_formatted_time(time_struct=None):
     return formatted_time_as_str
 
 
+def prepend_year_to_time_as_str(formatted_time_as_str):
+    current_time = get_current_time()
+
+    formatted_time_as_str_with_year = '{} {}'.format(
+        current_time.year,
+        formatted_time_as_str
+    )
+
+    return formatted_time_as_str_with_year
+
+
 def get_time_struct_from_str(formatted_time_as_str):
-    time_struct = datetime.datetime.strptime(formatted_time_as_str,
-                                             get_creation_time_format())
+    try:
+        time_struct = datetime.datetime.strptime(formatted_time_as_str,
+                                                 get_creation_time_format())
+    except ValueError:
+        # For February 29th during a leap year, it is necessary to specify the year before calling strptime().
+        # Reference: https://github.com/python/cpython/commit/56027ccd6b9dab4a090e4fef8574933fb9a36ff2
+
+        time_struct = datetime.datetime.strptime(prepend_year_to_time_as_str(formatted_time_as_str),
+                                                 get_creation_time_format(prepend_year=True))
 
     return time_struct
 
