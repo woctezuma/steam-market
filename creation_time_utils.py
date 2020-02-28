@@ -109,8 +109,10 @@ def get_time_struct_from_str(formatted_time_as_str):
     except ValueError:
         # For February 29th during a leap year, it is necessary to specify the year before calling strptime().
         # Reference: https://github.com/python/cpython/commit/56027ccd6b9dab4a090e4fef8574933fb9a36ff2
+        example_of_leap_year = 2020
 
-        time_struct = datetime.datetime.strptime(prepend_year_to_time_as_str(formatted_time_as_str),
+        time_struct = datetime.datetime.strptime(prepend_year_to_time_as_str(formatted_time_as_str,
+                                                                             year_to_prepend=example_of_leap_year),
                                                  get_creation_time_format(prepend_year=True))
 
     return time_struct
