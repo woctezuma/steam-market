@@ -88,11 +88,14 @@ def get_formatted_time(time_struct=None):
     return formatted_time_as_str
 
 
-def prepend_year_to_time_as_str(formatted_time_as_str):
-    current_time = get_current_time()
+def prepend_year_to_time_as_str(formatted_time_as_str,
+                                year_to_prepend=None):
+    if year_to_prepend is None:
+        current_time = get_current_time()
+        year_to_prepend = current_time.year
 
     formatted_time_as_str_with_year = '{} {}'.format(
-        current_time.year,
+        year_to_prepend,
         formatted_time_as_str
     )
 
