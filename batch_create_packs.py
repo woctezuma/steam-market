@@ -90,9 +90,12 @@ def create_packs_for_app_ids(manually_selected_app_ids,
             ignored_app_ids)
         )
 
+        # Below, the parameter 'use_current_year' is toggled ON, because the year information is necessary to deal with
+        # February 29th during leap years.
         next_creation_times_for_manually_selected_app_ids = [
             get_time_struct_from_str(
-                next_creation_times[app_id]
+                next_creation_times[app_id],
+                use_current_year=True,
             )
             for app_id in manually_selected_app_ids
             if app_id in next_creation_times
