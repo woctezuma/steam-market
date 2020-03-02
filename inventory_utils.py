@@ -115,7 +115,7 @@ def get_booster_pack_creation_parameters(app_id,
     booster_pack_creation_parameters = dict()
 
     if is_marketable:
-        tradability_preference = 2
+        tradability_preference = 1
     else:
         tradability_preference = 3
 
