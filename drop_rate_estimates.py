@@ -55,12 +55,10 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
     drop_rate_estimates[drop_rate_field][rarity_field] = {
         (1, 1, 1): 0.6304,
         (1, 2, 1): 0.3832,
-        (1, 2, 2): 0.5560,
-        (2, 1, 1): 0.5916,
-        (2, 2, 1): 0.5067,
-        (2, 2, 2): 0.5722,
-        (2, 2, 5): 0.5000,
-        (2, 3, 1): 0.5796,
+        (1, 2, 2): 0.5718,
+        (2, 1, 1): 0.6493,
+        (2, 2, 2): 0.6200,
+        (2, 2, 5): 0.3989,
         (2, 5, 2): 0.3989,
         (3, 1, 1): 0.8013,
         (3, 2, 1): 0.7726,
@@ -131,7 +129,7 @@ def get_drop_rate_estimates(verbose=True):
 
     drop_rate_estimates = dict()
 
-    drop_rate_estimates['badges'] = 236
+    drop_rate_estimates['badges'] = 451
 
     category_field = get_category_name_for_profile_backgrounds()
     drop_rate_field = get_drop_rate_field()
@@ -139,9 +137,9 @@ def get_drop_rate_estimates(verbose=True):
 
     drop_rate_estimates[category_field] = dict()
     drop_rate_estimates[category_field][drop_rate_field] = dict()
-    drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.6271
-    drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2585
-    drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.1144
+    drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.6475
+    drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2373
+    drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.1153
 
     for rarity in rarity_fields:
         current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
@@ -151,9 +149,9 @@ def get_drop_rate_estimates(verbose=True):
 
     drop_rate_estimates[category_field] = dict()
     drop_rate_estimates[category_field][drop_rate_field] = dict()
-    drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.7458
-    drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2034
-    drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.0508
+    drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.7384
+    drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.1840
+    drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.0776
 
     for rarity in rarity_fields:
         current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
