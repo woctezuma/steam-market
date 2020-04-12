@@ -418,7 +418,7 @@ def main():
     retrieve_listings_from_scratch = True
     retrieve_market_orders_online = True
     enforced_sack_of_gems_price = None
-    minimum_allowed_sack_of_gems_price = 0.30
+    minimum_allowed_sack_of_gems_price = 0.375
     automatically_create_then_sell_booster_packs = True
     profit_threshold = 0.01  # profit in euros
     quick_check_with_tracked_booster_packs = False
