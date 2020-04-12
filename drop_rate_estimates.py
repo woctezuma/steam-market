@@ -39,7 +39,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
 
     drop_rate_estimates = dict()
 
-    drop_rate_estimates['badges'] = 240
+    drop_rate_estimates['badges'] = 451
 
     drop_rate_field = get_drop_rate_field()
     badge_count_field = get_badge_count_field()
@@ -53,22 +53,30 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
     # NB: these are the centers of the binomial proportion confidence intervals (Wilson score intervals)
     # Reference: https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval
     drop_rate_estimates[drop_rate_field][rarity_field] = {
-        (1, 1, 1): 0.6304,
+        # Patterns found for profile background and emoticons:
+        (1, 1, 1): 0.5941,
+        (2, 2, 1): 0.5790,
+        (2, 3, 1): 0.5796,
+        (3, 1, 1): 0.8036,
+        (3, 4, 3): 0.6135,
+        (4, 3, 2): 0.6384,
+        (5, 1, 1): 0.7242,
+        # Patterns only found for profile background:
         (1, 2, 1): 0.3832,
         (1, 2, 2): 0.5718,
         (2, 1, 1): 0.6493,
         (2, 2, 2): 0.6200,
         (2, 2, 5): 0.3989,
         (2, 5, 2): 0.3989,
-        (3, 1, 1): 0.8013,
-        (3, 2, 1): 0.7726,
-        (4, 3, 2): 0.6384,
-        (5, 1, 1): 0.7049,
-        (3, 4, 3): 0.5000,
-        (4, 1, 1): 0.7726,
+        (3, 2, 1): 0.7097,
+        (4, 2, 2): 0.7306,
+        # Patterns only found for emoticons:
+        (4, 1, 1): 0.7517,
         (4, 2, 1): 0.7828,
-        (4, 3, 3): 0.5731,
-        (6, 2, 2): 0.6033,
+        (4, 3, 3): 0.3742,
+        (5, 2, 2): 0.5461,
+        (6, 2, 2): 0.8024,
+        (8, 1, 1): 0.7828,
     }
 
     common_drop_rate = drop_rate_estimates[drop_rate_field][rarity_field]
@@ -78,24 +86,30 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
         drop_rate_estimates[drop_rate_field][rarity_field][pattern] = clamp_proportion(current_drop_rate)
 
     drop_rate_estimates[badge_count_field][rarity_field] = {
-        (1, 1, 1): 69,
-        (1, 2, 1): 9,
-        (1, 2, 2): 14,
-        (2, 1, 1): 18,
-        (2, 2, 1): 71,
-        (2, 2, 2): 10,
-        (2, 2, 5): 2,
+        # Patterns found for profile background and emoticons:
+        (1, 1, 1): 129,
+        (2, 2, 1): 129,
         (2, 3, 1): 15,
-        (2, 5, 2): 11,
-        (3, 1, 1): 192,
-        (3, 2, 1): 9,
+        (3, 1, 1): 347,
+        (3, 4, 3): 27,
         (4, 3, 2): 7,
-        (5, 1, 1): 23,
-        (3, 4, 3): 12,
-        (4, 1, 1): 9,
+        (5, 1, 1): 43,
+        # Patterns only found for profile background:
+        (1, 2, 1): 9,
+        (1, 2, 2): 24,
+        (2, 1, 1): 33,
+        (2, 2, 2): 17,
+        (2, 2, 5): 11,
+        (2, 5, 2): 11,
+        (3, 2, 1): 20,
+        (4, 2, 2): 7,
+        # Patterns only found for emoticons:
+        (4, 1, 1): 20,
         (4, 2, 1): 5,
-        (4, 3, 3): 3,
-        (6, 2, 2): 1,
+        (4, 3, 3): 20,
+        (5, 2, 2): 7,
+        (6, 2, 2): 16,
+        (8, 1, 1): 5,
     }
 
     num_crafted_badges_to_compute_estimates = drop_rate_estimates['badges']
