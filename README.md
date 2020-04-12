@@ -165,10 +165,16 @@ python market_utils.py
 python market_order.py
 ```
 
--   To find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included), run:
+-   To look for **free** games which i) feature trading cards (and thus crafting of booster packs), and ii) which I do not own, run:
 
 ```bash
-python market_arbitrage.py
+python free_games_with_trading_cards.py
+```
+
+-   To create packs for a **manual** selection of games, e.g. if you want to create these specific packs every day, run:
+
+```bash
+python batch_create_packs.py
 ```
 
 -   To look for games which i) are likely to have high bid orders for their booster packs, and ii) which I may not own yet, run:
@@ -177,22 +183,16 @@ python market_arbitrage.py
 python market_buzz_detector.py
 ```
 
--   To look for **free** games which i) feature trading cards (and thus crafting of booster packs), and ii) which I do not own, run:
-
-```bash
-python free_games_with_trading_cards.py
-```
-
 -   To look for potentially profitable gambles on profile backgrounds and emoticons of "Common" rarity, run:
 
 ```bash
 python market_gamble_detector.py
 ```
 
--   To create packs for a **manual** selection of games, e.g. if you want to create these specific packs every day, run:
+-   To find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included), run:
 
 ```bash
-python batch_create_packs.py
+python market_arbitrage.py
 ```
 
 -   To find market arbitrages with foil cards, e.g. buy a foil card to turn it into more gems than its cost, run:
