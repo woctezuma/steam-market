@@ -11,6 +11,12 @@ This repository contains Python code to find arbitrages on the Steam Market.
 
 ![Cover: ranking of market arbitrages](https://github.com/woctezuma/steam-market/wiki/img/rBxZxHX.png)
 
+Arbitrages could consist in:
+-   purchasing gems to craft booster packs, which are then immediately sold for more than their crafting cost,
+-   purchasing items, typically foil cards, which are then immediately turned into more gems than they are worth,
+-   purchasing games in order to produce the corresponding booster packs, with total profit greater than the game price,
+-   turning normal cards into badges, if the expected value is positive, to create items worth more than the badge cost.
+
 ## Requirements
 
 -   Install the latest version of [Python 3.X](https://www.python.org/downloads/).
