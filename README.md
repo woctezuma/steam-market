@@ -224,6 +224,7 @@ For the gamble detector, we are interested in drop-rate estimates, when crafting
 Based on the data so far (239 crafed badges):
 -   the drop-rates for Profile Backgrounds and for Emoticons are different (reject null hypothesis with 95% confidence),
 -   conditionally to C/UC/R patterns, the drop-rates may be similar (fail to reject null hypothesis with 95% confidence).
+
 where:
 -   C/UC/R patterns are the numbers of Common/Uncommon/Rare items associated with each appID.
 
