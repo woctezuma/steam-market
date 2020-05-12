@@ -140,6 +140,7 @@ def get_all_listings(all_listings=None,
     num_listings = None
 
     query_count = 0
+    # NB: if market_arbitrage_with_foil_cards.py stopped too early, then edit the start index to resume from there:
     start_index = 0
     delta_index = 100
 
