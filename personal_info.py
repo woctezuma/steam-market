@@ -14,7 +14,7 @@ def load_steam_cookie_from_disk(file_name_with_personal_info=None):
         file_name_with_personal_info = get_steam_cookie_file_name()
 
     try:
-        with open(file_name_with_personal_info, 'r') as f:
+        with open(file_name_with_personal_info, 'r', encoding='utf-8') as f:
             cookie = json.load(f)
     except FileNotFoundError:
         cookie = dict()
@@ -30,7 +30,7 @@ def save_steam_cookie_to_disk(cookie,
     is_cookie_to_be_saved = bool(cookie is not None and len(cookie) > 0)
 
     if is_cookie_to_be_saved:
-        with open(file_name_with_personal_info, 'w') as f:
+        with open(file_name_with_personal_info, 'w', encoding='utf-8') as f:
             json.dump(cookie, f)
 
     return is_cookie_to_be_saved

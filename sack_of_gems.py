@@ -41,7 +41,7 @@ def download_sack_of_gems_price(sack_of_gems_listing_file_name=None):
 
         sack_of_gems_price = ask_price
 
-        with open(sack_of_gems_listing_file_name, 'w') as f:
+        with open(sack_of_gems_listing_file_name, 'w', encoding='utf-8') as f:
             json.dump(listing_details, f)
     else:
         raise AssertionError()
@@ -60,7 +60,7 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
     else:
 
         try:
-            with open(sack_of_gems_listing_file_name, 'r') as f:
+            with open(sack_of_gems_listing_file_name, 'r', encoding='utf-8') as f:
                 listing_details = json.load(f)
 
             listing_hash = get_listing_hash_for_gems()

@@ -39,7 +39,7 @@ def save_data_from_steam_card_exchange(response,
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
     if response is not None:
-        with open(steam_card_exchange_file_name, 'w') as f:
+        with open(steam_card_exchange_file_name, 'w', encoding='utf-8') as f:
             json.dump(response, f)
 
     return
@@ -78,7 +78,7 @@ def load_data_from_steam_card_exchange(steam_card_exchange_file_name=None):
 
     try:
         print('Loading data from disk.')
-        with open(steam_card_exchange_file_name, 'r') as f:
+        with open(steam_card_exchange_file_name, 'r', encoding='utf-8') as f:
             response = json.load(f)
     except FileNotFoundError:
         print('Data could not be found on the disk.')

@@ -174,7 +174,7 @@ def download_market_order_data_batch(badge_data,
 
         if query_count >= rate_limits['max_num_queries']:
             if save_to_disk:
-                with open(market_order_output_file_name, 'w') as f:
+                with open(market_order_output_file_name, 'w', encoding='utf-8') as f:
                     json.dump(market_order_dict, f)
 
             cooldown_duration = rate_limits['cooldown']
@@ -185,7 +185,7 @@ def download_market_order_data_batch(badge_data,
         query_count += 1
 
     if save_to_disk:
-        with open(market_order_output_file_name, 'w') as f:
+        with open(market_order_output_file_name, 'w', encoding='utf-8') as f:
             json.dump(market_order_dict, f)
 
     return market_order_dict
@@ -242,7 +242,7 @@ def load_market_order_data_from_disk(market_order_output_file_name=None):
         market_order_output_file_name = get_market_order_file_name()
 
     try:
-        with open(market_order_output_file_name, 'r') as f:
+        with open(market_order_output_file_name, 'r', encoding='utf-8') as f:
             market_order_dict = json.load(f)
     except FileNotFoundError:
         market_order_dict = None

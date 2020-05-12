@@ -107,7 +107,7 @@ def load_free_apps_with_trading_cards(free_apps=None, list_of_methods=None, verb
 
 
 def load_file(file_name, verbose=True):
-    with open(file_name, 'r') as f:
+    with open(file_name, 'r', encoding='utf-8') as f:
         data = [int(line.strip()) for line in f.readlines()]
 
     if verbose:
@@ -174,7 +174,7 @@ def write_to_file(data,
                                       asf_username=asf_username,
                                       group_size=group_size)
 
-    with open(file_name, 'w') as f:
+    with open(file_name, 'w', encoding='utf-8') as f:
         print(output, file=f)
 
     if verbose:

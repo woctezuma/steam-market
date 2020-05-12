@@ -39,7 +39,7 @@ def load_steam_inventory_from_disk(profile_id=None):
         profile_id = get_my_steam_profile_id()
 
     try:
-        with open(get_steam_inventory_file_name(profile_id), 'r') as f:
+        with open(get_steam_inventory_file_name(profile_id), 'r', encoding='utf-8') as f:
             steam_inventory = json.load(f)
     except FileNotFoundError:
         steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
@@ -84,7 +84,7 @@ def download_steam_inventory(profile_id=None, save_to_disk=True):
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if save_to_disk:
-            with open(get_steam_inventory_file_name(profile_id), 'w') as f:
+            with open(get_steam_inventory_file_name(profile_id), 'w', encoding='utf-8') as f:
                 json.dump(steam_inventory, f)
     else:
         print('Inventory for profile {} could not be loaded. Status code {} was returned.'.format(profile_id,
@@ -405,7 +405,7 @@ def update_and_save_next_creation_times(creation_results,
                     app_id))
 
     if save_to_disk:
-        with open(next_creation_time_file_name, 'w') as f:
+        with open(next_creation_time_file_name, 'w', encoding='utf-8') as f:
             json.dump(next_creation_times, f)
 
     return next_creation_times
