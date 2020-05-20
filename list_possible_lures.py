@@ -137,8 +137,8 @@ def remove_app_ids_previously_processed(filtered_app_ids,
 def main():
     gem_sack_price_in_euros = 0.40
 
-    # Security
-    price_offset_in_euros = 0.0
+    # Positive value to ensure under-cutting is possible
+    price_offset_in_euros = 0.1
 
     app_ids_previously_processed = [205890, 359400, 395620, 398140, 448720, 468250, 533690, 554640, 582350, 589870,
                                     599060, 615340, 325120, 257670, 318090, 314000, 558490, 565020, 254880, 554660,
