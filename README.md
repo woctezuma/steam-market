@@ -183,6 +183,12 @@ python free_games_with_trading_cards.py
 python batch_create_packs.py
 ```
 
+-   To list appIDs of interest for which we can under-cut the lowest sell order and still hope to make a profit:
+
+```bash
+python list_possible_lures.py
+```
+
 -   To look for games which i) are likely to have high bid orders for their booster packs, and ii) which I may not own yet, run:
 
 ```bash
