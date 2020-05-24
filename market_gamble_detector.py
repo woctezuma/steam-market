@@ -397,6 +397,7 @@ def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, oth
 
     print('\n# Results for detected *potential* arbitrages\n')
     print_arbitrages(badge_arbitrages,
+                     use_numbered_bullet_points=True,
                      use_hyperlink=True)
 
     return True

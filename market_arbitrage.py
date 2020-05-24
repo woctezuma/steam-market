@@ -10,6 +10,7 @@ from market_utils import load_aggregated_badge_data
 from sack_of_gems import print_gem_price_reminder
 from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
+from utils import get_bullet_point_for_display
 from utils import get_steam_store_url
 from utils import get_steamcardexchange_url
 
@@ -228,8 +229,9 @@ def find_badge_arbitrages(badge_data,
 
 
 def print_arbitrages(badge_arbitrages,
+                     use_numbered_bullet_points=False,
                      use_hyperlink=False):
-    bullet_point = '*   '
+    bullet_point = get_bullet_point_for_display(use_numbered_bullet_points=use_numbered_bullet_points)
 
     for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
         arbitrage = badge_arbitrages[listing_hash]

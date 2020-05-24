@@ -19,6 +19,7 @@ from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_val
 from sack_of_gems import get_num_gems_per_sack_of_gems
 from sack_of_gems import load_sack_of_gems_price
 from utils import convert_listing_hash_to_app_id
+from utils import get_bullet_point_for_display
 from utils import get_goo_details_file_nam_for_for_foil_cards
 from utils import get_listing_details_output_file_name_for_foil_cards
 from utils import get_listing_output_file_name_for_foil_cards
@@ -553,7 +554,8 @@ def apply_workflow_for_foil_cards(retrieve_listings_from_scratch=False,
                                                                            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
                                                                            verbose=verbose)
 
-    print_arbitrages_for_foil_cards(arbitrages)
+    print_arbitrages_for_foil_cards(arbitrages,
+                                    use_numbered_bullet_points=True)
 
     return True
 
@@ -756,8 +758,9 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
     return arbitrages
 
 
-def print_arbitrages_for_foil_cards(arbitrages):
-    bullet_point = '*   '
+def print_arbitrages_for_foil_cards(arbitrages,
+                                    use_numbered_bullet_points=False):
+    bullet_point = get_bullet_point_for_display(use_numbered_bullet_points=use_numbered_bullet_points)
 
     sorted_arbitrages = sorted(arbitrages.keys(),
                                key=lambda x: arbitrages[x]['profit'],

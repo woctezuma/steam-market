@@ -261,6 +261,7 @@ def main(retrieve_listings_from_scratch=False,
 
     print('\n# Results for detected *potential* arbitrages\n')
     print_arbitrages(badge_arbitrages,
+                     use_numbered_bullet_points=True,
                      use_hyperlink=True)
 
     return

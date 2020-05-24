@@ -200,5 +200,25 @@ def get_category_name_for_emoticons():
     return category_name
 
 
+def get_bullet_point_for_display(use_numbered_bullet_points=False):
+    # Return a string, which consists of a bullet point followed by three spaces, to display lists in Markdown format.
+    #
+    # NB: if the list of bullet points is long, Numbered bullet points improve readability on Github Gist.
+
+    if use_numbered_bullet_points:
+        bullet_point_character = '1.'
+    else:
+        bullet_point_character = '*'
+
+    three_spaces_indentation = '   '
+
+    bullet_point = '{}{}'.format(
+        bullet_point_character,
+        three_spaces_indentation,
+    )
+
+    return bullet_point
+
+
 if __name__ == '__main__':
     main()
