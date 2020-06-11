@@ -65,6 +65,11 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
 
     print('Parsing the one-line javascript code displayed with the web browser.')
 
+    # Strip the start
+    badges_as_str = badges_as_str.strip('[{')
+    # Strip the end
+    badges_as_str = badges_as_str.strip('}],')
+    # Split into tokens
     badges_as_list = badges_as_str.split('},{')
 
     for badge_as_str in badges_as_list:
