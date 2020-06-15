@@ -115,9 +115,9 @@ def create_packs_for_app_ids(manually_selected_app_ids,
     return creation_results, next_creation_times
 
 
-def main(is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
+def main(retrieve_listings_from_scratch=False,  # Set to True & run once if you get "No match found for" games you own.
+         is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
          is_marketable=True):  # Caveat: if False, packs will be crafted with unmarketable gems!
-    retrieve_listings_from_scratch = False
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     quick_check_with_tracked_booster_packs = False
@@ -150,5 +150,6 @@ def main(is_a_simulation=True,  # Caveat: if False, then packs will be crafted, 
 
 
 if __name__ == '__main__':
-    main(is_a_simulation=False,
+    main(retrieve_listings_from_scratch=False,
+         is_a_simulation=False,
          is_marketable=True)
