@@ -7,25 +7,9 @@ from market_arbitrage import get_filtered_badge_data
 
 def get_manually_selected_app_ids():
     manually_selected_app_ids = [
-        270010,  # Time Rifters (6 cards, 3 C, 1 UC, 1 R)
-        # 325120,  # Notch - The Innocent LunA: Eclipsed SinnerS (7 cards, 2 C, 5 UC, 2 R)
-        # 409070,  # Fist Slash: Of Ultimate Fury (6 cards, 3 C, 2 UC, 1R)
-        254880,  # MoonBase Commander (6 cards, 2 C, 1 UC, 1 R)
-        554660,  # Puzzle Poker (6 cards, 1 C, 1 UC, 1 R)
-        # 307050,  # Shan Gui (5 cards, 1 C, 2 UC, 2 R)
-        # 339000,  # Ukrainian Ninja (5 cards, 2 C, 3 UC, 1 R)
-        210170,  # Spirits (6 cards, 1 C, 1 UC, 1 R)
-        351090,  # Regency Solitaire (6 cards, 3 C, 1 UC, 1 R)
-        # 499950,  # Metal Assault - Gigaslave - Europe (6 cards, 1 C, 2 UC, 1 R)
-        # 272330,  # Shadow Blade: Reload (6 cards, 3 C, 1 UC, 1 R)
-        # 398140,  # Ino (5 cards, 1 C, 1 UC, 1 R)
-
-        562260,  # WAVESHAPER
-        383690,  # Mu Complex
-        558490,  # Crossroad Mysteries: The Broken Deal
-
-        342250,  # Aspectus: Rinascimento Chronicles
-        522340,  # Ghostlords (8 cards, emoticons: 4C, 3 UC, 3R)
+        1286830,  # STAR WARS™: The Old Republic™ (750 gems)
+        33680,  # Eversion (1000 gems)
+        520680,  # Lost Cities (1200 gems)
     ]
 
     return manually_selected_app_ids
