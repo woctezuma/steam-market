@@ -220,6 +220,23 @@ def get_market_orders(filtered_badge_data,
                                                              market_order_output_file_name=market_order_output_file_name,
                                                              listing_details_output_file_name=listing_details_output_file_name)
 
+    # After the **most comprehensive** dictionary of market orders has been loaded from disk by:
+    #       `load_market_order_data_from_disk()`
+    # then partially updated, and saved to disk by:
+    #       `download_market_order_data_batch()`
+    # we can edit the dictionary to filter out listing hashes which were not requested by the user, following the input:
+    #       `filtered_badge_data`
+    # and finally return the trimmed dictionary as the output of the current function call:
+    #       `get_market_orders(filtered_badge_data, ...)`
+
+    available_listing_hashes = [listing_hash for listing_hash in market_order_dict]
+
+    selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
+
+    for listing_hash in available_listing_hashes:
+        if listing_hash not in selected_listing_hashes:
+            del market_order_dict[listing_hash]
+
     return market_order_dict
 
 
