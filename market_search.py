@@ -204,7 +204,10 @@ def get_all_listings(all_listings=None,
                                                                                          start_index,
                                                                                          query_count,
                                                                                          ))
-            break
+            if status_code is None:
+                continue
+            else:
+                break
 
         all_listings.update(listings)
 
