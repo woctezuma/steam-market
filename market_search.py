@@ -160,11 +160,18 @@ def get_all_listings(all_listings=None,
             time.sleep(cooldown_duration)
             query_count = 0
 
-        if has_secured_cookie:
-            resp_data = requests.get(url, params=req_data, cookies=cookie)
-        else:
-            resp_data = requests.get(url, params=req_data)
-        status_code = resp_data.status_code
+        try:
+            if has_secured_cookie:
+                resp_data = requests.get(url, params=req_data, cookies=cookie)
+            else:
+                resp_data = requests.get(url, params=req_data)
+        except requests.exceptions.ConnectionError:
+            resp_data = None
+
+        try:
+            status_code = resp_data.status_code
+        except AttributeError:
+            status_code = None
 
         start_index += delta_index
         query_count += 1
