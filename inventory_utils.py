@@ -10,9 +10,7 @@ from utils import get_data_folder, convert_listing_hash_to_app_id, get_next_crea
 
 
 def get_my_steam_profile_id():
-    my_profile_id = '76561198028705366'
-
-    return my_profile_id
+    return '76561198028705366'
 
 
 def get_steam_inventory_url(profile_id=None, app_id=753, context_id=6):
@@ -29,9 +27,7 @@ def get_steam_inventory_url(profile_id=None, app_id=753, context_id=6):
 
 
 def get_steam_inventory_file_name(profile_id):
-    steam_inventory_file_name = get_data_folder() + 'inventory_' + str(profile_id) + '.json'
-
-    return steam_inventory_file_name
+    return get_data_folder() + 'inventory_' + str(profile_id) + '.json'
 
 
 def load_steam_inventory_from_disk(profile_id=None):
@@ -98,27 +94,19 @@ def get_session_id(cookie=None):
     if cookie is None:
         cookie = get_cookie_dict()
 
-    session_id = cookie['sessionid']
-
-    return session_id
+    return cookie['sessionid']
 
 
 def get_steam_booster_pack_creation_url():
-    booster_pack_creation_url = 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
-
-    return booster_pack_creation_url
+    return 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
 
 
 def get_booster_pack_creation_parameters(app_id,
                                          session_id,
                                          is_marketable=True):
-    booster_pack_creation_parameters = dict()
+    booster_pack_creation_parameters = {}
 
-    if is_marketable:
-        tradability_preference = 1
-    else:
-        tradability_preference = 3
-
+    tradability_preference = 1 if is_marketable else 3
     booster_pack_creation_parameters['sessionid'] = str(session_id)
     booster_pack_creation_parameters['appid'] = str(app_id)
     booster_pack_creation_parameters['series'] = '1'
@@ -175,9 +163,7 @@ def create_booster_pack(app_id,
 
 
 def get_steam_market_sell_url():
-    steam_market_sell_url = 'https://steamcommunity.com/market/sellitem/'
-
-    return steam_market_sell_url
+    return 'https://steamcommunity.com/market/sellitem/'
 
 
 def get_market_sell_parameters(asset_id,
@@ -198,16 +184,14 @@ def get_market_sell_parameters(asset_id,
 def get_request_headers():
     # Reference: https://dev.doctormckay.com/topic/287-automatic-market-seller/
 
-    request_headers = {
+    return {
         'Origin': 'https://steamcommunity.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'Referer': 'https://steamcommunity.com/my/inventory/',
         'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3'
+        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
     }
-
-    return request_headers
 
 
 def sell_booster_pack(asset_id,
@@ -271,7 +255,7 @@ def retrieve_asset_id(listing_hash,
 
     descriptions = steam_inventory['rgDescriptions']
 
-    matched_element = dict()
+    matched_element = {}
 
     for element in descriptions:
         if descriptions[element]['market_hash_name'] == listing_hash:
@@ -320,7 +304,7 @@ def retrieve_asset_id(listing_hash,
 
 
 def create_booster_packs_for_batch(listing_hashes):
-    results = dict()
+    results = {}
 
     for listing_hash in listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -334,7 +318,7 @@ def create_booster_packs_for_batch(listing_hashes):
 def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
                                  update_steam_inventory=True,
                                  focus_on_marketable_items=True):
-    results = dict()
+    results = {}
 
     steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
 

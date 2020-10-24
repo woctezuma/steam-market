@@ -9,15 +9,11 @@ from utils import get_sack_of_gems_listing_file_name
 
 
 def get_listing_hash_for_gems():
-    listing_hash_for_gems = '753-Sack of Gems'
-
-    return listing_hash_for_gems
+    return '753-Sack of Gems'
 
 
 def get_num_gems_per_sack_of_gems():
-    num_gems_per_sack_of_gems = 1000
-
-    return num_gems_per_sack_of_gems
+    return 1000
 
 
 def download_sack_of_gems_price(sack_of_gems_listing_file_name=None):
@@ -96,9 +92,7 @@ def get_gem_price(enforced_sack_of_gems_price=None,
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
-    gem_price = sack_of_gems_price / num_gems_per_sack_of_gems
-
-    return gem_price
+    return sack_of_gems_price / num_gems_per_sack_of_gems
 
 
 def print_gem_price_reminder(enforced_sack_of_gems_price=None,
@@ -118,9 +112,7 @@ def get_gem_amount_required_to_craft_badge():
     # This is a constant value of 2000 gems for a badge, because a badge requires a set of N cards, which are obtained
     # after opening N/3 booster packs, and a booster pack costs 6000/N gems.
 
-    gem_amount_required_to_craft_badge = 2000
-
-    return gem_amount_required_to_craft_badge
+    return 2000
 
 
 def main():

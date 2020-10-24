@@ -61,7 +61,7 @@ def get_sub_string(input_str, key_start_str, key_end_str=None):
 
 
 def parse_javascript_one_liner(badges_as_str, verbose=False):
-    badge_creation_details = dict()
+    badge_creation_details = {}
 
     print('Parsing the one-line javascript code displayed with the web browser.')
 
@@ -72,9 +72,9 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
     # Split into tokens
     badges_as_list = badges_as_str.split('},{')
 
-    for badge_as_str in badges_as_list:
+    field_separator = ','
 
-        field_separator = ','
+    for badge_as_str in badges_as_list:
 
         app_id = get_sub_string(badge_as_str, '"appid":', field_separator + '"name":')
         app_name = get_sub_string(badge_as_str, '"name":', field_separator + '"series":')

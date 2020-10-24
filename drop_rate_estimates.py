@@ -10,21 +10,15 @@ from utils import get_category_name_for_profile_backgrounds, get_category_name_f
 
 
 def get_drop_rate_field():
-    drop_rate_field = 'drop_rate'
-
-    return drop_rate_field
+    return 'drop_rate'
 
 
 def get_badge_count_field():
-    badge_count_field = 'badge_count'
-
-    return badge_count_field
+    return 'badge_count'
 
 
 def get_rarity_fields():
-    rarity_fields = ['common', 'uncommon', 'rare']
-
-    return rarity_fields
+    return ['common', 'uncommon', 'rare']
 
 
 def clamp_proportion(input_proportion):
@@ -37,16 +31,14 @@ def clamp_proportion(input_proportion):
 def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
     # Drop-rate estimates conditionally on the item rarity pattern C/UC/R (the numbers of possible items of each rarity)
 
-    drop_rate_estimates = dict()
-
-    drop_rate_estimates['badges'] = 777
+    drop_rate_estimates = {'badges': 777}
 
     drop_rate_field = get_drop_rate_field()
     badge_count_field = get_badge_count_field()
     rarity_field = 'common'
 
-    drop_rate_estimates[drop_rate_field] = dict()
-    drop_rate_estimates[badge_count_field] = dict()
+    drop_rate_estimates[drop_rate_field] = {}
+    drop_rate_estimates[badge_count_field] = {}
 
     # Drop rates for common rarity based on the item rarity pattern (C, UC, R):
     #
@@ -151,16 +143,14 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
 def get_drop_rate_estimates(verbose=True):
     # Drop-rate estimates conditionally on the category (profile backgrounds, emoticons)
 
-    drop_rate_estimates = dict()
-
-    drop_rate_estimates['badges'] = 777
+    drop_rate_estimates = {'badges': 777}
 
     category_field = get_category_name_for_profile_backgrounds()
     drop_rate_field = get_drop_rate_field()
     rarity_fields = get_rarity_fields()
 
-    drop_rate_estimates[category_field] = dict()
-    drop_rate_estimates[category_field][drop_rate_field] = dict()
+    drop_rate_estimates[category_field] = {}
+    drop_rate_estimates[category_field][drop_rate_field] = {}
     drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.6607
     drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2202
     drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.1216
@@ -171,8 +161,8 @@ def get_drop_rate_estimates(verbose=True):
 
     category_field = get_category_name_for_emoticons()
 
-    drop_rate_estimates[category_field] = dict()
-    drop_rate_estimates[category_field][drop_rate_field] = dict()
+    drop_rate_estimates[category_field] = {}
+    drop_rate_estimates[category_field][drop_rate_field] = {}
     drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.7235
     drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.1946
     drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.0844
@@ -190,13 +180,26 @@ def get_drop_rate_estimates(verbose=True):
             get_category_name_for_profile_backgrounds(),
             get_category_name_for_emoticons(),
         ]:
-            print('- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f} (expected: 1.00)'.format(
-                category_field,
-                drop_rate_estimates[category_field][drop_rate_field]['common'],
-                drop_rate_estimates[category_field][drop_rate_field]['uncommon'],
-                drop_rate_estimates[category_field][drop_rate_field]['rare'],
-                sum(p for p in drop_rate_estimates[category_field][drop_rate_field].values())
-            ))
+            print(
+                '- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f} (expected: 1.00)'.format(
+                    category_field,
+                    drop_rate_estimates[category_field][drop_rate_field][
+                        'common'
+                    ],
+                    drop_rate_estimates[category_field][drop_rate_field][
+                        'uncommon'
+                    ],
+                    drop_rate_estimates[category_field][drop_rate_field][
+                        'rare'
+                    ],
+                    sum(
+                        drop_rate_estimates[category_field][
+                            drop_rate_field
+                        ].values()
+                    ),
+                )
+            )
+
 
     return drop_rate_estimates
 

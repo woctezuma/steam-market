@@ -117,9 +117,7 @@ def get_listings(listing_output_file_name,
         # Caveat: this update is only for items of Common rarity!
         update_all_listings_for_items_other_than_cards(rarity='common')
 
-    all_listings = load_all_listings(listing_output_file_name)
-
-    return all_listings
+    return load_all_listings(listing_output_file_name)
 
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
@@ -250,7 +248,7 @@ def count_listing_hashes_per_app_id(all_listings):
     # such rarity. This information is useful to know whether a gamble is worth a try: the more items of Common rarity,
     # the harder it is to receive the item which you are specifically after, by crafting a badge.
 
-    listing_hashes_per_app_id = dict()
+    listing_hashes_per_app_id = {}
 
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -295,10 +293,10 @@ def enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common,
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_uncommon)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_rare)
 
-    item_rarity_patterns_per_app_id = dict()
+    item_rarity_patterns_per_app_id = {}
 
     for app_id in all_app_ids:
-        item_rarity_patterns_per_app_id[app_id] = dict()
+        item_rarity_patterns_per_app_id[app_id] = {}
 
         try:
             num_common = listing_hashes_per_app_id_for_common[app_id]

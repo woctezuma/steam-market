@@ -49,7 +49,7 @@ def convert_to_badges(filtered_listing_hashes,
 
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
-        badge_data[app_id] = dict()
+        badge_data[app_id] = {}
         badge_data[app_id]['listing_hash'] = listing_hash
 
     return badge_data
@@ -57,7 +57,7 @@ def convert_to_badges(filtered_listing_hashes,
 
 def filter_out_unmarketable_packs(market_order_dict):
     marketable_market_order_dict = dict()
-    unknown_market_order_dict = dict()
+    unknown_market_order_dict = {}
 
     for listing_hash in market_order_dict:
         try:
@@ -79,11 +79,9 @@ def sort_according_to_buzz(market_order_dict,
     if marketable_market_order_dict is None:
         marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
-    hashes_for_best_bid = sorted(list(marketable_market_order_dict),
+    return sorted(list(marketable_market_order_dict),
                                  reverse=True,
                                  key=lambda x: market_order_dict[x]['bid'])
-
-    return hashes_for_best_bid
 
 
 def print_packs_with_high_buzz(hashes_for_best_bid,

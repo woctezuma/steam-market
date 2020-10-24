@@ -12,29 +12,23 @@ from utils import get_listing_output_file_name
 
 
 def get_steam_market_search_url():
-    market_search_url = 'https://steamcommunity.com/market/search/render/'
-
-    return market_search_url
+    return 'https://steamcommunity.com/market/search/render/'
 
 
 def get_tag_item_class_no_for_trading_cards():
-    tag_item_class_no = 2
-    return tag_item_class_no
+    return 2
 
 
 def get_tag_item_class_no_for_profile_backgrounds():
-    tag_item_class_no = 3
-    return tag_item_class_no
+    return 3
 
 
 def get_tag_item_class_no_for_emoticons():
-    tag_item_class_no = 4
-    return tag_item_class_no
+    return 4
 
 
 def get_tag_item_class_no_for_booster_packs():
-    tag_item_class_no = 5
-    return tag_item_class_no
+    return 5
 
 
 def get_tag_drop_rate_str(rarity=None):
@@ -51,9 +45,7 @@ def get_tag_drop_rate_str(rarity=None):
         # Rarity: Common
         tag_drop_rate_no = 0
 
-    tag_drop_rate_str = 'tag_droprate_{}'.format(tag_drop_rate_no)
-
-    return tag_drop_rate_str
+    return 'tag_droprate_{}'.format(tag_drop_rate_no)
 
 
 def get_search_parameters(start_index=0,
@@ -79,20 +71,21 @@ def get_search_parameters(start_index=0,
     column_to_sort_by = 'name'
     sort_direction = 'asc'
 
-    params = dict()
+    params = {
+        'norender': '1',
+        'category_753_Game[]': 'any',
+        'category_753_droprate[]': tag_drop_rate_str,
+        'category_753_item_class[]': 'tag_item_class_'
+        + str(tag_item_class_no),
+        'appid': '753',
+        'sort_column': column_to_sort_by,
+        'sort_dir': sort_direction,
+        'start': str(start_index),
+        'count': str(delta_index),
+    }
 
-    params['norender'] = '1'
-    params['category_753_Game[]'] = 'any'
-    params['category_753_droprate[]'] = tag_drop_rate_str
-    params['category_753_item_class[]'] = 'tag_item_class_' + str(tag_item_class_no)
-    params['appid'] = '753'
-    params['sort_column'] = column_to_sort_by
-    params['sort_dir'] = sort_direction
-    params['start'] = str(start_index)
-    params['count'] = str(delta_index)
 
     if tag_item_class_no == get_tag_item_class_no_for_trading_cards():
-
         if is_foil_trading_card:
             params['category_753_cardborder[]'] = 'tag_cardborder_1'
         else:
@@ -135,7 +128,7 @@ def get_all_listings(all_listings=None,
     rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
     if all_listings is None:
-        all_listings = dict()
+        all_listings = {}
 
     num_listings = None
 
@@ -190,11 +183,11 @@ def get_all_listings(all_listings=None,
             else:
                 num_listings = num_listings_based_on_latest_query
 
-            listings = dict()
+            listings = {}
             for listing in result['results']:
                 listing_hash = listing['hash_name']
 
-                listings[listing_hash] = dict()
+                listings[listing_hash] = {}
                 listings[listing_hash]['sell_listings'] = listing['sell_listings']
                 listings[listing_hash]['sell_price'] = listing['sell_price']
                 listings[listing_hash]['sell_price_text'] = listing['sell_price_text']
@@ -269,7 +262,7 @@ def load_all_listings(listing_output_file_name=None):
             all_listings = json.load(f)
     except FileNotFoundError:
         print('File {} not found. Initializing listings with an empty dictionary.'.format(listing_output_file_name))
-        all_listings = dict()
+        all_listings = {}
 
     return all_listings
 

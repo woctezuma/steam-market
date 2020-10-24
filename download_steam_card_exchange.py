@@ -11,26 +11,20 @@ from utils import get_steam_card_exchange_file_name
 def get_current_unix_time_in_ms():
     # Reference: https://stackoverflow.com/a/56394660
 
-    current_unix_time_in_ms = time.time_ns() // 1000000
-
-    return current_unix_time_in_ms
+    return time.time_ns() // 1000000
 
 
 def get_steamcardexchange_api_end_point_url():
-    steamcardexchange_api_end_point_url = 'https://www.steamcardexchange.net/api/request.php'
-
-    return steamcardexchange_api_end_point_url
+    return 'https://www.steamcardexchange.net/api/request.php'
 
 
 def get_steamcardexchange_api_params():
     current_unix_time_in_ms = get_current_unix_time_in_ms()
 
-    steamcardexchange_api_params = {
+    return {
         'GetBoosterPrices': '',
         '_': str(current_unix_time_in_ms),
     }
-
-    return steamcardexchange_api_params
 
 
 def save_data_from_steam_card_exchange(response,
@@ -89,9 +83,7 @@ def load_data_from_steam_card_exchange(steam_card_exchange_file_name=None):
 
 
 def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set):
-    gem_amount_required_to_craft_booster_pack = 6000 / num_cards_per_set
-
-    return gem_amount_required_to_craft_booster_pack
+    return 6000 / num_cards_per_set
 
 
 def parse_data_from_steam_card_exchange(response=None,

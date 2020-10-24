@@ -12,9 +12,7 @@ from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_na
 def determine_whether_listing_hash_is_dubious(listing_hash):
     dubious_str = '#Economy_TradingCards_'
 
-    listing_hash_is_dubious = bool(dubious_str in listing_hash)
-
-    return listing_hash_is_dubious
+    return bool(dubious_str in listing_hash)
 
 
 def filter_out_dubious_listing_hashes(all_listings,
@@ -23,7 +21,7 @@ def filter_out_dubious_listing_hashes(all_listings,
     #   362680-Fran Bow #Economy_TradingCards_ItemType_BoosterPack
     #   844870-#Economy_TradingCards_Type_GameType
 
-    filtered_listings = dict()
+    filtered_listings = {}
 
     for listing_hash in all_listings.keys():
         individual_market_listing = all_listings[listing_hash]
@@ -119,7 +117,7 @@ def aggregate_badge_data(badge_creation_details,
 
     badge_app_ids = list(badge_creation_details.keys())
 
-    aggregated_badge_data = dict()
+    aggregated_badge_data = {}
 
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]['name']
@@ -138,7 +136,7 @@ def aggregate_badge_data(badge_creation_details,
             sell_price_in_cents = all_listings[listing_hash]['sell_price']
             sell_price_in_euros = sell_price_in_cents / 100
 
-        aggregated_badge_data[app_id] = dict()
+        aggregated_badge_data[app_id] = {}
         aggregated_badge_data[app_id]['name'] = app_name
         aggregated_badge_data[app_id]['listing_hash'] = listing_hash
         aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
@@ -167,14 +165,14 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
 
     retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
-    aggregated_badge_data = aggregate_badge_data(badge_creation_details,
-                                                 badge_matches,
-                                                 all_listings=all_listings,
-                                                 enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                 minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                 retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
-
-    return aggregated_badge_data
+    return aggregate_badge_data(
+        badge_creation_details,
+        badge_matches,
+        all_listings=all_listings,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+    )
 
 
 def populate_random_samples_of_badge_data(badge_data=None, num_samples=50):

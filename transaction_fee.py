@@ -1,17 +1,13 @@
 def get_steam_transaction_fee():
     # Reference: https://support.steampowered.com/kb_article.php?ref=6088-UDXM-7214#steamfee
 
-    steam_transaction_fee = 0.05
-
-    return steam_transaction_fee
+    return 0.05
 
 
 def get_game_specific_transaction_fee():
     # Reference: https://support.steampowered.com/kb_article.php?ref=6088-UDXM-7214#steamfee
 
-    game_specific_transaction_fee = 0.10
-
-    return game_specific_transaction_fee
+    return 0.10
 
 
 def get_ground_truth_sell_price_without_fee(sell_price_including_fee):

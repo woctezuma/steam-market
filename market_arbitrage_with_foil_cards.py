@@ -26,9 +26,7 @@ from utils import get_listing_output_file_name_for_foil_cards
 
 
 def get_steam_goo_value_url():
-    steam_goo_value_url = 'https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/'
-
-    return steam_goo_value_url
+    return 'https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/'
 
 
 def get_item_type_no_for_trading_cards(listing_hash=None,
@@ -125,13 +123,11 @@ def get_steam_goo_value_parameters(app_id,
 
     border_color = get_border_color_no_for_trading_cards(is_foil=is_foil)
 
-    params = dict()
-
-    params['appid'] = str(app_id)
-    params['item_type'] = item_type
-    params['border_color'] = border_color
-
-    return params
+    return {
+        'appid': str(app_id),
+        'item_type': item_type,
+        'border_color': border_color,
+    }
 
 
 def query_goo_value(app_id,
@@ -160,11 +156,10 @@ def query_goo_value(app_id,
 
         goo_value = int(result['goo_value'])
 
-        if verbose:
-            if goo_value > 0:
-                print('AppID: {} ; Item type: {} ; Goo value: {} gems'.format(app_id,
-                                                                              item_type,
-                                                                              goo_value))
+        if verbose and goo_value > 0:
+            print('AppID: {} ; Item type: {} ; Goo value: {} gems'.format(app_id,
+                                                                          item_type,
+                                                                          goo_value))
 
     else:
         goo_value = None
@@ -191,7 +186,7 @@ def get_listings_for_foil_cards(retrieve_listings_from_scratch,
 
 def group_listing_hashes_by_app_id(all_listings,
                                    verbose=True):
-    groups_by_app_id = dict()
+    groups_by_app_id = {}
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
@@ -265,13 +260,11 @@ def find_representative_listing_hashes(groups_by_app_id,
 def find_eligible_listing_hashes(all_listings):
     # List eligible listing hashes (positive ask volume, and positive ask price)
 
-    eligible_listing_hashes = [listing_hash
+    return [listing_hash
                                for listing_hash in all_listings
                                if all_listings[listing_hash]['sell_listings'] > 0
                                and all_listings[listing_hash]['sell_price'] > 0
                                ]
-
-    return eligible_listing_hashes
 
 
 def filter_listings_with_arbitrary_price_threshold(all_listings,
@@ -307,7 +300,7 @@ def load_all_goo_details(goo_details_file_name=None,
         with open(goo_details_file_name, 'r', encoding='utf-8') as f:
             all_goo_details = json.load(f)
     except FileNotFoundError:
-        all_goo_details = dict()
+        all_goo_details = {}
 
     if verbose:
         print('Loading {} goo details from disk.'.format(len(all_goo_details)))
@@ -356,13 +349,12 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(filter
         for app_id in previously_downloaded_all_goo_details
     ]
 
-    filtered_cheapest_listing_hashes = [
+    return [
         listing_hash
         for listing_hash in filtered_cheapest_listing_hashes
-        if convert_listing_hash_to_app_id(listing_hash) not in app_ids_with_previously_downloaded_goo_details
+        if convert_listing_hash_to_app_id(listing_hash)
+        not in app_ids_with_previously_downloaded_goo_details
     ]
-
-    return filtered_cheapest_listing_hashes
 
 
 def propagate_filter_to_representative_listing_hashes(listing_hashes_to_propagate_to,
@@ -372,13 +364,12 @@ def propagate_filter_to_representative_listing_hashes(listing_hashes_to_propagat
         for listing_hash in listing_hashes_to_propagate_from
     ]
 
-    filtered_representative_listing_hashes = [
+    return [
         listing_hash
         for listing_hash in listing_hashes_to_propagate_to
-        if convert_listing_hash_to_app_id(listing_hash) in filtered_app_ids_based_on_price_threshold
+        if convert_listing_hash_to_app_id(listing_hash)
+        in filtered_app_ids_based_on_price_threshold
     ]
-
-    return filtered_representative_listing_hashes
 
 
 def try_again_to_download_item_type(app_ids_with_unreliable_goo_details,
@@ -587,9 +578,7 @@ def compute_unrewarding_threshold_in_gems(sack_of_gems_price_in_euros=None,
 
     minimal_ask = get_minimal_ask_price_in_euros_on_steam_market()
 
-    unrewarding_threshold_in_gems = minimal_ask * num_gems_per_sack_of_gems / sack_of_gems_price_in_euros
-
-    return unrewarding_threshold_in_gems
+    return minimal_ask * num_gems_per_sack_of_gems / sack_of_gems_price_in_euros
 
 
 def discard_necessarily_unrewarding_app_ids(all_goo_details,
@@ -709,7 +698,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
 
     sack_of_gems_price_in_cents = 100 * sack_of_gems_price_in_euros
 
-    arbitrages = dict()
+    arbitrages = {}
 
     for listing_hash in eligible_listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -747,11 +736,12 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
         is_arbitrage = bool(profit_in_cents > 0)
 
         if is_arbitrage:
-            arbitrage = dict()
-            arbitrage['profit'] = profit_in_cents / 100
-            arbitrage['ask'] = ask_in_cents / 100
-            arbitrage['goo_amount'] = goo_value_in_gems
-            arbitrage['goo_value'] = goo_value_in_cents / 100
+            arbitrage = {
+                'profit': profit_in_cents / 100,
+                'ask': ask_in_cents / 100,
+                'goo_amount': goo_value_in_gems,
+                'goo_value': goo_value_in_cents / 100,
+            }
 
             arbitrages[listing_hash] = arbitrage
 
@@ -897,9 +887,7 @@ def find_cheapest_listing_hash_for_app_id(app_id,
     listing_hashes_for_app_id = groups_by_app_id[app_id]
     cheapest_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(cheapest_listing_hashes)
 
-    cheapest_listing_hash_for_app_id = list(cheapest_listing_hash_for_app_id_as_a_set)[0]
-
-    return cheapest_listing_hash_for_app_id
+    return list(cheapest_listing_hash_for_app_id_as_a_set)[0]
 
 
 def find_representative_listing_hash_for_app_id(app_id,
@@ -929,9 +917,7 @@ def find_representative_listing_hash_for_app_id(app_id,
     # Sort with respect to lexicographical order.
     sorted_representative_listing_hash_for_app_id_as_list = sorted(representative_listing_hash_for_app_id_as_a_set)
 
-    representative_listing_hash_for_app_id = list(sorted_representative_listing_hash_for_app_id_as_list)[0]
-
-    return representative_listing_hash_for_app_id
+    return list(sorted_representative_listing_hash_for_app_id_as_list)[0]
 
 
 def find_item_type_for_app_id(app_id,
@@ -953,9 +939,7 @@ def find_item_type_for_app_id(app_id,
                                                                                          dictionary_of_representative_listing_hashes)
 
     listing_details = all_listing_details[representative_listing_hash_for_app_id]
-    item_type = listing_details['item_type_no']
-
-    return item_type
+    return listing_details['item_type_no']
 
 
 def download_goo_value_for_app_id(app_id,
@@ -972,11 +956,9 @@ def download_goo_value_for_app_id(app_id,
                                           listing_details_output_file_name,
                                           dictionary_of_representative_listing_hashes)
 
-    goo_value = query_goo_value(app_id=app_id,
+    return query_goo_value(app_id=app_id,
                                 item_type=item_type,
                                 verbose=verbose)
-
-    return goo_value
 
 
 def build_dictionary_of_representative_listing_hashes(all_listing_details=None,
@@ -988,7 +970,7 @@ def build_dictionary_of_representative_listing_hashes(all_listing_details=None,
         all_listing_details = load_all_listing_details(
             listing_details_output_file_name=listing_details_output_file_name)
 
-    dictionary_of_representative_listing_hashes = dict()
+    dictionary_of_representative_listing_hashes = {}
 
     for listing_hash in all_listing_details:
         app_id = convert_listing_hash_to_app_id(listing_hash)

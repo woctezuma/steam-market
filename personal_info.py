@@ -4,9 +4,7 @@ import json
 
 
 def get_steam_cookie_file_name():
-    steam_cookie_file_name = 'personal_info.json'
-
-    return steam_cookie_file_name
+    return 'personal_info.json'
 
 
 def load_steam_cookie_from_disk(file_name_with_personal_info=None):
@@ -17,7 +15,7 @@ def load_steam_cookie_from_disk(file_name_with_personal_info=None):
         with open(file_name_with_personal_info, 'r', encoding='utf-8') as f:
             cookie = json.load(f)
     except FileNotFoundError:
-        cookie = dict()
+        cookie = {}
 
     return cookie
 
@@ -78,7 +76,11 @@ def update_and_save_cookie_to_disk_if_values_changed(cookie,
     relevant_fields = relevant_fields.intersection(cookie.keys())
     relevant_fields = relevant_fields.intersection(dict_with_new_values.keys())
 
-    is_cookie_to_be_updated = any([dict_with_new_values[field] != cookie[field] for field in relevant_fields])
+    is_cookie_to_be_updated = any(
+        dict_with_new_values[field] != cookie[field]
+        for field in relevant_fields
+    )
+
 
     if is_cookie_to_be_updated:
         cookie = update_cookie_dict(original_cookie=cookie,

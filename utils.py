@@ -20,9 +20,7 @@ def get_badge_creation_file_name(from_javascript=False):
 
 
 def get_steam_card_exchange_file_name():
-    steam_card_exchange_file_name = get_data_folder() + 'steam_card_exchange.json'
-
-    return steam_card_exchange_file_name
+    return get_data_folder() + 'steam_card_exchange.json'
 
 
 def get_listing_output_file_name_suffix(tag_drop_rate_str=None,
@@ -45,8 +43,12 @@ def get_listing_output_file_name_for_profile_backgrounds(tag_drop_rate_str=None,
     suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
                                                  rarity=rarity)
 
-    listing_output_file_name = get_data_folder() + 'listings_for_profile_backgrounds' + suffix + '.json'
-    return listing_output_file_name
+    return (
+        get_data_folder()
+        + 'listings_for_profile_backgrounds'
+        + suffix
+        + '.json'
+    )
 
 
 def get_listing_output_file_name_for_emoticons(tag_drop_rate_str=None,
@@ -54,71 +56,55 @@ def get_listing_output_file_name_for_emoticons(tag_drop_rate_str=None,
     suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
                                                  rarity=rarity)
 
-    listing_output_file_name = get_data_folder() + 'listings_for_emoticons' + suffix + '.json'
-    return listing_output_file_name
+    return get_data_folder() + 'listings_for_emoticons' + suffix + '.json'
 
 
 def get_listing_output_file_name_for_foil_cards():
-    listing_output_file_name = get_data_folder() + 'listings_for_foil_cards.json'
-    return listing_output_file_name
+    return get_data_folder() + 'listings_for_foil_cards.json'
 
 
 def get_listing_output_file_name():
-    listing_output_file_name = get_data_folder() + 'listings.json'
-    return listing_output_file_name
+    return get_data_folder() + 'listings.json'
 
 
 def get_listing_details_output_file_name_for_profile_backgrounds():
-    listing_details_output_file_name = get_data_folder() + 'listing_details_for_profile_backgrounds.json'
-    return listing_details_output_file_name
+    return get_data_folder() + 'listing_details_for_profile_backgrounds.json'
 
 
 def get_listing_details_output_file_name_for_emoticons():
-    listing_details_output_file_name = get_data_folder() + 'listing_details_for_emoticons.json'
-    return listing_details_output_file_name
+    return get_data_folder() + 'listing_details_for_emoticons.json'
 
 
 def get_listing_details_output_file_name_for_foil_cards():
-    listing_details_output_file_name = get_data_folder() + 'listing_details_for_foil_cards.json'
-    return listing_details_output_file_name
+    return get_data_folder() + 'listing_details_for_foil_cards.json'
 
 
 def get_listing_details_output_file_name():
-    listing_details_output_file_name = get_data_folder() + 'listing_details.json'
-    return listing_details_output_file_name
+    return get_data_folder() + 'listing_details.json'
 
 
 def get_goo_details_file_nam_for_for_foil_cards():
-    goo_details_file_nam_for_for_foil_cards = get_data_folder() + 'goo_details_for_foil_cards.json'
-    return goo_details_file_nam_for_for_foil_cards
+    return get_data_folder() + 'goo_details_for_foil_cards.json'
 
 
 def get_sack_of_gems_listing_file_name():
-    sack_of_gems_listing_file_name = get_data_folder() + 'listing_sack_of_gems.json'
-
-    return sack_of_gems_listing_file_name
+    return get_data_folder() + 'listing_sack_of_gems.json'
 
 
 def get_market_order_file_name_for_profile_backgrounds():
-    market_order_file_name = get_data_folder() + 'market_orders_for_profile_backgrounds.json'
-    return market_order_file_name
+    return get_data_folder() + 'market_orders_for_profile_backgrounds.json'
 
 
 def get_market_order_file_name_for_emoticons():
-    market_order_file_name = get_data_folder() + 'market_orders_for_emoticons.json'
-    return market_order_file_name
+    return get_data_folder() + 'market_orders_for_emoticons.json'
 
 
 def get_market_order_file_name():
-    market_order_file_name = get_data_folder() + 'market_orders.json'
-
-    return market_order_file_name
+    return get_data_folder() + 'market_orders.json'
 
 
 def get_next_creation_time_file_name():
-    next_creation_time_file_name = get_data_folder() + 'next_creation_times.json'
-
-    return next_creation_time_file_name
+    return get_data_folder() + 'next_creation_times.json'
 
 
 def main():
@@ -135,25 +121,17 @@ def main():
 
 
 def convert_listing_hash_to_app_id(listing_hash):
-    app_id = int(listing_hash.split('-')[0])
-
-    return app_id
+    return int(listing_hash.split('-')[0])
 
 
 def get_listing_hash_suffixe():
-    listing_hash_suffixe = ' Booster Pack'
-
-    return listing_hash_suffixe
+    return ' Booster Pack'
 
 
 def convert_listing_hash_to_app_name(listing_hash):
     tokens = listing_hash.split('-')[1:]
 
-    if len(tokens) > 1:
-        app_name = '-'.join(tokens)
-    else:
-        app_name = tokens[0]
-
+    app_name = '-'.join(tokens) if len(tokens) > 1 else tokens[0]
     app_name = app_name[:-len(get_listing_hash_suffixe())]
 
     return app_name
@@ -163,9 +141,7 @@ def convert_to_listing_hash(app_id, app_name, listing_hash_suffixe=None):
     if listing_hash_suffixe is None:
         listing_hash_suffixe = get_listing_hash_suffixe()
 
-    listing_hash = str(app_id) + '-' + app_name + listing_hash_suffixe
-
-    return listing_hash
+    return str(app_id) + '-' + app_name + listing_hash_suffixe
 
 
 def get_steamcardexchange_url(app_id):
@@ -177,27 +153,19 @@ def get_steamcardexchange_url(app_id):
 
 
 def get_steam_store_url(app_id):
-    steam_store_url = 'https://store.steampowered.com/app/' + str(app_id) + '/'
-
-    return steam_store_url
+    return 'https://store.steampowered.com/app/' + str(app_id) + '/'
 
 
 def get_category_name_for_booster_packs():
-    category_name = 'booster packs'
-
-    return category_name
+    return 'booster packs'
 
 
 def get_category_name_for_profile_backgrounds():
-    category_name = 'profile backgrounds'
-
-    return category_name
+    return 'profile backgrounds'
 
 
 def get_category_name_for_emoticons():
-    category_name = 'emoticons'
-
-    return category_name
+    return 'emoticons'
 
 
 def get_bullet_point_for_display(use_numbered_bullet_points=False):
@@ -205,19 +173,13 @@ def get_bullet_point_for_display(use_numbered_bullet_points=False):
     #
     # NB: if the list of bullet points is long, Numbered bullet points improve readability on Github Gist.
 
-    if use_numbered_bullet_points:
-        bullet_point_character = '1.'
-    else:
-        bullet_point_character = '*'
-
+    bullet_point_character = '1.' if use_numbered_bullet_points else '*'
     three_spaces_indentation = '   '
 
-    bullet_point = '{}{}'.format(
+    return '{}{}'.format(
         bullet_point_character,
         three_spaces_indentation,
     )
-
-    return bullet_point
 
 
 if __name__ == '__main__':

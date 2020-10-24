@@ -9,9 +9,7 @@ from utils import convert_listing_hash_to_app_id
 
 
 def get_user_data_url():
-    user_data_url = 'https://store.steampowered.com/dynamicstore/userdata/'
-
-    return user_data_url
+    return 'https://store.steampowered.com/dynamicstore/userdata/'
 
 
 def download_user_data():
@@ -51,7 +49,7 @@ def download_free_apps(method='price', verbose=True):
                      and int(game['initialprice']) == 0]
 
     else:
-        data_request = dict()
+        data_request = {}
 
         if method == 'genre':
             data_request['request'] = 'genre'
@@ -122,9 +120,7 @@ def format_for_asf_command_line(app_ids,
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
         app_prefix = 'a/'
 
-    output = [app_prefix + str(app_id) for app_id in sorted(app_ids)]
-
-    return output
+    return [app_prefix + str(app_id) for app_id in sorted(app_ids)]
 
 
 def chunks(l, n):

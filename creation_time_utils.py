@@ -61,9 +61,7 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
 
 
 def get_current_time():
-    current_time = datetime.datetime.today()
-
-    return current_time
+    return datetime.datetime.today()
 
 
 def get_creation_time_format(prepend_year=False):
@@ -82,10 +80,8 @@ def get_formatted_time(time_struct=None):
     if time_struct is None:
         time_struct = get_current_time()
 
-    formatted_time_as_str = datetime.datetime.strftime(time_struct,
+    return datetime.datetime.strftime(time_struct,
                                                        get_creation_time_format())
-
-    return formatted_time_as_str
 
 
 def prepend_year_to_time_as_str(formatted_time_as_str,
@@ -94,12 +90,10 @@ def prepend_year_to_time_as_str(formatted_time_as_str,
         current_time = get_current_time()
         year_to_prepend = current_time.year
 
-    formatted_time_as_str_with_year = '{} {}'.format(
+    return '{} {}'.format(
         year_to_prepend,
         formatted_time_as_str
     )
-
-    return formatted_time_as_str_with_year
 
 
 def get_time_struct_from_str(formatted_time_as_str,
@@ -132,9 +126,7 @@ def get_formatted_current_time(delay_in_days=0):
     if delay_in_days != 0:
         current_time += datetime.timedelta(days=delay_in_days)
 
-    formatted_current_time_as_str = get_formatted_time(current_time)
-
-    return formatted_current_time_as_str
+    return get_formatted_time(current_time)
 
 
 def get_crafting_cooldown_duration_in_days():
@@ -145,9 +137,7 @@ def get_crafting_cooldown_duration_in_days():
 
 
 def get_crafting_cooldown_duration_in_seconds():
-    crafting_cooldown_duration_in_seconds = 24 * 3600 * get_crafting_cooldown_duration_in_days()
-
-    return crafting_cooldown_duration_in_seconds
+    return 24 * 3600 * get_crafting_cooldown_duration_in_days()
 
 
 def determine_whether_a_booster_pack_can_be_crafted(badge_data,

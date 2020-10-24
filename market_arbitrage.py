@@ -18,16 +18,14 @@ from utils import get_steamcardexchange_url
 def determine_whether_booster_pack_was_crafted_at_least_once(badge_data):
     next_creation_time = badge_data['next_creation_time']
 
-    booster_pack_has_been_crafted_at_least_once = bool(next_creation_time is not None)
-
-    return booster_pack_has_been_crafted_at_least_once
+    return bool(next_creation_time is not None)
 
 
 def filter_out_badges_never_crafted(aggregated_badge_data, verbose=True):
     # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
     # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
 
-    filtered_badge_data = dict()
+    filtered_badge_data = {}
 
     for app_id in aggregated_badge_data.keys():
         individual_badge_data = aggregated_badge_data[app_id]
@@ -48,7 +46,7 @@ def filter_out_badges_recently_crafted(aggregated_badge_data, verbose=True):
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
     # and thus which cannot be immediately crafted.
 
-    filtered_badge_data = dict()
+    filtered_badge_data = {}
 
     current_time = get_current_time()
 
@@ -94,9 +92,7 @@ def determine_whether_an_arbitrage_might_exist(badge_data,
     if price_threshold is None:
         raise AssertionError()
 
-    an_arbitrage_might_exist = bool(price_threshold < sell_price_without_fee)
-
-    return an_arbitrage_might_exist
+    return bool(price_threshold < sell_price_without_fee)
 
 
 def determine_whether_sell_price_is_unknown(badge_data):
@@ -105,9 +101,7 @@ def determine_whether_sell_price_is_unknown(badge_data):
     sell_price_was_not_retrieved = bool(sell_price_including_fee < 0)
     there_is_no_sell_order = bool(sell_price_including_fee == 0)
 
-    sell_price_is_unknown = sell_price_was_not_retrieved or there_is_no_sell_order
-
-    return sell_price_is_unknown
+    return sell_price_was_not_retrieved or there_is_no_sell_order
 
 
 def filter_out_badges_with_low_sell_price(aggregated_badge_data,
@@ -127,7 +121,7 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data,
             user_chosen_price_threshold / 100
         )
 
-    filtered_badge_data = dict()
+    filtered_badge_data = {}
 
     unknown_price_counter = 0
 
@@ -142,8 +136,8 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data,
         if sell_price_is_unknown or an_arbitrage_might_exist:
             filtered_badge_data[app_id] = individual_badge_data
 
-            if sell_price_is_unknown:
-                unknown_price_counter += 1
+        if sell_price_is_unknown:
+            unknown_price_counter += 1
 
     if verbose:
         print('There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).'.format(
@@ -163,7 +157,7 @@ def find_badge_arbitrages(badge_data,
         market_order_dict = load_market_order_data(badge_data,
                                                    retrieve_market_orders_online=True)
 
-    badge_arbitrages = dict()
+    badge_arbitrages = {}
 
     for app_id in badge_data.keys():
         individual_badge_data = badge_data[app_id]
@@ -193,7 +187,7 @@ def find_badge_arbitrages(badge_data,
         is_an_arbitrage = bool(delta > 0)
 
         if is_an_arbitrage:
-            badge_arbitrages[listing_hash] = dict()
+            badge_arbitrages[listing_hash] = {}
 
             # Warning: for profile backgrounds and emoticons, you cannot trust the value of app_id stored here,
             #          because app_id is a dummy variable, which is simply a copy of listing_hash.
@@ -283,7 +277,7 @@ def convert_arbitrages_for_batch_create_then_sell(badge_arbitrages,
                                                   verbose=True):
     # Code inspired from print_arbitrages()
 
-    price_dict_for_listing_hashes = dict()
+    price_dict_for_listing_hashes = {}
 
     for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
         arbitrage = badge_arbitrages[listing_hash]
@@ -311,7 +305,7 @@ def update_badge_arbitrages_with_latest_market_order_data(badge_data,
     # Objective: ensure that we have the latest market orders before trying to automatically create & sell booster packs
 
     # Based on arbitrage_data, select the badge_data for which we want to download (again) the latest market orders:
-    selected_badge_data = dict()
+    selected_badge_data = {}
 
     for listing_hash in arbitrage_data.keys():
         arbitrage = arbitrage_data[listing_hash]
@@ -323,11 +317,11 @@ def update_badge_arbitrages_with_latest_market_order_data(badge_data,
     market_order_dict = load_market_order_data(badge_data=selected_badge_data,
                                                retrieve_market_orders_online=retrieve_market_orders_online)
 
-    latest_badge_arbitrages = find_badge_arbitrages(badge_data=selected_badge_data,
-                                                    market_order_dict=market_order_dict,
-                                                    verbose=verbose)
-
-    return latest_badge_arbitrages
+    return find_badge_arbitrages(
+        badge_data=selected_badge_data,
+        market_order_dict=market_order_dict,
+        verbose=verbose,
+    )
 
 
 def get_filtered_badge_data(retrieve_listings_from_scratch=True,

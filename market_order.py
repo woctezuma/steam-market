@@ -11,21 +11,17 @@ from utils import get_market_order_file_name
 
 
 def get_steam_market_order_url():
-    steam_market_order_url = 'https://steamcommunity.com/market/itemordershistogram'
-
-    return steam_market_order_url
+    return 'https://steamcommunity.com/market/itemordershistogram'
 
 
 def get_market_order_parameters(item_nameid):
-    params = dict()
-
-    params['country'] = 'FR'
-    params['language'] = 'english'
-    params['currency'] = '3'
-    params['item_nameid'] = str(item_nameid)
-    params['two_factor'] = '0'
-
-    return params
+    return {
+        'country': 'FR',
+        'language': 'english',
+        'currency': '3',
+        'item_nameid': str(item_nameid),
+        'two_factor': '0',
+    }
 
 
 def get_steam_api_rate_limits_for_market_order(has_secured_cookie=False):
@@ -216,8 +212,8 @@ def load_market_order_data(badge_data=None,
 
 def trim_market_order_data(badge_data,
                            market_order_dict):
-    trimmed_market_order_dict = dict()
-    app_ids_with_missing_data = list()
+    trimmed_market_order_dict = {}
+    app_ids_with_missing_data = []
 
     for app_id in badge_data.keys():
         listing_hash = badge_data[app_id]['listing_hash']
