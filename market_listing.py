@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from market_search import load_all_listings
 from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
-from utils import get_listing_details_output_file_name
+from utils import get_listing_details_output_file_name, get_cushioned_cooldown_in_seconds
 
 
 def get_steam_market_listing_url(app_id=None,
@@ -59,14 +59,14 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
 
         rate_limits = {
             'max_num_queries': 25,
-            'cooldown': (3 * 60) + 10,  # 1 minute plus a cushion
+            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=3),
         }
 
     else:
 
         rate_limits = {
             'max_num_queries': 25,
-            'cooldown': (5 * 60) + 10,  # 5 minutes plus a cushion
+            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=5),
         }
 
     return rate_limits

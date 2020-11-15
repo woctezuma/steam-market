@@ -1,6 +1,15 @@
 from pathlib import Path
 
 
+def get_cushioned_cooldown_in_seconds(num_minutes):
+    num_seconds = num_minutes * 60
+    cushion_in_seconds = 10
+
+    cushioned_cooldown_in_seconds = num_seconds + cushion_in_seconds
+
+    return cushioned_cooldown_in_seconds
+
+
 def get_data_folder():
     data_folder = 'data/'
     Path(data_folder).mkdir(exist_ok=True)
