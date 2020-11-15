@@ -107,7 +107,7 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
     if has_secured_cookie:
 
         rate_limits = {
-            'max_num_queries': 50,
+            'max_num_queries': 45,
             'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=1),
         }
 
