@@ -115,6 +115,10 @@ def parse_data_from_steam_card_exchange(response=None,
         app_name = app_info[0][1]
         num_cards_per_set = int(app_info[1])
 
+        if num_cards_per_set == 0:
+            print('No card found for {} (appID = {})'.format(app_name, app_id))
+            continue
+
         dico[app_id] = dict()
         dico[app_id]['app_id'] = app_id
         dico[app_id]['name'] = app_name
