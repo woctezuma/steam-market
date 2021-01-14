@@ -403,7 +403,11 @@ def get_item_nameid(listing_hash,
 
 
 def get_item_nameid_batch(listing_hashes,
-                          listing_details_output_file_name=None):
+                          listing_details_output_file_name=None,
+                          listing_hashes_to_forcefully_process=None):
+    if listing_hashes_to_forcefully_process is None:
+        listing_hashes_to_forcefully_process = []
+
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -424,11 +428,20 @@ def get_item_nameid_batch(listing_hashes,
             except KeyError:
                 listing_hashes_to_process.append(listing_hash)
 
+        listing_hashes_to_process += listing_hashes_to_forcefully_process
+        listing_hashes_to_process = set(listing_hashes_to_process)
+
         if len(listing_hashes_to_process) > 0:
             listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
                                                          listing_details_output_file_name=listing_details_output_file_name)
 
             for listing_hash in listing_hashes_to_process:
+                if listing_hash not in item_nameids:
+                    # This happens if the listing hash is:
+                    # - fed through 'listing_hashes_to_forcefully_process'
+                    # - yet not fed through 'listing_hashes'
+                    item_nameids[listing_hash] = dict()
+
                 item_nameid = listing_details[listing_hash]['item_nameid']
                 is_marketable = listing_details[listing_hash]['is_marketable']
 

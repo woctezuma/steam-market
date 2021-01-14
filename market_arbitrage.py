@@ -4,7 +4,7 @@
 from creation_time_utils import fill_in_badges_with_next_creation_times_loaded_from_disk
 from creation_time_utils import get_current_time, determine_whether_a_booster_pack_can_be_crafted
 from inventory_utils import create_then_sell_booster_packs_for_batch
-from market_listing import get_steam_market_listing_url
+from market_listing import get_steam_market_listing_url, get_item_nameid_batch
 from market_order import load_market_order_data
 from market_utils import load_aggregated_badge_data
 from sack_of_gems import print_gem_price_reminder
@@ -403,6 +403,11 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(badge_data=filtered_badge_data,
                                                                                     arbitrage_data=badge_arbitrages,
                                                                                     retrieve_market_orders_online=True)
+    # Update marketability status
+    few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
+    item_nameids = get_item_nameid_batch(listing_hashes=[],
+                                         listing_hashes_to_forcefully_process=few_selected_listing_hashes)
+
     print('# Results after *quick* update of market order data for *a few detected* arbitrages')
     print_arbitrages(latest_badge_arbitrages)
 
