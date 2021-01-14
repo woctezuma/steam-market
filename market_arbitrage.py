@@ -363,6 +363,7 @@ def apply_workflow(retrieve_listings_from_scratch=True,
                    automatically_create_then_sell_booster_packs=False,
                    profit_threshold=0.01,  # profit in euros
                    quick_check_with_tracked_booster_packs=False,
+                   enforce_update_of_marketability_status=False,
                    from_javascript=False):
     if quick_check_with_tracked_booster_packs:
         print('Quick-check of booster packs with a track record.')
@@ -404,8 +405,9 @@ def apply_workflow(retrieve_listings_from_scratch=True,
                                                                                     arbitrage_data=badge_arbitrages,
                                                                                     retrieve_market_orders_online=True)
     # Update marketability status
-    few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
-    update_marketability_status(few_selected_listing_hashes=few_selected_listing_hashes)
+    if enforce_update_of_marketability_status:
+        few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
+        update_marketability_status(few_selected_listing_hashes=few_selected_listing_hashes)
 
     print('# Results after *quick* update of market order data for *a few detected* arbitrages')
     print_arbitrages(latest_badge_arbitrages)
@@ -428,6 +430,7 @@ def main():
     automatically_create_then_sell_booster_packs = True
     profit_threshold = 0.01  # profit in euros
     quick_check_with_tracked_booster_packs = False
+    enforce_update_of_marketability_status = True
     from_javascript = True
 
     apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
@@ -437,6 +440,7 @@ def main():
                    automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
                    profit_threshold=profit_threshold,
                    quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+                   enforce_update_of_marketability_status=enforce_update_of_marketability_status,
                    from_javascript=from_javascript)
 
     return True
