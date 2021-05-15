@@ -219,6 +219,10 @@ because of a wrong item type.
 It can happen for instance if the goo value actually corresponds to emoticon or a profile background, and was then
 multiplied by 10 to get the value of the non-existent "foil" version of this emoticon or profile background.
 
+```javascript
+javascript:var a=g_rgAssets[Object.keys(g_rgAssets)[0]],b=a[Object.keys(a)[0]],c=b[Object.keys(b)[0]],gem_action=c.owner_actions&&c.owner_actions.filter(function(d){return/javascript:GetGooValue/.test(d.link)})[0];if(gem_action){var matches=gem_action.link.match(/javascript:GetGooValue\( '%contextid%', '%assetid%', (\d+), (\d+), \d+ \)/);fetch("https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/?appid="+matches[1]+"&item_type="+matches[2]+"&border_color=0").then(function(d){return d.json()}).then(function(d){alert("This is worth "+d.goo_value+" gems")})["catch"](function(d){return console.error(d)})}else alert("This is worth 0 gems");
+```
+
 **Caveat²**: the bookmarklet linked above does not account for foil versions, so you should multiply by 10 the goo value
 if you are interested in foil cards. You can check by yourself that the bookmarklet returns the same goo values for 
 normal cards and for foil cards.
