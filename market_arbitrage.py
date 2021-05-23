@@ -409,6 +409,13 @@ def apply_workflow(retrieve_listings_from_scratch=True,
         few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
         item_nameids = update_marketability_status(few_selected_listing_hashes=few_selected_listing_hashes)
 
+        # Override values which had been previously loaded into memory
+        #
+        # Caveat: the file with the updated marketability status is listing_details.json,
+        #         the file market_orders.json was **not** updated and would have the wrong marketability status!
+        for listing_hash in few_selected_listing_hashes:
+            latest_badge_arbitrages[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
+
     print('# Results after *quick* update of market order data for *a few detected* arbitrages')
     print_arbitrages(latest_badge_arbitrages)
 
@@ -423,8 +430,8 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 
 
 def main():
-    retrieve_listings_from_scratch = True
-    retrieve_market_orders_online = True
+    retrieve_listings_from_scratch = False
+    retrieve_market_orders_online = False
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     automatically_create_then_sell_booster_packs = True
