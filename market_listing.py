@@ -469,7 +469,7 @@ def update_marketability_status(few_selected_listing_hashes):
     item_nameids = get_item_nameid_batch(listing_hashes=[],
                                          listing_hashes_to_forcefully_process=few_selected_listing_hashes)
 
-    return
+    return item_nameids
 
 
 if __name__ == '__main__':

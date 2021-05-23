@@ -407,7 +407,7 @@ def apply_workflow(retrieve_listings_from_scratch=True,
     # Update marketability status
     if enforce_update_of_marketability_status:
         few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
-        update_marketability_status(few_selected_listing_hashes=few_selected_listing_hashes)
+        item_nameids = update_marketability_status(few_selected_listing_hashes=few_selected_listing_hashes)
 
     print('# Results after *quick* update of market order data for *a few detected* arbitrages')
     print_arbitrages(latest_badge_arbitrages)
