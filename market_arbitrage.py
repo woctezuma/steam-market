@@ -430,8 +430,8 @@ def apply_workflow(retrieve_listings_from_scratch=True,
 
 
 def main():
-    retrieve_listings_from_scratch = False
-    retrieve_market_orders_online = False
+    retrieve_listings_from_scratch = True
+    retrieve_market_orders_online = True
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     automatically_create_then_sell_booster_packs = True
