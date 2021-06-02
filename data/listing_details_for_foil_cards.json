@@ -53813,5 +53813,275 @@
         "item_nameid": 176242382,
         "is_marketable": true,
         "item_type_no": 4
+    },
+    "911510-Fateful wolf (Foil)": {
+        "item_nameid": 176242430,
+        "is_marketable": true,
+        "item_type_no": 8
+    },
+    "848450-Arctic Peeper (Foil)": {
+        "item_nameid": 176242661,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1106750-Gideon (Foil)": {
+        "item_nameid": 176242602,
+        "is_marketable": true,
+        "item_type_no": 15
+    },
+    "598550-The Heatseekers (Foil)": {
+        "item_nameid": 176242545,
+        "is_marketable": true,
+        "item_type_no": 62
+    },
+    "1262930-TSV Hannover-Burgdorf (Foil)": {
+        "item_nameid": 176242557,
+        "is_marketable": true,
+        "item_type_no": 13
+    },
+    "1373510-Dr. Báthory Mengele (Foil)": {
+        "item_nameid": 176242691,
+        "is_marketable": true,
+        "item_type_no": 5
+    },
+    "1373550-Battle Rayne (Foil)": {
+        "item_nameid": 176242726,
+        "is_marketable": true,
+        "item_type_no": 15
+    },
+    "1328670-CharacterMontage (Foil)": {
+        "item_nameid": 176242720,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1395560-Bolsonaryo (Foil Trading Card)": {
+        "item_nameid": 176242448,
+        "is_marketable": true,
+        "item_type_no": 3
+    },
+    "1184890-Arthur (Foil)": {
+        "item_nameid": 176243502,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1413480-Chiaki Tachibana (Foil Trading Card)": {
+        "item_nameid": 176243751,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1031170-Elf Enchanted (Foil)": {
+        "item_nameid": 176244035,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1334010-Corridor (Foil)": {
+        "item_nameid": 176243364,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1038300-Gilly Island (Foil)": {
+        "item_nameid": 176242928,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "979070-Crab! (Foil)": {
+        "item_nameid": 176243758,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1042380-Horizontal Press (Foil)": {
+        "item_nameid": 176244129,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1219620-Clarisse (Foil Trading Card)": {
+        "item_nameid": 176243831,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1056610-Gone (Foil)": {
+        "item_nameid": 176243468,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1037190-Taka (Foil)": {
+        "item_nameid": 176243931,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1092400-Dr.Who (Foil)": {
+        "item_nameid": 176244008,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1038370-Charred Assassin (Foil)": {
+        "item_nameid": 176243292,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1221800-Biscuit 1 (Foil)": {
+        "item_nameid": 176243206,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1063580-Adelheim (Foil)": {
+        "item_nameid": 176244067,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1480340-Bee room (Foil)": {
+        "item_nameid": 176243435,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "978460-Emily (Foil)": {
+        "item_nameid": 176243190,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1073910-Forest (Foil)": {
+        "item_nameid": 176243105,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1301210-Cage Ball (Foil)": {
+        "item_nameid": 176243894,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1465360-CAT CT680 (Foil)": {
+        "item_nameid": 176243293,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1222370-Bounty Hunter (Foil)": {
+        "item_nameid": 176245619,
+        "is_marketable": true,
+        "item_type_no": 12
+    },
+    "1369520-Fool (Foil)": {
+        "item_nameid": 176244863,
+        "is_marketable": true,
+        "item_type_no": 17
+    },
+    "1135830-Colette the Alchemist (Foil)": {
+        "item_nameid": 176245198,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1233590-Bladegheist Revenants (Foil)": {
+        "item_nameid": 176245182,
+        "is_marketable": true,
+        "item_type_no": 6
+    },
+    "1418870-Deep Impact (Foil)": {
+        "item_nameid": 176244720,
+        "is_marketable": true,
+        "item_type_no": 3
+    },
+    "1253580-Hinata (Foil)": {
+        "item_nameid": 176244950,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1571170-Emma Summer (Foil)": {
+        "item_nameid": 176244940,
+        "is_marketable": true,
+        "item_type_no": 4
+    },
+    "1259640-Agent (Foil)": {
+        "item_nameid": 176244714,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1167140-Bertram (Foil)": {
+        "item_nameid": 176244500,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1515950-CapSta-1 (Foil)": {
+        "item_nameid": 176244616,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1013320-Astrid (Foil)": {
+        "item_nameid": 176244745,
+        "is_marketable": true,
+        "item_type_no": 4
+    },
+    "1514370-Camp Cooking (Foil)": {
+        "item_nameid": 176244945,
+        "is_marketable": true,
+        "item_type_no": 4
+    },
+    "1586880-The Bookshelf Limbo (Foil Trading Card)": {
+        "item_nameid": 176244612,
+        "is_marketable": true,
+        "item_type_no": 10
+    },
+    "795420-BloodWolves (Foil)": {
+        "item_nameid": 176245028,
+        "is_marketable": true,
+        "item_type_no": 19
+    },
+    "1375400-Pigman (Foil)": {
+        "item_nameid": 176245892,
+        "is_marketable": true,
+        "item_type_no": 4
+    },
+    "1444350-Melody (Foil)": {
+        "item_nameid": 176244874,
+        "is_marketable": true,
+        "item_type_no": 7
+    },
+    "1218500-Boombox Gigi (Foil)": {
+        "item_nameid": 176245202,
+        "is_marketable": true,
+        "item_type_no": 8
+    },
+    "486940-Handball (Foil)": {
+        "item_nameid": 176245469,
+        "is_marketable": true,
+        "item_type_no": 7
+    },
+    "629820-Apex Alligator (Foil)": {
+        "item_nameid": 176244483,
+        "is_marketable": true,
+        "item_type_no": 7
+    },
+    "597820-Folves (Foil)": {
+        "item_nameid": 176244777,
+        "is_marketable": true,
+        "item_type_no": 15
+    },
+    "1253860-Rainy cat (Foil)": {
+        "item_nameid": 176245348,
+        "is_marketable": true,
+        "item_type_no": 25
+    },
+    "1470310-Cookies (Foil)": {
+        "item_nameid": 176245503,
+        "is_marketable": true,
+        "item_type_no": 9
+    },
+    "1497950-EDF and EDF2 Team (Foil)": {
+        "item_nameid": 176244916,
+        "is_marketable": true,
+        "item_type_no": 13
+    },
+    "1379870-Alpha Wolf (Foil)": {
+        "item_nameid": 176245847,
+        "is_marketable": true,
+        "item_type_no": 15
+    },
+    "1421250-Alisa (Foil Trading Card)": {
+        "item_nameid": 176244981,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1251300-Hair dryer (Foil)": {
+        "item_nameid": 176245637,
+        "is_marketable": true,
+        "item_type_no": 8
     }
 }
