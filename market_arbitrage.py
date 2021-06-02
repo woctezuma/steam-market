@@ -435,7 +435,7 @@ def main():
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     automatically_create_then_sell_booster_packs = True
-    profit_threshold = 0.01  # profit in euros
+    profit_threshold = 0.0  # profit in euros
     quick_check_with_tracked_booster_packs = False
     enforce_update_of_marketability_status = True
     from_javascript = True
