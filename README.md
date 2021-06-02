@@ -32,6 +32,9 @@ pip install -r requirements.txt
 
 To relax the rate limits enforced by Steam API, fill-in your cookie information in a file called `personal_info.json`:
 
+<details><summary>How to fill-in your cookie information</summary>
+<p>
+
 1. To do so, make sure you are connected to your Steam account on a Steam Community page, e.g. [Steam Market](https://steamcommunity.com/market/).<br/> 
   ![steam community](https://github.com/woctezuma/steam-market/wiki/img/K0P9Uxu.png)
 
@@ -47,6 +50,9 @@ To relax the rate limits enforced by Steam API, fill-in your cookie information 
       "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE"
     }  
     ```
+
+</p>
+</details>
 
 > **NB**: In the future, if you notice that the program bugs out due to seemingly very strict rate limits, then it may
 be a sign that the cookie value tied to your session has changed.
@@ -76,6 +82,9 @@ There are two solutions:
 
 #### Solution A
  
+<details><summary>How to list craftable packs with *Augmented Steam*</summary>
+<p>
+
 1. Install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
 ![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
 
@@ -105,9 +114,15 @@ There are two solutions:
    </select>
    ```
 
+</p>
+</details>
+
 #### Solution B
 
 Alternatively, if you wish not to install any browser extension:
+
+<details><summary>How to list craftable packs with the Booster Creation webpage</summary>
+<p>
 
 1. Press `<Ctrl-U>` to display the HTML code of [the Booser Creation webpage](https://steamcommunity.com/tradingcards/boostercreator/). 
 
@@ -125,6 +140,8 @@ Alternatively, if you wish not to install any browser extension:
    ```json
    {"appid":996580,"name":"Spyro\u2122 Reignited Trilogy","series":1,"price":"400"}
     ```    
+</p>
+</details>
 
    To do so, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and remove occurences of :<br/>
 ![Visual Studio Code: remove mentions of unavailability](https://github.com/woctezuma/steam-market/wiki/img/sw2fFnT.png)
@@ -133,6 +150,9 @@ Alternatively, if you wish not to install any browser extension:
    ```
 
 ## Usage
+
+<details><summary>Basic functions</summary>
+<p>
 
 -   To parse all the options to craft 'Booster Packs', for the games you own, run:
 
@@ -188,6 +208,9 @@ python batch_create_packs.py
 ```bash
 python list_possible_lures.py
 ```
+
+</p>
+</details>
 
 -   To look for games which i) are likely to have high bid orders for their booster packs, and ii) which I may not own yet, run:
 
