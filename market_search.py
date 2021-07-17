@@ -185,6 +185,9 @@ def get_all_listings(all_listings=None,
 
             num_listings_based_on_latest_query = result['total_count']
 
+            if num_listings_based_on_latest_query is None:
+                num_listings_based_on_latest_query = num_listings
+
             if num_listings is not None:
                 num_listings = max(num_listings, num_listings_based_on_latest_query)
             else:
