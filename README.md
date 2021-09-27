@@ -143,7 +143,7 @@ Alternatively, if you wish not to install any browser extension:
 </p>
 </details>
 
-   To do so, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and remove occurences of :<br/>
+   To do so, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and remove occurrences of :<br/>
 ![Visual Studio Code: remove mentions of unavailability](https://github.com/woctezuma/steam-market/wiki/img/sw2fFnT.png)
    ```regexp
    ,"unavailable":true,"available_at_time":"[\w ]*@[\w :]*"
