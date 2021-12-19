@@ -8,19 +8,19 @@ from personal_info import get_cookie_dict
 from utils import get_sack_of_gems_listing_file_name
 
 
-def get_listing_hash_for_gems():
+def get_listing_hash_for_gems() -> str:
     listing_hash_for_gems = '753-Sack of Gems'
 
     return listing_hash_for_gems
 
 
-def get_num_gems_per_sack_of_gems():
+def get_num_gems_per_sack_of_gems() -> int:
     num_gems_per_sack_of_gems = 1000
 
     return num_gems_per_sack_of_gems
 
 
-def download_sack_of_gems_price(sack_of_gems_listing_file_name=None):
+def download_sack_of_gems_price(sack_of_gems_listing_file_name: str = None) -> float:
     if sack_of_gems_listing_file_name is None:
         sack_of_gems_listing_file_name = get_sack_of_gems_listing_file_name()
 
@@ -49,9 +49,9 @@ def download_sack_of_gems_price(sack_of_gems_listing_file_name=None):
     return sack_of_gems_price
 
 
-def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
-                            verbose=True,
-                            sack_of_gems_listing_file_name=None):
+def load_sack_of_gems_price(retrieve_gem_price_from_scratch: bool = False,
+                            verbose: bool = True,
+                            sack_of_gems_listing_file_name: str = None) -> float:
     if sack_of_gems_listing_file_name is None:
         sack_of_gems_listing_file_name = get_sack_of_gems_listing_file_name()
 
@@ -76,10 +76,10 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
     return sack_of_gems_price
 
 
-def get_gem_price(enforced_sack_of_gems_price=None,
-                  minimum_allowed_sack_of_gems_price=None,
-                  retrieve_gem_price_from_scratch=False,
-                  verbose=True):
+def get_gem_price(enforced_sack_of_gems_price: float = None,
+                  minimum_allowed_sack_of_gems_price: float = None,
+                  retrieve_gem_price_from_scratch: bool = False,
+                  verbose: bool = True) -> float:
     if enforced_sack_of_gems_price is None:
         sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
     else:
@@ -101,9 +101,9 @@ def get_gem_price(enforced_sack_of_gems_price=None,
     return gem_price
 
 
-def print_gem_price_reminder(enforced_sack_of_gems_price=None,
-                             minimum_allowed_sack_of_gems_price=None,
-                             retrieve_gem_price_from_scratch=None):
+def print_gem_price_reminder(enforced_sack_of_gems_price: float = None,
+                             minimum_allowed_sack_of_gems_price: float = None,
+                             retrieve_gem_price_from_scratch: bool = None) -> None:
     if retrieve_gem_price_from_scratch is None:
         retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
@@ -114,7 +114,7 @@ def print_gem_price_reminder(enforced_sack_of_gems_price=None,
     return
 
 
-def get_gem_amount_required_to_craft_badge():
+def get_gem_amount_required_to_craft_badge() -> int:
     # This is a constant value of 2000 gems for a badge, because a badge requires a set of N cards, which are obtained
     # after opening N/3 booster packs, and a booster pack costs 6000/N gems.
 
@@ -123,7 +123,7 @@ def get_gem_amount_required_to_craft_badge():
     return gem_amount_required_to_craft_badge
 
 
-def main():
+def main() -> None:
     print('Loaded from the disk:')
     sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
                                                  verbose=True)

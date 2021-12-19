@@ -11,33 +11,33 @@ from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_val
 from utils import get_listing_output_file_name, get_cushioned_cooldown_in_seconds
 
 
-def get_steam_market_search_url():
+def get_steam_market_search_url() -> str:
     market_search_url = 'https://steamcommunity.com/market/search/render/'
 
     return market_search_url
 
 
-def get_tag_item_class_no_for_trading_cards():
+def get_tag_item_class_no_for_trading_cards() -> int:
     tag_item_class_no = 2
     return tag_item_class_no
 
 
-def get_tag_item_class_no_for_profile_backgrounds():
+def get_tag_item_class_no_for_profile_backgrounds() -> int:
     tag_item_class_no = 3
     return tag_item_class_no
 
 
-def get_tag_item_class_no_for_emoticons():
+def get_tag_item_class_no_for_emoticons() -> int:
     tag_item_class_no = 4
     return tag_item_class_no
 
 
-def get_tag_item_class_no_for_booster_packs():
+def get_tag_item_class_no_for_booster_packs() -> int:
     tag_item_class_no = 5
     return tag_item_class_no
 
 
-def get_tag_drop_rate_str(rarity=None):
+def get_tag_drop_rate_str(rarity: str = None) -> str:
     if rarity is None:
         rarity = 'common'
 
@@ -56,12 +56,12 @@ def get_tag_drop_rate_str(rarity=None):
     return tag_drop_rate_str
 
 
-def get_search_parameters(start_index=0,
-                          delta_index=100,
-                          tag_item_class_no=None,
-                          tag_drop_rate_str=None,
-                          rarity=None,
-                          is_foil_trading_card=True):
+def get_search_parameters(start_index: int = 0,
+                          delta_index: int = 100,
+                          tag_item_class_no: int = None,
+                          tag_drop_rate_str: str = None,
+                          rarity: str = None,
+                          is_foil_trading_card: bool = True) -> dict[str, str]:
     if tag_drop_rate_str is None:
         tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)
 
@@ -101,7 +101,7 @@ def get_search_parameters(start_index=0,
     return params
 
 
-def get_steam_api_rate_limits_for_market_search(has_secured_cookie=False):
+def get_steam_api_rate_limits_for_market_search(has_secured_cookie: bool = False) -> dict[str, int]:
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
