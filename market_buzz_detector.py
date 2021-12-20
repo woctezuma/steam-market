@@ -221,7 +221,9 @@ def main(retrieve_listings_from_scratch: bool = False,
                                                   min_sell_price=min_sell_price,
                                                   min_num_listings=min_num_listings)
 
-        filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(filtered_listing_hashes,
+        filtered_listings = {k: v for k, v in all_listings.items() if k in filtered_listing_hashes}
+
+        filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(filtered_listings,
                                                                                     force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
                                                                                     enforced_sack_of_gems_price=enforced_sack_of_gems_price,
                                                                                     minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
