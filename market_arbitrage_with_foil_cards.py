@@ -342,8 +342,7 @@ def update_all_goo_details(new_goo_details: dict[int, int],
 
 
 def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(filtered_cheapest_listing_hashes: list[str],
-                                                                          goo_details_file_name_for_for_foil_cards:
-                                                                          dict[str, int] = None,
+                                                                          goo_details_file_name_for_for_foil_cards: str = None,
                                                                           verbose: bool = True) -> list[str]:
     # Filter out listings associated with an appID for which we already know the goo details.
 
