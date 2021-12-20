@@ -400,15 +400,13 @@ def try_again_to_download_item_type(app_ids_with_unreliable_goo_details: list[in
 def try_again_to_download_goo_value(app_ids_with_unknown_goo_value: list[int],
                                     filtered_representative_listing_hashes: list[str],
                                     groups_by_app_id: dict[int, list[str]]) -> None:
-    listing_hashes_to_process = [
-        listing_hash
-        for listing_hash in filtered_representative_listing_hashes
-        if convert_listing_hash_to_app_id(listing_hash) in app_ids_with_unknown_goo_value
-    ]
+    filtered_representative_app_ids = [convert_listing_hash_to_app_id(listing_hash)
+                                       for listing_hash in filtered_representative_listing_hashes]
+    app_ids_to_process = list(set(app_ids_with_unknown_goo_value).intersection(filtered_representative_app_ids))
 
     download_missing_goo_details(groups_by_app_id=groups_by_app_id,
                                  listing_candidates=filtered_representative_listing_hashes,
-                                 enforced_app_ids_to_process=listing_hashes_to_process)
+                                 enforced_app_ids_to_process=app_ids_to_process)
 
     return
 
