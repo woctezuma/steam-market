@@ -199,6 +199,7 @@ def main():
 
     write_to_file(output, 'output.txt', asf_username='Wok')
 
+    return
 
 if __name__ == '__main__':
     main()
