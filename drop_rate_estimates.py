@@ -29,9 +29,9 @@ def get_rarity_fields():
 
 def clamp_proportion(input_proportion):
     # Reference: https://en.wikipedia.org/wiki/Clamping_(graphics)
-    clampped_proportion = min(1, max(0, input_proportion))
+    clamped_proportion = min(1, max(0, input_proportion))
 
-    return clampped_proportion
+    return clamped_proportion
 
 
 def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
