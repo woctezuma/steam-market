@@ -593,7 +593,7 @@ def compute_unrewarding_threshold_in_gems(sack_of_gems_price_in_euros: float = N
     return unrewarding_threshold_in_gems
 
 
-def discard_necessarily_unrewarding_app_ids(all_goo_details: dict[str, int],
+def discard_necessarily_unrewarding_app_ids(all_goo_details: dict[int, int],
                                             app_ids_with_unreliable_goo_details: list[int] = None,
                                             app_ids_with_unknown_goo_value: list[int] = None,
                                             sack_of_gems_price_in_euros: float = None,
@@ -652,7 +652,7 @@ def safe_read_from_dict(input_dict: dict,
 
 def find_listing_hashes_with_unknown_goo_value(listing_candidates: list[str],
                                                app_ids_with_unreliable_goo_details: list[int],
-                                               all_goo_details: dict[str, int],
+                                               all_goo_details: dict[int, int],
                                                verbose: bool = True) -> list[int]:
     app_ids_with_unknown_goo_value = []
 
@@ -679,7 +679,7 @@ def find_listing_hashes_with_unknown_goo_value(listing_candidates: list[str],
 
 
 def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_hashes: list[str],
-                                                              all_goo_details: dict[str, int],
+                                                              all_goo_details: dict[int, int],
                                                               app_ids_with_unreliable_goo_details: list[int] = None,
                                                               app_ids_with_unknown_goo_value: list[int] = None,
                                                               all_listings: dict[str, dict] = None,
