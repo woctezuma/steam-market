@@ -29,7 +29,7 @@ def get_rarity_fields() -> list[str]:
 
 def clamp_proportion(input_proportion: float) -> float:
     # Reference: https://en.wikipedia.org/wiki/Clamping_(graphics)
-    clamped_proportion = min(1, max(0, input_proportion))
+    clamped_proportion = min(1.0, max(0.0, input_proportion))
 
     return clamped_proportion
 
