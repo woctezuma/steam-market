@@ -137,7 +137,7 @@ def download_market_order_data(listing_hash: str,
     return bid_price, ask_price, bid_volume, ask_volume
 
 
-def download_market_order_data_batch(badge_data: dict[str, dict],
+def download_market_order_data_batch(badge_data: dict[str | int, dict],
                                      market_order_dict: dict[str, dict] = None,
                                      verbose: bool = False,
                                      save_to_disk: bool = True,
@@ -220,8 +220,8 @@ def load_market_order_data(badge_data: dict[str, dict] = None,
     return trimmed_market_order_dict
 
 
-def trim_market_order_data(badge_data: dict[str, dict],
-                           market_order_dict: dict[str, dict]) -> tuple[dict[str, dict], list[str]]:
+def trim_market_order_data(badge_data: dict[int | str, dict],
+                           market_order_dict: dict[str, dict]) -> tuple[dict[str, dict], list[int | str]]:
     trimmed_market_order_dict = dict()
     app_ids_with_missing_data = list()
 
