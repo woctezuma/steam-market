@@ -137,7 +137,7 @@ def download_market_order_data(listing_hash: str,
     return bid_price, ask_price, bid_volume, ask_volume
 
 
-def download_market_order_data_batch(badge_data: dict[str | int, dict],
+def download_market_order_data_batch(badge_data: dict[int | str, dict],
                                      market_order_dict: dict[str, dict] = None,
                                      verbose: bool = False,
                                      save_to_disk: bool = True,
