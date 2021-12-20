@@ -9,13 +9,13 @@ from utils import convert_listing_hash_to_app_name
 from utils import get_data_folder, convert_listing_hash_to_app_id, get_next_creation_time_file_name
 
 
-def get_my_steam_profile_id():
+def get_my_steam_profile_id() -> str:
     my_profile_id = '76561198028705366'
 
     return my_profile_id
 
 
-def get_steam_inventory_url(profile_id=None, app_id=753, context_id=6):
+def get_steam_inventory_url(profile_id: str = None, app_id: int = 753, context_id: int = 6) -> str:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -28,13 +28,13 @@ def get_steam_inventory_url(profile_id=None, app_id=753, context_id=6):
     return steam_inventory_url
 
 
-def get_steam_inventory_file_name(profile_id):
+def get_steam_inventory_file_name(profile_id: str) -> str:
     steam_inventory_file_name = get_data_folder() + 'inventory_' + str(profile_id) + '.json'
 
     return steam_inventory_file_name
 
 
-def load_steam_inventory_from_disk(profile_id=None):
+def load_steam_inventory_from_disk(profile_id: str = None) -> [dict|None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -47,7 +47,7 @@ def load_steam_inventory_from_disk(profile_id=None):
     return steam_inventory
 
 
-def load_steam_inventory(profile_id=None, update_steam_inventory=False):
+def load_steam_inventory(profile_id: str = None, update_steam_inventory: bool = False) -> [dict|None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -59,7 +59,7 @@ def load_steam_inventory(profile_id=None, update_steam_inventory=False):
     return steam_inventory
 
 
-def download_steam_inventory(profile_id=None, save_to_disk=True):
+def download_steam_inventory(profile_id: str = None, save_to_disk: bool = True) -> [dict | None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -94,7 +94,7 @@ def download_steam_inventory(profile_id=None, save_to_disk=True):
     return steam_inventory
 
 
-def get_session_id(cookie=None):
+def get_session_id(cookie: dict[str, str] = None) -> str:
     if cookie is None:
         cookie = get_cookie_dict()
 
@@ -103,15 +103,15 @@ def get_session_id(cookie=None):
     return session_id
 
 
-def get_steam_booster_pack_creation_url():
+def get_steam_booster_pack_creation_url() -> str:
     booster_pack_creation_url = 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
 
     return booster_pack_creation_url
 
 
-def get_booster_pack_creation_parameters(app_id,
-                                         session_id,
-                                         is_marketable=True):
+def get_booster_pack_creation_parameters(app_id: int,
+                                         session_id: str,
+                                         is_marketable: bool = True) -> dict[str, str]:
     booster_pack_creation_parameters = dict()
 
     if is_marketable:
@@ -127,9 +127,9 @@ def get_booster_pack_creation_parameters(app_id,
     return booster_pack_creation_parameters
 
 
-def create_booster_pack(app_id,
-                        is_marketable=True,
-                        verbose=True):
+def create_booster_pack(app_id: int,
+                        is_marketable: bool = True,
+                        verbose: bool = True) -> [dict | None]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -174,15 +174,15 @@ def create_booster_pack(app_id,
     return result
 
 
-def get_steam_market_sell_url():
+def get_steam_market_sell_url() -> str:
     steam_market_sell_url = 'https://steamcommunity.com/market/sellitem/'
 
     return steam_market_sell_url
 
 
-def get_market_sell_parameters(asset_id,
-                               price_in_cents,  # this is the money which you, as the seller, will receive
-                               session_id):
+def get_market_sell_parameters(asset_id: str,
+                               price_in_cents: float,  # this is the money which you, as the seller, will receive
+                               session_id: str) -> dict[str, str]:
     market_sell_parameters = dict()
 
     market_sell_parameters['sessionid'] = str(session_id)
@@ -195,7 +195,7 @@ def get_market_sell_parameters(asset_id,
     return market_sell_parameters
 
 
-def get_request_headers():
+def get_request_headers() -> dict[str, str]:
     # Reference: https://dev.doctormckay.com/topic/287-automatic-market-seller/
 
     request_headers = {
@@ -210,9 +210,9 @@ def get_request_headers():
     return request_headers
 
 
-def sell_booster_pack(asset_id,
-                      price_in_cents,  # this is the money which you, as the seller, will receive
-                      verbose=True):
+def sell_booster_pack(asset_id: str,
+                      price_in_cents: float,  # this is the money which you, as the seller, will receive
+                      verbose: bool = True) -> [dict | None]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -262,10 +262,10 @@ def sell_booster_pack(asset_id,
     return result
 
 
-def retrieve_asset_id(listing_hash,
-                      steam_inventory=None,
-                      focus_on_marketable_items=True,
-                      verbose=True):
+def retrieve_asset_id(listing_hash: str,
+                      steam_inventory: dict = None,
+                      focus_on_marketable_items: bool = True,
+                      verbose: bool = True) -> str:
     if steam_inventory is None:
         steam_inventory = load_steam_inventory()
 
@@ -319,7 +319,7 @@ def retrieve_asset_id(listing_hash,
     return asset_id
 
 
-def create_booster_packs_for_batch(listing_hashes):
+def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict | None]:
     results = dict()
 
     for listing_hash in listing_hashes:
@@ -331,9 +331,9 @@ def create_booster_packs_for_batch(listing_hashes):
     return results
 
 
-def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                 update_steam_inventory=True,
-                                 focus_on_marketable_items=True):
+def sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict[str, float],
+                                 update_steam_inventory: bool = True,
+                                 focus_on_marketable_items: bool = True) -> dict[str, dict | None]:
     results = dict()
 
     steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
@@ -352,9 +352,10 @@ def sell_booster_packs_for_batch(price_dict_for_listing_hashes,
     return results
 
 
-def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                             update_steam_inventory=True,
-                                             focus_on_marketable_items=True):
+def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict,
+                                             update_steam_inventory: bool = True,
+                                             focus_on_marketable_items: bool = True) -> tuple[
+    dict[str, dict | None], dict[str, dict | None]]:
     listing_hashes = list(price_dict_for_listing_hashes.keys())
 
     creation_results = create_booster_packs_for_batch(listing_hashes)
@@ -368,9 +369,9 @@ def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
     return creation_results, sale_results
 
 
-def update_and_save_next_creation_times(creation_results,
-                                        verbose=True,
-                                        next_creation_time_file_name=None):
+def update_and_save_next_creation_times(creation_results: dict[str, dict | None],
+                                        verbose: bool = True,
+                                        next_creation_time_file_name: str = None) -> dict[int, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 
@@ -411,7 +412,7 @@ def update_and_save_next_creation_times(creation_results,
     return next_creation_times
 
 
-def main():
+def main() -> None:
     listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
     price_in_cents = 23  # this is the money which you, as the seller, will receive
 

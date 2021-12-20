@@ -10,7 +10,7 @@ from market_listing import fix_app_name_for_url_query
 from utils import get_badge_creation_file_name
 
 
-def fix_unicode_characters_in_app_name_from_javascript_code(app_name):
+def fix_unicode_characters_in_app_name_from_javascript_code(app_name: str) -> str:
     app_name = app_name.replace('\\u00ae', '®')
     app_name = app_name.replace('\\u00db', 'Û')
     app_name = app_name.replace('\\u00e9', 'é')
@@ -40,7 +40,7 @@ def fix_unicode_characters_in_app_name_from_javascript_code(app_name):
     return app_name
 
 
-def get_sub_string(input_str, key_start_str, key_end_str=None):
+def get_sub_string(input_str: str, key_start_str: str, key_end_str: str = None) -> str:
     try:
         search_start_index = input_str.index(key_start_str)
         sub_string_start_index = search_start_index + len(key_start_str)
@@ -60,7 +60,7 @@ def get_sub_string(input_str, key_start_str, key_end_str=None):
     return sub_string
 
 
-def parse_javascript_one_liner(badges_as_str, verbose=False):
+def parse_javascript_one_liner(badges_as_str: str, verbose: bool = False) -> dict[int, dict]:
     badge_creation_details = dict()
 
     print('Parsing the one-line javascript code displayed with the web browser.')
@@ -112,7 +112,7 @@ def parse_javascript_one_liner(badges_as_str, verbose=False):
     return badge_creation_details
 
 
-def parse_augmented_steam_drop_down_menu(lines, verbose=False):
+def parse_augmented_steam_drop_down_menu(lines: list[str], verbose: bool = False) -> dict[int, dict]:
     badge_creation_details = dict()
 
     print('Parsing the drop-down menu displayed with Augmented Steam.')
@@ -140,7 +140,8 @@ def parse_augmented_steam_drop_down_menu(lines, verbose=False):
     return badge_creation_details
 
 
-def parse_badge_creation_details(badge_creation_file_name=None, from_javascript=False, verbose=False):
+def parse_badge_creation_details(badge_creation_file_name: str = None, from_javascript: bool = False,
+                                 verbose: bool = False) -> dict[int, dict]:
     if badge_creation_file_name is None:
         badge_creation_file_name = get_badge_creation_file_name(from_javascript=from_javascript)
 
@@ -159,7 +160,7 @@ def parse_badge_creation_details(badge_creation_file_name=None, from_javascript=
     return badge_creation_details
 
 
-def main():
+def main() -> bool:
     badge_creation_details = parse_badge_creation_details(get_badge_creation_file_name(from_javascript=False))
 
     print('#badges = {}'.format(len(badge_creation_details)))

@@ -1,4 +1,4 @@
-def get_steam_transaction_fee():
+def get_steam_transaction_fee() -> float:
     # Reference: https://support.steampowered.com/kb_article.php?ref=6088-UDXM-7214#steamfee
 
     steam_transaction_fee = 0.05
@@ -6,7 +6,7 @@ def get_steam_transaction_fee():
     return steam_transaction_fee
 
 
-def get_game_specific_transaction_fee():
+def get_game_specific_transaction_fee() -> float:
     # Reference: https://support.steampowered.com/kb_article.php?ref=6088-UDXM-7214#steamfee
 
     game_specific_transaction_fee = 0.10
@@ -14,7 +14,7 @@ def get_game_specific_transaction_fee():
     return game_specific_transaction_fee
 
 
-def get_ground_truth_sell_price_without_fee(sell_price_including_fee):
+def get_ground_truth_sell_price_without_fee(sell_price_including_fee: float) -> float:
     # Reference: https://steamcommunity.com/discussions/forum/1/1679190184065722423/
 
     # Manual fit of the fee cost for small prices (less than or equal to 0.66€)
@@ -39,7 +39,7 @@ def get_ground_truth_sell_price_without_fee(sell_price_including_fee):
     return sell_price_without_fee
 
 
-def compute_sell_price_without_fee(sell_price_including_fee):
+def compute_sell_price_without_fee(sell_price_including_fee: float) -> float:
     # Caveat: this is not exact! The price without fee can be off by 1 cent!
 
     price = sell_price_including_fee
@@ -78,7 +78,7 @@ def compute_sell_price_without_fee(sell_price_including_fee):
     return sell_price_without_fee
 
 
-def main():
+def main() -> bool:
     print('With fee\t\tWithout fee')
     for i in range(3, 25):
         sell_price_including_fee = i / 100

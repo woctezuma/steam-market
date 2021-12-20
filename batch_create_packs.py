@@ -5,7 +5,7 @@ from inventory_utils import update_and_save_next_creation_times, create_booster_
 from market_arbitrage import get_filtered_badge_data
 
 
-def get_manually_selected_app_ids():
+def get_manually_selected_app_ids() -> list[int]:
     manually_selected_app_ids = [
         1286830,  # STAR WARS™: The Old Republic™ (750 gems)
         33680,  # Eversion (1000 gems)
@@ -15,9 +15,9 @@ def get_manually_selected_app_ids():
     return manually_selected_app_ids
 
 
-def filter_app_ids_based_on_badge_data(manually_selected_app_ids,
-                                       check_ask_price=False,
-                                       filtered_badge_data=None):
+def filter_app_ids_based_on_badge_data(manually_selected_app_ids: list[int],
+                                       check_ask_price: bool = False,
+                                       filtered_badge_data: dict = None) -> tuple[list[int], dict]:
     if filtered_badge_data is None:
         filtered_badge_data = get_filtered_badge_data(retrieve_listings_from_scratch=False,
                                                       enforced_sack_of_gems_price=None,
@@ -36,12 +36,14 @@ def filter_app_ids_based_on_badge_data(manually_selected_app_ids,
     return app_ids, filtered_badge_data
 
 
-def create_packs_for_app_ids(manually_selected_app_ids,
-                             filtered_badge_data=None,
-                             check_ask_price=False,
-                             is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
-                             is_marketable=True,  # Caveat: if False, packs will be crafted with un-marketable gems!
-                             verbose=True):
+def create_packs_for_app_ids(manually_selected_app_ids: list[int],
+                             filtered_badge_data: dict = None,
+                             check_ask_price: bool = False,
+                             is_a_simulation: bool = True,
+                             # Caveat: if False, then packs will be crafted, which costs money!
+                             is_marketable: bool = True,
+                             # Caveat: if False, packs will be crafted with un-marketable gems!
+                             verbose: bool = True) -> tuple[dict[str, dict | None], dict[int, str]]:
     app_ids, filtered_badge_data = filter_app_ids_based_on_badge_data(manually_selected_app_ids,
                                                                       check_ask_price=check_ask_price,
                                                                       filtered_badge_data=filtered_badge_data)
@@ -99,9 +101,10 @@ def create_packs_for_app_ids(manually_selected_app_ids,
     return creation_results, next_creation_times
 
 
-def main(retrieve_listings_from_scratch=False,  # Set to True & run once if you get "No match found for" games you own.
-         is_a_simulation=True,  # Caveat: if False, then packs will be crafted, which costs money!
-         is_marketable=True):  # Caveat: if False, packs will be crafted with unmarketable gems!
+def main(retrieve_listings_from_scratch: bool = False,
+         # Set to True & run once if you get "No match found for" games you own.
+         is_a_simulation: bool = True,  # Caveat: if False, then packs will be crafted, which costs money!
+         is_marketable: bool = True) -> bool:  # Caveat: if False, packs will be crafted with unmarketable gems!
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     quick_check_with_tracked_booster_packs = False

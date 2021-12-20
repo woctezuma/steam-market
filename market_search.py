@@ -121,11 +121,11 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie: bool = False
     return rate_limits
 
 
-def get_all_listings(all_listings=None,
-                     url=None,
-                     tag_item_class_no=None,
-                     tag_drop_rate_str=None,
-                     rarity=None):
+def get_all_listings(all_listings: dict[str, dict] = None,
+                     url: str = None,
+                     tag_item_class_no: int = None,
+                     tag_drop_rate_str: str = None,
+                     rarity: str = None) -> dict[str, dict]:
     if url is None:
         url = get_steam_market_search_url()
 
@@ -217,9 +217,9 @@ def get_all_listings(all_listings=None,
     return all_listings
 
 
-def download_all_listings(listing_output_file_name=None,
-                          url=None,
-                          tag_item_class_no=None):
+def download_all_listings(listing_output_file_name: str = None,
+                          url: str = None,
+                          tag_item_class_no: int = None) -> bool:
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
 
@@ -233,11 +233,11 @@ def download_all_listings(listing_output_file_name=None,
     return True
 
 
-def update_all_listings(listing_output_file_name=None,
-                        url=None,
-                        tag_item_class_no=None,
-                        tag_drop_rate_str=None,
-                        rarity=None):
+def update_all_listings(listing_output_file_name: str = None,
+                        url: str = None,
+                        tag_item_class_no: int = None,
+                        tag_drop_rate_str: str = None,
+                        rarity: str = None) -> bool:
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
 
@@ -263,7 +263,7 @@ def update_all_listings(listing_output_file_name=None,
     return True
 
 
-def load_all_listings(listing_output_file_name=None):
+def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
 

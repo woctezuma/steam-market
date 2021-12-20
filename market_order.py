@@ -10,13 +10,13 @@ from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_val
 from utils import get_market_order_file_name, get_cushioned_cooldown_in_seconds
 
 
-def get_steam_market_order_url():
+def get_steam_market_order_url() -> str:
     steam_market_order_url = 'https://steamcommunity.com/market/itemordershistogram'
 
     return steam_market_order_url
 
 
-def get_market_order_parameters(item_nameid):
+def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
     params = dict()
 
     params['country'] = 'FR'
@@ -28,7 +28,7 @@ def get_market_order_parameters(item_nameid):
     return params
 
 
-def get_steam_api_rate_limits_for_market_order(has_secured_cookie=False):
+def get_steam_api_rate_limits_for_market_order(has_secured_cookie: bool = False) -> dict[str, int]:
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
@@ -48,10 +48,10 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie=False):
     return rate_limits
 
 
-def download_market_order_data(listing_hash,
-                               item_nameid=None,
-                               verbose=False,
-                               listing_details_output_file_name=None):
+def download_market_order_data(listing_hash: str,
+                               item_nameid: str = None,
+                               verbose: bool = False,
+                               listing_details_output_file_name: str = None) -> tuple[float, float, int, int]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -137,12 +137,12 @@ def download_market_order_data(listing_hash,
     return bid_price, ask_price, bid_volume, ask_volume
 
 
-def download_market_order_data_batch(badge_data,
-                                     market_order_dict=None,
-                                     verbose=False,
-                                     save_to_disk=True,
-                                     market_order_output_file_name=None,
-                                     listing_details_output_file_name=None):
+def download_market_order_data_batch(badge_data: dict[str, dict],
+                                     market_order_dict: dict[str, dict] = None,
+                                     verbose: bool = False,
+                                     save_to_disk: bool = True,
+                                     market_order_output_file_name: str = None,
+                                     listing_details_output_file_name: str = None) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
 
@@ -197,9 +197,9 @@ def download_market_order_data_batch(badge_data,
     return market_order_dict
 
 
-def load_market_order_data(badge_data=None,
-                           trim_output=False,
-                           retrieve_market_orders_online=True):
+def load_market_order_data(badge_data: dict[str, dict] = None,
+                           trim_output: bool = False,
+                           retrieve_market_orders_online: bool = True) -> dict[str, dict]:
     market_order_dict = load_market_order_data_from_disk()
 
     if retrieve_market_orders_online:
@@ -220,8 +220,8 @@ def load_market_order_data(badge_data=None,
     return trimmed_market_order_dict
 
 
-def trim_market_order_data(badge_data,
-                           market_order_dict):
+def trim_market_order_data(badge_data: dict[str, dict],
+                           market_order_dict: dict[str, dict]) -> tuple[dict[str, dict], list[str]]:
     trimmed_market_order_dict = dict()
     app_ids_with_missing_data = list()
 
@@ -243,7 +243,7 @@ def trim_market_order_data(badge_data,
     return trimmed_market_order_dict, app_ids_with_missing_data
 
 
-def load_market_order_data_from_disk(market_order_output_file_name=None):
+def load_market_order_data_from_disk(market_order_output_file_name: str = None) -> [dict[str, dict] | None]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
 
@@ -256,7 +256,7 @@ def load_market_order_data_from_disk(market_order_output_file_name=None):
     return market_order_dict
 
 
-def main():
+def main() -> bool:
     listing_hash = '290970-1849 Booster Pack'
 
     # Download based on a listing hash

@@ -10,7 +10,7 @@ from transaction_fee import compute_sell_price_without_fee
 from utils import convert_listing_hash_to_app_id
 
 
-def get_app_ids_of_interest():
+def get_app_ids_of_interest() -> list[str]:
     # List appIDs for which a booster pack was crafted at least once in the past.
 
     data = load_next_creation_time_data()
@@ -20,8 +20,8 @@ def get_app_ids_of_interest():
     return app_ids
 
 
-def get_sell_prices_without_fee(app_ids,
-                                price_offset_in_euros=0.0):
+def get_sell_prices_without_fee(app_ids: list[str],
+                                price_offset_in_euros: float = 0.0) -> dict[str, float]:
     # Load sell prices (without fee).
     #
     # NB: an arbitrary price offset (greater than or equal to zero) can be input to constrain the problem even more.
@@ -49,7 +49,7 @@ def get_sell_prices_without_fee(app_ids,
     return sell_prices
 
 
-def get_gem_amount_for_a_booster_pack(app_ids):
+def get_gem_amount_for_a_booster_pack(app_ids: list[str]) -> dict[str, int]:
     # Load gem amounts required to craft a Booster Pack.
 
     data = parse_badge_creation_details(from_javascript=True)
@@ -69,11 +69,11 @@ def get_gem_amount_for_a_booster_pack(app_ids):
     return gem_amounts_for_a_booster_pack
 
 
-def filter_app_ids_with_potential_profit(app_ids,
-                                         sell_prices_without_fee,
-                                         gem_amounts_for_a_booster_pack,
-                                         gem_sack_price_in_euros=None,
-                                         verbose=True):
+def filter_app_ids_with_potential_profit(app_ids: list[str],
+                                         sell_prices_without_fee: dict[str, float],
+                                         gem_amounts_for_a_booster_pack: dict[str, int],
+                                         gem_sack_price_in_euros: float = None,
+                                         verbose: bool = True) -> list[int]:
     # Filter out appIDs for which the sell price (without fee) is lower than the cost to craft a Booster Pack.
     # Indeed, a profit is impossible for these appIDs.
 
@@ -115,9 +115,9 @@ def filter_app_ids_with_potential_profit(app_ids,
     return filtered_app_ids
 
 
-def remove_app_ids_previously_processed(filtered_app_ids,
-                                        app_ids_previously_processed=None,
-                                        verbose=True):
+def remove_app_ids_previously_processed(filtered_app_ids: list[int],
+                                        app_ids_previously_processed: list[int] = None,
+                                        verbose: bool = True) -> list[int]:
     # Manually remove previously processed appIDs from the list of returned appIDs of interest.
 
     if app_ids_previously_processed is None:
@@ -134,7 +134,7 @@ def remove_app_ids_previously_processed(filtered_app_ids,
     return app_ids_to_do
 
 
-def main():
+def main() -> None:
     gem_sack_price_in_euros = 0.40
 
     # Positive value to ensure under-cutting is possible

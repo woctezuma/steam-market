@@ -13,10 +13,11 @@ from utils import convert_listing_hash_to_app_name
 from utils import get_category_name_for_booster_packs
 
 
-def filter_listings(all_listings=None,
-                    min_sell_price=30,  # in cents
-                    min_num_listings=20,  # to remove listings with very few sellers, who chose unrealistic sell prices
-                    verbose=True):
+def filter_listings(all_listings: dict[str, dict] = None,
+                    min_sell_price: float = 30,  # in cents
+                    min_num_listings: int = 20,
+                    # to remove listings with very few sellers, who chose unrealistic sell prices
+                    verbose: bool = True) -> list[str]:
     if all_listings is None:
         all_listings = load_all_listings()
 
@@ -38,8 +39,8 @@ def filter_listings(all_listings=None,
     return filtered_listing_hashes
 
 
-def convert_to_badges(filtered_listing_hashes,
-                      max_num_badges=None):
+def convert_to_badges(filtered_listing_hashes: [dict[str, dict] | list[str]],
+                      max_num_badges: int = None) -> dict[int, dict]:
     badge_data = dict()
 
     for i, listing_hash in enumerate(filtered_listing_hashes):
@@ -55,7 +56,7 @@ def convert_to_badges(filtered_listing_hashes,
     return badge_data
 
 
-def filter_out_unmarketable_packs(market_order_dict):
+def filter_out_unmarketable_packs(market_order_dict: dict[str, dict]) -> tuple[dict[str, dict], dict[str, dict]]:
     marketable_market_order_dict = dict()
     unknown_market_order_dict = dict()
 
@@ -74,8 +75,8 @@ def filter_out_unmarketable_packs(market_order_dict):
     return marketable_market_order_dict, unknown_market_order_dict
 
 
-def sort_according_to_buzz(market_order_dict,
-                           marketable_market_order_dict=None):
+def sort_according_to_buzz(market_order_dict: dict[str, dict],
+                           marketable_market_order_dict: dict[str, dict] = None) -> list[str]:
     if marketable_market_order_dict is None:
         marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
@@ -86,11 +87,11 @@ def sort_according_to_buzz(market_order_dict,
     return hashes_for_best_bid
 
 
-def print_packs_with_high_buzz(hashes_for_best_bid,
-                               market_order_dict,
-                               item_rarity_patterns_per_app_id=None,
-                               category_name=None,
-                               num_packs_to_display=10):
+def print_packs_with_high_buzz(hashes_for_best_bid: list[str],
+                               market_order_dict: dict[str, dict],
+                               item_rarity_patterns_per_app_id: dict[int, dict] = None,
+                               category_name: str = None,
+                               num_packs_to_display: int = 10) -> None:
     if category_name is None:
         category_name = get_category_name_for_booster_packs()
 
@@ -145,11 +146,12 @@ def print_packs_with_high_buzz(hashes_for_best_bid,
     return
 
 
-def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
-                                                          aggregated_badge_data=None,
-                                                          force_update_from_steam_card_exchange=False,
-                                                          enforced_sack_of_gems_price=None,
-                                                          minimum_allowed_sack_of_gems_price=None):
+def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings: dict[str, dict],
+                                                          aggregated_badge_data: dict[str, dict] = None,
+                                                          force_update_from_steam_card_exchange: bool = False,
+                                                          enforced_sack_of_gems_price: float = None,
+                                                          minimum_allowed_sack_of_gems_price: float = None) -> dict[
+    str, dict]:
     if aggregated_badge_data is None:
         aggregated_badge_data = convert_to_badges(all_listings)
 
@@ -187,15 +189,15 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
     return aggregated_badge_data
 
 
-def main(retrieve_listings_from_scratch=False,
-         retrieve_market_orders_online=False,
-         force_update_from_steam_card_exchange=False,
-         enforced_sack_of_gems_price=None,
-         minimum_allowed_sack_of_gems_price=None,
-         use_a_constant_price_threshold=False,
-         min_sell_price=30,
-         min_num_listings=3,
-         num_packs_to_display=10):
+def main(retrieve_listings_from_scratch: bool = False,
+         retrieve_market_orders_online: bool = False,
+         force_update_from_steam_card_exchange: bool = False,
+         enforced_sack_of_gems_price: float = None,
+         minimum_allowed_sack_of_gems_price: float = None,
+         use_a_constant_price_threshold: bool = False,
+         min_sell_price: float = 30,
+         min_num_listings: int = 3,
+         num_packs_to_display: int = 10) -> None:
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:

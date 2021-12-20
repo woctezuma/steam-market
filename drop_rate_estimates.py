@@ -9,32 +9,32 @@
 from utils import get_category_name_for_profile_backgrounds, get_category_name_for_emoticons
 
 
-def get_drop_rate_field():
+def get_drop_rate_field() -> str:
     drop_rate_field = 'drop_rate'
 
     return drop_rate_field
 
 
-def get_badge_count_field():
+def get_badge_count_field() -> str:
     badge_count_field = 'badge_count'
 
     return badge_count_field
 
 
-def get_rarity_fields():
+def get_rarity_fields() -> list[str]:
     rarity_fields = ['common', 'uncommon', 'rare']
 
     return rarity_fields
 
 
-def clamp_proportion(input_proportion):
+def clamp_proportion(input_proportion: float) -> float:
     # Reference: https://en.wikipedia.org/wiki/Clamping_(graphics)
     clamped_proportion = min(1, max(0, input_proportion))
 
     return clamped_proportion
 
 
-def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
+def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -> dict:
     # Drop-rate estimates conditionally on the item rarity pattern C/UC/R (the numbers of possible items of each rarity)
 
     drop_rate_estimates = dict()
@@ -162,7 +162,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True):
     return drop_rate_estimates
 
 
-def get_drop_rate_estimates(verbose=True):
+def get_drop_rate_estimates(verbose: bool = True) -> dict:
     # Drop-rate estimates conditionally on the category (profile backgrounds, emoticons)
 
     drop_rate_estimates = dict()
@@ -215,7 +215,7 @@ def get_drop_rate_estimates(verbose=True):
     return drop_rate_estimates
 
 
-def main():
+def main() -> bool:
     drop_rate_estimates = get_drop_rate_estimates(verbose=True)
 
     drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True)

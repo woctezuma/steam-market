@@ -4,7 +4,7 @@ import json
 from utils import get_next_creation_time_file_name
 
 
-def load_next_creation_time_data(next_creation_time_file_name=None):
+def load_next_creation_time_data(next_creation_time_file_name: str = None) -> dict[int, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 
@@ -26,8 +26,8 @@ def load_next_creation_time_data(next_creation_time_file_name=None):
     return next_creation_times_with_keys_as_int
 
 
-def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data,
-                                                             verbose=True):
+def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data: dict[int, dict],
+                                                             verbose: bool = True) -> dict[int, dict]:
     next_creation_times_loaded_from_disk = load_next_creation_time_data()
 
     app_ids = set(aggregated_badge_data.keys()).intersection(next_creation_times_loaded_from_disk.keys())
@@ -60,13 +60,13 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
     return aggregated_badge_data
 
 
-def get_current_time():
+def get_current_time() -> datetime.datetime:
     current_time = datetime.datetime.today()
 
     return current_time
 
 
-def get_creation_time_format(prepend_year=False):
+def get_creation_time_format(prepend_year: bool = False) -> str:
     # Reference: https://docs.python.org/3/library/time.html#time.strftime
 
     # The format used in: '14 Sep @ 10:48pm'
@@ -78,7 +78,7 @@ def get_creation_time_format(prepend_year=False):
     return time_format
 
 
-def get_formatted_time(time_struct=None):
+def get_formatted_time(time_struct: datetime.datetime = None) -> str:
     if time_struct is None:
         time_struct = get_current_time()
 
@@ -88,8 +88,8 @@ def get_formatted_time(time_struct=None):
     return formatted_time_as_str
 
 
-def prepend_year_to_time_as_str(formatted_time_as_str,
-                                year_to_prepend=None):
+def prepend_year_to_time_as_str(formatted_time_as_str: str,
+                                year_to_prepend: int = None) -> str:
     if year_to_prepend is None:
         current_time = get_current_time()
         year_to_prepend = current_time.year
@@ -102,8 +102,8 @@ def prepend_year_to_time_as_str(formatted_time_as_str,
     return formatted_time_as_str_with_year
 
 
-def get_time_struct_from_str(formatted_time_as_str,
-                             use_current_year=False):
+def get_time_struct_from_str(formatted_time_as_str: str,
+                             use_current_year: bool = False) -> datetime.datetime:
     if use_current_year:
         current_time = get_current_time()
         current_year = current_time.year
@@ -126,7 +126,7 @@ def get_time_struct_from_str(formatted_time_as_str,
     return time_struct
 
 
-def get_formatted_current_time(delay_in_days=0):
+def get_formatted_current_time(delay_in_days: int = 0) -> str:
     current_time = get_current_time()
 
     if delay_in_days != 0:
@@ -137,21 +137,21 @@ def get_formatted_current_time(delay_in_days=0):
     return formatted_current_time_as_str
 
 
-def get_crafting_cooldown_duration_in_days():
+def get_crafting_cooldown_duration_in_days() -> int:
     # For every game, a booster pack can be crafted every day.
     crafting_cooldown_duration_in_days = 1
 
     return crafting_cooldown_duration_in_days
 
 
-def get_crafting_cooldown_duration_in_seconds():
+def get_crafting_cooldown_duration_in_seconds() -> int:
     crafting_cooldown_duration_in_seconds = 24 * 3600 * get_crafting_cooldown_duration_in_days()
 
     return crafting_cooldown_duration_in_seconds
 
 
-def determine_whether_a_booster_pack_can_be_crafted(badge_data,
-                                                    current_time=None):
+def determine_whether_a_booster_pack_can_be_crafted(badge_data: dict,
+                                                    current_time: datetime.datetime = None) -> bool:
     if current_time is None:
         current_time = get_current_time()
 
@@ -186,7 +186,7 @@ def determine_whether_a_booster_pack_can_be_crafted(badge_data,
     return a_booster_pack_can_be_crafted
 
 
-def main():
+def main() -> bool:
     print(get_formatted_current_time())
 
     return True

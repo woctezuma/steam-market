@@ -8,7 +8,7 @@ import requests
 from utils import get_steam_card_exchange_file_name
 
 
-def get_current_unix_time_in_ms():
+def get_current_unix_time_in_ms() -> int:
     # Reference: https://stackoverflow.com/a/56394660
 
     current_unix_time_in_ms = time.time_ns() // 1000000
@@ -16,13 +16,13 @@ def get_current_unix_time_in_ms():
     return current_unix_time_in_ms
 
 
-def get_steamcardexchange_api_end_point_url():
+def get_steamcardexchange_api_end_point_url() -> str:
     steamcardexchange_api_end_point_url = 'https://www.steamcardexchange.net/api/request.php'
 
     return steamcardexchange_api_end_point_url
 
 
-def get_steamcardexchange_api_params():
+def get_steamcardexchange_api_params() -> dict[str, str]:
     current_unix_time_in_ms = get_current_unix_time_in_ms()
 
     steamcardexchange_api_params = {
@@ -33,8 +33,8 @@ def get_steamcardexchange_api_params():
     return steamcardexchange_api_params
 
 
-def save_data_from_steam_card_exchange(response,
-                                       steam_card_exchange_file_name=None):
+def save_data_from_steam_card_exchange(response: dict,
+                                       steam_card_exchange_file_name: str = None) -> None:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -45,8 +45,8 @@ def save_data_from_steam_card_exchange(response,
     return
 
 
-def download_data_from_steam_card_exchange(steam_card_exchange_file_name=None,
-                                           save_to_disk=True):
+def download_data_from_steam_card_exchange(steam_card_exchange_file_name: str = None,
+                                           save_to_disk: bool = True) -> [dict | None]:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -72,7 +72,7 @@ def download_data_from_steam_card_exchange(steam_card_exchange_file_name=None,
     return response
 
 
-def load_data_from_steam_card_exchange(steam_card_exchange_file_name=None):
+def load_data_from_steam_card_exchange(steam_card_exchange_file_name: str = None) -> [dict | None]:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -88,15 +88,15 @@ def load_data_from_steam_card_exchange(steam_card_exchange_file_name=None):
     return response
 
 
-def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set):
+def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set: int) -> float:
     gem_amount_required_to_craft_booster_pack = 6000 / num_cards_per_set
 
     return gem_amount_required_to_craft_booster_pack
 
 
-def parse_data_from_steam_card_exchange(response=None,
-                                        force_update_from_steam_card_exchange=False,
-                                        steam_card_exchange_file_name=None):
+def parse_data_from_steam_card_exchange(response: dict = None,
+                                        force_update_from_steam_card_exchange: bool = False,
+                                        steam_card_exchange_file_name: str = None) -> dict[int, dict]:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -130,7 +130,7 @@ def parse_data_from_steam_card_exchange(response=None,
     return dico
 
 
-def main(force_update=False):
+def main(force_update: bool = False) -> bool:
     if force_update:
         response = download_data_from_steam_card_exchange()
     else:

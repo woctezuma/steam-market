@@ -44,7 +44,7 @@ def filter_out_badges_never_crafted(aggregated_badge_data, verbose=True):
     return filtered_badge_data
 
 
-def filter_out_badges_recently_crafted(aggregated_badge_data, verbose=True):
+def filter_out_badges_recently_crafted(aggregated_badge_data: dict[int, dict], verbose: bool = True) -> dict[int, dict]:
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
     # and thus which cannot be immediately crafted.
 

@@ -9,7 +9,7 @@ from sack_of_gems import get_gem_price
 from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
-def determine_whether_listing_hash_is_dubious(listing_hash):
+def determine_whether_listing_hash_is_dubious(listing_hash: str) -> bool:
     dubious_str = '#Economy_TradingCards_'
 
     listing_hash_is_dubious = bool(dubious_str in listing_hash)
@@ -17,8 +17,8 @@ def determine_whether_listing_hash_is_dubious(listing_hash):
     return listing_hash_is_dubious
 
 
-def filter_out_dubious_listing_hashes(all_listings,
-                                      verbose=True):
+def filter_out_dubious_listing_hashes(all_listings: dict[str, dict],
+                                      verbose: bool = True) -> dict[str, dict]:
     # Filter out listing hashes which hint at a dubious market listing for the booster pack. For instance:
     #   362680-Fran Bow #Economy_TradingCards_ItemType_BoosterPack
     #   844870-#Economy_TradingCards_Type_GameType
@@ -43,9 +43,9 @@ def filter_out_dubious_listing_hashes(all_listings,
     return filtered_listings
 
 
-def match_badges_with_listing_hashes(badge_creation_details=None,
-                                     all_listings=None,
-                                     verbose=True):
+def match_badges_with_listing_hashes(badge_creation_details: dict[int, dict] = None,
+                                     all_listings: dict[str, dict] = None,
+                                     verbose: bool = True) -> dict[int, str | None]:
     # Badges for games which I own
 
     if badge_creation_details is None:
@@ -96,12 +96,12 @@ def match_badges_with_listing_hashes(badge_creation_details=None,
     return badge_matches
 
 
-def aggregate_badge_data(badge_creation_details,
-                         badge_matches,
-                         all_listings=None,
-                         enforced_sack_of_gems_price=None,
-                         minimum_allowed_sack_of_gems_price=None,
-                         retrieve_gem_price_from_scratch=False):
+def aggregate_badge_data(badge_creation_details: dict[int, dict],
+                         badge_matches: dict[int, str | None],
+                         all_listings: dict[str, dict] = None,
+                         enforced_sack_of_gems_price: float = None,
+                         minimum_allowed_sack_of_gems_price: float = None,
+                         retrieve_gem_price_from_scratch: bool = False) -> dict[int, dict]:
     # Aggregate data:
     #       owned appID --> (gem PRICE, sell price)
     # where:
@@ -149,10 +149,10 @@ def aggregate_badge_data(badge_creation_details,
     return aggregated_badge_data
 
 
-def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
-                               enforced_sack_of_gems_price=None,
-                               minimum_allowed_sack_of_gems_price=None,
-                               from_javascript=False):
+def load_aggregated_badge_data(retrieve_listings_from_scratch: bool = False,
+                               enforced_sack_of_gems_price: float = None,
+                               minimum_allowed_sack_of_gems_price: float = None,
+                               from_javascript: bool = False) -> dict[int, dict]:
     badge_creation_details = parse_badge_creation_details(from_javascript=from_javascript)
 
     if retrieve_listings_from_scratch:
@@ -177,7 +177,7 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch=False,
     return aggregated_badge_data
 
 
-def populate_random_samples_of_badge_data(badge_data=None, num_samples=50):
+def populate_random_samples_of_badge_data(badge_data: dict[int, dict] = None, num_samples: int = 50) -> bool:
     if badge_data is None:
         badge_data = load_aggregated_badge_data()
 
@@ -193,7 +193,7 @@ def populate_random_samples_of_badge_data(badge_data=None, num_samples=50):
     return True
 
 
-def main(populate_all_item_name_ids=False):
+def main(populate_all_item_name_ids: bool = False) -> bool:
     if populate_all_item_name_ids:
         # Pre-retrieval of ALL of the MISSING item name ids.
         # Caveat: this may require a long time, due to API rate limits.

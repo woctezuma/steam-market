@@ -11,11 +11,11 @@ from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_val
 from utils import get_listing_details_output_file_name, get_cushioned_cooldown_in_seconds
 
 
-def get_steam_market_listing_url(app_id=None,
-                                 listing_hash=None,
-                                 render_as_json=True,
-                                 replace_spaces=False,
-                                 replace_parenthesis=False):
+def get_steam_market_listing_url(app_id: int = None,
+                                 listing_hash: str = None,
+                                 render_as_json: bool = True,
+                                 replace_spaces: bool = False,
+                                 replace_parenthesis: bool = False) -> str:
     if app_id is None:
         # AppID for the Steam Store. It is the same for all the booster packs.
         app_id = 753
@@ -44,7 +44,7 @@ def get_steam_market_listing_url(app_id=None,
     return market_listing_url
 
 
-def get_listing_parameters():
+def get_listing_parameters() -> dict[str, str]:
     params = dict()
 
     params['currency'] = '3'
@@ -52,7 +52,7 @@ def get_listing_parameters():
     return params
 
 
-def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
+def get_steam_api_rate_limits_for_market_listing(has_secured_cookie: bool = False) -> dict[str, int]:
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
@@ -72,7 +72,7 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie=False):
     return rate_limits
 
 
-def parse_item_type_no_from_script(last_script):
+def parse_item_type_no_from_script(last_script: str) -> [int | None]:
     # Reference: https://gaming.stackexchange.com/a/351941
 
     start_str = 'var g_rgAssets ='
@@ -177,7 +177,7 @@ def parse_item_type_no_from_script(last_script):
     return item_type_no
 
 
-def parse_marketability_from_script(last_script):
+def parse_marketability_from_script(last_script: str) -> [bool | None]:
     marketable_key = '"marketable":'
 
     try:
@@ -195,7 +195,7 @@ def parse_marketability_from_script(last_script):
     return is_marketable
 
 
-def parse_item_name_id_from_script(last_script):
+def parse_item_name_id_from_script(last_script: str) -> [int | None]:
     last_script_token = last_script.split('(')[-1]
 
     item_nameid_str = last_script_token.split(');')[0]
@@ -208,7 +208,7 @@ def parse_item_name_id_from_script(last_script):
     return item_nameid
 
 
-def parse_item_name_id(html_doc):
+def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
     soup = BeautifulSoup(html_doc, 'html.parser')
 
     last_script = str(soup.find_all('script')[-1])
@@ -222,7 +222,8 @@ def parse_item_name_id(html_doc):
     return item_nameid, is_marketable, item_type_no
 
 
-def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
+def get_listing_details(listing_hash: str = None, cookie: dict[str, str] = None, render_as_json: bool = False) -> tuple[
+    dict[str, dict], int]:
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
@@ -266,10 +267,10 @@ def get_listing_details(listing_hash=None, cookie=None, render_as_json=False):
     return listing_details, status_code
 
 
-def get_listing_details_batch(listing_hashes,
-                              all_listing_details=None,
-                              save_to_disk=True,
-                              listing_details_output_file_name=None):
+def get_listing_details_batch(listing_hashes: list[str],
+                              all_listing_details: dict[str, dict] = None,
+                              save_to_disk: bool = True,
+                              listing_details_output_file_name: str = None) -> dict[str, dict]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -318,8 +319,8 @@ def get_listing_details_batch(listing_hashes,
     return all_listing_details
 
 
-def update_all_listing_details(listing_hashes=None,
-                               listing_details_output_file_name=None):
+def update_all_listing_details(listing_hashes: list[str] = None,
+                               listing_details_output_file_name: str = None) -> dict[str, dict]:
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
     # to restart the process without risking to lose anything, in case the process fails again.
 
@@ -346,7 +347,7 @@ def update_all_listing_details(listing_hashes=None,
     return all_listing_details
 
 
-def load_all_listing_details(listing_details_output_file_name=None):
+def load_all_listing_details(listing_details_output_file_name: str = None) -> dict[str, dict]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -356,7 +357,7 @@ def load_all_listing_details(listing_details_output_file_name=None):
     return all_listing_details
 
 
-def fix_app_name_for_url_query(app_name):
+def fix_app_name_for_url_query(app_name: str) -> str:
     app_name = app_name.replace('#', '%23')
     app_name = app_name.replace('?', '%3F')
     app_name = app_name.replace('%', '%25')
@@ -365,7 +366,7 @@ def fix_app_name_for_url_query(app_name):
     return app_name
 
 
-def main():
+def main() -> bool:
     listing_hashes = [
         '268830-Doctor Who%3A The Adventure Games Booster Pack',
         '290970-1849 Booster Pack',
@@ -384,8 +385,8 @@ def main():
     return True
 
 
-def get_item_nameid(listing_hash,
-                    listing_details_output_file_name=None):
+def get_item_nameid(listing_hash: str,
+                    listing_details_output_file_name: str = None) -> str:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -402,9 +403,9 @@ def get_item_nameid(listing_hash,
     return item_nameid
 
 
-def get_item_nameid_batch(listing_hashes,
-                          listing_details_output_file_name=None,
-                          listing_hashes_to_forcefully_process=None):
+def get_item_nameid_batch(listing_hashes: [ dict[str,dict] | list[str] ],
+                          listing_details_output_file_name: str = None,
+                          listing_hashes_to_forcefully_process: list[str] = None) -> dict[str, dict]:
     if listing_hashes_to_forcefully_process is None:
         listing_hashes_to_forcefully_process = []
 
@@ -465,7 +466,7 @@ def get_item_nameid_batch(listing_hashes,
     return item_nameids
 
 
-def update_marketability_status(few_selected_listing_hashes):
+def update_marketability_status(few_selected_listing_hashes: list[str]) -> dict[str, dict]:
     item_nameids = get_item_nameid_batch(listing_hashes=[],
                                          listing_hashes_to_forcefully_process=few_selected_listing_hashes)
 

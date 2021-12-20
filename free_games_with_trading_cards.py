@@ -9,13 +9,13 @@ from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_val
 from utils import convert_listing_hash_to_app_id
 
 
-def get_user_data_url():
+def get_user_data_url() -> str:
     user_data_url = 'https://store.steampowered.com/dynamicstore/userdata/'
 
     return user_data_url
 
 
-def download_user_data():
+def download_user_data() -> [dict | None]:
     cookie = get_cookie_dict()
 
     resp_data = requests.get(get_user_data_url(),
@@ -32,7 +32,7 @@ def download_user_data():
     return result
 
 
-def download_owned_apps(verbose=True):
+def download_owned_apps(verbose: bool = True) -> list[int]:
     result = download_user_data()
 
     owned_apps = result['rgOwnedApps']
@@ -43,7 +43,7 @@ def download_owned_apps(verbose=True):
     return owned_apps
 
 
-def download_free_apps(method='price', verbose=True):
+def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]:
     if method == 'price':
         data = steamspypi.load()
 
@@ -71,7 +71,7 @@ def download_free_apps(method='price', verbose=True):
     return free_apps
 
 
-def load_apps_with_trading_cards(verbose=True):
+def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
     all_listings = load_all_listings()
 
     apps_with_trading_cards = [convert_listing_hash_to_app_id(listing_hash) for listing_hash in all_listings]
@@ -82,7 +82,8 @@ def load_apps_with_trading_cards(verbose=True):
     return apps_with_trading_cards
 
 
-def load_free_apps_with_trading_cards(free_apps=None, list_of_methods=None, verbose=True):
+def load_free_apps_with_trading_cards(free_apps: set[int] = None, list_of_methods: list[str] = None,
+                                      verbose: bool = True) -> set[int]:
     if list_of_methods is None:
         list_of_methods = ['price', 'genre', 'tag']
 
@@ -107,7 +108,7 @@ def load_free_apps_with_trading_cards(free_apps=None, list_of_methods=None, verb
     return free_apps_with_trading_cards
 
 
-def load_file(file_name, verbose=True):
+def load_file(file_name: str, verbose: bool = True) -> list[int]:
     with open(file_name, 'r', encoding='utf-8') as f:
         data = [int(line.strip()) for line in f.readlines()]
 
@@ -117,8 +118,8 @@ def load_file(file_name, verbose=True):
     return data
 
 
-def format_for_asf_command_line(app_ids,
-                                app_prefix=None):
+def format_for_asf_command_line(app_ids: set[int],
+                                app_prefix: str = None) -> list[str]:
     if app_prefix is None:
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
         app_prefix = 'a/'
@@ -135,9 +136,9 @@ def chunks(l: list, n: int) -> collections.abc.Iterator[list]:
         yield l[i:i + n]
 
 
-def group_concatenate_to_str(data,
-                             asf_username='ASF',
-                             group_size=25):
+def group_concatenate_to_str(data: list,
+                             asf_username: str = 'ASF',
+                             group_size: int = 25) -> str:
     asf_command = 'addlicense'
     asf_complete_command = '{} {} '.format(asf_command, asf_username)
 
@@ -166,11 +167,11 @@ def group_concatenate_to_str(data,
     return output
 
 
-def write_to_file(data,
-                  file_name,
-                  asf_username=None,
-                  group_size=25,
-                  verbose=True):
+def write_to_file(data: list[str],
+                  file_name: str,
+                  asf_username: str = None,
+                  group_size: int = 25,
+                  verbose: bool = True) -> None:
     output = group_concatenate_to_str(data,
                                       asf_username=asf_username,
                                       group_size=group_size)
@@ -184,7 +185,7 @@ def write_to_file(data,
     return
 
 
-def main():
+def main() -> None:
     # Based on SteamDB: https://steamdb.info/search/?a=app_keynames&keyname=243&operator=1
     free_apps = load_file('data/free_apps.txt')
 

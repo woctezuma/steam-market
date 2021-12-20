@@ -37,7 +37,7 @@ from utils import get_listing_output_file_name_for_profile_backgrounds, get_list
 from utils import get_market_order_file_name_for_profile_backgrounds, get_market_order_file_name_for_emoticons
 
 
-def update_all_listings_for_foil_cards():
+def update_all_listings_for_foil_cards() -> None:
     print('Downloading listings for foil cards.')
 
     update_all_listings(
@@ -48,8 +48,8 @@ def update_all_listings_for_foil_cards():
     return
 
 
-def update_all_listings_for_profile_backgrounds(tag_drop_rate_str=None,
-                                                rarity=None):
+def update_all_listings_for_profile_backgrounds(tag_drop_rate_str: str = None,
+                                                rarity: str = None) -> None:
     print('Downloading listings for profile backgrounds (rarity_tag={} ; rarity={}).'.format(
         tag_drop_rate_str,
         rarity,
@@ -67,8 +67,8 @@ def update_all_listings_for_profile_backgrounds(tag_drop_rate_str=None,
     return
 
 
-def update_all_listings_for_emoticons(tag_drop_rate_str=None,
-                                      rarity=None):
+def update_all_listings_for_emoticons(tag_drop_rate_str: str = None,
+                                      rarity: str = None) -> None:
     print('Downloading listings for emoticons (rarity_tag={} ; rarity={}).'.format(
         tag_drop_rate_str,
         rarity,
@@ -85,8 +85,8 @@ def update_all_listings_for_emoticons(tag_drop_rate_str=None,
     return
 
 
-def update_all_listings_for_items_other_than_cards(tag_drop_rate_str=None,
-                                                   rarity=None):
+def update_all_listings_for_items_other_than_cards(tag_drop_rate_str: str = None,
+                                                   rarity: str = None) -> None:
     # Profile Backgrounds
 
     update_all_listings_for_profile_backgrounds(tag_drop_rate_str=tag_drop_rate_str,
@@ -111,8 +111,8 @@ def update_all_listings_for_items_other_than_cards(tag_drop_rate_str=None,
     return
 
 
-def get_listings(listing_output_file_name,
-                 retrieve_listings_from_scratch=False):
+def get_listings(listing_output_file_name: str,
+                 retrieve_listings_from_scratch: bool = False) -> dict[str, dict]:
     if retrieve_listings_from_scratch:
         # Caveat: this update is only for items of Common rarity!
         update_all_listings_for_items_other_than_cards(rarity='common')
@@ -122,13 +122,14 @@ def get_listings(listing_output_file_name,
     return all_listings
 
 
-def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
-                                                             item_rarity_patterns_per_app_id=None,
-                                                             price_threshold_in_cents=None,
-                                                             category_name=None,
-                                                             drop_rate_estimates_for_common_rarity=None,
-                                                             gem_price_in_euros=None,
-                                                             verbose=True):
+def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings: dict[str, dict],
+                                                             item_rarity_patterns_per_app_id: dict[int, dict] = None,
+                                                             price_threshold_in_cents: float = None,
+                                                             category_name: str = None,
+                                                             drop_rate_estimates_for_common_rarity: dict[
+                                                                 tuple[int, int, int], float] = None,
+                                                             gem_price_in_euros: float = None,
+                                                             verbose: bool = True):
     if gem_price_in_euros is None:
         gem_price_in_euros = get_gem_price()
 
@@ -190,11 +191,11 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(all_listings,
     return filtered_badge_data
 
 
-def get_market_orders(filtered_badge_data,
-                      retrieve_market_orders_online,
-                      focus_on_listing_hashes_never_seen_before,
-                      listing_details_output_file_name,
-                      market_order_output_file_name):
+def get_market_orders(filtered_badge_data: dict[str, dict],
+                      retrieve_market_orders_online: bool,
+                      focus_on_listing_hashes_never_seen_before: bool,
+                      listing_details_output_file_name: str,
+                      market_order_output_file_name: str) -> dict[str, dict]:
     # Load market orders (bid, ask) from disk
 
     market_order_dict = load_market_order_data_from_disk(market_order_output_file_name=market_order_output_file_name)
@@ -240,7 +241,7 @@ def get_market_orders(filtered_badge_data,
     return market_order_dict
 
 
-def count_listing_hashes_per_app_id(all_listings):
+def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[int, int]:
     # For each appID, count the number of known listing hashes.
     #
     # Caveat: this piece of information relies on the downloaded listings, it is NOT NECESSARILY accurate!
@@ -262,8 +263,9 @@ def count_listing_hashes_per_app_id(all_listings):
     return listing_hashes_per_app_id
 
 
-def get_listings_with_other_rarity_tags(look_for_profile_backgrounds,
-                                        retrieve_listings_with_another_rarity_tag_from_scratch=False):
+def get_listings_with_other_rarity_tags(look_for_profile_backgrounds: bool,
+                                        retrieve_listings_with_another_rarity_tag_from_scratch: bool = False) -> tuple[
+    dict[str, dict], dict[str, dict]]:
     if retrieve_listings_with_another_rarity_tag_from_scratch:
         other_rarity_fields = set(get_rarity_fields()).difference({'common'})
         for rarity_tag in other_rarity_fields:
@@ -288,9 +290,9 @@ def get_listings_with_other_rarity_tags(look_for_profile_backgrounds,
     return all_listings_for_uncommon, all_listings_for_rare
 
 
-def enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common,
-                                   listing_hashes_per_app_id_for_uncommon,
-                                   listing_hashes_per_app_id_for_rare):
+def enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common: dict[int, int],
+                                   listing_hashes_per_app_id_for_uncommon: dict[int, int],
+                                   listing_hashes_per_app_id_for_rare: dict[int, int]) -> dict[int, dict]:
     all_app_ids = set(listing_hashes_per_app_id_for_common)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_uncommon)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_rare)
@@ -322,14 +324,15 @@ def enumerate_item_rarity_patterns(listing_hashes_per_app_id_for_common,
     return item_rarity_patterns_per_app_id
 
 
-def main(look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
-         retrieve_listings_from_scratch=False,
-         retrieve_listings_with_another_rarity_tag_from_scratch=False,
-         retrieve_market_orders_online=True,
-         focus_on_listing_hashes_never_seen_before=True,
-         price_threshold_in_cents=None,
-         drop_rate_estimates_for_common_rarity=None,
-         num_packs_to_display=10):
+def main(look_for_profile_backgrounds: bool = True,  # if True, profile backgrounds, otherwise, emoticons.
+         retrieve_listings_from_scratch: bool = False,
+         retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
+         retrieve_market_orders_online: bool = True,
+         focus_on_listing_hashes_never_seen_before: bool = True,
+         price_threshold_in_cents: float = None,
+         drop_rate_estimates_for_common_rarity: dict[
+             tuple[int, int, int], float] = None,
+         num_packs_to_display: int = 10) -> bool:
     if look_for_profile_backgrounds:
         category_name = get_category_name_for_profile_backgrounds()
         listing_output_file_name = get_listing_output_file_name_for_profile_backgrounds()
