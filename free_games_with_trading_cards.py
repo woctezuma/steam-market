@@ -1,4 +1,5 @@
 # Objective: find free games which feature Steam trading cards, and thus allow their owners to craft "Booster Packs".
+import collections.abc
 
 import requests
 import steamspypi
@@ -127,7 +128,7 @@ def format_for_asf_command_line(app_ids,
     return output
 
 
-def chunks(l, n):
+def chunks(l: list, n: int) -> collections.abc.Iterator[list]:
     """Yield successive n-sized chunks from l."""
     # Reference: https://stackoverflow.com/a/312464
     for i in range(0, len(l), n):
