@@ -197,7 +197,7 @@ def download_market_order_data_batch(badge_data: dict[int | str, dict],
     return market_order_dict
 
 
-def load_market_order_data(badge_data: dict[str, dict] = None,
+def load_market_order_data(badge_data: dict[int | str, dict] = None,
                            trim_output: bool = False,
                            retrieve_market_orders_online: bool = True) -> dict[str, dict]:
     market_order_dict = load_market_order_data_from_disk()

@@ -110,10 +110,10 @@ def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
     return sell_price_is_unknown
 
 
-def filter_out_badges_with_low_sell_price(aggregated_badge_data: dict[int, dict],
+def filter_out_badges_with_low_sell_price(aggregated_badge_data: dict[int | str, dict],
                                           user_chosen_price_threshold: float = None,
                                           category_name: str = None,
-                                          verbose: bool = True) -> dict[int, dict]:
+                                          verbose: bool = True) -> dict[int | str, dict]:
     # Filter out games for which the sell price (ask) is lower than the gem price,
     # because the bid is necessarily lower than the ask, so it will not be worth downloading bid data for these games.
 
