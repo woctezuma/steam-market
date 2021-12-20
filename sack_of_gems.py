@@ -123,7 +123,7 @@ def get_gem_amount_required_to_craft_badge() -> int:
     return gem_amount_required_to_craft_badge
 
 
-def main() -> None:
+def main() -> bool:
     print('Loaded from the disk:')
     sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
                                                  verbose=True)
