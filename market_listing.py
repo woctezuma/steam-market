@@ -432,7 +432,7 @@ def get_item_nameid_batch(listing_hashes,
         listing_hashes_to_process = set(listing_hashes_to_process)
 
         if len(listing_hashes_to_process) > 0:
-            listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
+            listing_details = update_all_listing_details(listing_hashes=list(listing_hashes_to_process),
                                                          listing_details_output_file_name=listing_details_output_file_name)
 
             for listing_hash in listing_hashes_to_process:
