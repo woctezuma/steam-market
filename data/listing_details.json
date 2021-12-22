@@ -53,7 +53,8 @@
     },
     "80350-Blackwell Convergence Booster Pack": {
         "item_nameid": 8795612,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "388750-BlazBlue: Chronophantasma Extend Booster Pack": {
         "item_nameid": 142071654,
@@ -153,7 +154,8 @@
     },
     "305780-Echo of the Wilds Booster Pack": {
         "item_nameid": 24901519,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "417860-Emily is Away Booster Pack": {
         "item_nameid": 139109021,
@@ -161,7 +163,7 @@
     },
     "33680-Eversion  Booster Pack": {
         "item_nameid": 1153329,
-        "is_marketable": true,
+        "is_marketable": null,
         "item_type_no": null
     },
     "207370-eXceed - Gun Bullet Children Booster Pack": {
@@ -207,7 +209,8 @@
     },
     "795100-Friday the 13th: Killer Puzzle Booster Pack": {
         "item_nameid": 175980402,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "490950-Frost Booster Pack": {
         "item_nameid": 169856453,
@@ -219,7 +222,7 @@
     },
     "327690-Gigantic Booster Pack": {
         "item_nameid": 175908217,
-        "is_marketable": true,
+        "is_marketable": null,
         "item_type_no": null
     },
     "467320-God of Word Booster Pack": {
@@ -268,7 +271,8 @@
     },
     "367520-Hollow Knight Booster Pack": {
         "item_nameid": 175876643,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "523680-Honey Rose: Underdog Fighter Extraordinaire Booster Pack": {
         "item_nameid": 170462986,
@@ -276,7 +280,8 @@
     },
     "426000-HunieCam Studio Booster Pack": {
         "item_nameid": 146683427,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "339800-HuniePop Booster Pack": {
         "item_nameid": 30389352,
@@ -378,7 +383,8 @@
     },
     "363330-Mind Snares: Alice's Journey Booster Pack": {
         "item_nameid": 44779674,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "310740-NEON STRUCT Booster Pack": {
         "item_nameid": 48973637,
@@ -407,7 +413,8 @@
     },
     "331600-ONE PIECE PIRATE WARRIORS 3 Booster Pack": {
         "item_nameid": 80762815,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "312450-Order of Battle: World War II Booster Pack": {
         "item_nameid": 156396741,
@@ -456,7 +463,8 @@
     },
     "244430-realMyst: Masterpiece Edition Booster Pack": {
         "item_nameid": 7773055,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "491130-Red Trigger Booster Pack": {
         "item_nameid": 159724286,
@@ -569,7 +577,8 @@
     },
     "930910-STEINS;GATE: Linear Bounded Phenogram Booster Pack": {
         "item_nameid": 176039094,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "496930-Sumeru Booster Pack": {
         "item_nameid": 176005561,
@@ -614,12 +623,13 @@
     },
     "72850-The Elder Scrolls V: Skyrim Booster Pack": {
         "item_nameid": 1116180,
-        "is_marketable": true,
+        "is_marketable": null,
         "item_type_no": null
     },
     "364470-The Elder Scrolls: Legends Booster Pack": {
         "item_nameid": 175898370,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "454250-The Eyes of Ara Booster Pack": {
         "item_nameid": 175894369,
@@ -631,7 +641,7 @@
     },
     "251150-The Legend of Heroes: Trails in the Sky Booster Pack": {
         "item_nameid": 16418263,
-        "is_marketable": true,
+        "is_marketable": null,
         "item_type_no": null
     },
     "291710-The Lost Crown Booster Pack": {
@@ -656,7 +666,8 @@
     },
     "292030-The Witcher 3: Wild Hunt Booster Pack": {
         "item_nameid": 48161498,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "533690-Think To Die Booster Pack": {
         "item_nameid": 173201753,
@@ -681,7 +692,8 @@
     },
     "411960-TY the Tasmanian Tiger Booster Pack": {
         "item_nameid": 169231242,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "331580-ULTRAWORLD EXODUS Booster Pack": {
         "item_nameid": 152956892,
@@ -1286,7 +1298,8 @@
     },
     "553660-PWND Booster Pack": {
         "item_nameid": 175922090,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "244870-Electronic Super Joy Booster Pack": {
         "item_nameid": 1395850,
@@ -1763,7 +1776,8 @@
     },
     "383980-Rivals of Aether Booster Pack": {
         "item_nameid": 175883478,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "282880-FaeVerse Alchemy Booster Pack": {
         "item_nameid": 8691970,
@@ -1783,7 +1797,8 @@
     },
     "292910-Deponia: The Complete Journey Booster Pack": {
         "item_nameid": 15548878,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "323580-Jotun: Valhalla Edition Booster Pack": {
         "item_nameid": 175956468,
@@ -3755,7 +3770,8 @@
     },
     "243120-Betrayer Booster Pack": {
         "item_nameid": 13451298,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "391220-Rise of the Tomb Raider Booster Pack": {
         "item_nameid": 93278339,
@@ -3775,7 +3791,8 @@
     },
     "247660-Deadly Premonition: The Director's Cut Booster Pack": {
         "item_nameid": 1820932,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "98200-Frozen Synapse Booster Pack": {
         "item_nameid": 1230159,
@@ -4904,7 +4921,8 @@
     },
     "719750-PUSS! Booster Pack": {
         "item_nameid": 176006423,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "610810-Your Friend Hana Booster Pack": {
         "item_nameid": 175886040,
@@ -4916,7 +4934,8 @@
     },
     "270010-Time Rifters Booster Pack": {
         "item_nameid": 26568000,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "405900-Disgaea PC Booster Pack": {
         "item_nameid": 140982912,
@@ -4936,7 +4955,8 @@
     },
     "216150-MapleStory Booster Pack": {
         "item_nameid": 7493505,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "370700-Black Home Booster Pack": {
         "item_nameid": 154101281,
@@ -5585,7 +5605,8 @@
     },
     "380360-Tap Tap Infinity Booster Pack": {
         "item_nameid": 58709774,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "473480-Miko Mole Booster Pack": {
         "item_nameid": 165671794,
@@ -5833,7 +5854,8 @@
     },
     "447530-VA-11 Hall-A: Cyberpunk Bartender Action Booster Pack": {
         "item_nameid": 162472576,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "406210-Over the Dream Booster Pack": {
         "item_nameid": 78790676,
@@ -6385,7 +6407,8 @@
     },
     "397900-Business Tour - Online Multiplayer Board Game Booster Pack": {
         "item_nameid": 175907084,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "363890-RPG Maker MV Booster Pack": {
         "item_nameid": 138301546,
@@ -6606,7 +6629,8 @@
     },
     "502500-ACE COMBAT™ 7: SKIES UNKNOWN Booster Pack": {
         "item_nameid": 176035191,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "635730-Dragonia Booster Pack": {
         "item_nameid": 175897567,
@@ -6618,7 +6642,8 @@
     },
     "303310-The House in Fata Morgana Booster Pack": {
         "item_nameid": 152127511,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "269250-WORLD END ECONOMiCA episode.01 Booster Pack": {
         "item_nameid": 85271032,
@@ -6630,7 +6655,8 @@
     },
     "466240-Deceit Booster Pack": {
         "item_nameid": 175912140,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "712050-Otaku's Fantasy Booster Pack": {
         "item_nameid": 175922284,
@@ -7082,7 +7108,8 @@
     },
     "444770-Mimpi Dreams Booster Pack": {
         "item_nameid": 145775982,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "803600-Disgaea 5 Complete Booster Pack": {
         "item_nameid": 176014924,
@@ -7202,7 +7229,8 @@
     },
     "367930-WAKFU - Book II: Ush Booster Pack": {
         "item_nameid": 74834157,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "332730-Barbarian Brawl Booster Pack": {
         "item_nameid": 33135021,
@@ -7470,7 +7498,8 @@
     },
     "304270-Grand Chase Booster Pack": {
         "item_nameid": 21477732,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "564150-Rosenkreuzstilette Booster Pack": {
         "item_nameid": 175870942,
@@ -7634,7 +7663,8 @@
     },
     "356730-The Hole Story Booster Pack": {
         "item_nameid": 142111800,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "575010-Celestial Crossing Booster Pack": {
         "item_nameid": 175866668,
@@ -7782,7 +7812,8 @@
     },
     "637670-Secret of Mana Booster Pack": {
         "item_nameid": 175966598,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "433530-Heliborne Booster Pack": {
         "item_nameid": 175903591,
@@ -7910,7 +7941,8 @@
     },
     "562260-WAVESHAPER Booster Pack": {
         "item_nameid": 175905321,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "543930-Koi Musubi Booster Pack": {
         "item_nameid": 175869930,
@@ -7950,7 +7982,8 @@
     },
     "292780-Pajama Sam 2: Thunder And Lightning Aren't So Frightening Booster Pack": {
         "item_nameid": 170805272,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "774511-Megadimension Neptunia VIIR Booster Pack": {
         "item_nameid": 176016282,
@@ -8142,7 +8175,8 @@
     },
     "331390-Winged Sakura: Mindy's Arc Booster Pack": {
         "item_nameid": 23530108,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "265400-FX Football - The Manager for Every Football Fan Booster Pack": {
         "item_nameid": 14678305,
@@ -8712,7 +8746,8 @@
     },
     "321800-Icewind Dale: Enhanced Edition Booster Pack": {
         "item_nameid": 175901109,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "350110-TransOcean 2: Rivals Booster Pack": {
         "item_nameid": 152835139,
@@ -8792,7 +8827,8 @@
     },
     "207350-Ys Origin Booster Pack": {
         "item_nameid": 17493390,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "433100-The Town of Light Booster Pack": {
         "item_nameid": 141818374,
@@ -8833,7 +8869,8 @@
     },
     "251290-The Legend of Heroes: Trails in the Sky SC Booster Pack": {
         "item_nameid": 77370135,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "319320-Time Mysteries 3: The Final Enigma Booster Pack": {
         "item_nameid": 40927356,
@@ -8925,7 +8962,8 @@
     },
     "335240-Transformice Booster Pack": {
         "item_nameid": 31286505,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "299360-Block N Load Booster Pack": {
         "item_nameid": 46090498,
@@ -9874,7 +9912,8 @@
     },
     "520680-Lost Cities Booster Pack": {
         "item_nameid": 176024477,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "609170-Drummer Talent VR Booster Pack": {
         "item_nameid": 176027593,
@@ -10090,7 +10129,8 @@
     },
     "502210-Super Markup Man Booster Pack": {
         "item_nameid": 175857188,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "372350-Tumbleweed Express Booster Pack": {
         "item_nameid": 157748598,
@@ -10638,7 +10678,8 @@
     },
     "328060-Tales Runner Booster Pack": {
         "item_nameid": 32805711,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "463880-Beyond Magic Booster Pack": {
         "item_nameid": 175897366,
@@ -11202,7 +11243,8 @@
     },
     "336840-Color Guardians Booster Pack": {
         "item_nameid": 63717023,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "436280-Sudoku Quest Booster Pack": {
         "item_nameid": 157459630,
@@ -12943,7 +12985,8 @@
     },
     "726950-Dark Rose Valkyrie Booster Pack": {
         "item_nameid": 175979292,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "588890-Heroes of Arca Booster Pack": {
         "item_nameid": 175888896,
@@ -13635,7 +13678,8 @@
     },
     "790600-Stormbound Booster Pack": {
         "item_nameid": 176022119,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "246920-Bombernauts Booster Pack": {
         "item_nameid": 84829625,
@@ -14848,7 +14892,8 @@
     },
     "545980-Voodoo Vince: Remastered Booster Pack": {
         "item_nameid": 175903533,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "628920-Tomboys Need Love Too! Booster Pack": {
         "item_nameid": 175894171,
@@ -15476,7 +15521,8 @@
     },
     "728730-Holyday City: Reloaded Booster Pack": {
         "item_nameid": 175951654,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "766370-Dying Light: Bad Blood Booster Pack": {
         "item_nameid": 176034201,
@@ -16280,7 +16326,8 @@
     },
     "486460-Twilight Town Booster Pack": {
         "item_nameid": 175941608,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "635310-Ski Sniper Booster Pack": {
         "item_nameid": 175897087,
@@ -16800,7 +16847,8 @@
     },
     "564710-Soda Dungeon Booster Pack": {
         "item_nameid": 175872104,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "550840-Fresh Body Booster Pack": {
         "item_nameid": 175853787,
@@ -17253,7 +17301,8 @@
     },
     "329110-Gems of War Booster Pack": {
         "item_nameid": 26275295,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "567370-Atomic 79 Booster Pack": {
         "item_nameid": 175885193,
@@ -17378,7 +17427,8 @@
     },
     "524220-NieR:Automata™ Booster Pack": {
         "item_nameid": 175880859,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "356390-The Slaughter: Act One Booster Pack": {
         "item_nameid": 142457766,
@@ -17478,7 +17528,8 @@
     },
     "211500-RaceRoom Racing Experience  Booster Pack": {
         "item_nameid": 141798131,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "411540-Hybrid Wars Booster Pack": {
         "item_nameid": 171062994,
@@ -17855,7 +17906,8 @@
     },
     "558230-Elsword Free-to-Play Booster Pack": {
         "item_nameid": 175990791,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "629960-夏花的轨迹——A summer promise to forever Booster Pack": {
         "item_nameid": 175917685,
@@ -17887,7 +17939,8 @@
     },
     "472870-Higurashi When They Cry Hou - Ch.3 Tatarigoroshi Booster Pack": {
         "item_nameid": 172548689,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "227100-Sniper Elite: Nazi Zombie Army Booster Pack": {
         "item_nameid": 1118634,
@@ -17895,7 +17948,8 @@
     },
     "205610-Port Royale 3 Booster Pack": {
         "item_nameid": 1150289,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "391490-Braveland Pirate Booster Pack": {
         "item_nameid": 87733215,
@@ -17927,7 +17981,8 @@
     },
     "402620-Kindred Spirits on the Roof Booster Pack": {
         "item_nameid": 138849362,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "377670-G-senjou no Maou - The Devil on G-String Booster Pack": {
         "item_nameid": 78619587,
@@ -17979,7 +18034,8 @@
     },
     "295550-Royal Quest Booster Pack": {
         "item_nameid": 18112193,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "746650-NEKOPARA OVA Extra Booster Pack": {
         "item_nameid": 175998729,
@@ -18115,7 +18171,8 @@
     },
     "201210-Pox Nora Booster Pack": {
         "item_nameid": 22775297,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "527710-Crown Champion: Legends of the Arena Booster Pack": {
         "item_nameid": 175852184,
@@ -18155,7 +18212,8 @@
     },
     "526490-Higurashi When They Cry Hou - Ch.4 Himatsubushi Booster Pack": {
         "item_nameid": 172544573,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "315810-eden* Booster Pack": {
         "item_nameid": 31310560,
@@ -18419,7 +18477,8 @@
     },
     "630100-SoulWorker Booster Pack": {
         "item_nameid": 175969795,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "34900-Bad Rats Booster Pack": {
         "item_nameid": 9122156,
@@ -18644,7 +18703,8 @@
     },
     "310360-Higurashi When They Cry Hou - Ch.1 Onikakushi Booster Pack": {
         "item_nameid": 172544574,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "542700-Power Overwhelming Prologue Booster Pack": {
         "item_nameid": 175904032,
@@ -18704,7 +18764,8 @@
     },
     "359870-FINAL FANTASY X-X-2 HD Remaster Booster Pack": {
         "item_nameid": 152112136,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "790820-Valkyria Chronicles 4 Booster Pack": {
         "item_nameid": 176011008,
@@ -18908,7 +18969,8 @@
     },
     "883860-Cadria Item Shop Booster Pack": {
         "item_nameid": 176045796,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "485610-Ball 3D: Soccer Online Booster Pack": {
         "item_nameid": 175967169,
@@ -18920,7 +18982,8 @@
     },
     "223650-F.E.A.R. Online Booster Pack": {
         "item_nameid": 22510213,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "872130-DEEP SPACE WAIFU: WORLD Booster Pack": {
         "item_nameid": 176052842,
@@ -19093,7 +19156,8 @@
     },
     "427270-Orcs Must Die! Unchained Booster Pack": {
         "item_nameid": 175912228,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "352070-Fort Meow Booster Pack": {
         "item_nameid": 56237997,
@@ -20814,7 +20878,8 @@
     },
     "345520-Infinite Crisis™ Booster Pack": {
         "item_nameid": 37086414,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "212910-Call of Duty: Black Ops II - Zombies Booster Pack": {
         "item_nameid": 1457400,
@@ -21346,7 +21411,8 @@
     },
     "99900-Spiral Knights Booster Pack": {
         "item_nameid": 5167781,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "514710-Resfort Booster Pack": {
         "item_nameid": 174273042,
@@ -21378,7 +21444,8 @@
     },
     "459820-Crush Crush Booster Pack": {
         "item_nameid": 152897187,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "576770-Low Magic Age Booster Pack": {
         "item_nameid": 175891779,
@@ -21762,7 +21829,8 @@
     },
     "552700-WORLD OF FINAL FANTASY Booster Pack": {
         "item_nameid": 175938277,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "542200-Animal Lover Booster Pack": {
         "item_nameid": 175895576,
@@ -22654,7 +22722,8 @@
     },
     "363970-Clicker Heroes Booster Pack": {
         "item_nameid": 47663216,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "397580-Moonbase 332 Booster Pack": {
         "item_nameid": 67172260,
@@ -22746,7 +22815,8 @@
     },
     "435790-10 Second Ninja X Booster Pack": {
         "item_nameid": 163129363,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "570350-Entschuldigung Booster Pack": {
         "item_nameid": 175934112,
@@ -24067,7 +24137,8 @@
     },
     "921590-DISSIDIA FINAL FANTASY NT Free Edition Booster Pack": {
         "item_nameid": 176042313,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "385980-Scott in Space Booster Pack": {
         "item_nameid": 164497791,
@@ -24439,7 +24510,8 @@
     },
     "262410-World of Guns: Gun Disassembly Booster Pack": {
         "item_nameid": 36888285,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "562730-MechDefender Booster Pack": {
         "item_nameid": 175898767,
@@ -27752,7 +27824,8 @@
     },
     "204450-Call of Juarez Gunslinger Booster Pack": {
         "item_nameid": 1153400,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "306950-Heroes & Legends: Conquerors of Kolhar Booster Pack": {
         "item_nameid": 18563593,
@@ -31140,7 +31213,8 @@
     },
     "277950-Deadbreed® Booster Pack": {
         "item_nameid": 16082647,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "467010-Fall of Civilization Booster Pack": {
         "item_nameid": 169632074,
@@ -35840,7 +35914,7 @@
     },
     "996580-Spyro™ Reignited Trilogy Booster Pack": {
         "item_nameid": 176083497,
-        "is_marketable": true,
+        "is_marketable": null,
         "item_type_no": null
     },
     "1048540-Kao the Kangaroo: Round 2 Booster Pack": {
@@ -36541,7 +36615,8 @@
     },
     "632470-Disco Elysium Booster Pack": {
         "item_nameid": 176091366,
-        "is_marketable": true
+        "is_marketable": true,
+        "item_type_no": null
     },
     "829660-No Time to Relax Booster Pack": {
         "item_nameid": 176090502,
@@ -41601,6 +41676,201 @@
     },
     "1330190-A Town Uncovered Booster Pack": {
         "item_nameid": 176217115,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1049590-Eternal Return Booster Pack": {
+        "item_nameid": 176249501,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1125480-初恋日记 Booster Pack": {
+        "item_nameid": 176252652,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "475490-Major-Minor Booster Pack": {
+        "item_nameid": 176252781,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "874400-Dinosaur Hunt Puzzle Booster Pack": {
+        "item_nameid": 176252641,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1399780-Spellbreak Booster Pack": {
+        "item_nameid": 176254271,
+        "is_marketable": null,
+        "item_type_no": null
+    },
+    "1407200-World of Tanks Booster Pack": {
+        "item_nameid": 176254794,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "209230-Sherlock Holmes and The Hound of The Baskervilles Booster Pack": {
+        "item_nameid": 176255237,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "11190-Sherlock Holmes versus Jack the Ripper Booster Pack": {
+        "item_nameid": 176255254,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1254120-Bless Unleashed Booster Pack": {
+        "item_nameid": 176254079,
+        "is_marketable": null,
+        "item_type_no": null
+    },
+    "1371480-Iron Conflict Booster Pack": {
+        "item_nameid": 176259705,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "894020-Death's Door Booster Pack": {
+        "item_nameid": 176252984,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "312750-Final Fantasy IV (3D Remake) Booster Pack": {
+        "item_nameid": 176251128,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "606370-Romancing SaGa 2™ Booster Pack": {
+        "item_nameid": 176256468,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "904750-Zniw Adventure Booster Pack": {
+        "item_nameid": 176258077,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "239120-Final Fantasy III (3D Remake) Booster Pack": {
+        "item_nameid": 176250917,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "344770-fault - milestone two side: above Booster Pack": {
+        "item_nameid": 176250652,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "962580-Summer in Mara Booster Pack": {
+        "item_nameid": 176249741,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1072150-Hedon Bloodrite Booster Pack": {
+        "item_nameid": 176259856,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1158850-The Great Ace Attorney Chronicles Booster Pack": {
+        "item_nameid": 176254708,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1213210-Command & Conquer™ Remastered Collection Booster Pack": {
+        "item_nameid": 176138276,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "407840-Guardians of Orion (Phase 2) Booster Pack": {
+        "item_nameid": 176259354,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "917840-Wintermoor Tactics Club Booster Pack": {
+        "item_nameid": 176136130,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "532690-Neo ATLAS 1469 Booster Pack": {
+        "item_nameid": 176251058,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "275850-No Man's Sky Booster Pack": {
+        "item_nameid": 176259619,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "17470-Dead Space Booster Pack": {
+        "item_nameid": 176140988,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "373480-1993 Space Machine Booster Pack": {
+        "item_nameid": 176260510,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "263740-FootLOL: Epic Soccer League Booster Pack": {
+        "item_nameid": 176264589,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "209630-Magrunner: Dark Pulse Booster Pack": {
+        "item_nameid": 176265124,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "944220-Gachi Heroes Booster Pack": {
+        "item_nameid": 176136152,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1203710-UnMetal Booster Pack": {
+        "item_nameid": 176264623,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "200210-Realm of the Mad God Exalt Booster Pack": {
+        "item_nameid": 176184203,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "11050-Dracula: Origin Booster Pack": {
+        "item_nameid": 176266047,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1163740-Card Hog Booster Pack": {
+        "item_nameid": 176274084,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1205450-Turnip Boy Commits Tax Evasion Booster Pack": {
+        "item_nameid": 176248447,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1311070-Greak: Memories of Azur Booster Pack": {
+        "item_nameid": 176257566,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1054430-Fling to the Finish Booster Pack": {
+        "item_nameid": 176259454,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1173370-Slapshot: Rebound Booster Pack": {
+        "item_nameid": 176281178,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1731270-Global City Booster Pack": {
+        "item_nameid": 176280052,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "362660-Blue Rose Reprise Booster Pack": {
+        "item_nameid": 176279010,
         "is_marketable": true,
         "item_type_no": null
     }
