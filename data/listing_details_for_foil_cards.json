@@ -56223,5 +56223,45 @@
         "item_nameid": 176280757,
         "is_marketable": true,
         "item_type_no": 4
+    },
+    "486020-Bread seller (Foil)": {
+        "item_nameid": 176283326,
+        "is_marketable": true,
+        "item_type_no": 3
+    },
+    "1406850-A-Guai (Foil)": {
+        "item_nameid": 176283342,
+        "is_marketable": true,
+        "item_type_no": 10
+    },
+    "1543030-Bai Moqing (Foil)": {
+        "item_nameid": 176283227,
+        "is_marketable": true,
+        "item_type_no": 35
+    },
+    "1110910-Crucix, the Twiceborn (Foil)": {
+        "item_nameid": 176282998,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1239300-Lost Child #1 (Foil)": {
+        "item_nameid": null,
+        "is_marketable": null,
+        "item_type_no": null
+    },
+    "762480-Chinese inn-Role4 (Foil)": {
+        "item_nameid": 176283322,
+        "is_marketable": true,
+        "item_type_no": 5
+    },
+    "1299480-A Cabin in the Woods (Foil)": {
+        "item_nameid": 176283528,
+        "is_marketable": true,
+        "item_type_no": 17
+    },
+    "645320-Hearth (Foil)": {
+        "item_nameid": 176283470,
+        "is_marketable": true,
+        "item_type_no": 4
     }
 }
