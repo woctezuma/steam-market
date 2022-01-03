@@ -56263,5 +56263,55 @@
         "item_nameid": 176283470,
         "is_marketable": true,
         "item_type_no": 4
+    },
+    "619270-Red Moon (Foil)": {
+        "item_nameid": 176284766,
+        "is_marketable": true,
+        "item_type_no": 3
+    },
+    "745740-Circle Square Triangle (Foil)": {
+        "item_nameid": 176283573,
+        "is_marketable": true,
+        "item_type_no": 6
+    },
+    "863460-Geist Unit 2 (Foil)": {
+        "item_nameid": 176284981,
+        "is_marketable": true,
+        "item_type_no": 4
+    },
+    "1069640-Cavalry General (Foil)": {
+        "item_nameid": 176284706,
+        "is_marketable": true,
+        "item_type_no": 7
+    },
+    "1324780-British Airborne Forces (Foil)": {
+        "item_nameid": 176283990,
+        "is_marketable": true,
+        "item_type_no": 8
+    },
+    "1140170-Arietta (Foil)": {
+        "item_nameid": 176284802,
+        "is_marketable": true,
+        "item_type_no": 2
+    },
+    "1543240-Annonam the Blight Queen (Foil)": {
+        "item_nameid": 176284170,
+        "is_marketable": true,
+        "item_type_no": 9
+    },
+    "680030-Abacus (Foil)": {
+        "item_nameid": 176285032,
+        "is_marketable": true,
+        "item_type_no": 15
+    },
+    "1631790-Haley (Foil)": {
+        "item_nameid": 176284661,
+        "is_marketable": true,
+        "item_type_no": 3
+    },
+    "1271850-Crabs (Foil)": {
+        "item_nameid": 176285086,
+        "is_marketable": true,
+        "item_type_no": 3
     }
 }
