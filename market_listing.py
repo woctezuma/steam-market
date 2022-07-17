@@ -72,6 +72,24 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie: bool = Fals
     return rate_limits
 
 
+def figure_out_relevant_id(asset_dict: dict[str, dict], asset_ids: list[str],
+                           owner_action_name_of_interest: str) -> int | None:
+    actions = set()
+    last_relevant_asset_id = None
+
+    for i in asset_ids:
+        for e in asset_dict[i]['owner_actions']:
+            if e['name'] == owner_action_name_of_interest:
+                actions.add(e['link'])
+                last_relevant_asset_id = i
+
+    has_different_actions = bool(len(set(actions)) > 1)
+    if has_different_actions:
+        raise AssertionError()
+
+    return last_relevant_asset_id
+
+
 def parse_item_type_no_from_script(last_script: str) -> [int | None]:
     # Reference: https://gaming.stackexchange.com/a/351941
 
@@ -115,9 +133,14 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             ids = list(assets[app_id][context_id].keys())
             id = ids[0]
 
-            # There should only be one appID, one contextID, and one ID.
-            if len(app_ids) > 1 or len(context_ids) > 1 or len(ids) > 1:
+            # There should only be one appID and one contextID.
+            if len(app_ids) > 1 or len(context_ids) > 1:
                 raise AssertionError()
+
+            # There should only be one assetID. However, we can try to run the rest of the code even if there are several.
+            if len(ids) > 1:
+                asset_dict = assets[app_id][context_id]
+                id = figure_out_relevant_id(asset_dict, ids, owner_action_name_of_interest)
 
             owner_actions = assets[app_id][context_id][id]['owner_actions']
 
