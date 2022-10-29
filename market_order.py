@@ -268,7 +268,7 @@ def main() -> bool:
 
     # Download based on badge data
 
-    app_id = listing_hash.split('-')[0]
+    app_id = listing_hash.split('-', maxsplit=1)[0]
 
     badge_data = dict()
     badge_data[app_id] = dict()
