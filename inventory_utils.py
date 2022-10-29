@@ -97,8 +97,7 @@ def download_steam_inventory(profile_id: str = None, save_to_disk: bool = True) 
             with open(get_steam_inventory_file_name(profile_id), 'w', encoding='utf-8') as f:
                 json.dump(steam_inventory, f)
     else:
-        print('Inventory for profile {} could not be loaded. Status code {} was returned.'.format(profile_id,
-                                                                                                  status_code))
+        print(f'Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.')
         steam_inventory = None
 
     return steam_inventory
@@ -174,8 +173,7 @@ def create_booster_pack(app_id: int,
             print(
                 f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.')
         else:
-            print('\n[appID = {}] Booster pack not created, because of status code {}.'.format(app_id,
-                                                                                               status_code))
+            print(f'\n[appID = {app_id}] Booster pack not created, because of status code {status_code}.')
         result = None
 
     if verbose:
@@ -261,9 +259,7 @@ def sell_booster_pack(asset_id: str,
             print(f'Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.')
     else:
         # NB: 400 means "Bad Request".
-        print('Booster pack {} not sold for {} cents. Status code {} was returned.'.format(asset_id,
-                                                                                           price_in_cents,
-                                                                                           status_code))
+        print(f'Booster pack {asset_id} not sold for {price_in_cents} cents. Status code {status_code} was returned.')
         result = None
 
     if verbose:
@@ -410,10 +406,7 @@ def update_and_save_next_creation_times(creation_results: dict[str, dict | None]
                     is_first_displayed_line = False
 
                 app_name = convert_listing_hash_to_app_name(listing_hash)
-                print('Saving the next creation time ({}) for {} (appID = {}) to disk.'.format(
-                    formatted_next_creation_time,
-                    app_name,
-                    app_id))
+                print(f'Saving the next creation time ({formatted_next_creation_time}) for {app_name} (appID = {app_id}) to disk.')
 
     if save_to_disk:
         with open(next_creation_time_file_name, 'w', encoding='utf-8') as f:
