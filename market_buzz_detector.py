@@ -150,8 +150,6 @@ def print_packs_with_high_buzz(hashes_for_best_bid: list[str],
             bid_volume,
             item_rarity_pattern_info))
 
-    return
-
 
 def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings: dict[str, dict],
                                                           aggregated_badge_data: dict[str, dict] = None,
@@ -273,8 +271,6 @@ def main(retrieve_listings_from_scratch: bool = False,
     print_arbitrages(badge_arbitrages,
                      use_numbered_bullet_points=True,
                      use_hyperlink=True)
-
-    return
 
 
 if __name__ == '__main__':

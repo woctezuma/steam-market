@@ -322,8 +322,6 @@ def save_all_goo_details(all_goo_details: dict[int, int],
     with open(goo_details_file_name, 'w', encoding='utf-8') as f:
         json.dump(all_goo_details, f)
 
-    return
-
 
 def update_all_goo_details(new_goo_details: dict[int, int],
                            goo_details_file_name: str = None) -> None:
@@ -335,8 +333,6 @@ def update_all_goo_details(new_goo_details: dict[int, int],
 
     save_all_goo_details(all_goo_details,
                          goo_details_file_name)
-
-    return
 
 
 def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(filtered_cheapest_listing_hashes: list[str],
@@ -392,8 +388,6 @@ def try_again_to_download_item_type(app_ids_with_unreliable_goo_details: list[in
     updated_all_listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
                                                              listing_details_output_file_name=listing_details_output_file_name)
 
-    return
-
 
 def try_again_to_download_goo_value(app_ids_with_unknown_goo_value: list[int],
                                     filtered_representative_listing_hashes: list[str],
@@ -405,8 +399,6 @@ def try_again_to_download_goo_value(app_ids_with_unknown_goo_value: list[int],
     download_missing_goo_details(groups_by_app_id=groups_by_app_id,
                                  listing_candidates=filtered_representative_listing_hashes,
                                  enforced_app_ids_to_process=app_ids_to_process)
-
-    return
 
 
 def apply_workflow_for_foil_cards(retrieve_listings_from_scratch: bool = False,
@@ -782,8 +774,6 @@ def print_arbitrages_for_foil_cards(arbitrages: dict[str, dict[str, float]],
                 arbitrage['goo_value'],
                 equivalent_price_for_sack_of_gems,
             ))
-
-    return
 
 
 def find_app_ids_with_unknown_item_type_for_their_representatives(groups_by_app_id: dict[int, list[str]],

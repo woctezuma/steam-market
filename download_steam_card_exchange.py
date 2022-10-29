@@ -42,8 +42,6 @@ def save_data_from_steam_card_exchange(response: dict,
         with open(steam_card_exchange_file_name, 'w', encoding='utf-8') as f:
             json.dump(response, f)
 
-    return
-
 
 def download_data_from_steam_card_exchange(steam_card_exchange_file_name: str = None,
                                            save_to_disk: bool = True) -> [dict | None]:

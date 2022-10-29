@@ -423,8 +423,6 @@ def main() -> None:
 
     creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes)
 
-    return
-
 
 if __name__ == '__main__':
     main()
