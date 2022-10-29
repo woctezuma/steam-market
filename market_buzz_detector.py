@@ -1,16 +1,23 @@
 # Objective: detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders
 
 from download_steam_card_exchange import parse_data_from_steam_card_exchange
-from market_arbitrage import filter_out_badges_with_low_sell_price
-from market_arbitrage import find_badge_arbitrages, print_arbitrages
+from market_arbitrage import (
+    filter_out_badges_with_low_sell_price,
+    find_badge_arbitrages,
+    print_arbitrages,
+)
 from market_listing import get_item_nameid_batch, get_steam_market_listing_url
 from market_order import load_market_order_data
 from market_search import load_all_listings, update_all_listings
 from market_utils import filter_out_dubious_listing_hashes
 from sack_of_gems import get_gem_price
-from utils import convert_listing_hash_to_app_id, get_steamcardexchange_url, get_steam_store_url
-from utils import convert_listing_hash_to_app_name
-from utils import get_category_name_for_booster_packs
+from utils import (
+    convert_listing_hash_to_app_id,
+    convert_listing_hash_to_app_name,
+    get_category_name_for_booster_packs,
+    get_steam_store_url,
+    get_steamcardexchange_url,
+)
 
 
 def filter_listings(all_listings: dict[str, dict] = None,

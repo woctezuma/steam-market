@@ -5,7 +5,10 @@ import requests
 import steamspypi
 
 from market_search import load_all_listings
-from personal_info import get_cookie_dict, update_and_save_cookie_to_disk_if_values_changed
+from personal_info import (
+    get_cookie_dict,
+    update_and_save_cookie_to_disk_if_values_changed,
+)
 from utils import convert_listing_hash_to_app_id
 
 

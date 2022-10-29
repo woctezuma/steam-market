@@ -1,7 +1,7 @@
 # Create many booster packs (without being sure to sell them)
 
 from creation_time_utils import get_formatted_time, get_time_struct_from_str
-from inventory_utils import update_and_save_next_creation_times, create_booster_pack
+from inventory_utils import create_booster_pack, update_and_save_next_creation_times
 from market_arbitrage import get_filtered_badge_data
 
 
