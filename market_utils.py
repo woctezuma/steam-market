@@ -34,7 +34,7 @@ def filter_out_dubious_listing_hashes(all_listings: dict[str, dict],
             filtered_listings[listing_hash] = individual_market_listing
         else:
             if verbose:
-                print('Omitting dubious listing hash: {}'.format(listing_hash))
+                print(f'Omitting dubious listing hash: {listing_hash}')
 
     if verbose:
         print('There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)'.format(
@@ -84,14 +84,14 @@ def match_badges_with_listing_hashes(badge_creation_details: dict[int, dict] = N
             try:
                 badge_matches[app_id] = listing_matches_with_app_names[app_name]
                 if verbose:
-                    print('Match for {} (appID = {}) with name instead of id.'.format(app_name, app_id))
+                    print(f'Match for {app_name} (appID = {app_id}) with name instead of id.')
             except KeyError:
                 badge_matches[app_id] = None
                 if verbose:
-                    print('No match found for {} (appID = {})'.format(app_name, app_id))
+                    print(f'No match found for {app_name} (appID = {app_id})')
 
     if verbose:
-        print('#badges = {} ; #matching hashes found = {}'.format(len(badge_app_ids), len(badge_matches)))
+        print(f'#badges = {len(badge_app_ids)} ; #matching hashes found = {len(badge_matches)}')
 
     return badge_matches
 

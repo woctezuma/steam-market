@@ -153,7 +153,7 @@ def create_booster_pack(app_id: int,
         # Expected result:
         # {"purchase_result":{"communityitemid":"XXX","appid":685400,"item_type":36, "purchaseid":"XXX",
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
-        print('\n[appID = {}] Booster pack successfully created.'.format(app_id))
+        print(f'\n[appID = {app_id}] Booster pack successfully created.')
         result = resp_data.json()
 
         jar = dict(resp_data.cookies)
@@ -162,7 +162,7 @@ def create_booster_pack(app_id: int,
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         if status_code == 500:
             print(
-                '\n[appID = {}] Booster pack not created, because a pack was created less than 24h ago.'.format(app_id))
+                f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.')
         else:
             print('\n[appID = {}] Booster pack not created, because of status code {}.'.format(app_id,
                                                                                                status_code))
@@ -246,9 +246,9 @@ def sell_booster_pack(asset_id: str,
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if result['success']:
-            print('Booster pack {} successfully sold for {} cents.'.format(asset_id, price_in_cents))
+            print(f'Booster pack {asset_id} successfully sold for {price_in_cents} cents.')
         else:
-            print('Booster pack {} not sold for {} cents, despite OK status code.'.format(asset_id, price_in_cents))
+            print(f'Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.')
     else:
         # NB: 400 means "Bad Request".
         print('Booster pack {} not sold for {} cents. Status code {} was returned.'.format(asset_id,
@@ -304,9 +304,9 @@ def retrieve_asset_id(listing_hash: str,
                 matched_element['pos'] = community_inventory[element]['pos']
                 break
 
-        print('\nItem matched in the inventory for {}.'.format(listing_hash))
+        print(f'\nItem matched in the inventory for {listing_hash}.')
     else:
-        print('\nNo matched item in the inventory for {}.'.format(listing_hash))
+        print(f'\nNo matched item in the inventory for {listing_hash}.')
 
     if verbose:
         print(matched_element)

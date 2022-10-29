@@ -62,7 +62,7 @@ def download_data_from_steam_card_exchange(steam_card_exchange_file_name: str = 
     if status_code == 200:
         response = resp_data.json()
     else:
-        print('Data could not be downloaded from SteamCardExchange. Status code {} was returned.'.format(status_code))
+        print(f'Data could not be downloaded from SteamCardExchange. Status code {status_code} was returned.')
         response = None
 
     if save_to_disk and bool(response is not None):
@@ -116,7 +116,7 @@ def parse_data_from_steam_card_exchange(response: dict = None,
         num_cards_per_set = int(app_info[1])
 
         if num_cards_per_set == 0:
-            print('No card found for {} (appID = {})'.format(app_name, app_id))
+            print(f'No card found for {app_name} (appID = {app_id})')
             continue
 
         dico[app_id] = dict()
@@ -125,7 +125,7 @@ def parse_data_from_steam_card_exchange(response: dict = None,
         dico[app_id]['num_cards_per_set'] = num_cards_per_set
         dico[app_id]['gem_amount'] = compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set)
 
-    print('{} games found in the database.'.format(len(dico)))
+    print(f'{len(dico)} games found in the database.')
 
     return dico
 

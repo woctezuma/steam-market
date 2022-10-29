@@ -41,7 +41,7 @@ def get_cookie_dict(verbose: bool = False) -> dict[str, str]:
 
     if verbose:
         for field in cookie.keys():
-            print('{}: {}'.format(field, cookie[field]))
+            print(f'{field}: {cookie[field]}')
 
     return cookie
 
@@ -56,12 +56,12 @@ def update_cookie_dict(original_cookie: dict[str, str],
         new_value = dict_with_new_values[field]
 
         if new_value != current_value:
-            print('Updating value for cookie field {} from {} to {}.'.format(field, current_value, new_value))
+            print(f'Updating value for cookie field {field} from {current_value} to {new_value}.')
             cookie[field] = new_value
 
     if verbose:
         for field in cookie.keys():
-            print('{}: {}'.format(field, cookie[field]))
+            print(f'{field}: {cookie[field]}')
 
     return cookie
 

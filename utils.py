@@ -44,7 +44,7 @@ def get_listing_output_file_name_suffix(tag_drop_rate_str: str = None,
     if tag_drop_rate_str == get_tag_drop_rate_str(rarity='common'):
         suffix = ''
     else:
-        suffix = '_rarity_{}'.format(tag_drop_rate_str)
+        suffix = f'_rarity_{tag_drop_rate_str}'
 
     return suffix
 

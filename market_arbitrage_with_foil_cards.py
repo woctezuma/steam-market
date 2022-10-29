@@ -84,7 +84,7 @@ def get_item_type_no_for_trading_cards(listing_hash: str = None,
             listing_hashes_to_process = [listing_hash]
 
             if verbose:
-                print('A query is necessary to download listing details for {}.'.format(listing_hash))
+                print(f'A query is necessary to download listing details for {listing_hash}.')
 
             updated_all_listing_details = update_all_listing_details(listing_hashes=listing_hashes_to_process,
                                                                      listing_details_output_file_name=listing_details_output_file_name)
@@ -184,7 +184,7 @@ def get_listings_for_foil_cards(retrieve_listings_from_scratch: bool,
     all_listings = load_all_listings(listing_output_file_name)
 
     if verbose:
-        print('#listings = {}'.format(len(all_listings)))
+        print(f'#listings = {len(all_listings)}')
 
     return all_listings
 
@@ -201,7 +201,7 @@ def group_listing_hashes_by_app_id(all_listings: dict[str, dict],
             groups_by_app_id[app_id] = [listing_hash]
 
     if verbose:
-        print('#app_ids = {}'.format(len(groups_by_app_id)))
+        print(f'#app_ids = {len(groups_by_app_id)}')
 
     return groups_by_app_id
 
@@ -294,7 +294,7 @@ def filter_listings_with_arbitrary_price_threshold(all_listings: dict[str, dict]
         filtered_cheapest_listing_hashes = listing_hashes_to_filter_from
 
     if verbose:
-        print('#listings (after filtering) = {}'.format(len(filtered_cheapest_listing_hashes)))
+        print(f'#listings (after filtering) = {len(filtered_cheapest_listing_hashes)}')
 
     return filtered_cheapest_listing_hashes
 
@@ -311,7 +311,7 @@ def load_all_goo_details(goo_details_file_name: str = None,
         all_goo_details = dict()
 
     if verbose:
-        print('Loading {} goo details from disk.'.format(len(all_goo_details)))
+        print(f'Loading {len(all_goo_details)} goo details from disk.')
 
     return all_goo_details
 
@@ -716,7 +716,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
         if app_id in app_ids_with_unreliable_goo_details:
             # NB: This is for goo details which were retrieved with the default item type n° (=2), which can be wrong.
             if verbose:
-                print('[X]\tUnreliable goo details for {}'.format(listing_hash))
+                print(f'[X]\tUnreliable goo details for {listing_hash}')
             continue
 
         goo_value_in_gems = safe_read_from_dict(input_dict=all_goo_details,
@@ -725,7 +725,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
         if app_id in app_ids_with_unknown_goo_value or goo_value_in_gems is None:
             # NB: This is when the goo value is unknown, despite a correct item type n° used to download goo details.
             if verbose:
-                print('[?]\tUnknown goo value for {}'.format(listing_hash))
+                print(f'[?]\tUnknown goo value for {listing_hash}')
             continue
 
         goo_value_in_cents = goo_value_in_gems / num_gems_per_sack_of_gems * sack_of_gems_price_in_cents
@@ -876,14 +876,14 @@ def download_missing_goo_details(groups_by_app_id: dict[int, list[str]],
         all_goo_details[app_id] = goo_value
 
         if query_count % num_queries_between_save == 0:
-            print('Saving after {} queries.'.format(query_count))
+            print(f'Saving after {query_count} queries.')
             save_all_goo_details(all_goo_details,
                                  goo_details_file_name_for_for_foil_cards)
 
     # Final save
 
     if query_count > 0:
-        print('Final save after {} queries.'.format(query_count))
+        print(f'Final save after {query_count} queries.')
         save_all_goo_details(all_goo_details,
                              goo_details_file_name_for_for_foil_cards)
 

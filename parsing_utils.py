@@ -59,7 +59,7 @@ def parse_augmented_steam_drop_down_menu(lines: list[str], verbose: bool = False
         badge_creation_details[app_id]['gem_value'] = gem_value
 
         if verbose:
-            print('{}\t{}\t{}'.format(app_id, app_name, gem_value))
+            print(f'{app_id}\t{app_name}\t{gem_value}')
 
     return badge_creation_details
 
@@ -87,19 +87,19 @@ def parse_badge_creation_details(badge_creation_file_name: str = None, from_java
 def main() -> bool:
     badge_creation_details = parse_badge_creation_details(get_badge_creation_file_name(from_javascript=False))
 
-    print('#badges = {}'.format(len(badge_creation_details)))
+    print(f'#badges = {len(badge_creation_details)}')
 
     badge_creation_details = parse_badge_creation_details(get_badge_creation_file_name(from_javascript=True))
 
-    print('#badges = {}'.format(len(badge_creation_details)))
+    print(f'#badges = {len(badge_creation_details)}')
 
     badge_creation_details = parse_badge_creation_details(from_javascript=False)
 
-    print('#badges = {}'.format(len(badge_creation_details)))
+    print(f'#badges = {len(badge_creation_details)}')
 
     badge_creation_details = parse_badge_creation_details(from_javascript=True)
 
-    print('#badges = {}'.format(len(badge_creation_details)))
+    print(f'#badges = {len(badge_creation_details)}')
 
     return True
 

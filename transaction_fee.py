@@ -34,7 +34,7 @@ def get_ground_truth_sell_price_without_fee(sell_price_including_fee: float) -> 
         raise AssertionError()
 
     sell_price_without_fee = sell_price_including_fee - total_fee_price
-    sell_price_without_fee = float('{0:.2f}'.format(sell_price_without_fee))
+    sell_price_without_fee = float(f'{sell_price_without_fee:.2f}')
 
     return sell_price_without_fee
 
@@ -69,7 +69,7 @@ def compute_sell_price_without_fee(sell_price_including_fee: float) -> float:
     total_fee_price = steam_transaction_fee_price + game_specific_transaction_fee_price
 
     sell_price_without_fee = sell_price_including_fee - total_fee_price
-    sell_price_without_fee = float('{0:.2f}'.format(sell_price_without_fee))
+    sell_price_without_fee = float(f'{sell_price_without_fee:.2f}')
 
     # Manually adjust the fee cost for small prices (until I have access to the right formula)
     if sell_price_including_fee <= 0.66:
@@ -83,7 +83,7 @@ def main() -> bool:
     for i in range(3, 25):
         sell_price_including_fee = i / 100
         sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
-        print('{:.2f}€\t--->\t{:.2f}€'.format(sell_price_including_fee, sell_price_without_fee))
+        print(f'{sell_price_including_fee:.2f}€\t--->\t{sell_price_without_fee:.2f}€')
 
     return True
 

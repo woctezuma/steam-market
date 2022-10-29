@@ -38,7 +38,7 @@ def download_owned_apps(verbose: bool = True) -> list[int]:
     owned_apps = result['rgOwnedApps']
 
     if verbose:
-        print('Owned apps: {}'.format(len(owned_apps)))
+        print(f'Owned apps: {len(owned_apps)}')
 
     return owned_apps
 
@@ -66,7 +66,7 @@ def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]
         free_apps = [int(app_id) for app_id in data.keys()]
 
     if verbose:
-        print('Free apps (based on {}): {}'.format(method, len(free_apps)))
+        print(f'Free apps (based on {method}): {len(free_apps)}')
 
     return free_apps
 
@@ -77,7 +77,7 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
     apps_with_trading_cards = [convert_listing_hash_to_app_id(listing_hash) for listing_hash in all_listings]
 
     if verbose:
-        print('Apps with trading cards: {}'.format(len(apps_with_trading_cards)))
+        print(f'Apps with trading cards: {len(apps_with_trading_cards)}')
 
     return apps_with_trading_cards
 
@@ -96,14 +96,14 @@ def load_free_apps_with_trading_cards(free_apps: set[int] = None, list_of_method
         free_apps.update(new_free_apps)
 
     if verbose:
-        print('Free apps: {}'.format(len(free_apps)))
+        print(f'Free apps: {len(free_apps)}')
 
     apps_with_trading_cards = load_apps_with_trading_cards()
 
     free_apps_with_trading_cards = set(free_apps).intersection(apps_with_trading_cards)
 
     if verbose:
-        print('Free apps with trading cards: {}'.format(len(free_apps_with_trading_cards)))
+        print(f'Free apps with trading cards: {len(free_apps_with_trading_cards)}')
 
     return free_apps_with_trading_cards
 
@@ -113,7 +113,7 @@ def load_file(file_name: str, verbose: bool = True) -> list[int]:
         data = [int(line.strip()) for line in f.readlines()]
 
     if verbose:
-        print('Loaded apps: {}'.format(len(data)))
+        print(f'Loaded apps: {len(data)}')
 
     return data
 
@@ -140,7 +140,7 @@ def group_concatenate_to_str(data: list,
                              asf_username: str = 'ASF',
                              group_size: int = 25) -> str:
     asf_command = 'addlicense'
-    asf_complete_command = '{} {} '.format(asf_command, asf_username)
+    asf_complete_command = f'{asf_command} {asf_username} '
 
     prepend_asf_command = bool(asf_username is not None) and bool(len(data) > 0)
 
@@ -180,7 +180,7 @@ def write_to_file(data: list[str],
         print(output, file=f)
 
     if verbose:
-        print('Written apps: {}'.format(len(data)))
+        print(f'Written apps: {len(data)}')
 
     return
 

@@ -51,7 +51,7 @@ def get_tag_drop_rate_str(rarity: str = None) -> str:
         # Rarity: Common
         tag_drop_rate_no = 0
 
-    tag_drop_rate_str = 'tag_droprate_{}'.format(tag_drop_rate_no)
+    tag_drop_rate_str = f'tag_droprate_{tag_drop_rate_no}'
 
     return tag_drop_rate_str
 
@@ -146,7 +146,7 @@ def get_all_listings(all_listings: dict[str, dict] = None,
     while (num_listings is None) or (start_index < num_listings):
 
         if num_listings is not None:
-            print('[{}/{}]'.format(start_index, num_listings))
+            print(f'[{start_index}/{num_listings}]')
 
         req_data = get_search_parameters(start_index=start_index,
                                          delta_index=delta_index,
@@ -156,7 +156,7 @@ def get_all_listings(all_listings: dict[str, dict] = None,
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
-            print('Number of queries {} reached. Cooldown: {} seconds'.format(query_count, cooldown_duration))
+            print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
             time.sleep(cooldown_duration)
             query_count = 0
 
@@ -246,7 +246,7 @@ def update_all_listings(listing_output_file_name: str = None,
 
     try:
         all_listings = load_all_listings(listing_output_file_name=listing_output_file_name)
-        print('Loading {} listings from disk.'.format(len(all_listings)))
+        print(f'Loading {len(all_listings)} listings from disk.')
     except FileNotFoundError:
         print('Downloading listings from scratch.')
         all_listings = None
@@ -271,7 +271,7 @@ def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
         with open(listing_output_file_name, 'r', encoding='utf-8') as f:
             all_listings = json.load(f)
     except FileNotFoundError:
-        print('File {} not found. Initializing listings with an empty dictionary.'.format(listing_output_file_name))
+        print(f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.')
         all_listings = dict()
 
     return all_listings
