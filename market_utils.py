@@ -17,8 +17,10 @@ def determine_whether_listing_hash_is_dubious(listing_hash: str) -> bool:
     return listing_hash_is_dubious
 
 
-def filter_out_dubious_listing_hashes(all_listings: dict[str, dict],
-                                      verbose: bool = True) -> dict[str, dict]:
+def filter_out_dubious_listing_hashes(
+    all_listings: dict[str, dict],
+    verbose: bool = True,
+) -> dict[str, dict]:
     # Filter out listing hashes which hint at a dubious market listing for the booster pack. For instance:
     #   362680-Fran Bow #Economy_TradingCards_ItemType_BoosterPack
     #   844870-#Economy_TradingCards_Type_GameType
@@ -37,15 +39,20 @@ def filter_out_dubious_listing_hashes(all_listings: dict[str, dict],
                 print(f'Omitting dubious listing hash: {listing_hash}')
 
     if verbose:
-        print('There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)'.format(
-            len(filtered_listings), len(all_listings) - len(filtered_listings)))
+        print(
+            'There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)'.format(
+                len(filtered_listings), len(all_listings) - len(filtered_listings),
+            ),
+        )
 
     return filtered_listings
 
 
-def match_badges_with_listing_hashes(badge_creation_details: dict[int, dict] = None,
-                                     all_listings: dict[str, dict] = None,
-                                     verbose: bool = True) -> dict[int, str | None]:
+def match_badges_with_listing_hashes(
+    badge_creation_details: dict[int, dict] = None,
+    all_listings: dict[str, dict] = None,
+    verbose: bool = True,
+) -> dict[int, str | None]:
     # Badges for games which I own
 
     if badge_creation_details is None:
@@ -96,12 +103,14 @@ def match_badges_with_listing_hashes(badge_creation_details: dict[int, dict] = N
     return badge_matches
 
 
-def aggregate_badge_data(badge_creation_details: dict[int, dict],
-                         badge_matches: dict[int, str | None],
-                         all_listings: dict[str, dict] = None,
-                         enforced_sack_of_gems_price: float = None,
-                         minimum_allowed_sack_of_gems_price: float = None,
-                         retrieve_gem_price_from_scratch: bool = False) -> dict[int, dict]:
+def aggregate_badge_data(
+    badge_creation_details: dict[int, dict],
+    badge_matches: dict[int, str | None],
+    all_listings: dict[str, dict] = None,
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    retrieve_gem_price_from_scratch: bool = False,
+) -> dict[int, dict]:
     # Aggregate data:
     #       owned appID --> (gem PRICE, sell price)
     # where:
@@ -113,9 +122,11 @@ def aggregate_badge_data(badge_creation_details: dict[int, dict],
     if all_listings is None:
         all_listings = load_all_listings()
 
-    gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                              minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                              retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+    gem_price = get_gem_price(
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+    )
 
     badge_app_ids = list(badge_creation_details.keys())
 
@@ -149,10 +160,12 @@ def aggregate_badge_data(badge_creation_details: dict[int, dict],
     return aggregated_badge_data
 
 
-def load_aggregated_badge_data(retrieve_listings_from_scratch: bool = False,
-                               enforced_sack_of_gems_price: float = None,
-                               minimum_allowed_sack_of_gems_price: float = None,
-                               from_javascript: bool = False) -> dict[int, dict]:
+def load_aggregated_badge_data(
+    retrieve_listings_from_scratch: bool = False,
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    from_javascript: bool = False,
+) -> dict[int, dict]:
     badge_creation_details = parse_badge_creation_details(from_javascript=from_javascript)
 
     if retrieve_listings_from_scratch:
@@ -162,17 +175,21 @@ def load_aggregated_badge_data(retrieve_listings_from_scratch: bool = False,
 
     all_listings = filter_out_dubious_listing_hashes(all_listings)
 
-    badge_matches = match_badges_with_listing_hashes(badge_creation_details,
-                                                     all_listings)
+    badge_matches = match_badges_with_listing_hashes(
+        badge_creation_details,
+        all_listings,
+    )
 
     retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
-    aggregated_badge_data = aggregate_badge_data(badge_creation_details,
-                                                 badge_matches,
-                                                 all_listings=all_listings,
-                                                 enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                 minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                 retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+    aggregated_badge_data = aggregate_badge_data(
+        badge_creation_details,
+        badge_matches,
+        all_listings=all_listings,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+    )
 
     return aggregated_badge_data
 
@@ -185,8 +202,10 @@ def populate_random_samples_of_badge_data(badge_data: dict[int, dict] = None, nu
 
     num_samples = min(num_samples, len(listing_hashes))
 
-    listing_hash_samples = [listing_hashes[i]
-                            for i in random.sample(range(len(listing_hashes)), k=num_samples)]
+    listing_hash_samples = [
+        listing_hashes[i]
+        for i in random.sample(range(len(listing_hashes)), k=num_samples)
+    ]
 
     item_nameids = get_item_nameid_batch(listing_hash_samples)
 

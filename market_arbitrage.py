@@ -43,8 +43,11 @@ def filter_out_badges_never_crafted(aggregated_badge_data: dict[int, dict], verb
             filtered_badge_data[app_id] = individual_badge_data
 
     if verbose:
-        print('There are {} booster packs which are tracked, as they were crafted at least once. ({} omitted)'.format(
-            len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data)))
+        print(
+            'There are {} booster packs which are tracked, as they were crafted at least once. ({} omitted)'.format(
+                len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data),
+            ),
+        )
 
     return filtered_badge_data
 
@@ -60,21 +63,28 @@ def filter_out_badges_recently_crafted(aggregated_badge_data: dict[int, dict], v
     for app_id in aggregated_badge_data.keys():
         individual_badge_data = aggregated_badge_data[app_id]
 
-        booster_pack_can_be_crafted = determine_whether_a_booster_pack_can_be_crafted(individual_badge_data,
-                                                                                      current_time)
+        booster_pack_can_be_crafted = determine_whether_a_booster_pack_can_be_crafted(
+            individual_badge_data,
+            current_time,
+        )
 
         if booster_pack_can_be_crafted:
             filtered_badge_data[app_id] = individual_badge_data
 
     if verbose:
-        print('There are {} booster packs which can be immediately crafted. ({} excluded because of cooldown)'.format(
-            len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data)))
+        print(
+            'There are {} booster packs which can be immediately crafted. ({} excluded because of cooldown)'.format(
+                len(filtered_badge_data), len(aggregated_badge_data) - len(filtered_badge_data),
+            ),
+        )
 
     return filtered_badge_data
 
 
-def determine_whether_an_arbitrage_might_exist(badge_data: dict,
-                                               user_chosen_price_threshold: float = None) -> bool:
+def determine_whether_an_arbitrage_might_exist(
+    badge_data: dict,
+    user_chosen_price_threshold: float = None,
+) -> bool:
     sell_price_including_fee = badge_data['sell_price']
     sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
 
@@ -115,10 +125,12 @@ def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
     return sell_price_is_unknown
 
 
-def filter_out_badges_with_low_sell_price(aggregated_badge_data: dict[int | str, dict],
-                                          user_chosen_price_threshold: float = None,
-                                          category_name: str = None,
-                                          verbose: bool = True) -> dict[int | str, dict]:
+def filter_out_badges_with_low_sell_price(
+    aggregated_badge_data: dict[int | str, dict],
+    user_chosen_price_threshold: float = None,
+    category_name: str = None,
+    verbose: bool = True,
+) -> dict[int | str, dict]:
     # Filter out games for which the sell price (ask) is lower than the gem price,
     # because the bid is necessarily lower than the ask, so it will not be worth downloading bid data for these games.
 
@@ -139,8 +151,10 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data: dict[int | str,
 
         sell_price_is_unknown = determine_whether_sell_price_is_unknown(individual_badge_data)
 
-        an_arbitrage_might_exist = determine_whether_an_arbitrage_might_exist(individual_badge_data,
-                                                                              user_chosen_price_threshold=user_chosen_price_threshold)
+        an_arbitrage_might_exist = determine_whether_an_arbitrage_might_exist(
+            individual_badge_data,
+            user_chosen_price_threshold=user_chosen_price_threshold,
+        )
 
         if sell_price_is_unknown or an_arbitrage_might_exist:
             filtered_badge_data[app_id] = individual_badge_data
@@ -149,22 +163,29 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data: dict[int | str,
                 unknown_price_counter += 1
 
     if verbose:
-        print('There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).'.format(
-            len(filtered_badge_data),
-            category_name,
-            unknown_price_counter,
-            threshold_name,
-            len(filtered_badge_data) - unknown_price_counter))
+        print(
+            'There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).'.format(
+                len(filtered_badge_data),
+                category_name,
+                unknown_price_counter,
+                threshold_name,
+                len(filtered_badge_data) - unknown_price_counter,
+            ),
+        )
 
     return filtered_badge_data
 
 
-def find_badge_arbitrages(badge_data: dict,
-                          market_order_dict: dict[str, dict] = None,
-                          verbose: bool = False) -> dict[str, dict]:
+def find_badge_arbitrages(
+    badge_data: dict,
+    market_order_dict: dict[str, dict] = None,
+    verbose: bool = False,
+) -> dict[str, dict]:
     if market_order_dict is None:
-        market_order_dict = load_market_order_data(badge_data,
-                                                   retrieve_market_orders_online=True)
+        market_order_dict = load_market_order_data(
+            badge_data,
+            retrieve_market_orders_online=True,
+        )
 
     badge_arbitrages = dict()
 
@@ -181,9 +202,11 @@ def find_badge_arbitrages(badge_data: dict,
             bid_including_fee = -1
 
             if verbose:
-                print('Bid not found for {}. Reason is likely that you asked not to retrieve market orders.'.format(
-                    listing_hash
-                ))
+                print(
+                    'Bid not found for {}. Reason is likely that you asked not to retrieve market orders.'.format(
+                        listing_hash,
+                    ),
+                )
 
         bid_without_fee = compute_sell_price_without_fee(bid_including_fee)
 
@@ -231,9 +254,11 @@ def find_badge_arbitrages(badge_data: dict,
     return badge_arbitrages
 
 
-def print_arbitrages(badge_arbitrages: dict[str, dict],
-                     use_numbered_bullet_points: bool = False,
-                     use_hyperlink: bool = False) -> None:
+def print_arbitrages(
+    badge_arbitrages: dict[str, dict],
+    use_numbered_bullet_points: bool = False,
+    use_hyperlink: bool = False,
+) -> None:
     bullet_point = get_bullet_point_for_display(use_numbered_bullet_points=use_numbered_bullet_points)
 
     for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
@@ -246,9 +271,11 @@ def print_arbitrages(badge_arbitrages: dict[str, dict],
         if use_hyperlink:
             app_id = convert_listing_hash_to_app_id(listing_hash)
 
-            markdown_compatible_steam_market_url = get_steam_market_listing_url(listing_hash=listing_hash,
-                                                                                render_as_json=False,
-                                                                                replace_spaces=True)
+            markdown_compatible_steam_market_url = get_steam_market_listing_url(
+                listing_hash=listing_hash,
+                render_as_json=False,
+                replace_spaces=True,
+            )
 
             listing_hash_formatted_for_markdown = '[[store]({})][[market]({})] [{}]({})'.format(
                 get_steam_store_url(app_id),
@@ -276,12 +303,15 @@ def print_arbitrages(badge_arbitrages: dict[str, dict],
                 arbitrage['bid_without_fee'],
                 arbitrage['bid_including_fee'],
                 arbitrage['bid_volume'],
-            ))
+            ),
+        )
 
 
-def convert_arbitrages_for_batch_create_then_sell(badge_arbitrages: dict[str, dict],
-                                                  profit_threshold: float = 0.01,  # profit in euros
-                                                  verbose: bool = True) -> dict[str, float]:
+def convert_arbitrages_for_batch_create_then_sell(
+    badge_arbitrages: dict[str, dict],
+    profit_threshold: float = 0.01,  # profit in euros
+    verbose: bool = True,
+) -> dict[str, float]:
     # Code inspired from print_arbitrages()
 
     price_dict_for_listing_hashes = dict()
@@ -305,10 +335,12 @@ def convert_arbitrages_for_batch_create_then_sell(badge_arbitrages: dict[str, di
     return price_dict_for_listing_hashes
 
 
-def update_badge_arbitrages_with_latest_market_order_data(badge_data: dict[int, dict],
-                                                          arbitrage_data: dict[str, dict],
-                                                          retrieve_market_orders_online: bool = True,
-                                                          verbose: bool = False) -> dict[str, dict]:
+def update_badge_arbitrages_with_latest_market_order_data(
+    badge_data: dict[int, dict],
+    arbitrage_data: dict[str, dict],
+    retrieve_market_orders_online: bool = True,
+    verbose: bool = False,
+) -> dict[str, dict]:
     # Objective: ensure that we have the latest market orders before trying to automatically create & sell booster packs
 
     # Based on arbitrage_data, select the badge_data for which we want to download (again) the latest market orders:
@@ -321,26 +353,34 @@ def update_badge_arbitrages_with_latest_market_order_data(badge_data: dict[int, 
             app_id = convert_listing_hash_to_app_id(listing_hash)
             selected_badge_data[app_id] = badge_data[app_id]
 
-    market_order_dict = load_market_order_data(badge_data=selected_badge_data,
-                                               retrieve_market_orders_online=retrieve_market_orders_online)
+    market_order_dict = load_market_order_data(
+        badge_data=selected_badge_data,
+        retrieve_market_orders_online=retrieve_market_orders_online,
+    )
 
-    latest_badge_arbitrages = find_badge_arbitrages(badge_data=selected_badge_data,
-                                                    market_order_dict=market_order_dict,
-                                                    verbose=verbose)
+    latest_badge_arbitrages = find_badge_arbitrages(
+        badge_data=selected_badge_data,
+        market_order_dict=market_order_dict,
+        verbose=verbose,
+    )
 
     return latest_badge_arbitrages
 
 
-def get_filtered_badge_data(retrieve_listings_from_scratch: bool = True,
-                            enforced_sack_of_gems_price: float = None,
-                            minimum_allowed_sack_of_gems_price: float = None,
-                            quick_check_with_tracked_booster_packs: bool = False,
-                            check_ask_price: bool = True,
-                            from_javascript: bool = False) -> dict[int, dict]:
-    aggregated_badge_data = load_aggregated_badge_data(retrieve_listings_from_scratch,
-                                                       enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                       minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                       from_javascript=from_javascript)
+def get_filtered_badge_data(
+    retrieve_listings_from_scratch: bool = True,
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    quick_check_with_tracked_booster_packs: bool = False,
+    check_ask_price: bool = True,
+    from_javascript: bool = False,
+) -> dict[int, dict]:
+    aggregated_badge_data = load_aggregated_badge_data(
+        retrieve_listings_from_scratch,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        from_javascript=from_javascript,
+    )
 
     aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
 
@@ -357,43 +397,55 @@ def get_filtered_badge_data(retrieve_listings_from_scratch: bool = True,
     return filtered_badge_data
 
 
-def apply_workflow(retrieve_listings_from_scratch: bool = True,
-                   retrieve_market_orders_online: bool = True,
-                   enforced_sack_of_gems_price: float = None,
-                   minimum_allowed_sack_of_gems_price: float = None,
-                   automatically_create_then_sell_booster_packs: bool = False,
-                   profit_threshold: float = 0.01,  # profit in euros
-                   quick_check_with_tracked_booster_packs: bool = False,
-                   enforce_update_of_marketability_status: bool = False,
-                   from_javascript: bool = False) -> bool:
+def apply_workflow(
+    retrieve_listings_from_scratch: bool = True,
+    retrieve_market_orders_online: bool = True,
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    automatically_create_then_sell_booster_packs: bool = False,
+    profit_threshold: float = 0.01,  # profit in euros
+    quick_check_with_tracked_booster_packs: bool = False,
+    enforce_update_of_marketability_status: bool = False,
+    from_javascript: bool = False,
+) -> bool:
     if quick_check_with_tracked_booster_packs:
         print('Quick-check of booster packs with a track record.')
 
         retrieve_listings_from_scratch = False
         retrieve_market_orders_online = True
 
-        print('Overwriting two arguments:\n\ti) retrieve listings: {},\n\tii) retrieve market orders: {}.'.format(
-            retrieve_listings_from_scratch,
-            retrieve_market_orders_online
-        ))
+        print(
+            'Overwriting two arguments:\n\ti) retrieve listings: {},\n\tii) retrieve market orders: {}.'.format(
+                retrieve_listings_from_scratch,
+                retrieve_market_orders_online,
+            ),
+        )
 
-    filtered_badge_data = get_filtered_badge_data(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-                                                  enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                  quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
-                                                  check_ask_price=True,  # only set to False in batch_create_packs.py
-                                                  from_javascript=from_javascript)
+    filtered_badge_data = get_filtered_badge_data(
+        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+        check_ask_price=True,  # only set to False in batch_create_packs.py
+        from_javascript=from_javascript,
+    )
 
-    market_order_dict = load_market_order_data(filtered_badge_data,
-                                               retrieve_market_orders_online=retrieve_market_orders_online)
+    market_order_dict = load_market_order_data(
+        filtered_badge_data,
+        retrieve_market_orders_online=retrieve_market_orders_online,
+    )
 
-    badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
-                                             market_order_dict)
+    badge_arbitrages = find_badge_arbitrages(
+        filtered_badge_data,
+        market_order_dict,
+    )
 
     print('# Reminder of the gem price')
-    print_gem_price_reminder(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                             minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                             retrieve_gem_price_from_scratch=False)
+    print_gem_price_reminder(
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        retrieve_gem_price_from_scratch=False,
+    )
     # NB: Here, we set 'retrieve_gem_price_from_scratch' to False, so that:
     # - we ensure that the price displayed is equal to the price used for the computations of the arbitrages,
     # - we avoid any issue with status codes, which could happen due to rate limits, after we downloaded the last batch
@@ -402,9 +454,11 @@ def apply_workflow(retrieve_listings_from_scratch: bool = True,
     print('# Results after *slow* update of market order data for *many potential* arbitrages')
     print_arbitrages(badge_arbitrages)
 
-    latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(badge_data=filtered_badge_data,
-                                                                                    arbitrage_data=badge_arbitrages,
-                                                                                    retrieve_market_orders_online=True)
+    latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(
+        badge_data=filtered_badge_data,
+        arbitrage_data=badge_arbitrages,
+        retrieve_market_orders_online=True,
+    )
     # Update marketability status
     if enforce_update_of_marketability_status:
         few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
@@ -421,11 +475,15 @@ def apply_workflow(retrieve_listings_from_scratch: bool = True,
     print_arbitrages(latest_badge_arbitrages)
 
     if automatically_create_then_sell_booster_packs:
-        price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(latest_badge_arbitrages,
-                                                                                      profit_threshold=profit_threshold)
+        price_dict_for_listing_hashes = convert_arbitrages_for_batch_create_then_sell(
+            latest_badge_arbitrages,
+            profit_threshold=profit_threshold,
+        )
 
-        creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                                                                  focus_on_marketable_items=True)
+        creation_results, sale_results = create_then_sell_booster_packs_for_batch(
+            price_dict_for_listing_hashes,
+            focus_on_marketable_items=True,
+        )
 
     return True
 
@@ -441,15 +499,17 @@ def main() -> bool:
     enforce_update_of_marketability_status = True
     from_javascript = True
 
-    apply_workflow(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-                   retrieve_market_orders_online=retrieve_market_orders_online,
-                   enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                   minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                   automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
-                   profit_threshold=profit_threshold,
-                   quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
-                   enforce_update_of_marketability_status=enforce_update_of_marketability_status,
-                   from_javascript=from_javascript)
+    apply_workflow(
+        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+        retrieve_market_orders_online=retrieve_market_orders_online,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
+        profit_threshold=profit_threshold,
+        quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+        enforce_update_of_marketability_status=enforce_update_of_marketability_status,
+        from_javascript=from_javascript,
+    )
 
     return True
 

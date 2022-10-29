@@ -21,8 +21,10 @@ def get_user_data_url() -> str:
 def download_user_data() -> [dict | None]:
     cookie = get_cookie_dict()
 
-    resp_data = requests.get(get_user_data_url(),
-                             cookies=cookie)
+    resp_data = requests.get(
+        get_user_data_url(),
+        cookies=cookie,
+    )
 
     if resp_data.status_code == 200:
         result = resp_data.json()
@@ -50,9 +52,11 @@ def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]
     if method == 'price':
         data = steamspypi.load()
 
-        free_apps = [int(game['appid']) for game in data.values()
-                     if game['initialprice'] is not None  # I don't know what to do in the rare case that price is None.
-                     and int(game['initialprice']) == 0]
+        free_apps = [
+            int(game['appid']) for game in data.values()
+            if game['initialprice'] is not None  # I don't know what to do in the rare case that price is None.
+            and int(game['initialprice']) == 0
+        ]
 
     else:
         data_request = dict()
@@ -85,8 +89,10 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
     return apps_with_trading_cards
 
 
-def load_free_apps_with_trading_cards(free_apps: set[int] = None, list_of_methods: list[str] = None,
-                                      verbose: bool = True) -> set[int]:
+def load_free_apps_with_trading_cards(
+    free_apps: set[int] = None, list_of_methods: list[str] = None,
+    verbose: bool = True,
+) -> set[int]:
     if list_of_methods is None:
         list_of_methods = ['price', 'genre', 'tag']
 
@@ -121,8 +127,10 @@ def load_file(file_name: str, verbose: bool = True) -> list[int]:
     return data
 
 
-def format_for_asf_command_line(app_ids: set[int],
-                                app_prefix: str = None) -> list[str]:
+def format_for_asf_command_line(
+    app_ids: set[int],
+    app_prefix: str = None,
+) -> list[str]:
     if app_prefix is None:
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
         app_prefix = 'a/'
@@ -139,9 +147,11 @@ def chunks(l: list, n: int) -> collections.abc.Iterator[list]:
         yield l[i:i + n]
 
 
-def group_concatenate_to_str(data: list,
-                             asf_username: str = 'ASF',
-                             group_size: int = 25) -> str:
+def group_concatenate_to_str(
+    data: list,
+    asf_username: str = 'ASF',
+    group_size: int = 25,
+) -> str:
     asf_command = 'addlicense'
     asf_complete_command = f'{asf_command} {asf_username} '
 
@@ -170,14 +180,18 @@ def group_concatenate_to_str(data: list,
     return output
 
 
-def write_to_file(data: list[str],
-                  file_name: str,
-                  asf_username: str = None,
-                  group_size: int = 25,
-                  verbose: bool = True) -> None:
-    output = group_concatenate_to_str(data,
-                                      asf_username=asf_username,
-                                      group_size=group_size)
+def write_to_file(
+    data: list[str],
+    file_name: str,
+    asf_username: str = None,
+    group_size: int = 25,
+    verbose: bool = True,
+) -> None:
+    output = group_concatenate_to_str(
+        data,
+        asf_username=asf_username,
+        group_size=group_size,
+    )
 
     with open(file_name, 'w', encoding='utf-8') as f:
         print(output, file=f)
@@ -191,8 +205,10 @@ def main() -> None:
     free_apps = load_file('data/free_apps.txt')
 
     # Based on SteamSpy:
-    free_apps_with_trading_cards = load_free_apps_with_trading_cards(free_apps=set(free_apps),
-                                                                     list_of_methods=None)
+    free_apps_with_trading_cards = load_free_apps_with_trading_cards(
+        free_apps=set(free_apps),
+        list_of_methods=None,
+    )
 
     owned_apps = download_owned_apps()
 

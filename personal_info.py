@@ -22,8 +22,10 @@ def load_steam_cookie_from_disk(file_name_with_personal_info: str = None) -> dic
     return cookie
 
 
-def save_steam_cookie_to_disk(cookie: dict[str, str],
-                              file_name_with_personal_info: str = None) -> bool:
+def save_steam_cookie_to_disk(
+    cookie: dict[str, str],
+    file_name_with_personal_info: str = None,
+) -> bool:
     if file_name_with_personal_info is None:
         file_name_with_personal_info = get_steam_cookie_file_name()
 
@@ -46,9 +48,11 @@ def get_cookie_dict(verbose: bool = False) -> dict[str, str]:
     return cookie
 
 
-def update_cookie_dict(original_cookie: dict[str, str],
-                       dict_with_new_values: dict[str, str],
-                       verbose: bool = False) -> dict[str, str]:
+def update_cookie_dict(
+    original_cookie: dict[str, str],
+    dict_with_new_values: dict[str, str],
+    verbose: bool = False,
+) -> dict[str, str]:
     cookie = original_cookie
 
     for field in dict_with_new_values.keys():
@@ -66,11 +70,13 @@ def update_cookie_dict(original_cookie: dict[str, str],
     return cookie
 
 
-def update_and_save_cookie_to_disk_if_values_changed(cookie: dict[str, str],
-                                                     dict_with_new_values: dict[str, str],
-                                                     fields: list[str] = None,
-                                                     file_name_with_personal_info: str = None,
-                                                     verbose: bool = False) -> dict[str, str]:
+def update_and_save_cookie_to_disk_if_values_changed(
+    cookie: dict[str, str],
+    dict_with_new_values: dict[str, str],
+    fields: list[str] = None,
+    file_name_with_personal_info: str = None,
+    verbose: bool = False,
+) -> dict[str, str]:
     if fields is None:
         fields = ['steamLoginSecure', 'sessionid']
 
@@ -81,12 +87,16 @@ def update_and_save_cookie_to_disk_if_values_changed(cookie: dict[str, str],
     is_cookie_to_be_updated = any(dict_with_new_values[field] != cookie[field] for field in relevant_fields)
 
     if is_cookie_to_be_updated:
-        cookie = update_cookie_dict(original_cookie=cookie,
-                                    dict_with_new_values=dict_with_new_values,
-                                    verbose=verbose)
+        cookie = update_cookie_dict(
+            original_cookie=cookie,
+            dict_with_new_values=dict_with_new_values,
+            verbose=verbose,
+        )
 
-        is_cookie_to_be_saved = save_steam_cookie_to_disk(cookie=cookie,
-                                                          file_name_with_personal_info=file_name_with_personal_info)
+        is_cookie_to_be_saved = save_steam_cookie_to_disk(
+            cookie=cookie,
+            file_name_with_personal_info=file_name_with_personal_info,
+        )
 
     return cookie
 

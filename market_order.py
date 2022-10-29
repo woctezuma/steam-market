@@ -51,16 +51,20 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie: bool = False)
     return rate_limits
 
 
-def download_market_order_data(listing_hash: str,
-                               item_nameid: str = None,
-                               verbose: bool = False,
-                               listing_details_output_file_name: str = None) -> tuple[float, float, int, int]:
+def download_market_order_data(
+    listing_hash: str,
+    item_nameid: str = None,
+    verbose: bool = False,
+    listing_details_output_file_name: str = None,
+) -> tuple[float, float, int, int]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
     if item_nameid is None:
-        item_nameid = get_item_nameid(listing_hash,
-                                      listing_details_output_file_name=listing_details_output_file_name)
+        item_nameid = get_item_nameid(
+            listing_hash,
+            listing_details_output_file_name=listing_details_output_file_name,
+        )
 
     if item_nameid is not None:
 
@@ -130,22 +134,28 @@ def download_market_order_data(listing_hash: str,
         ask_volume = -1
 
     if verbose:
-        print('Listing: {} ; item id: {} ; ask: {:.2f}€ ({}) ; bid: {:.2f}€ ({})'.format(listing_hash,
-                                                                                         item_nameid,
-                                                                                         ask_price,
-                                                                                         ask_volume,
-                                                                                         bid_price,
-                                                                                         bid_volume))
+        print(
+            'Listing: {} ; item id: {} ; ask: {:.2f}€ ({}) ; bid: {:.2f}€ ({})'.format(
+                listing_hash,
+                item_nameid,
+                ask_price,
+                ask_volume,
+                bid_price,
+                bid_volume,
+            ),
+        )
 
     return bid_price, ask_price, bid_volume, ask_volume
 
 
-def download_market_order_data_batch(badge_data: dict[int | str, dict],
-                                     market_order_dict: dict[str, dict] = None,
-                                     verbose: bool = False,
-                                     save_to_disk: bool = True,
-                                     market_order_output_file_name: str = None,
-                                     listing_details_output_file_name: str = None) -> dict[str, dict]:
+def download_market_order_data_batch(
+    badge_data: dict[int | str, dict],
+    market_order_dict: dict[str, dict] = None,
+    verbose: bool = False,
+    save_to_disk: bool = True,
+    market_order_output_file_name: str = None,
+    listing_details_output_file_name: str = None,
+) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
 
@@ -153,8 +163,10 @@ def download_market_order_data_batch(badge_data: dict[int | str, dict],
 
     listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
 
-    item_nameids = get_item_nameid_batch(listing_hashes,
-                                         listing_details_output_file_name=listing_details_output_file_name)
+    item_nameids = get_item_nameid_batch(
+        listing_hashes,
+        listing_details_output_file_name=listing_details_output_file_name,
+    )
 
     # Retrieval of market orders (bid, ask)
 
@@ -170,9 +182,11 @@ def download_market_order_data_batch(badge_data: dict[int | str, dict],
 
     for app_id in badge_data.keys():
         listing_hash = badge_data[app_id]['listing_hash']
-        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash,
-                                                                                  verbose=verbose,
-                                                                                  listing_details_output_file_name=listing_details_output_file_name)
+        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
+            listing_hash,
+            verbose=verbose,
+            listing_details_output_file_name=listing_details_output_file_name,
+        )
 
         market_order_dict[listing_hash] = dict()
         market_order_dict[listing_hash]['bid'] = bid_price
@@ -200,19 +214,25 @@ def download_market_order_data_batch(badge_data: dict[int | str, dict],
     return market_order_dict
 
 
-def load_market_order_data(badge_data: dict[int | str, dict] = None,
-                           trim_output: bool = False,
-                           retrieve_market_orders_online: bool = True) -> dict[str, dict]:
+def load_market_order_data(
+    badge_data: dict[int | str, dict] = None,
+    trim_output: bool = False,
+    retrieve_market_orders_online: bool = True,
+) -> dict[str, dict]:
     market_order_dict = load_market_order_data_from_disk()
 
     if retrieve_market_orders_online:
-        market_order_dict = download_market_order_data_batch(badge_data,
-                                                             save_to_disk=True,
-                                                             market_order_dict=market_order_dict)
+        market_order_dict = download_market_order_data_batch(
+            badge_data,
+            save_to_disk=True,
+            market_order_dict=market_order_dict,
+        )
 
     if trim_output:
-        trimmed_market_order_dict, app_ids_with_missing_data = trim_market_order_data(badge_data,
-                                                                                      market_order_dict)
+        trimmed_market_order_dict, app_ids_with_missing_data = trim_market_order_data(
+            badge_data,
+            market_order_dict,
+        )
 
         if retrieve_market_orders_online and len(app_ids_with_missing_data) > 0:
             raise AssertionError()
@@ -223,8 +243,10 @@ def load_market_order_data(badge_data: dict[int | str, dict] = None,
     return trimmed_market_order_dict
 
 
-def trim_market_order_data(badge_data: dict[int | str, dict],
-                           market_order_dict: dict[str, dict]) -> tuple[dict[str, dict], list[int | str]]:
+def trim_market_order_data(
+    badge_data: dict[int | str, dict],
+    market_order_dict: dict[str, dict],
+) -> tuple[dict[str, dict], list[int | str]]:
     trimmed_market_order_dict = dict()
     app_ids_with_missing_data = list()
 
@@ -274,9 +296,11 @@ def main() -> bool:
     badge_data[app_id] = dict()
     badge_data[app_id]['listing_hash'] = listing_hash
 
-    market_order_dict = download_market_order_data_batch(badge_data,
-                                                         save_to_disk=False,
-                                                         verbose=True)
+    market_order_dict = download_market_order_data_batch(
+        badge_data,
+        save_to_disk=False,
+        verbose=True,
+    )
 
     # Test listing hashes with special characters
 

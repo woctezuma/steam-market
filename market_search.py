@@ -59,12 +59,14 @@ def get_tag_drop_rate_str(rarity: str = None) -> str:
     return tag_drop_rate_str
 
 
-def get_search_parameters(start_index: int = 0,
-                          delta_index: int = 100,
-                          tag_item_class_no: int = None,
-                          tag_drop_rate_str: str = None,
-                          rarity: str = None,
-                          is_foil_trading_card: bool = True) -> dict[str, str]:
+def get_search_parameters(
+    start_index: int = 0,
+    delta_index: int = 100,
+    tag_item_class_no: int = None,
+    tag_drop_rate_str: str = None,
+    rarity: str = None,
+    is_foil_trading_card: bool = True,
+) -> dict[str, str]:
     if tag_drop_rate_str is None:
         tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)
 
@@ -124,11 +126,13 @@ def get_steam_api_rate_limits_for_market_search(has_secured_cookie: bool = False
     return rate_limits
 
 
-def get_all_listings(all_listings: dict[str, dict] = None,
-                     url: str = None,
-                     tag_item_class_no: int = None,
-                     tag_drop_rate_str: str = None,
-                     rarity: str = None) -> dict[str, dict]:
+def get_all_listings(
+    all_listings: dict[str, dict] = None,
+    url: str = None,
+    tag_item_class_no: int = None,
+    tag_drop_rate_str: str = None,
+    rarity: str = None,
+) -> dict[str, dict]:
     if url is None:
         url = get_steam_market_search_url()
 
@@ -151,11 +155,13 @@ def get_all_listings(all_listings: dict[str, dict] = None,
         if num_listings is not None:
             print(f'[{start_index}/{num_listings}]')
 
-        req_data = get_search_parameters(start_index=start_index,
-                                         delta_index=delta_index,
-                                         tag_item_class_no=tag_item_class_no,
-                                         tag_drop_rate_str=tag_drop_rate_str,
-                                         rarity=rarity)
+        req_data = get_search_parameters(
+            start_index=start_index,
+            delta_index=delta_index,
+            tag_item_class_no=tag_item_class_no,
+            tag_drop_rate_str=tag_drop_rate_str,
+            rarity=rarity,
+        )
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
@@ -217,15 +223,19 @@ def get_all_listings(all_listings: dict[str, dict] = None,
     return all_listings
 
 
-def download_all_listings(listing_output_file_name: str = None,
-                          url: str = None,
-                          tag_item_class_no: int = None) -> bool:
+def download_all_listings(
+    listing_output_file_name: str = None,
+    url: str = None,
+    tag_item_class_no: int = None,
+) -> bool:
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
 
     if not Path(listing_output_file_name).exists():
-        all_listings = get_all_listings(url=url,
-                                        tag_item_class_no=tag_item_class_no)
+        all_listings = get_all_listings(
+            url=url,
+            tag_item_class_no=tag_item_class_no,
+        )
 
         with open(listing_output_file_name, 'w', encoding='utf-8') as f:
             json.dump(all_listings, f)
@@ -233,11 +243,13 @@ def download_all_listings(listing_output_file_name: str = None,
     return True
 
 
-def update_all_listings(listing_output_file_name: str = None,
-                        url: str = None,
-                        tag_item_class_no: int = None,
-                        tag_drop_rate_str: str = None,
-                        rarity: str = None) -> bool:
+def update_all_listings(
+    listing_output_file_name: str = None,
+    url: str = None,
+    tag_item_class_no: int = None,
+    tag_drop_rate_str: str = None,
+    rarity: str = None,
+) -> bool:
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
 
@@ -251,11 +263,13 @@ def update_all_listings(listing_output_file_name: str = None,
         print('Downloading listings from scratch.')
         all_listings = None
 
-    all_listings = get_all_listings(all_listings,
-                                    url=url,
-                                    tag_item_class_no=tag_item_class_no,
-                                    tag_drop_rate_str=tag_drop_rate_str,
-                                    rarity=rarity)
+    all_listings = get_all_listings(
+        all_listings,
+        url=url,
+        tag_item_class_no=tag_item_class_no,
+        tag_drop_rate_str=tag_drop_rate_str,
+        rarity=rarity,
+    )
 
     with open(listing_output_file_name, 'w', encoding='utf-8') as f:
         json.dump(all_listings, f)

@@ -20,8 +20,10 @@ def get_app_ids_of_interest() -> list[str]:
     return app_ids
 
 
-def get_sell_prices_without_fee(app_ids: list[str],
-                                price_offset_in_euros: float = 0.0) -> dict[str, float]:
+def get_sell_prices_without_fee(
+    app_ids: list[str],
+    price_offset_in_euros: float = 0.0,
+) -> dict[str, float]:
     # Load sell prices (without fee).
     #
     # NB: an arbitrary price offset (greater than or equal to zero) can be input to constrain the problem even more.
@@ -69,11 +71,13 @@ def get_gem_amount_for_a_booster_pack(app_ids: list[str]) -> dict[str, int]:
     return gem_amounts_for_a_booster_pack
 
 
-def filter_app_ids_with_potential_profit(app_ids: list[str],
-                                         sell_prices_without_fee: dict[str, float],
-                                         gem_amounts_for_a_booster_pack: dict[str, int],
-                                         gem_sack_price_in_euros: float = None,
-                                         verbose: bool = True) -> list[int]:
+def filter_app_ids_with_potential_profit(
+    app_ids: list[str],
+    sell_prices_without_fee: dict[str, float],
+    gem_amounts_for_a_booster_pack: dict[str, int],
+    gem_sack_price_in_euros: float = None,
+    verbose: bool = True,
+) -> list[int]:
     # Filter out appIDs for which the sell price (without fee) is lower than the cost to craft a Booster Pack.
     # Indeed, a profit is impossible for these appIDs.
 
@@ -104,20 +108,24 @@ def filter_app_ids_with_potential_profit(app_ids: list[str],
         positive = sorted(filtered_app_ids)
         negative = sorted(set(app_ids_as_int).difference(filtered_app_ids))
 
-        print('\nPositive ({}): {}\n\nNegative ({}): {}\n\nTotal ({})'.format(
-            len(positive),
-            positive,
-            len(negative),
-            negative,
-            len(app_ids_as_int)
-        ))
+        print(
+            '\nPositive ({}): {}\n\nNegative ({}): {}\n\nTotal ({})'.format(
+                len(positive),
+                positive,
+                len(negative),
+                negative,
+                len(app_ids_as_int),
+            ),
+        )
 
     return filtered_app_ids
 
 
-def remove_app_ids_previously_processed(filtered_app_ids: list[int],
-                                        app_ids_previously_processed: list[int] = None,
-                                        verbose: bool = True) -> list[int]:
+def remove_app_ids_previously_processed(
+    filtered_app_ids: list[int],
+    app_ids_previously_processed: list[int] = None,
+    verbose: bool = True,
+) -> list[int]:
     # Manually remove previously processed appIDs from the list of returned appIDs of interest.
 
     if app_ids_previously_processed is None:
@@ -156,23 +164,29 @@ def main() -> None:
     # - sell prices,
     # - gem amounts required to craft a Booster Pack.
 
-    sell_prices_without_fee = get_sell_prices_without_fee(app_ids,
-                                                          price_offset_in_euros=price_offset_in_euros)
+    sell_prices_without_fee = get_sell_prices_without_fee(
+        app_ids,
+        price_offset_in_euros=price_offset_in_euros,
+    )
     gem_amounts_for_a_booster_pack = get_gem_amount_for_a_booster_pack(app_ids)
 
     # Filter out appIDs for which a profit is impossible:
 
-    filtered_app_ids = filter_app_ids_with_potential_profit(app_ids,
-                                                            sell_prices_without_fee,
-                                                            gem_amounts_for_a_booster_pack,
-                                                            gem_sack_price_in_euros=gem_sack_price_in_euros,
-                                                            verbose=True)
+    filtered_app_ids = filter_app_ids_with_potential_profit(
+        app_ids,
+        sell_prices_without_fee,
+        gem_amounts_for_a_booster_pack,
+        gem_sack_price_in_euros=gem_sack_price_in_euros,
+        verbose=True,
+    )
 
     # Manually remove previously processed appIDs:
 
-    app_ids_to_do = remove_app_ids_previously_processed(filtered_app_ids,
-                                                        app_ids_previously_processed=app_ids_previously_processed,
-                                                        verbose=True)
+    app_ids_to_do = remove_app_ids_previously_processed(
+        filtered_app_ids,
+        app_ids_previously_processed=app_ids_previously_processed,
+        verbose=True,
+    )
 
 
 if __name__ == '__main__':

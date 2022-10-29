@@ -21,7 +21,7 @@ def parse_javascript_one_liner(badges_as_str: str, verbose: bool = False) -> dic
         app_id, next_creation_time = badge['appid'], "available now"
         badge_creation_details[app_id] = {
             'name': (app_name := badge['name']),
-            'gem_value': (gem_value := int(badge['price']))
+            'gem_value': (gem_value := int(badge['price'])),
         }
 
         if badge.get('unavailable', False):
@@ -64,8 +64,10 @@ def parse_augmented_steam_drop_down_menu(lines: list[str], verbose: bool = False
     return badge_creation_details
 
 
-def parse_badge_creation_details(badge_creation_file_name: str = None, from_javascript: bool = False,
-                                 verbose: bool = False) -> dict[int, dict]:
+def parse_badge_creation_details(
+    badge_creation_file_name: str = None, from_javascript: bool = False,
+    verbose: bool = False,
+) -> dict[int, dict]:
     if badge_creation_file_name is None:
         badge_creation_file_name = get_badge_creation_file_name(from_javascript=from_javascript)
 

@@ -20,25 +20,33 @@ from utils import (
 )
 
 
-def filter_listings(all_listings: dict[str, dict] = None,
-                    min_sell_price: float = 30,  # in cents
-                    min_num_listings: int = 20,
-                    # to remove listings with very few sellers, who chose unrealistic sell prices
-                    verbose: bool = True) -> list[str]:
+def filter_listings(
+    all_listings: dict[str, dict] = None,
+    min_sell_price: float = 30,  # in cents
+    min_num_listings: int = 20,
+    # to remove listings with very few sellers, who chose unrealistic sell prices
+    verbose: bool = True,
+) -> list[str]:
     if all_listings is None:
         all_listings = load_all_listings()
 
     # Sort listing hashes with respect to the ask
 
-    sorted_listing_hashes = sorted(all_listings,
-                                   reverse=True,
-                                   key=lambda x: all_listings[x]['sell_price'])
+    sorted_listing_hashes = sorted(
+        all_listings,
+        reverse=True,
+        key=lambda x: all_listings[x]['sell_price'],
+    )
 
     # *Heuristic* filtering of listing hashes
 
-    filtered_listing_hashes = list(filter(lambda x: all_listings[x]['sell_price'] >= min_sell_price
-                                          and all_listings[x]['sell_listings'] >= min_num_listings,
-                                          sorted_listing_hashes))
+    filtered_listing_hashes = list(
+        filter(
+            lambda x: all_listings[x]['sell_price'] >= min_sell_price
+            and all_listings[x]['sell_listings'] >= min_num_listings,
+            sorted_listing_hashes,
+        ),
+    )
 
     if verbose:
         print(f'{len(filtered_listing_hashes)} hashes found.\n')
@@ -46,8 +54,10 @@ def filter_listings(all_listings: dict[str, dict] = None,
     return filtered_listing_hashes
 
 
-def convert_to_badges(filtered_listing_hashes: [dict[str, dict] | list[str]],
-                      max_num_badges: int = None) -> dict[int, dict]:
+def convert_to_badges(
+    filtered_listing_hashes: [dict[str, dict] | list[str]],
+    max_num_badges: int = None,
+) -> dict[int, dict]:
     badge_data = dict()
 
     for i, listing_hash in enumerate(filtered_listing_hashes):
@@ -82,23 +92,29 @@ def filter_out_unmarketable_packs(market_order_dict: dict[str, dict]) -> tuple[d
     return marketable_market_order_dict, unknown_market_order_dict
 
 
-def sort_according_to_buzz(market_order_dict: dict[str, dict],
-                           marketable_market_order_dict: dict[str, dict] = None) -> list[str]:
+def sort_according_to_buzz(
+    market_order_dict: dict[str, dict],
+    marketable_market_order_dict: dict[str, dict] = None,
+) -> list[str]:
     if marketable_market_order_dict is None:
         marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
-    hashes_for_best_bid = sorted(list(marketable_market_order_dict),
-                                 reverse=True,
-                                 key=lambda x: market_order_dict[x]['bid'])
+    hashes_for_best_bid = sorted(
+        list(marketable_market_order_dict),
+        reverse=True,
+        key=lambda x: market_order_dict[x]['bid'],
+    )
 
     return hashes_for_best_bid
 
 
-def print_packs_with_high_buzz(hashes_for_best_bid: list[str],
-                               market_order_dict: dict[str, dict],
-                               item_rarity_patterns_per_app_id: dict[int, dict] = None,
-                               category_name: str = None,
-                               num_packs_to_display: int = 10) -> None:
+def print_packs_with_high_buzz(
+    hashes_for_best_bid: list[str],
+    market_order_dict: dict[str, dict],
+    item_rarity_patterns_per_app_id: dict[int, dict] = None,
+    category_name: str = None,
+    num_packs_to_display: int = 10,
+) -> None:
     if category_name is None:
         category_name = get_category_name_for_booster_packs()
 
@@ -115,9 +131,11 @@ def print_packs_with_high_buzz(hashes_for_best_bid: list[str],
         bid = market_order_dict[listing_hash]['bid']
         bid_volume = market_order_dict[listing_hash]['bid_volume']
 
-        markdown_compatible_steam_market_url = get_steam_market_listing_url(listing_hash=listing_hash,
-                                                                            render_as_json=False,
-                                                                            replace_spaces=True)
+        markdown_compatible_steam_market_url = get_steam_market_listing_url(
+            listing_hash=listing_hash,
+            render_as_json=False,
+            replace_spaces=True,
+        )
 
         if category_name != get_category_name_for_booster_packs():
             # Display the listing hash, because we cannot extract the app name from the listing hash for:
@@ -140,34 +158,43 @@ def print_packs_with_high_buzz(hashes_for_best_bid: list[str],
         except TypeError:
             item_rarity_pattern_info = ''
 
-        print('{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {}){}'.format(
-            i + 1,
-            get_steam_store_url(app_id),
-            markdown_compatible_steam_market_url,
-            app_name,
-            get_steamcardexchange_url(app_id),
-            bid,
-            bid_volume,
-            item_rarity_pattern_info))
+        print(
+            '{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {}){}'.format(
+                i + 1,
+                get_steam_store_url(app_id),
+                markdown_compatible_steam_market_url,
+                app_name,
+                get_steamcardexchange_url(app_id),
+                bid,
+                bid_volume,
+                item_rarity_pattern_info,
+            ),
+        )
 
 
-def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings: dict[str, dict],
-                                                          aggregated_badge_data: dict[str, dict] = None,
-                                                          force_update_from_steam_card_exchange: bool = False,
-                                                          enforced_sack_of_gems_price: float = None,
-                                                          minimum_allowed_sack_of_gems_price: float = None) -> dict[
-        str, dict]:
+def fill_in_badge_data_with_data_from_steam_card_exchange(
+    all_listings: dict[str, dict],
+    aggregated_badge_data: dict[str, dict] = None,
+    force_update_from_steam_card_exchange: bool = False,
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+) -> dict[
+        str, dict,
+]:
     if aggregated_badge_data is None:
         aggregated_badge_data = convert_to_badges(all_listings)
 
     dico = parse_data_from_steam_card_exchange(
-        force_update_from_steam_card_exchange=force_update_from_steam_card_exchange)
+        force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
+    )
 
     retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
-    gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                              minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                              retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+    gem_price = get_gem_price(
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+    )
 
     for app_id in aggregated_badge_data:
         listing_hash = aggregated_badge_data[app_id]['listing_hash']
@@ -194,15 +221,17 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings: dict[str
     return aggregated_badge_data
 
 
-def main(retrieve_listings_from_scratch: bool = False,
-         retrieve_market_orders_online: bool = False,
-         force_update_from_steam_card_exchange: bool = False,
-         enforced_sack_of_gems_price: float = None,
-         minimum_allowed_sack_of_gems_price: float = None,
-         use_a_constant_price_threshold: bool = False,
-         min_sell_price: float = 30,
-         min_num_listings: int = 3,
-         num_packs_to_display: int = 10) -> None:
+def main(
+    retrieve_listings_from_scratch: bool = False,
+    retrieve_market_orders_online: bool = False,
+    force_update_from_steam_card_exchange: bool = False,
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    use_a_constant_price_threshold: bool = False,
+    min_sell_price: float = 30,
+    min_num_listings: int = 3,
+    num_packs_to_display: int = 10,
+) -> None:
     # Load list of all listing hashes
 
     if retrieve_listings_from_scratch:
@@ -214,24 +243,30 @@ def main(retrieve_listings_from_scratch: bool = False,
 
     # Import information from SteamCardExchange
 
-    aggregated_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(all_listings,
-                                                                                  force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
-                                                                                  enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
+    aggregated_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(
+        all_listings,
+        force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+    )
 
     # *Heuristic* filtering of listing hashes
 
     if use_a_constant_price_threshold:
-        filtered_listing_hashes = filter_listings(all_listings,
-                                                  min_sell_price=min_sell_price,
-                                                  min_num_listings=min_num_listings)
+        filtered_listing_hashes = filter_listings(
+            all_listings,
+            min_sell_price=min_sell_price,
+            min_num_listings=min_num_listings,
+        )
 
         filtered_listings = {k: v for k, v in all_listings.items() if k in filtered_listing_hashes}
 
-        filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(filtered_listings,
-                                                                                    force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
-                                                                                    enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                                                    minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price)
+        filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(
+            filtered_listings,
+            force_update_from_steam_card_exchange=force_update_from_steam_card_exchange,
+            enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+            minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        )
 
     else:
         filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
@@ -244,42 +279,54 @@ def main(retrieve_listings_from_scratch: bool = False,
 
     # Download market orders
 
-    market_order_dict = load_market_order_data(filtered_badge_data,
-                                               trim_output=True,
-                                               retrieve_market_orders_online=retrieve_market_orders_online)
+    market_order_dict = load_market_order_data(
+        filtered_badge_data,
+        trim_output=True,
+        retrieve_market_orders_online=retrieve_market_orders_online,
+    )
 
     # Only keep marketable booster packs
 
     marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
 
     # Sort by bid value
-    hashes_for_best_bid = sort_according_to_buzz(market_order_dict,
-                                                 marketable_market_order_dict)
+    hashes_for_best_bid = sort_according_to_buzz(
+        market_order_dict,
+        marketable_market_order_dict,
+    )
 
     # Display the highest ranked booster packs
 
-    print_packs_with_high_buzz(hashes_for_best_bid,
-                               market_order_dict,
-                               num_packs_to_display=num_packs_to_display)
+    print_packs_with_high_buzz(
+        hashes_for_best_bid,
+        market_order_dict,
+        num_packs_to_display=num_packs_to_display,
+    )
 
     # Detect potential arbitrages
 
-    badge_arbitrages = find_badge_arbitrages(filtered_badge_data,
-                                             market_order_dict)
+    badge_arbitrages = find_badge_arbitrages(
+        filtered_badge_data,
+        market_order_dict,
+    )
 
     print('\n# Results for detected *potential* arbitrages\n')
-    print_arbitrages(badge_arbitrages,
-                     use_numbered_bullet_points=True,
-                     use_hyperlink=True)
+    print_arbitrages(
+        badge_arbitrages,
+        use_numbered_bullet_points=True,
+        use_hyperlink=True,
+    )
 
 
 if __name__ == '__main__':
-    main(retrieve_listings_from_scratch=True,
-         retrieve_market_orders_online=True,
-         force_update_from_steam_card_exchange=True,
-         enforced_sack_of_gems_price=None,
-         minimum_allowed_sack_of_gems_price=None,
-         use_a_constant_price_threshold=False,
-         min_sell_price=30,
-         min_num_listings=3,
-         num_packs_to_display=100)
+    main(
+        retrieve_listings_from_scratch=True,
+        retrieve_market_orders_online=True,
+        force_update_from_steam_card_exchange=True,
+        enforced_sack_of_gems_price=None,
+        minimum_allowed_sack_of_gems_price=None,
+        use_a_constant_price_threshold=False,
+        min_sell_price=30,
+        min_num_listings=3,
+        num_packs_to_display=100,
+    )

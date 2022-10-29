@@ -15,38 +15,50 @@ def get_manually_selected_app_ids() -> list[int]:
     return manually_selected_app_ids
 
 
-def filter_app_ids_based_on_badge_data(manually_selected_app_ids: list[int],
-                                       check_ask_price: bool = False,
-                                       filtered_badge_data: dict = None) -> tuple[list[int], dict]:
+def filter_app_ids_based_on_badge_data(
+    manually_selected_app_ids: list[int],
+    check_ask_price: bool = False,
+    filtered_badge_data: dict = None,
+) -> tuple[list[int], dict]:
     if filtered_badge_data is None:
-        filtered_badge_data = get_filtered_badge_data(retrieve_listings_from_scratch=False,
-                                                      enforced_sack_of_gems_price=None,
-                                                      minimum_allowed_sack_of_gems_price=None,
-                                                      quick_check_with_tracked_booster_packs=False,
-                                                      check_ask_price=check_ask_price,
-                                                      from_javascript=True)
+        filtered_badge_data = get_filtered_badge_data(
+            retrieve_listings_from_scratch=False,
+            enforced_sack_of_gems_price=None,
+            minimum_allowed_sack_of_gems_price=None,
+            quick_check_with_tracked_booster_packs=False,
+            check_ask_price=check_ask_price,
+            from_javascript=True,
+        )
 
     # Only keep appIDs found in badge data, so that we have access to fields like the name, the hash, and the gem price.
-    app_ids = [app_id for app_id in manually_selected_app_ids
-               if app_id in filtered_badge_data]
+    app_ids = [
+        app_id for app_id in manually_selected_app_ids
+        if app_id in filtered_badge_data
+    ]
 
-    app_ids = sorted(app_ids,
-                     key=lambda x: filtered_badge_data[x]['name'])
+    app_ids = sorted(
+        app_ids,
+        key=lambda x: filtered_badge_data[x]['name'],
+    )
 
     return app_ids, filtered_badge_data
 
 
-def create_packs_for_app_ids(manually_selected_app_ids: list[int],
-                             filtered_badge_data: dict = None,
-                             check_ask_price: bool = False,
-                             is_a_simulation: bool = True,
-                             # Caveat: if False, then packs will be crafted, which costs money!
-                             is_marketable: bool = True,
-                             # Caveat: if False, packs will be crafted with un-marketable gems!
-                             verbose: bool = True) -> tuple[dict[str, dict | None], dict[int, str]]:
-    app_ids, filtered_badge_data = filter_app_ids_based_on_badge_data(manually_selected_app_ids,
-                                                                      check_ask_price=check_ask_price,
-                                                                      filtered_badge_data=filtered_badge_data)
+def create_packs_for_app_ids(
+    manually_selected_app_ids: list[int],
+    filtered_badge_data: dict = None,
+    check_ask_price: bool = False,
+    is_a_simulation: bool = True,
+    # Caveat: if False, then packs will be crafted, which costs money!
+    is_marketable: bool = True,
+    # Caveat: if False, packs will be crafted with un-marketable gems!
+    verbose: bool = True,
+) -> tuple[dict[str, dict | None], dict[int, str]]:
+    app_ids, filtered_badge_data = filter_app_ids_based_on_badge_data(
+        manually_selected_app_ids,
+        check_ask_price=check_ask_price,
+        filtered_badge_data=filtered_badge_data,
+    )
 
     creation_results = dict()
 
@@ -55,16 +67,20 @@ def create_packs_for_app_ids(manually_selected_app_ids: list[int],
         if is_a_simulation:
             result = None
         else:
-            result = create_booster_pack(app_id=app_id,
-                                         is_marketable=is_marketable)
+            result = create_booster_pack(
+                app_id=app_id,
+                is_marketable=is_marketable,
+            )
 
         listing_hash = filtered_badge_data[app_id]['listing_hash']
         creation_results[listing_hash] = result
 
         if verbose:
-            print('{}\t{:.3f}€'.format(
-                filtered_badge_data[app_id]['name'],
-                filtered_badge_data[app_id]['gem_price'])
+            print(
+                '{}\t{:.3f}€'.format(
+                    filtered_badge_data[app_id]['name'],
+                    filtered_badge_data[app_id]['gem_price'],
+                ),
             )
 
     next_creation_times = update_and_save_next_creation_times(creation_results)
@@ -86,7 +102,7 @@ def create_packs_for_app_ids(manually_selected_app_ids: list[int],
 
         try:
             soonest_creation_time = min(
-                next_creation_times_for_manually_selected_app_ids
+                next_creation_times_for_manually_selected_app_ids,
             )
         except ValueError:
             soonest_creation_time = None
@@ -96,10 +112,12 @@ def create_packs_for_app_ids(manually_selected_app_ids: list[int],
     return creation_results, next_creation_times
 
 
-def main(retrieve_listings_from_scratch: bool = False,
-         # Set to True & run once if you get "No match found for" games you own.
-         is_a_simulation: bool = True,  # Caveat: if False, then packs will be crafted, which costs money!
-         is_marketable: bool = True) -> bool:  # Caveat: if False, packs will be crafted with unmarketable gems!
+def main(
+    retrieve_listings_from_scratch: bool = False,
+    # Set to True & run once if you get "No match found for" games you own.
+    is_a_simulation: bool = True,  # Caveat: if False, then packs will be crafted, which costs money!
+    is_marketable: bool = True,  # Caveat: if False, packs will be crafted with unmarketable gems!
+) -> bool:
     enforced_sack_of_gems_price = None
     minimum_allowed_sack_of_gems_price = None
     quick_check_with_tracked_booster_packs = False
@@ -115,23 +133,29 @@ def main(retrieve_listings_from_scratch: bool = False,
 
     manually_selected_app_ids = get_manually_selected_app_ids()
 
-    filtered_badge_data = get_filtered_badge_data(retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-                                                  enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                                                  minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                                                  quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
-                                                  check_ask_price=check_ask_price,
-                                                  from_javascript=from_javascript)
+    filtered_badge_data = get_filtered_badge_data(
+        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
+        check_ask_price=check_ask_price,
+        from_javascript=from_javascript,
+    )
 
-    creation_results, next_creation_times = create_packs_for_app_ids(manually_selected_app_ids,
-                                                                     filtered_badge_data=filtered_badge_data,
-                                                                     check_ask_price=check_ask_price,
-                                                                     is_a_simulation=is_a_simulation,
-                                                                     is_marketable=is_marketable)
+    creation_results, next_creation_times = create_packs_for_app_ids(
+        manually_selected_app_ids,
+        filtered_badge_data=filtered_badge_data,
+        check_ask_price=check_ask_price,
+        is_a_simulation=is_a_simulation,
+        is_marketable=is_marketable,
+    )
 
     return True
 
 
 if __name__ == '__main__':
-    main(retrieve_listings_from_scratch=False,
-         is_a_simulation=False,
-         is_marketable=True)
+    main(
+        retrieve_listings_from_scratch=False,
+        is_a_simulation=False,
+        is_marketable=True,
+    )
