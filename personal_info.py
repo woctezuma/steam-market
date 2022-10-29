@@ -78,7 +78,7 @@ def update_and_save_cookie_to_disk_if_values_changed(cookie: dict[str, str],
     relevant_fields = relevant_fields.intersection(cookie.keys())
     relevant_fields = relevant_fields.intersection(dict_with_new_values.keys())
 
-    is_cookie_to_be_updated = any([dict_with_new_values[field] != cookie[field] for field in relevant_fields])
+    is_cookie_to_be_updated = any(dict_with_new_values[field] != cookie[field] for field in relevant_fields)
 
     if is_cookie_to_be_updated:
         cookie = update_cookie_dict(original_cookie=cookie,
