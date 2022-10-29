@@ -397,7 +397,7 @@ def main(look_for_profile_backgrounds: bool = True,  # if True, profile backgrou
 
     # Pre-retrieval of item name ids
 
-    selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
+    selected_listing_hashes = [badge['listing_hash'] for badge in filtered_badge_data.values()]
 
     item_nameids = get_item_nameid_batch(selected_listing_hashes,
                                          listing_details_output_file_name=listing_details_output_file_name)

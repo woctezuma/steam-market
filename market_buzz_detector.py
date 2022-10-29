@@ -238,8 +238,7 @@ def main(retrieve_listings_from_scratch: bool = False,
     else:
         filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
-        filtered_listing_hashes = [filtered_badge_data[app_id]['listing_hash']
-                                   for app_id in filtered_badge_data]
+        filtered_listing_hashes = [badge['listing_hash'] for badge in filtered_badge_data.values()]
 
     # Pre-retrieval of item name ids
 
