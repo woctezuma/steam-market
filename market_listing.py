@@ -137,7 +137,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             context_id = context_ids[0]
 
             ids = list(assets[app_id][context_id].keys())
-            id = ids[0]
+            asset_id = ids[0]
 
             # There should only be one appID and one contextID.
             if len(app_ids) > 1 or len(context_ids) > 1:
@@ -146,9 +146,9 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             # There should only be one assetID. However, we can try to run the rest of the code even if there are several.
             if len(ids) > 1:
                 asset_dict = assets[app_id][context_id]
-                id = figure_out_relevant_id(asset_dict, ids, owner_action_name_of_interest)
+                asset_id = figure_out_relevant_id(asset_dict, ids, owner_action_name_of_interest)
 
-            owner_actions = assets[app_id][context_id][id]['owner_actions']
+            owner_actions = assets[app_id][context_id][asset_id]['owner_actions']
 
             # The owner actions should be like:
             #     "owner_actions": [
