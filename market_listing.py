@@ -252,7 +252,7 @@ def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
 
 
 def get_listing_details(listing_hash: str = None, cookie: dict[str, str] = None, render_as_json: bool = False) -> tuple[
-    dict[str, dict], int]:
+        dict[str, dict], int]:
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
@@ -432,7 +432,7 @@ def get_item_nameid(listing_hash: str,
     return item_nameid
 
 
-def get_item_nameid_batch(listing_hashes: [ dict[str,dict] | list[str] ],
+def get_item_nameid_batch(listing_hashes: [dict[str, dict] | list[str]],
                           listing_details_output_file_name: str = None,
                           listing_hashes_to_forcefully_process: list[str] = None) -> dict[str, dict]:
     if listing_hashes_to_forcefully_process is None:

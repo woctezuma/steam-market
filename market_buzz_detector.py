@@ -36,8 +36,8 @@ def filter_listings(all_listings: dict[str, dict] = None,
 
     # *Heuristic* filtering of listing hashes
 
-    filtered_listing_hashes = list(filter(lambda x: all_listings[x]['sell_price'] >= min_sell_price and
-                                                    all_listings[x]['sell_listings'] >= min_num_listings,
+    filtered_listing_hashes = list(filter(lambda x: all_listings[x]['sell_price'] >= min_sell_price
+                                          and all_listings[x]['sell_listings'] >= min_num_listings,
                                           sorted_listing_hashes))
 
     if verbose:
@@ -158,7 +158,7 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings: dict[str
                                                           force_update_from_steam_card_exchange: bool = False,
                                                           enforced_sack_of_gems_price: float = None,
                                                           minimum_allowed_sack_of_gems_price: float = None) -> dict[
-    str, dict]:
+        str, dict]:
     if aggregated_badge_data is None:
         aggregated_badge_data = convert_to_badges(all_listings)
 

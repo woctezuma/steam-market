@@ -44,7 +44,7 @@ def get_steam_inventory_file_name(profile_id: str) -> str:
     return steam_inventory_file_name
 
 
-def load_steam_inventory_from_disk(profile_id: str = None) -> [dict|None]:
+def load_steam_inventory_from_disk(profile_id: str = None) -> [dict | None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -57,7 +57,7 @@ def load_steam_inventory_from_disk(profile_id: str = None) -> [dict|None]:
     return steam_inventory
 
 
-def load_steam_inventory(profile_id: str = None, update_steam_inventory: bool = False) -> [dict|None]:
+def load_steam_inventory(profile_id: str = None, update_steam_inventory: bool = False) -> [dict | None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -365,7 +365,7 @@ def sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict[str, float]
 def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict,
                                              update_steam_inventory: bool = True,
                                              focus_on_marketable_items: bool = True) -> tuple[
-    dict[str, dict | None], dict[str, dict | None]]:
+        dict[str, dict | None], dict[str, dict | None]]:
     listing_hashes = list(price_dict_for_listing_hashes.keys())
 
     creation_results = create_booster_packs_for_batch(listing_hashes)
