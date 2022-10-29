@@ -238,7 +238,7 @@ def get_market_orders(filtered_badge_data: dict[str, dict],
     # and finally return the trimmed dictionary as the output of the current function call:
     #       `get_market_orders(filtered_badge_data, ...)`
 
-    available_listing_hashes = [listing_hash for listing_hash in market_order_dict]
+    available_listing_hashes = list(market_order_dict.keys())
 
     selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
 
