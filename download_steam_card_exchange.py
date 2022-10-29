@@ -78,7 +78,7 @@ def load_data_from_steam_card_exchange(steam_card_exchange_file_name: str = None
 
     try:
         print('Loading data from disk.')
-        with open(steam_card_exchange_file_name, 'r', encoding='utf-8') as f:
+        with open(steam_card_exchange_file_name, encoding='utf-8') as f:
             response = json.load(f)
     except FileNotFoundError:
         print('Data could not be found on the disk.')

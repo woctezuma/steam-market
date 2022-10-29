@@ -109,7 +109,7 @@ def load_free_apps_with_trading_cards(free_apps: set[int] = None, list_of_method
 
 
 def load_file(file_name: str, verbose: bool = True) -> list[int]:
-    with open(file_name, 'r', encoding='utf-8') as f:
+    with open(file_name, encoding='utf-8') as f:
         data = [int(line.strip()) for line in f.readlines()]
 
     if verbose:

@@ -351,7 +351,7 @@ def update_all_listing_details(listing_hashes: list[str] = None,
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
+        with open(listing_details_output_file_name, encoding='utf-8') as f:
             all_listing_details = json.load(f)
             print(f'Loading {len(all_listing_details)} listing details from disk.')
     except FileNotFoundError:
@@ -374,7 +374,7 @@ def load_all_listing_details(listing_details_output_file_name: str = None) -> di
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
-    with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
+    with open(listing_details_output_file_name, encoding='utf-8') as f:
         all_listing_details = json.load(f)
 
     return all_listing_details
@@ -414,7 +414,7 @@ def get_item_nameid(listing_hash: str,
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
+        with open(listing_details_output_file_name, encoding='utf-8') as f:
             listing_details = json.load(f)
 
         item_nameid = listing_details[listing_hash]['item_nameid']
@@ -436,7 +436,7 @@ def get_item_nameid_batch(listing_hashes: [ dict[str,dict] | list[str] ],
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
+        with open(listing_details_output_file_name, encoding='utf-8') as f:
             listing_details = json.load(f)
 
         item_nameids = dict()

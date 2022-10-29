@@ -268,7 +268,7 @@ def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
         listing_output_file_name = get_listing_output_file_name()
 
     try:
-        with open(listing_output_file_name, 'r', encoding='utf-8') as f:
+        with open(listing_output_file_name, encoding='utf-8') as f:
             all_listings = json.load(f)
     except FileNotFoundError:
         print(f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.')

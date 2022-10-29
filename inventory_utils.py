@@ -39,7 +39,7 @@ def load_steam_inventory_from_disk(profile_id: str = None) -> [dict|None]:
         profile_id = get_my_steam_profile_id()
 
     try:
-        with open(get_steam_inventory_file_name(profile_id), 'r', encoding='utf-8') as f:
+        with open(get_steam_inventory_file_name(profile_id), encoding='utf-8') as f:
             steam_inventory = json.load(f)
     except FileNotFoundError:
         steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
