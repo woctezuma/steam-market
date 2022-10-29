@@ -70,8 +70,7 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch: bool = False,
             sack_of_gems_price = download_sack_of_gems_price(sack_of_gems_listing_file_name)
 
     if verbose:
-        print('A sack of {} gems can be bought for {:.2f} €.'.format(get_num_gems_per_sack_of_gems(),
-                                                                     sack_of_gems_price))
+        print(f'A sack of {get_num_gems_per_sack_of_gems()} gems can be bought for {sack_of_gems_price:.2f} €.')
 
     return sack_of_gems_price
 

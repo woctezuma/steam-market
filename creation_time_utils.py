@@ -94,10 +94,7 @@ def prepend_year_to_time_as_str(formatted_time_as_str: str,
         current_time = get_current_time()
         year_to_prepend = current_time.year
 
-    formatted_time_as_str_with_year = '{} {}'.format(
-        year_to_prepend,
-        formatted_time_as_str
-    )
+    formatted_time_as_str_with_year = f'{year_to_prepend} {formatted_time_as_str}'
 
     return formatted_time_as_str_with_year
 

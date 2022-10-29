@@ -71,10 +71,7 @@ def create_packs_for_app_ids(manually_selected_app_ids: list[int],
 
     if verbose:
         ignored_app_ids = set(manually_selected_app_ids).difference(app_ids)
-        print('There are {} ignored appIDs: {}'.format(
-            len(ignored_app_ids),
-            ignored_app_ids)
-        )
+        print(f'There are {len(ignored_app_ids)} ignored appIDs: {ignored_app_ids}')
 
         # Below, the parameter 'use_current_year' is toggled ON, because the year information is necessary to deal with
         # February 29th during leap years.
@@ -94,9 +91,7 @@ def create_packs_for_app_ids(manually_selected_app_ids: list[int],
         except ValueError:
             soonest_creation_time = None
 
-        print('The soonest creation time is {}.'.format(
-            get_formatted_time(soonest_creation_time)
-        ))
+        print(f'The soonest creation time is {get_formatted_time(soonest_creation_time)}.')
 
     return creation_results, next_creation_times
 

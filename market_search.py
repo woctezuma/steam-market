@@ -206,10 +206,7 @@ def get_all_listings(all_listings: dict[str, dict] = None,
                 listings[listing_hash]['sell_price_text'] = listing['sell_price_text']
 
         else:
-            print('Wrong status code ({}) for start_index = {} after {} queries.'.format(status_code,
-                                                                                         start_index,
-                                                                                         query_count,
-                                                                                         ))
+            print(f'Wrong status code ({status_code}) for start_index = {start_index} after {query_count} queries.')
             if status_code is None:
                 continue
             else:

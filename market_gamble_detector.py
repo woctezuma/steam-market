@@ -72,10 +72,7 @@ def update_all_listings_for_foil_cards() -> None:
 
 def update_all_listings_for_profile_backgrounds(tag_drop_rate_str: str = None,
                                                 rarity: str = None) -> None:
-    print('Downloading listings for profile backgrounds (rarity_tag={} ; rarity={}).'.format(
-        tag_drop_rate_str,
-        rarity,
-    ))
+    print(f'Downloading listings for profile backgrounds (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).')
 
     update_all_listings(
         listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
@@ -91,10 +88,7 @@ def update_all_listings_for_profile_backgrounds(tag_drop_rate_str: str = None,
 
 def update_all_listings_for_emoticons(tag_drop_rate_str: str = None,
                                       rarity: str = None) -> None:
-    print('Downloading listings for emoticons (rarity_tag={} ; rarity={}).'.format(
-        tag_drop_rate_str,
-        rarity,
-    ))
+    print(f'Downloading listings for emoticons (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).')
 
     update_all_listings(
         listing_output_file_name=get_listing_output_file_name_for_emoticons(tag_drop_rate_str=tag_drop_rate_str,

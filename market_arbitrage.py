@@ -128,9 +128,7 @@ def filter_out_badges_with_low_sell_price(aggregated_badge_data: dict[int | str,
     if user_chosen_price_threshold is None:
         threshold_name = 'gem price'
     else:
-        threshold_name = 'user-chosen price threshold {:.2f} €'.format(
-            user_chosen_price_threshold / 100
-        )
+        threshold_name = f'user-chosen price threshold {user_chosen_price_threshold / 100:.2f} €'
 
     filtered_badge_data = dict()
 

@@ -221,10 +221,7 @@ def get_bullet_point_for_display(use_numbered_bullet_points: bool = False) -> st
 
     three_spaces_indentation = '   '
 
-    bullet_point = '{}{}'.format(
-        bullet_point_character,
-        three_spaces_indentation,
-    )
+    bullet_point = f'{bullet_point_character}{three_spaces_indentation}'
 
     return bullet_point
 

@@ -66,9 +66,7 @@ def get_item_type_no_for_trading_cards(listing_hash: str = None,
         item_type_no = 2
 
         if verbose:
-            print('Assuming item type is equal to {}, which might be wrong.'.format(
-                item_type_no,
-            ))
+            print(f'Assuming item type is equal to {item_type_no}, which might be wrong.')
 
     else:
         if listing_details_output_file_name is None:
@@ -100,10 +98,7 @@ def get_item_type_no_for_trading_cards(listing_hash: str = None,
         item_type_no = listing_details['item_type_no']
 
         if verbose:
-            print('Retrieving item type {} for {}.'.format(
-                item_type_no,
-                listing_hash,
-            ))
+            print(f'Retrieving item type {item_type_no} for {listing_hash}.')
 
     return item_type_no
 
@@ -168,10 +163,7 @@ def query_goo_value(app_id: int,
 
         if verbose:
             if goo_value > 0:
-                print('AppID: {} ; Item type: {} ; Goo value: {} gems'.format(app_id,
-                                                                              item_type,
-                                                                              goo_value))
-
+                print(f'AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems')
     else:
         goo_value = None
 
@@ -635,9 +627,7 @@ def discard_necessarily_unrewarding_app_ids(all_goo_details: dict[int, int],
     potentially_rewarding_app_ids = sorted(potentially_rewarding_app_ids)
 
     if verbose:
-        print('There are {} potentially rewarding appIDs.'.format(
-            len(potentially_rewarding_app_ids),
-        ))
+        print(f'There are {len(potentially_rewarding_app_ids)} potentially rewarding appIDs.')
 
     return potentially_rewarding_app_ids
 
@@ -742,10 +732,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(eligible_listing_h
         if ask_in_cents == 0:
             # NB: The ask cannot be equal to zero. So, we skip the listing because of there must be a bug.
             if verbose:
-                print('[!]\tImpossible ask price ({:.2f}€) for {}'.format(
-                    ask_in_cents / 100,
-                    listing_hash,
-                ))
+                print(f'[!]\tImpossible ask price ({ask_in_cents / 100:.2f}€) for {listing_hash}')
             continue
 
         profit_in_cents = goo_value_in_cents - ask_in_cents
@@ -781,10 +768,7 @@ def print_arbitrages_for_foil_cards(arbitrages: dict[str, dict[str, float]],
                                                                             replace_spaces=True,
                                                                             replace_parenthesis=True)
 
-        listing_hash_formatted_for_markdown = '[{}]({})'.format(
-            listing_hash,
-            markdown_compatible_steam_market_url,
-        )
+        listing_hash_formatted_for_markdown = f'[{listing_hash}]({markdown_compatible_steam_market_url})'
 
         equivalent_price_for_sack_of_gems = arbitrage['ask'] / arbitrage['goo_amount'] * get_num_gems_per_sack_of_gems()
 
