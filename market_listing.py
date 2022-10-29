@@ -274,13 +274,13 @@ def get_listing_details(listing_hash: str = None, cookie: dict[str, str] = None,
         item_nameid, is_marketable, item_type_no = parse_item_name_id(html_doc)
 
         if item_nameid is None:
-            print('Item name ID not found for {}'.format(listing_hash))
+            print(f'Item name ID not found for {listing_hash}')
 
         if is_marketable is None:
-            print('Marketable status not found for {}'.format(listing_hash))
+            print(f'Marketable status not found for {listing_hash}')
 
         if item_type_no is None:
-            print('Item type not found for {}'.format(listing_hash))
+            print(f'Item type not found for {listing_hash}')
 
         listing_details[listing_hash] = dict()
         listing_details[listing_hash]['item_nameid'] = item_nameid
@@ -312,7 +312,7 @@ def get_listing_details_batch(listing_hashes: list[str],
     for count, listing_hash in enumerate(listing_hashes):
 
         if count + 1 % 100 == 0:
-            print('[{}/{}]'.format(count + 1, num_listings))
+            print(f'[{count + 1}/{num_listings}]')
 
         listing_details, status_code = get_listing_details(listing_hash=listing_hash,
                                                            cookie=cookie)
@@ -320,7 +320,7 @@ def get_listing_details_batch(listing_hashes: list[str],
         query_count += 1
 
         if status_code != 200:
-            print('Wrong status code ({}) for {} after {} queries.'.format(status_code, listing_hash, query_count))
+            print(f'Wrong status code ({status_code}) for {listing_hash} after {query_count} queries.')
             break
 
         if query_count >= rate_limits['max_num_queries']:
@@ -329,7 +329,7 @@ def get_listing_details_batch(listing_hashes: list[str],
                     json.dump(all_listing_details, f)
 
             cooldown_duration = rate_limits['cooldown']
-            print('Number of queries {} reached. Cooldown: {} seconds'.format(query_count, cooldown_duration))
+            print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
             time.sleep(cooldown_duration)
             query_count = 0
 
@@ -353,7 +353,7 @@ def update_all_listing_details(listing_hashes: list[str] = None,
     try:
         with open(listing_details_output_file_name, 'r', encoding='utf-8') as f:
             all_listing_details = json.load(f)
-            print('Loading {} listing details from disk.'.format(len(all_listing_details)))
+            print(f'Loading {len(all_listing_details)} listing details from disk.')
     except FileNotFoundError:
         print('Downloading listing details from scratch.')
         all_listing_details = None

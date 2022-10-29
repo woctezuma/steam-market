@@ -78,7 +78,7 @@ def download_market_order_data(listing_hash: str,
             status_code = None
 
     else:
-        print('No query to download market orders for {}, because item name ID is unknown.'.format(listing_hash))
+        print(f'No query to download market orders for {listing_hash}, because item name ID is unknown.')
 
         resp_data = None
         status_code = -1
@@ -184,7 +184,7 @@ def download_market_order_data_batch(badge_data: dict[int | str, dict],
                     json.dump(market_order_dict, f)
 
             cooldown_duration = rate_limits['cooldown']
-            print('Number of queries {} reached. Cooldown: {} seconds'.format(query_count, cooldown_duration))
+            print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
             time.sleep(cooldown_duration)
             query_count = 0
 
@@ -231,7 +231,7 @@ def trim_market_order_data(badge_data: dict[int | str, dict],
         try:
             market_data = market_order_dict[listing_hash]
         except KeyError:
-            print('[{}] Market order data is not available offline. Allow downloading it!'.format(listing_hash))
+            print(f'[{listing_hash}] Market order data is not available offline. Allow downloading it!')
             app_ids_with_missing_data.append(app_id)
             continue
 

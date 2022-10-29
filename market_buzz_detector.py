@@ -34,7 +34,7 @@ def filter_listings(all_listings: dict[str, dict] = None,
                                           sorted_listing_hashes))
 
     if verbose:
-        print('{} hashes found.\n'.format(len(filtered_listing_hashes)))
+        print(f'{len(filtered_listing_hashes)} hashes found.\n')
 
     return filtered_listing_hashes
 
@@ -64,7 +64,7 @@ def filter_out_unmarketable_packs(market_order_dict: dict[str, dict]) -> tuple[d
         try:
             is_marketable = market_order_dict[listing_hash]['is_marketable']
         except KeyError:
-            print('Marketable status not found for {}'.format(listing_hash))
+            print(f'Marketable status not found for {listing_hash}')
             unknown_market_order_dict[listing_hash] = market_order_dict[listing_hash]
 
             is_marketable = False  # avoid taking any risk: ASSUME the booster pack is NOT marketable
@@ -95,7 +95,7 @@ def print_packs_with_high_buzz(hashes_for_best_bid: list[str],
     if category_name is None:
         category_name = get_category_name_for_booster_packs()
 
-    print('# {} with high buy orders\n'.format(category_name.capitalize()))
+    print(f'# {category_name.capitalize()} with high buy orders\n')
 
     for i, listing_hash in enumerate(hashes_for_best_bid):
 
@@ -173,7 +173,7 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(all_listings: dict[str
         try:
             data_from_steam_card_exchange = dico[app_id]
         except KeyError:
-            print('No data found for appID={}.'.format(app_id))
+            print(f'No data found for appID={app_id}.')
             data_from_steam_card_exchange = {
                 'name': None,
                 'gem_amount': 1200,  # by default, use the highest possible value

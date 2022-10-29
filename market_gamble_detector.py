@@ -100,7 +100,7 @@ def update_all_listings_for_items_other_than_cards(tag_drop_rate_str: str = None
     rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
     cooldown_duration = rate_limits['cooldown']
-    print('Forced cooldown between profile backgrounds and emoticons. Cooldown: {} seconds'.format(cooldown_duration))
+    print(f'Forced cooldown between profile backgrounds and emoticons. Cooldown: {cooldown_duration} seconds')
     time.sleep(cooldown_duration)
 
     # Emoticons

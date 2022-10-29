@@ -223,7 +223,7 @@ def find_badge_arbitrages(badge_data: dict,
             badge_arbitrages[listing_hash]['profit'] = delta
 
             if verbose:
-                print('{:.2f}€\t{}'.format(delta, listing_hash))
+                print(f'{delta:.2f}€\t{listing_hash}')
 
     return badge_arbitrages
 
@@ -261,7 +261,7 @@ def print_arbitrages(badge_arbitrages: dict[str, dict],
         if gem_amount is None:
             gem_amount_as_str = gem_amount
         else:
-            gem_amount_as_str = '{:.0f}'.format(gem_amount)
+            gem_amount_as_str = f'{gem_amount:.0f}'
 
         print(
             '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
