@@ -287,7 +287,7 @@ def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[int, 
 
 def get_listings_with_other_rarity_tags(look_for_profile_backgrounds: bool,
                                         retrieve_listings_with_another_rarity_tag_from_scratch: bool = False) -> tuple[
-    dict[str, dict], dict[str, dict]]:
+        dict[str, dict], dict[str, dict]]:
     if retrieve_listings_with_another_rarity_tag_from_scratch:
         other_rarity_fields = set(get_rarity_fields()).difference({'common'})
         for rarity_tag in other_rarity_fields:

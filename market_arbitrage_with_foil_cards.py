@@ -987,7 +987,7 @@ def download_goo_value_for_app_id(app_id: int,
 
 def build_dictionary_of_representative_listing_hashes(all_listing_details: dict[str, dict] = None,
                                                       listing_details_output_file_name: str = None) -> dict[
-    int, list[str]]:
+        int, list[str]]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
 
