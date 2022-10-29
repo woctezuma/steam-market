@@ -14,7 +14,7 @@ def load_steam_cookie_from_disk(file_name_with_personal_info: str = None) -> dic
         file_name_with_personal_info = get_steam_cookie_file_name()
 
     try:
-        with open(file_name_with_personal_info, 'r', encoding='utf-8') as f:
+        with open(file_name_with_personal_info, encoding='utf-8') as f:
             cookie = json.load(f)
     except FileNotFoundError:
         cookie = dict()

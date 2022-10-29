@@ -305,7 +305,7 @@ def load_all_goo_details(goo_details_file_name: str = None,
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
 
     try:
-        with open(goo_details_file_name, 'r', encoding='utf-8') as f:
+        with open(goo_details_file_name, encoding='utf-8') as f:
             all_goo_details = json.load(f)
     except FileNotFoundError:
         all_goo_details = dict()

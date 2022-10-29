@@ -248,7 +248,7 @@ def load_market_order_data_from_disk(market_order_output_file_name: str = None) 
         market_order_output_file_name = get_market_order_file_name()
 
     try:
-        with open(market_order_output_file_name, 'r', encoding='utf-8') as f:
+        with open(market_order_output_file_name, encoding='utf-8') as f:
             market_order_dict = json.load(f)
     except FileNotFoundError:
         market_order_dict = None
