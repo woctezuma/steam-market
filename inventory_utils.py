@@ -79,8 +79,10 @@ def download_steam_inventory(profile_id: str = None, save_to_disk: bool = True) 
     url = get_steam_inventory_url(profile_id=profile_id)
 
     if has_secured_cookie:
-        resp_data = requests.get(url,
-                                 cookies=cookie)
+        resp_data = requests.get(
+            url,
+            cookies=cookie,
+        )
     else:
         resp_data = requests.get(url)
 
@@ -118,9 +120,11 @@ def get_steam_booster_pack_creation_url() -> str:
     return booster_pack_creation_url
 
 
-def get_booster_pack_creation_parameters(app_id: int,
-                                         session_id: str,
-                                         is_marketable: bool = True) -> dict[str, str]:
+def get_booster_pack_creation_parameters(
+    app_id: int,
+    session_id: str,
+    is_marketable: bool = True,
+) -> dict[str, str]:
     booster_pack_creation_parameters = dict()
 
     if is_marketable:
@@ -136,9 +140,11 @@ def get_booster_pack_creation_parameters(app_id: int,
     return booster_pack_creation_parameters
 
 
-def create_booster_pack(app_id: int,
-                        is_marketable: bool = True,
-                        verbose: bool = True) -> [dict | None]:
+def create_booster_pack(
+    app_id: int,
+    is_marketable: bool = True,
+    verbose: bool = True,
+) -> [dict | None]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -148,13 +154,17 @@ def create_booster_pack(app_id: int,
     session_id = get_session_id(cookie=cookie)
 
     url = get_steam_booster_pack_creation_url()
-    req_data = get_booster_pack_creation_parameters(app_id=app_id,
-                                                    session_id=session_id,
-                                                    is_marketable=is_marketable)
+    req_data = get_booster_pack_creation_parameters(
+        app_id=app_id,
+        session_id=session_id,
+        is_marketable=is_marketable,
+    )
 
-    resp_data = requests.post(url,
-                              data=req_data,
-                              cookies=cookie)
+    resp_data = requests.post(
+        url,
+        data=req_data,
+        cookies=cookie,
+    )
 
     status_code = resp_data.status_code
 
@@ -171,7 +181,8 @@ def create_booster_pack(app_id: int,
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         if status_code == 500:
             print(
-                f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.')
+                f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.',
+            )
         else:
             print(f'\n[appID = {app_id}] Booster pack not created, because of status code {status_code}.')
         result = None
@@ -188,9 +199,11 @@ def get_steam_market_sell_url() -> str:
     return steam_market_sell_url
 
 
-def get_market_sell_parameters(asset_id: str,
-                               price_in_cents: float,  # this is the money which you, as the seller, will receive
-                               session_id: str) -> dict[str, str]:
+def get_market_sell_parameters(
+    asset_id: str,
+    price_in_cents: float,  # this is the money which you, as the seller, will receive
+    session_id: str,
+) -> dict[str, str]:
     market_sell_parameters = dict()
 
     market_sell_parameters['sessionid'] = str(session_id)
@@ -212,15 +225,17 @@ def get_request_headers() -> dict[str, str]:
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'Referer': 'https://steamcommunity.com/my/inventory/',
         'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3'
+        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
     }
 
     return request_headers
 
 
-def sell_booster_pack(asset_id: str,
-                      price_in_cents: float,  # this is the money which you, as the seller, will receive
-                      verbose: bool = True) -> [dict | None]:
+def sell_booster_pack(
+    asset_id: str,
+    price_in_cents: float,  # this is the money which you, as the seller, will receive
+    verbose: bool = True,
+) -> [dict | None]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -234,14 +249,18 @@ def sell_booster_pack(asset_id: str,
     price_in_cents = round(price_in_cents)
 
     url = get_steam_market_sell_url()
-    req_data = get_market_sell_parameters(asset_id=asset_id,
-                                          price_in_cents=price_in_cents,
-                                          session_id=session_id)
+    req_data = get_market_sell_parameters(
+        asset_id=asset_id,
+        price_in_cents=price_in_cents,
+        session_id=session_id,
+    )
 
-    resp_data = requests.post(url,
-                              headers=get_request_headers(),
-                              data=req_data,
-                              cookies=cookie)
+    resp_data = requests.post(
+        url,
+        headers=get_request_headers(),
+        data=req_data,
+        cookies=cookie,
+    )
 
     status_code = resp_data.status_code
 
@@ -268,10 +287,12 @@ def sell_booster_pack(asset_id: str,
     return result
 
 
-def retrieve_asset_id(listing_hash: str,
-                      steam_inventory: dict = None,
-                      focus_on_marketable_items: bool = True,
-                      verbose: bool = True) -> str:
+def retrieve_asset_id(
+    listing_hash: str,
+    steam_inventory: dict = None,
+    focus_on_marketable_items: bool = True,
+    verbose: bool = True,
+) -> str:
     if steam_inventory is None:
         steam_inventory = load_steam_inventory()
 
@@ -337,18 +358,22 @@ def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict 
     return results
 
 
-def sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict[str, float],
-                                 update_steam_inventory: bool = True,
-                                 focus_on_marketable_items: bool = True) -> dict[str, dict | None]:
+def sell_booster_packs_for_batch(
+    price_dict_for_listing_hashes: dict[str, float],
+    update_steam_inventory: bool = True,
+    focus_on_marketable_items: bool = True,
+) -> dict[str, dict | None]:
     results = dict()
 
     steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
 
     for (listing_hash, price_in_cents) in price_dict_for_listing_hashes.items():
 
-        asset_id = retrieve_asset_id(listing_hash=listing_hash,
-                                     steam_inventory=steam_inventory,
-                                     focus_on_marketable_items=focus_on_marketable_items)
+        asset_id = retrieve_asset_id(
+            listing_hash=listing_hash,
+            steam_inventory=steam_inventory,
+            focus_on_marketable_items=focus_on_marketable_items,
+        )
 
         if asset_id is not None:
             result = sell_booster_pack(asset_id=asset_id, price_in_cents=price_in_cents)
@@ -358,26 +383,33 @@ def sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict[str, float]
     return results
 
 
-def create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes: dict,
-                                             update_steam_inventory: bool = True,
-                                             focus_on_marketable_items: bool = True) -> tuple[
-        dict[str, dict | None], dict[str, dict | None]]:
+def create_then_sell_booster_packs_for_batch(
+    price_dict_for_listing_hashes: dict,
+    update_steam_inventory: bool = True,
+    focus_on_marketable_items: bool = True,
+) -> tuple[
+        dict[str, dict | None], dict[str, dict | None],
+]:
     listing_hashes = list(price_dict_for_listing_hashes.keys())
 
     creation_results = create_booster_packs_for_batch(listing_hashes)
 
-    sale_results = sell_booster_packs_for_batch(price_dict_for_listing_hashes,
-                                                update_steam_inventory=update_steam_inventory,
-                                                focus_on_marketable_items=focus_on_marketable_items)
+    sale_results = sell_booster_packs_for_batch(
+        price_dict_for_listing_hashes,
+        update_steam_inventory=update_steam_inventory,
+        focus_on_marketable_items=focus_on_marketable_items,
+    )
 
     next_creation_times = update_and_save_next_creation_times(creation_results)
 
     return creation_results, sale_results
 
 
-def update_and_save_next_creation_times(creation_results: dict[str, dict | None],
-                                        verbose: bool = True,
-                                        next_creation_time_file_name: str = None) -> dict[int, str]:
+def update_and_save_next_creation_times(
+    creation_results: dict[str, dict | None],
+    verbose: bool = True,
+    next_creation_time_file_name: str = None,
+) -> dict[int, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 

@@ -34,8 +34,10 @@ def get_steam_card_exchange_file_name() -> str:
     return steam_card_exchange_file_name
 
 
-def get_listing_output_file_name_suffix(tag_drop_rate_str: str = None,
-                                        rarity: str = None) -> str:
+def get_listing_output_file_name_suffix(
+    tag_drop_rate_str: str = None,
+    rarity: str = None,
+) -> str:
     from market_search import get_tag_drop_rate_str
 
     if tag_drop_rate_str is None:
@@ -49,19 +51,27 @@ def get_listing_output_file_name_suffix(tag_drop_rate_str: str = None,
     return suffix
 
 
-def get_listing_output_file_name_for_profile_backgrounds(tag_drop_rate_str: str = None,
-                                                         rarity: str = None) -> str:
-    suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
-                                                 rarity=rarity)
+def get_listing_output_file_name_for_profile_backgrounds(
+    tag_drop_rate_str: str = None,
+    rarity: str = None,
+) -> str:
+    suffix = get_listing_output_file_name_suffix(
+        tag_drop_rate_str=tag_drop_rate_str,
+        rarity=rarity,
+    )
 
     listing_output_file_name = get_data_folder() + 'listings_for_profile_backgrounds' + suffix + '.json'
     return listing_output_file_name
 
 
-def get_listing_output_file_name_for_emoticons(tag_drop_rate_str: str = None,
-                                               rarity: str = None) -> str:
-    suffix = get_listing_output_file_name_suffix(tag_drop_rate_str=tag_drop_rate_str,
-                                                 rarity=rarity)
+def get_listing_output_file_name_for_emoticons(
+    tag_drop_rate_str: str = None,
+    rarity: str = None,
+) -> str:
+    suffix = get_listing_output_file_name_suffix(
+        tag_drop_rate_str=tag_drop_rate_str,
+        rarity=rarity,
+    )
 
     listing_output_file_name = get_data_folder() + 'listings_for_emoticons' + suffix + '.json'
     return listing_output_file_name
@@ -131,13 +141,15 @@ def get_next_creation_time_file_name() -> str:
 
 
 def main() -> bool:
-    for file_name in [get_badge_creation_file_name(from_javascript=False),
-                      get_badge_creation_file_name(from_javascript=True),
-                      get_listing_output_file_name(),
-                      get_sack_of_gems_listing_file_name(),
-                      get_market_order_file_name(),
-                      get_next_creation_time_file_name(),
-                      get_listing_details_output_file_name()]:
+    for file_name in [
+        get_badge_creation_file_name(from_javascript=False),
+        get_badge_creation_file_name(from_javascript=True),
+        get_listing_output_file_name(),
+        get_sack_of_gems_listing_file_name(),
+        get_market_order_file_name(),
+        get_next_creation_time_file_name(),
+        get_listing_details_output_file_name(),
+    ]:
         print(file_name)
 
     return True

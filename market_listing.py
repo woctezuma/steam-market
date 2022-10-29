@@ -17,11 +17,13 @@ from utils import (
 )
 
 
-def get_steam_market_listing_url(app_id: int = None,
-                                 listing_hash: str = None,
-                                 render_as_json: bool = True,
-                                 replace_spaces: bool = False,
-                                 replace_parenthesis: bool = False) -> str:
+def get_steam_market_listing_url(
+    app_id: int = None,
+    listing_hash: str = None,
+    render_as_json: bool = True,
+    replace_spaces: bool = False,
+    replace_parenthesis: bool = False,
+) -> str:
     if app_id is None:
         # AppID for the Steam Store. It is the same for all the booster packs.
         app_id = 753
@@ -78,8 +80,10 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie: bool = Fals
     return rate_limits
 
 
-def figure_out_relevant_id(asset_dict: dict[str, dict], asset_ids: list[str],
-                           owner_action_name_of_interest: str) -> int | None:
+def figure_out_relevant_id(
+    asset_dict: dict[str, dict], asset_ids: list[str],
+    owner_action_name_of_interest: str,
+) -> int | None:
     actions = set()
     last_relevant_asset_id = None
 
@@ -162,15 +166,17 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             #         }
             #     ]
 
-            actions_of_interest = [owner_action for owner_action in owner_actions
-                                   if owner_action['name'] == owner_action_name_of_interest
-                                   ]
+            actions_of_interest = [
+                owner_action for owner_action in owner_actions
+                if owner_action['name'] == owner_action_name_of_interest
+            ]
 
             links = [owner_action['link'] for owner_action in actions_of_interest]
 
-            javascript_links = [link for link in links
-                                if link.startswith('javascript:')
-                                ]
+            javascript_links = [
+                link for link in links
+                if link.startswith('javascript:')
+            ]
 
             # There should only be one javascript link.
             if len(javascript_links) > 1:
@@ -252,7 +258,8 @@ def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
 
 
 def get_listing_details(listing_hash: str = None, cookie: dict[str, str] = None, render_as_json: bool = False) -> tuple[
-        dict[str, dict], int]:
+        dict[str, dict], int,
+]:
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
@@ -296,10 +303,12 @@ def get_listing_details(listing_hash: str = None, cookie: dict[str, str] = None,
     return listing_details, status_code
 
 
-def get_listing_details_batch(listing_hashes: list[str],
-                              all_listing_details: dict[str, dict] = None,
-                              save_to_disk: bool = True,
-                              listing_details_output_file_name: str = None) -> dict[str, dict]:
+def get_listing_details_batch(
+    listing_hashes: list[str],
+    all_listing_details: dict[str, dict] = None,
+    save_to_disk: bool = True,
+    listing_details_output_file_name: str = None,
+) -> dict[str, dict]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -320,8 +329,10 @@ def get_listing_details_batch(listing_hashes: list[str],
         if count + 1 % 100 == 0:
             print(f'[{count + 1}/{num_listings}]')
 
-        listing_details, status_code = get_listing_details(listing_hash=listing_hash,
-                                                           cookie=cookie)
+        listing_details, status_code = get_listing_details(
+            listing_hash=listing_hash,
+            cookie=cookie,
+        )
 
         query_count += 1
 
@@ -348,8 +359,10 @@ def get_listing_details_batch(listing_hashes: list[str],
     return all_listing_details
 
 
-def update_all_listing_details(listing_hashes: list[str] = None,
-                               listing_details_output_file_name: str = None) -> dict[str, dict]:
+def update_all_listing_details(
+    listing_hashes: list[str] = None,
+    listing_details_output_file_name: str = None,
+) -> dict[str, dict]:
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
     # to restart the process without risking to lose anything, in case the process fails again.
 
@@ -368,10 +381,12 @@ def update_all_listing_details(listing_hashes: list[str] = None,
         all_listings = load_all_listings()
         listing_hashes = list(all_listings.keys())
 
-    all_listing_details = get_listing_details_batch(listing_hashes,
-                                                    all_listing_details,
-                                                    save_to_disk=True,
-                                                    listing_details_output_file_name=listing_details_output_file_name)
+    all_listing_details = get_listing_details_batch(
+        listing_hashes,
+        all_listing_details,
+        save_to_disk=True,
+        listing_details_output_file_name=listing_details_output_file_name,
+    )
 
     return all_listing_details
 
@@ -414,8 +429,10 @@ def main() -> bool:
     return True
 
 
-def get_item_nameid(listing_hash: str,
-                    listing_details_output_file_name: str = None) -> str:
+def get_item_nameid(
+    listing_hash: str,
+    listing_details_output_file_name: str = None,
+) -> str:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -425,16 +442,20 @@ def get_item_nameid(listing_hash: str,
 
         item_nameid = listing_details[listing_hash]['item_nameid']
     except (FileNotFoundError, KeyError):
-        listing_details = update_all_listing_details(listing_hashes=[listing_hash],
-                                                     listing_details_output_file_name=listing_details_output_file_name)
+        listing_details = update_all_listing_details(
+            listing_hashes=[listing_hash],
+            listing_details_output_file_name=listing_details_output_file_name,
+        )
         item_nameid = listing_details[listing_hash]['item_nameid']
 
     return item_nameid
 
 
-def get_item_nameid_batch(listing_hashes: [dict[str, dict] | list[str]],
-                          listing_details_output_file_name: str = None,
-                          listing_hashes_to_forcefully_process: list[str] = None) -> dict[str, dict]:
+def get_item_nameid_batch(
+    listing_hashes: [dict[str, dict] | list[str]],
+    listing_details_output_file_name: str = None,
+    listing_hashes_to_forcefully_process: list[str] = None,
+) -> dict[str, dict]:
     if listing_hashes_to_forcefully_process is None:
         listing_hashes_to_forcefully_process = []
 
@@ -462,8 +483,10 @@ def get_item_nameid_batch(listing_hashes: [dict[str, dict] | list[str]],
         listing_hashes_to_process = set(listing_hashes_to_process)
 
         if len(listing_hashes_to_process) > 0:
-            listing_details = update_all_listing_details(listing_hashes=list(listing_hashes_to_process),
-                                                         listing_details_output_file_name=listing_details_output_file_name)
+            listing_details = update_all_listing_details(
+                listing_hashes=list(listing_hashes_to_process),
+                listing_details_output_file_name=listing_details_output_file_name,
+            )
 
             for listing_hash in listing_hashes_to_process:
                 if listing_hash not in item_nameids:
@@ -479,8 +502,10 @@ def get_item_nameid_batch(listing_hashes: [dict[str, dict] | list[str]],
                 item_nameids[listing_hash]['is_marketable'] = is_marketable
 
     except FileNotFoundError:
-        listing_details = update_all_listing_details(listing_hashes=listing_hashes,
-                                                     listing_details_output_file_name=listing_details_output_file_name)
+        listing_details = update_all_listing_details(
+            listing_hashes=listing_hashes,
+            listing_details_output_file_name=listing_details_output_file_name,
+        )
 
         item_nameids = dict()
         for listing_hash in listing_hashes:
@@ -496,8 +521,10 @@ def get_item_nameid_batch(listing_hashes: [dict[str, dict] | list[str]],
 
 
 def update_marketability_status(few_selected_listing_hashes: list[str]) -> dict[str, dict]:
-    item_nameids = get_item_nameid_batch(listing_hashes=[],
-                                         listing_hashes_to_forcefully_process=few_selected_listing_hashes)
+    item_nameids = get_item_nameid_batch(
+        listing_hashes=[],
+        listing_hashes_to_forcefully_process=few_selected_listing_hashes,
+    )
 
     return item_nameids
 

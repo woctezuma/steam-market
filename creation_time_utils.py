@@ -26,8 +26,10 @@ def load_next_creation_time_data(next_creation_time_file_name: str = None) -> di
     return next_creation_times_with_keys_as_int
 
 
-def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data: dict[int, dict],
-                                                             verbose: bool = True) -> dict[int, dict]:
+def fill_in_badges_with_next_creation_times_loaded_from_disk(
+    aggregated_badge_data: dict[int, dict],
+    verbose: bool = True,
+) -> dict[int, dict]:
     next_creation_times_loaded_from_disk = load_next_creation_time_data()
 
     app_ids = set(aggregated_badge_data.keys()).intersection(next_creation_times_loaded_from_disk.keys())
@@ -41,21 +43,27 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_da
         if verbose:
             app_name = aggregated_badge_data[app_id]['name']
             if previously_loaded_next_creation_time is None:
-                print('Loading the next creation time ({}) for {} (appID = {}) from disk.'.format(
-                    next_creation_time,
-                    app_name,
-                    app_id))
+                print(
+                    'Loading the next creation time ({}) for {} (appID = {}) from disk.'.format(
+                        next_creation_time,
+                        app_name,
+                        app_id,
+                    ),
+                )
             else:
                 # NB: Data stored in data/next_creation_times.json is assumed to be more up-to-date compared to
                 #     data stored in data/booster_game_creator_from_javascript.txt. Indeed, if you  update the .txt
                 #     file with data found on your Booster Pack Creator page, then the .json file would be useless,
                 #     and you should delete it. Therefore, if the .json file is present on your disk, it can be
                 #     assumed that it was created by running this program, thus is more recent than the .txt file.
-                print('Replacing the next creation time ({}) for {} (appID = {}) with {}, loaded from disk.'.format(
-                    previously_loaded_next_creation_time,
-                    app_name,
-                    app_id,
-                    next_creation_time))
+                print(
+                    'Replacing the next creation time ({}) for {} (appID = {}) with {}, loaded from disk.'.format(
+                        previously_loaded_next_creation_time,
+                        app_name,
+                        app_id,
+                        next_creation_time,
+                    ),
+                )
 
     return aggregated_badge_data
 
@@ -82,14 +90,18 @@ def get_formatted_time(time_struct: datetime.datetime = None) -> str:
     if time_struct is None:
         time_struct = get_current_time()
 
-    formatted_time_as_str = datetime.datetime.strftime(time_struct,
-                                                       get_creation_time_format())
+    formatted_time_as_str = datetime.datetime.strftime(
+        time_struct,
+        get_creation_time_format(),
+    )
 
     return formatted_time_as_str
 
 
-def prepend_year_to_time_as_str(formatted_time_as_str: str,
-                                year_to_prepend: int = None) -> str:
+def prepend_year_to_time_as_str(
+    formatted_time_as_str: str,
+    year_to_prepend: int = None,
+) -> str:
     if year_to_prepend is None:
         current_time = get_current_time()
         year_to_prepend = current_time.year
@@ -99,26 +111,36 @@ def prepend_year_to_time_as_str(formatted_time_as_str: str,
     return formatted_time_as_str_with_year
 
 
-def get_time_struct_from_str(formatted_time_as_str: str,
-                             use_current_year: bool = False) -> datetime.datetime:
+def get_time_struct_from_str(
+    formatted_time_as_str: str,
+    use_current_year: bool = False,
+) -> datetime.datetime:
     if use_current_year:
         current_time = get_current_time()
         current_year = current_time.year
 
-        time_struct = datetime.datetime.strptime(prepend_year_to_time_as_str(formatted_time_as_str,
-                                                                             year_to_prepend=current_year),
-                                                 get_creation_time_format(prepend_year=True))
+        time_struct = datetime.datetime.strptime(
+            prepend_year_to_time_as_str(
+                formatted_time_as_str,
+                year_to_prepend=current_year,
+            ),
+            get_creation_time_format(prepend_year=True),
+        )
 
     else:
         try:
-            time_struct = datetime.datetime.strptime(formatted_time_as_str,
-                                                     get_creation_time_format())
+            time_struct = datetime.datetime.strptime(
+                formatted_time_as_str,
+                get_creation_time_format(),
+            )
         except ValueError:
             # For February 29th during a leap year, it is necessary to specify the year before calling strptime().
             # Reference: https://github.com/python/cpython/commit/56027ccd6b9dab4a090e4fef8574933fb9a36ff2
 
-            time_struct = get_time_struct_from_str(formatted_time_as_str,
-                                                   use_current_year=True)
+            time_struct = get_time_struct_from_str(
+                formatted_time_as_str,
+                use_current_year=True,
+            )
 
     return time_struct
 
@@ -147,8 +169,10 @@ def get_crafting_cooldown_duration_in_seconds() -> int:
     return crafting_cooldown_duration_in_seconds
 
 
-def determine_whether_a_booster_pack_can_be_crafted(badge_data: dict,
-                                                    current_time: datetime.datetime = None) -> bool:
+def determine_whether_a_booster_pack_can_be_crafted(
+    badge_data: dict,
+    current_time: datetime.datetime = None,
+) -> bool:
     if current_time is None:
         current_time = get_current_time()
 

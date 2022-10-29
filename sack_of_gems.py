@@ -27,8 +27,10 @@ def download_sack_of_gems_price(sack_of_gems_listing_file_name: str = None) -> f
     cookie = get_cookie_dict()
     listing_hash = get_listing_hash_for_gems()
 
-    listing_details, status_code = get_listing_details(listing_hash=listing_hash,
-                                                       cookie=cookie)
+    listing_details, status_code = get_listing_details(
+        listing_hash=listing_hash,
+        cookie=cookie,
+    )
 
     if status_code == 200:
         item_nameid = listing_details[listing_hash]['item_nameid']
@@ -49,9 +51,11 @@ def download_sack_of_gems_price(sack_of_gems_listing_file_name: str = None) -> f
     return sack_of_gems_price
 
 
-def load_sack_of_gems_price(retrieve_gem_price_from_scratch: bool = False,
-                            verbose: bool = True,
-                            sack_of_gems_listing_file_name: str = None) -> float:
+def load_sack_of_gems_price(
+    retrieve_gem_price_from_scratch: bool = False,
+    verbose: bool = True,
+    sack_of_gems_listing_file_name: str = None,
+) -> float:
     if sack_of_gems_listing_file_name is None:
         sack_of_gems_listing_file_name = get_sack_of_gems_listing_file_name()
 
@@ -75,23 +79,31 @@ def load_sack_of_gems_price(retrieve_gem_price_from_scratch: bool = False,
     return sack_of_gems_price
 
 
-def get_gem_price(enforced_sack_of_gems_price: float = None,
-                  minimum_allowed_sack_of_gems_price: float = None,
-                  retrieve_gem_price_from_scratch: bool = False,
-                  verbose: bool = True) -> float:
+def get_gem_price(
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    retrieve_gem_price_from_scratch: bool = False,
+    verbose: bool = True,
+) -> float:
     if enforced_sack_of_gems_price is None:
         sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
     else:
         sack_of_gems_price = enforced_sack_of_gems_price
-        print('[manual input] A sack of {} gems can allegedly be bought for {:.2f} €.'.format(
-            get_num_gems_per_sack_of_gems(),
-            sack_of_gems_price))
+        print(
+            '[manual input] A sack of {} gems can allegedly be bought for {:.2f} €.'.format(
+                get_num_gems_per_sack_of_gems(),
+                sack_of_gems_price,
+            ),
+        )
 
     if minimum_allowed_sack_of_gems_price is not None:
         sack_of_gems_price = max(minimum_allowed_sack_of_gems_price, sack_of_gems_price)
-        print('[manual adjustment] The price of a sack of gems is set to {:.2f} € (minimum allowed: {:.2f} €).'.format(
-            sack_of_gems_price,
-            minimum_allowed_sack_of_gems_price))
+        print(
+            '[manual adjustment] The price of a sack of gems is set to {:.2f} € (minimum allowed: {:.2f} €).'.format(
+                sack_of_gems_price,
+                minimum_allowed_sack_of_gems_price,
+            ),
+        )
 
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
@@ -100,15 +112,19 @@ def get_gem_price(enforced_sack_of_gems_price: float = None,
     return gem_price
 
 
-def print_gem_price_reminder(enforced_sack_of_gems_price: float = None,
-                             minimum_allowed_sack_of_gems_price: float = None,
-                             retrieve_gem_price_from_scratch: bool = None) -> None:
+def print_gem_price_reminder(
+    enforced_sack_of_gems_price: float = None,
+    minimum_allowed_sack_of_gems_price: float = None,
+    retrieve_gem_price_from_scratch: bool = None,
+) -> None:
     if retrieve_gem_price_from_scratch is None:
         retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
-    gem_price = get_gem_price(enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-                              minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-                              retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
+    gem_price = get_gem_price(
+        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
+        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
+    )
 
 
 def get_gem_amount_required_to_craft_badge() -> int:
@@ -122,11 +138,15 @@ def get_gem_amount_required_to_craft_badge() -> int:
 
 def main() -> bool:
     print('Loaded from the disk:')
-    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=False,
-                                                 verbose=True)
+    sack_of_gems_price = load_sack_of_gems_price(
+        retrieve_gem_price_from_scratch=False,
+        verbose=True,
+    )
     print('\nDownloaded as a market listing:')
-    sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch=True,
-                                                 verbose=True)
+    sack_of_gems_price = load_sack_of_gems_price(
+        retrieve_gem_price_from_scratch=True,
+        verbose=True,
+    )
 
     return True
 
