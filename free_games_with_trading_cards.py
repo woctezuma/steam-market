@@ -185,8 +185,6 @@ def write_to_file(data: list[str],
     if verbose:
         print(f'Written apps: {len(data)}')
 
-    return
-
 
 def main() -> None:
     # Based on SteamDB: https://steamdb.info/search/?a=app_keynames&keyname=243&operator=1
@@ -203,8 +201,6 @@ def main() -> None:
     output = format_for_asf_command_line(free_apps_not_owned)
 
     write_to_file(output, 'output.txt', asf_username='Wok')
-
-    return
 
 
 if __name__ == '__main__':

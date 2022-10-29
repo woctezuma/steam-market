@@ -174,8 +174,6 @@ def main() -> None:
                                                         app_ids_previously_processed=app_ids_previously_processed,
                                                         verbose=True)
 
-    return
-
 
 if __name__ == '__main__':
     main()

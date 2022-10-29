@@ -67,8 +67,6 @@ def update_all_listings_for_foil_cards() -> None:
         tag_item_class_no=get_tag_item_class_no_for_trading_cards()
     )
 
-    return
-
 
 def update_all_listings_for_profile_backgrounds(tag_drop_rate_str: str = None,
                                                 rarity: str = None) -> None:
@@ -83,8 +81,6 @@ def update_all_listings_for_profile_backgrounds(tag_drop_rate_str: str = None,
         rarity=rarity
     )
 
-    return
-
 
 def update_all_listings_for_emoticons(tag_drop_rate_str: str = None,
                                       rarity: str = None) -> None:
@@ -97,8 +93,6 @@ def update_all_listings_for_emoticons(tag_drop_rate_str: str = None,
         tag_drop_rate_str=tag_drop_rate_str,
         rarity=rarity
     )
-
-    return
 
 
 def update_all_listings_for_items_other_than_cards(tag_drop_rate_str: str = None,
@@ -123,8 +117,6 @@ def update_all_listings_for_items_other_than_cards(tag_drop_rate_str: str = None
 
     update_all_listings_for_emoticons(tag_drop_rate_str=tag_drop_rate_str,
                                       rarity=rarity)
-
-    return
 
 
 def get_listings(listing_output_file_name: str,

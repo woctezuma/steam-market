@@ -94,8 +94,6 @@ def update_and_save_cookie_to_disk_if_values_changed(cookie: dict[str, str],
 def main() -> None:
     cookie = get_cookie_dict(verbose=True)
 
-    return
-
 
 if __name__ == '__main__':
     main()

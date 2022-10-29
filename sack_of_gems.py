@@ -110,8 +110,6 @@ def print_gem_price_reminder(enforced_sack_of_gems_price: float = None,
                               minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
                               retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch)
 
-    return
-
 
 def get_gem_amount_required_to_craft_badge() -> int:
     # This is a constant value of 2000 gems for a badge, because a badge requires a set of N cards, which are obtained

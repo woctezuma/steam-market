@@ -278,8 +278,6 @@ def print_arbitrages(badge_arbitrages: dict[str, dict],
                 arbitrage['bid_volume'],
             ))
 
-    return
-
 
 def convert_arbitrages_for_batch_create_then_sell(badge_arbitrages: dict[str, dict],
                                                   profit_threshold: float = 0.01,  # profit in euros
