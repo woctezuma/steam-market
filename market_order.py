@@ -128,6 +128,11 @@ def download_market_order_data(
             ask_volume = -1
 
     else:
+        if resp_data is not None:
+            error_reason = resp_data.reason
+            if verbose:
+                print(f'Wrong status code ({status_code}): {error_reason}.')
+
         bid_price = -1
         bid_volume = -1
         ask_price = -1
