@@ -128,6 +128,10 @@ def aggregate_badge_data(
         retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
     )
 
+    if gem_price <= 0:
+        print(f'[ERROR] The price of a gem is non-positive: {gem_price}€.')
+        raise AssertionError()
+
     badge_app_ids = list(badge_creation_details.keys())
 
     aggregated_badge_data = dict()
