@@ -1058,6 +1058,7 @@ def find_item_type_for_app_id(
     all_listing_details: dict[str, dict] = None,
     listing_details_output_file_name: str = None,
     dictionary_of_representative_listing_hashes: dict[int, list[str]] = None,
+    verbose: bool = False,
 ) -> int:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name_for_foil_cards()
@@ -1074,7 +1075,15 @@ def find_item_type_for_app_id(
         dictionary_of_representative_listing_hashes,
     )
 
-    listing_details = all_listing_details[representative_listing_hash_for_app_id]
+    try:
+        listing_details = all_listing_details[representative_listing_hash_for_app_id]
+    except KeyError:
+        listing_details = {'item_type_no': None}
+        if verbose:
+            print(
+                f'Unknown item type for listing hash = {representative_listing_hash_for_app_id}',
+            )
+
     item_type = listing_details['item_type_no']
 
     return item_type
