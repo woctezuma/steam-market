@@ -13,6 +13,8 @@ from src.cookie_utils import force_update_sessionid
 from src.json_utils import load_json, save_json
 from utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
 
+INTER_REQUEST_COOLDOWN_FIELD = 'cooldown_between_each_request'
+
 
 def get_steam_market_order_url() -> str:
     steam_market_order_url = 'https://steamcommunity.com/market/itemordershistogram'
@@ -48,6 +50,8 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie: bool = False)
             'max_num_queries': 25,
             'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=5),
         }
+
+    rate_limits[INTER_REQUEST_COOLDOWN_FIELD] = 0
 
     return rate_limits
 
@@ -214,6 +218,7 @@ def download_market_order_data_batch(
             time.sleep(cooldown_duration)
             query_count = 0
 
+        time.sleep(rate_limits[INTER_REQUEST_COOLDOWN_FIELD])
         query_count += 1
 
     if save_to_disk:
