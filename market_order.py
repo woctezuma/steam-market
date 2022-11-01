@@ -223,6 +223,7 @@ def load_market_order_data(
     badge_data: dict[int | str, dict] = None,
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
+    verbose: bool = False,
 ) -> dict[str, dict]:
     market_order_dict = load_market_order_data_from_disk()
 
@@ -231,6 +232,7 @@ def load_market_order_data(
             badge_data,
             save_to_disk=True,
             market_order_dict=market_order_dict,
+            verbose=verbose,
         )
 
     if trim_output:

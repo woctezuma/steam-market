@@ -185,6 +185,7 @@ def find_badge_arbitrages(
         market_order_dict = load_market_order_data(
             badge_data,
             retrieve_market_orders_online=True,
+            verbose=verbose,
         )
 
     badge_arbitrages = dict()
@@ -356,6 +357,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
     market_order_dict = load_market_order_data(
         badge_data=selected_badge_data,
         retrieve_market_orders_online=retrieve_market_orders_online,
+        verbose=verbose,
     )
 
     latest_badge_arbitrages = find_badge_arbitrages(
@@ -407,6 +409,7 @@ def apply_workflow(
     quick_check_with_tracked_booster_packs: bool = False,
     enforce_update_of_marketability_status: bool = False,
     from_javascript: bool = False,
+    verbose: bool = False,
 ) -> bool:
     if quick_check_with_tracked_booster_packs:
         print('Quick-check of booster packs with a track record.')
@@ -433,11 +436,13 @@ def apply_workflow(
     market_order_dict = load_market_order_data(
         filtered_badge_data,
         retrieve_market_orders_online=retrieve_market_orders_online,
+        verbose=verbose,
     )
 
     badge_arbitrages = find_badge_arbitrages(
         filtered_badge_data,
         market_order_dict,
+        verbose=verbose,
     )
 
     print('# Reminder of the gem price')
@@ -458,6 +463,7 @@ def apply_workflow(
         badge_data=filtered_badge_data,
         arbitrage_data=badge_arbitrages,
         retrieve_market_orders_online=True,
+        verbose=verbose,
     )
     # Update marketability status
     if enforce_update_of_marketability_status:
@@ -498,6 +504,7 @@ def main() -> bool:
     quick_check_with_tracked_booster_packs = False
     enforce_update_of_marketability_status = True
     from_javascript = True
+    verbose = True
 
     apply_workflow(
         retrieve_listings_from_scratch=retrieve_listings_from_scratch,
@@ -509,6 +516,7 @@ def main() -> bool:
         quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
         enforce_update_of_marketability_status=enforce_update_of_marketability_status,
         from_javascript=from_javascript,
+        verbose=verbose,
     )
 
     return True

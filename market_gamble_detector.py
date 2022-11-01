@@ -227,6 +227,7 @@ def get_market_orders(
     focus_on_listing_hashes_never_seen_before: bool,
     listing_details_output_file_name: str,
     market_order_output_file_name: str,
+    verbose: bool = False,
 ) -> dict[str, dict]:
     # Load market orders (bid, ask) from disk
 
@@ -253,6 +254,7 @@ def get_market_orders(
             market_order_dict=market_order_dict,
             market_order_output_file_name=market_order_output_file_name,
             listing_details_output_file_name=listing_details_output_file_name,
+            verbose=verbose,
         )
 
     # After the **most comprehensive** dictionary of market orders has been loaded from disk by:
@@ -374,6 +376,7 @@ def main(
         tuple[int, int, int], float,
     ] = None,
     num_packs_to_display: int = 10,
+    verbose: bool = False,
 ) -> bool:
     if look_for_profile_backgrounds:
         category_name = get_category_name_for_profile_backgrounds()
@@ -444,6 +447,7 @@ def main(
         focus_on_listing_hashes_never_seen_before,
         listing_details_output_file_name,
         market_order_output_file_name,
+        verbose=verbose,
     )
 
     # Only keep marketable booster packs
@@ -471,6 +475,7 @@ def main(
     badge_arbitrages = find_badge_arbitrages(
         filtered_badge_data,
         market_order_dict,
+        verbose=verbose,
     )
 
     print('\n# Results for detected *potential* arbitrages\n')
@@ -493,4 +498,5 @@ if __name__ == '__main__':
         price_threshold_in_cents=None,
         drop_rate_estimates_for_common_rarity=None,
         num_packs_to_display=100,
+        verbose=True,
     )

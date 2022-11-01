@@ -231,6 +231,7 @@ def main(
     min_sell_price: float = 30,
     min_num_listings: int = 3,
     num_packs_to_display: int = 10,
+    verbose: bool = False,
 ) -> None:
     # Load list of all listing hashes
 
@@ -283,6 +284,7 @@ def main(
         filtered_badge_data,
         trim_output=True,
         retrieve_market_orders_online=retrieve_market_orders_online,
+        verbose=verbose,
     )
 
     # Only keep marketable booster packs
@@ -308,6 +310,7 @@ def main(
     badge_arbitrages = find_badge_arbitrages(
         filtered_badge_data,
         market_order_dict,
+        verbose=verbose,
     )
 
     print('\n# Results for detected *potential* arbitrages\n')
@@ -329,4 +332,5 @@ if __name__ == '__main__':
         min_sell_price=30,
         min_num_listings=3,
         num_packs_to_display=100,
+        verbose=True,
     )
