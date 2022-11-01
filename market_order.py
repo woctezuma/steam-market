@@ -132,6 +132,9 @@ def download_market_order_data(
             error_reason = resp_data.reason
             if verbose:
                 print(f'Wrong status code ({status_code}): {error_reason}.')
+            if status_code == 429:
+                print('You have been rate-limited. Wait for a while and double-check rate-limits before trying again.')
+                raise AssertionError()
 
         bid_price = -1
         bid_volume = -1
