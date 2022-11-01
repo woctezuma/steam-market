@@ -43328,5 +43328,65 @@
         "item_nameid": 176190143,
         "is_marketable": true,
         "item_type_no": null
+    },
+    "938860-Get In The Car, Loser! Booster Pack": {
+        "item_nameid": 176321648,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "562290-Zahalia: The Knights of Galiveth Booster Pack": {
+        "item_nameid": 176339321,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "872570-Romans: Age of Caesar Booster Pack": {
+        "item_nameid": 176320917,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1285160-Depanneur Nocturne Booster Pack": {
+        "item_nameid": 176325783,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1604000-Milk outside a bag of milk outside a bag of milk Booster Pack": {
+        "item_nameid": 176289144,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1140440-OMON Simulator Booster Pack": {
+        "item_nameid": 176121414,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "843380-Super Animal Royale Booster Pack": {
+        "item_nameid": 176293506,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1755910-Capcom Arcade 2nd Stadium Booster Pack": {
+        "item_nameid": 176323595,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "392620-Lucadian Chronicles Booster Pack": {
+        "item_nameid": 176298458,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "1575870-UpGun Booster Pack": {
+        "item_nameid": 176300022,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "377200-Daemon Detective Gaiden Booster Pack": {
+        "item_nameid": 176297064,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "1239300-Gravewood High Multiplayer Booster Pack": {
+        "item_nameid": 176329473,
+        "is_marketable": true,
+        "item_type_no": null
     }
 }
