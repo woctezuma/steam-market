@@ -53,7 +53,10 @@ def update_cookie_dict(
     cookie = original_cookie
 
     for field in dict_with_new_values.keys():
-        current_value = cookie[field]
+        try:
+            current_value = cookie[field]
+        except KeyError:
+            current_value = None
         new_value = dict_with_new_values[field]
 
         if new_value != current_value:
