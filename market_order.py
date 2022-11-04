@@ -55,6 +55,22 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie: bool = False)
 
     return rate_limits
 
+def get_market_order_headers():
+    headers = {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Connection": "keep-alive",
+        "Host": "steamcommunity.com",
+        "If-Modified-Since": "Tue, 01 Nov 2022 00:00:00 GMT",
+        "Referer": "https://steamcommunity.com/market/listings/753/753-Sack%20of%20Gems",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+    return headers
 
 def download_market_order_data(
     listing_hash: str,
@@ -78,9 +94,9 @@ def download_market_order_data(
 
         try:
             if has_secured_cookie:
-                resp_data = requests.get(url, params=req_data, cookies=cookie)
+                resp_data = requests.get(url, params=req_data, cookies=cookie, headers=get_market_order_headers())
             else:
-                resp_data = requests.get(url, params=req_data)
+                resp_data = requests.get(url, params=req_data, headers=get_market_order_headers())
         except requests.exceptions.ConnectionError:
             resp_data = None
 
