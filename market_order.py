@@ -9,6 +9,7 @@ from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.cookie_utils import force_update_sessionid
 from src.json_utils import load_json, save_json
 from utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
 
@@ -179,6 +180,7 @@ def download_market_order_data_batch(
     # Retrieval of market orders (bid, ask)
 
     cookie = get_cookie_dict()
+    cookie = force_update_sessionid(cookie)
     has_secured_cookie = bool(len(cookie) > 0)
 
     rate_limits = get_steam_api_rate_limits_for_market_order(has_secured_cookie)
