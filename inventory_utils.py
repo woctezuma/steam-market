@@ -1,5 +1,3 @@
-import json
-
 import requests
 
 from creation_time_utils import (
@@ -11,6 +9,7 @@ from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.json_utils import load_json, save_json
 from utils import (
     convert_listing_hash_to_app_id,
     convert_listing_hash_to_app_name,
@@ -49,8 +48,7 @@ def load_steam_inventory_from_disk(profile_id: str = None) -> [dict | None]:
         profile_id = get_my_steam_profile_id()
 
     try:
-        with open(get_steam_inventory_file_name(profile_id), encoding='utf-8') as f:
-            steam_inventory = json.load(f)
+        steam_inventory = load_json(get_steam_inventory_file_name(profile_id))
     except FileNotFoundError:
         steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
 
@@ -96,8 +94,7 @@ def download_steam_inventory(profile_id: str = None, save_to_disk: bool = True) 
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if save_to_disk:
-            with open(get_steam_inventory_file_name(profile_id), 'w', encoding='utf-8') as f:
-                json.dump(steam_inventory, f)
+            save_json(steam_inventory, get_steam_inventory_file_name(profile_id))
     else:
         print(f'Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.')
         steam_inventory = None
@@ -441,8 +438,7 @@ def update_and_save_next_creation_times(
                 print(f'Saving the next creation time ({formatted_next_creation_time}) for {app_name} (appID = {app_id}) to disk.')
 
     if save_to_disk:
-        with open(next_creation_time_file_name, 'w', encoding='utf-8') as f:
-            json.dump(next_creation_times, f)
+        save_json(next_creation_times, next_creation_time_file_name)
 
     return next_creation_times
 

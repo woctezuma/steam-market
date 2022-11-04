@@ -1,10 +1,10 @@
 # Objective: automatically download the number of cards per set from SteamCardExchange.net
 
-import json
 import time
 
 import requests
 
+from src.json_utils import load_json, save_json
 from utils import get_steam_card_exchange_file_name
 
 
@@ -41,8 +41,7 @@ def save_data_from_steam_card_exchange(
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
     if response is not None:
-        with open(steam_card_exchange_file_name, 'w', encoding='utf-8') as f:
-            json.dump(response, f)
+        save_json(response, steam_card_exchange_file_name)
 
 
 def download_data_from_steam_card_exchange(
@@ -82,8 +81,7 @@ def load_data_from_steam_card_exchange(steam_card_exchange_file_name: str = None
 
     try:
         print('Loading data from disk.')
-        with open(steam_card_exchange_file_name, encoding='utf-8') as f:
-            response = json.load(f)
+        response = load_json(steam_card_exchange_file_name)
     except FileNotFoundError:
         print('Data could not be found on the disk.')
         response = download_data_from_steam_card_exchange(

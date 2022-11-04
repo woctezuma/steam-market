@@ -1,6 +1,5 @@
 # Objective: retrieve i) the item name id of a listing, and ii) whether a *crafted* item would really be marketable.
 import ast
-import json
 import time
 
 import requests
@@ -11,6 +10,7 @@ from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.json_utils import load_json, save_json
 from utils import (
     get_cushioned_cooldown_in_seconds,
     get_listing_details_output_file_name,
@@ -342,8 +342,7 @@ def get_listing_details_batch(
 
         if query_count >= rate_limits['max_num_queries']:
             if save_to_disk:
-                with open(listing_details_output_file_name, 'w', encoding='utf-8') as f:
-                    json.dump(all_listing_details, f)
+                save_json(all_listing_details, listing_details_output_file_name)
 
             cooldown_duration = rate_limits['cooldown']
             print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
@@ -353,8 +352,7 @@ def get_listing_details_batch(
         all_listing_details.update(listing_details)
 
     if save_to_disk:
-        with open(listing_details_output_file_name, 'w', encoding='utf-8') as f:
-            json.dump(all_listing_details, f)
+        save_json(all_listing_details, listing_details_output_file_name)
 
     return all_listing_details
 
@@ -370,9 +368,8 @@ def update_all_listing_details(
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, encoding='utf-8') as f:
-            all_listing_details = json.load(f)
-            print(f'Loading {len(all_listing_details)} listing details from disk.')
+        all_listing_details = load_json(listing_details_output_file_name)
+        print(f'Loading {len(all_listing_details)} listing details from disk.')
     except FileNotFoundError:
         print('Downloading listing details from scratch.')
         all_listing_details = None
@@ -395,8 +392,7 @@ def load_all_listing_details(listing_details_output_file_name: str = None) -> di
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
-    with open(listing_details_output_file_name, encoding='utf-8') as f:
-        all_listing_details = json.load(f)
+    all_listing_details = load_json(listing_details_output_file_name)
 
     return all_listing_details
 
@@ -437,8 +433,7 @@ def get_item_nameid(
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, encoding='utf-8') as f:
-            listing_details = json.load(f)
+        listing_details = load_json(listing_details_output_file_name)
 
         item_nameid = listing_details[listing_hash]['item_nameid']
     except (FileNotFoundError, KeyError):
@@ -463,8 +458,7 @@ def get_item_nameid_batch(
         listing_details_output_file_name = get_listing_details_output_file_name()
 
     try:
-        with open(listing_details_output_file_name, encoding='utf-8') as f:
-            listing_details = json.load(f)
+        listing_details = load_json(listing_details_output_file_name)
 
         item_nameids = dict()
         listing_hashes_to_process = []

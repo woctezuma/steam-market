@@ -1,6 +1,5 @@
 # Objective: retrieve the ask and bid for Booster Packs.
 
-import json
 import time
 
 import requests
@@ -10,6 +9,7 @@ from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.json_utils import load_json, save_json
 from utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
 
 
@@ -205,8 +205,7 @@ def download_market_order_data_batch(
 
         if query_count >= rate_limits['max_num_queries']:
             if save_to_disk:
-                with open(market_order_output_file_name, 'w', encoding='utf-8') as f:
-                    json.dump(market_order_dict, f)
+                save_json(market_order_dict, market_order_output_file_name)
 
             cooldown_duration = rate_limits['cooldown']
             print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
@@ -216,8 +215,7 @@ def download_market_order_data_batch(
         query_count += 1
 
     if save_to_disk:
-        with open(market_order_output_file_name, 'w', encoding='utf-8') as f:
-            json.dump(market_order_dict, f)
+        save_json(market_order_dict, market_order_output_file_name)
 
     return market_order_dict
 
@@ -283,8 +281,7 @@ def load_market_order_data_from_disk(market_order_output_file_name: str = None) 
         market_order_output_file_name = get_market_order_file_name()
 
     try:
-        with open(market_order_output_file_name, encoding='utf-8') as f:
-            market_order_dict = json.load(f)
+        market_order_dict = load_json(market_order_output_file_name)
     except FileNotFoundError:
         market_order_dict = None
 

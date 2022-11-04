@@ -1,7 +1,6 @@
 # Reference: https://www.blakeporterneuro.com/learning-python-project-3-scrapping-data-from-steams-community-market/
 
-import json
-
+from src.json_utils import load_json, save_json
 
 def get_steam_cookie_file_name() -> str:
     steam_cookie_file_name = 'personal_info.json'
@@ -14,8 +13,7 @@ def load_steam_cookie_from_disk(file_name_with_personal_info: str = None) -> dic
         file_name_with_personal_info = get_steam_cookie_file_name()
 
     try:
-        with open(file_name_with_personal_info, encoding='utf-8') as f:
-            cookie = json.load(f)
+        cookie = load_json(file_name_with_personal_info)
     except FileNotFoundError:
         cookie = dict()
 
@@ -32,8 +30,7 @@ def save_steam_cookie_to_disk(
     is_cookie_to_be_saved = bool(cookie is not None and len(cookie) > 0)
 
     if is_cookie_to_be_saved:
-        with open(file_name_with_personal_info, 'w', encoding='utf-8') as f:
-            json.dump(cookie, f)
+        save_json(cookie, file_name_with_personal_info)
 
     return is_cookie_to_be_saved
 

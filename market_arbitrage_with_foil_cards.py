@@ -5,8 +5,6 @@
 #
 # In summary, we do not care about buy orders here! We only care about sell orders!
 
-import json
-
 import requests
 
 from market_gamble_detector import update_all_listings_for_foil_cards
@@ -22,6 +20,7 @@ from personal_info import (
     update_and_save_cookie_to_disk_if_values_changed,
 )
 from sack_of_gems import get_num_gems_per_sack_of_gems, load_sack_of_gems_price
+from src.json_utils import load_json, save_json
 from utils import (
     convert_listing_hash_to_app_id,
     get_bullet_point_for_display,
@@ -332,8 +331,7 @@ def load_all_goo_details(
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
 
     try:
-        with open(goo_details_file_name, encoding='utf-8') as f:
-            all_goo_details = json.load(f)
+        all_goo_details = load_json(goo_details_file_name)
     except FileNotFoundError:
         all_goo_details = dict()
 
@@ -349,9 +347,7 @@ def save_all_goo_details(
 ) -> None:
     if goo_details_file_name is None:
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
-
-    with open(goo_details_file_name, 'w', encoding='utf-8') as f:
-        json.dump(all_goo_details, f)
+    save_json(all_goo_details, goo_details_file_name)
 
 
 def update_all_goo_details(

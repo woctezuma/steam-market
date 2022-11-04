@@ -1,7 +1,6 @@
 # Objective: retrieve all the listings of 'Booster Packs' on the Steam Market,
 #            along with the sell price, and the volume available at this price.
 
-import json
 import time
 from pathlib import Path
 
@@ -11,6 +10,7 @@ from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.json_utils import load_json, save_json
 from utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_name
 
 
@@ -237,8 +237,7 @@ def download_all_listings(
             tag_item_class_no=tag_item_class_no,
         )
 
-        with open(listing_output_file_name, 'w', encoding='utf-8') as f:
-            json.dump(all_listings, f)
+        save_json(all_listings, listing_output_file_name)
 
     return True
 
@@ -271,8 +270,7 @@ def update_all_listings(
         rarity=rarity,
     )
 
-    with open(listing_output_file_name, 'w', encoding='utf-8') as f:
-        json.dump(all_listings, f)
+    save_json(all_listings, listing_output_file_name)
 
     return True
 
@@ -282,8 +280,7 @@ def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
         listing_output_file_name = get_listing_output_file_name()
 
     try:
-        with open(listing_output_file_name, encoding='utf-8') as f:
-            all_listings = json.load(f)
+        all_listings = load_json(listing_output_file_name)
     except FileNotFoundError:
         print(f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.')
         all_listings = dict()

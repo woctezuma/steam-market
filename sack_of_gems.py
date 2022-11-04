@@ -1,10 +1,9 @@
 # Objective: retrieve the price which sellers ask for a 'Sack of Gems'.
 
-import json
-
 from market_listing import get_listing_details
 from market_order import download_market_order_data
 from personal_info import get_cookie_dict
+from src.json_utils import load_json, save_json
 from utils import get_sack_of_gems_listing_file_name
 
 
@@ -43,8 +42,7 @@ def download_sack_of_gems_price(sack_of_gems_listing_file_name: str = None, verb
 
         sack_of_gems_price = ask_price
 
-        with open(sack_of_gems_listing_file_name, 'w', encoding='utf-8') as f:
-            json.dump(listing_details, f)
+        save_json(listing_details, sack_of_gems_listing_file_name)
     else:
         raise AssertionError()
 
@@ -64,8 +62,7 @@ def load_sack_of_gems_price(
     else:
 
         try:
-            with open(sack_of_gems_listing_file_name, encoding='utf-8') as f:
-                listing_details = json.load(f)
+            listing_details = load_json(sack_of_gems_listing_file_name)
 
             listing_hash = get_listing_hash_for_gems()
 

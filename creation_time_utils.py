@@ -1,6 +1,6 @@
 import datetime
-import json
 
+from src.json_utils import load_json
 from utils import get_next_creation_time_file_name
 
 
@@ -9,8 +9,7 @@ def load_next_creation_time_data(next_creation_time_file_name: str = None) -> di
         next_creation_time_file_name = get_next_creation_time_file_name()
 
     try:
-        with open(next_creation_time_file_name, encoding='utf-8') as f:
-            next_creation_times = json.load(f)
+        next_creation_times = load_json(next_creation_time_file_name)
     except FileNotFoundError:
         next_creation_times = dict()
 
