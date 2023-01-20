@@ -322,8 +322,10 @@ def retrieve_asset_id(
         community_inventory = steam_inventory['rgInventory']
 
         for element in community_inventory:
-            if community_inventory[element]['classid'] == matched_element['classid'] \
-                    and community_inventory[element]['instanceid'] == matched_element['instanceid']:
+            if (
+                community_inventory[element]['classid'] == matched_element['classid']
+                and community_inventory[element]['instanceid'] == matched_element['instanceid']
+            ):
                 matched_element['id'] = community_inventory[element]['id']
                 matched_element['amount'] = community_inventory[element]['amount']
                 matched_element['pos'] = community_inventory[element]['pos']
