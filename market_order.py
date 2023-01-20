@@ -55,6 +55,7 @@ def get_steam_api_rate_limits_for_market_order(has_secured_cookie: bool = False)
 
     return rate_limits
 
+
 def get_market_order_headers():
     headers = {
         "Accept": "*/*",
@@ -71,6 +72,7 @@ def get_market_order_headers():
         "X-Requested-With": "XMLHttpRequest",
     }
     return headers
+
 
 def download_market_order_data(
     listing_hash: str,

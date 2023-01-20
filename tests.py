@@ -15,7 +15,6 @@ import utils
 
 
 class TestMarketListingMethods(unittest.TestCase):
-
     def test_get_listing_details_batch(self):
         listing_hashes = [
             "407420-Gabe Newell Simulator Booster Pack",
@@ -32,19 +31,16 @@ class TestMarketListingMethods(unittest.TestCase):
 
 
 class TestParsingUtilsMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(parsing_utils.main())
 
 
 class TestCreationTimeUtilsMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(creation_time_utils.main())
 
 
 class TestSackOfGemsMethods(unittest.TestCase):
-
     def test_download_sack_of_gems_price(self):
         sack_of_gems_price = sack_of_gems.download_sack_of_gems_price()
 
@@ -57,13 +53,11 @@ class TestSackOfGemsMethods(unittest.TestCase):
 
 
 class TestMarketSearchMethods(unittest.TestCase):
-
     def test_download_all_listings(self):
         self.assertTrue(market_search.download_all_listings())
 
 
 class TestMarketUtilsMethods(unittest.TestCase):
-
     def test_load_aggregated_badge_data(self):
         aggregated_badge_data = market_utils.load_aggregated_badge_data()
 
@@ -71,7 +65,6 @@ class TestMarketUtilsMethods(unittest.TestCase):
 
 
 class TestMarketArbitrageMethods(unittest.TestCase):
-
     def test_apply_workflow(self):
         self.assertTrue(
             market_arbitrage.apply_workflow(
@@ -82,31 +75,26 @@ class TestMarketArbitrageMethods(unittest.TestCase):
 
 
 class TestMarketOrderMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(market_order.main())
 
 
 class TestUtilsMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(utils.main())
 
 
 class TestTransactionFeeMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(transaction_fee.main())
 
 
 class TestBatchCreatePacksMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(batch_create_packs.main(is_a_simulation=True))
 
 
 class TestDropRateEstimatesMethods(unittest.TestCase):
-
     def test_main(self):
         self.assertTrue(drop_rate_estimates.main())
 

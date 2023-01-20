@@ -2,6 +2,7 @@
 
 from src.json_utils import load_json, save_json
 
+
 def get_steam_cookie_file_name() -> str:
     steam_cookie_file_name = 'personal_info.json'
 
