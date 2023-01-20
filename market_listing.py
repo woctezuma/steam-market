@@ -123,7 +123,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
         end_index = None
 
     if start_index is not None and end_index is not None:
-        assets_raw = last_script[start_index + len(start_str):end_index]
+        assets_raw = last_script[start_index + len(start_str) : end_index]
         assets_stripped = assets_raw.strip().strip(asset_ending)
 
         try:

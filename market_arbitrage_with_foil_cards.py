@@ -238,7 +238,7 @@ def find_cheapest_listing_hashes(
             listing_hashes,
             key=lambda x: (
                 all_listings[x]['sell_price'],
-                - all_listings[x]['sell_listings'],
+                -all_listings[x]['sell_listings'],
             ),
         )
 
