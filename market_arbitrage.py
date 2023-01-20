@@ -409,6 +409,7 @@ def apply_workflow(
     quick_check_with_tracked_booster_packs: bool = False,
     enforce_update_of_marketability_status: bool = False,
     from_javascript: bool = False,
+    profile_id: str = None,
     verbose: bool = False,
 ) -> bool:
     if quick_check_with_tracked_booster_packs:
@@ -489,6 +490,7 @@ def apply_workflow(
         creation_results, sale_results = create_then_sell_booster_packs_for_batch(
             price_dict_for_listing_hashes,
             focus_on_marketable_items=True,
+            profile_id=profile_id,
         )
 
     return True
@@ -504,6 +506,7 @@ def main() -> bool:
     quick_check_with_tracked_booster_packs = False
     enforce_update_of_marketability_status = True
     from_javascript = True
+    profile_id = None
     verbose = True
 
     apply_workflow(
@@ -516,6 +519,7 @@ def main() -> bool:
         quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
         enforce_update_of_marketability_status=enforce_update_of_marketability_status,
         from_javascript=from_javascript,
+        profile_id=profile_id,
         verbose=verbose,
     )
 
