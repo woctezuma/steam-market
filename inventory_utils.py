@@ -288,10 +288,11 @@ def retrieve_asset_id(
     listing_hash: str,
     steam_inventory: dict = None,
     focus_on_marketable_items: bool = True,
+    profile_id: str = None,
     verbose: bool = True,
 ) -> str:
     if steam_inventory is None:
-        steam_inventory = load_steam_inventory()
+        steam_inventory = load_steam_inventory(profile_id=profile_id)
 
     descriptions = steam_inventory['rgDescriptions']
 
@@ -359,10 +360,11 @@ def sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict[str, float],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
+    profile_id: str = None,
 ) -> dict[str, dict | None]:
     results = dict()
 
-    steam_inventory = load_steam_inventory(update_steam_inventory=update_steam_inventory)
+    steam_inventory = load_steam_inventory(profile_id=profile_id, update_steam_inventory=update_steam_inventory)
 
     for (listing_hash, price_in_cents) in price_dict_for_listing_hashes.items():
 
@@ -370,6 +372,7 @@ def sell_booster_packs_for_batch(
             listing_hash=listing_hash,
             steam_inventory=steam_inventory,
             focus_on_marketable_items=focus_on_marketable_items,
+            profile_id=profile_id,
         )
 
         if asset_id is not None:
@@ -384,6 +387,7 @@ def create_then_sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict,
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
+    profile_id: str = None,
 ) -> tuple[
         dict[str, dict | None], dict[str, dict | None],
 ]:
@@ -395,6 +399,7 @@ def create_then_sell_booster_packs_for_batch(
         price_dict_for_listing_hashes,
         update_steam_inventory=update_steam_inventory,
         focus_on_marketable_items=focus_on_marketable_items,
+        profile_id=profile_id,
     )
 
     next_creation_times = update_and_save_next_creation_times(creation_results)
