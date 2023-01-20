@@ -41,7 +41,8 @@ def filter_out_dubious_listing_hashes(
     if verbose:
         print(
             'There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)'.format(
-                len(filtered_listings), len(all_listings) - len(filtered_listings),
+                len(filtered_listings),
+                len(all_listings) - len(filtered_listings),
             ),
         )
 
