@@ -178,9 +178,7 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(
     force_update_from_steam_card_exchange: bool = False,
     enforced_sack_of_gems_price: float = None,
     minimum_allowed_sack_of_gems_price: float = None,
-) -> dict[
-        str, dict,
-]:
+) -> dict[str, dict]:
     if aggregated_badge_data is None:
         aggregated_badge_data = convert_to_badges(all_listings)
 

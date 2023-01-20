@@ -81,7 +81,8 @@ def get_steam_api_rate_limits_for_market_listing(has_secured_cookie: bool = Fals
 
 
 def figure_out_relevant_id(
-    asset_dict: dict[str, dict], asset_ids: list[str],
+    asset_dict: dict[str, dict],
+    asset_ids: list[str],
     owner_action_name_of_interest: str,
 ) -> int | None:
     actions = set()
@@ -257,9 +258,11 @@ def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
     return item_nameid, is_marketable, item_type_no
 
 
-def get_listing_details(listing_hash: str = None, cookie: dict[str, str] = None, render_as_json: bool = False) -> tuple[
-        dict[str, dict], int,
-]:
+def get_listing_details(
+    listing_hash: str = None,
+    cookie: dict[str, str] = None,
+    render_as_json: bool = False,
+) -> tuple[dict[str, dict], int]:
     listing_details = dict()
 
     url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)

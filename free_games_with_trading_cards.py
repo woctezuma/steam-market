@@ -90,7 +90,8 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
 
 
 def load_free_apps_with_trading_cards(
-    free_apps: set[int] = None, list_of_methods: list[str] = None,
+    free_apps: set[int] = None,
+    list_of_methods: list[str] = None,
     verbose: bool = True,
 ) -> set[int]:
     if list_of_methods is None:

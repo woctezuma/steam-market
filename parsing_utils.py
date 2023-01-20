@@ -65,7 +65,8 @@ def parse_augmented_steam_drop_down_menu(lines: list[str], verbose: bool = False
 
 
 def parse_badge_creation_details(
-    badge_creation_file_name: str = None, from_javascript: bool = False,
+    badge_creation_file_name: str = None,
+    from_javascript: bool = False,
     verbose: bool = False,
 ) -> dict[int, dict]:
     if badge_creation_file_name is None:

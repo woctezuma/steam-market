@@ -390,9 +390,7 @@ def create_then_sell_booster_packs_for_batch(
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str = None,
-) -> tuple[
-        dict[str, dict | None], dict[str, dict | None],
-]:
+) -> tuple[dict[str, dict | None], dict[str, dict | None]]:
     listing_hashes = list(price_dict_for_listing_hashes.keys())
 
     creation_results = create_booster_packs_for_batch(listing_hashes)

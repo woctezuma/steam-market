@@ -151,7 +151,8 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
     price_threshold_in_cents: float = None,
     category_name: str = None,
     drop_rate_estimates_for_common_rarity: dict[
-        tuple[int, int, int], float,
+        tuple[int, int, int],
+        float,
     ] = None,
     gem_price_in_euros: float = None,
     verbose: bool = True,
@@ -302,9 +303,7 @@ def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[int, 
 def get_listings_with_other_rarity_tags(
     look_for_profile_backgrounds: bool,
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
-) -> tuple[
-        dict[str, dict], dict[str, dict],
-]:
+) -> tuple[dict[str, dict], dict[str, dict]]:
     if retrieve_listings_with_another_rarity_tag_from_scratch:
         other_rarity_fields = set(get_rarity_fields()).difference({'common'})
         for rarity_tag in other_rarity_fields:
@@ -373,7 +372,8 @@ def main(
     focus_on_listing_hashes_never_seen_before: bool = True,
     price_threshold_in_cents: float = None,
     drop_rate_estimates_for_common_rarity: dict[
-        tuple[int, int, int], float,
+        tuple[int, int, int],
+        float,
     ] = None,
     num_packs_to_display: int = 10,
     verbose: bool = False,
