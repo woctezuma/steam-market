@@ -131,7 +131,9 @@ def remove_app_ids_previously_processed(
     if app_ids_previously_processed is None:
         app_ids_previously_processed = []
 
-    app_ids_to_do = sorted(set(filtered_app_ids).difference(app_ids_previously_processed))
+    app_ids_to_do = sorted(
+        set(filtered_app_ids).difference(app_ids_previously_processed),
+    )
 
     if verbose:
         print(f'\nPositive after trimming ({len(app_ids_to_do)}): {app_ids_to_do}')
