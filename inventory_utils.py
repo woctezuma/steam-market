@@ -1,3 +1,5 @@
+from http import HTTPStatus
+
 import requests
 
 from creation_time_utils import (
@@ -194,7 +196,7 @@ def create_booster_pack(
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
     else:
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
-        if status_code == 500:
+        if status_code == HTTPStatus.INTERNAL_SERVER_ERROR:
             print(
                 f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.',
             )

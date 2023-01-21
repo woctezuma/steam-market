@@ -1,5 +1,7 @@
 # Objective: retrieve the price which sellers ask for a 'Sack of Gems'.
 
+from http import HTTPStatus
+
 from market_listing import get_listing_details
 from market_order import download_market_order_data
 from personal_info import get_cookie_dict
@@ -34,7 +36,7 @@ def download_sack_of_gems_price(
         cookie=cookie,
     )
 
-    if status_code == 200:
+    if status_code == HTTPStatus.OK:
         item_nameid = listing_details[listing_hash]['item_nameid']
 
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
