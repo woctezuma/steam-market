@@ -74,7 +74,9 @@ def load_sack_of_gems_price(
             sack_of_gems_price = download_sack_of_gems_price(sack_of_gems_listing_file_name)
 
     if verbose:
-        print(f'A sack of {get_num_gems_per_sack_of_gems()} gems can be bought for {sack_of_gems_price:.2f} €.')
+        print(
+            f'A sack of {get_num_gems_per_sack_of_gems()} gems can be bought for {sack_of_gems_price:.2f} €.',
+        )
 
     return sack_of_gems_price
 

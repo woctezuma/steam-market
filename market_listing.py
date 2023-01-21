@@ -342,7 +342,9 @@ def get_listing_details_batch(
         query_count += 1
 
         if status_code != 200:
-            print(f'Wrong status code ({status_code}) for {listing_hash} after {query_count} queries.')
+            print(
+                f'Wrong status code ({status_code}) for {listing_hash} after {query_count} queries.',
+            )
             break
 
         if query_count >= rate_limits['max_num_queries']:
@@ -350,7 +352,9 @@ def get_listing_details_batch(
                 save_json(all_listing_details, listing_details_output_file_name)
 
             cooldown_duration = rate_limits['cooldown']
-            print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
+            print(
+                f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds',
+            )
             time.sleep(cooldown_duration)
             query_count = 0
 

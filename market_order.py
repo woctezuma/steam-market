@@ -110,7 +110,9 @@ def download_market_order_data(
             status_code = None
 
     else:
-        print(f'No query to download market orders for {listing_hash}, because item name ID is unknown.')
+        print(
+            f'No query to download market orders for {listing_hash}, because item name ID is unknown.',
+        )
 
         resp_data = None
         status_code = -1
@@ -158,7 +160,9 @@ def download_market_order_data(
             if verbose:
                 print(f'Wrong status code ({status_code}): {error_reason}.')
             if status_code == 429:
-                print('You have been rate-limited. Wait for a while and double-check rate-limits before trying again.')
+                print(
+                    'You have been rate-limited. Wait for a while and double-check rate-limits before trying again.',
+                )
                 raise AssertionError()
 
         bid_price = -1
@@ -234,7 +238,9 @@ def download_market_order_data_batch(
                 save_json(market_order_dict, market_order_output_file_name)
 
             cooldown_duration = rate_limits['cooldown']
-            print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
+            print(
+                f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds',
+            )
             time.sleep(cooldown_duration)
             query_count = 0
 
@@ -291,7 +297,9 @@ def trim_market_order_data(
         try:
             market_data = market_order_dict[listing_hash]
         except KeyError:
-            print(f'[{listing_hash}] Market order data is not available offline. Allow downloading it!')
+            print(
+                f'[{listing_hash}] Market order data is not available offline. Allow downloading it!',
+            )
             app_ids_with_missing_data.append(app_id)
             continue
 

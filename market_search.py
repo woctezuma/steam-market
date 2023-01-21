@@ -167,7 +167,9 @@ def get_all_listings(
 
         if query_count >= rate_limits['max_num_queries']:
             cooldown_duration = rate_limits['cooldown']
-            print(f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds')
+            print(
+                f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds',
+            )
             time.sleep(cooldown_duration)
             query_count = 0
 
@@ -214,7 +216,9 @@ def get_all_listings(
                 listings[listing_hash]['sell_price_text'] = listing['sell_price_text']
 
         else:
-            print(f'Wrong status code ({status_code}) for start_index = {start_index} after {query_count} queries.')
+            print(
+                f'Wrong status code ({status_code}) for start_index = {start_index} after {query_count} queries.',
+            )
             if status_code is None:
                 continue
             else:
@@ -284,7 +288,9 @@ def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
     try:
         all_listings = load_json(listing_output_file_name)
     except FileNotFoundError:
-        print(f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.')
+        print(
+            f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.',
+        )
         all_listings = dict()
 
     return all_listings

@@ -63,7 +63,9 @@ def update_cookie_dict(
         new_value = dict_with_new_values[field]
 
         if new_value != current_value:
-            print(f'Updating value for cookie field {field} from {current_value} to {new_value}.')
+            print(
+                f'Updating value for cookie field {field} from {current_value} to {new_value}.',
+            )
             cookie[field] = new_value
 
     if verbose:
