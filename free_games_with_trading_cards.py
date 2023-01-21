@@ -144,11 +144,11 @@ def format_for_asf_command_line(
     return output
 
 
-def chunks(l: list, n: int) -> collections.abc.Iterator[list]:
+def chunks(lst: list, n: int) -> collections.abc.Iterator[list]:
     """Yield successive n-sized chunks from l."""
     # Reference: https://stackoverflow.com/a/312464
-    for i in range(0, len(l), n):
-        yield l[i : i + n]
+    for i in range(0, len(lst), n):
+        yield lst[i : i + n]
 
 
 def group_concatenate_to_str(
