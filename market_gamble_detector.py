@@ -209,7 +209,9 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
 
         drop_rate_for_common_rarity = clamp_proportion(drop_rate_for_common_rarity)
 
-        item_price_by_crafting_badges = num_items_of_common_rarity * badge_price / drop_rate_for_common_rarity
+        item_price_by_crafting_badges = (
+            num_items_of_common_rarity * badge_price / drop_rate_for_common_rarity
+        )
 
         sell_price_in_cents = all_listings[listing_hash]['sell_price']
         sell_price_in_euros = sell_price_in_cents / 100
@@ -404,13 +406,21 @@ def main(
 ) -> bool:
     if look_for_profile_backgrounds:
         category_name = get_category_name_for_profile_backgrounds()
-        listing_output_file_name = get_listing_output_file_name_for_profile_backgrounds()
-        listing_details_output_file_name = get_listing_details_output_file_name_for_profile_backgrounds()
-        market_order_output_file_name = get_market_order_file_name_for_profile_backgrounds()
+        listing_output_file_name = (
+            get_listing_output_file_name_for_profile_backgrounds()
+        )
+        listing_details_output_file_name = (
+            get_listing_details_output_file_name_for_profile_backgrounds()
+        )
+        market_order_output_file_name = (
+            get_market_order_file_name_for_profile_backgrounds()
+        )
     else:
         category_name = get_category_name_for_emoticons()
         listing_output_file_name = get_listing_output_file_name_for_emoticons()
-        listing_details_output_file_name = get_listing_details_output_file_name_for_emoticons()
+        listing_details_output_file_name = (
+            get_listing_details_output_file_name_for_emoticons()
+        )
         market_order_output_file_name = get_market_order_file_name_for_emoticons()
 
     # Load list of all listing hashes with common rarity tag

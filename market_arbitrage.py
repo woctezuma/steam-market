@@ -40,8 +40,10 @@ def filter_out_badges_never_crafted(
     for app_id in aggregated_badge_data.keys():
         individual_badge_data = aggregated_badge_data[app_id]
 
-        booster_pack_is_tracked = determine_whether_booster_pack_was_crafted_at_least_once(
-            individual_badge_data,
+        booster_pack_is_tracked = (
+            determine_whether_booster_pack_was_crafted_at_least_once(
+                individual_badge_data,
+            )
         )
 
         if booster_pack_is_tracked:
@@ -150,7 +152,9 @@ def filter_out_badges_with_low_sell_price(
     if user_chosen_price_threshold is None:
         threshold_name = 'gem price'
     else:
-        threshold_name = f'user-chosen price threshold {user_chosen_price_threshold / 100:.2f} €'
+        threshold_name = (
+            f'user-chosen price threshold {user_chosen_price_threshold / 100:.2f} €'
+        )
 
     filtered_badge_data = dict()
 
@@ -296,11 +300,13 @@ def print_arbitrages(
                 replace_spaces=True,
             )
 
-            listing_hash_formatted_for_markdown = '[[store]({})][[market]({})] [{}]({})'.format(
-                get_steam_store_url(app_id),
-                markdown_compatible_steam_market_url,
-                listing_hash,
-                get_steamcardexchange_url(app_id),
+            listing_hash_formatted_for_markdown = (
+                '[[store]({})][[market]({})] [{}]({})'.format(
+                    get_steam_store_url(app_id),
+                    markdown_compatible_steam_market_url,
+                    listing_hash,
+                    get_steamcardexchange_url(app_id),
+                )
             )
         else:
             listing_hash_formatted_for_markdown = listing_hash

@@ -164,7 +164,9 @@ def aggregate_badge_data(
         aggregated_badge_data[app_id]['name'] = app_name
         aggregated_badge_data[app_id]['listing_hash'] = listing_hash
         aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
-        aggregated_badge_data[app_id]['gem_price'] = gem_amount_required_to_craft_booster_pack * gem_price
+        aggregated_badge_data[app_id]['gem_price'] = (
+            gem_amount_required_to_craft_booster_pack * gem_price
+        )
         aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
         aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
 
