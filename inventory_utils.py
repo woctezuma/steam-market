@@ -24,7 +24,11 @@ def get_my_steam_profile_id() -> str:
     return my_profile_id
 
 
-def get_steam_inventory_url(profile_id: str = None, app_id: int = 753, context_id: int = 6) -> str:
+def get_steam_inventory_url(
+    profile_id: str = None,
+    app_id: int = 753,
+    context_id: int = 6,
+) -> str:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -55,7 +59,10 @@ def load_steam_inventory_from_disk(profile_id: str = None) -> [dict | None]:
     return steam_inventory
 
 
-def load_steam_inventory(profile_id: str = None, update_steam_inventory: bool = False) -> [dict | None]:
+def load_steam_inventory(
+    profile_id: str = None,
+    update_steam_inventory: bool = False,
+) -> [dict | None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -67,7 +74,10 @@ def load_steam_inventory(profile_id: str = None, update_steam_inventory: bool = 
     return steam_inventory
 
 
-def download_steam_inventory(profile_id: str = None, save_to_disk: bool = True) -> [dict | None]:
+def download_steam_inventory(
+    profile_id: str = None,
+    save_to_disk: bool = True,
+) -> [dict | None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 

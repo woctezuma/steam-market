@@ -11,7 +11,10 @@ from market_listing import fix_app_name_for_url_query
 from utils import get_badge_creation_file_name
 
 
-def parse_javascript_one_liner(badges_as_str: str, verbose: bool = False) -> dict[int, dict]:
+def parse_javascript_one_liner(
+    badges_as_str: str,
+    verbose: bool = False,
+) -> dict[int, dict]:
     badge_creation_details = dict()
 
     print('Parsing the one-line javascript code displayed with the web browser.')
@@ -36,7 +39,10 @@ def parse_javascript_one_liner(badges_as_str: str, verbose: bool = False) -> dic
     return badge_creation_details
 
 
-def parse_augmented_steam_drop_down_menu(lines: list[str], verbose: bool = False) -> dict[int, dict]:
+def parse_augmented_steam_drop_down_menu(
+    lines: list[str],
+    verbose: bool = False,
+) -> dict[int, dict]:
     badge_creation_details = dict()
 
     print('Parsing the drop-down menu displayed with Augmented Steam.')

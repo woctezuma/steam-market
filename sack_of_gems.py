@@ -19,7 +19,10 @@ def get_num_gems_per_sack_of_gems() -> int:
     return num_gems_per_sack_of_gems
 
 
-def download_sack_of_gems_price(sack_of_gems_listing_file_name: str = None, verbose: bool = True) -> float:
+def download_sack_of_gems_price(
+    sack_of_gems_listing_file_name: str = None,
+    verbose: bool = True,
+) -> float:
     if sack_of_gems_listing_file_name is None:
         sack_of_gems_listing_file_name = get_sack_of_gems_listing_file_name()
 

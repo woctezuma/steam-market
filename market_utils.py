@@ -199,7 +199,10 @@ def load_aggregated_badge_data(
     return aggregated_badge_data
 
 
-def populate_random_samples_of_badge_data(badge_data: dict[int, dict] = None, num_samples: int = 50) -> bool:
+def populate_random_samples_of_badge_data(
+    badge_data: dict[int, dict] = None,
+    num_samples: int = 50,
+) -> bool:
     if badge_data is None:
         badge_data = load_aggregated_badge_data()
 

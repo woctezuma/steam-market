@@ -28,7 +28,10 @@ def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -
     return booster_pack_has_been_crafted_at_least_once
 
 
-def filter_out_badges_never_crafted(aggregated_badge_data: dict[int, dict], verbose: bool = True) -> dict[int, dict]:
+def filter_out_badges_never_crafted(
+    aggregated_badge_data: dict[int, dict],
+    verbose: bool = True,
+) -> dict[int, dict]:
     # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
     # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
 
@@ -53,7 +56,10 @@ def filter_out_badges_never_crafted(aggregated_badge_data: dict[int, dict], verb
     return filtered_badge_data
 
 
-def filter_out_badges_recently_crafted(aggregated_badge_data: dict[int, dict], verbose: bool = True) -> dict[int, dict]:
+def filter_out_badges_recently_crafted(
+    aggregated_badge_data: dict[int, dict],
+    verbose: bool = True,
+) -> dict[int, dict]:
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
     # and thus which cannot be immediately crafted.
 

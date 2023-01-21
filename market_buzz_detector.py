@@ -73,7 +73,9 @@ def convert_to_badges(
     return badge_data
 
 
-def filter_out_unmarketable_packs(market_order_dict: dict[str, dict]) -> tuple[dict[str, dict], dict[str, dict]]:
+def filter_out_unmarketable_packs(
+    market_order_dict: dict[str, dict],
+) -> tuple[dict[str, dict], dict[str, dict]]:
     marketable_market_order_dict = dict()
     unknown_market_order_dict = dict()
 

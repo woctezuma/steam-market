@@ -180,7 +180,11 @@ def convert_listing_hash_to_app_name(listing_hash: str) -> str:
     return app_name
 
 
-def convert_to_listing_hash(app_id: int, app_name: str, listing_hash_suffixe: str = None) -> str:
+def convert_to_listing_hash(
+    app_id: int,
+    app_name: str,
+    listing_hash_suffixe: str = None,
+) -> str:
     if listing_hash_suffixe is None:
         listing_hash_suffixe = get_listing_hash_suffixe()
 
