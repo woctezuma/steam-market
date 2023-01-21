@@ -279,8 +279,8 @@ Rankings are also available for gambles with items of "Common" rarity, obtained 
 
 <!-- Definitions -->
 
-[build]: <https://travis-ci.org/woctezuma/steam-market>
-[build-image]: <https://travis-ci.org/woctezuma/steam-market.svg?branch=master>
+[build]: <https://github.com/woctezuma/steam-market/actions>
+[build-image]: <https://github.com/woctezuma/steam-market/workflows/Python application/badge.svg?branch=master>
 
 [pyup]: <https://pyup.io/repos/github/woctezuma/steam-market/>
 [dependency-image]: <https://pyup.io/repos/github/woctezuma/steam-market/shield.svg>
@@ -289,6 +289,6 @@ Rankings are also available for gambles with items of "Common" rarity, obtained 
 [codecov]: <https://codecov.io/gh/woctezuma/steam-market>
 [codecov-image]: <https://codecov.io/gh/woctezuma/steam-market/branch/master/graph/badge.svg>
 
-[codacy]: <https://www.codacy.com/app/woctezuma/steam-market>
+[codacy]: <https://app.codacy.com/gh/woctezuma/steam-market>
 [codacy-image]: <https://api.codacy.com/project/badge/Grade/c1b2f9f7a02a47a4baa22f6439be9c8a>
 
