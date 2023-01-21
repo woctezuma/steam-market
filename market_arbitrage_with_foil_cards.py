@@ -388,8 +388,7 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
     )
 
     app_ids_with_previously_downloaded_goo_details = [
-        int(app_id)
-        for app_id in previously_downloaded_all_goo_details
+        int(app_id) for app_id in previously_downloaded_all_goo_details
     ]
 
     filtered_cheapest_listing_hashes = [
@@ -957,10 +956,7 @@ def download_missing_goo_details(
     # Convert appIDs to integers, because:
     # - dictionary keys are strings in 'all_goo_details',
     # - appIDs are stored as integers in 'groups_by_app_id'.
-    app_ids_with_known_goo_details = [
-        int(app_id)
-        for app_id in all_goo_details.keys()
-    ]
+    app_ids_with_known_goo_details = [int(app_id) for app_id in all_goo_details.keys()]
 
     all_app_ids = set(groups_by_app_id)
     app_ids_with_unknown_goo_details = all_app_ids.difference(app_ids_with_known_goo_details)

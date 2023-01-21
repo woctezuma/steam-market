@@ -260,7 +260,9 @@ def main(
             min_num_listings=min_num_listings,
         )
 
-        filtered_listings = {k: v for k, v in all_listings.items() if k in filtered_listing_hashes}
+        filtered_listings = {
+            k: v for k, v in all_listings.items() if k in filtered_listing_hashes
+        }
 
         filtered_badge_data = fill_in_badge_data_with_data_from_steam_card_exchange(
             filtered_listings,
@@ -272,7 +274,9 @@ def main(
     else:
         filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
 
-        filtered_listing_hashes = [badge['listing_hash'] for badge in filtered_badge_data.values()]
+        filtered_listing_hashes = [
+            badge['listing_hash'] for badge in filtered_badge_data.values()
+        ]
 
     # Pre-retrieval of item name ids
 
