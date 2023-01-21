@@ -458,7 +458,11 @@ def try_again_to_download_goo_value(
         convert_listing_hash_to_app_id(listing_hash)
         for listing_hash in filtered_representative_listing_hashes
     ]
-    app_ids_to_process = list(set(app_ids_with_unknown_goo_value).intersection(filtered_representative_app_ids))
+    app_ids_to_process = list(
+        set(app_ids_with_unknown_goo_value).intersection(
+            filtered_representative_app_ids,
+        ),
+    )
 
     download_missing_goo_details(
         groups_by_app_id=groups_by_app_id,
@@ -1057,7 +1061,9 @@ def find_cheapest_listing_hash_for_app_id(
     cheapest_listing_hashes: list[str],
 ) -> str:
     listing_hashes_for_app_id = groups_by_app_id[app_id]
-    cheapest_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(cheapest_listing_hashes)
+    cheapest_listing_hash_for_app_id_as_a_set = set(
+        listing_hashes_for_app_id,
+    ).intersection(cheapest_listing_hashes)
 
     cheapest_listing_hash_for_app_id = list(cheapest_listing_hash_for_app_id_as_a_set)[0]
 
@@ -1091,7 +1097,9 @@ def find_representative_listing_hash_for_app_id(
         previously_used_listing_hashes_for_app_id = None
 
     listing_hashes_for_app_id = groups_by_app_id[app_id]
-    representative_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(listing_candidates)
+    representative_listing_hash_for_app_id_as_a_set = set(
+        listing_hashes_for_app_id,
+    ).intersection(listing_candidates)
 
     if (
         previously_used_listing_hashes_for_app_id is not None
