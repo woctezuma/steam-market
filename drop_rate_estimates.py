@@ -158,7 +158,9 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
         common_drop_rate = drop_rate_estimates[drop_rate_field][rarity_field]
 
         for pattern in common_drop_rate:
-            print(f'- C/UC/R: {pattern}\t--->\t{common_drop_rate[pattern]:.2f} ({rarity_field.capitalize()})')
+            print(
+                f'- C/UC/R: {pattern}\t--->\t{common_drop_rate[pattern]:.2f} ({rarity_field.capitalize()})',
+            )
 
     return drop_rate_estimates
 

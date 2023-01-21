@@ -63,7 +63,9 @@ def download_data_from_steam_card_exchange(
     if status_code == 200:
         response = resp_data.json()
     else:
-        print(f'Data could not be downloaded from SteamCardExchange. Status code {status_code} was returned.')
+        print(
+            f'Data could not be downloaded from SteamCardExchange. Status code {status_code} was returned.',
+        )
         response = None
 
     if save_to_disk and bool(response is not None):

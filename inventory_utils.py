@@ -106,7 +106,9 @@ def download_steam_inventory(
         if save_to_disk:
             save_json(steam_inventory, get_steam_inventory_file_name(profile_id))
     else:
-        print(f'Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.')
+        print(
+            f'Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.',
+        )
         steam_inventory = None
 
     return steam_inventory
@@ -191,7 +193,9 @@ def create_booster_pack(
                 f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.',
             )
         else:
-            print(f'\n[appID = {app_id}] Booster pack not created, because of status code {status_code}.')
+            print(
+                f'\n[appID = {app_id}] Booster pack not created, because of status code {status_code}.',
+            )
         result = None
 
     if verbose:
@@ -280,12 +284,18 @@ def sell_booster_pack(
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if result['success']:
-            print(f'Booster pack {asset_id} successfully sold for {price_in_cents} cents.')
+            print(
+                f'Booster pack {asset_id} successfully sold for {price_in_cents} cents.',
+            )
         else:
-            print(f'Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.')
+            print(
+                f'Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.',
+            )
     else:
         # NB: 400 means "Bad Request".
-        print(f'Booster pack {asset_id} not sold for {price_in_cents} cents. Status code {status_code} was returned.')
+        print(
+            f'Booster pack {asset_id} not sold for {price_in_cents} cents. Status code {status_code} was returned.',
+        )
         result = None
 
     if verbose:
@@ -322,7 +332,9 @@ def retrieve_asset_id(
 
             if is_marketable or (not focus_on_marketable_items):
                 if verbose:
-                    print('\nItem found without requiring to go through the entire inventory.')
+                    print(
+                        '\nItem found without requiring to go through the entire inventory.',
+                    )
                 break
 
     has_been_matched = bool(len(matched_element) > 0)
@@ -450,7 +462,9 @@ def update_and_save_next_creation_times(
                     is_first_displayed_line = False
 
                 app_name = convert_listing_hash_to_app_name(listing_hash)
-                print(f'Saving the next creation time ({formatted_next_creation_time}) for {app_name} (appID = {app_id}) to disk.')
+                print(
+                    f'Saving the next creation time ({formatted_next_creation_time}) for {app_name} (appID = {app_id}) to disk.',
+                )
 
     if save_to_disk:
         save_json(next_creation_times, next_creation_time_file_name)

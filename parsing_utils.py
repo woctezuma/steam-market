@@ -31,7 +31,9 @@ def parse_javascript_one_liner(
             next_creation_time = badge['available_at_time']
             badge_creation_details[app_id]['next_creation_time'] = next_creation_time
 
-            print(f'Loading the next creation time ({next_creation_time}) for {app_name} ({app_id = }) from the Booster Pack Creator list.')
+            print(
+                f'Loading the next creation time ({next_creation_time}) for {app_name} ({app_id = }) from the Booster Pack Creator list.',
+            )
 
         if verbose:
             print(f'{app_id:<10}{app_name}\t{gem_value} gems\t{next_creation_time}')

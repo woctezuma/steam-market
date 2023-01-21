@@ -107,7 +107,9 @@ def create_packs_for_app_ids(
         except ValueError:
             soonest_creation_time = None
 
-        print(f'The soonest creation time is {get_formatted_time(soonest_creation_time)}.')
+        print(
+            f'The soonest creation time is {get_formatted_time(soonest_creation_time)}.',
+        )
 
     return creation_results, next_creation_times
 

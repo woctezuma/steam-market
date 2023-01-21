@@ -92,14 +92,18 @@ def match_badges_with_listing_hashes(
             try:
                 badge_matches[app_id] = listing_matches_with_app_names[app_name]
                 if verbose:
-                    print(f'Match for {app_name} (appID = {app_id}) with name instead of id.')
+                    print(
+                        f'Match for {app_name} (appID = {app_id}) with name instead of id.',
+                    )
             except KeyError:
                 badge_matches[app_id] = None
                 if verbose:
                     print(f'No match found for {app_name} (appID = {app_id})')
 
     if verbose:
-        print(f'#badges = {len(badge_app_ids)} ; #matching hashes found = {len(badge_matches)}')
+        print(
+            f'#badges = {len(badge_app_ids)} ; #matching hashes found = {len(badge_matches)}',
+        )
 
     return badge_matches
 

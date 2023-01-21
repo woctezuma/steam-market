@@ -465,7 +465,9 @@ def apply_workflow(
     # - we avoid any issue with status codes, which could happen due to rate limits, after we downloaded the last batch
     #   of market orders, because there was no cooldown at the end.
 
-    print('# Results after *slow* update of market order data for *many potential* arbitrages')
+    print(
+        '# Results after *slow* update of market order data for *many potential* arbitrages',
+    )
     print_arbitrages(badge_arbitrages)
 
     latest_badge_arbitrages = update_badge_arbitrages_with_latest_market_order_data(
@@ -486,7 +488,9 @@ def apply_workflow(
         for listing_hash in few_selected_listing_hashes:
             latest_badge_arbitrages[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
 
-    print('# Results after *quick* update of market order data for *a few detected* arbitrages')
+    print(
+        '# Results after *quick* update of market order data for *a few detected* arbitrages',
+    )
     print_arbitrages(latest_badge_arbitrages)
 
     if automatically_create_then_sell_booster_packs:

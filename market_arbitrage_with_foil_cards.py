@@ -67,7 +67,9 @@ def get_item_type_no_for_trading_cards(
         item_type_no = 2
 
         if verbose:
-            print(f'Assuming item type is equal to {item_type_no}, which might be wrong.')
+            print(
+                f'Assuming item type is equal to {item_type_no}, which might be wrong.',
+            )
 
     else:
         if listing_details_output_file_name is None:
@@ -90,7 +92,9 @@ def get_item_type_no_for_trading_cards(
             listing_hashes_to_process = [listing_hash]
 
             if verbose:
-                print(f'A query is necessary to download listing details for {listing_hash}.')
+                print(
+                    f'A query is necessary to download listing details for {listing_hash}.',
+                )
 
             updated_all_listing_details = update_all_listing_details(
                 listing_hashes=listing_hashes_to_process,
@@ -175,7 +179,9 @@ def query_goo_value(
 
         if verbose:
             if goo_value > 0:
-                print(f'AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems')
+                print(
+                    f'AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems',
+                )
     else:
         goo_value = None
 
@@ -702,7 +708,9 @@ def discard_necessarily_unrewarding_app_ids(
     potentially_rewarding_app_ids = sorted(potentially_rewarding_app_ids)
 
     if verbose:
-        print(f'There are {len(potentially_rewarding_app_ids)} potentially rewarding appIDs.')
+        print(
+            f'There are {len(potentially_rewarding_app_ids)} potentially rewarding appIDs.',
+        )
 
     return potentially_rewarding_app_ids
 
@@ -821,7 +829,9 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
         if ask_in_cents == 0:
             # NB: The ask cannot be equal to zero. So, we skip the listing because of there must be a bug.
             if verbose:
-                print(f'[!]\tImpossible ask price ({ask_in_cents / 100:.2f}€) for {listing_hash}')
+                print(
+                    f'[!]\tImpossible ask price ({ask_in_cents / 100:.2f}€) for {listing_hash}',
+                )
             continue
 
         profit_in_cents = goo_value_in_cents - ask_in_cents

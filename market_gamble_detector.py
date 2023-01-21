@@ -72,7 +72,9 @@ def update_all_listings_for_profile_backgrounds(
     tag_drop_rate_str: str = None,
     rarity: str = None,
 ) -> None:
-    print(f'Downloading listings for profile backgrounds (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).')
+    print(
+        f'Downloading listings for profile backgrounds (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).',
+    )
 
     update_all_listings(
         listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
@@ -89,7 +91,9 @@ def update_all_listings_for_emoticons(
     tag_drop_rate_str: str = None,
     rarity: str = None,
 ) -> None:
-    print(f'Downloading listings for emoticons (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).')
+    print(
+        f'Downloading listings for emoticons (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).',
+    )
 
     update_all_listings(
         listing_output_file_name=get_listing_output_file_name_for_emoticons(
@@ -121,7 +125,9 @@ def update_all_listings_for_items_other_than_cards(
     rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
     cooldown_duration = rate_limits['cooldown']
-    print(f'Forced cooldown between profile backgrounds and emoticons. Cooldown: {cooldown_duration} seconds')
+    print(
+        f'Forced cooldown between profile backgrounds and emoticons. Cooldown: {cooldown_duration} seconds',
+    )
     time.sleep(cooldown_duration)
 
     # Emoticons
