@@ -1,6 +1,7 @@
 # Objective: retrieve i) the item name id of a listing, and ii) whether a *crafted* item would really be marketable.
 import ast
 import time
+from http import HTTPStatus
 
 import requests
 from bs4 import BeautifulSoup
@@ -354,7 +355,7 @@ def get_listing_details_batch(
 
         query_count += 1
 
-        if status_code != 200:
+        if status_code != HTTPStatus.OK:
             print(
                 f'Wrong status code ({status_code}) for {listing_hash} after {query_count} queries.',
             )

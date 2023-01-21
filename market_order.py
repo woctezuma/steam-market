@@ -1,6 +1,7 @@
 # Objective: retrieve the ask and bid for Booster Packs.
 
 import time
+from http import HTTPStatus
 
 import requests
 
@@ -126,7 +127,7 @@ def download_market_order_data(
         resp_data = None
         status_code = -1
 
-    if status_code == 200:
+    if status_code == HTTPStatus.OK:
         result = resp_data.json()
 
         if has_secured_cookie:
@@ -168,7 +169,7 @@ def download_market_order_data(
             error_reason = resp_data.reason
             if verbose:
                 print(f'Wrong status code ({status_code}): {error_reason}.')
-            if status_code == 429:
+            if status_code == HTTPStatus.TOO_MANY_REQUESTS:
                 print(
                     'You have been rate-limited. Wait for a while and double-check rate-limits before trying again.',
                 )

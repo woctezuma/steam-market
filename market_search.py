@@ -2,6 +2,7 @@
 #            along with the sell price, and the volume available at this price.
 
 import time
+from http import HTTPStatus
 from pathlib import Path
 
 import requests
@@ -189,7 +190,7 @@ def get_all_listings(
         start_index += delta_index
         query_count += 1
 
-        if status_code == 200:
+        if status_code == HTTPStatus.OK:
             result = resp_data.json()
 
             if has_secured_cookie:
