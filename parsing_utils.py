@@ -49,8 +49,8 @@ def parse_augmented_steam_drop_down_menu(
 
     print('Parsing the drop-down menu displayed with Augmented Steam.')
 
-    for l in lines:
-        s = l.split()
+    for line in lines:
+        s = line.split()
         # e.g. ['<option', 'value="614910"', 'class="available">#monstercakes', '-', '1200', 'Gems</option>']
 
         # Hard-coded parsing
@@ -88,7 +88,7 @@ def parse_badge_creation_details(
             )
 
     with open(badge_creation_file_name, encoding='utf-8') as f:
-        lines = [l.strip() for l in f.readlines() if l[0] != '#']
+        lines = [line.strip() for line in f.readlines() if line[0] != '#']
 
     if len(lines) > 1:
         badge_creation_details = parse_augmented_steam_drop_down_menu(
