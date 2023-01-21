@@ -210,7 +210,9 @@ def populate_random_samples_of_badge_data(
     if badge_data is None:
         badge_data = load_aggregated_badge_data()
 
-    listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
+    listing_hashes = [
+        badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()
+    ]
 
     num_samples = min(num_samples, len(listing_hashes))
 

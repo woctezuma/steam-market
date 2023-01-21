@@ -198,7 +198,9 @@ def download_market_order_data_batch(
 
     # Pre-retrieval of item name ids
 
-    listing_hashes = [badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()]
+    listing_hashes = [
+        badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()
+    ]
 
     item_nameids = get_item_nameid_batch(
         listing_hashes,

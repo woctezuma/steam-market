@@ -170,15 +170,15 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             #     ]
 
             actions_of_interest = [
-                owner_action for owner_action in owner_actions
+                owner_action
+                for owner_action in owner_actions
                 if owner_action['name'] == owner_action_name_of_interest
             ]
 
             links = [owner_action['link'] for owner_action in actions_of_interest]
 
             javascript_links = [
-                link for link in links
-                if link.startswith('javascript:')
+                link for link in links if link.startswith('javascript:')
             ]
 
             # There should only be one javascript link.

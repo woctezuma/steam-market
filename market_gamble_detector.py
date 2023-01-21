@@ -275,7 +275,10 @@ def get_market_orders(
 
     available_listing_hashes = list(market_order_dict.keys())
 
-    selected_listing_hashes = [filtered_badge_data[app_id]['listing_hash'] for app_id in filtered_badge_data.keys()]
+    selected_listing_hashes = [
+        filtered_badge_data[app_id]['listing_hash']
+        for app_id in filtered_badge_data.keys()
+    ]
 
     for listing_hash in available_listing_hashes:
         if listing_hash not in selected_listing_hashes:
@@ -438,7 +441,9 @@ def main(
 
     # Pre-retrieval of item name ids
 
-    selected_listing_hashes = [badge['listing_hash'] for badge in filtered_badge_data.values()]
+    selected_listing_hashes = [
+        badge['listing_hash'] for badge in filtered_badge_data.values()
+    ]
 
     item_nameids = get_item_nameid_batch(
         selected_listing_hashes,

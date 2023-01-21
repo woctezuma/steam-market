@@ -53,7 +53,8 @@ def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]
         data = steamspypi.load()
 
         free_apps = [
-            int(game['appid']) for game in data.values()
+            int(game['appid'])
+            for game in data.values()
             if game['initialprice'] is not None  # I don't know what to do in the rare case that price is None.
             and int(game['initialprice']) == 0
         ]
@@ -81,7 +82,9 @@ def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]
 def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
     all_listings = load_all_listings()
 
-    apps_with_trading_cards = [convert_listing_hash_to_app_id(listing_hash) for listing_hash in all_listings]
+    apps_with_trading_cards = [
+        convert_listing_hash_to_app_id(listing_hash) for listing_hash in all_listings
+    ]
 
     if verbose:
         print(f'Apps with trading cards: {len(apps_with_trading_cards)}')
@@ -167,12 +170,12 @@ def group_concatenate_to_str(
 
     inner_sep = space_sep
 
-    output = group_sep.join([
-        inner_sep.join([
-            str(app_id) for app_id in group
-        ])
-        for group in chunks(data, group_size)
-    ])
+    output = group_sep.join(
+        [
+            inner_sep.join([str(app_id) for app_id in group])
+            for group in chunks(data, group_size)
+        ],
+    )
 
     if prepend_asf_command:
         # Prepend the ASF command to the first line (missed by .join() calls)
