@@ -59,7 +59,7 @@ def create_packs_for_app_ids(
         filtered_badge_data=filtered_badge_data,
     )
 
-    creation_results = dict()
+    creation_results = {}
 
     for app_id in app_ids:
 

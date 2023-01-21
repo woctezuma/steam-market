@@ -122,7 +122,7 @@ def parse_data_from_steam_card_exchange(
 
     # Build dict: app_id -> num_cards_per_set
 
-    dico = dict()
+    dico = {}
 
     for app_info in response['data']:
         app_id = int(app_info[0][0])
@@ -133,7 +133,7 @@ def parse_data_from_steam_card_exchange(
             print(f'No card found for {app_name} (appID = {app_id})')
             continue
 
-        dico[app_id] = dict()
+        dico[app_id] = {}
         dico[app_id]['app_id'] = app_id
         dico[app_id]['name'] = app_name
         dico[app_id]['num_cards_per_set'] = num_cards_per_set

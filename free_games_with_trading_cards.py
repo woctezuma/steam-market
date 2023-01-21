@@ -60,7 +60,7 @@ def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]
         ]
 
     else:
-        data_request = dict()
+        data_request = {}
 
         if method == 'genre':
             data_request['request'] = 'genre'

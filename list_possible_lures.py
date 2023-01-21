@@ -32,7 +32,7 @@ def get_sell_prices_without_fee(
 
     data = load_all_listings()
 
-    sell_prices = dict()
+    sell_prices = {}
 
     for listing_hash in data:
         app_id_as_int = convert_listing_hash_to_app_id(listing_hash)
@@ -58,7 +58,7 @@ def get_gem_amount_for_a_booster_pack(app_ids: list[str]) -> dict[str, int]:
 
     data = parse_badge_creation_details(from_javascript=True)
 
-    gem_amounts_for_a_booster_pack = dict()
+    gem_amounts_for_a_booster_pack = {}
 
     for app_id in app_ids:
         try:

@@ -35,7 +35,7 @@ def filter_out_badges_never_crafted(
     # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
     # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
 
-    filtered_badge_data = dict()
+    filtered_badge_data = {}
 
     for app_id in aggregated_badge_data.keys():
         individual_badge_data = aggregated_badge_data[app_id]
@@ -67,7 +67,7 @@ def filter_out_badges_recently_crafted(
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
     # and thus which cannot be immediately crafted.
 
-    filtered_badge_data = dict()
+    filtered_badge_data = {}
 
     current_time = get_current_time()
 
@@ -156,7 +156,7 @@ def filter_out_badges_with_low_sell_price(
             f'user-chosen price threshold {user_chosen_price_threshold / 100:.2f} €'
         )
 
-    filtered_badge_data = dict()
+    filtered_badge_data = {}
 
     unknown_price_counter = 0
 
@@ -204,7 +204,7 @@ def find_badge_arbitrages(
             verbose=verbose,
         )
 
-    badge_arbitrages = dict()
+    badge_arbitrages = {}
 
     for app_id in badge_data.keys():
         individual_badge_data = badge_data[app_id]
@@ -236,7 +236,7 @@ def find_badge_arbitrages(
         is_an_arbitrage = bool(delta > 0)
 
         if is_an_arbitrage:
-            badge_arbitrages[listing_hash] = dict()
+            badge_arbitrages[listing_hash] = {}
 
             # Warning: for profile backgrounds and emoticons, you cannot trust the value of app_id stored here,
             #          because app_id is a dummy variable, which is simply a copy of listing_hash.
@@ -339,7 +339,7 @@ def convert_arbitrages_for_batch_create_then_sell(
 ) -> dict[str, float]:
     # Code inspired from print_arbitrages()
 
-    price_dict_for_listing_hashes = dict()
+    price_dict_for_listing_hashes = {}
 
     for listing_hash in sorted(
         badge_arbitrages.keys(),
@@ -373,7 +373,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
     # Objective: ensure that we have the latest market orders before trying to automatically create & sell booster packs
 
     # Based on arbitrage_data, select the badge_data for which we want to download (again) the latest market orders:
-    selected_badge_data = dict()
+    selected_badge_data = {}
 
     for listing_hash in arbitrage_data.keys():
         arbitrage = arbitrage_data[listing_hash]

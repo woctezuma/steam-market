@@ -140,7 +140,7 @@ def get_booster_pack_creation_parameters(
     session_id: str,
     is_marketable: bool = True,
 ) -> dict[str, str]:
-    booster_pack_creation_parameters = dict()
+    booster_pack_creation_parameters = {}
 
     if is_marketable:
         tradability_preference = 1
@@ -221,7 +221,7 @@ def get_market_sell_parameters(
     price_in_cents: float,  # this is the money which you, as the seller, will receive
     session_id: str,
 ) -> dict[str, str]:
-    market_sell_parameters = dict()
+    market_sell_parameters = {}
 
     market_sell_parameters['sessionid'] = str(session_id)
     market_sell_parameters['appid'] = '753'
@@ -322,7 +322,7 @@ def retrieve_asset_id(
 
     descriptions = steam_inventory['rgDescriptions']
 
-    matched_element = dict()
+    matched_element = {}
 
     for element in descriptions:
         if descriptions[element]['market_hash_name'] == listing_hash:
@@ -375,7 +375,7 @@ def retrieve_asset_id(
 
 
 def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict | None]:
-    results = dict()
+    results = {}
 
     for listing_hash in listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -392,7 +392,7 @@ def sell_booster_packs_for_batch(
     focus_on_marketable_items: bool = True,
     profile_id: str = None,
 ) -> dict[str, dict | None]:
-    results = dict()
+    results = {}
 
     steam_inventory = load_steam_inventory(
         profile_id=profile_id,

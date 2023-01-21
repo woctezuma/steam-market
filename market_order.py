@@ -23,7 +23,7 @@ def get_steam_market_order_url() -> str:
 
 
 def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
-    params = dict()
+    params = {}
 
     params['country'] = 'FR'
     params['language'] = 'english'
@@ -225,7 +225,7 @@ def download_market_order_data_batch(
     rate_limits = get_steam_api_rate_limits_for_market_order(has_secured_cookie)
 
     if market_order_dict is None:
-        market_order_dict = dict()
+        market_order_dict = {}
 
     query_count = 0
 
@@ -237,7 +237,7 @@ def download_market_order_data_batch(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
-        market_order_dict[listing_hash] = dict()
+        market_order_dict[listing_hash] = {}
         market_order_dict[listing_hash]['bid'] = bid_price
         market_order_dict[listing_hash]['ask'] = ask_price
         market_order_dict[listing_hash]['bid_volume'] = bid_volume
@@ -299,8 +299,8 @@ def trim_market_order_data(
     badge_data: dict[int | str, dict],
     market_order_dict: dict[str, dict],
 ) -> tuple[dict[str, dict], list[int | str]]:
-    trimmed_market_order_dict = dict()
-    app_ids_with_missing_data = list()
+    trimmed_market_order_dict = {}
+    app_ids_with_missing_data = []
 
     for app_id in badge_data.keys():
         listing_hash = badge_data[app_id]['listing_hash']
@@ -314,7 +314,7 @@ def trim_market_order_data(
             app_ids_with_missing_data.append(app_id)
             continue
 
-        trimmed_market_order_dict[listing_hash] = dict()
+        trimmed_market_order_dict[listing_hash] = {}
         trimmed_market_order_dict[listing_hash] = market_data
 
     print()
@@ -350,8 +350,8 @@ def main() -> bool:
 
     app_id = listing_hash.split('-', maxsplit=1)[0]
 
-    badge_data = dict()
-    badge_data[app_id] = dict()
+    badge_data = {}
+    badge_data[app_id] = {}
     badge_data[app_id]['listing_hash'] = listing_hash
 
     market_order_dict = download_market_order_data_batch(

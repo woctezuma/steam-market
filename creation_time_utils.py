@@ -13,11 +13,11 @@ def load_next_creation_time_data(
     try:
         next_creation_times = load_json(next_creation_time_file_name)
     except FileNotFoundError:
-        next_creation_times = dict()
+        next_creation_times = {}
 
     # NB: the keys in a dictionary loaded from a .json file are always str. We want to convert them to int now.
 
-    next_creation_times_with_keys_as_int = dict()
+    next_creation_times_with_keys_as_int = {}
 
     for app_id_as_str in next_creation_times.keys():
         app_id_as_int = int(app_id_as_str)

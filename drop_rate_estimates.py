@@ -40,7 +40,7 @@ def clamp_proportion(input_proportion: float) -> float:
 def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -> dict:
     # Drop-rate estimates conditionally on the item rarity pattern C/UC/R (the numbers of possible items of each rarity)
 
-    drop_rate_estimates = dict()
+    drop_rate_estimates = {}
 
     drop_rate_estimates['badges'] = 1025
 
@@ -48,8 +48,8 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
     badge_count_field = get_badge_count_field()
     rarity_field = 'common'
 
-    drop_rate_estimates[drop_rate_field] = dict()
-    drop_rate_estimates[badge_count_field] = dict()
+    drop_rate_estimates[drop_rate_field] = {}
+    drop_rate_estimates[badge_count_field] = {}
 
     # Drop rates for common rarity based on the item rarity pattern (C, UC, R):
     #
@@ -175,7 +175,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
 def get_drop_rate_estimates(verbose: bool = True) -> dict:
     # Drop-rate estimates conditionally on the category (profile backgrounds, emoticons)
 
-    drop_rate_estimates = dict()
+    drop_rate_estimates = {}
 
     drop_rate_estimates['badges'] = 1025
 
@@ -183,8 +183,8 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
     drop_rate_field = get_drop_rate_field()
     rarity_fields = get_rarity_fields()
 
-    drop_rate_estimates[category_field] = dict()
-    drop_rate_estimates[category_field][drop_rate_field] = dict()
+    drop_rate_estimates[category_field] = {}
+    drop_rate_estimates[category_field][drop_rate_field] = {}
     drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.6609
     drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2264
     drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.1146
@@ -197,8 +197,8 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     category_field = get_category_name_for_emoticons()
 
-    drop_rate_estimates[category_field] = dict()
-    drop_rate_estimates[category_field][drop_rate_field] = dict()
+    drop_rate_estimates[category_field] = {}
+    drop_rate_estimates[category_field][drop_rate_field] = {}
     drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.7299
     drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.1865
     drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.0855

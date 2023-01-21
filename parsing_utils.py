@@ -15,7 +15,7 @@ def parse_javascript_one_liner(
     badges_as_str: str,
     verbose: bool = False,
 ) -> dict[int, dict]:
-    badge_creation_details = dict()
+    badge_creation_details = {}
 
     print('Parsing the one-line javascript code displayed with the web browser.')
 
@@ -45,7 +45,7 @@ def parse_augmented_steam_drop_down_menu(
     lines: list[str],
     verbose: bool = False,
 ) -> dict[int, dict]:
-    badge_creation_details = dict()
+    badge_creation_details = {}
 
     print('Parsing the drop-down menu displayed with Augmented Steam.')
 
@@ -62,7 +62,7 @@ def parse_augmented_steam_drop_down_menu(
 
         app_name = fix_app_name_for_url_query(app_name)
 
-        badge_creation_details[app_id] = dict()
+        badge_creation_details[app_id] = {}
         badge_creation_details[app_id]['name'] = app_name
         badge_creation_details[app_id]['gem_value'] = gem_value
 

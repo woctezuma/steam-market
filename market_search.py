@@ -84,7 +84,7 @@ def get_search_parameters(
     column_to_sort_by = 'name'
     sort_direction = 'asc'
 
-    params = dict()
+    params = {}
 
     params['norender'] = '1'
     params['category_753_Game[]'] = 'any'
@@ -144,7 +144,7 @@ def get_all_listings(
     rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
     if all_listings is None:
-        all_listings = dict()
+        all_listings = {}
 
     num_listings = None
 
@@ -206,11 +206,11 @@ def get_all_listings(
             else:
                 num_listings = num_listings_based_on_latest_query
 
-            listings = dict()
+            listings = {}
             for listing in result['results']:
                 listing_hash = listing['hash_name']
 
-                listings[listing_hash] = dict()
+                listings[listing_hash] = {}
                 listings[listing_hash]['sell_listings'] = listing['sell_listings']
                 listings[listing_hash]['sell_price'] = listing['sell_price']
                 listings[listing_hash]['sell_price_text'] = listing['sell_price_text']
@@ -293,7 +293,7 @@ def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
         print(
             f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.',
         )
-        all_listings = dict()
+        all_listings = {}
 
     return all_listings
 
