@@ -62,7 +62,7 @@ def download_data_from_steam_card_exchange(
 
     status_code = resp_data.status_code
 
-    if status_code == 200:
+    if resp_data.ok:
         response = resp_data.json()
     else:
         print(

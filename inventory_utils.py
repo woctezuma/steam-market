@@ -100,7 +100,7 @@ def download_steam_inventory(
 
     status_code = resp_data.status_code
 
-    if status_code == 200:
+    if resp_data.ok:
         steam_inventory = resp_data.json()
 
         if has_secured_cookie:
@@ -183,7 +183,7 @@ def create_booster_pack(
 
     status_code = resp_data.status_code
 
-    if status_code == 200:
+    if resp_data.ok:
         # Expected result:
         # {"purchase_result":{"communityitemid":"XXX","appid":685400,"item_type":36, "purchaseid":"XXX",
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
@@ -281,7 +281,7 @@ def sell_booster_pack(
 
     status_code = resp_data.status_code
 
-    if status_code == 200:
+    if resp_data.ok:
         # Expected result:
         # {"success":true,"requires_confirmation":0}
         result = resp_data.json()

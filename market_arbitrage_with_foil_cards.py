@@ -172,7 +172,7 @@ def query_goo_value(
         resp_data = requests.get(url, params=req_data)
     status_code = resp_data.status_code
 
-    if status_code == 200:
+    if resp_data.ok:
         result = resp_data.json()
 
         if has_secured_cookie:

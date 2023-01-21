@@ -26,7 +26,7 @@ def download_user_data() -> [dict | None]:
         cookies=cookie,
     )
 
-    if resp_data.status_code == 200:
+    if resp_data.ok:
         result = resp_data.json()
 
         jar = dict(resp_data.cookies)

@@ -295,7 +295,7 @@ def get_listing_details(
 
     status_code = resp_data.status_code
 
-    if status_code == 200:
+    if resp_data.ok:
         html_doc = resp_data.text
 
         if has_secured_cookie:
