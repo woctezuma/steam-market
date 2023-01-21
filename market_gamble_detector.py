@@ -167,7 +167,10 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
         gem_price_in_euros = get_gem_price()
 
     if drop_rate_estimates_for_common_rarity is None:
-        if category_name is not None and category_name != get_category_name_for_booster_packs():
+        if (
+            category_name is not None
+            and category_name != get_category_name_for_booster_packs()
+        ):
             drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=verbose)
             drop_rate_field = get_drop_rate_field()
             rarity_field = 'common'

@@ -280,7 +280,10 @@ def find_representative_listing_hashes(
 
         representative_listing_hash = sorted_listing_hashes[0]
 
-        if previously_used_listing_hashes_for_app_id is None or len(previously_used_listing_hashes_for_app_id) == 0:
+        if (
+            previously_used_listing_hashes_for_app_id is None
+            or len(previously_used_listing_hashes_for_app_id) == 0
+        ):
             # Append the first element found in groups_by_app_id, after sorting by lexicographical order:
             representative_listing_hashes.append(representative_listing_hash)
         else:
@@ -394,7 +397,8 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
     filtered_cheapest_listing_hashes = [
         listing_hash
         for listing_hash in filtered_cheapest_listing_hashes
-        if convert_listing_hash_to_app_id(listing_hash) not in app_ids_with_previously_downloaded_goo_details
+        if convert_listing_hash_to_app_id(listing_hash)
+        not in app_ids_with_previously_downloaded_goo_details
     ]
 
     return filtered_cheapest_listing_hashes
@@ -412,7 +416,8 @@ def propagate_filter_to_representative_listing_hashes(
     filtered_representative_listing_hashes = [
         listing_hash
         for listing_hash in listing_hashes_to_propagate_to
-        if convert_listing_hash_to_app_id(listing_hash) in filtered_app_ids_based_on_price_threshold
+        if convert_listing_hash_to_app_id(listing_hash)
+        in filtered_app_ids_based_on_price_threshold
     ]
 
     return filtered_representative_listing_hashes
@@ -426,7 +431,8 @@ def try_again_to_download_item_type(
     listing_hashes_to_process = [
         listing_hash
         for listing_hash in filtered_representative_listing_hashes
-        if convert_listing_hash_to_app_id(listing_hash) in app_ids_with_unreliable_goo_details
+        if convert_listing_hash_to_app_id(listing_hash)
+        in app_ids_with_unreliable_goo_details
     ]
 
     updated_all_listing_details = update_all_listing_details(
@@ -1041,7 +1047,10 @@ def find_representative_listing_hash_for_app_id(
     listing_hashes_for_app_id = groups_by_app_id[app_id]
     representative_listing_hash_for_app_id_as_a_set = set(listing_hashes_for_app_id).intersection(listing_candidates)
 
-    if previously_used_listing_hashes_for_app_id is not None and len(previously_used_listing_hashes_for_app_id) > 0:
+    if (
+        previously_used_listing_hashes_for_app_id is not None
+        and len(previously_used_listing_hashes_for_app_id) > 0
+    ):
         representative_listing_hash_for_app_id_as_a_set = representative_listing_hash_for_app_id_as_a_set.intersection(
             previously_used_listing_hashes_for_app_id,
         )

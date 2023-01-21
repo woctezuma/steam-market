@@ -145,7 +145,10 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
     # For each crafted badge, the user receives two items: one emoticon and one profile background.
     num_items_crafted_per_badge = 2
 
-    if num_crafted_items_to_compute_estimates != num_crafted_badges_to_compute_estimates * num_items_crafted_per_badge:
+    if (
+        num_crafted_items_to_compute_estimates
+        != num_crafted_badges_to_compute_estimates * num_items_crafted_per_badge
+    ):
         raise AssertionError()
 
     if verbose:
