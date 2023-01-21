@@ -4,7 +4,9 @@ from src.json_utils import load_json
 from utils import get_next_creation_time_file_name
 
 
-def load_next_creation_time_data(next_creation_time_file_name: str = None) -> dict[int, str]:
+def load_next_creation_time_data(
+    next_creation_time_file_name: str = None,
+) -> dict[int, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 

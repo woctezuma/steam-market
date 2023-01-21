@@ -9,7 +9,9 @@ def get_steam_cookie_file_name() -> str:
     return steam_cookie_file_name
 
 
-def load_steam_cookie_from_disk(file_name_with_personal_info: str = None) -> dict[str, str]:
+def load_steam_cookie_from_disk(
+    file_name_with_personal_info: str = None,
+) -> dict[str, str]:
     if file_name_with_personal_info is None:
         file_name_with_personal_info = get_steam_cookie_file_name()
 

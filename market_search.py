@@ -106,7 +106,9 @@ def get_search_parameters(
     return params
 
 
-def get_steam_api_rate_limits_for_market_search(has_secured_cookie: bool = False) -> dict[str, int]:
+def get_steam_api_rate_limits_for_market_search(
+    has_secured_cookie: bool = False,
+) -> dict[str, int]:
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:

@@ -75,7 +75,9 @@ def download_data_from_steam_card_exchange(
     return response
 
 
-def load_data_from_steam_card_exchange(steam_card_exchange_file_name: str = None) -> [dict | None]:
+def load_data_from_steam_card_exchange(
+    steam_card_exchange_file_name: str = None,
+) -> [dict | None]:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 

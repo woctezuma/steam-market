@@ -60,7 +60,9 @@ def get_listing_parameters() -> dict[str, str]:
     return params
 
 
-def get_steam_api_rate_limits_for_market_listing(has_secured_cookie: bool = False) -> dict[str, int]:
+def get_steam_api_rate_limits_for_market_listing(
+    has_secured_cookie: bool = False,
+) -> dict[str, int]:
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
@@ -391,7 +393,9 @@ def update_all_listing_details(
     return all_listing_details
 
 
-def load_all_listing_details(listing_details_output_file_name: str = None) -> dict[str, dict]:
+def load_all_listing_details(
+    listing_details_output_file_name: str = None,
+) -> dict[str, dict]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
@@ -517,7 +521,9 @@ def get_item_nameid_batch(
     return item_nameids
 
 
-def update_marketability_status(few_selected_listing_hashes: list[str]) -> dict[str, dict]:
+def update_marketability_status(
+    few_selected_listing_hashes: list[str],
+) -> dict[str, dict]:
     item_nameids = get_item_nameid_batch(
         listing_hashes=[],
         listing_hashes_to_forcefully_process=few_selected_listing_hashes,

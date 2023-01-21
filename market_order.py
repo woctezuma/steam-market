@@ -34,7 +34,9 @@ def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
     return params
 
 
-def get_steam_api_rate_limits_for_market_order(has_secured_cookie: bool = False) -> dict[str, int]:
+def get_steam_api_rate_limits_for_market_order(
+    has_secured_cookie: bool = False,
+) -> dict[str, int]:
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
@@ -301,7 +303,9 @@ def trim_market_order_data(
     return trimmed_market_order_dict, app_ids_with_missing_data
 
 
-def load_market_order_data_from_disk(market_order_output_file_name: str = None) -> [dict[str, dict] | None]:
+def load_market_order_data_from_disk(
+    market_order_output_file_name: str = None,
+) -> [dict[str, dict] | None]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
 
