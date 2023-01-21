@@ -155,10 +155,12 @@ def print_packs_with_high_buzz(
             num_different_items_of_uncommon_rarity = item_rarity_pattern['uncommon']
             num_different_items_of_rare_rarity = item_rarity_pattern['rare']
 
-            item_rarity_pattern_info = ' ; rarity pattern C/UC/R: {}/{}/{} items'.format(
-                num_different_items_of_common_rarity,
-                num_different_items_of_uncommon_rarity,
-                num_different_items_of_rare_rarity,
+            item_rarity_pattern_info = (
+                ' ; rarity pattern C/UC/R: {}/{}/{} items'.format(
+                    num_different_items_of_common_rarity,
+                    num_different_items_of_uncommon_rarity,
+                    num_different_items_of_rare_rarity,
+                )
             )
         except TypeError:
             item_rarity_pattern_info = ''
@@ -218,7 +220,9 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(
         gem_amount_required_to_craft_booster_pack = data_from_steam_card_exchange['gem_amount']
 
         aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
-        aggregated_badge_data[app_id]['gem_price'] = gem_amount_required_to_craft_booster_pack * gem_price
+        aggregated_badge_data[app_id]['gem_price'] = (
+            gem_amount_required_to_craft_booster_pack * gem_price
+        )
         aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
 
     return aggregated_badge_data

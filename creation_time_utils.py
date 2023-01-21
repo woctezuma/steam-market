@@ -167,7 +167,9 @@ def get_crafting_cooldown_duration_in_days() -> int:
 
 
 def get_crafting_cooldown_duration_in_seconds() -> int:
-    crafting_cooldown_duration_in_seconds = 24 * 3600 * get_crafting_cooldown_duration_in_days()
+    crafting_cooldown_duration_in_seconds = (
+        24 * 3600 * get_crafting_cooldown_duration_in_days()
+    )
 
     return crafting_cooldown_duration_in_seconds
 
@@ -214,7 +216,9 @@ def determine_whether_a_booster_pack_can_be_crafted(
             get_crafting_cooldown_duration_in_seconds() < delta_in_seconds,
         )
 
-        a_booster_pack_can_be_crafted = cooldown_has_ended or cooldown_actually_ended_last_year
+        a_booster_pack_can_be_crafted = (
+            cooldown_has_ended or cooldown_actually_ended_last_year
+        )
 
     return a_booster_pack_can_be_crafted
 

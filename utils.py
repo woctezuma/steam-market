@@ -60,7 +60,9 @@ def get_listing_output_file_name_for_profile_backgrounds(
         rarity=rarity,
     )
 
-    listing_output_file_name = get_data_folder() + 'listings_for_profile_backgrounds' + suffix + '.json'
+    listing_output_file_name = (
+        get_data_folder() + 'listings_for_profile_backgrounds' + suffix + '.json'
+    )
     return listing_output_file_name
 
 
@@ -73,7 +75,9 @@ def get_listing_output_file_name_for_emoticons(
         rarity=rarity,
     )
 
-    listing_output_file_name = get_data_folder() + 'listings_for_emoticons' + suffix + '.json'
+    listing_output_file_name = (
+        get_data_folder() + 'listings_for_emoticons' + suffix + '.json'
+    )
     return listing_output_file_name
 
 
@@ -88,17 +92,23 @@ def get_listing_output_file_name() -> str:
 
 
 def get_listing_details_output_file_name_for_profile_backgrounds() -> str:
-    listing_details_output_file_name = get_data_folder() + 'listing_details_for_profile_backgrounds.json'
+    listing_details_output_file_name = (
+        get_data_folder() + 'listing_details_for_profile_backgrounds.json'
+    )
     return listing_details_output_file_name
 
 
 def get_listing_details_output_file_name_for_emoticons() -> str:
-    listing_details_output_file_name = get_data_folder() + 'listing_details_for_emoticons.json'
+    listing_details_output_file_name = (
+        get_data_folder() + 'listing_details_for_emoticons.json'
+    )
     return listing_details_output_file_name
 
 
 def get_listing_details_output_file_name_for_foil_cards() -> str:
-    listing_details_output_file_name = get_data_folder() + 'listing_details_for_foil_cards.json'
+    listing_details_output_file_name = (
+        get_data_folder() + 'listing_details_for_foil_cards.json'
+    )
     return listing_details_output_file_name
 
 
@@ -108,7 +118,9 @@ def get_listing_details_output_file_name() -> str:
 
 
 def get_goo_details_file_nam_for_for_foil_cards() -> str:
-    goo_details_file_nam_for_for_foil_cards = get_data_folder() + 'goo_details_for_foil_cards.json'
+    goo_details_file_nam_for_for_foil_cards = (
+        get_data_folder() + 'goo_details_for_foil_cards.json'
+    )
     return goo_details_file_nam_for_for_foil_cards
 
 
@@ -119,7 +131,9 @@ def get_sack_of_gems_listing_file_name() -> str:
 
 
 def get_market_order_file_name_for_profile_backgrounds() -> str:
-    market_order_file_name = get_data_folder() + 'market_orders_for_profile_backgrounds.json'
+    market_order_file_name = (
+        get_data_folder() + 'market_orders_for_profile_backgrounds.json'
+    )
     return market_order_file_name
 
 
@@ -196,7 +210,9 @@ def convert_to_listing_hash(
 def get_steamcardexchange_url(app_id: int) -> str:
     # This page shows the number of cards, and provides links to the store page and the market pages.
     # NB: this allows to compute the crafting cost of a booster pack costs, as an amount of gems equal to 6000/num_cards
-    steamcardexchange_url = 'https://www.steamcardexchange.net/index.php?gamepage-appid-' + str(app_id)
+    steamcardexchange_url = (
+        'https://www.steamcardexchange.net/index.php?gamepage-appid-' + str(app_id)
+    )
 
     return steamcardexchange_url
 

@@ -17,7 +17,9 @@ def get_current_unix_time_in_ms() -> int:
 
 
 def get_steamcardexchange_api_end_point_url() -> str:
-    steamcardexchange_api_end_point_url = 'https://www.steamcardexchange.net/api/request.php'
+    steamcardexchange_api_end_point_url = (
+        'https://www.steamcardexchange.net/api/request.php'
+    )
 
     return steamcardexchange_api_end_point_url
 

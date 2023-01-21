@@ -35,14 +35,18 @@ def get_steam_inventory_url(
     # References:
     # https://github.com/Alex7Kom/node-steam-tradeoffers/issues/114
     # https://dev.doctormckay.com/topic/332-identifying-steam-items/
-    steam_inventory_url = 'https://steamcommunity.com/profiles/' + str(profile_id) + '/inventory/json/'
+    steam_inventory_url = (
+        'https://steamcommunity.com/profiles/' + str(profile_id) + '/inventory/json/'
+    )
     steam_inventory_url += str(app_id) + '/' + str(context_id) + '/'
 
     return steam_inventory_url
 
 
 def get_steam_inventory_file_name(profile_id: str) -> str:
-    steam_inventory_file_name = get_data_folder() + 'inventory_' + str(profile_id) + '.json'
+    steam_inventory_file_name = (
+        get_data_folder() + 'inventory_' + str(profile_id) + '.json'
+    )
 
     return steam_inventory_file_name
 
@@ -124,7 +128,9 @@ def get_session_id(cookie: dict[str, str] = None) -> str:
 
 
 def get_steam_booster_pack_creation_url() -> str:
-    booster_pack_creation_url = 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
+    booster_pack_creation_url = (
+        'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
+    )
 
     return booster_pack_creation_url
 
