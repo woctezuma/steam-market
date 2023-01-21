@@ -50,8 +50,7 @@ def compute_sell_price_without_fee(sell_price_including_fee: float) -> float:
 
     steam_transaction_fee_price = max(
         0.01,
-        price / (1 + steam_transaction_fee)
-        * steam_transaction_fee,
+        price / (1 + steam_transaction_fee) * steam_transaction_fee,
     )
     price -= steam_transaction_fee_price
 
@@ -61,8 +60,7 @@ def compute_sell_price_without_fee(sell_price_including_fee: float) -> float:
 
     game_specific_transaction_fee_price = max(
         0.01,
-        price / (1 + game_specific_transaction_fee)
-        * game_specific_transaction_fee,
+        price / (1 + game_specific_transaction_fee) * game_specific_transaction_fee,
     )
     price -= game_specific_transaction_fee_price
 
