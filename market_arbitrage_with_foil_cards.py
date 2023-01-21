@@ -1051,7 +1051,9 @@ def find_representative_listing_hash_for_app_id(
         )
 
     # Sort with respect to lexicographical order.
-    sorted_representative_listing_hash_for_app_id_as_list = sorted(representative_listing_hash_for_app_id_as_a_set)
+    sorted_representative_listing_hash_for_app_id_as_list = sorted(
+        representative_listing_hash_for_app_id_as_a_set,
+    )
 
     representative_listing_hash_for_app_id = list(sorted_representative_listing_hash_for_app_id_as_list)[0]
 

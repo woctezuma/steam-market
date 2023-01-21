@@ -270,7 +270,11 @@ def print_arbitrages(
 ) -> None:
     bullet_point = get_bullet_point_for_display(use_numbered_bullet_points=use_numbered_bullet_points)
 
-    for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
+    for listing_hash in sorted(
+        badge_arbitrages.keys(),
+        key=lambda x: badge_arbitrages[x]['profit'],
+        reverse=True,
+    ):
         arbitrage = badge_arbitrages[listing_hash]
 
         # Skip unmarketable booster packs
@@ -325,7 +329,11 @@ def convert_arbitrages_for_batch_create_then_sell(
 
     price_dict_for_listing_hashes = dict()
 
-    for listing_hash in sorted(badge_arbitrages.keys(), key=lambda x: badge_arbitrages[x]['profit'], reverse=True):
+    for listing_hash in sorted(
+        badge_arbitrages.keys(),
+        key=lambda x: badge_arbitrages[x]['profit'],
+        reverse=True,
+    ):
         arbitrage = badge_arbitrages[listing_hash]
 
         # Skip unmarketable booster packs
