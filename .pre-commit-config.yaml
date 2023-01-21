@@ -24,13 +24,7 @@ repos:
     rev: v0.0.228
     hooks:
     - id: ruff
-      args: [--fix, --target-version, "py311", --extend-ignore, "F841,E501"]
-
--   repo: https://github.com/pycqa/isort
-    rev: 5.11.4
-    hooks:
-    - id: isort
-      args: [--profile, "black"]
+      args: [--fix, --target-version, "py311", --extend-select, "I", --extend-ignore, "F841,E501"]
 
 -   repo: https://github.com/asottile/add-trailing-comma
     rev: v2.4.0
