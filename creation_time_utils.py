@@ -210,7 +210,9 @@ def determine_whether_a_booster_pack_can_be_crafted(
 
         # current_time + cooldown < parsed_next_creation_time
         # NB: this is necessary because we do not keep track of the year.
-        cooldown_actually_ended_last_year = bool(get_crafting_cooldown_duration_in_seconds() < delta_in_seconds)
+        cooldown_actually_ended_last_year = bool(
+            get_crafting_cooldown_duration_in_seconds() < delta_in_seconds,
+        )
 
         a_booster_pack_can_be_crafted = cooldown_has_ended or cooldown_actually_ended_last_year
 
