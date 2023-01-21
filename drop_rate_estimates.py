@@ -98,7 +98,9 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
 
     for pattern in common_drop_rate:
         current_drop_rate = common_drop_rate[pattern]
-        drop_rate_estimates[drop_rate_field][rarity_field][pattern] = clamp_proportion(current_drop_rate)
+        drop_rate_estimates[drop_rate_field][rarity_field][pattern] = clamp_proportion(
+            current_drop_rate,
+        )
 
     drop_rate_estimates[badge_count_field][rarity_field] = {
         # Patterns found for profile background and emoticons:
@@ -140,7 +142,9 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
     }
 
     num_crafted_badges_to_compute_estimates = drop_rate_estimates['badges']
-    num_crafted_items_to_compute_estimates = sum(drop_rate_estimates[badge_count_field][rarity_field].values())
+    num_crafted_items_to_compute_estimates = sum(
+        drop_rate_estimates[badge_count_field][rarity_field].values(),
+    )
 
     # For each crafted badge, the user receives two items: one emoticon and one profile background.
     num_items_crafted_per_badge = 2
@@ -187,7 +191,9 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     for rarity in rarity_fields:
         current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
-        drop_rate_estimates[category_field][drop_rate_field][rarity] = clamp_proportion(current_drop_rate)
+        drop_rate_estimates[category_field][drop_rate_field][rarity] = clamp_proportion(
+            current_drop_rate,
+        )
 
     category_field = get_category_name_for_emoticons()
 
@@ -199,7 +205,9 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     for rarity in rarity_fields:
         current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
-        drop_rate_estimates[category_field][drop_rate_field][rarity] = clamp_proportion(current_drop_rate)
+        drop_rate_estimates[category_field][drop_rate_field][rarity] = clamp_proportion(
+            current_drop_rate,
+        )
 
     if verbose:
         print(
@@ -228,7 +236,9 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 def main() -> bool:
     drop_rate_estimates = get_drop_rate_estimates(verbose=True)
 
-    drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=True)
+    drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(
+        verbose=True,
+    )
 
     return True
 

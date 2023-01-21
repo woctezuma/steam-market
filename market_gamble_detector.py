@@ -171,7 +171,9 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
             category_name is not None
             and category_name != get_category_name_for_booster_packs()
         ):
-            drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(verbose=verbose)
+            drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(
+                verbose=verbose,
+            )
             drop_rate_field = get_drop_rate_field()
             rarity_field = 'common'
             drop_rate_estimates_for_common_rarity = drop_rate_estimates[drop_rate_field][rarity_field]
@@ -241,7 +243,9 @@ def get_market_orders(
 ) -> dict[str, dict]:
     # Load market orders (bid, ask) from disk
 
-    market_order_dict = load_market_order_data_from_disk(market_order_output_file_name=market_order_output_file_name)
+    market_order_dict = load_market_order_data_from_disk(
+        market_order_output_file_name=market_order_output_file_name,
+    )
 
     # Filter out listing hashes which have already been encountered at least once
 
@@ -323,18 +327,26 @@ def get_listings_with_other_rarity_tags(
 
     if look_for_profile_backgrounds:
         all_listings_for_uncommon = load_all_listings(
-            listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(rarity='uncommon'),
+            listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
+                rarity='uncommon',
+            ),
         )
         all_listings_for_rare = load_all_listings(
-            listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(rarity='rare'),
+            listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
+                rarity='rare',
+            ),
         )
 
     else:
         all_listings_for_uncommon = load_all_listings(
-            listing_output_file_name=get_listing_output_file_name_for_emoticons(rarity='uncommon'),
+            listing_output_file_name=get_listing_output_file_name_for_emoticons(
+                rarity='uncommon',
+            ),
         )
         all_listings_for_rare = load_all_listings(
-            listing_output_file_name=get_listing_output_file_name_for_emoticons(rarity='rare'),
+            listing_output_file_name=get_listing_output_file_name_for_emoticons(
+                rarity='rare',
+            ),
         )
 
     return all_listings_for_uncommon, all_listings_for_rare
@@ -414,15 +426,22 @@ def main(
 
     # Load list of all listing hashes with other rarity tags (uncommon and rare)
 
-    all_listings_for_uncommon, all_listings_for_rare = get_listings_with_other_rarity_tags(
+    (
+        all_listings_for_uncommon,
+        all_listings_for_rare,
+    ) = get_listings_with_other_rarity_tags(
         look_for_profile_backgrounds=look_for_profile_backgrounds,
         retrieve_listings_with_another_rarity_tag_from_scratch=retrieve_listings_with_another_rarity_tag_from_scratch,
     )
 
     # Count the number of **different** items with other rarity tags (uncommon and rare)  for each appID
 
-    listing_hashes_per_app_id_for_uncommon = count_listing_hashes_per_app_id(all_listings_for_uncommon)
-    listing_hashes_per_app_id_for_rare = count_listing_hashes_per_app_id(all_listings_for_rare)
+    listing_hashes_per_app_id_for_uncommon = count_listing_hashes_per_app_id(
+        all_listings_for_uncommon,
+    )
+    listing_hashes_per_app_id_for_rare = count_listing_hashes_per_app_id(
+        all_listings_for_rare,
+    )
 
     # Enumerate patterns C/UC/R for each appID
 
@@ -466,7 +485,10 @@ def main(
 
     # Only keep marketable booster packs
 
-    marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+    (
+        marketable_market_order_dict,
+        unknown_market_order_dict,
+    ) = filter_out_unmarketable_packs(market_order_dict)
 
     # Sort by bid value
     hashes_for_best_bid = sort_according_to_buzz(

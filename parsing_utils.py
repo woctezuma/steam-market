@@ -78,29 +78,43 @@ def parse_badge_creation_details(
     verbose: bool = False,
 ) -> dict[int, dict]:
     if badge_creation_file_name is None:
-        badge_creation_file_name = get_badge_creation_file_name(from_javascript=from_javascript)
+        badge_creation_file_name = get_badge_creation_file_name(
+            from_javascript=from_javascript,
+        )
 
         if not Path(badge_creation_file_name).exists():
-            badge_creation_file_name = get_badge_creation_file_name(from_javascript=not from_javascript)
+            badge_creation_file_name = get_badge_creation_file_name(
+                from_javascript=not from_javascript,
+            )
 
     with open(badge_creation_file_name, encoding='utf-8') as f:
         lines = [l.strip() for l in f.readlines() if l[0] != '#']
 
     if len(lines) > 1:
-        badge_creation_details = parse_augmented_steam_drop_down_menu(lines, verbose=verbose)
+        badge_creation_details = parse_augmented_steam_drop_down_menu(
+            lines,
+            verbose=verbose,
+        )
     else:
         badges_as_str = lines[0]
-        badge_creation_details = parse_javascript_one_liner(badges_as_str, verbose=verbose)
+        badge_creation_details = parse_javascript_one_liner(
+            badges_as_str,
+            verbose=verbose,
+        )
 
     return badge_creation_details
 
 
 def main() -> bool:
-    badge_creation_details = parse_badge_creation_details(get_badge_creation_file_name(from_javascript=False))
+    badge_creation_details = parse_badge_creation_details(
+        get_badge_creation_file_name(from_javascript=False),
+    )
 
     print(f'#badges = {len(badge_creation_details)}')
 
-    badge_creation_details = parse_badge_creation_details(get_badge_creation_file_name(from_javascript=True))
+    badge_creation_details = parse_badge_creation_details(
+        get_badge_creation_file_name(from_javascript=True),
+    )
 
     print(f'#badges = {len(badge_creation_details)}')
 

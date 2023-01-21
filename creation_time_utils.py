@@ -33,7 +33,9 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
 ) -> dict[int, dict]:
     next_creation_times_loaded_from_disk = load_next_creation_time_data()
 
-    app_ids = set(aggregated_badge_data.keys()).intersection(next_creation_times_loaded_from_disk.keys())
+    app_ids = set(aggregated_badge_data.keys()).intersection(
+        next_creation_times_loaded_from_disk.keys(),
+    )
 
     for app_id in app_ids:
         next_creation_time = next_creation_times_loaded_from_disk[app_id]
@@ -196,7 +198,9 @@ def determine_whether_a_booster_pack_can_be_crafted(
             year_to_be_manually_set = current_time.year
 
         # Manually set the year, because it was not stored at creation time, following Valve's time format.
-        parsed_next_creation_time = parsed_next_creation_time.replace(year=year_to_be_manually_set)
+        parsed_next_creation_time = parsed_next_creation_time.replace(
+            year=year_to_be_manually_set,
+        )
 
         delta = parsed_next_creation_time - current_time
         delta_in_seconds = delta.total_seconds()
