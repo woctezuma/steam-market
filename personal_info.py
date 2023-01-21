@@ -18,7 +18,7 @@ def load_steam_cookie_from_disk(
     try:
         cookie = load_json(file_name_with_personal_info)
     except FileNotFoundError:
-        cookie = dict()
+        cookie = {}
 
     return cookie
 

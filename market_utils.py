@@ -25,7 +25,7 @@ def filter_out_dubious_listing_hashes(
     #   362680-Fran Bow #Economy_TradingCards_ItemType_BoosterPack
     #   844870-#Economy_TradingCards_Type_GameType
 
-    filtered_listings = dict()
+    filtered_listings = {}
 
     for listing_hash in all_listings.keys():
         individual_market_listing = all_listings[listing_hash]
@@ -72,8 +72,8 @@ def match_badges_with_listing_hashes(
 
     # Dictionaries to match appIDs or app names with listing hashes
 
-    listing_matches_with_app_ids = dict()
-    listing_matches_with_app_names = dict()
+    listing_matches_with_app_ids = {}
+    listing_matches_with_app_names = {}
     for listing_hash in all_listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
         app_name = convert_listing_hash_to_app_name(listing_hash)
@@ -83,7 +83,7 @@ def match_badges_with_listing_hashes(
 
     # Match badges with listing hashes
 
-    badge_matches = dict()
+    badge_matches = {}
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]['name']
 
@@ -141,7 +141,7 @@ def aggregate_badge_data(
 
     badge_app_ids = list(badge_creation_details.keys())
 
-    aggregated_badge_data = dict()
+    aggregated_badge_data = {}
 
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]['name']
@@ -160,7 +160,7 @@ def aggregate_badge_data(
             sell_price_in_cents = all_listings[listing_hash]['sell_price']
             sell_price_in_euros = sell_price_in_cents / 100
 
-        aggregated_badge_data[app_id] = dict()
+        aggregated_badge_data[app_id] = {}
         aggregated_badge_data[app_id]['name'] = app_name
         aggregated_badge_data[app_id]['listing_hash'] = listing_hash
         aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack

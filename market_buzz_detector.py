@@ -58,7 +58,7 @@ def convert_to_badges(
     filtered_listing_hashes: [dict[str, dict] | list[str]],
     max_num_badges: int = None,
 ) -> dict[int, dict]:
-    badge_data = dict()
+    badge_data = {}
 
     for i, listing_hash in enumerate(filtered_listing_hashes):
 
@@ -67,7 +67,7 @@ def convert_to_badges(
 
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
-        badge_data[app_id] = dict()
+        badge_data[app_id] = {}
         badge_data[app_id]['listing_hash'] = listing_hash
 
     return badge_data
@@ -76,8 +76,8 @@ def convert_to_badges(
 def filter_out_unmarketable_packs(
     market_order_dict: dict[str, dict],
 ) -> tuple[dict[str, dict], dict[str, dict]]:
-    marketable_market_order_dict = dict()
-    unknown_market_order_dict = dict()
+    marketable_market_order_dict = {}
+    unknown_market_order_dict = {}
 
     for listing_hash in market_order_dict:
         try:

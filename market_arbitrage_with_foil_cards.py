@@ -142,7 +142,7 @@ def get_steam_goo_value_parameters(
 
     border_color = get_border_color_no_for_trading_cards(is_foil=is_foil)
 
-    params = dict()
+    params = {}
 
     params['appid'] = str(app_id)
     params['item_type'] = item_type
@@ -215,7 +215,7 @@ def group_listing_hashes_by_app_id(
     all_listings: dict[str, dict],
     verbose: bool = True,
 ) -> dict[int, list[str]]:
-    groups_by_app_id = dict()
+    groups_by_app_id = {}
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
@@ -348,7 +348,7 @@ def load_all_goo_details(
     try:
         all_goo_details = load_json(goo_details_file_name)
     except FileNotFoundError:
-        all_goo_details = dict()
+        all_goo_details = {}
 
     if verbose:
         print(f'Loading {len(all_goo_details)} goo details from disk.')
@@ -832,7 +832,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
 
     sack_of_gems_price_in_cents = 100 * sack_of_gems_price_in_euros
 
-    arbitrages = dict()
+    arbitrages = {}
 
     for listing_hash in eligible_listing_hashes:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -873,7 +873,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
         is_arbitrage = bool(profit_in_cents > 0)
 
         if is_arbitrage:
-            arbitrage = dict()
+            arbitrage = {}
             arbitrage['profit'] = profit_in_cents / 100
             arbitrage['ask'] = ask_in_cents / 100
             arbitrage['goo_amount'] = goo_value_in_gems
@@ -1204,7 +1204,7 @@ def build_dictionary_of_representative_listing_hashes(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
-    dictionary_of_representative_listing_hashes = dict()
+    dictionary_of_representative_listing_hashes = {}
 
     for listing_hash in all_listing_details:
         app_id = convert_listing_hash_to_app_id(listing_hash)

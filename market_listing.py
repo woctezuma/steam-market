@@ -59,7 +59,7 @@ def get_steam_market_listing_url(
 
 
 def get_listing_parameters() -> dict[str, str]:
-    params = dict()
+    params = {}
 
     params['currency'] = '3'
 
@@ -275,7 +275,7 @@ def get_listing_details(
     cookie: dict[str, str] = None,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
-    listing_details = dict()
+    listing_details = {}
 
     url = get_steam_market_listing_url(
         listing_hash=listing_hash,
@@ -313,7 +313,7 @@ def get_listing_details(
         if item_type_no is None:
             print(f'Item type not found for {listing_hash}')
 
-        listing_details[listing_hash] = dict()
+        listing_details[listing_hash] = {}
         listing_details[listing_hash]['item_nameid'] = item_nameid
         listing_details[listing_hash]['is_marketable'] = is_marketable
         listing_details[listing_hash]['item_type_no'] = item_type_no
@@ -336,7 +336,7 @@ def get_listing_details_batch(
     rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
 
     if all_listing_details is None:
-        all_listing_details = dict()
+        all_listing_details = {}
 
     num_listings = len(listing_hashes)
 
@@ -484,10 +484,10 @@ def get_item_nameid_batch(
     try:
         listing_details = load_json(listing_details_output_file_name)
 
-        item_nameids = dict()
+        item_nameids = {}
         listing_hashes_to_process = []
         for listing_hash in listing_hashes:
-            item_nameids[listing_hash] = dict()
+            item_nameids[listing_hash] = {}
             try:
                 item_nameid = listing_details[listing_hash]['item_nameid']
                 is_marketable = listing_details[listing_hash]['is_marketable']
@@ -511,7 +511,7 @@ def get_item_nameid_batch(
                     # This happens if the listing hash is:
                     # - fed through 'listing_hashes_to_forcefully_process'
                     # - yet not fed through 'listing_hashes'
-                    item_nameids[listing_hash] = dict()
+                    item_nameids[listing_hash] = {}
 
                 item_nameid = listing_details[listing_hash]['item_nameid']
                 is_marketable = listing_details[listing_hash]['is_marketable']
@@ -525,9 +525,9 @@ def get_item_nameid_batch(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
-        item_nameids = dict()
+        item_nameids = {}
         for listing_hash in listing_hashes:
-            item_nameids[listing_hash] = dict()
+            item_nameids[listing_hash] = {}
 
             item_nameid = listing_details[listing_hash]['item_nameid']
             is_marketable = listing_details[listing_hash]['is_marketable']
