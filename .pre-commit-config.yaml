@@ -1,4 +1,4 @@
-files: \.(json|py|txt|yaml)$
+files: \.(json|py)$
 repos:
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -10,15 +10,6 @@ repos:
       - "--no-ensure-ascii"
       - "--indent=4"
       - "--no-sort-keys"
-    - id: check-ast
-    - id: requirements-txt-fixer
-    - id: trailing-whitespace
-      args: [--markdown-linebreak-ext=md]
-
--   repo: https://github.com/hadialqattan/pycln
-    rev: v2.1.3
-    hooks:
-    - id: pycln
 
 -   repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.0.228
