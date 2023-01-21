@@ -73,7 +73,9 @@ def compute_sell_price_without_fee(sell_price_including_fee: float) -> float:
 
     # Manually adjust the fee cost for small prices (until I have access to the right formula)
     if sell_price_including_fee <= 0.66:
-        sell_price_without_fee = get_ground_truth_sell_price_without_fee(sell_price_including_fee)
+        sell_price_without_fee = get_ground_truth_sell_price_without_fee(
+            sell_price_including_fee,
+        )
 
     return sell_price_without_fee
 
@@ -82,7 +84,9 @@ def main() -> bool:
     print('With fee\t\tWithout fee')
     for i in range(3, 25):
         sell_price_including_fee = i / 100
-        sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
+        sell_price_without_fee = compute_sell_price_without_fee(
+            sell_price_including_fee,
+        )
         print(f'{sell_price_including_fee:.2f}€\t--->\t{sell_price_without_fee:.2f}€')
 
     return True

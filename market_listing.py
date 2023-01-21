@@ -153,7 +153,11 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             # There should only be one assetID. However, we can try to run the rest of the code even if there are several.
             if len(ids) > 1:
                 asset_dict = assets[app_id][context_id]
-                asset_id = figure_out_relevant_id(asset_dict, ids, owner_action_name_of_interest)
+                asset_id = figure_out_relevant_id(
+                    asset_dict,
+                    ids,
+                    owner_action_name_of_interest,
+                )
 
             owner_actions = assets[app_id][context_id][asset_id]['owner_actions']
 
@@ -267,7 +271,10 @@ def get_listing_details(
 ) -> tuple[dict[str, dict], int]:
     listing_details = dict()
 
-    url = get_steam_market_listing_url(listing_hash=listing_hash, render_as_json=render_as_json)
+    url = get_steam_market_listing_url(
+        listing_hash=listing_hash,
+        render_as_json=render_as_json,
+    )
     req_data = get_listing_parameters()
 
     if cookie is None:

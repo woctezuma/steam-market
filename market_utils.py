@@ -30,7 +30,9 @@ def filter_out_dubious_listing_hashes(
     for listing_hash in all_listings.keys():
         individual_market_listing = all_listings[listing_hash]
 
-        booster_pack_is_dubious = determine_whether_listing_hash_is_dubious(listing_hash)
+        booster_pack_is_dubious = determine_whether_listing_hash_is_dubious(
+            listing_hash,
+        )
 
         if not booster_pack_is_dubious:
             filtered_listings[listing_hash] = individual_market_listing
@@ -175,7 +177,9 @@ def load_aggregated_badge_data(
     minimum_allowed_sack_of_gems_price: float = None,
     from_javascript: bool = False,
 ) -> dict[int, dict]:
-    badge_creation_details = parse_badge_creation_details(from_javascript=from_javascript)
+    badge_creation_details = parse_badge_creation_details(
+        from_javascript=from_javascript,
+    )
 
     if retrieve_listings_from_scratch:
         update_all_listings()

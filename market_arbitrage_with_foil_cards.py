@@ -550,7 +550,9 @@ def apply_workflow_for_foil_cards(
 
     # Fetch goo values
 
-    all_listing_details = load_all_listing_details(listing_details_output_file_name=listing_details_output_file_name)
+    all_listing_details = load_all_listing_details(
+        listing_details_output_file_name=listing_details_output_file_name,
+    )
 
     all_goo_details = download_missing_goo_details(
         groups_by_app_id=groups_by_app_id,
@@ -858,7 +860,9 @@ def print_arbitrages_for_foil_cards(
     arbitrages: dict[str, dict[str, float]],
     use_numbered_bullet_points: bool = False,
 ) -> None:
-    bullet_point = get_bullet_point_for_display(use_numbered_bullet_points=use_numbered_bullet_points)
+    bullet_point = get_bullet_point_for_display(
+        use_numbered_bullet_points=use_numbered_bullet_points,
+    )
 
     sorted_arbitrages = sorted(
         arbitrages.keys(),
@@ -965,11 +969,17 @@ def download_missing_goo_details(
     app_ids_with_known_goo_details = [int(app_id) for app_id in all_goo_details.keys()]
 
     all_app_ids = set(groups_by_app_id)
-    app_ids_with_unknown_goo_details = all_app_ids.difference(app_ids_with_known_goo_details)
+    app_ids_with_unknown_goo_details = all_app_ids.difference(
+        app_ids_with_known_goo_details,
+    )
 
-    eligible_enforced_app_ids_to_process = all_app_ids.intersection(enforced_app_ids_to_process)
+    eligible_enforced_app_ids_to_process = all_app_ids.intersection(
+        enforced_app_ids_to_process,
+    )
 
-    app_ids_to_process = app_ids_with_unknown_goo_details.union(eligible_enforced_app_ids_to_process)
+    app_ids_to_process = app_ids_with_unknown_goo_details.union(
+        eligible_enforced_app_ids_to_process,
+    )
 
     query_count = 0
 

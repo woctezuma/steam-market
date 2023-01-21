@@ -40,7 +40,9 @@ def filter_out_badges_never_crafted(
     for app_id in aggregated_badge_data.keys():
         individual_badge_data = aggregated_badge_data[app_id]
 
-        booster_pack_is_tracked = determine_whether_booster_pack_was_crafted_at_least_once(individual_badge_data)
+        booster_pack_is_tracked = determine_whether_booster_pack_was_crafted_at_least_once(
+            individual_badge_data,
+        )
 
         if booster_pack_is_tracked:
             filtered_badge_data[app_id] = individual_badge_data
@@ -157,7 +159,9 @@ def filter_out_badges_with_low_sell_price(
     for app_id in aggregated_badge_data.keys():
         individual_badge_data = aggregated_badge_data[app_id]
 
-        sell_price_is_unknown = determine_whether_sell_price_is_unknown(individual_badge_data)
+        sell_price_is_unknown = determine_whether_sell_price_is_unknown(
+            individual_badge_data,
+        )
 
         an_arbitrage_might_exist = determine_whether_an_arbitrage_might_exist(
             individual_badge_data,
@@ -268,7 +272,9 @@ def print_arbitrages(
     use_numbered_bullet_points: bool = False,
     use_hyperlink: bool = False,
 ) -> None:
-    bullet_point = get_bullet_point_for_display(use_numbered_bullet_points=use_numbered_bullet_points)
+    bullet_point = get_bullet_point_for_display(
+        use_numbered_bullet_points=use_numbered_bullet_points,
+    )
 
     for listing_hash in sorted(
         badge_arbitrages.keys(),
@@ -400,10 +406,14 @@ def get_filtered_badge_data(
         from_javascript=from_javascript,
     )
 
-    aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(aggregated_badge_data)
+    aggregated_badge_data = fill_in_badges_with_next_creation_times_loaded_from_disk(
+        aggregated_badge_data,
+    )
 
     if check_ask_price:
-        filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+        filtered_badge_data = filter_out_badges_with_low_sell_price(
+            aggregated_badge_data,
+        )
     else:
         filtered_badge_data = aggregated_badge_data
 
@@ -487,7 +497,9 @@ def apply_workflow(
     # Update marketability status
     if enforce_update_of_marketability_status:
         few_selected_listing_hashes = list(latest_badge_arbitrages.keys())
-        item_nameids = update_marketability_status(few_selected_listing_hashes=few_selected_listing_hashes)
+        item_nameids = update_marketability_status(
+            few_selected_listing_hashes=few_selected_listing_hashes,
+        )
 
         # Override values which had been previously loaded into memory
         #

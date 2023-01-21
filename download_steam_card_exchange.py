@@ -112,7 +112,9 @@ def parse_data_from_steam_card_exchange(
 
     if response is None:
         if force_update_from_steam_card_exchange:
-            response = download_data_from_steam_card_exchange(steam_card_exchange_file_name)
+            response = download_data_from_steam_card_exchange(
+                steam_card_exchange_file_name,
+            )
         else:
             response = load_data_from_steam_card_exchange(steam_card_exchange_file_name)
 
@@ -133,7 +135,9 @@ def parse_data_from_steam_card_exchange(
         dico[app_id]['app_id'] = app_id
         dico[app_id]['name'] = app_name
         dico[app_id]['num_cards_per_set'] = num_cards_per_set
-        dico[app_id]['gem_amount'] = compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set)
+        dico[app_id]['gem_amount'] = compute_gem_amount_required_to_craft_booster_pack(
+            num_cards_per_set,
+        )
 
     print(f'{len(dico)} games found in the database.')
 

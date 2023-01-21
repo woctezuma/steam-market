@@ -262,7 +262,9 @@ def update_all_listings(
         listing_output_file_name = get_listing_output_file_name()
 
     try:
-        all_listings = load_all_listings(listing_output_file_name=listing_output_file_name)
+        all_listings = load_all_listings(
+            listing_output_file_name=listing_output_file_name,
+        )
         print(f'Loading {len(all_listings)} listings from disk.')
     except FileNotFoundError:
         print('Downloading listings from scratch.')

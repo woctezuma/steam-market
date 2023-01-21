@@ -99,7 +99,10 @@ def sort_according_to_buzz(
     marketable_market_order_dict: dict[str, dict] = None,
 ) -> list[str]:
     if marketable_market_order_dict is None:
-        marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+        (
+            marketable_market_order_dict,
+            unknown_market_order_dict,
+        ) = filter_out_unmarketable_packs(market_order_dict)
 
     hashes_for_best_bid = sorted(
         list(marketable_market_order_dict),
@@ -272,7 +275,9 @@ def main(
         )
 
     else:
-        filtered_badge_data = filter_out_badges_with_low_sell_price(aggregated_badge_data)
+        filtered_badge_data = filter_out_badges_with_low_sell_price(
+            aggregated_badge_data,
+        )
 
         filtered_listing_hashes = [
             badge['listing_hash'] for badge in filtered_badge_data.values()
@@ -293,7 +298,10 @@ def main(
 
     # Only keep marketable booster packs
 
-    marketable_market_order_dict, unknown_market_order_dict = filter_out_unmarketable_packs(market_order_dict)
+    (
+        marketable_market_order_dict,
+        unknown_market_order_dict,
+    ) = filter_out_unmarketable_packs(market_order_dict)
 
     # Sort by bid value
     hashes_for_best_bid = sort_according_to_buzz(

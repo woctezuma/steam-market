@@ -388,7 +388,10 @@ def sell_booster_packs_for_batch(
 ) -> dict[str, dict | None]:
     results = dict()
 
-    steam_inventory = load_steam_inventory(profile_id=profile_id, update_steam_inventory=update_steam_inventory)
+    steam_inventory = load_steam_inventory(
+        profile_id=profile_id,
+        update_steam_inventory=update_steam_inventory,
+    )
 
     for (listing_hash, price_in_cents) in price_dict_for_listing_hashes.items():
 
@@ -440,7 +443,9 @@ def update_and_save_next_creation_times(
     next_creation_times = load_next_creation_time_data(next_creation_time_file_name)
 
     delay_in_days = get_crafting_cooldown_duration_in_days()
-    formatted_next_creation_time = get_formatted_current_time(delay_in_days=delay_in_days)
+    formatted_next_creation_time = get_formatted_current_time(
+        delay_in_days=delay_in_days,
+    )
 
     save_to_disk = False
     is_first_displayed_line = True
@@ -478,7 +483,9 @@ def main() -> None:
 
     price_dict_for_listing_hashes = {listing_hash: price_in_cents}
 
-    creation_results, sale_results = create_then_sell_booster_packs_for_batch(price_dict_for_listing_hashes)
+    creation_results, sale_results = create_then_sell_booster_packs_for_batch(
+        price_dict_for_listing_hashes,
+    )
 
 
 if __name__ == '__main__':

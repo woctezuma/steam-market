@@ -37,7 +37,11 @@ def download_sack_of_gems_price(
     if status_code == 200:
         item_nameid = listing_details[listing_hash]['item_nameid']
 
-        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(listing_hash, item_nameid, verbose)
+        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
+            listing_hash,
+            item_nameid,
+            verbose,
+        )
         listing_details[listing_hash]['bid'] = bid_price
         listing_details[listing_hash]['ask'] = ask_price
         listing_details[listing_hash]['bid_volume'] = bid_volume
@@ -71,7 +75,9 @@ def load_sack_of_gems_price(
 
             sack_of_gems_price = listing_details[listing_hash]['ask']
         except FileNotFoundError:
-            sack_of_gems_price = download_sack_of_gems_price(sack_of_gems_listing_file_name)
+            sack_of_gems_price = download_sack_of_gems_price(
+                sack_of_gems_listing_file_name,
+            )
 
     if verbose:
         print(
@@ -88,7 +94,10 @@ def get_gem_price(
     verbose: bool = True,
 ) -> float:
     if enforced_sack_of_gems_price is None:
-        sack_of_gems_price = load_sack_of_gems_price(retrieve_gem_price_from_scratch, verbose=verbose)
+        sack_of_gems_price = load_sack_of_gems_price(
+            retrieve_gem_price_from_scratch,
+            verbose=verbose,
+        )
     else:
         sack_of_gems_price = enforced_sack_of_gems_price
         print(
