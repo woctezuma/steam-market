@@ -181,11 +181,10 @@ def query_goo_value(
 
         goo_value = int(result['goo_value'])
 
-        if verbose:
-            if goo_value > 0:
-                print(
-                    f'AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems',
-                )
+        if verbose and goo_value > 0:
+            print(
+                f'AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems',
+            )
     else:
         goo_value = None
 
