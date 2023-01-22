@@ -27,7 +27,7 @@ def filter_out_dubious_listing_hashes(
 
     filtered_listings = {}
 
-    for listing_hash in all_listings.keys():
+    for listing_hash in all_listings:
         individual_market_listing = all_listings[listing_hash]
 
         booster_pack_is_dubious = determine_whether_listing_hash_is_dubious(
@@ -217,7 +217,7 @@ def populate_random_samples_of_badge_data(
         badge_data = load_aggregated_badge_data()
 
     listing_hashes = [
-        badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()
+        badge_data[app_id]['listing_hash'] for app_id in badge_data
     ]
 
     num_samples = min(num_samples, len(listing_hashes))

@@ -37,7 +37,7 @@ def filter_out_badges_never_crafted(
 
     filtered_badge_data = {}
 
-    for app_id in aggregated_badge_data.keys():
+    for app_id in aggregated_badge_data:
         individual_badge_data = aggregated_badge_data[app_id]
 
         booster_pack_is_tracked = (
@@ -71,7 +71,7 @@ def filter_out_badges_recently_crafted(
 
     current_time = get_current_time()
 
-    for app_id in aggregated_badge_data.keys():
+    for app_id in aggregated_badge_data:
         individual_badge_data = aggregated_badge_data[app_id]
 
         booster_pack_can_be_crafted = determine_whether_a_booster_pack_can_be_crafted(
@@ -160,7 +160,7 @@ def filter_out_badges_with_low_sell_price(
 
     unknown_price_counter = 0
 
-    for app_id in aggregated_badge_data.keys():
+    for app_id in aggregated_badge_data:
         individual_badge_data = aggregated_badge_data[app_id]
 
         sell_price_is_unknown = determine_whether_sell_price_is_unknown(
@@ -206,7 +206,7 @@ def find_badge_arbitrages(
 
     badge_arbitrages = {}
 
-    for app_id in badge_data.keys():
+    for app_id in badge_data:
         individual_badge_data = badge_data[app_id]
 
         gem_price_including_fee = individual_badge_data['gem_price']
@@ -375,7 +375,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
     # Based on arbitrage_data, select the badge_data for which we want to download (again) the latest market orders:
     selected_badge_data = {}
 
-    for listing_hash in arbitrage_data.keys():
+    for listing_hash in arbitrage_data:
         arbitrage = arbitrage_data[listing_hash]
 
         if arbitrage['is_marketable'] and arbitrage['profit'] > 0:

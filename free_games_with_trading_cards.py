@@ -71,7 +71,7 @@ def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]
 
         data = steamspypi.download(data_request)
 
-        free_apps = [int(app_id) for app_id in data.keys()]
+        free_apps = [int(app_id) for app_id in data]
 
     if verbose:
         print(f'Free apps (based on {method}): {len(free_apps)}')

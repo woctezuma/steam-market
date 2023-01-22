@@ -286,7 +286,7 @@ def get_market_orders(
 
     selected_listing_hashes = [
         filtered_badge_data[app_id]['listing_hash']
-        for app_id in filtered_badge_data.keys()
+        for app_id in filtered_badge_data
     ]
 
     for listing_hash in available_listing_hashes:

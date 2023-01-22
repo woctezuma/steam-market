@@ -19,7 +19,7 @@ def load_next_creation_time_data(
 
     next_creation_times_with_keys_as_int = {}
 
-    for app_id_as_str in next_creation_times.keys():
+    for app_id_as_str in next_creation_times:
         app_id_as_int = int(app_id_as_str)
 
         next_creation_times_with_keys_as_int[app_id_as_int] = next_creation_times[app_id_as_str]

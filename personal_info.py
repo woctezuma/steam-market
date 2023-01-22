@@ -42,7 +42,7 @@ def get_cookie_dict(verbose: bool = False) -> dict[str, str]:
     cookie = load_steam_cookie_from_disk()
 
     if verbose:
-        for field in cookie.keys():
+        for field in cookie:
             print(f'{field}: {cookie[field]}')
 
     return cookie
@@ -55,7 +55,7 @@ def update_cookie_dict(
 ) -> dict[str, str]:
     cookie = original_cookie
 
-    for field in dict_with_new_values.keys():
+    for field in dict_with_new_values:
         try:
             current_value = cookie[field]
         except KeyError:
@@ -69,7 +69,7 @@ def update_cookie_dict(
             cookie[field] = new_value
 
     if verbose:
-        for field in cookie.keys():
+        for field in cookie:
             print(f'{field}: {cookie[field]}')
 
     return cookie

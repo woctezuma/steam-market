@@ -209,7 +209,7 @@ def download_market_order_data_batch(
     # Pre-retrieval of item name ids
 
     listing_hashes = [
-        badge_data[app_id]['listing_hash'] for app_id in badge_data.keys()
+        badge_data[app_id]['listing_hash'] for app_id in badge_data
     ]
 
     item_nameids = get_item_nameid_batch(
@@ -230,7 +230,7 @@ def download_market_order_data_batch(
 
     query_count = 0
 
-    for app_id in badge_data.keys():
+    for app_id in badge_data:
         listing_hash = badge_data[app_id]['listing_hash']
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
@@ -303,7 +303,7 @@ def trim_market_order_data(
     trimmed_market_order_dict = {}
     app_ids_with_missing_data = []
 
-    for app_id in badge_data.keys():
+    for app_id in badge_data:
         listing_hash = badge_data[app_id]['listing_hash']
 
         try:
