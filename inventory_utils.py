@@ -21,7 +21,8 @@ from utils import (
 
 
 def get_my_steam_profile_id() -> str:
-    my_profile_id = '76561198028705366'
+    my_profile_id = get_cookie_dict()['steamLoginSecure'].split('%7C')[0]
+    #my_profile_id = '76561198028705366'
 
     return my_profile_id
 
