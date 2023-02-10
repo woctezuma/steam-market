@@ -469,7 +469,7 @@ def update_and_save_next_creation_times(
 
                 # Print an empty line the first time, to clearly separate the block from what was previously displayed.
                 if is_first_displayed_line:
-                    print('')
+                    print()
                     is_first_displayed_line = False
 
                 app_name = convert_listing_hash_to_app_name(listing_hash)
