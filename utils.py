@@ -184,10 +184,7 @@ def get_listing_hash_suffixe() -> str:
 def convert_listing_hash_to_app_name(listing_hash: str) -> str:
     tokens = listing_hash.split('-')[1:]
 
-    if len(tokens) > 1:
-        app_name = '-'.join(tokens)
-    else:
-        app_name = tokens[0]
+    app_name = '-'.join(tokens) if len(tokens) > 1 else tokens[0]
 
     app_name = app_name[: -len(get_listing_hash_suffixe())]
 
@@ -246,10 +243,7 @@ def get_bullet_point_for_display(use_numbered_bullet_points: bool = False) -> st
     #
     # NB: if the list of bullet points is long, Numbered bullet points improve readability on Github Gist.
 
-    if use_numbered_bullet_points:
-        bullet_point_character = '1.'
-    else:
-        bullet_point_character = '*'
+    bullet_point_character = '1.' if use_numbered_bullet_points else '*'
 
     three_spaces_indentation = '   '
 

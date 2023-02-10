@@ -145,10 +145,7 @@ def get_booster_pack_creation_parameters(
 ) -> dict[str, str]:
     booster_pack_creation_parameters = {}
 
-    if is_marketable:
-        tradability_preference = 1
-    else:
-        tradability_preference = 3
+    tradability_preference = 1 if is_marketable else 3
 
     booster_pack_creation_parameters['sessionid'] = str(session_id)
     booster_pack_creation_parameters['appid'] = str(app_id)

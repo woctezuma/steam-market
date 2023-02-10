@@ -313,10 +313,7 @@ def print_arbitrages(
 
         gem_amount = arbitrage['gem_amount']
 
-        if gem_amount is None:
-            gem_amount_as_str = gem_amount
-        else:
-            gem_amount_as_str = f'{gem_amount:.0f}'
+        gem_amount_as_str = gem_amount if gem_amount is None else f'{gem_amount:.0f}'
 
         print(
             '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
