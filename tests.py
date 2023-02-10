@@ -27,44 +27,44 @@ class TestMarketListingMethods(unittest.TestCase):
             save_to_disk=False,
         )
 
-        self.assertEqual(len(all_listing_details), len(listing_hashes))
+        assert len(all_listing_details) == len(listing_hashes)
 
     def test_main(self):
-        self.assertTrue(market_listing.main())
+        assert market_listing.main() is True
 
 
 class TestParsingUtilsMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(parsing_utils.main())
+        assert parsing_utils.main() is True
 
 
 class TestCreationTimeUtilsMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(creation_time_utils.main())
+        assert creation_time_utils.main() is True
 
 
 class TestSackOfGemsMethods(unittest.TestCase):
     def test_download_sack_of_gems_price(self):
         sack_of_gems_price = sack_of_gems.download_sack_of_gems_price()
 
-        self.assertGreater(sack_of_gems_price, 0)
+        assert sack_of_gems_price > 0
 
     def test_load_sack_of_gems_price(self):
         sack_of_gems_price = sack_of_gems.load_sack_of_gems_price()
 
-        self.assertGreater(sack_of_gems_price, 0)
+        assert sack_of_gems_price > 0
 
 
 class TestMarketSearchMethods(unittest.TestCase):
     def test_download_all_listings(self):
-        self.assertTrue(market_search.download_all_listings())
+        assert market_search.download_all_listings() is True
 
 
 class TestMarketUtilsMethods(unittest.TestCase):
     def test_load_aggregated_badge_data(self):
         aggregated_badge_data = market_utils.load_aggregated_badge_data()
 
-        self.assertGreater(len(aggregated_badge_data), 0)
+        assert len(aggregated_badge_data) > 0
 
 
 class TestMarketArbitrageMethods(unittest.TestCase):
@@ -78,9 +78,7 @@ class TestMarketArbitrageMethods(unittest.TestCase):
             # The steamLoginSecure cookie cannot be made public for the test.
             flag = True
 
-        self.assertTrue(
-            flag,
-        )
+        assert flag is True
 
 
 class TestMarketOrderMethods(unittest.TestCase):
@@ -91,27 +89,27 @@ class TestMarketOrderMethods(unittest.TestCase):
             # The steamLoginSecure cookie cannot be made public for the test.
             flag = True
 
-        self.assertTrue(flag)
+        assert flag is True
 
 
 class TestUtilsMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(utils.main())
+        assert utils.main() is True
 
 
 class TestTransactionFeeMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(transaction_fee.main())
+        assert transaction_fee.main() is True
 
 
 class TestBatchCreatePacksMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(batch_create_packs.main(is_a_simulation=True))
+        assert batch_create_packs.main(is_a_simulation=True) is True
 
 
 class TestDropRateEstimatesMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(drop_rate_estimates.main())
+        assert drop_rate_estimates.main() is True
 
 
 if __name__ == '__main__':
