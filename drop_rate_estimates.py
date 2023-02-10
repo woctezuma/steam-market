@@ -216,10 +216,10 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
             ),
         )
 
-        for category_field in [
+        for category_field in (
             get_category_name_for_profile_backgrounds(),
             get_category_name_for_emoticons(),
-        ]:
+        ):
             print(
                 '- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f} (expected: 1.00)'.format(
                     category_field,
