@@ -88,7 +88,7 @@ def parse_badge_creation_details(
             )
 
     with Path(badge_creation_file_name).open(encoding='utf-8') as f:
-        lines = [line.strip() for line in f.readlines() if line[0] != '#']
+        lines = [line.strip() for line in f if line[0] != '#']
 
     if len(lines) > 1:
         badge_creation_details = parse_augmented_steam_drop_down_menu(
