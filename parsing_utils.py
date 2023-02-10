@@ -87,7 +87,7 @@ def parse_badge_creation_details(
                 from_javascript=not from_javascript,
             )
 
-    with open(badge_creation_file_name, encoding='utf-8') as f:
+    with Path(badge_creation_file_name).open(encoding='utf-8') as f:
         lines = [line.strip() for line in f.readlines() if line[0] != '#']
 
     if len(lines) > 1:

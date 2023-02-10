@@ -1,5 +1,6 @@
 # Objective: find free games which feature Steam trading cards, and thus allow their owners to craft "Booster Packs".
 import collections.abc
+from pathlib import Path
 
 import requests
 import steamspypi
@@ -122,7 +123,7 @@ def load_free_apps_with_trading_cards(
 
 
 def load_file(file_name: str, verbose: bool = True) -> list[int]:
-    with open(file_name, encoding='utf-8') as f:
+    with Path(file_name).open(encoding='utf-8') as f:
         data = [int(line.strip()) for line in f.readlines()]
 
     if verbose:
@@ -197,7 +198,7 @@ def write_to_file(
         group_size=group_size,
     )
 
-    with open(file_name, 'w', encoding='utf-8') as f:
+    with Path(file_name).open('w', encoding='utf-8') as f:
         print(output, file=f)
 
     if verbose:
