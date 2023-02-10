@@ -222,8 +222,8 @@ def get_all_listings(
             )
             if status_code is None:
                 continue
-            else:
-                break
+
+            break
 
         all_listings.update(listings)
 
