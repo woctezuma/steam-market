@@ -1127,7 +1127,7 @@ def find_item_type_for_app_id(
     listing_details_output_file_name: str = None,
     dictionary_of_representative_listing_hashes: dict[int, list[str]] = None,
     verbose: bool = False,
-) -> int:
+) -> int | None:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = (
             get_listing_details_output_file_name_for_foil_cards()
