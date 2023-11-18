@@ -95,8 +95,8 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
 
 
 def load_free_apps_with_trading_cards(
-    free_apps: set[int] = None,
-    list_of_methods: list[str] = None,
+    free_apps: set[int] | None = None,
+    list_of_methods: list[str] | None = None,
     verbose: bool = True,
 ) -> set[int]:
     if list_of_methods is None:
@@ -135,7 +135,7 @@ def load_file(file_name: str, verbose: bool = True) -> list[int]:
 
 def format_for_asf_command_line(
     app_ids: set[int],
-    app_prefix: str = None,
+    app_prefix: str | None = None,
 ) -> list[str]:
     if app_prefix is None:
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
@@ -188,7 +188,7 @@ def group_concatenate_to_str(
 def write_to_file(
     data: list[str],
     file_name: str,
-    asf_username: str = None,
+    asf_username: str | None = None,
     group_size: int = 25,
     verbose: bool = True,
 ) -> None:

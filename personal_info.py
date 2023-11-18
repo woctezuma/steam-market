@@ -9,7 +9,7 @@ def get_steam_cookie_file_name() -> str:
 
 
 def load_steam_cookie_from_disk(
-    file_name_with_personal_info: str = None,
+    file_name_with_personal_info: str | None = None,
 ) -> dict[str, str]:
     if file_name_with_personal_info is None:
         file_name_with_personal_info = get_steam_cookie_file_name()
@@ -24,7 +24,7 @@ def load_steam_cookie_from_disk(
 
 def save_steam_cookie_to_disk(
     cookie: dict[str, str],
-    file_name_with_personal_info: str = None,
+    file_name_with_personal_info: str | None = None,
 ) -> bool:
     if file_name_with_personal_info is None:
         file_name_with_personal_info = get_steam_cookie_file_name()
@@ -77,8 +77,8 @@ def update_cookie_dict(
 def update_and_save_cookie_to_disk_if_values_changed(
     cookie: dict[str, str],
     dict_with_new_values: dict[str, str],
-    fields: list[str] = None,
-    file_name_with_personal_info: str = None,
+    fields: list[str] | None = None,
+    file_name_with_personal_info: str | None = None,
     verbose: bool = False,
 ) -> dict[str, str]:
     if fields is None:

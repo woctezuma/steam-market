@@ -94,7 +94,7 @@ def filter_out_badges_recently_crafted(
 
 def determine_whether_an_arbitrage_might_exist(
     badge_data: dict,
-    user_chosen_price_threshold: float = None,
+    user_chosen_price_threshold: float | None = None,
 ) -> bool:
     sell_price_including_fee = badge_data['sell_price']
     sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
@@ -136,8 +136,8 @@ def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
 
 def filter_out_badges_with_low_sell_price(
     aggregated_badge_data: dict[int | str, dict],
-    user_chosen_price_threshold: float = None,
-    category_name: str = None,
+    user_chosen_price_threshold: float | None = None,
+    category_name: str | None = None,
     verbose: bool = True,
 ) -> dict[int | str, dict]:
     # Filter out games for which the sell price (ask) is lower than the gem price,
@@ -191,7 +191,7 @@ def filter_out_badges_with_low_sell_price(
 
 def find_badge_arbitrages(
     badge_data: dict,
-    market_order_dict: dict[str, dict] = None,
+    market_order_dict: dict[str, dict] | None = None,
     verbose: bool = False,
 ) -> dict[str, dict]:
     if market_order_dict is None:
@@ -392,8 +392,8 @@ def update_badge_arbitrages_with_latest_market_order_data(
 
 def get_filtered_badge_data(
     retrieve_listings_from_scratch: bool = True,
-    enforced_sack_of_gems_price: float = None,
-    minimum_allowed_sack_of_gems_price: float = None,
+    enforced_sack_of_gems_price: float | None = None,
+    minimum_allowed_sack_of_gems_price: float | None = None,
     quick_check_with_tracked_booster_packs: bool = False,
     check_ask_price: bool = True,
     from_javascript: bool = False,
@@ -427,14 +427,14 @@ def get_filtered_badge_data(
 def apply_workflow(
     retrieve_listings_from_scratch: bool = True,
     retrieve_market_orders_online: bool = True,
-    enforced_sack_of_gems_price: float = None,
-    minimum_allowed_sack_of_gems_price: float = None,
+    enforced_sack_of_gems_price: float | None = None,
+    minimum_allowed_sack_of_gems_price: float | None = None,
     automatically_create_then_sell_booster_packs: bool = False,
     profit_threshold: float = 0.01,  # profit in euros
     quick_check_with_tracked_booster_packs: bool = False,
     enforce_update_of_marketability_status: bool = False,
     from_javascript: bool = False,
-    profile_id: str = None,
+    profile_id: str | None = None,
     verbose: bool = False,
 ) -> bool:
     if quick_check_with_tracked_booster_packs:

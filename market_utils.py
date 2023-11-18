@@ -51,8 +51,8 @@ def filter_out_dubious_listing_hashes(
 
 
 def match_badges_with_listing_hashes(
-    badge_creation_details: dict[int, dict] = None,
-    all_listings: dict[str, dict] = None,
+    badge_creation_details: dict[int, dict] | None = None,
+    all_listings: dict[str, dict] | None = None,
     verbose: bool = True,
 ) -> dict[int, str | None]:
     # Badges for games which I own
@@ -112,9 +112,9 @@ def match_badges_with_listing_hashes(
 def aggregate_badge_data(
     badge_creation_details: dict[int, dict],
     badge_matches: dict[int, str | None],
-    all_listings: dict[str, dict] = None,
-    enforced_sack_of_gems_price: float = None,
-    minimum_allowed_sack_of_gems_price: float = None,
+    all_listings: dict[str, dict] | None = None,
+    enforced_sack_of_gems_price: float | None = None,
+    minimum_allowed_sack_of_gems_price: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
 ) -> dict[int, dict]:
     # Aggregate data:
@@ -174,8 +174,8 @@ def aggregate_badge_data(
 
 def load_aggregated_badge_data(
     retrieve_listings_from_scratch: bool = False,
-    enforced_sack_of_gems_price: float = None,
-    minimum_allowed_sack_of_gems_price: float = None,
+    enforced_sack_of_gems_price: float | None = None,
+    minimum_allowed_sack_of_gems_price: float | None = None,
     from_javascript: bool = False,
 ) -> dict[int, dict]:
     badge_creation_details = parse_badge_creation_details(
@@ -208,7 +208,7 @@ def load_aggregated_badge_data(
 
 
 def populate_random_samples_of_badge_data(
-    badge_data: dict[int, dict] = None,
+    badge_data: dict[int, dict] | None = None,
     num_samples: int = 50,
 ) -> bool:
     if badge_data is None:

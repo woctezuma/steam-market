@@ -36,7 +36,7 @@ def get_tag_item_class_no_for_booster_packs() -> int:
     return 5
 
 
-def get_tag_drop_rate_str(rarity: str = None) -> str:
+def get_tag_drop_rate_str(rarity: str | None = None) -> str:
     if rarity is None:
         rarity = 'common'
 
@@ -57,9 +57,9 @@ def get_tag_drop_rate_str(rarity: str = None) -> str:
 def get_search_parameters(
     start_index: int = 0,
     delta_index: int = 100,
-    tag_item_class_no: int = None,
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_item_class_no: int | None = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
     is_foil_trading_card: bool = True,
 ) -> dict[str, str]:
     if tag_drop_rate_str is None:
@@ -124,11 +124,11 @@ def get_steam_api_rate_limits_for_market_search(
 
 
 def get_all_listings(
-    all_listings: dict[str, dict] = None,
-    url: str = None,
-    tag_item_class_no: int = None,
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    all_listings: dict[str, dict] | None = None,
+    url: str | None = None,
+    tag_item_class_no: int | None = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> dict[str, dict]:
     if url is None:
         url = get_steam_market_search_url()
@@ -225,9 +225,9 @@ def get_all_listings(
 
 
 def download_all_listings(
-    listing_output_file_name: str = None,
-    url: str = None,
-    tag_item_class_no: int = None,
+    listing_output_file_name: str | None = None,
+    url: str | None = None,
+    tag_item_class_no: int | None = None,
 ) -> bool:
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
@@ -244,11 +244,11 @@ def download_all_listings(
 
 
 def update_all_listings(
-    listing_output_file_name: str = None,
-    url: str = None,
-    tag_item_class_no: int = None,
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    listing_output_file_name: str | None = None,
+    url: str | None = None,
+    tag_item_class_no: int | None = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> bool:
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking to lose anything, in case the process fails again.
@@ -278,7 +278,7 @@ def update_all_listings(
     return True
 
 
-def load_all_listings(listing_output_file_name: str = None) -> dict[str, dict]:
+def load_all_listings(listing_output_file_name: str | None = None) -> dict[str, dict]:
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
 

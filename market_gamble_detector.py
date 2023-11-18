@@ -69,8 +69,8 @@ def update_all_listings_for_foil_cards() -> None:
 
 
 def update_all_listings_for_profile_backgrounds(
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> None:
     print(
         f'Downloading listings for profile backgrounds (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).',
@@ -88,8 +88,8 @@ def update_all_listings_for_profile_backgrounds(
 
 
 def update_all_listings_for_emoticons(
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> None:
     print(
         f'Downloading listings for emoticons (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).',
@@ -107,8 +107,8 @@ def update_all_listings_for_emoticons(
 
 
 def update_all_listings_for_items_other_than_cards(
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> None:
     # Profile Backgrounds
 
@@ -152,14 +152,11 @@ def get_listings(
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(
     all_listings: dict[str, dict],
-    item_rarity_patterns_per_app_id: dict[int, dict] = None,
-    price_threshold_in_cents: float = None,
-    category_name: str = None,
-    drop_rate_estimates_for_common_rarity: dict[
-        tuple[int, int, int],
-        float,
-    ] = None,
-    gem_price_in_euros: float = None,
+    item_rarity_patterns_per_app_id: dict[int, dict] | None = None,
+    price_threshold_in_cents: float | None = None,
+    category_name: str | None = None,
+    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float] | None = None,
+    gem_price_in_euros: float | None = None,
     verbose: bool = True,
 ) -> dict[int | str, dict]:
     if gem_price_in_euros is None:
@@ -394,11 +391,8 @@ def main(
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
     retrieve_market_orders_online: bool = True,
     focus_on_listing_hashes_never_seen_before: bool = True,
-    price_threshold_in_cents: float = None,
-    drop_rate_estimates_for_common_rarity: dict[
-        tuple[int, int, int],
-        float,
-    ] = None,
+    price_threshold_in_cents: float | None = None,
+    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float] | None = None,
     num_packs_to_display: int = 10,
     verbose: bool = False,
 ) -> bool:

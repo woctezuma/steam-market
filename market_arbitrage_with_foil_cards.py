@@ -38,9 +38,9 @@ def get_steam_goo_value_url() -> str:
 
 
 def get_item_type_no_for_trading_cards(
-    listing_hash: str = None,
-    all_listing_details: dict[str, dict] = None,
-    listing_details_output_file_name: str = None,
+    listing_hash: str | None = None,
+    all_listing_details: dict[str, dict] | None = None,
+    listing_details_output_file_name: str | None = None,
     verbose: bool = True,
 ) -> int:
     # Caveat: the item type is not always equal to 2. Check appID 232770 (POSTAL) for example!
@@ -128,8 +128,8 @@ def get_border_color_no_for_trading_cards(is_foil: bool = False) -> int:
 
 def get_steam_goo_value_parameters(
     app_id: int,
-    item_type: int = None,
-    listing_hash: str = None,
+    item_type: int | None = None,
+    listing_hash: str | None = None,
     is_foil: bool = True,
     verbose: bool = True,
 ) -> dict:
@@ -191,7 +191,7 @@ def query_goo_value(
 
 def get_listings_for_foil_cards(
     retrieve_listings_from_scratch: bool,
-    listing_output_file_name: str = None,
+    listing_output_file_name: str | None = None,
     verbose: bool = True,
 ) -> dict[str, dict]:
     if retrieve_listings_from_scratch:
@@ -258,7 +258,7 @@ def find_cheapest_listing_hashes(
 
 def find_representative_listing_hashes(
     groups_by_app_id: dict[int, list[str]],
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] = None,
+    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
 ) -> list[str]:
     representative_listing_hashes = []
 
@@ -311,7 +311,7 @@ def find_eligible_listing_hashes(all_listings: dict[str, dict]) -> list[str]:
 def filter_listings_with_arbitrary_price_threshold(
     all_listings: dict[str, dict],
     listing_hashes_to_filter_from: list[str],
-    price_threshold_in_cents: float = None,
+    price_threshold_in_cents: float | None = None,
     verbose: bool = True,
 ) -> list[str]:
     if price_threshold_in_cents is not None:
@@ -335,7 +335,7 @@ def filter_listings_with_arbitrary_price_threshold(
 
 
 def load_all_goo_details(
-    goo_details_file_name: str = None,
+    goo_details_file_name: str | None = None,
     verbose: bool = True,
 ) -> dict[int, int]:
     if goo_details_file_name is None:
@@ -354,7 +354,7 @@ def load_all_goo_details(
 
 def save_all_goo_details(
     all_goo_details: dict[int, int],
-    goo_details_file_name: str = None,
+    goo_details_file_name: str | None = None,
 ) -> None:
     if goo_details_file_name is None:
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
@@ -363,7 +363,7 @@ def save_all_goo_details(
 
 def update_all_goo_details(
     new_goo_details: dict[int, int],
-    goo_details_file_name: str = None,
+    goo_details_file_name: str | None = None,
 ) -> None:
     if goo_details_file_name is None:
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
@@ -379,7 +379,7 @@ def update_all_goo_details(
 
 def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
     filtered_cheapest_listing_hashes: list[str],
-    goo_details_file_name_for_for_foil_cards: str = None,
+    goo_details_file_name_for_for_foil_cards: str | None = None,
     verbose: bool = True,
 ) -> list[str]:
     # Filter out listings associated with an appID for which we already know the goo details.
@@ -467,9 +467,9 @@ def try_again_to_download_goo_value(
 
 def apply_workflow_for_foil_cards(
     retrieve_listings_from_scratch: bool = False,
-    price_threshold_in_cents_for_a_foil_card: float = None,
+    price_threshold_in_cents_for_a_foil_card: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
-    enforced_sack_of_gems_price: float = None,  # price in euros
+    enforced_sack_of_gems_price: float | None = None,  # price in euros
     verbose: bool = True,
 ) -> bool:
     listing_output_file_name = get_listing_output_file_name_for_foil_cards()
@@ -661,7 +661,7 @@ def get_minimal_ask_price_in_euros_on_steam_market() -> float:
 
 
 def compute_unrewarding_threshold_in_gems(
-    sack_of_gems_price_in_euros: float = None,
+    sack_of_gems_price_in_euros: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
 ) -> float:
@@ -692,9 +692,9 @@ def compute_unrewarding_threshold_in_gems(
 
 def discard_necessarily_unrewarding_app_ids(
     all_goo_details: dict[int, int],
-    app_ids_with_unreliable_goo_details: list[int] = None,
-    app_ids_with_unknown_goo_value: list[int] = None,
-    sack_of_gems_price_in_euros: float = None,
+    app_ids_with_unreliable_goo_details: list[int] | None = None,
+    app_ids_with_unknown_goo_value: list[int] | None = None,
+    sack_of_gems_price_in_euros: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
 ) -> list[int]:
@@ -791,11 +791,11 @@ def find_listing_hashes_with_unknown_goo_value(
 def determine_whether_an_arbitrage_might_exist_for_foil_cards(
     eligible_listing_hashes: list[str],
     all_goo_details: dict[int, int],
-    app_ids_with_unreliable_goo_details: list[int] = None,
-    app_ids_with_unknown_goo_value: list[int] = None,
-    all_listings: dict[str, dict] = None,
-    listing_output_file_name: str = None,
-    sack_of_gems_price_in_euros: float = None,
+    app_ids_with_unreliable_goo_details: list[int] | None = None,
+    app_ids_with_unknown_goo_value: list[int] | None = None,
+    all_listings: dict[str, dict] | None = None,
+    listing_output_file_name: str | None = None,
+    sack_of_gems_price_in_euros: float | None = None,
     retrieve_gem_price_from_scratch: bool = True,
     verbose: bool = True,
 ) -> dict[str, dict[str, float]]:
@@ -926,8 +926,8 @@ def print_arbitrages_for_foil_cards(
 def find_app_ids_with_unknown_item_type_for_their_representatives(
     groups_by_app_id: dict[int, list[str]],
     listing_candidates: list[str],
-    all_listing_details: dict[str, dict] = None,
-    listing_details_output_file_name: str = None,
+    all_listing_details: dict[str, dict] | None = None,
+    listing_details_output_file_name: str | None = None,
     verbose: bool = True,
 ) -> list[int]:
     dictionary_of_representative_listing_hashes = (
@@ -966,10 +966,10 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(
 def download_missing_goo_details(
     groups_by_app_id: dict[int, list[str]],
     listing_candidates: list[str],
-    all_listing_details: dict[str, dict] = None,
-    listing_details_output_file_name: str = None,
-    goo_details_file_name_for_for_foil_cards: str = None,
-    enforced_app_ids_to_process: list[int] = None,
+    all_listing_details: dict[str, dict] | None = None,
+    listing_details_output_file_name: str | None = None,
+    goo_details_file_name_for_for_foil_cards: str | None = None,
+    enforced_app_ids_to_process: list[int] | None = None,
     num_queries_between_save: int = 100,
     verbose: bool = True,
 ) -> dict[int, int]:
@@ -1064,11 +1064,8 @@ def find_cheapest_listing_hash_for_app_id(
 def find_representative_listing_hash_for_app_id(
     app_id: int,
     groups_by_app_id: dict[int, list[str]],
-    listing_candidates: list[str] = None,
-    dictionary_of_representative_listing_hashes: dict[
-        int,
-        list[str],
-    ] = None,
+    listing_candidates: list[str] | None = None,
+    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
 ) -> str:
     if listing_candidates is None:
         listing_candidates = find_representative_listing_hashes(
@@ -1115,9 +1112,9 @@ def find_item_type_for_app_id(
     app_id: int,
     groups_by_app_id: dict[int, list[str]],
     listing_candidates: list[str],
-    all_listing_details: dict[str, dict] = None,
-    listing_details_output_file_name: str = None,
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] = None,
+    all_listing_details: dict[str, dict] | None = None,
+    listing_details_output_file_name: str | None = None,
+    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
     verbose: bool = False,
 ) -> int | None:
     if listing_details_output_file_name is None:
@@ -1156,9 +1153,9 @@ def download_goo_value_for_app_id(
     app_id: int,
     groups_by_app_id: dict[int, list[str]],
     listing_candidates: list[str],
-    all_listing_details: dict[str, dict] = None,
-    listing_details_output_file_name: str = None,
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] = None,
+    all_listing_details: dict[str, dict] | None = None,
+    listing_details_output_file_name: str | None = None,
+    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
     verbose: bool = True,
 ) -> int:
     item_type = find_item_type_for_app_id(
@@ -1179,8 +1176,8 @@ def download_goo_value_for_app_id(
 
 
 def build_dictionary_of_representative_listing_hashes(
-    all_listing_details: dict[str, dict] = None,
-    listing_details_output_file_name: str = None,
+    all_listing_details: dict[str, dict] | None = None,
+    listing_details_output_file_name: str | None = None,
 ) -> dict[int, list[str]]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = (

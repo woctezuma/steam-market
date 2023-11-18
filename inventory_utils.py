@@ -25,7 +25,7 @@ def get_my_steam_profile_id() -> str:
 
 
 def get_steam_inventory_url(
-    profile_id: str = None,
+    profile_id: str | None = None,
     app_id: int = 753,
     context_id: int = 6,
 ) -> str:
@@ -50,7 +50,7 @@ def get_steam_inventory_file_name(profile_id: str) -> str:
 
 
 
-def load_steam_inventory_from_disk(profile_id: str = None) -> [dict | None]:
+def load_steam_inventory_from_disk(profile_id: str | None = None) -> [dict | None]:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -63,7 +63,7 @@ def load_steam_inventory_from_disk(profile_id: str = None) -> [dict | None]:
 
 
 def load_steam_inventory(
-    profile_id: str = None,
+    profile_id: str | None = None,
     update_steam_inventory: bool = False,
 ) -> [dict | None]:
     if profile_id is None:
@@ -78,7 +78,7 @@ def load_steam_inventory(
 
 
 def download_steam_inventory(
-    profile_id: str = None,
+    profile_id: str | None = None,
     save_to_disk: bool = True,
 ) -> [dict | None]:
     if profile_id is None:
@@ -117,7 +117,7 @@ def download_steam_inventory(
     return steam_inventory
 
 
-def get_session_id(cookie: dict[str, str] = None) -> str:
+def get_session_id(cookie: dict[str, str] | None = None) -> str:
     if cookie is None:
         cookie = get_cookie_dict()
 
@@ -304,9 +304,9 @@ def sell_booster_pack(
 
 def retrieve_asset_id(
     listing_hash: str,
-    steam_inventory: dict = None,
+    steam_inventory: dict | None = None,
     focus_on_marketable_items: bool = True,
-    profile_id: str = None,
+    profile_id: str | None = None,
     verbose: bool = True,
 ) -> str:
     if steam_inventory is None:
@@ -382,7 +382,7 @@ def sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict[str, float],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
-    profile_id: str = None,
+    profile_id: str | None = None,
 ) -> dict[str, dict | None]:
     results = {}
 
@@ -412,7 +412,7 @@ def create_then_sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict,
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
-    profile_id: str = None,
+    profile_id: str | None = None,
 ) -> tuple[dict[str, dict | None], dict[str, dict | None]]:
     listing_hashes = list(price_dict_for_listing_hashes.keys())
 
@@ -433,7 +433,7 @@ def create_then_sell_booster_packs_for_batch(
 def update_and_save_next_creation_times(
     creation_results: dict[str, dict | None],
     verbose: bool = True,
-    next_creation_time_file_name: str = None,
+    next_creation_time_file_name: str | None = None,
 ) -> dict[int, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()

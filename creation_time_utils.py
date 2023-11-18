@@ -5,7 +5,7 @@ from utils import get_next_creation_time_file_name
 
 
 def load_next_creation_time_data(
-    next_creation_time_file_name: str = None,
+    next_creation_time_file_name: str | None = None,
 ) -> dict[int, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
@@ -88,7 +88,7 @@ def get_creation_time_format(prepend_year: bool = False) -> str:
     return time_format
 
 
-def get_formatted_time(time_struct: datetime.datetime = None) -> str:
+def get_formatted_time(time_struct: datetime.datetime | None = None) -> str:
     if time_struct is None:
         time_struct = get_current_time()
 
@@ -101,7 +101,7 @@ def get_formatted_time(time_struct: datetime.datetime = None) -> str:
 
 def prepend_year_to_time_as_str(
     formatted_time_as_str: str,
-    year_to_prepend: int = None,
+    year_to_prepend: int | None = None,
 ) -> str:
     if year_to_prepend is None:
         current_time = get_current_time()
@@ -170,7 +170,7 @@ def get_crafting_cooldown_duration_in_seconds() -> int:
 
 def determine_whether_a_booster_pack_can_be_crafted(
     badge_data: dict,
-    current_time: datetime.datetime = None,
+    current_time: datetime.datetime | None = None,
 ) -> bool:
     if current_time is None:
         current_time = get_current_time()

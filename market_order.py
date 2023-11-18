@@ -77,9 +77,9 @@ def get_market_order_headers() -> dict[str, str]:
 
 def download_market_order_data(
     listing_hash: str,
-    item_nameid: str = None,
+    item_nameid: str | None = None,
     verbose: bool = False,
-    listing_details_output_file_name: str = None,
+    listing_details_output_file_name: str | None = None,
 ) -> tuple[float, float, int, int]:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
@@ -195,11 +195,11 @@ def download_market_order_data(
 
 def download_market_order_data_batch(
     badge_data: dict[int | str, dict],
-    market_order_dict: dict[str, dict] = None,
+    market_order_dict: dict[str, dict] | None = None,
     verbose: bool = False,
     save_to_disk: bool = True,
-    market_order_output_file_name: str = None,
-    listing_details_output_file_name: str = None,
+    market_order_output_file_name: str | None = None,
+    listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
@@ -264,7 +264,7 @@ def download_market_order_data_batch(
 
 
 def load_market_order_data(
-    badge_data: dict[int | str, dict] = None,
+    badge_data: dict[int | str, dict] | None = None,
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -322,7 +322,7 @@ def trim_market_order_data(
 
 
 def load_market_order_data_from_disk(
-    market_order_output_file_name: str = None,
+    market_order_output_file_name: str | None = None,
 ) -> [dict[str, dict] | None]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()

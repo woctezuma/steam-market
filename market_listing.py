@@ -19,8 +19,8 @@ from utils import (
 
 
 def get_steam_market_listing_url(
-    app_id: int = None,
-    listing_hash: str = None,
+    app_id: int | None = None,
+    listing_hash: str | None = None,
     render_as_json: bool = True,
     replace_spaces: bool = False,
     replace_parenthesis: bool = False,
@@ -272,8 +272,8 @@ def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
 
 
 def get_listing_details(
-    listing_hash: str = None,
-    cookie: dict[str, str] = None,
+    listing_hash: str | None = None,
+    cookie: dict[str, str] | None = None,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
     listing_details = {}
@@ -324,9 +324,9 @@ def get_listing_details(
 
 def get_listing_details_batch(
     listing_hashes: list[str],
-    all_listing_details: dict[str, dict] = None,
+    all_listing_details: dict[str, dict] | None = None,
     save_to_disk: bool = True,
-    listing_details_output_file_name: str = None,
+    listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
@@ -381,8 +381,8 @@ def get_listing_details_batch(
 
 
 def update_all_listing_details(
-    listing_hashes: list[str] = None,
-    listing_details_output_file_name: str = None,
+    listing_hashes: list[str] | None = None,
+    listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
     # to restart the process without risking to lose anything, in case the process fails again.
@@ -411,7 +411,7 @@ def update_all_listing_details(
 
 
 def load_all_listing_details(
-    listing_details_output_file_name: str = None,
+    listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
@@ -449,7 +449,7 @@ def main() -> bool:
 
 def get_item_nameid(
     listing_hash: str,
-    listing_details_output_file_name: str = None,
+    listing_details_output_file_name: str | None = None,
 ) -> str:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
@@ -470,8 +470,8 @@ def get_item_nameid(
 
 def get_item_nameid_batch(
     listing_hashes: [dict[str, dict] | list[str]],
-    listing_details_output_file_name: str = None,
-    listing_hashes_to_forcefully_process: list[str] = None,
+    listing_details_output_file_name: str | None = None,
+    listing_hashes_to_forcefully_process: list[str] | None = None,
 ) -> dict[str, dict]:
     if listing_hashes_to_forcefully_process is None:
         listing_hashes_to_forcefully_process = []

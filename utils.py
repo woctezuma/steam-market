@@ -33,8 +33,8 @@ def get_steam_card_exchange_file_name() -> str:
 
 
 def get_listing_output_file_name_suffix(
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> str:
     from market_search import get_tag_drop_rate_str
 
@@ -50,8 +50,8 @@ def get_listing_output_file_name_suffix(
 
 
 def get_listing_output_file_name_for_profile_backgrounds(
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> str:
     suffix = get_listing_output_file_name_suffix(
         tag_drop_rate_str=tag_drop_rate_str,
@@ -64,8 +64,8 @@ def get_listing_output_file_name_for_profile_backgrounds(
 
 
 def get_listing_output_file_name_for_emoticons(
-    tag_drop_rate_str: str = None,
-    rarity: str = None,
+    tag_drop_rate_str: str | None = None,
+    rarity: str | None = None,
 ) -> str:
     suffix = get_listing_output_file_name_suffix(
         tag_drop_rate_str=tag_drop_rate_str,
@@ -175,7 +175,7 @@ def convert_listing_hash_to_app_name(listing_hash: str) -> str:
 def convert_to_listing_hash(
     app_id: int,
     app_name: str,
-    listing_hash_suffixe: str = None,
+    listing_hash_suffixe: str | None = None,
 ) -> str:
     if listing_hash_suffixe is None:
         listing_hash_suffixe = get_listing_hash_suffixe()

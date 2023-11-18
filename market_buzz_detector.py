@@ -21,7 +21,7 @@ from utils import (
 
 
 def filter_listings(
-    all_listings: dict[str, dict] = None,
+    all_listings: dict[str, dict] | None = None,
     min_sell_price: float = 30,  # in cents
     min_num_listings: int = 20,
     # to remove listings with very few sellers, who chose unrealistic sell prices
@@ -56,7 +56,7 @@ def filter_listings(
 
 def convert_to_badges(
     filtered_listing_hashes: [dict[str, dict] | list[str]],
-    max_num_badges: int = None,
+    max_num_badges: int | None = None,
 ) -> dict[int, dict]:
     badge_data = {}
 
@@ -96,7 +96,7 @@ def filter_out_unmarketable_packs(
 
 def sort_according_to_buzz(
     market_order_dict: dict[str, dict],
-    marketable_market_order_dict: dict[str, dict] = None,
+    marketable_market_order_dict: dict[str, dict] | None = None,
 ) -> list[str]:
     if marketable_market_order_dict is None:
         (
@@ -115,8 +115,8 @@ def sort_according_to_buzz(
 def print_packs_with_high_buzz(
     hashes_for_best_bid: list[str],
     market_order_dict: dict[str, dict],
-    item_rarity_patterns_per_app_id: dict[int, dict] = None,
-    category_name: str = None,
+    item_rarity_patterns_per_app_id: dict[int, dict] | None = None,
+    category_name: str | None = None,
     num_packs_to_display: int = 10,
 ) -> None:
     if category_name is None:
@@ -180,10 +180,10 @@ def print_packs_with_high_buzz(
 
 def fill_in_badge_data_with_data_from_steam_card_exchange(
     all_listings: dict[str, dict],
-    aggregated_badge_data: dict[str, dict] = None,
+    aggregated_badge_data: dict[str, dict] | None = None,
     force_update_from_steam_card_exchange: bool = False,
-    enforced_sack_of_gems_price: float = None,
-    minimum_allowed_sack_of_gems_price: float = None,
+    enforced_sack_of_gems_price: float | None = None,
+    minimum_allowed_sack_of_gems_price: float | None = None,
 ) -> dict[str, dict]:
     if aggregated_badge_data is None:
         aggregated_badge_data = convert_to_badges(all_listings)
@@ -231,8 +231,8 @@ def main(
     retrieve_listings_from_scratch: bool = False,
     retrieve_market_orders_online: bool = False,
     force_update_from_steam_card_exchange: bool = False,
-    enforced_sack_of_gems_price: float = None,
-    minimum_allowed_sack_of_gems_price: float = None,
+    enforced_sack_of_gems_price: float | None = None,
+    minimum_allowed_sack_of_gems_price: float | None = None,
     use_a_constant_price_threshold: bool = False,
     min_sell_price: float = 30,
     min_num_listings: int = 3,
