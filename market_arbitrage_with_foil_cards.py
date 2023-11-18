@@ -1063,7 +1063,7 @@ def find_cheapest_listing_hash_for_app_id(
         listing_hashes_for_app_id,
     ).intersection(cheapest_listing_hashes)
 
-    cheapest_listing_hash_for_app_id = list(cheapest_listing_hash_for_app_id_as_a_set)[0]
+    cheapest_listing_hash_for_app_id = next(iter(cheapest_listing_hash_for_app_id_as_a_set))
 
     return cheapest_listing_hash_for_app_id
 
@@ -1114,7 +1114,7 @@ def find_representative_listing_hash_for_app_id(
         representative_listing_hash_for_app_id_as_a_set,
     )
 
-    representative_listing_hash_for_app_id = list(sorted_representative_listing_hash_for_app_id_as_list)[0]
+    representative_listing_hash_for_app_id = next(iter(sorted_representative_listing_hash_for_app_id_as_list))
 
     return representative_listing_hash_for_app_id
 
