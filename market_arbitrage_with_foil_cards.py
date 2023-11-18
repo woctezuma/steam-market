@@ -756,8 +756,7 @@ def find_listing_hashes_with_unknown_goo_value(
         )
 
         if goo_value_in_gems is None:
-            app_id_as_int = int(app_id)
-            app_ids_with_unknown_goo_value.append(app_id_as_int)
+            app_ids_with_unknown_goo_value.append(app_id)
 
     if verbose:
         print(
@@ -931,8 +930,7 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(
             dictionary_of_representative_listing_hashes=dictionary_of_representative_listing_hashes,
         )
         if item_type is None:
-            app_id_as_int = int(app_id)
-            app_ids_with_unreliable_goo_details.append(app_id_as_int)
+            app_ids_with_unreliable_goo_details.append(app_id)
 
     if verbose:
         print(
