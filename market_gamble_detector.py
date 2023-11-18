@@ -146,9 +146,8 @@ def get_listings(
         # Caveat: this update is only for items of Common rarity!
         update_all_listings_for_items_other_than_cards(rarity='common')
 
-    all_listings = load_all_listings(listing_output_file_name)
+    return load_all_listings(listing_output_file_name)
 
-    return all_listings
 
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(
@@ -226,13 +225,12 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
 
     # Filter out candidates for which the ask is below a given threshold
 
-    filtered_badge_data = filter_out_badges_with_low_sell_price(
+    return filter_out_badges_with_low_sell_price(
         badge_data,
         category_name=category_name,
         user_chosen_price_threshold=price_threshold_in_cents,
     )
 
-    return filtered_badge_data
 
 
 def get_market_orders(

@@ -31,11 +31,10 @@ from utils import (
 
 
 def get_steam_goo_value_url() -> str:
-    steam_goo_value_url = (
+    return (
         'https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/'
     )
 
-    return steam_goo_value_url
 
 
 def get_item_type_no_for_trading_cards(
@@ -300,14 +299,13 @@ def find_representative_listing_hashes(
 def find_eligible_listing_hashes(all_listings: dict[str, dict]) -> list[str]:
     # List eligible listing hashes (positive ask volume, and positive ask price)
 
-    eligible_listing_hashes = [
+    return [
         listing_hash
         for listing_hash in all_listings
         if all_listings[listing_hash]['sell_listings'] > 0
         and all_listings[listing_hash]['sell_price'] > 0
     ]
 
-    return eligible_listing_hashes
 
 
 def filter_listings_with_arbitrary_price_threshold(
@@ -400,14 +398,13 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
         int(app_id) for app_id in previously_downloaded_all_goo_details
     ]
 
-    filtered_cheapest_listing_hashes = [
+    return [
         listing_hash
         for listing_hash in filtered_cheapest_listing_hashes
         if convert_listing_hash_to_app_id(listing_hash)
         not in app_ids_with_previously_downloaded_goo_details
     ]
 
-    return filtered_cheapest_listing_hashes
 
 
 def propagate_filter_to_representative_listing_hashes(
@@ -419,14 +416,13 @@ def propagate_filter_to_representative_listing_hashes(
         for listing_hash in listing_hashes_to_propagate_from
     ]
 
-    filtered_representative_listing_hashes = [
+    return [
         listing_hash
         for listing_hash in listing_hashes_to_propagate_to
         if convert_listing_hash_to_app_id(listing_hash)
         in filtered_app_ids_based_on_price_threshold
     ]
 
-    return filtered_representative_listing_hashes
 
 
 def try_again_to_download_item_type(
@@ -660,9 +656,8 @@ def apply_workflow_for_foil_cards(
 
 
 def get_minimal_ask_price_in_euros_on_steam_market() -> float:
-    minimal_ask_price_on_steam_market = 0.03  # in euros
+    return 0.03  # in euros
 
-    return minimal_ask_price_on_steam_market
 
 
 def compute_unrewarding_threshold_in_gems(
@@ -689,11 +684,10 @@ def compute_unrewarding_threshold_in_gems(
 
     minimal_ask = get_minimal_ask_price_in_euros_on_steam_market()
 
-    unrewarding_threshold_in_gems = (
+    return (
         minimal_ask * num_gems_per_sack_of_gems / sack_of_gems_price_in_euros
     )
 
-    return unrewarding_threshold_in_gems
 
 
 def discard_necessarily_unrewarding_app_ids(
@@ -1063,9 +1057,8 @@ def find_cheapest_listing_hash_for_app_id(
         listing_hashes_for_app_id,
     ).intersection(cheapest_listing_hashes)
 
-    cheapest_listing_hash_for_app_id = next(iter(cheapest_listing_hash_for_app_id_as_a_set))
+    return next(iter(cheapest_listing_hash_for_app_id_as_a_set))
 
-    return cheapest_listing_hash_for_app_id
 
 
 def find_representative_listing_hash_for_app_id(
@@ -1114,9 +1107,8 @@ def find_representative_listing_hash_for_app_id(
         representative_listing_hash_for_app_id_as_a_set,
     )
 
-    representative_listing_hash_for_app_id = next(iter(sorted_representative_listing_hash_for_app_id_as_list))
+    return next(iter(sorted_representative_listing_hash_for_app_id_as_list))
 
-    return representative_listing_hash_for_app_id
 
 
 def find_item_type_for_app_id(
@@ -1156,9 +1148,8 @@ def find_item_type_for_app_id(
                 f'Unknown item type for listing hash = {representative_listing_hash_for_app_id}',
             )
 
-    item_type = listing_details['item_type_no']
+    return listing_details['item_type_no']
 
-    return item_type
 
 
 def download_goo_value_for_app_id(
@@ -1179,13 +1170,12 @@ def download_goo_value_for_app_id(
         dictionary_of_representative_listing_hashes,
     )
 
-    goo_value = query_goo_value(
+    return query_goo_value(
         app_id=app_id,
         item_type=item_type,
         verbose=verbose,
     )
 
-    return goo_value
 
 
 def build_dictionary_of_representative_listing_hashes(

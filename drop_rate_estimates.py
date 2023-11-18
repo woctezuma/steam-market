@@ -13,28 +13,24 @@ from utils import (
 
 
 def get_drop_rate_field() -> str:
-    drop_rate_field = 'drop_rate'
+    return 'drop_rate'
 
-    return drop_rate_field
 
 
 def get_badge_count_field() -> str:
-    badge_count_field = 'badge_count'
+    return 'badge_count'
 
-    return badge_count_field
 
 
 def get_rarity_fields() -> list[str]:
-    rarity_fields = ['common', 'uncommon', 'rare']
+    return ['common', 'uncommon', 'rare']
 
-    return rarity_fields
 
 
 def clamp_proportion(input_proportion: float) -> float:
     # Reference: https://en.wikipedia.org/wiki/Clamping_(graphics)
-    clamped_proportion = min(1.0, max(0.0, input_proportion))
+    return min(1.0, max(0.0, input_proportion))
 
-    return clamped_proportion
 
 
 def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -> dict:

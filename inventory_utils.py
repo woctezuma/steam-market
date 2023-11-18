@@ -21,10 +21,7 @@ from utils import (
 
 
 def get_my_steam_profile_id() -> str:
-    my_profile_id = get_cookie_dict()['steamLoginSecure'].split('%7C')[0]
-    #my_profile_id = '76561198028705366'
-
-    return my_profile_id
+    return get_cookie_dict()['steamLoginSecure'].split('%7C')[0]
 
 
 def get_steam_inventory_url(
@@ -47,11 +44,10 @@ def get_steam_inventory_url(
 
 
 def get_steam_inventory_file_name(profile_id: str) -> str:
-    steam_inventory_file_name = (
+    return (
         get_data_folder() + 'inventory_' + str(profile_id) + '.json'
     )
 
-    return steam_inventory_file_name
 
 
 def load_steam_inventory_from_disk(profile_id: str = None) -> [dict | None]:
@@ -125,17 +121,15 @@ def get_session_id(cookie: dict[str, str] = None) -> str:
     if cookie is None:
         cookie = get_cookie_dict()
 
-    session_id = cookie['sessionid']
+    return cookie['sessionid']
 
-    return session_id
 
 
 def get_steam_booster_pack_creation_url() -> str:
-    booster_pack_creation_url = (
+    return (
         'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
     )
 
-    return booster_pack_creation_url
 
 
 def get_booster_pack_creation_parameters(
@@ -211,9 +205,8 @@ def create_booster_pack(
 
 
 def get_steam_market_sell_url() -> str:
-    steam_market_sell_url = 'https://steamcommunity.com/market/sellitem/'
+    return 'https://steamcommunity.com/market/sellitem/'
 
-    return steam_market_sell_url
 
 
 def get_market_sell_parameters(
@@ -236,7 +229,7 @@ def get_market_sell_parameters(
 def get_request_headers() -> dict[str, str]:
     # Reference: https://dev.doctormckay.com/topic/287-automatic-market-seller/
 
-    request_headers = {
+    return {
         'Origin': 'https://steamcommunity.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -245,7 +238,6 @@ def get_request_headers() -> dict[str, str]:
         'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
     }
 
-    return request_headers
 
 
 def sell_booster_pack(

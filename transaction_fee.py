@@ -1,17 +1,15 @@
 def get_steam_transaction_fee() -> float:
     # Reference: https://support.steampowered.com/kb_article.php?ref=6088-UDXM-7214#steamfee
 
-    steam_transaction_fee = 0.05
+    return 0.05
 
-    return steam_transaction_fee
 
 
 def get_game_specific_transaction_fee() -> float:
     # Reference: https://support.steampowered.com/kb_article.php?ref=6088-UDXM-7214#steamfee
 
-    game_specific_transaction_fee = 0.10
+    return 0.10
 
-    return game_specific_transaction_fee
 
 
 def get_ground_truth_sell_price_without_fee(sell_price_including_fee: float) -> float:
@@ -34,9 +32,8 @@ def get_ground_truth_sell_price_without_fee(sell_price_including_fee: float) -> 
         raise AssertionError
 
     sell_price_without_fee = sell_price_including_fee - total_fee_price
-    sell_price_without_fee = float(f'{sell_price_without_fee:.2f}')
+    return float(f'{sell_price_without_fee:.2f}')
 
-    return sell_price_without_fee
 
 
 def compute_sell_price_without_fee(sell_price_including_fee: float) -> float:

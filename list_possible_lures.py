@@ -15,9 +15,8 @@ def get_app_ids_of_interest() -> list[str]:
 
     data = load_next_creation_time_data()
 
-    app_ids = [str(app_id) for app_id in data]
+    return [str(app_id) for app_id in data]
 
-    return app_ids
 
 
 def get_sell_prices_without_fee(

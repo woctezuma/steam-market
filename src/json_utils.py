@@ -4,8 +4,7 @@ from pathlib import Path
 
 def load_json(fname: str) -> dict:
     with Path(fname).open(encoding="utf8") as f:
-        data = json.load(f)
-    return data
+        return json.load(f)
 
 
 def save_json(data: dict, fname: str, prettify: bool = True, indent: int = 4) -> None:

@@ -16,9 +16,8 @@ from utils import convert_listing_hash_to_app_id
 
 
 def get_user_data_url() -> str:
-    user_data_url = 'https://store.steampowered.com/dynamicstore/userdata/'
+    return 'https://store.steampowered.com/dynamicstore/userdata/'
 
-    return user_data_url
 
 
 def download_user_data() -> [dict | None]:
@@ -142,9 +141,8 @@ def format_for_asf_command_line(
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
         app_prefix = 'a/'
 
-    output = [app_prefix + str(app_id) for app_id in sorted(app_ids)]
+    return [app_prefix + str(app_id) for app_id in sorted(app_ids)]
 
-    return output
 
 
 def chunks(lst: list, n: int) -> collections.abc.Iterator[list]:

@@ -6,13 +6,12 @@ from market_arbitrage import get_filtered_badge_data
 
 
 def get_manually_selected_app_ids() -> list[int]:
-    manually_selected_app_ids = [
+    return [
         1286830,  # STAR WARS™: The Old Republic™ (750 gems)
         33680,  # Eversion (1000 gems)
         520680,  # Lost Cities (1200 gems)
     ]
 
-    return manually_selected_app_ids
 
 
 def filter_app_ids_based_on_badge_data(

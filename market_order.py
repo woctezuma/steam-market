@@ -18,9 +18,8 @@ INTER_REQUEST_COOLDOWN_FIELD = 'cooldown_between_each_request'
 
 
 def get_steam_market_order_url() -> str:
-    steam_market_order_url = 'https://steamcommunity.com/market/itemordershistogram'
+    return 'https://steamcommunity.com/market/itemordershistogram'
 
-    return steam_market_order_url
 
 
 def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
@@ -60,7 +59,7 @@ def get_steam_api_rate_limits_for_market_order(
 
 
 def get_market_order_headers() -> dict[str, str]:
-    headers = {
+    return {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
@@ -74,7 +73,6 @@ def get_market_order_headers() -> dict[str, str]:
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0",
         "X-Requested-With": "XMLHttpRequest",
     }
-    return headers
 
 
 def download_market_order_data(

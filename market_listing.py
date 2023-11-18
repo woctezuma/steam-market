@@ -401,14 +401,13 @@ def update_all_listing_details(
         all_listings = load_all_listings()
         listing_hashes = list(all_listings.keys())
 
-    all_listing_details = get_listing_details_batch(
+    return get_listing_details_batch(
         listing_hashes,
         all_listing_details,
         save_to_disk=True,
         listing_details_output_file_name=listing_details_output_file_name,
     )
 
-    return all_listing_details
 
 
 def load_all_listing_details(
@@ -417,18 +416,16 @@ def load_all_listing_details(
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
 
-    all_listing_details = load_json(listing_details_output_file_name)
+    return load_json(listing_details_output_file_name)
 
-    return all_listing_details
 
 
 def fix_app_name_for_url_query(app_name: str) -> str:
     app_name = app_name.replace('#', '%23')
     app_name = app_name.replace('?', '%3F')
     app_name = app_name.replace('%', '%25')
-    app_name = app_name.replace(':', '%3A')
+    return app_name.replace(':', '%3A')
 
-    return app_name
 
 
 def main() -> bool:
@@ -542,12 +539,11 @@ def get_item_nameid_batch(
 def update_marketability_status(
     few_selected_listing_hashes: list[str],
 ) -> dict[str, dict]:
-    item_nameids = get_item_nameid_batch(
+    return get_item_nameid_batch(
         listing_hashes=[],
         listing_hashes_to_forcefully_process=few_selected_listing_hashes,
     )
 
-    return item_nameids
 
 
 if __name__ == '__main__':

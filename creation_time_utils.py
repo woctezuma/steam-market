@@ -72,9 +72,8 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
 
 
 def get_current_time() -> datetime.datetime:
-    current_time = datetime.datetime.today()
+    return datetime.datetime.today()
 
-    return current_time
 
 
 def get_creation_time_format(prepend_year: bool = False) -> str:
@@ -93,12 +92,11 @@ def get_formatted_time(time_struct: datetime.datetime = None) -> str:
     if time_struct is None:
         time_struct = get_current_time()
 
-    formatted_time_as_str = datetime.datetime.strftime(
+    return datetime.datetime.strftime(
         time_struct,
         get_creation_time_format(),
     )
 
-    return formatted_time_as_str
 
 
 def prepend_year_to_time_as_str(
@@ -109,9 +107,8 @@ def prepend_year_to_time_as_str(
         current_time = get_current_time()
         year_to_prepend = current_time.year
 
-    formatted_time_as_str_with_year = f'{year_to_prepend} {formatted_time_as_str}'
+    return f'{year_to_prepend} {formatted_time_as_str}'
 
-    return formatted_time_as_str_with_year
 
 
 def get_time_struct_from_str(
@@ -154,24 +151,21 @@ def get_formatted_current_time(delay_in_days: int = 0) -> str:
     if delay_in_days != 0:
         current_time += datetime.timedelta(days=delay_in_days)
 
-    formatted_current_time_as_str = get_formatted_time(current_time)
+    return get_formatted_time(current_time)
 
-    return formatted_current_time_as_str
 
 
 def get_crafting_cooldown_duration_in_days() -> int:
     # For every game, a booster pack can be crafted every day.
-    crafting_cooldown_duration_in_days = 1
+    return 1
 
-    return crafting_cooldown_duration_in_days
 
 
 def get_crafting_cooldown_duration_in_seconds() -> int:
-    crafting_cooldown_duration_in_seconds = (
+    return (
         24 * 3600 * get_crafting_cooldown_duration_in_days()
     )
 
-    return crafting_cooldown_duration_in_seconds
 
 
 def determine_whether_a_booster_pack_can_be_crafted(

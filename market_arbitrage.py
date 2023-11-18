@@ -23,9 +23,8 @@ from utils import (
 def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -> bool:
     next_creation_time = badge_data['next_creation_time']
 
-    booster_pack_has_been_crafted_at_least_once = bool(next_creation_time is not None)
+    return bool(next_creation_time is not None)
 
-    return booster_pack_has_been_crafted_at_least_once
 
 
 def filter_out_badges_never_crafted(
@@ -121,9 +120,8 @@ def determine_whether_an_arbitrage_might_exist(
     if price_threshold is None:
         raise AssertionError
 
-    an_arbitrage_might_exist = bool(price_threshold < sell_price_without_fee)
+    return bool(price_threshold < sell_price_without_fee)
 
-    return an_arbitrage_might_exist
 
 
 def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
@@ -132,9 +130,8 @@ def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
     sell_price_was_not_retrieved = bool(sell_price_including_fee < 0)
     there_is_no_sell_order = bool(sell_price_including_fee == 0)
 
-    sell_price_is_unknown = sell_price_was_not_retrieved or there_is_no_sell_order
+    return sell_price_was_not_retrieved or there_is_no_sell_order
 
-    return sell_price_is_unknown
 
 
 def filter_out_badges_with_low_sell_price(
@@ -385,13 +382,12 @@ def update_badge_arbitrages_with_latest_market_order_data(
         verbose=verbose,
     )
 
-    latest_badge_arbitrages = find_badge_arbitrages(
+    return find_badge_arbitrages(
         badge_data=selected_badge_data,
         market_order_dict=market_order_dict,
         verbose=verbose,
     )
 
-    return latest_badge_arbitrages
 
 
 def get_filtered_badge_data(

@@ -104,13 +104,12 @@ def sort_according_to_buzz(
             unknown_market_order_dict,
         ) = filter_out_unmarketable_packs(market_order_dict)
 
-    hashes_for_best_bid = sorted(
+    return sorted(
         marketable_market_order_dict,
         reverse=True,
         key=lambda x: market_order_dict[x]['bid'],
     )
 
-    return hashes_for_best_bid
 
 
 def print_packs_with_high_buzz(

@@ -12,9 +12,8 @@ from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_na
 def determine_whether_listing_hash_is_dubious(listing_hash: str) -> bool:
     dubious_str = '#Economy_TradingCards_'
 
-    listing_hash_is_dubious = bool(dubious_str in listing_hash)
+    return bool(dubious_str in listing_hash)
 
-    return listing_hash_is_dubious
 
 
 def filter_out_dubious_listing_hashes(
@@ -197,7 +196,7 @@ def load_aggregated_badge_data(
 
     retrieve_gem_price_from_scratch = bool(enforced_sack_of_gems_price is None)
 
-    aggregated_badge_data = aggregate_badge_data(
+    return aggregate_badge_data(
         badge_creation_details,
         badge_matches,
         all_listings=all_listings,
@@ -206,7 +205,6 @@ def load_aggregated_badge_data(
         retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
     )
 
-    return aggregated_badge_data
 
 
 def populate_random_samples_of_badge_data(

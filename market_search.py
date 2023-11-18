@@ -16,29 +16,24 @@ from utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_nam
 
 
 def get_steam_market_search_url() -> str:
-    market_search_url = 'https://steamcommunity.com/market/search/render/'
+    return 'https://steamcommunity.com/market/search/render/'
 
-    return market_search_url
 
 
 def get_tag_item_class_no_for_trading_cards() -> int:
-    tag_item_class_no = 2
-    return tag_item_class_no
+    return 2
 
 
 def get_tag_item_class_no_for_profile_backgrounds() -> int:
-    tag_item_class_no = 3
-    return tag_item_class_no
+    return 3
 
 
 def get_tag_item_class_no_for_emoticons() -> int:
-    tag_item_class_no = 4
-    return tag_item_class_no
+    return 4
 
 
 def get_tag_item_class_no_for_booster_packs() -> int:
-    tag_item_class_no = 5
-    return tag_item_class_no
+    return 5
 
 
 def get_tag_drop_rate_str(rarity: str = None) -> str:
@@ -55,9 +50,8 @@ def get_tag_drop_rate_str(rarity: str = None) -> str:
         # Rarity: Common
         tag_drop_rate_no = 0
 
-    tag_drop_rate_str = f'tag_droprate_{tag_drop_rate_no}'
+    return f'tag_droprate_{tag_drop_rate_no}'
 
-    return tag_drop_rate_str
 
 
 def get_search_parameters(
