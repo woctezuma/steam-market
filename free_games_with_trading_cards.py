@@ -1,9 +1,7 @@
 # Objective: find free games which feature Steam trading cards, and thus allow their owners to craft "Booster Packs".
-from typing import TYPE_CHECKING
 
-if TYPE_CHECKING:
-    import collections.abc
 
+import collections.abc
 from pathlib import Path
 
 import requests
