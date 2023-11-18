@@ -78,7 +78,7 @@ class TestMarketArbitrageMethods(unittest.TestCase):
             # The steamLoginSecure cookie cannot be made public for the test.
             flag = True
 
-        assert flag is True
+        assert flag
 
 
 class TestMarketOrderMethods(unittest.TestCase):
@@ -89,7 +89,7 @@ class TestMarketOrderMethods(unittest.TestCase):
             # The steamLoginSecure cookie cannot be made public for the test.
             flag = True
 
-        assert flag is True
+        assert flag
 
 
 class TestUtilsMethods(unittest.TestCase):
