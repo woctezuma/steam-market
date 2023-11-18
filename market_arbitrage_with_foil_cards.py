@@ -747,9 +747,9 @@ def discard_necessarily_unrewarding_app_ids(
 
 
 def safe_read_from_dict(
-    input_dict: dict,
-    input_key,
-):
+    input_dict: dict[str | int, int],
+    input_key: int,
+) -> int | None:
     input_key_as_str = str(input_key)
 
     try:

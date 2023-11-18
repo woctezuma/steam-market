@@ -162,7 +162,7 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
     ] = None,
     gem_price_in_euros: float = None,
     verbose: bool = True,
-):
+) -> dict[int | str, dict]:
     if gem_price_in_euros is None:
         gem_price_in_euros = get_gem_price()
 

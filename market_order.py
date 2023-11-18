@@ -59,7 +59,7 @@ def get_steam_api_rate_limits_for_market_order(
     return rate_limits
 
 
-def get_market_order_headers():
+def get_market_order_headers() -> dict[str, str]:
     headers = {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate, br",
