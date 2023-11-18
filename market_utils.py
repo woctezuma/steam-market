@@ -227,7 +227,7 @@ def populate_random_samples_of_badge_data(
         for i in random.sample(range(len(listing_hashes)), k=num_samples)
     ]
 
-    item_nameids = get_item_nameid_batch(listing_hash_samples)
+    get_item_nameid_batch(listing_hash_samples)
 
     return True
 
@@ -238,7 +238,7 @@ def main(populate_all_item_name_ids: bool = False) -> bool:
         # Caveat: this may require a long time, due to API rate limits.
 
         all_listings = load_all_listings()
-        item_nameids = get_item_nameid_batch(listing_hashes=all_listings)
+        get_item_nameid_batch(listing_hashes=all_listings)
 
     else:
         aggregated_badge_data = load_aggregated_badge_data()

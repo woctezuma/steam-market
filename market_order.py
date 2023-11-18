@@ -355,7 +355,7 @@ def main() -> bool:
     badge_data[app_id] = {}
     badge_data[app_id]['listing_hash'] = listing_hash
 
-    market_order_dict = download_market_order_data_batch(
+    download_market_order_data_batch(
         badge_data,
         save_to_disk=False,
         verbose=True,

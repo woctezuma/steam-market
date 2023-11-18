@@ -477,7 +477,7 @@ def main(
         badge['listing_hash'] for badge in filtered_badge_data.values()
     ]
 
-    item_nameids = get_item_nameid_batch(
+    get_item_nameid_batch(
         selected_listing_hashes,
         listing_details_output_file_name=listing_details_output_file_name,
     )

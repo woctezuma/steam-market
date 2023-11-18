@@ -152,7 +152,7 @@ def main(force_update: bool = False) -> bool:
     else:
         response = load_data_from_steam_card_exchange()
 
-    dico = parse_data_from_steam_card_exchange(response)
+    parse_data_from_steam_card_exchange(response)
 
     return True
 

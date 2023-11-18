@@ -188,7 +188,7 @@ def main() -> None:
 
     # Manually remove previously processed appIDs:
 
-    app_ids_to_do = remove_app_ids_previously_processed(
+    remove_app_ids_previously_processed(
         filtered_app_ids,
         app_ids_previously_processed=app_ids_previously_processed,
         verbose=True,

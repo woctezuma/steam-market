@@ -170,7 +170,6 @@ def query_goo_value(
         resp_data = requests.get(url, params=req_data, cookies=cookie)
     else:
         resp_data = requests.get(url, params=req_data)
-    status_code = resp_data.status_code
 
     if resp_data.ok:
         result = resp_data.json()
@@ -442,7 +441,7 @@ def try_again_to_download_item_type(
         in app_ids_with_unreliable_goo_details
     ]
 
-    updated_all_listing_details = update_all_listing_details(
+    update_all_listing_details(
         listing_hashes=listing_hashes_to_process,
         listing_details_output_file_name=listing_details_output_file_name,
     )
@@ -552,7 +551,7 @@ def apply_workflow_for_foil_cards(
 
     # Pre-retrieval of item name ids (and item types at the same time)
 
-    item_nameids = get_item_nameid_batch(
+    get_item_nameid_batch(
         filtered_representative_listing_hashes_with_missing_goo_details,
         listing_details_output_file_name=listing_details_output_file_name,
     )
@@ -629,7 +628,7 @@ def apply_workflow_for_foil_cards(
     #     - 8872 appIDs in total,
     #     - out of which 4213 to 4257 are potentially rewarding appIDs, so 47% - 48% of the appIDs.
 
-    potentially_rewarding_app_ids = discard_necessarily_unrewarding_app_ids(
+    discard_necessarily_unrewarding_app_ids(
         all_goo_details=all_goo_details,
         app_ids_with_unreliable_goo_details=app_ids_with_unreliable_goo_details,
         app_ids_with_unknown_goo_value=app_ids_with_unknown_goo_value,
@@ -1211,7 +1210,7 @@ def build_dictionary_of_representative_listing_hashes(
         listing_details = all_listing_details[listing_hash]
 
         try:
-            item_type_no = listing_details['item_type_no']
+            listing_details['item_type_no']
         except KeyError:
             continue
 

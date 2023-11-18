@@ -445,7 +445,7 @@ def main() -> bool:
         '505730-Holy Potatoes! We’re in Space%3F! Booster Pack',
     ]
 
-    listing_details = update_all_listing_details(listing_hashes)
+    update_all_listing_details(listing_hashes)
 
     return True
 

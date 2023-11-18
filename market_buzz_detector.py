@@ -289,7 +289,7 @@ def main(
 
     # Pre-retrieval of item name ids
 
-    item_nameids = get_item_nameid_batch(filtered_listing_hashes)
+    get_item_nameid_batch(filtered_listing_hashes)
 
     # Download market orders
 

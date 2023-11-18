@@ -433,7 +433,7 @@ def create_then_sell_booster_packs_for_batch(
         profile_id=profile_id,
     )
 
-    next_creation_times = update_and_save_next_creation_times(creation_results)
+    update_and_save_next_creation_times(creation_results)
 
     return creation_results, sale_results
 

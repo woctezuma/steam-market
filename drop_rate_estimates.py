@@ -234,9 +234,9 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
 
 def main() -> bool:
-    drop_rate_estimates = get_drop_rate_estimates(verbose=True)
+    get_drop_rate_estimates(verbose=True)
 
-    drop_rate_estimates = get_drop_rate_estimates_based_on_item_rarity_pattern(
+    get_drop_rate_estimates_based_on_item_rarity_pattern(
         verbose=True,
     )
 

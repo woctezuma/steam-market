@@ -100,7 +100,7 @@ def update_and_save_cookie_to_disk_if_values_changed(
             verbose=verbose,
         )
 
-        is_cookie_to_be_saved = save_steam_cookie_to_disk(
+        save_steam_cookie_to_disk(
             cookie=cookie,
             file_name_with_personal_info=file_name_with_personal_info,
         )
@@ -109,7 +109,7 @@ def update_and_save_cookie_to_disk_if_values_changed(
 
 
 def main() -> None:
-    cookie = get_cookie_dict(verbose=True)
+    get_cookie_dict(verbose=True)
 
 
 if __name__ == '__main__':
