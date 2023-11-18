@@ -138,7 +138,7 @@ def get_booster_pack_creation_parameters(
     booster_pack_creation_parameters["appid"] = str(app_id)
     booster_pack_creation_parameters["series"] = "1"
     booster_pack_creation_parameters["tradability_preference"] = str(
-        tradability_preference
+        tradability_preference,
     )
 
     return booster_pack_creation_parameters
@@ -214,7 +214,7 @@ def get_market_sell_parameters(
     market_sell_parameters["appid"] = "753"
     market_sell_parameters["contextid"] = "6"
     market_sell_parameters["assetid"] = str(
-        asset_id
+        asset_id,
     )  # To automatically determine asset ID, use retrieve_asset_id().
     market_sell_parameters["amount"] = "1"
     market_sell_parameters["price"] = str(price_in_cents)

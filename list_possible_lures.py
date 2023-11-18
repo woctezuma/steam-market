@@ -42,7 +42,7 @@ def get_sell_prices_without_fee(
             sell_price_in_cents = current_data["sell_price"]
             sell_price_in_euros = int(sell_price_in_cents) / 100
             sell_price_after_arbitrary_offset = sell_price_in_euros - abs(
-                price_offset_in_euros
+                price_offset_in_euros,
             )
             sell_price_in_euros_without_fee = compute_sell_price_without_fee(
                 sell_price_after_arbitrary_offset,
