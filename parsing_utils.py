@@ -45,7 +45,7 @@ def parse_augmented_steam_drop_down_menu(
     lines: list[str],
     verbose: bool = False,
 ) -> dict[str, dict]:
-    badge_creation_details:dict[str, dict] = {}
+    badge_creation_details: dict[str, dict] = {}
 
     print("Parsing the drop-down menu displayed with Augmented Steam.")
 

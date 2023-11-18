@@ -170,10 +170,7 @@ def get_all_listings(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        if resp_data and resp_data.ok:
-            status_code = resp_data.status_code
-        else:
-            status_code = None
+        status_code = resp_data.status_code if resp_data and resp_data.ok else None
 
         start_index += delta_index
         query_count += 1
@@ -195,7 +192,7 @@ def get_all_listings(
             else:
                 num_listings = num_listings_based_on_latest_query
 
-            listings : dict[str, dict] = {}
+            listings: dict[str, dict] = {}
             for listing in result["results"]:
                 listing_hash = listing["hash_name"]
 

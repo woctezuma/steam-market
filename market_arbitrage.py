@@ -132,7 +132,7 @@ def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
 
 
 def filter_out_badges_with_low_sell_price(
-    aggregated_badge_data: dict[ str, dict],
+    aggregated_badge_data: dict[str, dict],
     user_chosen_price_threshold: float | None = None,
     category_name: str | None = None,
     verbose: bool = True,
@@ -198,7 +198,7 @@ def find_badge_arbitrages(
             verbose=verbose,
         )
 
-    badge_arbitrages : dict[str, dict] = {}
+    badge_arbitrages: dict[str, dict] = {}
 
     for app_id in badge_data:
         individual_badge_data = badge_data[app_id]

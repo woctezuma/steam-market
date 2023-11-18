@@ -80,7 +80,7 @@ def match_badges_with_listing_hashes(
 
     # Match badges with listing hashes
 
-    badge_matches : dict[str, str | None] = {}
+    badge_matches: dict[str, str | None] = {}
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
 

@@ -108,10 +108,7 @@ def download_market_order_data(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        if resp_data and resp_data.ok:
-            status_code = resp_data.status_code
-        else:
-            status_code = None
+        status_code = resp_data.status_code if resp_data and resp_data.ok else None
 
     else:
         print(
@@ -190,7 +187,7 @@ def download_market_order_data(
 
 
 def download_market_order_data_batch(
-    badge_data: dict[ str, dict],
+    badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
     verbose: bool = False,
     save_to_disk: bool = True,
@@ -260,7 +257,7 @@ def download_market_order_data_batch(
 
 
 def load_market_order_data(
-    badge_data: dict[ str, dict],
+    badge_data: dict[str, dict],
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -293,8 +290,8 @@ def load_market_order_data(
 def trim_market_order_data(
     badge_data: dict[str, dict],
     market_order_dict: dict[str, dict],
-) -> tuple[dict[str, dict], list[str | str]]:
-    trimmed_market_order_dict:dict[str, dict] = {}
+) -> tuple[dict[str, dict], list[str]]:
+    trimmed_market_order_dict: dict[str, dict] = {}
     app_ids_with_missing_data = []
 
     for app_id in badge_data:
@@ -345,7 +342,7 @@ def main() -> bool:
 
     app_id = listing_hash.split("-", maxsplit=1)[0]
 
-    badge_data: dict[str,dict] = {}
+    badge_data: dict[str, dict] = {}
     badge_data[app_id] = {}
     badge_data[app_id]["listing_hash"] = listing_hash
 

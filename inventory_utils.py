@@ -304,10 +304,7 @@ def retrieve_asset_id(
     if steam_inventory is None:
         steam_inventory = load_steam_inventory(profile_id=profile_id)
 
-    if steam_inventory:
-        descriptions = steam_inventory["rgDescriptions"]
-    else:
-        descriptions = {}
+    descriptions = steam_inventory["rgDescriptions"] if steam_inventory else {}
 
     matched_element = {}
 
@@ -335,10 +332,7 @@ def retrieve_asset_id(
     has_been_matched = bool(len(matched_element) > 0)
 
     if has_been_matched:
-        if steam_inventory:
-            community_inventory = steam_inventory["rgInventory"]
-        else:
-            community_inventory = {}
+        community_inventory = steam_inventory["rgInventory"] if steam_inventory else {}
 
         for element in community_inventory:
             if (

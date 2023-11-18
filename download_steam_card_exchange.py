@@ -111,7 +111,7 @@ def parse_data_from_steam_card_exchange(
 
     # Build dict: app_id -> num_cards_per_set
 
-    dico : dict[str, dict] = {}
+    dico: dict[str, dict] = {}
 
     for app_info in response["data"]:
         app_id = app_info[0][0]

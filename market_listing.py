@@ -251,7 +251,7 @@ def parse_item_name_id_from_script(last_script: str) -> int | None:
     return item_nameid
 
 
-def parse_item_name_id(html_doc: str) -> tuple[int | None, bool| None, int| None]:
+def parse_item_name_id(html_doc: str) -> tuple[int | None, bool | None, int | None]:
     soup = BeautifulSoup(html_doc, "html.parser")
 
     last_script = str(soup.find_all("script")[-1])
@@ -266,11 +266,11 @@ def parse_item_name_id(html_doc: str) -> tuple[int | None, bool| None, int| None
 
 
 def get_listing_details(
-    listing_hash: str ,
+    listing_hash: str,
     cookie: dict[str, str] | None = None,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
-    listing_details:dict[str, dict] = {}
+    listing_details: dict[str, dict] = {}
 
     url = get_steam_market_listing_url(
         listing_hash=listing_hash,
@@ -472,7 +472,7 @@ def get_item_nameid_batch(
     try:
         listing_details = load_json(listing_details_output_file_name)
 
-        item_nameids : dict[str, dict] = {}
+        item_nameids: dict[str, dict] = {}
         listing_hashes_to_process = []
         for listing_hash in listing_hashes:
             item_nameids[listing_hash] = {}

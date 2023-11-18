@@ -41,10 +41,7 @@ def download_user_data() -> dict | None:
 def download_owned_apps(verbose: bool = True) -> list[str]:
     result = download_user_data()
 
-    if result:
-        owned_apps = result["rgOwnedApps"]
-    else:
-        owned_apps = []
+    owned_apps = result["rgOwnedApps"] if result else []
 
     if verbose:
         print(f"Owned apps: {len(owned_apps)}")
@@ -76,7 +73,7 @@ def download_free_apps(method: str = "price", verbose: bool = True) -> set[str]:
 
         data = steamspypi.download(data_request)
 
-        free_apps = { str(app_id) for app_id in data }
+        free_apps = {str(app_id) for app_id in data}
 
     if verbose:
         print(f"Free apps (based on {method}): {len(free_apps)}")

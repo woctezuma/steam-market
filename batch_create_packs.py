@@ -30,7 +30,9 @@ def filter_app_ids_based_on_badge_data(
 
     # Only keep appIDs found in badge data, so that we have access to fields like the name, the hash, and the gem price.
     app_ids = [
-        app_id for app_id in manually_selected_app_ids if str(app_id) in filtered_badge_data
+        app_id
+        for app_id in manually_selected_app_ids
+        if str(app_id) in filtered_badge_data
     ]
 
     app_ids = sorted(

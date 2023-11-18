@@ -124,7 +124,7 @@ def get_steam_goo_value_parameters(
     listing_hash: str | None = None,
     is_foil: bool = True,
     verbose: bool = True,
-) -> dict [str, str | int]:
+) -> dict[str, str | int]:
     if item_type is None:
         item_type = get_item_type_no_for_trading_cards(
             listing_hash=listing_hash,
@@ -133,7 +133,7 @@ def get_steam_goo_value_parameters(
 
     border_color = get_border_color_no_for_trading_cards(is_foil=is_foil)
 
-    params:dict [str, str | int] = {}
+    params: dict[str, str | int] = {}
 
     params["appid"] = app_id
     params["item_type"] = item_type
@@ -382,8 +382,9 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
         verbose=verbose,
     )
 
-    app_ids_with_previously_downloaded_goo_details = list(previously_downloaded_all_goo_details.keys())
-
+    app_ids_with_previously_downloaded_goo_details = list(
+        previously_downloaded_all_goo_details.keys(),
+    )
 
     return [
         listing_hash
@@ -1161,7 +1162,7 @@ def build_dictionary_of_representative_listing_hashes(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
-    dictionary_of_representative_listing_hashes:dict[str, list[str]] = {}
+    dictionary_of_representative_listing_hashes: dict[str, list[str]] = {}
 
     for listing_hash in all_listing_details:
         app_id = convert_listing_hash_to_app_id(listing_hash)

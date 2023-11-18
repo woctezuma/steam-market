@@ -58,7 +58,7 @@ def convert_to_badges(
     filtered_listing_hashes: dict[str, dict] | list[str],
     max_num_badges: int | None = None,
 ) -> dict[str, dict]:
-    badge_data : dict[str, dict] = {}
+    badge_data: dict[str, dict] = {}
 
     for i, listing_hash in enumerate(filtered_listing_hashes):
         if max_num_badges is not None and i >= max_num_badges:
@@ -186,7 +186,7 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(
     minimum_allowed_sack_of_gems_price: float | None = None,
 ) -> dict[str, dict]:
     if aggregated_badge_data is None:
-        aggregated_badge_data = {} # solely to silence an error for mypy type-hinting
+        aggregated_badge_data = {}  # solely to silence an error for mypy type-hinting
         aggregated_badge_data = convert_to_badges(all_listings)
 
     dico = parse_data_from_steam_card_exchange(
