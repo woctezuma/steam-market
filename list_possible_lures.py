@@ -18,7 +18,6 @@ def get_app_ids_of_interest() -> list[str]:
     return [str(app_id) for app_id in data]
 
 
-
 def get_sell_prices_without_fee(
     app_ids: list[str],
     price_offset_in_euros: float = 0.0,
@@ -40,9 +39,11 @@ def get_sell_prices_without_fee(
         if app_id in app_ids:
             current_data = data[listing_hash]
 
-            sell_price_in_cents = current_data['sell_price']
+            sell_price_in_cents = current_data["sell_price"]
             sell_price_in_euros = int(sell_price_in_cents) / 100
-            sell_price_after_arbitrary_offset = sell_price_in_euros - abs(price_offset_in_euros)
+            sell_price_after_arbitrary_offset = sell_price_in_euros - abs(
+                price_offset_in_euros
+            )
             sell_price_in_euros_without_fee = compute_sell_price_without_fee(
                 sell_price_after_arbitrary_offset,
             )
@@ -63,9 +64,9 @@ def get_gem_amount_for_a_booster_pack(app_ids: list[str]) -> dict[str, int]:
         try:
             current_data = data[int(app_id)]
         except KeyError:
-            current_data = {'gem_value': 9999}
+            current_data = {"gem_value": 9999}
 
-        gem_amount = current_data['gem_value']
+        gem_amount = current_data["gem_value"]
 
         gem_amounts_for_a_booster_pack[app_id] = gem_amount
 
@@ -110,7 +111,7 @@ def filter_app_ids_with_potential_profit(
         negative = sorted(set(app_ids_as_int).difference(filtered_app_ids))
 
         print(
-            '\nPositive ({}): {}\n\nNegative ({}): {}\n\nTotal ({})'.format(
+            "\nPositive ({}): {}\n\nNegative ({}): {}\n\nTotal ({})".format(
                 len(positive),
                 positive,
                 len(negative),
@@ -137,7 +138,7 @@ def remove_app_ids_previously_processed(
     )
 
     if verbose:
-        print(f'\nPositive after trimming ({len(app_ids_to_do)}): {app_ids_to_do}')
+        print(f"\nPositive after trimming ({len(app_ids_to_do)}): {app_ids_to_do}")
 
     return app_ids_to_do
 
@@ -149,16 +150,104 @@ def main() -> None:
     price_offset_in_euros = 0.1
 
     app_ids_previously_processed = [
-        205890, 359400, 395620, 398140, 448720, 468250, 533690, 554640, 582350, 589870,
-        599060, 615340, 325120, 257670, 318090, 314000, 558490, 565020, 254880, 554660,
-        266150, 348840, 304170, 391210, 600750, 345520, 523060, 259640, 442810, 237760,
-        645830, 272330, 383690, 320590, 544730, 290140, 434780, 522340, 324710, 307050,
-        499950, 467320, 630140, 395520, 874240, 551170, 300040, 251150, 1045520, 705810,
-        533540, 459820, 878380, 253230, 675630, 368180, 679990, 621880, 393530, 99900,
-        486460, 363330, 421700, 550470, 844870, 331600, 562260, 591960, 310360, 296550,
-        316010, 250740, 324470, 521340, 33680, 883860, 632470, 451230, 523680, 432290,
-        223650, 338340, 257710, 287920, 270010, 416450, 261570, 381640, 520910, 345820,
-        795100, 291550, 413410, 996580, 794600, 413420, 403700, 921590,
+        205890,
+        359400,
+        395620,
+        398140,
+        448720,
+        468250,
+        533690,
+        554640,
+        582350,
+        589870,
+        599060,
+        615340,
+        325120,
+        257670,
+        318090,
+        314000,
+        558490,
+        565020,
+        254880,
+        554660,
+        266150,
+        348840,
+        304170,
+        391210,
+        600750,
+        345520,
+        523060,
+        259640,
+        442810,
+        237760,
+        645830,
+        272330,
+        383690,
+        320590,
+        544730,
+        290140,
+        434780,
+        522340,
+        324710,
+        307050,
+        499950,
+        467320,
+        630140,
+        395520,
+        874240,
+        551170,
+        300040,
+        251150,
+        1045520,
+        705810,
+        533540,
+        459820,
+        878380,
+        253230,
+        675630,
+        368180,
+        679990,
+        621880,
+        393530,
+        99900,
+        486460,
+        363330,
+        421700,
+        550470,
+        844870,
+        331600,
+        562260,
+        591960,
+        310360,
+        296550,
+        316010,
+        250740,
+        324470,
+        521340,
+        33680,
+        883860,
+        632470,
+        451230,
+        523680,
+        432290,
+        223650,
+        338340,
+        257710,
+        287920,
+        270010,
+        416450,
+        261570,
+        381640,
+        520910,
+        345820,
+        795100,
+        291550,
+        413410,
+        996580,
+        794600,
+        413420,
+        403700,
+        921590,
     ]
 
     # List appIDs of interest
@@ -194,5 +283,5 @@ def main() -> None:
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

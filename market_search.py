@@ -16,8 +16,7 @@ from utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_nam
 
 
 def get_steam_market_search_url() -> str:
-    return 'https://steamcommunity.com/market/search/render/'
-
+    return "https://steamcommunity.com/market/search/render/"
 
 
 def get_tag_item_class_no_for_trading_cards() -> int:
@@ -38,20 +37,19 @@ def get_tag_item_class_no_for_booster_packs() -> int:
 
 def get_tag_drop_rate_str(rarity: str | None = None) -> str:
     if rarity is None:
-        rarity = 'common'
+        rarity = "common"
 
-    if rarity == 'extraordinary':
+    if rarity == "extraordinary":
         tag_drop_rate_no = 3
-    elif rarity == 'rare':
+    elif rarity == "rare":
         tag_drop_rate_no = 2
-    elif rarity == 'uncommon':
+    elif rarity == "uncommon":
         tag_drop_rate_no = 1
     else:
         # Rarity: Common
         tag_drop_rate_no = 0
 
-    return f'tag_droprate_{tag_drop_rate_no}'
-
+    return f"tag_droprate_{tag_drop_rate_no}"
 
 
 def get_search_parameters(
@@ -76,27 +74,26 @@ def get_search_parameters(
     # Sort by name to ensure that the download of listings is not affected by people buying/selling during the process.
     # Otherwise, it would be possible to sort columns by 'price' instead of by 'name',
     #                                 and in 'desc'-ending order rather than in 'asc'-ending order.
-    column_to_sort_by = 'name'
-    sort_direction = 'asc'
+    column_to_sort_by = "name"
+    sort_direction = "asc"
 
     params = {}
 
-    params['norender'] = '1'
-    params['category_753_Game[]'] = 'any'
-    params['category_753_droprate[]'] = tag_drop_rate_str
-    params['category_753_item_class[]'] = 'tag_item_class_' + str(tag_item_class_no)
-    params['appid'] = '753'
-    params['sort_column'] = column_to_sort_by
-    params['sort_dir'] = sort_direction
-    params['start'] = str(start_index)
-    params['count'] = str(delta_index)
+    params["norender"] = "1"
+    params["category_753_Game[]"] = "any"
+    params["category_753_droprate[]"] = tag_drop_rate_str
+    params["category_753_item_class[]"] = "tag_item_class_" + str(tag_item_class_no)
+    params["appid"] = "753"
+    params["sort_column"] = column_to_sort_by
+    params["sort_dir"] = sort_direction
+    params["start"] = str(start_index)
+    params["count"] = str(delta_index)
 
     if tag_item_class_no == get_tag_item_class_no_for_trading_cards():
-
         if is_foil_trading_card:
-            params['category_753_cardborder[]'] = 'tag_cardborder_1'
+            params["category_753_cardborder[]"] = "tag_cardborder_1"
         else:
-            params['category_753_cardborder[]'] = 'tag_cardborder_0'
+            params["category_753_cardborder[]"] = "tag_cardborder_0"
 
     return params
 
@@ -107,17 +104,15 @@ def get_steam_api_rate_limits_for_market_search(
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
-
         rate_limits = {
-            'max_num_queries': 50,
-            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=1),
+            "max_num_queries": 50,
+            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=1),
         }
 
     else:
-
         rate_limits = {
-            'max_num_queries': 25,
-            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=5),
+            "max_num_queries": 25,
+            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
         }
 
     return rate_limits
@@ -148,9 +143,8 @@ def get_all_listings(
     delta_index = 100
 
     while (num_listings is None) or (start_index < num_listings):
-
         if num_listings is not None:
-            print(f'[{start_index}/{num_listings}]')
+            print(f"[{start_index}/{num_listings}]")
 
         req_data = get_search_parameters(
             start_index=start_index,
@@ -160,10 +154,10 @@ def get_all_listings(
             rarity=rarity,
         )
 
-        if query_count >= rate_limits['max_num_queries']:
-            cooldown_duration = rate_limits['cooldown']
+        if query_count >= rate_limits["max_num_queries"]:
+            cooldown_duration = rate_limits["cooldown"]
             print(
-                f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds',
+                f"Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds",
             )
             time.sleep(cooldown_duration)
             query_count = 0
@@ -191,7 +185,7 @@ def get_all_listings(
                 jar = dict(resp_data.cookies)
                 cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
-            num_listings_based_on_latest_query = result['total_count']
+            num_listings_based_on_latest_query = result["total_count"]
 
             if num_listings_based_on_latest_query is None:
                 num_listings_based_on_latest_query = num_listings
@@ -202,17 +196,17 @@ def get_all_listings(
                 num_listings = num_listings_based_on_latest_query
 
             listings = {}
-            for listing in result['results']:
-                listing_hash = listing['hash_name']
+            for listing in result["results"]:
+                listing_hash = listing["hash_name"]
 
                 listings[listing_hash] = {}
-                listings[listing_hash]['sell_listings'] = listing['sell_listings']
-                listings[listing_hash]['sell_price'] = listing['sell_price']
-                listings[listing_hash]['sell_price_text'] = listing['sell_price_text']
+                listings[listing_hash]["sell_listings"] = listing["sell_listings"]
+                listings[listing_hash]["sell_price"] = listing["sell_price"]
+                listings[listing_hash]["sell_price_text"] = listing["sell_price_text"]
 
         else:
             print(
-                f'Wrong status code ({status_code}) for start_index = {start_index} after {query_count} queries.',
+                f"Wrong status code ({status_code}) for start_index = {start_index} after {query_count} queries.",
             )
             if status_code is None:
                 continue
@@ -260,9 +254,9 @@ def update_all_listings(
         all_listings = load_all_listings(
             listing_output_file_name=listing_output_file_name,
         )
-        print(f'Loading {len(all_listings)} listings from disk.')
+        print(f"Loading {len(all_listings)} listings from disk.")
     except FileNotFoundError:
-        print('Downloading listings from scratch.')
+        print("Downloading listings from scratch.")
         all_listings = None
 
     all_listings = get_all_listings(
@@ -286,12 +280,12 @@ def load_all_listings(listing_output_file_name: str | None = None) -> dict[str, 
         all_listings = load_json(listing_output_file_name)
     except FileNotFoundError:
         print(
-            f'File {listing_output_file_name} not found. Initializing listings with an empty dictionary.',
+            f"File {listing_output_file_name} not found. Initializing listings with an empty dictionary.",
         )
         all_listings = {}
 
     return all_listings
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     update_all_listings()

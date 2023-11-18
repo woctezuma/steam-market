@@ -10,13 +10,11 @@ from utils import get_sack_of_gems_listing_file_name
 
 
 def get_listing_hash_for_gems() -> str:
-    return '753-Sack of Gems'
-
+    return "753-Sack of Gems"
 
 
 def get_num_gems_per_sack_of_gems() -> int:
     return 1000
-
 
 
 def download_sack_of_gems_price(
@@ -35,17 +33,17 @@ def download_sack_of_gems_price(
     )
 
     if status_code == HTTPStatus.OK:
-        item_nameid = listing_details[listing_hash]['item_nameid']
+        item_nameid = listing_details[listing_hash]["item_nameid"]
 
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
             item_nameid,
             verbose,
         )
-        listing_details[listing_hash]['bid'] = bid_price
-        listing_details[listing_hash]['ask'] = ask_price
-        listing_details[listing_hash]['bid_volume'] = bid_volume
-        listing_details[listing_hash]['ask_volume'] = ask_volume
+        listing_details[listing_hash]["bid"] = bid_price
+        listing_details[listing_hash]["ask"] = ask_price
+        listing_details[listing_hash]["bid_volume"] = bid_volume
+        listing_details[listing_hash]["ask_volume"] = ask_volume
 
         sack_of_gems_price = ask_price
 
@@ -67,13 +65,12 @@ def load_sack_of_gems_price(
     if retrieve_gem_price_from_scratch:
         sack_of_gems_price = download_sack_of_gems_price(sack_of_gems_listing_file_name)
     else:
-
         try:
             listing_details = load_json(sack_of_gems_listing_file_name)
 
             listing_hash = get_listing_hash_for_gems()
 
-            sack_of_gems_price = listing_details[listing_hash]['ask']
+            sack_of_gems_price = listing_details[listing_hash]["ask"]
         except FileNotFoundError:
             sack_of_gems_price = download_sack_of_gems_price(
                 sack_of_gems_listing_file_name,
@@ -81,7 +78,7 @@ def load_sack_of_gems_price(
 
     if verbose:
         print(
-            f'A sack of {get_num_gems_per_sack_of_gems()} gems can be bought for {sack_of_gems_price:.2f} €.',
+            f"A sack of {get_num_gems_per_sack_of_gems()} gems can be bought for {sack_of_gems_price:.2f} €.",
         )
 
     return sack_of_gems_price
@@ -101,7 +98,7 @@ def get_gem_price(
     else:
         sack_of_gems_price = enforced_sack_of_gems_price
         print(
-            '[manual input] A sack of {} gems can allegedly be bought for {:.2f} €.'.format(
+            "[manual input] A sack of {} gems can allegedly be bought for {:.2f} €.".format(
                 get_num_gems_per_sack_of_gems(),
                 sack_of_gems_price,
             ),
@@ -110,7 +107,7 @@ def get_gem_price(
     if minimum_allowed_sack_of_gems_price is not None:
         sack_of_gems_price = max(minimum_allowed_sack_of_gems_price, sack_of_gems_price)
         print(
-            '[manual adjustment] The price of a sack of gems is set to {:.2f} € (minimum allowed: {:.2f} €).'.format(
+            "[manual adjustment] The price of a sack of gems is set to {:.2f} € (minimum allowed: {:.2f} €).".format(
                 sack_of_gems_price,
                 minimum_allowed_sack_of_gems_price,
             ),
@@ -119,7 +116,6 @@ def get_gem_price(
     num_gems_per_sack_of_gems = get_num_gems_per_sack_of_gems()
 
     return sack_of_gems_price / num_gems_per_sack_of_gems
-
 
 
 def print_gem_price_reminder(
@@ -144,14 +140,13 @@ def get_gem_amount_required_to_craft_badge() -> int:
     return 2000
 
 
-
 def main() -> bool:
-    print('Loaded from the disk:')
+    print("Loaded from the disk:")
     load_sack_of_gems_price(
         retrieve_gem_price_from_scratch=False,
         verbose=True,
     )
-    print('\nDownloaded as a market listing:')
+    print("\nDownloaded as a market listing:")
     load_sack_of_gems_price(
         retrieve_gem_price_from_scratch=True,
         verbose=True,
@@ -160,5 +155,5 @@ def main() -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

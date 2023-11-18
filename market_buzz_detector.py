@@ -35,21 +35,21 @@ def filter_listings(
     sorted_listing_hashes = sorted(
         all_listings,
         reverse=True,
-        key=lambda x: all_listings[x]['sell_price'],
+        key=lambda x: all_listings[x]["sell_price"],
     )
 
     # *Heuristic* filtering of listing hashes
 
     filtered_listing_hashes = list(
         filter(
-            lambda x: all_listings[x]['sell_price'] >= min_sell_price
-            and all_listings[x]['sell_listings'] >= min_num_listings,
+            lambda x: all_listings[x]["sell_price"] >= min_sell_price
+            and all_listings[x]["sell_listings"] >= min_num_listings,
             sorted_listing_hashes,
         ),
     )
 
     if verbose:
-        print(f'{len(filtered_listing_hashes)} hashes found.\n')
+        print(f"{len(filtered_listing_hashes)} hashes found.\n")
 
     return filtered_listing_hashes
 
@@ -61,14 +61,13 @@ def convert_to_badges(
     badge_data = {}
 
     for i, listing_hash in enumerate(filtered_listing_hashes):
-
         if max_num_badges is not None and i >= max_num_badges:
             break
 
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
         badge_data[app_id] = {}
-        badge_data[app_id]['listing_hash'] = listing_hash
+        badge_data[app_id]["listing_hash"] = listing_hash
 
     return badge_data
 
@@ -81,9 +80,9 @@ def filter_out_unmarketable_packs(
 
     for listing_hash in market_order_dict:
         try:
-            is_marketable = market_order_dict[listing_hash]['is_marketable']
+            is_marketable = market_order_dict[listing_hash]["is_marketable"]
         except KeyError:
-            print(f'Marketable status not found for {listing_hash}')
+            print(f"Marketable status not found for {listing_hash}")
             unknown_market_order_dict[listing_hash] = market_order_dict[listing_hash]
 
             is_marketable = False  # avoid taking any risk: ASSUME the booster pack is NOT marketable
@@ -107,9 +106,8 @@ def sort_according_to_buzz(
     return sorted(
         marketable_market_order_dict,
         reverse=True,
-        key=lambda x: market_order_dict[x]['bid'],
+        key=lambda x: market_order_dict[x]["bid"],
     )
-
 
 
 def print_packs_with_high_buzz(
@@ -122,18 +120,17 @@ def print_packs_with_high_buzz(
     if category_name is None:
         category_name = get_category_name_for_booster_packs()
 
-    print(f'# {category_name.capitalize()} with high buy orders\n')
+    print(f"# {category_name.capitalize()} with high buy orders\n")
 
     for i, listing_hash in enumerate(hashes_for_best_bid):
-
         if i >= num_packs_to_display:
             break
 
         app_id = convert_listing_hash_to_app_id(listing_hash)
         app_name = convert_listing_hash_to_app_name(listing_hash)
 
-        bid = market_order_dict[listing_hash]['bid']
-        bid_volume = market_order_dict[listing_hash]['bid_volume']
+        bid = market_order_dict[listing_hash]["bid"]
+        bid_volume = market_order_dict[listing_hash]["bid_volume"]
 
         markdown_compatible_steam_market_url = get_steam_market_listing_url(
             listing_hash=listing_hash,
@@ -150,22 +147,22 @@ def print_packs_with_high_buzz(
         try:
             item_rarity_pattern = item_rarity_patterns_per_app_id[app_id]
 
-            num_different_items_of_common_rarity = item_rarity_pattern['common']
-            num_different_items_of_uncommon_rarity = item_rarity_pattern['uncommon']
-            num_different_items_of_rare_rarity = item_rarity_pattern['rare']
+            num_different_items_of_common_rarity = item_rarity_pattern["common"]
+            num_different_items_of_uncommon_rarity = item_rarity_pattern["uncommon"]
+            num_different_items_of_rare_rarity = item_rarity_pattern["rare"]
 
             item_rarity_pattern_info = (
-                ' ; rarity pattern C/UC/R: {}/{}/{} items'.format(
+                " ; rarity pattern C/UC/R: {}/{}/{} items".format(
                     num_different_items_of_common_rarity,
                     num_different_items_of_uncommon_rarity,
                     num_different_items_of_rare_rarity,
                 )
             )
         except TypeError:
-            item_rarity_pattern_info = ''
+            item_rarity_pattern_info = ""
 
         print(
-            '{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {}){}'.format(
+            "{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {}){}".format(
                 i + 1,
                 get_steam_store_url(app_id),
                 markdown_compatible_steam_market_url,
@@ -201,28 +198,32 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(
     )
 
     for app_id in aggregated_badge_data:
-        listing_hash = aggregated_badge_data[app_id]['listing_hash']
+        listing_hash = aggregated_badge_data[app_id]["listing_hash"]
 
-        sell_price_in_cents = all_listings[listing_hash]['sell_price']
+        sell_price_in_cents = all_listings[listing_hash]["sell_price"]
         sell_price_in_euros = sell_price_in_cents / 100
 
         try:
             data_from_steam_card_exchange = dico[app_id]
         except KeyError:
-            print(f'No data found for appID={app_id}.')
+            print(f"No data found for appID={app_id}.")
             data_from_steam_card_exchange = {
-                'name': None,
-                'gem_amount': 1200,  # by default, use the highest possible value
+                "name": None,
+                "gem_amount": 1200,  # by default, use the highest possible value
             }
 
-        aggregated_badge_data[app_id]['name'] = data_from_steam_card_exchange['name']
-        gem_amount_required_to_craft_booster_pack = data_from_steam_card_exchange['gem_amount']
+        aggregated_badge_data[app_id]["name"] = data_from_steam_card_exchange["name"]
+        gem_amount_required_to_craft_booster_pack = data_from_steam_card_exchange[
+            "gem_amount"
+        ]
 
-        aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
-        aggregated_badge_data[app_id]['gem_price'] = (
+        aggregated_badge_data[app_id][
+            "gem_amount"
+        ] = gem_amount_required_to_craft_booster_pack
+        aggregated_badge_data[app_id]["gem_price"] = (
             gem_amount_required_to_craft_booster_pack * gem_price
         )
-        aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
+        aggregated_badge_data[app_id]["sell_price"] = sell_price_in_euros
 
     return aggregated_badge_data
 
@@ -283,7 +284,7 @@ def main(
         )
 
         filtered_listing_hashes = [
-            badge['listing_hash'] for badge in filtered_badge_data.values()
+            badge["listing_hash"] for badge in filtered_badge_data.values()
         ]
 
     # Pre-retrieval of item name ids
@@ -328,7 +329,7 @@ def main(
         verbose=verbose,
     )
 
-    print('\n# Results for detected *potential* arbitrages\n')
+    print("\n# Results for detected *potential* arbitrages\n")
     print_arbitrages(
         badge_arbitrages,
         use_numbered_bullet_points=True,
@@ -336,7 +337,7 @@ def main(
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(
         retrieve_listings_from_scratch=True,
         retrieve_market_orders_online=True,

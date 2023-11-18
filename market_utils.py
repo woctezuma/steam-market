@@ -10,10 +10,9 @@ from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_na
 
 
 def determine_whether_listing_hash_is_dubious(listing_hash: str) -> bool:
-    dubious_str = '#Economy_TradingCards_'
+    dubious_str = "#Economy_TradingCards_"
 
     return bool(dubious_str in listing_hash)
-
 
 
 def filter_out_dubious_listing_hashes(
@@ -36,11 +35,11 @@ def filter_out_dubious_listing_hashes(
         if not booster_pack_is_dubious:
             filtered_listings[listing_hash] = individual_market_listing
         elif verbose:
-            print(f'Omitting dubious listing hash: {listing_hash}')
+            print(f"Omitting dubious listing hash: {listing_hash}")
 
     if verbose:
         print(
-            'There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)'.format(
+            "There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)".format(
                 len(filtered_listings),
                 len(all_listings) - len(filtered_listings),
             ),
@@ -83,26 +82,25 @@ def match_badges_with_listing_hashes(
 
     badge_matches = {}
     for app_id in badge_app_ids:
-        app_name = badge_creation_details[app_id]['name']
+        app_name = badge_creation_details[app_id]["name"]
 
         try:
             badge_matches[app_id] = listing_matches_with_app_ids[app_id]
         except KeyError:
-
             try:
                 badge_matches[app_id] = listing_matches_with_app_names[app_name]
                 if verbose:
                     print(
-                        f'Match for {app_name} (appID = {app_id}) with name instead of id.',
+                        f"Match for {app_name} (appID = {app_id}) with name instead of id.",
                     )
             except KeyError:
                 badge_matches[app_id] = None
                 if verbose:
-                    print(f'No match found for {app_name} (appID = {app_id})')
+                    print(f"No match found for {app_name} (appID = {app_id})")
 
     if verbose:
         print(
-            f'#badges = {len(badge_app_ids)} ; #matching hashes found = {len(badge_matches)}',
+            f"#badges = {len(badge_app_ids)} ; #matching hashes found = {len(badge_matches)}",
         )
 
     return badge_matches
@@ -134,7 +132,7 @@ def aggregate_badge_data(
     )
 
     if gem_price <= 0:
-        print(f'[ERROR] The price of a gem is non-positive: {gem_price}€.')
+        print(f"[ERROR] The price of a gem is non-positive: {gem_price}€.")
         raise AssertionError
 
     badge_app_ids = list(badge_creation_details.keys())
@@ -142,10 +140,12 @@ def aggregate_badge_data(
     aggregated_badge_data = {}
 
     for app_id in badge_app_ids:
-        app_name = badge_creation_details[app_id]['name']
-        gem_amount_required_to_craft_booster_pack = badge_creation_details[app_id]['gem_value']
+        app_name = badge_creation_details[app_id]["name"]
+        gem_amount_required_to_craft_booster_pack = badge_creation_details[app_id][
+            "gem_value"
+        ]
         try:
-            next_creation_time = badge_creation_details[app_id]['next_creation_time']
+            next_creation_time = badge_creation_details[app_id]["next_creation_time"]
         except KeyError:
             next_creation_time = None
         listing_hash = badge_matches[app_id]
@@ -155,18 +155,20 @@ def aggregate_badge_data(
             # Reference: https://steamcommunity.com/market/search?appid=753&category_753_Game%5B0%5D=tag_app_612150
             continue
 
-        sell_price_in_cents = all_listings[listing_hash]['sell_price']
+        sell_price_in_cents = all_listings[listing_hash]["sell_price"]
         sell_price_in_euros = sell_price_in_cents / 100
 
         aggregated_badge_data[app_id] = {}
-        aggregated_badge_data[app_id]['name'] = app_name
-        aggregated_badge_data[app_id]['listing_hash'] = listing_hash
-        aggregated_badge_data[app_id]['gem_amount'] = gem_amount_required_to_craft_booster_pack
-        aggregated_badge_data[app_id]['gem_price'] = (
+        aggregated_badge_data[app_id]["name"] = app_name
+        aggregated_badge_data[app_id]["listing_hash"] = listing_hash
+        aggregated_badge_data[app_id][
+            "gem_amount"
+        ] = gem_amount_required_to_craft_booster_pack
+        aggregated_badge_data[app_id]["gem_price"] = (
             gem_amount_required_to_craft_booster_pack * gem_price
         )
-        aggregated_badge_data[app_id]['sell_price'] = sell_price_in_euros
-        aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
+        aggregated_badge_data[app_id]["sell_price"] = sell_price_in_euros
+        aggregated_badge_data[app_id]["next_creation_time"] = next_creation_time
 
     return aggregated_badge_data
 
@@ -205,7 +207,6 @@ def load_aggregated_badge_data(
     )
 
 
-
 def populate_random_samples_of_badge_data(
     badge_data: dict[int, dict] | None = None,
     num_samples: int = 50,
@@ -213,9 +214,7 @@ def populate_random_samples_of_badge_data(
     if badge_data is None:
         badge_data = load_aggregated_badge_data()
 
-    listing_hashes = [
-        badge_data[app_id]['listing_hash'] for app_id in badge_data
-    ]
+    listing_hashes = [badge_data[app_id]["listing_hash"] for app_id in badge_data]
 
     num_samples = min(num_samples, len(listing_hashes))
 
@@ -244,5 +243,5 @@ def main(populate_all_item_name_ids: bool = False) -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(populate_all_item_name_ids=False)

@@ -14,22 +14,17 @@ def get_current_unix_time_in_ms() -> int:
     return time.time_ns() // 1000000
 
 
-
 def get_steamcardexchange_api_end_point_url() -> str:
-    return (
-        'https://www.steamcardexchange.net/api/request.php'
-    )
-
+    return "https://www.steamcardexchange.net/api/request.php"
 
 
 def get_steamcardexchange_api_params() -> dict[str, str]:
     current_unix_time_in_ms = get_current_unix_time_in_ms()
 
     return {
-        'GetBoosterPrices': '',
-        '_': str(current_unix_time_in_ms),
+        "GetBoosterPrices": "",
+        "_": str(current_unix_time_in_ms),
     }
-
 
 
 def save_data_from_steam_card_exchange(
@@ -50,7 +45,7 @@ def download_data_from_steam_card_exchange(
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
-    print('Downloading data from scratch.')
+    print("Downloading data from scratch.")
 
     url = get_steamcardexchange_api_end_point_url()
     req_data = get_steamcardexchange_api_params()
@@ -63,7 +58,7 @@ def download_data_from_steam_card_exchange(
         response = resp_data.json()
     else:
         print(
-            f'Data could not be downloaded from SteamCardExchange. Status code {status_code} was returned.',
+            f"Data could not be downloaded from SteamCardExchange. Status code {status_code} was returned.",
         )
         response = None
 
@@ -83,10 +78,10 @@ def load_data_from_steam_card_exchange(
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
     try:
-        print('Loading data from disk.')
+        print("Loading data from disk.")
         response = load_json(steam_card_exchange_file_name)
     except FileNotFoundError:
-        print('Data could not be found on the disk.')
+        print("Data could not be found on the disk.")
         response = download_data_from_steam_card_exchange(
             steam_card_exchange_file_name=steam_card_exchange_file_name,
             save_to_disk=True,
@@ -97,7 +92,6 @@ def load_data_from_steam_card_exchange(
 
 def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set: int) -> float:
     return 6000 / num_cards_per_set
-
 
 
 def parse_data_from_steam_card_exchange(
@@ -120,24 +114,24 @@ def parse_data_from_steam_card_exchange(
 
     dico = {}
 
-    for app_info in response['data']:
+    for app_info in response["data"]:
         app_id = int(app_info[0][0])
         app_name = app_info[0][1]
         num_cards_per_set = int(app_info[1])
 
         if num_cards_per_set == 0:
-            print(f'No card found for {app_name} (appID = {app_id})')
+            print(f"No card found for {app_name} (appID = {app_id})")
             continue
 
         dico[app_id] = {}
-        dico[app_id]['app_id'] = app_id
-        dico[app_id]['name'] = app_name
-        dico[app_id]['num_cards_per_set'] = num_cards_per_set
-        dico[app_id]['gem_amount'] = compute_gem_amount_required_to_craft_booster_pack(
+        dico[app_id]["app_id"] = app_id
+        dico[app_id]["name"] = app_name
+        dico[app_id]["num_cards_per_set"] = num_cards_per_set
+        dico[app_id]["gem_amount"] = compute_gem_amount_required_to_craft_booster_pack(
             num_cards_per_set,
         )
 
-    print(f'{len(dico)} games found in the database.')
+    print(f"{len(dico)} games found in the database.")
 
     return dico
 
@@ -153,5 +147,5 @@ def main(force_update: bool = False) -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(force_update=False)

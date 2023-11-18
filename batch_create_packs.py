@@ -13,7 +13,6 @@ def get_manually_selected_app_ids() -> list[int]:
     ]
 
 
-
 def filter_app_ids_based_on_badge_data(
     manually_selected_app_ids: list[int],
     check_ask_price: bool = False,
@@ -36,7 +35,7 @@ def filter_app_ids_based_on_badge_data(
 
     app_ids = sorted(
         app_ids,
-        key=lambda x: filtered_badge_data[x]['name'],
+        key=lambda x: filtered_badge_data[x]["name"],
     )
 
     return app_ids, filtered_badge_data
@@ -61,7 +60,6 @@ def create_packs_for_app_ids(
     creation_results = {}
 
     for app_id in app_ids:
-
         if is_a_simulation:
             result = None
         else:
@@ -70,14 +68,14 @@ def create_packs_for_app_ids(
                 is_marketable=is_marketable,
             )
 
-        listing_hash = filtered_badge_data[app_id]['listing_hash']
+        listing_hash = filtered_badge_data[app_id]["listing_hash"]
         creation_results[listing_hash] = result
 
         if verbose:
             print(
-                '{}\t{:.3f}€'.format(
-                    filtered_badge_data[app_id]['name'],
-                    filtered_badge_data[app_id]['gem_price'],
+                "{}\t{:.3f}€".format(
+                    filtered_badge_data[app_id]["name"],
+                    filtered_badge_data[app_id]["gem_price"],
                 ),
             )
 
@@ -85,7 +83,7 @@ def create_packs_for_app_ids(
 
     if verbose:
         ignored_app_ids = set(manually_selected_app_ids).difference(app_ids)
-        print(f'There are {len(ignored_app_ids)} ignored appIDs: {ignored_app_ids}')
+        print(f"There are {len(ignored_app_ids)} ignored appIDs: {ignored_app_ids}")
 
         # Below, the parameter 'use_current_year' is toggled ON, because the year information is necessary to deal with
         # February 29th during leap years.
@@ -106,7 +104,7 @@ def create_packs_for_app_ids(
             soonest_creation_time = None
 
         print(
-            f'The soonest creation time is {get_formatted_time(soonest_creation_time)}.',
+            f"The soonest creation time is {get_formatted_time(soonest_creation_time)}.",
         )
 
     return creation_results, next_creation_times
@@ -153,7 +151,7 @@ def main(
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(
         retrieve_listings_from_scratch=False,
         is_a_simulation=False,

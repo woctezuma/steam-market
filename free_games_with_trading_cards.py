@@ -16,8 +16,7 @@ from utils import convert_listing_hash_to_app_id
 
 
 def get_user_data_url() -> str:
-    return 'https://store.steampowered.com/dynamicstore/userdata/'
-
+    return "https://store.steampowered.com/dynamicstore/userdata/"
 
 
 def download_user_data() -> [dict | None]:
@@ -42,41 +41,42 @@ def download_user_data() -> [dict | None]:
 def download_owned_apps(verbose: bool = True) -> list[int]:
     result = download_user_data()
 
-    owned_apps = result['rgOwnedApps']
+    owned_apps = result["rgOwnedApps"]
 
     if verbose:
-        print(f'Owned apps: {len(owned_apps)}')
+        print(f"Owned apps: {len(owned_apps)}")
 
     return owned_apps
 
 
-def download_free_apps(method: str = 'price', verbose: bool = True) -> list[int]:
-    if method == 'price':
+def download_free_apps(method: str = "price", verbose: bool = True) -> list[int]:
+    if method == "price":
         data = steamspypi.load()
 
         free_apps = [
-            int(game['appid'])
+            int(game["appid"])
             for game in data.values()
-            if game['initialprice'] is not None  # I don't know what to do in the rare case that price is None.
-            and int(game['initialprice']) == 0
+            if game["initialprice"]
+            is not None  # I don't know what to do in the rare case that price is None.
+            and int(game["initialprice"]) == 0
         ]
 
     else:
         data_request = {}
 
-        if method == 'genre':
-            data_request['request'] = 'genre'
-            data_request['genre'] = 'Free to Play'
+        if method == "genre":
+            data_request["request"] = "genre"
+            data_request["genre"] = "Free to Play"
         else:
-            data_request['request'] = 'tag'
-            data_request['tag'] = 'Free to Play'
+            data_request["request"] = "tag"
+            data_request["tag"] = "Free to Play"
 
         data = steamspypi.download(data_request)
 
         free_apps = [int(app_id) for app_id in data]
 
     if verbose:
-        print(f'Free apps (based on {method}): {len(free_apps)}')
+        print(f"Free apps (based on {method}): {len(free_apps)}")
 
     return free_apps
 
@@ -89,7 +89,7 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
     ]
 
     if verbose:
-        print(f'Apps with trading cards: {len(apps_with_trading_cards)}')
+        print(f"Apps with trading cards: {len(apps_with_trading_cards)}")
 
     return apps_with_trading_cards
 
@@ -100,7 +100,7 @@ def load_free_apps_with_trading_cards(
     verbose: bool = True,
 ) -> set[int]:
     if list_of_methods is None:
-        list_of_methods = ['price', 'genre', 'tag']
+        list_of_methods = ["price", "genre", "tag"]
 
     if free_apps is None:
         free_apps = set()
@@ -111,24 +111,24 @@ def load_free_apps_with_trading_cards(
         free_apps.update(new_free_apps)
 
     if verbose:
-        print(f'Free apps: {len(free_apps)}')
+        print(f"Free apps: {len(free_apps)}")
 
     apps_with_trading_cards = load_apps_with_trading_cards()
 
     free_apps_with_trading_cards = set(free_apps).intersection(apps_with_trading_cards)
 
     if verbose:
-        print(f'Free apps with trading cards: {len(free_apps_with_trading_cards)}')
+        print(f"Free apps with trading cards: {len(free_apps_with_trading_cards)}")
 
     return free_apps_with_trading_cards
 
 
 def load_file(file_name: str, verbose: bool = True) -> list[int]:
-    with Path(file_name).open(encoding='utf-8') as f:
+    with Path(file_name).open(encoding="utf-8") as f:
         data = [int(line.strip()) for line in f]
 
     if verbose:
-        print(f'Loaded apps: {len(data)}')
+        print(f"Loaded apps: {len(data)}")
 
     return data
 
@@ -139,31 +139,30 @@ def format_for_asf_command_line(
 ) -> list[str]:
     if app_prefix is None:
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
-        app_prefix = 'a/'
+        app_prefix = "a/"
 
     return [app_prefix + str(app_id) for app_id in sorted(app_ids)]
-
 
 
 def chunks(lst: list, n: int) -> collections.abc.Iterator[list]:
     """Yield successive n-sized chunks from l."""
     # Reference: https://stackoverflow.com/a/312464
     for i in range(0, len(lst), n):
-        yield lst[i: i + n]
+        yield lst[i : i + n]
 
 
 def group_concatenate_to_str(
     data: list,
-    asf_username: str = 'ASF',
+    asf_username: str = "ASF",
     group_size: int = 25,
 ) -> str:
-    asf_command = 'addlicense'
-    asf_complete_command = f'{asf_command} {asf_username} '
+    asf_command = "addlicense"
+    asf_complete_command = f"{asf_command} {asf_username} "
 
     prepend_asf_command = bool(asf_username is not None) and bool(len(data) > 0)
 
-    line_sep = '\n'
-    space_sep = ' '
+    line_sep = "\n"
+    space_sep = " "
 
     group_sep = line_sep
     if prepend_asf_command:
@@ -198,16 +197,16 @@ def write_to_file(
         group_size=group_size,
     )
 
-    with Path(file_name).open('w', encoding='utf-8') as f:
+    with Path(file_name).open("w", encoding="utf-8") as f:
         print(output, file=f)
 
     if verbose:
-        print(f'Written apps: {len(data)}')
+        print(f"Written apps: {len(data)}")
 
 
 def main() -> None:
     # Based on SteamDB: https://steamdb.info/search/?a=app_keynames&keyname=243&operator=1
-    free_apps = load_file('data/free_apps.txt')
+    free_apps = load_file("data/free_apps.txt")
 
     # Based on SteamSpy:
     free_apps_with_trading_cards = load_free_apps_with_trading_cards(
@@ -221,8 +220,8 @@ def main() -> None:
 
     output = format_for_asf_command_line(free_apps_not_owned)
 
-    write_to_file(output, 'output.txt', asf_username='Wok')
+    write_to_file(output, "output.txt", asf_username="Wok")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

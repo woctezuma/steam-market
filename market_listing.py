@@ -30,31 +30,31 @@ def get_steam_market_listing_url(
         app_id = 753
 
     if listing_hash is None:
-        listing_hash = '511540-MoonQuest Booster Pack'
+        listing_hash = "511540-MoonQuest Booster Pack"
 
     # Fix listing hashes so that there is no special character '#' or '?', which would mess with URL query later on
     fixed_listing_hash = fix_app_name_for_url_query(listing_hash)
 
     if replace_spaces:
         # For Markdown compatibility, replaces the spaces from the str to be used in hyperlinks:
-        fixed_listing_hash = fixed_listing_hash.replace(' ', '%20')
+        fixed_listing_hash = fixed_listing_hash.replace(" ", "%20")
 
     if replace_parenthesis:
         # To fix links in PyCharm's display to listings of **foil** cards, which have '(Foil)' at the end of the url
         # ASCII Encoding Reference: https://www.w3schools.com/tags/ref_urlencode.ASP
-        fixed_listing_hash = fixed_listing_hash.replace('(', '%28')
-        fixed_listing_hash = fixed_listing_hash.replace(')', '%29')
+        fixed_listing_hash = fixed_listing_hash.replace("(", "%28")
+        fixed_listing_hash = fixed_listing_hash.replace(")", "%29")
 
     market_listing_url = (
-        'https://steamcommunity.com/market/listings/'
+        "https://steamcommunity.com/market/listings/"
         + str(app_id)
-        + '/'
+        + "/"
         + fixed_listing_hash
-        + '/'
+        + "/"
     )
 
     if render_as_json:
-        market_listing_url += 'render/'
+        market_listing_url += "render/"
 
     return market_listing_url
 
@@ -62,7 +62,7 @@ def get_steam_market_listing_url(
 def get_listing_parameters() -> dict[str, str]:
     params = {}
 
-    params['currency'] = '3'
+    params["currency"] = "3"
 
     return params
 
@@ -73,17 +73,15 @@ def get_steam_api_rate_limits_for_market_listing(
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
-
         rate_limits = {
-            'max_num_queries': 25,
-            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=3),
+            "max_num_queries": 25,
+            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=3),
         }
 
     else:
-
         rate_limits = {
-            'max_num_queries': 25,
-            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=5),
+            "max_num_queries": 25,
+            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
         }
 
     return rate_limits
@@ -98,9 +96,9 @@ def figure_out_relevant_id(
     last_relevant_asset_id = None
 
     for i in asset_ids:
-        for e in asset_dict[i]['owner_actions']:
-            if e['name'] == owner_action_name_of_interest:
-                actions.add(e['link'])
+        for e in asset_dict[i]["owner_actions"]:
+            if e["name"] == owner_action_name_of_interest:
+                actions.add(e["link"])
                 last_relevant_asset_id = i
 
     has_different_actions = bool(len(set(actions)) > 1)
@@ -113,13 +111,13 @@ def figure_out_relevant_id(
 def parse_item_type_no_from_script(last_script: str) -> [int | None]:
     # Reference: https://gaming.stackexchange.com/a/351941
 
-    start_str = 'var g_rgAssets ='
-    end_str = 'var g_rgListingInfo ='
+    start_str = "var g_rgAssets ="
+    end_str = "var g_rgListingInfo ="
 
-    asset_ending = ';'
-    link_argument_separator = ','
+    asset_ending = ";"
+    link_argument_separator = ","
 
-    owner_action_name_of_interest = 'Turn into Gems...'
+    owner_action_name_of_interest = "Turn into Gems..."
     token_no_of_interest = 3
 
     try:
@@ -133,7 +131,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
         end_index = None
 
     if start_index is not None and end_index is not None:
-        assets_raw = last_script[start_index + len(start_str): end_index]
+        assets_raw = last_script[start_index + len(start_str) : end_index]
         assets_stripped = assets_raw.strip().strip(asset_ending)
 
         try:
@@ -166,7 +164,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
                     owner_action_name_of_interest,
                 )
 
-            owner_actions = assets[app_id][context_id][asset_id]['owner_actions']
+            owner_actions = assets[app_id][context_id][asset_id]["owner_actions"]
 
             # The owner actions should be like:
             #     "owner_actions": [
@@ -183,13 +181,13 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             actions_of_interest = [
                 owner_action
                 for owner_action in owner_actions
-                if owner_action['name'] == owner_action_name_of_interest
+                if owner_action["name"] == owner_action_name_of_interest
             ]
 
-            links = [owner_action['link'] for owner_action in actions_of_interest]
+            links = [owner_action["link"] for owner_action in actions_of_interest]
 
             javascript_links = [
-                link for link in links if link.startswith('javascript:')
+                link for link in links if link.startswith("javascript:")
             ]
 
             # There should only be one javascript link.
@@ -199,7 +197,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
             try:
                 link_of_interest = javascript_links[0]
             except IndexError:
-                link_of_interest = ''
+                link_of_interest = ""
 
             # The link of interest should be like:
             #   "javascript:GetGooValue( '%contextid%', '%assetid%', 1017900, 3, 1 )"
@@ -245,9 +243,9 @@ def parse_marketability_from_script(last_script: str) -> [bool | None]:
 
 
 def parse_item_name_id_from_script(last_script: str) -> [int | None]:
-    last_script_token = last_script.split('(')[-1]
+    last_script_token = last_script.split("(")[-1]
 
-    item_nameid_str = last_script_token.split(');')[0]
+    item_nameid_str = last_script_token.split(");")[0]
 
     try:
         item_nameid = int(item_nameid_str)
@@ -258,9 +256,9 @@ def parse_item_name_id_from_script(last_script: str) -> [int | None]:
 
 
 def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
-    soup = BeautifulSoup(html_doc, 'html.parser')
+    soup = BeautifulSoup(html_doc, "html.parser")
 
-    last_script = str(soup.find_all('script')[-1])
+    last_script = str(soup.find_all("script")[-1])
 
     item_nameid = parse_item_name_id_from_script(last_script)
 
@@ -306,18 +304,18 @@ def get_listing_details(
         item_nameid, is_marketable, item_type_no = parse_item_name_id(html_doc)
 
         if item_nameid is None:
-            print(f'Item name ID not found for {listing_hash}')
+            print(f"Item name ID not found for {listing_hash}")
 
         if is_marketable is None:
-            print(f'Marketable status not found for {listing_hash}')
+            print(f"Marketable status not found for {listing_hash}")
 
         if item_type_no is None:
-            print(f'Item type not found for {listing_hash}')
+            print(f"Item type not found for {listing_hash}")
 
         listing_details[listing_hash] = {}
-        listing_details[listing_hash]['item_nameid'] = item_nameid
-        listing_details[listing_hash]['is_marketable'] = is_marketable
-        listing_details[listing_hash]['item_type_no'] = item_type_no
+        listing_details[listing_hash]["item_nameid"] = item_nameid
+        listing_details[listing_hash]["is_marketable"] = is_marketable
+        listing_details[listing_hash]["item_type_no"] = item_type_no
 
     return listing_details, status_code
 
@@ -344,9 +342,8 @@ def get_listing_details_batch(
     query_count = 0
 
     for count, listing_hash in enumerate(listing_hashes):
-
         if count + 1 % 100 == 0:
-            print(f'[{count + 1}/{num_listings}]')
+            print(f"[{count + 1}/{num_listings}]")
 
         listing_details, status_code = get_listing_details(
             listing_hash=listing_hash,
@@ -357,17 +354,17 @@ def get_listing_details_batch(
 
         if status_code != HTTPStatus.OK:
             print(
-                f'Wrong status code ({status_code}) for {listing_hash} after {query_count} queries.',
+                f"Wrong status code ({status_code}) for {listing_hash} after {query_count} queries.",
             )
             break
 
-        if query_count >= rate_limits['max_num_queries']:
+        if query_count >= rate_limits["max_num_queries"]:
             if save_to_disk:
                 save_json(all_listing_details, listing_details_output_file_name)
 
-            cooldown_duration = rate_limits['cooldown']
+            cooldown_duration = rate_limits["cooldown"]
             print(
-                f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds',
+                f"Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds",
             )
             time.sleep(cooldown_duration)
             query_count = 0
@@ -392,9 +389,9 @@ def update_all_listing_details(
 
     try:
         all_listing_details = load_json(listing_details_output_file_name)
-        print(f'Loading {len(all_listing_details)} listing details from disk.')
+        print(f"Loading {len(all_listing_details)} listing details from disk.")
     except FileNotFoundError:
-        print('Downloading listing details from scratch.')
+        print("Downloading listing details from scratch.")
         all_listing_details = None
 
     if listing_hashes is None:
@@ -409,7 +406,6 @@ def update_all_listing_details(
     )
 
 
-
 def load_all_listing_details(
     listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
@@ -419,27 +415,25 @@ def load_all_listing_details(
     return load_json(listing_details_output_file_name)
 
 
-
 def fix_app_name_for_url_query(app_name: str) -> str:
-    app_name = app_name.replace('#', '%23')
-    app_name = app_name.replace('?', '%3F')
-    app_name = app_name.replace('%', '%25')
-    return app_name.replace(':', '%3A')
-
+    app_name = app_name.replace("#", "%23")
+    app_name = app_name.replace("?", "%3F")
+    app_name = app_name.replace("%", "%25")
+    return app_name.replace(":", "%3A")
 
 
 def main() -> bool:
     listing_hashes = [
-        '268830-Doctor Who%3A The Adventure Games Booster Pack',
-        '290970-1849 Booster Pack',
-        '753-Sack of Gems',
-        '511540-MoonQuest Booster Pack',
+        "268830-Doctor Who%3A The Adventure Games Booster Pack",
+        "290970-1849 Booster Pack",
+        "753-Sack of Gems",
+        "511540-MoonQuest Booster Pack",
         # The item name ID will not be retrieved for the following two listing hashes due to special characters:
-        '614910-#monstercakes Booster Pack',
-        '505730-Holy Potatoes! We’re in Space?! Booster Pack',
+        "614910-#monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space?! Booster Pack",
         # This fixes the aforementioned issue:
-        '614910-%23monstercakes Booster Pack',
-        '505730-Holy Potatoes! We’re in Space%3F! Booster Pack',
+        "614910-%23monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
     ]
 
     update_all_listing_details(listing_hashes)
@@ -457,13 +451,13 @@ def get_item_nameid(
     try:
         listing_details = load_json(listing_details_output_file_name)
 
-        item_nameid = listing_details[listing_hash]['item_nameid']
+        item_nameid = listing_details[listing_hash]["item_nameid"]
     except (FileNotFoundError, KeyError):
         listing_details = update_all_listing_details(
             listing_hashes=[listing_hash],
             listing_details_output_file_name=listing_details_output_file_name,
         )
-        item_nameid = listing_details[listing_hash]['item_nameid']
+        item_nameid = listing_details[listing_hash]["item_nameid"]
 
     return item_nameid
 
@@ -487,11 +481,11 @@ def get_item_nameid_batch(
         for listing_hash in listing_hashes:
             item_nameids[listing_hash] = {}
             try:
-                item_nameid = listing_details[listing_hash]['item_nameid']
-                is_marketable = listing_details[listing_hash]['is_marketable']
+                item_nameid = listing_details[listing_hash]["item_nameid"]
+                is_marketable = listing_details[listing_hash]["is_marketable"]
 
-                item_nameids[listing_hash]['item_nameid'] = item_nameid
-                item_nameids[listing_hash]['is_marketable'] = is_marketable
+                item_nameids[listing_hash]["item_nameid"] = item_nameid
+                item_nameids[listing_hash]["is_marketable"] = is_marketable
             except KeyError:
                 listing_hashes_to_process.append(listing_hash)
 
@@ -511,11 +505,11 @@ def get_item_nameid_batch(
                     # - yet not fed through 'listing_hashes'
                     item_nameids[listing_hash] = {}
 
-                item_nameid = listing_details[listing_hash]['item_nameid']
-                is_marketable = listing_details[listing_hash]['is_marketable']
+                item_nameid = listing_details[listing_hash]["item_nameid"]
+                is_marketable = listing_details[listing_hash]["is_marketable"]
 
-                item_nameids[listing_hash]['item_nameid'] = item_nameid
-                item_nameids[listing_hash]['is_marketable'] = is_marketable
+                item_nameids[listing_hash]["item_nameid"] = item_nameid
+                item_nameids[listing_hash]["is_marketable"] = is_marketable
 
     except FileNotFoundError:
         listing_details = update_all_listing_details(
@@ -527,11 +521,11 @@ def get_item_nameid_batch(
         for listing_hash in listing_hashes:
             item_nameids[listing_hash] = {}
 
-            item_nameid = listing_details[listing_hash]['item_nameid']
-            is_marketable = listing_details[listing_hash]['is_marketable']
+            item_nameid = listing_details[listing_hash]["item_nameid"]
+            is_marketable = listing_details[listing_hash]["is_marketable"]
 
-            item_nameids[listing_hash]['item_nameid'] = item_nameid
-            item_nameids[listing_hash]['is_marketable'] = is_marketable
+            item_nameids[listing_hash]["item_nameid"] = item_nameid
+            item_nameids[listing_hash]["is_marketable"] = is_marketable
 
     return item_nameids
 
@@ -545,6 +539,5 @@ def update_marketability_status(
     )
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -21,10 +21,9 @@ from utils import (
 
 
 def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -> bool:
-    next_creation_time = badge_data['next_creation_time']
+    next_creation_time = badge_data["next_creation_time"]
 
     return bool(next_creation_time is not None)
-
 
 
 def filter_out_badges_never_crafted(
@@ -50,7 +49,7 @@ def filter_out_badges_never_crafted(
 
     if verbose:
         print(
-            'There are {} booster packs which are tracked, as they were crafted at least once. ({} omitted)'.format(
+            "There are {} booster packs which are tracked, as they were crafted at least once. ({} omitted)".format(
                 len(filtered_badge_data),
                 len(aggregated_badge_data) - len(filtered_badge_data),
             ),
@@ -83,7 +82,7 @@ def filter_out_badges_recently_crafted(
 
     if verbose:
         print(
-            'There are {} booster packs which can be immediately crafted. ({} excluded because of cooldown)'.format(
+            "There are {} booster packs which can be immediately crafted. ({} excluded because of cooldown)".format(
                 len(filtered_badge_data),
                 len(aggregated_badge_data) - len(filtered_badge_data),
             ),
@@ -96,11 +95,11 @@ def determine_whether_an_arbitrage_might_exist(
     badge_data: dict,
     user_chosen_price_threshold: float | None = None,
 ) -> bool:
-    sell_price_including_fee = badge_data['sell_price']
+    sell_price_including_fee = badge_data["sell_price"]
     sell_price_without_fee = compute_sell_price_without_fee(sell_price_including_fee)
 
     try:
-        gem_price_with_fee = badge_data['gem_price']
+        gem_price_with_fee = badge_data["gem_price"]
     except KeyError:
         # This should only happen if the badge data is dummy (for profile backgrounds and emoticons). Typically, the
         # user prefers to rely on a user-chosen price threshold, and did not take the time to fill-in a dummy value for
@@ -123,15 +122,13 @@ def determine_whether_an_arbitrage_might_exist(
     return bool(price_threshold < sell_price_without_fee)
 
 
-
 def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
-    sell_price_including_fee = badge_data['sell_price']
+    sell_price_including_fee = badge_data["sell_price"]
 
     sell_price_was_not_retrieved = bool(sell_price_including_fee < 0)
     there_is_no_sell_order = bool(sell_price_including_fee == 0)
 
     return sell_price_was_not_retrieved or there_is_no_sell_order
-
 
 
 def filter_out_badges_with_low_sell_price(
@@ -144,13 +141,13 @@ def filter_out_badges_with_low_sell_price(
     # because the bid is necessarily lower than the ask, so it will not be worth downloading bid data for these games.
 
     if category_name is None:
-        category_name = 'booster packs'
+        category_name = "booster packs"
 
     if user_chosen_price_threshold is None:
-        threshold_name = 'gem price'
+        threshold_name = "gem price"
     else:
         threshold_name = (
-            f'user-chosen price threshold {user_chosen_price_threshold / 100:.2f} €'
+            f"user-chosen price threshold {user_chosen_price_threshold / 100:.2f} €"
         )
 
     filtered_badge_data = {}
@@ -177,7 +174,7 @@ def filter_out_badges_with_low_sell_price(
 
     if verbose:
         print(
-            'There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).'.format(
+            "There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).".format(
                 len(filtered_badge_data),
                 category_name,
                 unknown_price_counter,
@@ -206,18 +203,18 @@ def find_badge_arbitrages(
     for app_id in badge_data:
         individual_badge_data = badge_data[app_id]
 
-        gem_price_including_fee = individual_badge_data['gem_price']
+        gem_price_including_fee = individual_badge_data["gem_price"]
 
-        listing_hash = individual_badge_data['listing_hash']
+        listing_hash = individual_badge_data["listing_hash"]
 
         try:
-            bid_including_fee = market_order_dict[listing_hash]['bid']
+            bid_including_fee = market_order_dict[listing_hash]["bid"]
         except KeyError:
             bid_including_fee = -1
 
             if verbose:
                 print(
-                    'Bid not found for {}. Reason is likely that you asked not to retrieve market orders.'.format(
+                    "Bid not found for {}. Reason is likely that you asked not to retrieve market orders.".format(
                         listing_hash,
                     ),
                 )
@@ -240,30 +237,46 @@ def find_badge_arbitrages(
             #
             #          However, for booster packs, app_id is correct, because there is a one-to-one mapping between
             #          appIDs and listing hashes of booster packs.
-            badge_arbitrages[listing_hash]['app_id'] = app_id
+            badge_arbitrages[listing_hash]["app_id"] = app_id
 
             try:
-                badge_arbitrages[listing_hash]['name'] = individual_badge_data['name']
+                badge_arbitrages[listing_hash]["name"] = individual_badge_data["name"]
             except KeyError:
-                badge_arbitrages[listing_hash]['name'] = None
+                badge_arbitrages[listing_hash]["name"] = None
             try:
-                badge_arbitrages[listing_hash]['gem_amount'] = individual_badge_data['gem_amount']
+                badge_arbitrages[listing_hash]["gem_amount"] = individual_badge_data[
+                    "gem_amount"
+                ]
             except KeyError:
-                badge_arbitrages[listing_hash]['gem_amount'] = None
-            badge_arbitrages[listing_hash]['gem_price_including_fee'] = individual_badge_data['gem_price']
-            badge_arbitrages[listing_hash]['sell_price'] = individual_badge_data['sell_price']
+                badge_arbitrages[listing_hash]["gem_amount"] = None
+            badge_arbitrages[listing_hash][
+                "gem_price_including_fee"
+            ] = individual_badge_data["gem_price"]
+            badge_arbitrages[listing_hash]["sell_price"] = individual_badge_data[
+                "sell_price"
+            ]
 
-            badge_arbitrages[listing_hash]['ask_including_fee'] = market_order_dict[listing_hash]['ask']
-            badge_arbitrages[listing_hash]['bid_including_fee'] = market_order_dict[listing_hash]['bid']
-            badge_arbitrages[listing_hash]['ask_volume'] = market_order_dict[listing_hash]['ask_volume']
-            badge_arbitrages[listing_hash]['bid_volume'] = market_order_dict[listing_hash]['bid_volume']
-            badge_arbitrages[listing_hash]['is_marketable'] = market_order_dict[listing_hash]['is_marketable']
+            badge_arbitrages[listing_hash]["ask_including_fee"] = market_order_dict[
+                listing_hash
+            ]["ask"]
+            badge_arbitrages[listing_hash]["bid_including_fee"] = market_order_dict[
+                listing_hash
+            ]["bid"]
+            badge_arbitrages[listing_hash]["ask_volume"] = market_order_dict[
+                listing_hash
+            ]["ask_volume"]
+            badge_arbitrages[listing_hash]["bid_volume"] = market_order_dict[
+                listing_hash
+            ]["bid_volume"]
+            badge_arbitrages[listing_hash]["is_marketable"] = market_order_dict[
+                listing_hash
+            ]["is_marketable"]
 
-            badge_arbitrages[listing_hash]['bid_without_fee'] = bid_without_fee
-            badge_arbitrages[listing_hash]['profit'] = delta
+            badge_arbitrages[listing_hash]["bid_without_fee"] = bid_without_fee
+            badge_arbitrages[listing_hash]["profit"] = delta
 
             if verbose:
-                print(f'{delta:.2f}€\t{listing_hash}')
+                print(f"{delta:.2f}€\t{listing_hash}")
 
     return badge_arbitrages
 
@@ -279,13 +292,13 @@ def print_arbitrages(
 
     for listing_hash in sorted(
         badge_arbitrages.keys(),
-        key=lambda x: badge_arbitrages[x]['profit'],
+        key=lambda x: badge_arbitrages[x]["profit"],
         reverse=True,
     ):
         arbitrage = badge_arbitrages[listing_hash]
 
         # Skip unmarketable booster packs
-        if not arbitrage['is_marketable']:
+        if not arbitrage["is_marketable"]:
             continue
 
         if use_hyperlink:
@@ -298,7 +311,7 @@ def print_arbitrages(
             )
 
             listing_hash_formatted_for_markdown = (
-                '[[store]({})][[market]({})] [{}]({})'.format(
+                "[[store]({})][[market]({})] [{}]({})".format(
                     get_steam_store_url(app_id),
                     markdown_compatible_steam_market_url,
                     listing_hash,
@@ -308,20 +321,20 @@ def print_arbitrages(
         else:
             listing_hash_formatted_for_markdown = listing_hash
 
-        gem_amount = arbitrage['gem_amount']
+        gem_amount = arbitrage["gem_amount"]
 
-        gem_amount_as_str = gem_amount if gem_amount is None else f'{gem_amount:.0f}'
+        gem_amount_as_str = gem_amount if gem_amount is None else f"{gem_amount:.0f}"
 
         print(
-            '{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})'.format(
+            "{}Profit: {:.2f}€\t{}\t| craft pack: {} gems ({:.2f}€) | sell for {:.2f}€ ({:.2f}€ incl. fee) (#={})".format(
                 bullet_point,
-                arbitrage['profit'],
+                arbitrage["profit"],
                 listing_hash_formatted_for_markdown,
                 gem_amount_as_str,
-                arbitrage['gem_price_including_fee'],
-                arbitrage['bid_without_fee'],
-                arbitrage['bid_including_fee'],
-                arbitrage['bid_volume'],
+                arbitrage["gem_price_including_fee"],
+                arbitrage["bid_without_fee"],
+                arbitrage["bid_including_fee"],
+                arbitrage["bid_volume"],
             ),
         )
 
@@ -337,19 +350,19 @@ def convert_arbitrages_for_batch_create_then_sell(
 
     for listing_hash in sorted(
         badge_arbitrages.keys(),
-        key=lambda x: badge_arbitrages[x]['profit'],
+        key=lambda x: badge_arbitrages[x]["profit"],
         reverse=True,
     ):
         arbitrage = badge_arbitrages[listing_hash]
 
         # Skip unmarketable booster packs
-        if not arbitrage['is_marketable']:
+        if not arbitrage["is_marketable"]:
             continue
 
-        if arbitrage['profit'] < profit_threshold:
+        if arbitrage["profit"] < profit_threshold:
             break
 
-        price_in_cents = 100 * arbitrage['bid_without_fee']
+        price_in_cents = 100 * arbitrage["bid_without_fee"]
         price_dict_for_listing_hashes[listing_hash] = price_in_cents
 
     if verbose:
@@ -372,7 +385,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
     for listing_hash in arbitrage_data:
         arbitrage = arbitrage_data[listing_hash]
 
-        if arbitrage['is_marketable'] and arbitrage['profit'] > 0:
+        if arbitrage["is_marketable"] and arbitrage["profit"] > 0:
             app_id = convert_listing_hash_to_app_id(listing_hash)
             selected_badge_data[app_id] = badge_data[app_id]
 
@@ -387,7 +400,6 @@ def update_badge_arbitrages_with_latest_market_order_data(
         market_order_dict=market_order_dict,
         verbose=verbose,
     )
-
 
 
 def get_filtered_badge_data(
@@ -438,13 +450,13 @@ def apply_workflow(
     verbose: bool = False,
 ) -> bool:
     if quick_check_with_tracked_booster_packs:
-        print('Quick-check of booster packs with a track record.')
+        print("Quick-check of booster packs with a track record.")
 
         retrieve_listings_from_scratch = False
         retrieve_market_orders_online = True
 
         print(
-            'Overwriting two arguments:\n\ti) retrieve listings: {},\n\tii) retrieve market orders: {}.'.format(
+            "Overwriting two arguments:\n\ti) retrieve listings: {},\n\tii) retrieve market orders: {}.".format(
                 retrieve_listings_from_scratch,
                 retrieve_market_orders_online,
             ),
@@ -471,7 +483,7 @@ def apply_workflow(
         verbose=verbose,
     )
 
-    print('# Reminder of the gem price')
+    print("# Reminder of the gem price")
     print_gem_price_reminder(
         enforced_sack_of_gems_price=enforced_sack_of_gems_price,
         minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
@@ -483,7 +495,7 @@ def apply_workflow(
     #   of market orders, because there was no cooldown at the end.
 
     print(
-        '# Results after *slow* update of market order data for *many potential* arbitrages',
+        "# Results after *slow* update of market order data for *many potential* arbitrages",
     )
     print_arbitrages(badge_arbitrages)
 
@@ -505,10 +517,12 @@ def apply_workflow(
         # Caveat: the file with the updated marketability status is listing_details.json,
         #         the file market_orders.json was **not** updated and would have the wrong marketability status!
         for listing_hash in few_selected_listing_hashes:
-            latest_badge_arbitrages[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
+            latest_badge_arbitrages[listing_hash]["is_marketable"] = item_nameids[
+                listing_hash
+            ]["is_marketable"]
 
     print(
-        '# Results after *quick* update of market order data for *a few detected* arbitrages',
+        "# Results after *quick* update of market order data for *a few detected* arbitrages",
     )
     print_arbitrages(latest_badge_arbitrages)
 
@@ -557,5 +571,5 @@ def main() -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

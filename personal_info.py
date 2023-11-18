@@ -4,8 +4,7 @@ from src.json_utils import load_json, save_json
 
 
 def get_steam_cookie_file_name() -> str:
-    return 'personal_info.json'
-
+    return "personal_info.json"
 
 
 def load_steam_cookie_from_disk(
@@ -42,7 +41,7 @@ def get_cookie_dict(verbose: bool = False) -> dict[str, str]:
 
     if verbose:
         for field in cookie:
-            print(f'{field}: {cookie[field]}')
+            print(f"{field}: {cookie[field]}")
 
     return cookie
 
@@ -63,13 +62,13 @@ def update_cookie_dict(
 
         if new_value != current_value:
             print(
-                f'Updating value for cookie field {field} from {current_value} to {new_value}.',
+                f"Updating value for cookie field {field} from {current_value} to {new_value}.",
             )
             cookie[field] = new_value
 
     if verbose:
         for field in cookie:
-            print(f'{field}: {cookie[field]}')
+            print(f"{field}: {cookie[field]}")
 
     return cookie
 
@@ -82,7 +81,7 @@ def update_and_save_cookie_to_disk_if_values_changed(
     verbose: bool = False,
 ) -> dict[str, str]:
     if fields is None:
-        fields = ['steamLoginSecure', 'sessionid']
+        fields = ["steamLoginSecure", "sessionid"]
 
     relevant_fields = set(fields)
     relevant_fields = relevant_fields.intersection(cookie.keys())
@@ -111,5 +110,5 @@ def main() -> None:
     get_cookie_dict(verbose=True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

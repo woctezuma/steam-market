@@ -13,18 +13,15 @@ from utils import (
 
 
 def get_drop_rate_field() -> str:
-    return 'drop_rate'
-
+    return "drop_rate"
 
 
 def get_badge_count_field() -> str:
-    return 'badge_count'
-
+    return "badge_count"
 
 
 def get_rarity_fields() -> list[str]:
-    return ['common', 'uncommon', 'rare']
-
+    return ["common", "uncommon", "rare"]
 
 
 def clamp_proportion(input_proportion: float) -> float:
@@ -32,17 +29,16 @@ def clamp_proportion(input_proportion: float) -> float:
     return min(1.0, max(0.0, input_proportion))
 
 
-
 def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -> dict:
     # Drop-rate estimates conditionally on the item rarity pattern C/UC/R (the numbers of possible items of each rarity)
 
     drop_rate_estimates = {}
 
-    drop_rate_estimates['badges'] = 1025
+    drop_rate_estimates["badges"] = 1025
 
     drop_rate_field = get_drop_rate_field()
     badge_count_field = get_badge_count_field()
-    rarity_field = 'common'
+    rarity_field = "common"
 
     drop_rate_estimates[drop_rate_field] = {}
     drop_rate_estimates[badge_count_field] = {}
@@ -137,7 +133,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
         (8, 1, 1): 16,
     }
 
-    num_crafted_badges_to_compute_estimates = drop_rate_estimates['badges']
+    num_crafted_badges_to_compute_estimates = drop_rate_estimates["badges"]
     num_crafted_items_to_compute_estimates = sum(
         drop_rate_estimates[badge_count_field][rarity_field].values(),
     )
@@ -153,8 +149,8 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
 
     if verbose:
         print(
-            'Drop-rate estimates after crafting {} badges:'.format(
-                drop_rate_estimates['badges'],
+            "Drop-rate estimates after crafting {} badges:".format(
+                drop_rate_estimates["badges"],
             ),
         )
 
@@ -162,7 +158,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
 
         for pattern in common_drop_rate:
             print(
-                f'- C/UC/R: {pattern}\t--->\t{common_drop_rate[pattern]:.2f} ({rarity_field.capitalize()})',
+                f"- C/UC/R: {pattern}\t--->\t{common_drop_rate[pattern]:.2f} ({rarity_field.capitalize()})",
             )
 
     return drop_rate_estimates
@@ -173,7 +169,7 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     drop_rate_estimates = {}
 
-    drop_rate_estimates['badges'] = 1025
+    drop_rate_estimates["badges"] = 1025
 
     category_field = get_category_name_for_profile_backgrounds()
     drop_rate_field = get_drop_rate_field()
@@ -181,9 +177,9 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     drop_rate_estimates[category_field] = {}
     drop_rate_estimates[category_field][drop_rate_field] = {}
-    drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.6609
-    drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.2264
-    drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.1146
+    drop_rate_estimates[category_field][drop_rate_field]["common"] = 0.6609
+    drop_rate_estimates[category_field][drop_rate_field]["uncommon"] = 0.2264
+    drop_rate_estimates[category_field][drop_rate_field]["rare"] = 0.1146
 
     for rarity in rarity_fields:
         current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
@@ -195,9 +191,9 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     drop_rate_estimates[category_field] = {}
     drop_rate_estimates[category_field][drop_rate_field] = {}
-    drop_rate_estimates[category_field][drop_rate_field]['common'] = 0.7299
-    drop_rate_estimates[category_field][drop_rate_field]['uncommon'] = 0.1865
-    drop_rate_estimates[category_field][drop_rate_field]['rare'] = 0.0855
+    drop_rate_estimates[category_field][drop_rate_field]["common"] = 0.7299
+    drop_rate_estimates[category_field][drop_rate_field]["uncommon"] = 0.1865
+    drop_rate_estimates[category_field][drop_rate_field]["rare"] = 0.0855
 
     for rarity in rarity_fields:
         current_drop_rate = drop_rate_estimates[category_field][drop_rate_field][rarity]
@@ -207,8 +203,8 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
 
     if verbose:
         print(
-            'Drop-rate estimates after crafting {} badges:'.format(
-                drop_rate_estimates['badges'],
+            "Drop-rate estimates after crafting {} badges:".format(
+                drop_rate_estimates["badges"],
             ),
         )
 
@@ -217,12 +213,17 @@ def get_drop_rate_estimates(verbose: bool = True) -> dict:
             get_category_name_for_emoticons(),
         ):
             print(
-                '- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f} (expected: 1.00)'.format(
+                "- {}:\n\t{:.2f} (Common), {:.2f} (Uncommon), {:.2f} (Rare) ; sum = {:.2f} (expected: 1.00)".format(
                     category_field,
-                    drop_rate_estimates[category_field][drop_rate_field]['common'],
-                    drop_rate_estimates[category_field][drop_rate_field]['uncommon'],
-                    drop_rate_estimates[category_field][drop_rate_field]['rare'],
-                    sum(p for p in drop_rate_estimates[category_field][drop_rate_field].values()),
+                    drop_rate_estimates[category_field][drop_rate_field]["common"],
+                    drop_rate_estimates[category_field][drop_rate_field]["uncommon"],
+                    drop_rate_estimates[category_field][drop_rate_field]["rare"],
+                    sum(
+                        p
+                        for p in drop_rate_estimates[category_field][
+                            drop_rate_field
+                        ].values()
+                    ),
                 ),
             )
 
@@ -239,5 +240,5 @@ def main() -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

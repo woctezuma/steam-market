@@ -14,22 +14,21 @@ from src.cookie_utils import force_update_sessionid
 from src.json_utils import load_json, save_json
 from utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
 
-INTER_REQUEST_COOLDOWN_FIELD = 'cooldown_between_each_request'
+INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
 
 
 def get_steam_market_order_url() -> str:
-    return 'https://steamcommunity.com/market/itemordershistogram'
-
+    return "https://steamcommunity.com/market/itemordershistogram"
 
 
 def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
     params = {}
 
-    params['country'] = 'FR'
-    params['language'] = 'english'
-    params['currency'] = '3'
-    params['item_nameid'] = str(item_nameid)
-    params['two_factor'] = '0'
+    params["country"] = "FR"
+    params["language"] = "english"
+    params["currency"] = "3"
+    params["item_nameid"] = str(item_nameid)
+    params["two_factor"] = "0"
 
     return params
 
@@ -40,17 +39,15 @@ def get_steam_api_rate_limits_for_market_order(
     # Objective: return the rate limits of Steam API for the market.
 
     if has_secured_cookie:
-
         rate_limits = {
-            'max_num_queries': 50,
-            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=1),
+            "max_num_queries": 50,
+            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=1),
         }
 
     else:
-
         rate_limits = {
-            'max_num_queries': 25,
-            'cooldown': get_cushioned_cooldown_in_seconds(num_minutes=5),
+            "max_num_queries": 25,
+            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
         }
 
     rate_limits[INTER_REQUEST_COOLDOWN_FIELD] = 0
@@ -91,7 +88,6 @@ def download_market_order_data(
         )
 
     if item_nameid is not None:
-
         url = get_steam_market_order_url()
         req_data = get_market_order_parameters(item_nameid=item_nameid)
 
@@ -119,7 +115,7 @@ def download_market_order_data(
 
     else:
         print(
-            f'No query to download market orders for {listing_hash}, because item name ID is unknown.',
+            f"No query to download market orders for {listing_hash}, because item name ID is unknown.",
         )
 
         resp_data = None
@@ -133,7 +129,7 @@ def download_market_order_data(
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         try:
-            buy_order_graph = result['buy_order_graph']
+            buy_order_graph = result["buy_order_graph"]
 
             try:
                 # highest_buy_order
@@ -148,7 +144,7 @@ def download_market_order_data(
             bid_volume = -1
 
         try:
-            sell_order_graph = result['sell_order_graph']
+            sell_order_graph = result["sell_order_graph"]
 
             try:
                 # lowest_sell_order
@@ -166,10 +162,10 @@ def download_market_order_data(
         if resp_data is not None:
             error_reason = resp_data.reason
             if verbose:
-                print(f'Wrong status code ({status_code}): {error_reason}.')
+                print(f"Wrong status code ({status_code}): {error_reason}.")
             if status_code == HTTPStatus.TOO_MANY_REQUESTS:
                 print(
-                    'You have been rate-limited. Wait for a while and double-check rate-limits before trying again.',
+                    "You have been rate-limited. Wait for a while and double-check rate-limits before trying again.",
                 )
                 raise AssertionError
 
@@ -180,7 +176,7 @@ def download_market_order_data(
 
     if verbose:
         print(
-            'Listing: {} ; item id: {} ; ask: {:.2f}€ ({}) ; bid: {:.2f}€ ({})'.format(
+            "Listing: {} ; item id: {} ; ask: {:.2f}€ ({}) ; bid: {:.2f}€ ({})".format(
                 listing_hash,
                 item_nameid,
                 ask_price,
@@ -206,9 +202,7 @@ def download_market_order_data_batch(
 
     # Pre-retrieval of item name ids
 
-    listing_hashes = [
-        badge_data[app_id]['listing_hash'] for app_id in badge_data
-    ]
+    listing_hashes = [badge_data[app_id]["listing_hash"] for app_id in badge_data]
 
     item_nameids = get_item_nameid_batch(
         listing_hashes,
@@ -229,7 +223,7 @@ def download_market_order_data_batch(
     query_count = 0
 
     for app_id in badge_data:
-        listing_hash = badge_data[app_id]['listing_hash']
+        listing_hash = badge_data[app_id]["listing_hash"]
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
             verbose=verbose,
@@ -237,19 +231,21 @@ def download_market_order_data_batch(
         )
 
         market_order_dict[listing_hash] = {}
-        market_order_dict[listing_hash]['bid'] = bid_price
-        market_order_dict[listing_hash]['ask'] = ask_price
-        market_order_dict[listing_hash]['bid_volume'] = bid_volume
-        market_order_dict[listing_hash]['ask_volume'] = ask_volume
-        market_order_dict[listing_hash]['is_marketable'] = item_nameids[listing_hash]['is_marketable']
+        market_order_dict[listing_hash]["bid"] = bid_price
+        market_order_dict[listing_hash]["ask"] = ask_price
+        market_order_dict[listing_hash]["bid_volume"] = bid_volume
+        market_order_dict[listing_hash]["ask_volume"] = ask_volume
+        market_order_dict[listing_hash]["is_marketable"] = item_nameids[listing_hash][
+            "is_marketable"
+        ]
 
-        if query_count >= rate_limits['max_num_queries']:
+        if query_count >= rate_limits["max_num_queries"]:
             if save_to_disk:
                 save_json(market_order_dict, market_order_output_file_name)
 
-            cooldown_duration = rate_limits['cooldown']
+            cooldown_duration = rate_limits["cooldown"]
             print(
-                f'Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds',
+                f"Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds",
             )
             time.sleep(cooldown_duration)
             query_count = 0
@@ -302,13 +298,13 @@ def trim_market_order_data(
     app_ids_with_missing_data = []
 
     for app_id in badge_data:
-        listing_hash = badge_data[app_id]['listing_hash']
+        listing_hash = badge_data[app_id]["listing_hash"]
 
         try:
             market_data = market_order_dict[listing_hash]
         except KeyError:
             print(
-                f'[{listing_hash}] Market order data is not available offline. Allow downloading it!',
+                f"[{listing_hash}] Market order data is not available offline. Allow downloading it!",
             )
             app_ids_with_missing_data.append(app_id)
             continue
@@ -336,7 +332,7 @@ def load_market_order_data_from_disk(
 
 
 def main() -> bool:
-    listing_hash = '290970-1849 Booster Pack'
+    listing_hash = "290970-1849 Booster Pack"
 
     # Download based on a listing hash
 
@@ -347,11 +343,11 @@ def main() -> bool:
 
     # Download based on badge data
 
-    app_id = listing_hash.split('-', maxsplit=1)[0]
+    app_id = listing_hash.split("-", maxsplit=1)[0]
 
     badge_data = {}
     badge_data[app_id] = {}
-    badge_data[app_id]['listing_hash'] = listing_hash
+    badge_data[app_id]["listing_hash"] = listing_hash
 
     download_market_order_data_batch(
         badge_data,
@@ -363,11 +359,11 @@ def main() -> bool:
 
     listing_hashes = [
         # The item name ID will not be retrieved for the following two listhing hashes due to special characters:
-        '614910-#monstercakes Booster Pack',
-        '505730-Holy Potatoes! We’re in Space?! Booster Pack',
+        "614910-#monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space?! Booster Pack",
         # This fixes the aforementioned issue:
-        '614910-%23monstercakes Booster Pack',
-        '505730-Holy Potatoes! We’re in Space%3F! Booster Pack',
+        "614910-%23monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
     ]
     for listing_hash_to_test in listing_hashes:
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
@@ -378,5 +374,5 @@ def main() -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

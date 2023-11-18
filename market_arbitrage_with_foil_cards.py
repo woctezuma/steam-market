@@ -31,10 +31,7 @@ from utils import (
 
 
 def get_steam_goo_value_url() -> str:
-    return (
-        'https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/'
-    )
-
+    return "https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/"
 
 
 def get_item_type_no_for_trading_cards(
@@ -69,7 +66,7 @@ def get_item_type_no_for_trading_cards(
 
         if verbose:
             print(
-                f'Assuming item type is equal to {item_type_no}, which might be wrong.',
+                f"Assuming item type is equal to {item_type_no}, which might be wrong.",
             )
 
     else:
@@ -96,7 +93,7 @@ def get_item_type_no_for_trading_cards(
 
             if verbose:
                 print(
-                    f'A query is necessary to download listing details for {listing_hash}.',
+                    f"A query is necessary to download listing details for {listing_hash}.",
                 )
 
             updated_all_listing_details = update_all_listing_details(
@@ -106,10 +103,10 @@ def get_item_type_no_for_trading_cards(
 
             listing_details = updated_all_listing_details[listing_hash]
 
-        item_type_no = listing_details['item_type_no']
+        item_type_no = listing_details["item_type_no"]
 
         if verbose:
-            print(f'Retrieving item type {item_type_no} for {listing_hash}.')
+            print(f"Retrieving item type {item_type_no} for {listing_hash}.")
 
     return item_type_no
 
@@ -119,7 +116,6 @@ def get_border_color_no_for_trading_cards(is_foil: bool = False) -> int:
     # be applied without any check, so that the returned goo values are misleading when applied to any item other
     # than a trading card, such as an emoticon and a profile background.
     return 1 if is_foil else 0
-
 
 
 def get_steam_goo_value_parameters(
@@ -139,9 +135,9 @@ def get_steam_goo_value_parameters(
 
     params = {}
 
-    params['appid'] = str(app_id)
-    params['item_type'] = item_type
-    params['border_color'] = border_color
+    params["appid"] = str(app_id)
+    params["item_type"] = item_type
+    params["border_color"] = border_color
 
     return params
 
@@ -173,11 +169,11 @@ def query_goo_value(
             jar = dict(resp_data.cookies)
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
-        goo_value = int(result['goo_value'])
+        goo_value = int(result["goo_value"])
 
         if verbose and goo_value > 0:
             print(
-                f'AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems',
+                f"AppID: {app_id} ; Item type: {item_type} ; Goo value: {goo_value} gems",
             )
     else:
         goo_value = None
@@ -199,7 +195,7 @@ def get_listings_for_foil_cards(
     all_listings = load_all_listings(listing_output_file_name)
 
     if verbose:
-        print(f'#listings = {len(all_listings)}')
+        print(f"#listings = {len(all_listings)}")
 
     return all_listings
 
@@ -218,7 +214,7 @@ def group_listing_hashes_by_app_id(
             groups_by_app_id[app_id] = [listing_hash]
 
     if verbose:
-        print(f'#app_ids = {len(groups_by_app_id)}')
+        print(f"#app_ids = {len(groups_by_app_id)}")
 
     return groups_by_app_id
 
@@ -240,8 +236,8 @@ def find_cheapest_listing_hashes(
         sorted_listing_hashes = sorted(
             listing_hashes,
             key=lambda x: (
-                all_listings[x]['sell_price'],
-                -all_listings[x]['sell_listings'],
+                all_listings[x]["sell_price"],
+                -all_listings[x]["sell_listings"],
             ),
         )
 
@@ -259,7 +255,6 @@ def find_representative_listing_hashes(
     representative_listing_hashes = []
 
     for app_id in groups_by_app_id:
-
         if dictionary_of_representative_listing_hashes is not None:
             try:
                 # For retro-compatibility, we try to use representative for which we previously downloaded item name ids
@@ -298,10 +293,9 @@ def find_eligible_listing_hashes(all_listings: dict[str, dict]) -> list[str]:
     return [
         listing_hash
         for listing_hash in all_listings
-        if all_listings[listing_hash]['sell_listings'] > 0
-        and all_listings[listing_hash]['sell_price'] > 0
+        if all_listings[listing_hash]["sell_listings"] > 0
+        and all_listings[listing_hash]["sell_price"] > 0
     ]
-
 
 
 def filter_listings_with_arbitrary_price_threshold(
@@ -311,21 +305,19 @@ def filter_listings_with_arbitrary_price_threshold(
     verbose: bool = True,
 ) -> list[str]:
     if price_threshold_in_cents is not None:
-
         filtered_cheapest_listing_hashes = []
 
         for listing_hash in listing_hashes_to_filter_from:
-            ask = all_listings[listing_hash]['sell_price']
+            ask = all_listings[listing_hash]["sell_price"]
 
             if ask < price_threshold_in_cents:
                 filtered_cheapest_listing_hashes.append(listing_hash)
 
     else:
-
         filtered_cheapest_listing_hashes = listing_hashes_to_filter_from
 
     if verbose:
-        print(f'#listings (after filtering) = {len(filtered_cheapest_listing_hashes)}')
+        print(f"#listings (after filtering) = {len(filtered_cheapest_listing_hashes)}")
 
     return filtered_cheapest_listing_hashes
 
@@ -343,7 +335,7 @@ def load_all_goo_details(
         all_goo_details = {}
 
     if verbose:
-        print(f'Loading {len(all_goo_details)} goo details from disk.')
+        print(f"Loading {len(all_goo_details)} goo details from disk.")
 
     return all_goo_details
 
@@ -402,7 +394,6 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
     ]
 
 
-
 def propagate_filter_to_representative_listing_hashes(
     listing_hashes_to_propagate_to: list[str],
     listing_hashes_to_propagate_from: list[str],
@@ -418,7 +409,6 @@ def propagate_filter_to_representative_listing_hashes(
         if convert_listing_hash_to_app_id(listing_hash)
         in filtered_app_ids_based_on_price_threshold
     ]
-
 
 
 def try_again_to_download_item_type(
@@ -655,7 +645,6 @@ def get_minimal_ask_price_in_euros_on_steam_market() -> float:
     return 0.03  # in euros
 
 
-
 def compute_unrewarding_threshold_in_gems(
     sack_of_gems_price_in_euros: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
@@ -680,10 +669,7 @@ def compute_unrewarding_threshold_in_gems(
 
     minimal_ask = get_minimal_ask_price_in_euros_on_steam_market()
 
-    return (
-        minimal_ask * num_gems_per_sack_of_gems / sack_of_gems_price_in_euros
-    )
-
+    return minimal_ask * num_gems_per_sack_of_gems / sack_of_gems_price_in_euros
 
 
 def discard_necessarily_unrewarding_app_ids(
@@ -730,7 +716,7 @@ def discard_necessarily_unrewarding_app_ids(
 
     if verbose:
         print(
-            f'There are {len(potentially_rewarding_app_ids)} potentially rewarding appIDs.',
+            f"There are {len(potentially_rewarding_app_ids)} potentially rewarding appIDs.",
         )
 
     return potentially_rewarding_app_ids
@@ -775,7 +761,7 @@ def find_listing_hashes_with_unknown_goo_value(
 
     if verbose:
         print(
-            'Unknown goo values for:\n{}\nTotal: {} appIDs with unknown goo value.'.format(
+            "Unknown goo values for:\n{}\nTotal: {} appIDs with unknown goo value.".format(
                 app_ids_with_unknown_goo_value,
                 len(app_ids_with_unknown_goo_value),
             ),
@@ -828,7 +814,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
         if app_id in app_ids_with_unreliable_goo_details:
             # NB: This is for goo details which were retrieved with the default item type n° (=2), which can be wrong.
             if verbose:
-                print(f'[X]\tUnreliable goo details for {listing_hash}')
+                print(f"[X]\tUnreliable goo details for {listing_hash}")
             continue
 
         goo_value_in_gems = safe_read_from_dict(
@@ -839,7 +825,7 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
         if app_id in app_ids_with_unknown_goo_value or goo_value_in_gems is None:
             # NB: This is when the goo value is unknown, despite a correct item type n° used to download goo details.
             if verbose:
-                print(f'[?]\tUnknown goo value for {listing_hash}')
+                print(f"[?]\tUnknown goo value for {listing_hash}")
             continue
 
         goo_value_in_cents = (
@@ -847,13 +833,13 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
         )
 
         current_listing = all_listings[listing_hash]
-        ask_in_cents = current_listing['sell_price']
+        ask_in_cents = current_listing["sell_price"]
 
         if ask_in_cents == 0:
             # NB: The ask cannot be equal to zero. So, we skip the listing because of there must be a bug.
             if verbose:
                 print(
-                    f'[!]\tImpossible ask price ({ask_in_cents / 100:.2f}€) for {listing_hash}',
+                    f"[!]\tImpossible ask price ({ask_in_cents / 100:.2f}€) for {listing_hash}",
                 )
             continue
 
@@ -862,10 +848,10 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
 
         if is_arbitrage:
             arbitrage = {}
-            arbitrage['profit'] = profit_in_cents / 100
-            arbitrage['ask'] = ask_in_cents / 100
-            arbitrage['goo_amount'] = goo_value_in_gems
-            arbitrage['goo_value'] = goo_value_in_cents / 100
+            arbitrage["profit"] = profit_in_cents / 100
+            arbitrage["ask"] = ask_in_cents / 100
+            arbitrage["goo_amount"] = goo_value_in_gems
+            arbitrage["goo_value"] = goo_value_in_cents / 100
 
             arbitrages[listing_hash] = arbitrage
 
@@ -882,11 +868,11 @@ def print_arbitrages_for_foil_cards(
 
     sorted_arbitrages = sorted(
         arbitrages.keys(),
-        key=lambda x: arbitrages[x]['profit'],
+        key=lambda x: arbitrages[x]["profit"],
         reverse=True,
     )
 
-    print('# Results for arbitrages with foil cards')
+    print("# Results for arbitrages with foil cards")
 
     for listing_hash in sorted_arbitrages:
         arbitrage = arbitrages[listing_hash]
@@ -899,21 +885,21 @@ def print_arbitrages_for_foil_cards(
         )
 
         listing_hash_formatted_for_markdown = (
-            f'[{listing_hash}]({markdown_compatible_steam_market_url})'
+            f"[{listing_hash}]({markdown_compatible_steam_market_url})"
         )
 
         equivalent_price_for_sack_of_gems = (
-            arbitrage['ask'] / arbitrage['goo_amount'] * get_num_gems_per_sack_of_gems()
+            arbitrage["ask"] / arbitrage["goo_amount"] * get_num_gems_per_sack_of_gems()
         )
 
         print(
-            '{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€) | ~ {:.3f}€ per gem sack'.format(
+            "{}Profit: {:.2f}€\t{}\t| buy for: {:.2f}€ | turn into {} gems ({:.2f}€) | ~ {:.3f}€ per gem sack".format(
                 bullet_point,
-                arbitrage['profit'],
+                arbitrage["profit"],
                 listing_hash_formatted_for_markdown,
-                arbitrage['ask'],
-                arbitrage['goo_amount'],
-                arbitrage['goo_value'],
+                arbitrage["ask"],
+                arbitrage["goo_amount"],
+                arbitrage["goo_value"],
                 equivalent_price_for_sack_of_gems,
             ),
         )
@@ -950,7 +936,7 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(
 
     if verbose:
         print(
-            'Unknown item types for:\n{}\nTotal: {} appIDs with unknown item type for their representative listing hashes.'.format(
+            "Unknown item types for:\n{}\nTotal: {} appIDs with unknown item type for their representative listing hashes.".format(
                 app_ids_with_unreliable_goo_details,
                 len(app_ids_with_unreliable_goo_details),
             ),
@@ -1010,7 +996,6 @@ def download_missing_goo_details(
     query_count = 0
 
     for app_id in app_ids_to_process:
-
         goo_value = download_goo_value_for_app_id(
             app_id=app_id,
             groups_by_app_id=groups_by_app_id,
@@ -1025,7 +1010,7 @@ def download_missing_goo_details(
         all_goo_details[app_id] = goo_value
 
         if query_count % num_queries_between_save == 0:
-            print(f'Saving after {query_count} queries.')
+            print(f"Saving after {query_count} queries.")
             save_all_goo_details(
                 all_goo_details,
                 goo_details_file_name_for_for_foil_cards,
@@ -1034,7 +1019,7 @@ def download_missing_goo_details(
     # Final save
 
     if query_count > 0:
-        print(f'Final save after {query_count} queries.')
+        print(f"Final save after {query_count} queries.")
         save_all_goo_details(
             all_goo_details,
             goo_details_file_name_for_for_foil_cards,
@@ -1054,7 +1039,6 @@ def find_cheapest_listing_hash_for_app_id(
     ).intersection(cheapest_listing_hashes)
 
     return next(iter(cheapest_listing_hash_for_app_id_as_a_set))
-
 
 
 def find_representative_listing_hash_for_app_id(
@@ -1103,7 +1087,6 @@ def find_representative_listing_hash_for_app_id(
     return next(iter(sorted_representative_listing_hash_for_app_id_as_list))
 
 
-
 def find_item_type_for_app_id(
     app_id: int,
     groups_by_app_id: dict[int, list[str]],
@@ -1135,14 +1118,13 @@ def find_item_type_for_app_id(
     try:
         listing_details = all_listing_details[representative_listing_hash_for_app_id]
     except KeyError:
-        listing_details = {'item_type_no': None}
+        listing_details = {"item_type_no": None}
         if verbose:
             print(
-                f'Unknown item type for listing hash = {representative_listing_hash_for_app_id}',
+                f"Unknown item type for listing hash = {representative_listing_hash_for_app_id}",
             )
 
-    return listing_details['item_type_no']
-
+    return listing_details["item_type_no"]
 
 
 def download_goo_value_for_app_id(
@@ -1170,7 +1152,6 @@ def download_goo_value_for_app_id(
     )
 
 
-
 def build_dictionary_of_representative_listing_hashes(
     all_listing_details: dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
@@ -1193,7 +1174,7 @@ def build_dictionary_of_representative_listing_hashes(
         listing_details = all_listing_details[listing_hash]
 
         try:
-            listing_details['item_type_no']
+            listing_details["item_type_no"]
         except KeyError:
             continue
 
@@ -1223,5 +1204,5 @@ def main() -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

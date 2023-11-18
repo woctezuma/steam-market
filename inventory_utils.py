@@ -21,7 +21,7 @@ from utils import (
 
 
 def get_my_steam_profile_id() -> str:
-    return get_cookie_dict()['steamLoginSecure'].split('%7C')[0]
+    return get_cookie_dict()["steamLoginSecure"].split("%7C")[0]
 
 
 def get_steam_inventory_url(
@@ -36,18 +36,15 @@ def get_steam_inventory_url(
     # https://github.com/Alex7Kom/node-steam-tradeoffers/issues/114
     # https://dev.doctormckay.com/topic/332-identifying-steam-items/
     steam_inventory_url = (
-        'https://steamcommunity.com/profiles/' + str(profile_id) + '/inventory/json/'
+        "https://steamcommunity.com/profiles/" + str(profile_id) + "/inventory/json/"
     )
-    steam_inventory_url += str(app_id) + '/' + str(context_id) + '/'
+    steam_inventory_url += str(app_id) + "/" + str(context_id) + "/"
 
     return steam_inventory_url
 
 
 def get_steam_inventory_file_name(profile_id: str) -> str:
-    return (
-        get_data_folder() + 'inventory_' + str(profile_id) + '.json'
-    )
-
+    return get_data_folder() + "inventory_" + str(profile_id) + ".json"
 
 
 def load_steam_inventory_from_disk(profile_id: str | None = None) -> [dict | None]:
@@ -110,7 +107,7 @@ def download_steam_inventory(
             save_json(steam_inventory, get_steam_inventory_file_name(profile_id))
     else:
         print(
-            f'Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.',
+            f"Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.",
         )
         steam_inventory = None
 
@@ -121,15 +118,11 @@ def get_session_id(cookie: dict[str, str] | None = None) -> str:
     if cookie is None:
         cookie = get_cookie_dict()
 
-    return cookie['sessionid']
-
+    return cookie["sessionid"]
 
 
 def get_steam_booster_pack_creation_url() -> str:
-    return (
-        'https://steamcommunity.com/tradingcards/ajaxcreatebooster/'
-    )
-
+    return "https://steamcommunity.com/tradingcards/ajaxcreatebooster/"
 
 
 def get_booster_pack_creation_parameters(
@@ -141,10 +134,12 @@ def get_booster_pack_creation_parameters(
 
     tradability_preference = 1 if is_marketable else 3
 
-    booster_pack_creation_parameters['sessionid'] = str(session_id)
-    booster_pack_creation_parameters['appid'] = str(app_id)
-    booster_pack_creation_parameters['series'] = '1'
-    booster_pack_creation_parameters['tradability_preference'] = str(tradability_preference)
+    booster_pack_creation_parameters["sessionid"] = str(session_id)
+    booster_pack_creation_parameters["appid"] = str(app_id)
+    booster_pack_creation_parameters["series"] = "1"
+    booster_pack_creation_parameters["tradability_preference"] = str(
+        tradability_preference
+    )
 
     return booster_pack_creation_parameters
 
@@ -181,7 +176,7 @@ def create_booster_pack(
         # Expected result:
         # {"purchase_result":{"communityitemid":"XXX","appid":685400,"item_type":36, "purchaseid":"XXX",
         # "success":1,"rwgrsn":-2}, "goo_amount":"22793","tradable_goo_amount":"22793","untradable_goo_amount":0}
-        print(f'\n[appID = {app_id}] Booster pack successfully created.')
+        print(f"\n[appID = {app_id}] Booster pack successfully created.")
         result = resp_data.json()
 
         jar = dict(resp_data.cookies)
@@ -190,11 +185,11 @@ def create_booster_pack(
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         if status_code == HTTPStatus.INTERNAL_SERVER_ERROR:
             print(
-                f'\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.',
+                f"\n[appID = {app_id}] Booster pack not created, because a pack was created less than 24h ago.",
             )
         else:
             print(
-                f'\n[appID = {app_id}] Booster pack not created, because of status code {status_code}.',
+                f"\n[appID = {app_id}] Booster pack not created, because of status code {status_code}.",
             )
         result = None
 
@@ -205,8 +200,7 @@ def create_booster_pack(
 
 
 def get_steam_market_sell_url() -> str:
-    return 'https://steamcommunity.com/market/sellitem/'
-
+    return "https://steamcommunity.com/market/sellitem/"
 
 
 def get_market_sell_parameters(
@@ -216,12 +210,14 @@ def get_market_sell_parameters(
 ) -> dict[str, str]:
     market_sell_parameters = {}
 
-    market_sell_parameters['sessionid'] = str(session_id)
-    market_sell_parameters['appid'] = '753'
-    market_sell_parameters['contextid'] = '6'
-    market_sell_parameters['assetid'] = str(asset_id)  # To automatically determine asset ID, use retrieve_asset_id().
-    market_sell_parameters['amount'] = '1'
-    market_sell_parameters['price'] = str(price_in_cents)
+    market_sell_parameters["sessionid"] = str(session_id)
+    market_sell_parameters["appid"] = "753"
+    market_sell_parameters["contextid"] = "6"
+    market_sell_parameters["assetid"] = str(
+        asset_id
+    )  # To automatically determine asset ID, use retrieve_asset_id().
+    market_sell_parameters["amount"] = "1"
+    market_sell_parameters["price"] = str(price_in_cents)
 
     return market_sell_parameters
 
@@ -230,14 +226,13 @@ def get_request_headers() -> dict[str, str]:
     # Reference: https://dev.doctormckay.com/topic/287-automatic-market-seller/
 
     return {
-        'Origin': 'https://steamcommunity.com',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'Referer': 'https://steamcommunity.com/my/inventory/',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+        "Origin": "https://steamcommunity.com",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Referer": "https://steamcommunity.com/my/inventory/",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
     }
-
 
 
 def sell_booster_pack(
@@ -281,18 +276,18 @@ def sell_booster_pack(
         jar = dict(resp_data.cookies)
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
-        if result['success']:
+        if result["success"]:
             print(
-                f'Booster pack {asset_id} successfully sold for {price_in_cents} cents.',
+                f"Booster pack {asset_id} successfully sold for {price_in_cents} cents.",
             )
         else:
             print(
-                f'Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.',
+                f"Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.",
             )
     else:
         # NB: 400 means "Bad Request".
         print(
-            f'Booster pack {asset_id} not sold for {price_in_cents} cents. Status code {status_code} was returned.',
+            f"Booster pack {asset_id} not sold for {price_in_cents} cents. Status code {status_code} was returned.",
         )
         result = None
 
@@ -312,54 +307,56 @@ def retrieve_asset_id(
     if steam_inventory is None:
         steam_inventory = load_steam_inventory(profile_id=profile_id)
 
-    descriptions = steam_inventory['rgDescriptions']
+    descriptions = steam_inventory["rgDescriptions"]
 
     matched_element = {}
 
     for element in descriptions:
-        if descriptions[element]['market_hash_name'] == listing_hash:
-            matched_element['market_hash_name'] = descriptions[element]['market_hash_name']
-            matched_element['appid'] = descriptions[element]['appid']
-            matched_element['classid'] = descriptions[element]['classid']
-            matched_element['instanceid'] = descriptions[element]['instanceid']
-            matched_element['type'] = descriptions[element]['type']
-            matched_element['marketable'] = descriptions[element]['marketable']
+        if descriptions[element]["market_hash_name"] == listing_hash:
+            matched_element["market_hash_name"] = descriptions[element][
+                "market_hash_name"
+            ]
+            matched_element["appid"] = descriptions[element]["appid"]
+            matched_element["classid"] = descriptions[element]["classid"]
+            matched_element["instanceid"] = descriptions[element]["instanceid"]
+            matched_element["type"] = descriptions[element]["type"]
+            matched_element["marketable"] = descriptions[element]["marketable"]
 
-            is_marketable_as_int = matched_element['marketable']
+            is_marketable_as_int = matched_element["marketable"]
             is_marketable = bool(is_marketable_as_int != 0)
 
             if is_marketable or (not focus_on_marketable_items):
                 if verbose:
                     print(
-                        '\nItem found without requiring to go through the entire inventory.',
+                        "\nItem found without requiring to go through the entire inventory.",
                     )
                 break
 
     has_been_matched = bool(len(matched_element) > 0)
 
     if has_been_matched:
-
-        community_inventory = steam_inventory['rgInventory']
+        community_inventory = steam_inventory["rgInventory"]
 
         for element in community_inventory:
             if (
-                community_inventory[element]['classid'] == matched_element['classid']
-                and community_inventory[element]['instanceid'] == matched_element['instanceid']
+                community_inventory[element]["classid"] == matched_element["classid"]
+                and community_inventory[element]["instanceid"]
+                == matched_element["instanceid"]
             ):
-                matched_element['id'] = community_inventory[element]['id']
-                matched_element['amount'] = community_inventory[element]['amount']
-                matched_element['pos'] = community_inventory[element]['pos']
+                matched_element["id"] = community_inventory[element]["id"]
+                matched_element["amount"] = community_inventory[element]["amount"]
+                matched_element["pos"] = community_inventory[element]["pos"]
                 break
 
-        print(f'\nItem matched in the inventory for {listing_hash}.')
+        print(f"\nItem matched in the inventory for {listing_hash}.")
     else:
-        print(f'\nNo matched item in the inventory for {listing_hash}.')
+        print(f"\nNo matched item in the inventory for {listing_hash}.")
 
     if verbose:
         print(matched_element)
 
     try:
-        asset_id = matched_element['id']
+        asset_id = matched_element["id"]
     except KeyError:
         asset_id = None
 
@@ -391,8 +388,7 @@ def sell_booster_packs_for_batch(
         update_steam_inventory=update_steam_inventory,
     )
 
-    for (listing_hash, price_in_cents) in price_dict_for_listing_hashes.items():
-
+    for listing_hash, price_in_cents in price_dict_for_listing_hashes.items():
         asset_id = retrieve_asset_id(
             listing_hash=listing_hash,
             steam_inventory=steam_inventory,
@@ -458,7 +454,6 @@ def update_and_save_next_creation_times(
             save_to_disk = True
 
             if verbose:
-
                 # Print an empty line the first time, to clearly separate the block from what was previously displayed.
                 if is_first_displayed_line:
                     print()
@@ -466,7 +461,7 @@ def update_and_save_next_creation_times(
 
                 app_name = convert_listing_hash_to_app_name(listing_hash)
                 print(
-                    f'Saving the next creation time ({formatted_next_creation_time}) for {app_name} (appID = {app_id}) to disk.',
+                    f"Saving the next creation time ({formatted_next_creation_time}) for {app_name} (appID = {app_id}) to disk.",
                 )
 
     if save_to_disk:
@@ -476,7 +471,7 @@ def update_and_save_next_creation_times(
 
 
 def main() -> None:
-    listing_hash = '292030-The Witcher 3: Wild Hunt Booster Pack'
+    listing_hash = "292030-The Witcher 3: Wild Hunt Booster Pack"
     price_in_cents = 23  # this is the money which you, as the seller, will receive
 
     price_dict_for_listing_hashes = {listing_hash: price_in_cents}
@@ -486,5 +481,5 @@ def main() -> None:
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

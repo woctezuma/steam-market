@@ -22,7 +22,9 @@ def load_next_creation_time_data(
     for app_id_as_str in next_creation_times:
         app_id_as_int = int(app_id_as_str)
 
-        next_creation_times_with_keys_as_int[app_id_as_int] = next_creation_times[app_id_as_str]
+        next_creation_times_with_keys_as_int[app_id_as_int] = next_creation_times[
+            app_id_as_str
+        ]
 
     return next_creation_times_with_keys_as_int
 
@@ -40,14 +42,16 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
     for app_id in app_ids:
         next_creation_time = next_creation_times_loaded_from_disk[app_id]
 
-        previously_loaded_next_creation_time = aggregated_badge_data[app_id]['next_creation_time']
-        aggregated_badge_data[app_id]['next_creation_time'] = next_creation_time
+        previously_loaded_next_creation_time = aggregated_badge_data[app_id][
+            "next_creation_time"
+        ]
+        aggregated_badge_data[app_id]["next_creation_time"] = next_creation_time
 
         if verbose:
-            app_name = aggregated_badge_data[app_id]['name']
+            app_name = aggregated_badge_data[app_id]["name"]
             if previously_loaded_next_creation_time is None:
                 print(
-                    'Loading the next creation time ({}) for {} (appID = {}) from disk.'.format(
+                    "Loading the next creation time ({}) for {} (appID = {}) from disk.".format(
                         next_creation_time,
                         app_name,
                         app_id,
@@ -60,7 +64,7 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
                 #     and you should delete it. Therefore, if the .json file is present on your disk, it can be
                 #     assumed that it was created by running this program, thus is more recent than the .txt file.
                 print(
-                    'Replacing the next creation time ({}) for {} (appID = {}) with {}, loaded from disk.'.format(
+                    "Replacing the next creation time ({}) for {} (appID = {}) with {}, loaded from disk.".format(
                         previously_loaded_next_creation_time,
                         app_name,
                         app_id,
@@ -75,15 +79,14 @@ def get_current_time() -> datetime.datetime:
     return datetime.datetime.now(tz=datetime.UTC)
 
 
-
 def get_creation_time_format(prepend_year: bool = False) -> str:
     # Reference: https://docs.python.org/3/library/time.html#time.strftime
 
     # The format used in: '14 Sep @ 10:48pm'
-    time_format = '%d %b @ %I:%M%p'
+    time_format = "%d %b @ %I:%M%p"
 
     if prepend_year:
-        time_format = '%Y ' + time_format
+        time_format = "%Y " + time_format
 
     return time_format
 
@@ -98,7 +101,6 @@ def get_formatted_time(time_struct: datetime.datetime | None = None) -> str:
     )
 
 
-
 def prepend_year_to_time_as_str(
     formatted_time_as_str: str,
     year_to_prepend: int | None = None,
@@ -107,8 +109,7 @@ def prepend_year_to_time_as_str(
         current_time = get_current_time()
         year_to_prepend = current_time.year
 
-    return f'{year_to_prepend} {formatted_time_as_str}'
-
+    return f"{year_to_prepend} {formatted_time_as_str}"
 
 
 def get_time_struct_from_str(
@@ -154,18 +155,13 @@ def get_formatted_current_time(delay_in_days: int = 0) -> str:
     return get_formatted_time(current_time)
 
 
-
 def get_crafting_cooldown_duration_in_days() -> int:
     # For every game, a booster pack can be crafted every day.
     return 1
 
 
-
 def get_crafting_cooldown_duration_in_seconds() -> int:
-    return (
-        24 * 3600 * get_crafting_cooldown_duration_in_days()
-    )
-
+    return 24 * 3600 * get_crafting_cooldown_duration_in_days()
 
 
 def determine_whether_a_booster_pack_can_be_crafted(
@@ -175,7 +171,7 @@ def determine_whether_a_booster_pack_can_be_crafted(
     if current_time is None:
         current_time = get_current_time()
 
-    next_creation_time = badge_data['next_creation_time']
+    next_creation_time = badge_data["next_creation_time"]
 
     if next_creation_time is None:
         a_booster_pack_can_be_crafted = True
@@ -223,5 +219,5 @@ def main() -> bool:
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

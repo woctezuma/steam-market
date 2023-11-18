@@ -60,7 +60,7 @@ from utils import (
 
 
 def update_all_listings_for_foil_cards() -> None:
-    print('Downloading listings for foil cards.')
+    print("Downloading listings for foil cards.")
 
     update_all_listings(
         listing_output_file_name=get_listing_output_file_name_for_foil_cards(),
@@ -73,7 +73,7 @@ def update_all_listings_for_profile_backgrounds(
     rarity: str | None = None,
 ) -> None:
     print(
-        f'Downloading listings for profile backgrounds (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).',
+        f"Downloading listings for profile backgrounds (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).",
     )
 
     update_all_listings(
@@ -92,7 +92,7 @@ def update_all_listings_for_emoticons(
     rarity: str | None = None,
 ) -> None:
     print(
-        f'Downloading listings for emoticons (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).',
+        f"Downloading listings for emoticons (rarity_tag={tag_drop_rate_str} ; rarity={rarity}).",
     )
 
     update_all_listings(
@@ -124,9 +124,9 @@ def update_all_listings_for_items_other_than_cards(
 
     rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
 
-    cooldown_duration = rate_limits['cooldown']
+    cooldown_duration = rate_limits["cooldown"]
     print(
-        f'Forced cooldown between profile backgrounds and emoticons. Cooldown: {cooldown_duration} seconds',
+        f"Forced cooldown between profile backgrounds and emoticons. Cooldown: {cooldown_duration} seconds",
     )
     time.sleep(cooldown_duration)
 
@@ -144,10 +144,9 @@ def get_listings(
 ) -> dict[str, dict]:
     if retrieve_listings_from_scratch:
         # Caveat: this update is only for items of Common rarity!
-        update_all_listings_for_items_other_than_cards(rarity='common')
+        update_all_listings_for_items_other_than_cards(rarity="common")
 
     return load_all_listings(listing_output_file_name)
-
 
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(
@@ -155,7 +154,8 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
     item_rarity_patterns_per_app_id: dict[int, dict] | None = None,
     price_threshold_in_cents: float | None = None,
     category_name: str | None = None,
-    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float] | None = None,
+    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
+    | None = None,
     gem_price_in_euros: float | None = None,
     verbose: bool = True,
 ) -> dict[int | str, dict]:
@@ -171,8 +171,10 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
                 verbose=verbose,
             )
             drop_rate_field = get_drop_rate_field()
-            rarity_field = 'common'
-            drop_rate_estimates_for_common_rarity = drop_rate_estimates[drop_rate_field][rarity_field]
+            rarity_field = "common"
+            drop_rate_estimates_for_common_rarity = drop_rate_estimates[
+                drop_rate_field
+            ][rarity_field]
         else:
             drop_rate_estimates_for_common_rarity = {}
 
@@ -188,9 +190,9 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
 
         item_rarity_pattern = item_rarity_patterns_per_app_id[app_id]
 
-        num_items_of_common_rarity = item_rarity_pattern['common']
-        num_items_of_uncommon_rarity = item_rarity_pattern['uncommon']
-        num_items_of_rare_rarity = item_rarity_pattern['rare']
+        num_items_of_common_rarity = item_rarity_pattern["common"]
+        num_items_of_uncommon_rarity = item_rarity_pattern["uncommon"]
+        num_items_of_rare_rarity = item_rarity_pattern["rare"]
 
         item_rarity_pattern_as_tuple = (
             num_items_of_common_rarity,
@@ -199,7 +201,9 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
         )
 
         try:
-            drop_rate_for_common_rarity = drop_rate_estimates_for_common_rarity[item_rarity_pattern_as_tuple]
+            drop_rate_for_common_rarity = drop_rate_estimates_for_common_rarity[
+                item_rarity_pattern_as_tuple
+            ]
         except KeyError:
             drop_rate_for_common_rarity = 1  # Here, 1 would represent 100% chance to receive an item of common rarity.
 
@@ -209,16 +213,16 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
             num_items_of_common_rarity * badge_price / drop_rate_for_common_rarity
         )
 
-        sell_price_in_cents = all_listings[listing_hash]['sell_price']
+        sell_price_in_cents = all_listings[listing_hash]["sell_price"]
         sell_price_in_euros = sell_price_in_cents / 100
 
         # In order to distinguish items linked to the same appID, dummy appIDs are introduced:
         dummy_app_id = listing_hash
 
         badge_data[dummy_app_id] = {}
-        badge_data[dummy_app_id]['listing_hash'] = listing_hash
-        badge_data[dummy_app_id]['sell_price'] = sell_price_in_euros
-        badge_data[dummy_app_id]['gem_price'] = item_price_by_crafting_badges
+        badge_data[dummy_app_id]["listing_hash"] = listing_hash
+        badge_data[dummy_app_id]["sell_price"] = sell_price_in_euros
+        badge_data[dummy_app_id]["gem_price"] = item_price_by_crafting_badges
 
     # Filter out candidates for which the ask is below a given threshold
 
@@ -227,7 +231,6 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
         category_name=category_name,
         user_chosen_price_threshold=price_threshold_in_cents,
     )
-
 
 
 def get_market_orders(
@@ -249,8 +252,10 @@ def get_market_orders(
     first_encountered_filtered_badge_data = {}
 
     for dummy_app_id in filtered_badge_data:
-        if filtered_badge_data[dummy_app_id]['listing_hash'] not in market_order_dict:
-            first_encountered_filtered_badge_data[dummy_app_id] = filtered_badge_data[dummy_app_id]
+        if filtered_badge_data[dummy_app_id]["listing_hash"] not in market_order_dict:
+            first_encountered_filtered_badge_data[dummy_app_id] = filtered_badge_data[
+                dummy_app_id
+            ]
 
     # Retrieval of market orders (bid, ask)
 
@@ -280,8 +285,7 @@ def get_market_orders(
     available_listing_hashes = list(market_order_dict.keys())
 
     selected_listing_hashes = [
-        filtered_badge_data[app_id]['listing_hash']
-        for app_id in filtered_badge_data
+        filtered_badge_data[app_id]["listing_hash"] for app_id in filtered_badge_data
     ]
 
     for listing_hash in available_listing_hashes:
@@ -318,31 +322,31 @@ def get_listings_with_other_rarity_tags(
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
 ) -> tuple[dict[str, dict], dict[str, dict]]:
     if retrieve_listings_with_another_rarity_tag_from_scratch:
-        other_rarity_fields = set(get_rarity_fields()).difference({'common'})
+        other_rarity_fields = set(get_rarity_fields()).difference({"common"})
         for rarity_tag in other_rarity_fields:
             update_all_listings_for_items_other_than_cards(rarity=rarity_tag)
 
     if look_for_profile_backgrounds:
         all_listings_for_uncommon = load_all_listings(
             listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
-                rarity='uncommon',
+                rarity="uncommon",
             ),
         )
         all_listings_for_rare = load_all_listings(
             listing_output_file_name=get_listing_output_file_name_for_profile_backgrounds(
-                rarity='rare',
+                rarity="rare",
             ),
         )
 
     else:
         all_listings_for_uncommon = load_all_listings(
             listing_output_file_name=get_listing_output_file_name_for_emoticons(
-                rarity='uncommon',
+                rarity="uncommon",
             ),
         )
         all_listings_for_rare = load_all_listings(
             listing_output_file_name=get_listing_output_file_name_for_emoticons(
-                rarity='rare',
+                rarity="rare",
             ),
         )
 
@@ -378,9 +382,9 @@ def enumerate_item_rarity_patterns(
         except KeyError:
             num_rare = None
 
-        item_rarity_patterns_per_app_id[app_id]['common'] = num_common
-        item_rarity_patterns_per_app_id[app_id]['uncommon'] = num_uncommon
-        item_rarity_patterns_per_app_id[app_id]['rare'] = num_rare
+        item_rarity_patterns_per_app_id[app_id]["common"] = num_common
+        item_rarity_patterns_per_app_id[app_id]["uncommon"] = num_uncommon
+        item_rarity_patterns_per_app_id[app_id]["rare"] = num_rare
 
     return item_rarity_patterns_per_app_id
 
@@ -392,7 +396,8 @@ def main(
     retrieve_market_orders_online: bool = True,
     focus_on_listing_hashes_never_seen_before: bool = True,
     price_threshold_in_cents: float | None = None,
-    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float] | None = None,
+    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
+    | None = None,
     num_packs_to_display: int = 10,
     verbose: bool = False,
 ) -> bool:
@@ -466,7 +471,7 @@ def main(
     # Pre-retrieval of item name ids
 
     selected_listing_hashes = [
-        badge['listing_hash'] for badge in filtered_badge_data.values()
+        badge["listing_hash"] for badge in filtered_badge_data.values()
     ]
 
     get_item_nameid_batch(
@@ -516,7 +521,7 @@ def main(
         verbose=verbose,
     )
 
-    print('\n# Results for detected *potential* arbitrages\n')
+    print("\n# Results for detected *potential* arbitrages\n")
     print_arbitrages(
         badge_arbitrages,
         use_numbered_bullet_points=True,
@@ -526,7 +531,7 @@ def main(
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(
         look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
         retrieve_listings_from_scratch=False,

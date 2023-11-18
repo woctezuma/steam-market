@@ -112,5 +112,5 @@ class TestDropRateEstimatesMethods(unittest.TestCase):
         assert drop_rate_estimates.main() is True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

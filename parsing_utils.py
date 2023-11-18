@@ -17,26 +17,26 @@ def parse_javascript_one_liner(
 ) -> dict[int, dict]:
     badge_creation_details = {}
 
-    print('Parsing the one-line javascript code displayed with the web browser.')
+    print("Parsing the one-line javascript code displayed with the web browser.")
 
-    badges = json.loads(badges_as_str.lstrip().rstrip(','))
+    badges = json.loads(badges_as_str.lstrip().rstrip(","))
     for badge in badges:
-        app_id, next_creation_time = badge['appid'], "available now"
+        app_id, next_creation_time = badge["appid"], "available now"
         badge_creation_details[app_id] = {
-            'name': (app_name := badge['name']),
-            'gem_value': (gem_value := int(badge['price'])),
+            "name": (app_name := badge["name"]),
+            "gem_value": (gem_value := int(badge["price"])),
         }
 
-        if badge.get('unavailable', False):
-            next_creation_time = badge['available_at_time']
-            badge_creation_details[app_id]['next_creation_time'] = next_creation_time
+        if badge.get("unavailable", False):
+            next_creation_time = badge["available_at_time"]
+            badge_creation_details[app_id]["next_creation_time"] = next_creation_time
 
             print(
-                f'Loading the next creation time ({next_creation_time}) for {app_name} ({app_id = }) from the Booster Pack Creator list.',
+                f"Loading the next creation time ({next_creation_time}) for {app_name} ({app_id = }) from the Booster Pack Creator list.",
             )
 
         if verbose:
-            print(f'{app_id:<10}{app_name}\t{gem_value} gems\t{next_creation_time}')
+            print(f"{app_id:<10}{app_name}\t{gem_value} gems\t{next_creation_time}")
 
     return badge_creation_details
 
@@ -47,27 +47,27 @@ def parse_augmented_steam_drop_down_menu(
 ) -> dict[int, dict]:
     badge_creation_details = {}
 
-    print('Parsing the drop-down menu displayed with Augmented Steam.')
+    print("Parsing the drop-down menu displayed with Augmented Steam.")
 
     for line in lines:
         s = line.split()
         # e.g. ['<option', 'value="614910"', 'class="available">#monstercakes', '-', '1200', 'Gems</option>']
 
         # Hard-coded parsing
-        app_id = int(s[1].split('=')[1].strip('"'))
-        app_name = s[2].split('available">')[1] + ' '
-        app_name += ' '.join(s[3:-3])
+        app_id = int(s[1].split("=")[1].strip('"'))
+        app_name = s[2].split('available">')[1] + " "
+        app_name += " ".join(s[3:-3])
         app_name = app_name.strip()
         gem_value = int(s[-2])
 
         app_name = fix_app_name_for_url_query(app_name)
 
         badge_creation_details[app_id] = {}
-        badge_creation_details[app_id]['name'] = app_name
-        badge_creation_details[app_id]['gem_value'] = gem_value
+        badge_creation_details[app_id]["name"] = app_name
+        badge_creation_details[app_id]["gem_value"] = gem_value
 
         if verbose:
-            print(f'{app_id}\t{app_name}\t{gem_value}')
+            print(f"{app_id}\t{app_name}\t{gem_value}")
 
     return badge_creation_details
 
@@ -87,8 +87,8 @@ def parse_badge_creation_details(
                 from_javascript=not from_javascript,
             )
 
-    with Path(badge_creation_file_name).open(encoding='utf-8') as f:
-        lines = [line.strip() for line in f if line[0] != '#']
+    with Path(badge_creation_file_name).open(encoding="utf-8") as f:
+        lines = [line.strip() for line in f if line[0] != "#"]
 
     if len(lines) > 1:
         badge_creation_details = parse_augmented_steam_drop_down_menu(
@@ -110,24 +110,24 @@ def main() -> bool:
         get_badge_creation_file_name(from_javascript=False),
     )
 
-    print(f'#badges = {len(badge_creation_details)}')
+    print(f"#badges = {len(badge_creation_details)}")
 
     badge_creation_details = parse_badge_creation_details(
         get_badge_creation_file_name(from_javascript=True),
     )
 
-    print(f'#badges = {len(badge_creation_details)}')
+    print(f"#badges = {len(badge_creation_details)}")
 
     badge_creation_details = parse_badge_creation_details(from_javascript=False)
 
-    print(f'#badges = {len(badge_creation_details)}')
+    print(f"#badges = {len(badge_creation_details)}")
 
     badge_creation_details = parse_badge_creation_details(from_javascript=True)
 
-    print(f'#badges = {len(badge_creation_details)}')
+    print(f"#badges = {len(badge_creation_details)}")
 
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
