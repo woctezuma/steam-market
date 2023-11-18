@@ -72,7 +72,7 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
 
 
 def get_current_time() -> datetime.datetime:
-    return datetime.datetime.today()
+    return datetime.datetime.now(tz=datetime.UTC)
 
 
 
