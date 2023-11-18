@@ -153,7 +153,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
         num_crafted_items_to_compute_estimates
         != num_crafted_badges_to_compute_estimates * num_items_crafted_per_badge
     ):
-        raise AssertionError()
+        raise AssertionError
 
     if verbose:
         print(

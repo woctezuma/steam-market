@@ -105,7 +105,7 @@ def figure_out_relevant_id(
 
     has_different_actions = bool(len(set(actions)) > 1)
     if has_different_actions:
-        raise AssertionError()
+        raise AssertionError
 
     return last_relevant_asset_id
 
@@ -155,7 +155,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
 
             # There should only be one appID and one contextID.
             if len(app_ids) > 1 or len(context_ids) > 1:
-                raise AssertionError()
+                raise AssertionError
 
             # There should only be one assetID. However, we can try to run the rest of the code even if there are several.
             if len(ids) > 1:
@@ -194,7 +194,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
 
             # There should only be one javascript link.
             if len(javascript_links) > 1:
-                raise AssertionError()
+                raise AssertionError
 
             try:
                 link_of_interest = javascript_links[0]

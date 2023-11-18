@@ -31,7 +31,7 @@ def get_ground_truth_sell_price_without_fee(sell_price_including_fee: float) -> 
     elif sell_price_including_fee <= 0.66:
         total_fee_price = 0.07
     else:
-        raise AssertionError()
+        raise AssertionError
 
     sell_price_without_fee = sell_price_including_fee - total_fee_price
     sell_price_without_fee = float(f'{sell_price_without_fee:.2f}')

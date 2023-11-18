@@ -137,7 +137,7 @@ def aggregate_badge_data(
 
     if gem_price <= 0:
         print(f'[ERROR] The price of a gem is non-positive: {gem_price}€.')
-        raise AssertionError()
+        raise AssertionError
 
     badge_app_ids = list(badge_creation_details.keys())
 

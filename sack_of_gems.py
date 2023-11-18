@@ -53,7 +53,7 @@ def download_sack_of_gems_price(
 
         save_json(listing_details, sack_of_gems_listing_file_name)
     else:
-        raise AssertionError()
+        raise AssertionError
 
     return sack_of_gems_price
 

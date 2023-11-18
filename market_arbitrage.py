@@ -119,7 +119,7 @@ def determine_whether_an_arbitrage_might_exist(
         price_threshold = user_chosen_price_threshold
 
     if price_threshold is None:
-        raise AssertionError()
+        raise AssertionError
 
     an_arbitrage_might_exist = bool(price_threshold < sell_price_without_fee)
 

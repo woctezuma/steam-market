@@ -173,7 +173,7 @@ def download_market_order_data(
                 print(
                     'You have been rate-limited. Wait for a while and double-check rate-limits before trying again.',
                 )
-                raise AssertionError()
+                raise AssertionError
 
         bid_price = -1
         bid_volume = -1
@@ -288,7 +288,7 @@ def load_market_order_data(
         )
 
         if retrieve_market_orders_online and len(app_ids_with_missing_data) > 0:
-            raise AssertionError()
+            raise AssertionError
 
     else:
         trimmed_market_order_dict = market_order_dict

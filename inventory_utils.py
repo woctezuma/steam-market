@@ -164,7 +164,7 @@ def create_booster_pack(
     has_secured_cookie = bool(len(cookie) > 0)
 
     if not has_secured_cookie:
-        raise AssertionError()
+        raise AssertionError
 
     session_id = get_session_id(cookie=cookie)
 
@@ -257,7 +257,7 @@ def sell_booster_pack(
     has_secured_cookie = bool(len(cookie) > 0)
 
     if not has_secured_cookie:
-        raise AssertionError()
+        raise AssertionError
 
     session_id = get_session_id(cookie=cookie)
 
