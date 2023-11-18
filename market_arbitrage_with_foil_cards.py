@@ -341,7 +341,7 @@ def load_all_goo_details(
 
 
 def save_all_goo_details(
-    all_goo_details: dict[int, int],
+    all_goo_details: dict[str, int],
     goo_details_file_name: str | None = None,
 ) -> None:
     if goo_details_file_name is None:
@@ -350,7 +350,7 @@ def save_all_goo_details(
 
 
 def update_all_goo_details(
-    new_goo_details: dict[int, int],
+    new_goo_details: dict[str, int],
     goo_details_file_name: str | None = None,
 ) -> None:
     if goo_details_file_name is None:
@@ -673,7 +673,7 @@ def compute_unrewarding_threshold_in_gems(
 
 
 def discard_necessarily_unrewarding_app_ids(
-    all_goo_details: dict[int, int],
+    all_goo_details: dict[str, int],
     app_ids_with_unreliable_goo_details: list[int] | None = None,
     app_ids_with_unknown_goo_value: list[int] | None = None,
     sack_of_gems_price_in_euros: float | None = None,
@@ -723,7 +723,7 @@ def discard_necessarily_unrewarding_app_ids(
 
 
 def safe_read_from_dict(
-    input_dict: dict[str | int, int],
+    input_dict: dict[str, int],
     input_key: int,
 ) -> int | None:
     input_key_as_str = str(input_key)
@@ -739,7 +739,7 @@ def safe_read_from_dict(
 def find_listing_hashes_with_unknown_goo_value(
     listing_candidates: list[str],
     app_ids_with_unreliable_goo_details: list[int],
-    all_goo_details: dict[int, int],
+    all_goo_details: dict[str, int],
     verbose: bool = True,
 ) -> list[int]:
     app_ids_with_unknown_goo_value = []
@@ -772,7 +772,7 @@ def find_listing_hashes_with_unknown_goo_value(
 
 def determine_whether_an_arbitrage_might_exist_for_foil_cards(
     eligible_listing_hashes: list[str],
-    all_goo_details: dict[int, int],
+    all_goo_details: dict[str, int],
     app_ids_with_unreliable_goo_details: list[int] | None = None,
     app_ids_with_unknown_goo_value: list[int] | None = None,
     all_listings: dict[str, dict] | None = None,
@@ -954,7 +954,7 @@ def download_missing_goo_details(
     enforced_app_ids_to_process: list[int] | None = None,
     num_queries_between_save: int = 100,
     verbose: bool = True,
-) -> dict[int, int]:
+) -> dict[str, int]:
     if goo_details_file_name_for_for_foil_cards is None:
         goo_details_file_name_for_for_foil_cards = (
             get_goo_details_file_nam_for_for_foil_cards()
