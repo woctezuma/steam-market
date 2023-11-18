@@ -325,7 +325,7 @@ def filter_listings_with_arbitrary_price_threshold(
 def load_all_goo_details(
     goo_details_file_name: str | None = None,
     verbose: bool = True,
-) -> dict[int, int]:
+) -> dict[str, int]:
     if goo_details_file_name is None:
         goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
 
