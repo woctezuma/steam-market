@@ -125,14 +125,14 @@ def get_time_struct_from_str(
                 year_to_prepend=current_year,
             ),
             get_creation_time_format(prepend_year=True),
-        )
+        ).astimezone(datetime.UTC)
 
     else:
         try:
             time_struct = datetime.datetime.strptime(
                 formatted_time_as_str,
                 get_creation_time_format(),
-            )
+            ).astimezone(datetime.UTC)
         except ValueError:
             # For February 29th during a leap year, it is necessary to specify the year before calling strptime().
             # Reference: https://github.com/python/cpython/commit/56027ccd6b9dab4a090e4fef8574933fb9a36ff2
