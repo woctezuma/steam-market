@@ -115,15 +115,11 @@ def get_item_type_no_for_trading_cards(
 
 
 def get_border_color_no_for_trading_cards(is_foil: bool = False) -> int:
-    if is_foil:
-        # NB: this leads to a goo value 10 times higher than with border_corlor_no equal to zero. However, it seems to
-        # be applied without any check, so that the returned goo values are misleading when applied to any item other
-        # than a trading card, such as an emoticon and a profile background.
-        border_color_no = 1
-    else:
-        border_color_no = 0
+    # NB: this leads to a goo value 10 times higher than with border_corlor_no equal to zero. However, it seems to
+    # be applied without any check, so that the returned goo values are misleading when applied to any item other
+    # than a trading card, such as an emoticon and a profile background.
+    return 1 if is_foil else 0
 
-    return border_color_no
 
 
 def get_steam_goo_value_parameters(
