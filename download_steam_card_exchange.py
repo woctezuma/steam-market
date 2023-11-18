@@ -41,7 +41,7 @@ def save_data_from_steam_card_exchange(
 def download_data_from_steam_card_exchange(
     steam_card_exchange_file_name: str | None = None,
     save_to_disk: bool = True,
-) -> [dict | None]:
+) -> dict | None:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -73,7 +73,7 @@ def download_data_from_steam_card_exchange(
 
 def load_data_from_steam_card_exchange(
     steam_card_exchange_file_name: str | None = None,
-) -> [dict | None]:
+) -> dict | None:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -98,7 +98,7 @@ def parse_data_from_steam_card_exchange(
     response: dict | None = None,
     force_update_from_steam_card_exchange: bool = False,
     steam_card_exchange_file_name: str | None = None,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -112,10 +112,10 @@ def parse_data_from_steam_card_exchange(
 
     # Build dict: app_id -> num_cards_per_set
 
-    dico = {}
+    dico : dict[str, dict] = {}
 
     for app_info in response["data"]:
-        app_id = int(app_info[0][0])
+        app_id = str(int(app_info[0][0]))
         app_name = app_info[0][1]
         num_cards_per_set = int(app_info[1])
 

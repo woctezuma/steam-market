@@ -134,8 +134,8 @@ def main() -> bool:
     return True
 
 
-def convert_listing_hash_to_app_id(listing_hash: str) -> int:
-    return int(listing_hash.split("-")[0])
+def convert_listing_hash_to_app_id(listing_hash: str) -> str:
+    return str(int(listing_hash.split("-")[0]))
 
 
 def get_listing_hash_suffixe() -> str:

@@ -27,9 +27,9 @@ def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -
 
 
 def filter_out_badges_never_crafted(
-    aggregated_badge_data: dict[int, dict],
+    aggregated_badge_data: dict[str, dict],
     verbose: bool = True,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
     # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
 
@@ -59,9 +59,9 @@ def filter_out_badges_never_crafted(
 
 
 def filter_out_badges_recently_crafted(
-    aggregated_badge_data: dict[int, dict],
+    aggregated_badge_data: dict[str, dict],
     verbose: bool = True,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
     # and thus which cannot be immediately crafted.
 
@@ -132,11 +132,11 @@ def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
 
 
 def filter_out_badges_with_low_sell_price(
-    aggregated_badge_data: dict[int | str, dict],
+    aggregated_badge_data: dict[ str, dict],
     user_chosen_price_threshold: float | None = None,
     category_name: str | None = None,
     verbose: bool = True,
-) -> dict[int | str, dict]:
+) -> dict[str, dict]:
     # Filter out games for which the sell price (ask) is lower than the gem price,
     # because the bid is necessarily lower than the ask, so it will not be worth downloading bid data for these games.
 
@@ -198,7 +198,7 @@ def find_badge_arbitrages(
             verbose=verbose,
         )
 
-    badge_arbitrages = {}
+    badge_arbitrages : dict[str, dict] = {}
 
     for app_id in badge_data:
         individual_badge_data = badge_data[app_id]
@@ -372,7 +372,7 @@ def convert_arbitrages_for_batch_create_then_sell(
 
 
 def update_badge_arbitrages_with_latest_market_order_data(
-    badge_data: dict[int, dict],
+    badge_data: dict[str, dict],
     arbitrage_data: dict[str, dict],
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -409,7 +409,7 @@ def get_filtered_badge_data(
     quick_check_with_tracked_booster_packs: bool = False,
     check_ask_price: bool = True,
     from_javascript: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     aggregated_badge_data = load_aggregated_badge_data(
         retrieve_listings_from_scratch,
         enforced_sack_of_gems_price=enforced_sack_of_gems_price,

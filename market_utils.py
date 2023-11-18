@@ -80,7 +80,7 @@ def match_badges_with_listing_hashes(
 
     # Match badges with listing hashes
 
-    badge_matches = {}
+    badge_matches : dict[int, str | None] = {}
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
 
@@ -107,13 +107,13 @@ def match_badges_with_listing_hashes(
 
 
 def aggregate_badge_data(
-    badge_creation_details: dict[int, dict],
-    badge_matches: dict[int, str | None],
+    badge_creation_details: dict[str, dict],
+    badge_matches: dict[str, str | None],
     all_listings: dict[str, dict] | None = None,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     # Aggregate data:
     #       owned appID --> (gem PRICE, sell price)
     # where:
@@ -137,7 +137,7 @@ def aggregate_badge_data(
 
     badge_app_ids = list(badge_creation_details.keys())
 
-    aggregated_badge_data = {}
+    aggregated_badge_data: dict[int, dict] = {}
 
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
@@ -178,7 +178,7 @@ def load_aggregated_badge_data(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     from_javascript: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     badge_creation_details = parse_badge_creation_details(
         from_javascript=from_javascript,
     )

@@ -55,10 +55,10 @@ def filter_listings(
 
 
 def convert_to_badges(
-    filtered_listing_hashes: [dict[str, dict] | list[str]],
+    filtered_listing_hashes: dict[str, dict] | list[str],
     max_num_badges: int | None = None,
-) -> dict[int, dict]:
-    badge_data = {}
+) -> dict[str, dict]:
+    badge_data : dict[str, dict] = {}
 
     for i, listing_hash in enumerate(filtered_listing_hashes):
         if max_num_badges is not None and i >= max_num_badges:
@@ -117,6 +117,9 @@ def print_packs_with_high_buzz(
     category_name: str | None = None,
     num_packs_to_display: int = 10,
 ) -> None:
+    if item_rarity_patterns_per_app_id is None:
+        item_rarity_patterns_per_app_id = {}
+
     if category_name is None:
         category_name = get_category_name_for_booster_packs()
 
@@ -183,6 +186,7 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(
     minimum_allowed_sack_of_gems_price: float | None = None,
 ) -> dict[str, dict]:
     if aggregated_badge_data is None:
+        aggregated_badge_data = {} # solely to silence an error for mypy type-hinting
         aggregated_badge_data = convert_to_badges(all_listings)
 
     dico = parse_data_from_steam_card_exchange(

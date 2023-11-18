@@ -35,7 +35,7 @@ def filter_app_ids_based_on_badge_data(
 
     app_ids = sorted(
         app_ids,
-        key=lambda x: filtered_badge_data[x]["name"],
+        key=lambda x: filtered_badge_data[str(x)]["name"],
     )
 
     return app_ids, filtered_badge_data

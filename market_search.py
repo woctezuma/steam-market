@@ -195,7 +195,7 @@ def get_all_listings(
             else:
                 num_listings = num_listings_based_on_latest_query
 
-            listings = {}
+            listings : dict[str, dict] = {}
             for listing in result["results"]:
                 listing_hash = listing["hash_name"]
 

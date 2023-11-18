@@ -190,7 +190,7 @@ def download_market_order_data(
 
 
 def download_market_order_data_batch(
-    badge_data: dict[int | str, dict],
+    badge_data: dict[ str, dict],
     market_order_dict: dict[str, dict] | None = None,
     verbose: bool = False,
     save_to_disk: bool = True,
@@ -260,7 +260,7 @@ def download_market_order_data_batch(
 
 
 def load_market_order_data(
-    badge_data: dict[int | str, dict] | None = None,
+    badge_data: dict[ str, dict] | None = None,
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -294,7 +294,7 @@ def trim_market_order_data(
     badge_data: dict[int | str, dict],
     market_order_dict: dict[str, dict],
 ) -> tuple[dict[str, dict], list[int | str]]:
-    trimmed_market_order_dict = {}
+    trimmed_market_order_dict:dict[str, dict] = {}
     app_ids_with_missing_data = []
 
     for app_id in badge_data:
@@ -319,14 +319,14 @@ def trim_market_order_data(
 
 def load_market_order_data_from_disk(
     market_order_output_file_name: str | None = None,
-) -> [dict[str, dict] | None]:
+) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
 
     try:
         market_order_dict = load_json(market_order_output_file_name)
     except FileNotFoundError:
-        market_order_dict = None
+        market_order_dict = {}
 
     return market_order_dict
 
@@ -345,7 +345,7 @@ def main() -> bool:
 
     app_id = listing_hash.split("-", maxsplit=1)[0]
 
-    badge_data = {}
+    badge_data: dict[str,dict] = {}
     badge_data[app_id] = {}
     badge_data[app_id]["listing_hash"] = listing_hash
 

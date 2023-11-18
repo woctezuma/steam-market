@@ -6,7 +6,7 @@ from utils import get_next_creation_time_file_name
 
 def load_next_creation_time_data(
     next_creation_time_file_name: str | None = None,
-) -> dict[int, str]:
+) -> dict[str, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 
@@ -15,24 +15,13 @@ def load_next_creation_time_data(
     except FileNotFoundError:
         next_creation_times = {}
 
-    # NB: the keys in a dictionary loaded from a .json file are always str. We want to convert them to int now.
-
-    next_creation_times_with_keys_as_int = {}
-
-    for app_id_as_str in next_creation_times:
-        app_id_as_int = int(app_id_as_str)
-
-        next_creation_times_with_keys_as_int[app_id_as_int] = next_creation_times[
-            app_id_as_str
-        ]
-
-    return next_creation_times_with_keys_as_int
+    return next_creation_times
 
 
 def fill_in_badges_with_next_creation_times_loaded_from_disk(
-    aggregated_badge_data: dict[int, dict],
+    aggregated_badge_data: dict[str, dict],
     verbose: bool = True,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     next_creation_times_loaded_from_disk = load_next_creation_time_data()
 
     app_ids = set(aggregated_badge_data.keys()).intersection(

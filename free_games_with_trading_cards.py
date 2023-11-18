@@ -19,7 +19,7 @@ def get_user_data_url() -> str:
     return "https://store.steampowered.com/dynamicstore/userdata/"
 
 
-def download_user_data() -> [dict | None]:
+def download_user_data() -> dict | None:
     cookie = get_cookie_dict()
 
     resp_data = requests.get(
