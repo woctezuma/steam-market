@@ -35,9 +35,8 @@ def filter_out_dubious_listing_hashes(
 
         if not booster_pack_is_dubious:
             filtered_listings[listing_hash] = individual_market_listing
-        else:
-            if verbose:
-                print(f'Omitting dubious listing hash: {listing_hash}')
+        elif verbose:
+            print(f'Omitting dubious listing hash: {listing_hash}')
 
     if verbose:
         print(
