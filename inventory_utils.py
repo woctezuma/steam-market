@@ -26,7 +26,7 @@ def get_my_steam_profile_id() -> str:
 
 def get_steam_inventory_url(
     profile_id: str | None = None,
-    app_id: int = 753,
+    app_id: str = "753",
     context_id: int = 6,
 ) -> str:
     if profile_id is None:
@@ -126,26 +126,24 @@ def get_steam_booster_pack_creation_url() -> str:
 
 
 def get_booster_pack_creation_parameters(
-    app_id: int,
+    app_id: str,
     session_id: str,
     is_marketable: bool = True,
 ) -> dict[str, str]:
     booster_pack_creation_parameters = {}
 
-    tradability_preference = 1 if is_marketable else 3
+    tradability_preference = "1" if is_marketable else "3"
 
     booster_pack_creation_parameters["sessionid"] = session_id
-    booster_pack_creation_parameters["appid"] = str(app_id)
+    booster_pack_creation_parameters["appid"] = app_id
     booster_pack_creation_parameters["series"] = "1"
-    booster_pack_creation_parameters["tradability_preference"] = str(
-        tradability_preference,
-    )
+    booster_pack_creation_parameters["tradability_preference"] = tradability_preference
 
     return booster_pack_creation_parameters
 
 
 def create_booster_pack(
-    app_id: int,
+    app_id: str,
     is_marketable: bool = True,
     verbose: bool = True,
 ) -> dict | None:
@@ -306,7 +304,10 @@ def retrieve_asset_id(
     if steam_inventory is None:
         steam_inventory = load_steam_inventory(profile_id=profile_id)
 
-    descriptions = steam_inventory["rgDescriptions"]
+    if steam_inventory:
+        descriptions = steam_inventory["rgDescriptions"]
+    else:
+        descriptions = {}
 
     matched_element = {}
 
@@ -334,7 +335,10 @@ def retrieve_asset_id(
     has_been_matched = bool(len(matched_element) > 0)
 
     if has_been_matched:
-        community_inventory = steam_inventory["rgInventory"]
+        if steam_inventory:
+            community_inventory = steam_inventory["rgInventory"]
+        else:
+            community_inventory = {}
 
         for element in community_inventory:
             if (
@@ -429,7 +433,7 @@ def update_and_save_next_creation_times(
     creation_results: dict[str, dict | None],
     verbose: bool = True,
     next_creation_time_file_name: str | None = None,
-) -> dict[int, str]:
+) -> dict[str, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 

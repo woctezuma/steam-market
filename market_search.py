@@ -170,15 +170,15 @@ def get_all_listings(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        try:
+        if resp_data and resp_data.ok:
             status_code = resp_data.status_code
-        except AttributeError:
+        else:
             status_code = None
 
         start_index += delta_index
         query_count += 1
 
-        if status_code == HTTPStatus.OK:
+        if resp_data and status_code == HTTPStatus.OK:
             result = resp_data.json()
 
             if has_secured_cookie:

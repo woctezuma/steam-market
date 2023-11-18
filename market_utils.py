@@ -49,10 +49,10 @@ def filter_out_dubious_listing_hashes(
 
 
 def match_badges_with_listing_hashes(
-    badge_creation_details: dict[int, dict] | None = None,
+    badge_creation_details: dict[str, dict] | None = None,
     all_listings: dict[str, dict] | None = None,
     verbose: bool = True,
-) -> dict[int, str | None]:
+) -> dict[str, str | None]:
     # Badges for games which I own
 
     if badge_creation_details is None:
@@ -80,7 +80,7 @@ def match_badges_with_listing_hashes(
 
     # Match badges with listing hashes
 
-    badge_matches : dict[int, str | None] = {}
+    badge_matches : dict[str, str | None] = {}
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
 
@@ -137,7 +137,7 @@ def aggregate_badge_data(
 
     badge_app_ids = list(badge_creation_details.keys())
 
-    aggregated_badge_data: dict[int, dict] = {}
+    aggregated_badge_data: dict[str, dict] = {}
 
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
@@ -208,7 +208,7 @@ def load_aggregated_badge_data(
 
 
 def populate_random_samples_of_badge_data(
-    badge_data: dict[int, dict] | None = None,
+    badge_data: dict[str, dict] | None = None,
     num_samples: int = 50,
 ) -> bool:
     if badge_data is None:

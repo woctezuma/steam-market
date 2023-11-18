@@ -119,7 +119,7 @@ def get_border_color_no_for_trading_cards(is_foil: bool = False) -> int:
 
 
 def get_steam_goo_value_parameters(
-    app_id: int,
+    app_id: str,
     item_type: int | None = None,
     listing_hash: str | None = None,
     is_foil: bool = True,
@@ -135,7 +135,7 @@ def get_steam_goo_value_parameters(
 
     params:dict [str, str | int] = {}
 
-    params["appid"] = str(app_id)
+    params["appid"] = app_id
     params["item_type"] = item_type
     params["border_color"] = border_color
 
@@ -143,7 +143,7 @@ def get_steam_goo_value_parameters(
 
 
 def query_goo_value(
-    app_id: int,
+    app_id: str,
     item_type: int | None,
     verbose: bool = True,
 ) -> int | None:
@@ -203,8 +203,8 @@ def get_listings_for_foil_cards(
 def group_listing_hashes_by_app_id(
     all_listings: dict[str, dict],
     verbose: bool = True,
-) -> dict[int, list[str]]:
-    groups_by_app_id: dict[int, list[str]] = {}
+) -> dict[str, list[str]]:
+    groups_by_app_id: dict[str, list[str]] = {}
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
 
@@ -221,7 +221,7 @@ def group_listing_hashes_by_app_id(
 
 def find_cheapest_listing_hashes(
     all_listings: dict[str, dict],
-    groups_by_app_id: dict[int, list[str]],
+    groups_by_app_id: dict[str, list[str]],
 ) -> list[str]:
     cheapest_listing_hashes = []
 
@@ -249,8 +249,8 @@ def find_cheapest_listing_hashes(
 
 
 def find_representative_listing_hashes(
-    groups_by_app_id: dict[int, list[str]],
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
+    groups_by_app_id: dict[str, list[str]],
+    dictionary_of_representative_listing_hashes: dict[str, list[str]] | None = None,
 ) -> list[str]:
     representative_listing_hashes = []
 
@@ -382,9 +382,8 @@ def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
         verbose=verbose,
     )
 
-    app_ids_with_previously_downloaded_goo_details = [
-        int(app_id) for app_id in previously_downloaded_all_goo_details
-    ]
+    app_ids_with_previously_downloaded_goo_details = list(previously_downloaded_all_goo_details.keys())
+
 
     return [
         listing_hash
@@ -412,7 +411,7 @@ def propagate_filter_to_representative_listing_hashes(
 
 
 def try_again_to_download_item_type(
-    app_ids_with_unreliable_goo_details: list[int],
+    app_ids_with_unreliable_goo_details: list[str],
     filtered_representative_listing_hashes: list[str],
     listing_details_output_file_name: str,
 ) -> None:
@@ -430,9 +429,9 @@ def try_again_to_download_item_type(
 
 
 def try_again_to_download_goo_value(
-    app_ids_with_unknown_goo_value: list[int],
+    app_ids_with_unknown_goo_value: list[str],
     filtered_representative_listing_hashes: list[str],
-    groups_by_app_id: dict[int, list[str]],
+    groups_by_app_id: dict[str, list[str]],
 ) -> None:
     filtered_representative_app_ids = [
         convert_listing_hash_to_app_id(listing_hash)
@@ -674,12 +673,12 @@ def compute_unrewarding_threshold_in_gems(
 
 def discard_necessarily_unrewarding_app_ids(
     all_goo_details: dict[str, int | None],
-    app_ids_with_unreliable_goo_details: list[int] | None = None,
-    app_ids_with_unknown_goo_value: list[int] | None = None,
+    app_ids_with_unreliable_goo_details: list[str] | None = None,
+    app_ids_with_unknown_goo_value: list[str] | None = None,
     sack_of_gems_price_in_euros: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
-) -> list[int]:
+) -> list[str]:
     if app_ids_with_unreliable_goo_details is None:
         app_ids_with_unreliable_goo_details = []
 
@@ -701,18 +700,16 @@ def discard_necessarily_unrewarding_app_ids(
     for app_id in all_goo_details:
         goo_value_in_gems = all_goo_details[app_id]
 
-        app_id_as_int = int(app_id)
-
-        if app_id_as_int in app_ids_to_omit:
+        if app_id in app_ids_to_omit:
             continue
 
         if goo_value_in_gems is None:
             continue
 
         if goo_value_in_gems >= unrewarding_threshold_in_gems:
-            potentially_rewarding_app_ids.append(app_id_as_int)
+            potentially_rewarding_app_ids.append(app_id)
 
-    potentially_rewarding_app_ids = sorted(potentially_rewarding_app_ids)
+    potentially_rewarding_app_ids = sorted(potentially_rewarding_app_ids, key=int)
 
     if verbose:
         print(
@@ -724,7 +721,7 @@ def discard_necessarily_unrewarding_app_ids(
 
 def safe_read_from_dict(
     input_dict: dict[str, int | None],
-    input_key: int,
+    input_key: int | str,
 ) -> int | None:
     input_key_as_str = str(input_key)
 
@@ -738,10 +735,10 @@ def safe_read_from_dict(
 
 def find_listing_hashes_with_unknown_goo_value(
     listing_candidates: list[str],
-    app_ids_with_unreliable_goo_details: list[int],
+    app_ids_with_unreliable_goo_details: list[str],
     all_goo_details: dict[str, int | None],
     verbose: bool = True,
-) -> list[int]:
+) -> list[str]:
     app_ids_with_unknown_goo_value = []
 
     for listing_hash in listing_candidates:
@@ -772,8 +769,8 @@ def find_listing_hashes_with_unknown_goo_value(
 def determine_whether_an_arbitrage_might_exist_for_foil_cards(
     eligible_listing_hashes: list[str],
     all_goo_details: dict[str, int | None],
-    app_ids_with_unreliable_goo_details: list[int] | None = None,
-    app_ids_with_unknown_goo_value: list[int] | None = None,
+    app_ids_with_unreliable_goo_details: list[str] | None = None,
+    app_ids_with_unknown_goo_value: list[str] | None = None,
     all_listings: dict[str, dict] | None = None,
     listing_output_file_name: str | None = None,
     sack_of_gems_price_in_euros: float | None = None,
@@ -905,12 +902,12 @@ def print_arbitrages_for_foil_cards(
 
 
 def find_app_ids_with_unknown_item_type_for_their_representatives(
-    groups_by_app_id: dict[int, list[str]],
+    groups_by_app_id: dict[str, list[str]],
     listing_candidates: list[str],
     all_listing_details: dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
     verbose: bool = True,
-) -> list[int]:
+) -> list[str]:
     dictionary_of_representative_listing_hashes = (
         build_dictionary_of_representative_listing_hashes(
             all_listing_details,
@@ -944,12 +941,12 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(
 
 
 def download_missing_goo_details(
-    groups_by_app_id: dict[int, list[str]],
+    groups_by_app_id: dict[str, list[str]],
     listing_candidates: list[str],
     all_listing_details: dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
     goo_details_file_name_for_for_foil_cards: str | None = None,
-    enforced_app_ids_to_process: list[int] | None = None,
+    enforced_app_ids_to_process: list[str] | None = None,
     num_queries_between_save: int = 100,
     verbose: bool = True,
 ) -> dict[str, int | None]:
@@ -1027,8 +1024,8 @@ def download_missing_goo_details(
 
 
 def find_cheapest_listing_hash_for_app_id(
-    app_id: int,
-    groups_by_app_id: dict[int, list[str]],
+    app_id: str,
+    groups_by_app_id: dict[str, list[str]],
     cheapest_listing_hashes: list[str],
 ) -> str:
     listing_hashes_for_app_id = groups_by_app_id[app_id]
@@ -1040,10 +1037,10 @@ def find_cheapest_listing_hash_for_app_id(
 
 
 def find_representative_listing_hash_for_app_id(
-    app_id: int,
-    groups_by_app_id: dict[int, list[str]],
+    app_id: str,
+    groups_by_app_id: dict[str, list[str]],
     listing_candidates: list[str] | None = None,
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
+    dictionary_of_representative_listing_hashes: dict[str, list[str]] | None = None,
 ) -> str:
     if listing_candidates is None:
         listing_candidates = find_representative_listing_hashes(
@@ -1086,12 +1083,12 @@ def find_representative_listing_hash_for_app_id(
 
 
 def find_item_type_for_app_id(
-    app_id: int,
-    groups_by_app_id: dict[int, list[str]],
+    app_id: str,
+    groups_by_app_id: dict[str, list[str]],
     listing_candidates: list[str],
     all_listing_details: dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
+    dictionary_of_representative_listing_hashes: dict[str, list[str]] | None = None,
     verbose: bool = False,
 ) -> int | None:
     if listing_details_output_file_name is None:
@@ -1126,12 +1123,12 @@ def find_item_type_for_app_id(
 
 
 def download_goo_value_for_app_id(
-    app_id: int,
-    groups_by_app_id: dict[int, list[str]],
+    app_id: str,
+    groups_by_app_id: dict[str, list[str]],
     listing_candidates: list[str],
     all_listing_details: dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
-    dictionary_of_representative_listing_hashes: dict[int, list[str]] | None = None,
+    dictionary_of_representative_listing_hashes: dict[str, list[str]] | None = None,
     verbose: bool = True,
 ) -> int | None:
     item_type = find_item_type_for_app_id(
@@ -1153,7 +1150,7 @@ def download_goo_value_for_app_id(
 def build_dictionary_of_representative_listing_hashes(
     all_listing_details: dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
-) -> dict[int, list[str]]:
+) -> dict[str, list[str]]:
     if listing_details_output_file_name is None:
         listing_details_output_file_name = (
             get_listing_details_output_file_name_for_foil_cards()
@@ -1164,7 +1161,7 @@ def build_dictionary_of_representative_listing_hashes(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
-    dictionary_of_representative_listing_hashes:dict[int, list[str]] = {}
+    dictionary_of_representative_listing_hashes:dict[str, list[str]] = {}
 
     for listing_hash in all_listing_details:
         app_id = convert_listing_hash_to_app_id(listing_hash)

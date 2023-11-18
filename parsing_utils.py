@@ -14,7 +14,7 @@ from utils import get_badge_creation_file_name
 def parse_javascript_one_liner(
     badges_as_str: str,
     verbose: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     badge_creation_details = {}
 
     print("Parsing the one-line javascript code displayed with the web browser.")
@@ -44,8 +44,8 @@ def parse_javascript_one_liner(
 def parse_augmented_steam_drop_down_menu(
     lines: list[str],
     verbose: bool = False,
-) -> dict[int, dict]:
-    badge_creation_details:dict[int, dict] = {}
+) -> dict[str, dict]:
+    badge_creation_details:dict[str, dict] = {}
 
     print("Parsing the drop-down menu displayed with Augmented Steam.")
 
@@ -54,7 +54,7 @@ def parse_augmented_steam_drop_down_menu(
         # e.g. ['<option', 'value="614910"', 'class="available">#monstercakes', '-', '1200', 'Gems</option>']
 
         # Hard-coded parsing
-        app_id = int(s[1].split("=")[1].strip('"'))
+        app_id = s[1].split("=")[1].strip('"')
         app_name = s[2].split('available">')[1] + " "
         app_name += " ".join(s[3:-3])
         app_name = app_name.strip()
@@ -76,7 +76,7 @@ def parse_badge_creation_details(
     badge_creation_file_name: str | None = None,
     from_javascript: bool = False,
     verbose: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     if badge_creation_file_name is None:
         badge_creation_file_name = get_badge_creation_file_name(
             from_javascript=from_javascript,

@@ -5,19 +5,19 @@ from inventory_utils import create_booster_pack, update_and_save_next_creation_t
 from market_arbitrage import get_filtered_badge_data
 
 
-def get_manually_selected_app_ids() -> list[int]:
+def get_manually_selected_app_ids() -> list[str]:
     return [
-        1286830,  # STAR WARS™: The Old Republic™ (750 gems)
-        33680,  # Eversion (1000 gems)
-        520680,  # Lost Cities (1200 gems)
+        "1286830",  # STAR WARS™: The Old Republic™ (750 gems)
+        "33680",  # Eversion (1000 gems)
+        "520680",  # Lost Cities (1200 gems)
     ]
 
 
 def filter_app_ids_based_on_badge_data(
-    manually_selected_app_ids: list[int],
+    manually_selected_app_ids: list[str],
     check_ask_price: bool = False,
-    filtered_badge_data: dict | None = None,
-) -> tuple[list[int], dict]:
+    filtered_badge_data: dict[str, dict] | None = None,
+) -> tuple[list[str], dict[str, dict]]:
     if filtered_badge_data is None:
         filtered_badge_data = get_filtered_badge_data(
             retrieve_listings_from_scratch=False,
@@ -30,7 +30,7 @@ def filter_app_ids_based_on_badge_data(
 
     # Only keep appIDs found in badge data, so that we have access to fields like the name, the hash, and the gem price.
     app_ids = [
-        app_id for app_id in manually_selected_app_ids if app_id in filtered_badge_data
+        app_id for app_id in manually_selected_app_ids if str(app_id) in filtered_badge_data
     ]
 
     app_ids = sorted(
@@ -42,15 +42,15 @@ def filter_app_ids_based_on_badge_data(
 
 
 def create_packs_for_app_ids(
-    manually_selected_app_ids: list[int],
-    filtered_badge_data: dict | None = None,
+    manually_selected_app_ids: list[str],
+    filtered_badge_data: dict[str, dict] | None = None,
     check_ask_price: bool = False,
     is_a_simulation: bool = True,
     # Caveat: if False, then packs will be crafted, which costs money!
     is_marketable: bool = True,
     # Caveat: if False, packs will be crafted with un-marketable gems!
     verbose: bool = True,
-) -> tuple[dict[str, dict | None], dict[int, str]]:
+) -> tuple[dict[str, dict | None], dict[str, str]]:
     app_ids, filtered_badge_data = filter_app_ids_based_on_badge_data(
         manually_selected_app_ids,
         check_ask_price=check_ask_price,
@@ -68,14 +68,14 @@ def create_packs_for_app_ids(
                 is_marketable=is_marketable,
             )
 
-        listing_hash = filtered_badge_data[app_id]["listing_hash"]
+        listing_hash = filtered_badge_data[str(app_id)]["listing_hash"]
         creation_results[listing_hash] = result
 
         if verbose:
             print(
                 "{}\t{:.3f}€".format(
-                    filtered_badge_data[app_id]["name"],
-                    filtered_badge_data[app_id]["gem_price"],
+                    filtered_badge_data[str(app_id)]["name"],
+                    filtered_badge_data[str(app_id)]["gem_price"],
                 ),
             )
 

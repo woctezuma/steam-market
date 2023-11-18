@@ -113,7 +113,7 @@ def sort_according_to_buzz(
 def print_packs_with_high_buzz(
     hashes_for_best_bid: list[str],
     market_order_dict: dict[str, dict],
-    item_rarity_patterns_per_app_id: dict[int, dict] | None = None,
+    item_rarity_patterns_per_app_id: dict[str, dict] | None = None,
     category_name: str | None = None,
     num_packs_to_display: int = 10,
 ) -> None:

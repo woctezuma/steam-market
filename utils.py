@@ -135,7 +135,7 @@ def main() -> bool:
 
 
 def convert_listing_hash_to_app_id(listing_hash: str) -> str:
-    return str(int(listing_hash.split("-")[0]))
+    return listing_hash.split("-")[0]
 
 
 def get_listing_hash_suffixe() -> str:
@@ -151,7 +151,7 @@ def convert_listing_hash_to_app_name(listing_hash: str) -> str:
 
 
 def convert_to_listing_hash(
-    app_id: int,
+    app_id: str,
     app_name: str,
     listing_hash_suffixe: str | None = None,
 ) -> str:
@@ -161,13 +161,13 @@ def convert_to_listing_hash(
     return f"{app_id}-{app_name}{listing_hash_suffixe}"
 
 
-def get_steamcardexchange_url(app_id: int) -> str:
+def get_steamcardexchange_url(app_id: str) -> str:
     # This page shows the number of cards, and provides links to the store page and the market pages.
     # NB: this allows to compute the crafting cost of a booster pack costs, as an amount of gems equal to 6000/num_cards
     return f"https://www.steamcardexchange.net/index.php?gamepage-appid-{app_id}"
 
 
-def get_steam_store_url(app_id: int) -> str:
+def get_steam_store_url(app_id: str) -> str:
     return f"https://store.steampowered.com/app/{app_id}/"
 
 

@@ -151,7 +151,7 @@ def get_listings(
 
 def filter_out_candidates_whose_ask_price_is_below_threshold(
     all_listings: dict[str, dict],
-    item_rarity_patterns_per_app_id: dict[int, dict],
+    item_rarity_patterns_per_app_id: dict[str, dict],
     price_threshold_in_cents: float | None = None,
     category_name: str | None = None,
     drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
@@ -295,7 +295,7 @@ def get_market_orders(
     return market_order_dict
 
 
-def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[int, int]:
+def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[str, int]:
     # For each appID, count the number of known listing hashes.
     #
     # Caveat: this piece of information relies on the downloaded listings, it is NOT NECESSARILY accurate!
@@ -305,7 +305,7 @@ def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[int, 
     # such rarity. This information is useful to know whether a gamble is worth a try: the more items of Common rarity,
     # the harder it is to receive the item which you are specifically after, by crafting a badge.
 
-    listing_hashes_per_app_id : dict[int, int]= {}
+    listing_hashes_per_app_id : dict[str, int]= {}
 
     for listing_hash in all_listings:
         app_id = convert_listing_hash_to_app_id(listing_hash)
@@ -354,15 +354,15 @@ def get_listings_with_other_rarity_tags(
 
 
 def enumerate_item_rarity_patterns(
-    listing_hashes_per_app_id_for_common: dict[int, int],
-    listing_hashes_per_app_id_for_uncommon: dict[int, int],
-    listing_hashes_per_app_id_for_rare: dict[int, int],
-) -> dict[int, dict]:
+    listing_hashes_per_app_id_for_common: dict[str, int],
+    listing_hashes_per_app_id_for_uncommon: dict[str, int],
+    listing_hashes_per_app_id_for_rare: dict[str, int],
+) -> dict[str, dict]:
     all_app_ids = set(listing_hashes_per_app_id_for_common)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_uncommon)
     all_app_ids = all_app_ids.union(listing_hashes_per_app_id_for_rare)
 
-    item_rarity_patterns_per_app_id : dict[int, dict] = {}
+    item_rarity_patterns_per_app_id : dict[str, dict] = {}
 
     for app_id in all_app_ids:
         item_rarity_patterns_per_app_id[app_id] = {}

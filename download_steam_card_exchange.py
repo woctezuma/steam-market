@@ -52,11 +52,10 @@ def download_data_from_steam_card_exchange(
 
     resp_data = requests.get(url=url, params=req_data)
 
-    status_code = resp_data.status_code
-
-    if resp_data.ok:
+    if resp_data and resp_data.ok:
         response = resp_data.json()
     else:
+        status_code = resp_data.status_code
         print(
             f"Data could not be downloaded from SteamCardExchange. Status code {status_code} was returned.",
         )
@@ -115,7 +114,7 @@ def parse_data_from_steam_card_exchange(
     dico : dict[str, dict] = {}
 
     for app_info in response["data"]:
-        app_id = str(int(app_info[0][0]))
+        app_id = app_info[0][0]
         app_name = app_info[0][1]
         num_cards_per_set = int(app_info[1])
 

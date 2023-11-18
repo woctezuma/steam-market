@@ -19,7 +19,7 @@ from utils import (
 
 
 def get_steam_market_listing_url(
-    app_id: int | None = None,
+    app_id: str | None = None,
     listing_hash: str | None = None,
     render_as_json: bool = True,
     replace_spaces: bool = False,
@@ -27,7 +27,7 @@ def get_steam_market_listing_url(
 ) -> str:
     if app_id is None:
         # AppID for the Steam Store. It is the same for all the booster packs.
-        app_id = 753
+        app_id = "753"
 
     if listing_hash is None:
         listing_hash = "511540-MoonQuest Booster Pack"
@@ -266,7 +266,7 @@ def parse_item_name_id(html_doc: str) -> tuple[int | None, bool| None, int| None
 
 
 def get_listing_details(
-    listing_hash: str | None = None,
+    listing_hash: str ,
     cookie: dict[str, str] | None = None,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
@@ -459,7 +459,7 @@ def get_item_nameid(
 
 
 def get_item_nameid_batch(
-    listing_hashes: dict[str, dict] | list[str],
+    listing_hashes: list[str],
     listing_details_output_file_name: str | None = None,
     listing_hashes_to_forcefully_process: list[str] | None = None,
 ) -> dict[str, dict]:
@@ -486,7 +486,7 @@ def get_item_nameid_batch(
                 listing_hashes_to_process.append(listing_hash)
 
         listing_hashes_to_process += listing_hashes_to_forcefully_process
-        listing_hashes_to_process = set(listing_hashes_to_process)
+        listing_hashes_to_process = list(set(listing_hashes_to_process))
 
         if listing_hashes_to_process:
             listing_details = update_all_listing_details(

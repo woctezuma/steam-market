@@ -108,9 +108,9 @@ def download_market_order_data(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        try:
+        if resp_data and resp_data.ok:
             status_code = resp_data.status_code
-        except AttributeError:
+        else:
             status_code = None
 
     else:
@@ -121,7 +121,7 @@ def download_market_order_data(
         resp_data = None
         status_code = -1
 
-    if status_code == HTTPStatus.OK:
+    if resp_data and status_code == HTTPStatus.OK:
         result = resp_data.json()
 
         if has_secured_cookie:
@@ -260,7 +260,7 @@ def download_market_order_data_batch(
 
 
 def load_market_order_data(
-    badge_data: dict[ str, dict] | None = None,
+    badge_data: dict[ str, dict],
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -291,9 +291,9 @@ def load_market_order_data(
 
 
 def trim_market_order_data(
-    badge_data: dict[int | str, dict],
+    badge_data: dict[str, dict],
     market_order_dict: dict[str, dict],
-) -> tuple[dict[str, dict], list[int | str]]:
+) -> tuple[dict[str, dict], list[str | str]]:
     trimmed_market_order_dict:dict[str, dict] = {}
     app_ids_with_missing_data = []
 
