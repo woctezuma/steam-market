@@ -46,11 +46,7 @@ def get_steam_market_listing_url(
         fixed_listing_hash = fixed_listing_hash.replace(")", "%29")
 
     market_listing_url = (
-        "https://steamcommunity.com/market/listings/"
-        + str(app_id)
-        + "/"
-        + fixed_listing_hash
-        + "/"
+        f"https://steamcommunity.com/market/listings/{app_id}/{fixed_listing_hash}/"
     )
 
     if render_as_json:

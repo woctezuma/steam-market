@@ -86,7 +86,7 @@ def get_creation_time_format(prepend_year: bool = False) -> str:
     time_format = "%d %b @ %I:%M%p"
 
     if prepend_year:
-        time_format = "%Y " + time_format
+        time_format = f"%Y {time_format}"
 
     return time_format
 

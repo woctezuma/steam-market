@@ -56,7 +56,7 @@ def get_listing_output_file_name_for_profile_backgrounds(
         rarity=rarity,
     )
 
-    return get_data_folder() + "listings_for_profile_backgrounds" + suffix + ".json"
+    return get_data_folder() + f"listings_for_profile_backgrounds{suffix}.json"
 
 
 def get_listing_output_file_name_for_emoticons(
@@ -68,7 +68,7 @@ def get_listing_output_file_name_for_emoticons(
         rarity=rarity,
     )
 
-    return get_data_folder() + "listings_for_emoticons" + suffix + ".json"
+    return get_data_folder() + f"listings_for_emoticons{suffix}.json"
 
 
 def get_listing_output_file_name_for_foil_cards() -> str:
@@ -158,17 +158,17 @@ def convert_to_listing_hash(
     if listing_hash_suffixe is None:
         listing_hash_suffixe = get_listing_hash_suffixe()
 
-    return str(app_id) + "-" + app_name + listing_hash_suffixe
+    return f"{app_id}-{app_name}{listing_hash_suffixe}"
 
 
 def get_steamcardexchange_url(app_id: int) -> str:
     # This page shows the number of cards, and provides links to the store page and the market pages.
     # NB: this allows to compute the crafting cost of a booster pack costs, as an amount of gems equal to 6000/num_cards
-    return "https://www.steamcardexchange.net/index.php?gamepage-appid-" + str(app_id)
+    return f"https://www.steamcardexchange.net/index.php?gamepage-appid-{app_id}"
 
 
 def get_steam_store_url(app_id: int) -> str:
-    return "https://store.steampowered.com/app/" + str(app_id) + "/"
+    return f"https://store.steampowered.com/app/{app_id}/"
 
 
 def get_category_name_for_booster_packs() -> str:

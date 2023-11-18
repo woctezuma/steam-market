@@ -36,15 +36,15 @@ def get_steam_inventory_url(
     # https://github.com/Alex7Kom/node-steam-tradeoffers/issues/114
     # https://dev.doctormckay.com/topic/332-identifying-steam-items/
     steam_inventory_url = (
-        "https://steamcommunity.com/profiles/" + str(profile_id) + "/inventory/json/"
+        f"https://steamcommunity.com/profiles/{profile_id}/inventory/json/"
     )
-    steam_inventory_url += str(app_id) + "/" + str(context_id) + "/"
+    steam_inventory_url += f"{app_id}/{context_id}/"
 
     return steam_inventory_url
 
 
 def get_steam_inventory_file_name(profile_id: str) -> str:
-    return get_data_folder() + "inventory_" + str(profile_id) + ".json"
+    return get_data_folder() + f"inventory_{profile_id}.json"
 
 
 def load_steam_inventory_from_disk(profile_id: str | None = None) -> [dict | None]:

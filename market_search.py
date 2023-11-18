@@ -82,7 +82,7 @@ def get_search_parameters(
     params["norender"] = "1"
     params["category_753_Game[]"] = "any"
     params["category_753_droprate[]"] = tag_drop_rate_str
-    params["category_753_item_class[]"] = "tag_item_class_" + str(tag_item_class_no)
+    params["category_753_item_class[]"] = f"tag_item_class_{tag_item_class_no}"
     params["appid"] = "753"
     params["sort_column"] = column_to_sort_by
     params["sort_dir"] = sort_direction
