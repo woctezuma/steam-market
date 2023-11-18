@@ -17,7 +17,7 @@ Arbitrages could consist in:
 
 ## Requirements
 
--   Install the latest version of [Python 3.X](https://www.python.org/downloads/) (at least version 3.10).
+-   Install the latest version of [Python 3.X](https://www.python.org/downloads/) (at least version 3.12).
 -   Install the required packages:
 
 ```bash
