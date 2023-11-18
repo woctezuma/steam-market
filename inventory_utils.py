@@ -134,7 +134,7 @@ def get_booster_pack_creation_parameters(
 
     tradability_preference = 1 if is_marketable else 3
 
-    booster_pack_creation_parameters["sessionid"] = str(session_id)
+    booster_pack_creation_parameters["sessionid"] = session_id
     booster_pack_creation_parameters["appid"] = str(app_id)
     booster_pack_creation_parameters["series"] = "1"
     booster_pack_creation_parameters["tradability_preference"] = str(
@@ -210,12 +210,11 @@ def get_market_sell_parameters(
 ) -> dict[str, str]:
     market_sell_parameters = {}
 
-    market_sell_parameters["sessionid"] = str(session_id)
+    market_sell_parameters["sessionid"] = session_id
     market_sell_parameters["appid"] = "753"
     market_sell_parameters["contextid"] = "6"
-    market_sell_parameters["assetid"] = str(
-        asset_id,
-    )  # To automatically determine asset ID, use retrieve_asset_id().
+    market_sell_parameters["assetid"] = asset_id
+    # To automatically determine asset ID, use retrieve_asset_id().
     market_sell_parameters["amount"] = "1"
     market_sell_parameters["price"] = str(price_in_cents)
 

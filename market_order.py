@@ -27,7 +27,7 @@ def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
     params["country"] = "FR"
     params["language"] = "english"
     params["currency"] = "3"
-    params["item_nameid"] = str(item_nameid)
+    params["item_nameid"] = item_nameid
     params["two_factor"] = "0"
 
     return params
