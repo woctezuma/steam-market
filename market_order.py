@@ -281,7 +281,7 @@ def load_market_order_data(
             market_order_dict,
         )
 
-        if retrieve_market_orders_online and len(app_ids_with_missing_data) > 0:
+        if retrieve_market_orders_online and app_ids_with_missing_data:
             raise AssertionError
 
     else:

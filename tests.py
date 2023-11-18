@@ -64,7 +64,7 @@ class TestMarketUtilsMethods(unittest.TestCase):
     def test_load_aggregated_badge_data(self) -> None:
         aggregated_badge_data = market_utils.load_aggregated_badge_data()
 
-        assert len(aggregated_badge_data) > 0
+        assert aggregated_badge_data
 
 
 class TestMarketArbitrageMethods(unittest.TestCase):
