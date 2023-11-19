@@ -374,7 +374,7 @@ def update_all_listing_details(
     listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
-    # to restart the process without risking to lose anything, in case the process fails again.
+    # to restart the process without risking losing anything, in case the process fails again.
 
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()

@@ -232,7 +232,7 @@ def populate_random_samples_of_badge_data(
 
 def main(populate_all_item_name_ids: bool = False) -> bool:
     if populate_all_item_name_ids:
-        # Pre-retrieval of ALL of the MISSING item name ids.
+        # Pre-retrieval of ALL the MISSING item name ids.
         # Caveat: this may require a long time, due to API rate limits.
 
         all_listings = load_all_listings()

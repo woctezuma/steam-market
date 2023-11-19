@@ -242,7 +242,7 @@ def update_all_listings(
     rarity: str | None = None,
 ) -> bool:
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
-    # restart the process without risking to lose anything, in case the process fails again.
+    # restart the process without risking losing anything, in case the process fails again.
 
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()

@@ -1,7 +1,7 @@
 # Objective: find market arbitrages with foil cards, e.g. buy a foil card and turn it into more gems than its cost.
 #
 # Caveat: the goal is not to make a profit by selling the gems afterwards! The goal is to acquire gems, this is why
-# ALL of the computations are performed with fee included: opportunities are compared from the perspective of the buyer.
+# ALL the computations are performed with fee included: opportunities are compared from the perspective of the buyer.
 #
 # In summary, we do not care about buy orders here! We only care about sell orders!
 from src.market_foil_utils import (

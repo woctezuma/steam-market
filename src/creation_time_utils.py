@@ -71,7 +71,7 @@ def get_current_time() -> datetime.datetime:
 def get_creation_time_format(prepend_year: bool = False) -> str:
     # Reference: https://docs.python.org/3/library/time.html#time.strftime
 
-    # The format used in: '14 Sep @ 10:48pm'
+    # The format used in: "14 Sep @ 10:48pm"
     time_format = "%d %b @ %I:%M%p"
 
     if prepend_year:

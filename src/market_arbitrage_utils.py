@@ -97,7 +97,7 @@ def determine_whether_an_arbitrage_might_exist(
         gem_price_with_fee = badge_data["gem_price"]
     except KeyError:
         # This should only happen if the badge data is dummy (for profile backgrounds and emoticons). Typically, the
-        # user prefers to rely on a user-chosen price threshold, and did not take the time to fill-in a dummy value for
+        # user prefers to rely on a user-chosen price threshold, and did not take the time to fill in a dummy value for
         # the 'gem_price' field in badge_data.
         gem_price_with_fee = None
 
