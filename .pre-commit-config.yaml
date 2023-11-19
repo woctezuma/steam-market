@@ -12,7 +12,11 @@ repos:
     rev: v0.1.6
     hooks:
     - id: ruff
-      args: [--fix, --unsafe-fixes, --exit-non-zero-on-fix, --target-version, "py312", --select, "ALL", --ignore, "ANN101,C90,CPY001,D,E501,ERA001,FBT,INP001,PLR091,PLR2004,PLR6301,Q,RUF001,S101,S113,T20"]
+      args: [
+      --fix, --unsafe-fixes, --exit-non-zero-on-fix,
+      --target-version, "py312", --select, "ALL",
+      --ignore, "ANN101,C90,CPY001,D,E501,ERA001,FBT,INP001,PLR091,PLR2004,PLR6301,Q,RUF001,S101,S113,T20"
+      ]
     - id: ruff-format
 
 -   repo: https://github.com/dosisod/refurb
@@ -20,4 +24,10 @@ repos:
     hooks:
     - id: refurb
       args: [--python-version, "3.12"]
+      stages: [manual]
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.0
+    hooks:
+    - id: mypy
       stages: [manual]
