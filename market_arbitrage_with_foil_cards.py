@@ -349,22 +349,6 @@ def save_all_goo_details(
     save_json(all_goo_details, goo_details_file_name)
 
 
-def update_all_goo_details(
-    new_goo_details: dict[str, int | None],
-    goo_details_file_name: str | None = None,
-) -> None:
-    if goo_details_file_name is None:
-        goo_details_file_name = get_goo_details_file_nam_for_for_foil_cards()
-
-    all_goo_details = load_all_goo_details(goo_details_file_name)
-    all_goo_details.update(new_goo_details)
-
-    save_all_goo_details(
-        all_goo_details,
-        goo_details_file_name,
-    )
-
-
 def filter_out_listing_hashes_if_goo_details_are_already_known_for_app_id(
     filtered_cheapest_listing_hashes: list[str],
     goo_details_file_name_for_for_foil_cards: str | None = None,
@@ -1022,19 +1006,6 @@ def download_missing_goo_details(
         )
 
     return all_goo_details
-
-
-def find_cheapest_listing_hash_for_app_id(
-    app_id: str,
-    groups_by_app_id: dict[str, list[str]],
-    cheapest_listing_hashes: list[str],
-) -> str:
-    listing_hashes_for_app_id = groups_by_app_id[app_id]
-    cheapest_listing_hash_for_app_id_as_a_set = set(
-        listing_hashes_for_app_id,
-    ).intersection(cheapest_listing_hashes)
-
-    return next(iter(cheapest_listing_hash_for_app_id_as_a_set))
 
 
 def find_representative_listing_hash_for_app_id(
