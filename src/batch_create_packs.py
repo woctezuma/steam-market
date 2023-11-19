@@ -3,7 +3,7 @@
 from creation_time_utils import get_formatted_time, get_time_struct_from_str
 from inventory_utils import create_booster_pack, update_and_save_next_creation_times
 
-from market_arbitrage import get_filtered_badge_data
+from src.market_arbitrage_utils import get_filtered_badge_data
 
 
 def get_manually_selected_app_ids() -> list[str]:
