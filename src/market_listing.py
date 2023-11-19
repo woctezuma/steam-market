@@ -467,7 +467,7 @@ def get_item_nameid_batch(
 
         if listing_hashes_to_process:
             listing_details = update_all_listing_details(
-                listing_hashes=list(listing_hashes_to_process),
+                listing_hashes=listing_hashes_to_process.copy(),
                 listing_details_output_file_name=listing_details_output_file_name,
             )
 
