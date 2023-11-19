@@ -6,13 +6,13 @@ from http import HTTPStatus
 from pathlib import Path
 
 import requests
-
 from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+
 from src.json_utils import load_json, save_json
-from utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_name
+from src.utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_name
 
 
 def get_steam_market_search_url() -> str:

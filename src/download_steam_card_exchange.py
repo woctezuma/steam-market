@@ -5,7 +5,7 @@ import time
 import requests
 
 from src.json_utils import load_json, save_json
-from utils import get_steam_card_exchange_file_name
+from src.utils import get_steam_card_exchange_file_name
 
 
 def get_current_unix_time_in_ms() -> int:

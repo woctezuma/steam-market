@@ -6,7 +6,7 @@
 # NB²: we assume that the drop-rates are identical for every game. However, I have suspicions that the drop-rates may
 # vary based on the number of items of each rarity.
 
-from utils import (
+from src.utils import (
     get_category_name_for_emoticons,
     get_category_name_for_profile_backgrounds,
 )

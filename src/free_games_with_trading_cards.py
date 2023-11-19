@@ -6,13 +6,13 @@ from pathlib import Path
 
 import requests
 import steamspypi
-
-from market_search import load_all_listings
 from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from utils import convert_listing_hash_to_app_id
+
+from src.market_search import load_all_listings
+from src.utils import convert_listing_hash_to_app_id
 
 
 def get_user_data_url() -> str:
@@ -206,7 +206,7 @@ def write_to_file(
 
 def main() -> None:
     # Based on SteamDB: https://steamdb.info/search/?a=app_keynames&keyname=243&operator=1
-    free_apps = load_file("data/free_apps.txt")
+    free_apps = load_file("../data/free_apps.txt")
 
     # Based on SteamSpy:
     free_apps_with_trading_cards = load_free_apps_with_trading_cards(

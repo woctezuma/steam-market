@@ -7,8 +7,8 @@
 import json
 from pathlib import Path
 
-from market_listing import fix_app_name_for_url_query
-from utils import get_badge_creation_file_name
+from src.market_listing import fix_app_name_for_url_query
+from src.utils import get_badge_creation_file_name
 
 
 def parse_javascript_one_liner(

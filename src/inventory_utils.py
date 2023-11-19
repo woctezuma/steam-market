@@ -1,7 +1,6 @@
 from http import HTTPStatus
 
 import requests
-
 from creation_time_utils import (
     get_crafting_cooldown_duration_in_days,
     get_formatted_current_time,
@@ -11,8 +10,9 @@ from personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+
 from src.json_utils import load_json, save_json
-from utils import (
+from src.utils import (
     convert_listing_hash_to_app_id,
     convert_listing_hash_to_app_name,
     get_data_folder,
@@ -402,7 +402,7 @@ def sell_booster_packs_for_batch(
 
 
 def create_then_sell_booster_packs_for_batch(
-    price_dict_for_listing_hashes: dict,
+    price_dict_for_listing_hashes: dict[str, float],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,

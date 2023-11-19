@@ -1,6 +1,6 @@
 import requests
 
-from personal_info import update_and_save_cookie_to_disk_if_values_changed
+from src.personal_info import update_and_save_cookie_to_disk_if_values_changed
 
 STEAM_COMMUNITY_URL = "https://steamcommunity.com/"
 MINIMAL_COOKIE_FIELDS = ["steamLoginSecure"]

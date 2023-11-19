@@ -6,13 +6,13 @@ from http import HTTPStatus
 import requests
 from bs4 import BeautifulSoup
 
-from market_search import load_all_listings
-from personal_info import (
+from src.json_utils import load_json, save_json
+from src.market_search import load_all_listings
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.json_utils import load_json, save_json
-from utils import (
+from src.utils import (
     get_cushioned_cooldown_in_seconds,
     get_listing_details_output_file_name,
 )
@@ -56,11 +56,7 @@ def get_steam_market_listing_url(
 
 
 def get_listing_parameters() -> dict[str, str]:
-    params = {}
-
-    params["currency"] = "3"
-
-    return params
+    return {"currency": "3"}
 
 
 def get_steam_api_rate_limits_for_market_listing(
@@ -418,25 +414,6 @@ def fix_app_name_for_url_query(app_name: str) -> str:
     return app_name.replace(":", "%3A")
 
 
-def main() -> bool:
-    listing_hashes = [
-        "268830-Doctor Who%3A The Adventure Games Booster Pack",
-        "290970-1849 Booster Pack",
-        "753-Sack of Gems",
-        "511540-MoonQuest Booster Pack",
-        # The item name ID will not be retrieved for the following two listing hashes due to special characters:
-        "614910-#monstercakes Booster Pack",
-        "505730-Holy Potatoes! We’re in Space?! Booster Pack",
-        # This fixes the aforementioned issue:
-        "614910-%23monstercakes Booster Pack",
-        "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
-    ]
-
-    update_all_listing_details(listing_hashes)
-
-    return True
-
-
 def get_item_nameid(
     listing_hash: str,
     listing_details_output_file_name: str | None = None,
@@ -459,7 +436,7 @@ def get_item_nameid(
 
 
 def get_item_nameid_batch(
-    listing_hashes: list[str],
+    listing_hashes: list[str] | dict[str, dict],
     listing_details_output_file_name: str | None = None,
     listing_hashes_to_forcefully_process: list[str] | None = None,
 ) -> dict[str, dict]:
@@ -533,6 +510,25 @@ def update_marketability_status(
         listing_hashes=[],
         listing_hashes_to_forcefully_process=few_selected_listing_hashes,
     )
+
+
+def main() -> bool:
+    listing_hashes = [
+        "268830-Doctor Who%3A The Adventure Games Booster Pack",
+        "290970-1849 Booster Pack",
+        "753-Sack of Gems",
+        "511540-MoonQuest Booster Pack",
+        # The item name ID will not be retrieved for the following two listing hashes due to special characters:
+        "614910-#monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space?! Booster Pack",
+        # This fixes the aforementioned issue:
+        "614910-%23monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
+    ]
+
+    update_all_listing_details(listing_hashes)
+
+    return True
 
 
 if __name__ == "__main__":
