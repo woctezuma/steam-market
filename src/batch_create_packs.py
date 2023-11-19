@@ -31,14 +31,12 @@ def filter_app_ids_based_on_badge_data(
 
     # Only keep appIDs found in badge data, so that we have access to fields like the name, the hash, and the gem price.
     app_ids = [
-        app_id
-        for app_id in manually_selected_app_ids
-        if str(app_id) in filtered_badge_data
+        app_id for app_id in manually_selected_app_ids if app_id in filtered_badge_data
     ]
 
     app_ids = sorted(
         app_ids,
-        key=lambda x: filtered_badge_data[str(x)]["name"],
+        key=lambda x: filtered_badge_data[x]["name"],
     )
 
     return app_ids, filtered_badge_data
@@ -71,14 +69,14 @@ def create_packs_for_app_ids(
                 is_marketable=is_marketable,
             )
 
-        listing_hash = filtered_badge_data[str(app_id)]["listing_hash"]
+        listing_hash = filtered_badge_data[app_id]["listing_hash"]
         creation_results[listing_hash] = result
 
         if verbose:
             print(
                 "{}\t{:.3f}€".format(
-                    filtered_badge_data[str(app_id)]["name"],
-                    filtered_badge_data[str(app_id)]["gem_price"],
+                    filtered_badge_data[app_id]["name"],
+                    filtered_badge_data[app_id]["gem_price"],
                 ),
             )
 

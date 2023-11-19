@@ -789,7 +789,7 @@ def download_missing_goo_details(
         )
         query_count += 1
 
-        all_goo_details[str(app_id)] = goo_value
+        all_goo_details[app_id] = goo_value
 
         if query_count % num_queries_between_save == 0:
             print(f"Saving after {query_count} queries.")

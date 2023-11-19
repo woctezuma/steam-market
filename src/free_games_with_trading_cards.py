@@ -141,7 +141,7 @@ def format_for_asf_command_line(
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
         app_prefix = "a/"
 
-    return [app_prefix + str(app_id) for app_id in sorted(app_ids, key=int)]
+    return [f"{app_prefix}{app_id}" for app_id in sorted(app_ids, key=int)]
 
 
 def chunks(lst: list, n: int) -> collections.abc.Iterator[list]:

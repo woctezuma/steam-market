@@ -34,8 +34,7 @@ def get_sell_prices_without_fee(
     sell_prices = {}
 
     for listing_hash in data:
-        app_id_as_int = convert_listing_hash_to_app_id(listing_hash)
-        app_id = str(app_id_as_int)
+        app_id = convert_listing_hash_to_app_id(listing_hash)
 
         if app_id in app_ids:
             current_data = data[listing_hash]
