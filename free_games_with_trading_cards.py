@@ -53,13 +53,13 @@ def download_free_apps(method: str = "price", verbose: bool = True) -> set[str]:
     if method == "price":
         data = steamspypi.load()
 
-        free_apps = [
+        free_apps = {
             game["appid"]
             for game in data.values()
             if game["initialprice"]
             is not None  # I don't know what to do in the rare case that price is None.
             and int(game["initialprice"]) == 0
-        ]
+        }
 
     else:
         data_request = {}
