@@ -2,12 +2,6 @@ files: \.(json|py)$
 default_stages: [commit, manual]
 repos:
 
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-    - id: pretty-format-json
-      args: [--autofix, --no-ensure-ascii, --indent, "4", --no-sort-keys]
-
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.1.6
     hooks:
@@ -19,16 +13,22 @@ repos:
       ]
     - id: ruff-format
 
--   repo: https://github.com/dosisod/refurb
-    rev: v1.24.0
-    hooks:
-    - id: refurb
-      args: [--python-version, "3.12"]
-      stages: [manual]
-
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.7.0
     hooks:
     - id: mypy
       additional_dependencies: [types-requests]
+      stages: [manual]
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    - id: pretty-format-json
+      args: [--autofix, --no-ensure-ascii, --indent, "4", --no-sort-keys]
+
+-   repo: https://github.com/dosisod/refurb
+    rev: v1.24.0
+    hooks:
+    - id: refurb
+      args: [--python-version, "3.12"]
       stages: [manual]
