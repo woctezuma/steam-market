@@ -76,6 +76,8 @@ def load_data_from_steam_card_exchange(
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
+    response = None
+
     try:
         print("Loading data from disk.")
         response = load_json(steam_card_exchange_file_name)
@@ -113,22 +115,25 @@ def parse_data_from_steam_card_exchange(
 
     dico: dict[str, dict] = {}
 
-    for app_info in response["data"]:
-        app_id = app_info[0][0]
-        app_name = app_info[0][1]
-        num_cards_per_set = int(app_info[1])
+    if response:
+        for app_info in response["data"]:
+            app_id = app_info[0][0]
+            app_name = app_info[0][1]
+            num_cards_per_set = int(app_info[1])
 
-        if num_cards_per_set == 0:
-            print(f"No card found for {app_name} (appID = {app_id})")
-            continue
+            if num_cards_per_set == 0:
+                print(f"No card found for {app_name} (appID = {app_id})")
+                continue
 
-        dico[app_id] = {}
-        dico[app_id]["app_id"] = app_id
-        dico[app_id]["name"] = app_name
-        dico[app_id]["num_cards_per_set"] = num_cards_per_set
-        dico[app_id]["gem_amount"] = compute_gem_amount_required_to_craft_booster_pack(
-            num_cards_per_set,
-        )
+            dico[app_id] = {}
+            dico[app_id]["app_id"] = app_id
+            dico[app_id]["name"] = app_name
+            dico[app_id]["num_cards_per_set"] = num_cards_per_set
+            dico[app_id][
+                "gem_amount"
+            ] = compute_gem_amount_required_to_craft_booster_pack(
+                num_cards_per_set,
+            )
 
     print(f"{len(dico)} games found in the database.")
 

@@ -51,6 +51,8 @@ def load_steam_inventory_from_disk(profile_id: str | None = None) -> dict | None
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
+    steam_inventory = None
+
     try:
         steam_inventory = load_json(get_steam_inventory_file_name(profile_id))
     except FileNotFoundError:
@@ -203,7 +205,7 @@ def get_steam_market_sell_url() -> str:
 
 def get_market_sell_parameters(
     asset_id: str,
-    price_in_cents: float,  # this is the money which you, as the seller, will receive
+    price_in_cents: int,  # this is the money which you, as the seller, will receive
     session_id: str,
 ) -> dict[str, str]:
     market_sell_parameters = {}
@@ -234,7 +236,7 @@ def get_request_headers() -> dict[str, str]:
 
 def sell_booster_pack(
     asset_id: str,
-    price_in_cents: float,  # this is the money which you, as the seller, will receive
+    price_in_cents: int,  # this is the money which you, as the seller, will receive
     verbose: bool = True,
 ) -> dict | None:
     cookie = get_cookie_dict()
@@ -373,7 +375,7 @@ def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict 
 
 
 def sell_booster_packs_for_batch(
-    price_dict_for_listing_hashes: dict[str, float],
+    price_dict_for_listing_hashes: dict[str, int],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -402,7 +404,7 @@ def sell_booster_packs_for_batch(
 
 
 def create_then_sell_booster_packs_for_batch(
-    price_dict_for_listing_hashes: dict[str, float],
+    price_dict_for_listing_hashes: dict[str, int],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,

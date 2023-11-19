@@ -313,7 +313,7 @@ def get_listing_details(
 
 
 def get_listing_details_batch(
-    listing_hashes: list[str],
+    listing_hashes: list[str] | dict[str, dict],
     all_listing_details: dict[str, dict] | None = None,
     save_to_disk: bool = True,
     listing_details_output_file_name: str | None = None,
@@ -370,7 +370,7 @@ def get_listing_details_batch(
 
 
 def update_all_listing_details(
-    listing_hashes: list[str] | None = None,
+    listing_hashes: list[str] | dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want

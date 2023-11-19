@@ -343,7 +343,7 @@ def convert_arbitrages_for_batch_create_then_sell(
     badge_arbitrages: dict[str, dict],
     profit_threshold: float = 0.01,  # profit in euros
     verbose: bool = True,
-) -> dict[str, float]:
+) -> dict[str, int]:
     # Code inspired from print_arbitrages()
 
     price_dict_for_listing_hashes = {}

@@ -187,7 +187,7 @@ def group_concatenate_to_str(
 def write_to_file(
     data: list[str],
     file_name: str,
-    asf_username: str | None = None,
+    asf_username: str,
     group_size: int = 25,
     verbose: bool = True,
 ) -> None:
