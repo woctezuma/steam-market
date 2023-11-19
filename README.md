@@ -42,7 +42,7 @@ To relax the rate limits enforced by Steam API, fill-in your cookie information 
 3. Use the filtering option (in the top right of the storage section) to find the cookie value for `steamLoginSecure`.<br/>
   ![filter for steamLoginSecure](https://github.com/woctezuma/steam-market/wiki/img/YhlPlUy.png)    
     
-4. Copy-paste this cookie value into a new file called `personal_info.json`, which will be read by [`personal_info.py`](personal_info.py).<br/>
+4. Copy-paste this cookie value into a new file called `personal_info.json`, which will be read by [`src/personal_info.py`](src/personal_info.py).<br/>
     ```json
     {
       "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE"
@@ -155,56 +155,56 @@ Alternatively, if you wish not to install any browser extension:
 -   To parse all the options to craft 'Booster Packs', for the games you own, run:
 
 ```bash
-python parsing_utils.py
+python src/parsing_utils.py
 ```
 
 -   To retrieve all the listings of 'Booster Packs' on the Steam Market, along with the sell price and volume, run:
 
 ```bash
-python market_search.py
+python src/market_search.py
 ```
 
 -   To retrieve the price which sellers ask for a ['Sack of Gems'](https://steamcommunity.com/market/listings/753/753-Sack%20of%20Gems), run:
 
 ```bash
-python sack_of_gems.py
+python src/sack_of_gems.py
 ```
 
 -   To retrieve i) the "item name id" of a listing, and ii) whether a *crafted* item would really be marketable, run:
 
 ```bash
-python market_listing.py
+python src/market_listing.py
 ```
 
 -   To match listing hashes with badge creation details, run:
 
 ```bash
-python market_utils.py
+python src/market_utils.py
 ```
 
 
 -   To retrieve the ask and bid for 'Booster Packs', run:
 
 ```bash
-python market_order.py
+python src/market_order.py
 ```
 
 -   To look for **free** games which i) feature trading cards (and thus crafting of booster packs), and ii) which I do not own, run:
 
 ```bash
-python free_games_with_trading_cards.py
+python src/free_games_with_trading_cards.py
 ```
 
 -   To create packs for a **manual** selection of games, e.g. if you want to create these specific packs every day, run:
 
 ```bash
-python batch_create_packs.py
+python src/batch_create_packs.py
 ```
 
 -   To list appIDs of interest for which we can under-cut the lowest sell order and still hope to make a profit:
 
 ```bash
-python list_possible_lures.py
+python src/list_possible_lures.py
 ```
 
 </p>
@@ -260,7 +260,7 @@ where:
 -   C/UC/R patterns are the numbers of Common/Uncommon/Rare items associated with each appID.
 
 Therefore, we choose to estimate the drop-rates for Common rarity, conditionally to C/UC/R patterns.  
-The values hard-coded in `drop_rate_estimates.py` are the centers of the [Wilson score intervals](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval) with 95% confidence.
+The values hard-coded in `src/drop_rate_estimates.py` are the centers of the [Wilson score intervals](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval) with 95% confidence.
 
 ## Results
 
