@@ -170,8 +170,7 @@ def determine_whether_a_booster_pack_can_be_crafted(
         if (
             current_time.month == 12
             and current_time.day == 31
-            and parsed_next_creation_time.month == 1
-            and parsed_next_creation_time.day == 1
+            and parsed_next_creation_time.month == parsed_next_creation_time.day == 1
         ):
             # Today is the Dec 31, and the next creation time is the day after, on January 1.
             year_to_be_manually_set = current_time.year + 1
