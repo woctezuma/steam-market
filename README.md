@@ -10,7 +10,7 @@ This repository contains Python code to find arbitrages on the Steam Market.
 ![Cover: ranking of market arbitrages](https://github.com/woctezuma/steam-market/wiki/img/rBxZxHX.png)
 
 Arbitrages could consist in:
--   purchasing gems to craft booster packs, which are then immediately sold for more than their crafting cost,
+-   [purchasing gems][sack-of-gems] to craft booster packs, which are then immediately sold for more than their crafting cost,
 -   purchasing items, typically foil cards, which are then immediately turned into more gems than they are worth,
 -   purchasing games in order to produce the corresponding booster packs, with total profit greater than the game price,
 -   turning normal cards into badges, if the expected value is positive, to create items worth more than the badge cost.
@@ -276,6 +276,8 @@ Rankings are also available for gambles with items of "Common" rarity, obtained 
 -   [A blog post about scraping Steam Market](https://www.blakeporterneuro.com/learning-python-project-3-scrapping-data-from-steams-community-market/)
 
 <!-- Definitions -->
+
+[sack-of-gems]: <https://steamcommunity.com/market/listings/753/753-Sack%20of%20Gems>
 
 [build]: <https://github.com/woctezuma/steam-market/actions>
 [build-image]: <https://github.com/woctezuma/steam-market/workflows/Python application/badge.svg?branch=master>
