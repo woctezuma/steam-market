@@ -1,5 +1,3 @@
-import contextlib
-
 from src.creation_time_utils import (
     determine_whether_a_booster_pack_can_be_crafted,
     fill_in_badges_with_next_creation_times_loaded_from_disk,
@@ -384,8 +382,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
 
         if arbitrage["is_marketable"] and arbitrage["profit"] > 0:
             app_id = convert_listing_hash_to_app_id(listing_hash)
-            with contextlib.suppress(KeyError):
-                selected_badge_data[app_id] = badge_data[app_id]
+            selected_badge_data[app_id] = badge_data[app_id]
 
     market_order_dict = load_market_order_data(
         badge_data=selected_badge_data,

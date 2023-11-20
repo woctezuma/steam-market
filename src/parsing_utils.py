@@ -22,6 +22,7 @@ def parse_javascript_one_liner(
     badges = json.loads(badges_as_str.lstrip().rstrip(","))
     for badge in badges:
         app_id, next_creation_time = badge["appid"], "available now"
+        app_id = str(app_id)
         badge_creation_details[app_id] = {
             "name": (app_name := badge["name"]),
             "gem_value": (gem_value := int(badge["price"])),
