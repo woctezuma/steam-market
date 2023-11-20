@@ -118,7 +118,7 @@ def download_market_order_data(
         resp_data = None
         status_code = -1
 
-    if resp_data and status_code == HTTPStatus.OK:
+    if resp_data and resp_data.ok:
         result = resp_data.json()
 
         if has_secured_cookie:
