@@ -2,8 +2,7 @@
 # - a booster pack was crafted at least once in the past,
 # - the sell price (without the Steam Market fee) is higher than the cost to craft a Booster Pack.
 
-from creation_time_utils import load_next_creation_time_data
-
+from src.creation_time_utils import load_next_creation_time_data
 from src.market_search import load_all_listings
 from src.parsing_utils import parse_badge_creation_details
 from src.sack_of_gems import get_num_gems_per_sack_of_gems, load_sack_of_gems_price

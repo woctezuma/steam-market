@@ -34,7 +34,7 @@ def get_listing_output_file_name_suffix(
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
 ) -> str:
-    from market_search import get_tag_drop_rate_str
+    from src.market_search import get_tag_drop_rate_str
 
     if tag_drop_rate_str is None:
         tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)

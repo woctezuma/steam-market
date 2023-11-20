@@ -6,12 +6,12 @@ from pathlib import Path
 
 import requests
 import steamspypi
-from personal_info import (
+
+from src.market_search import load_all_listings
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-
-from src.market_search import load_all_listings
 from src.utils import convert_listing_hash_to_app_id
 
 
