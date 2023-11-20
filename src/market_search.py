@@ -169,8 +169,6 @@ def get_all_listings(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        status_code = resp_data.status_code if resp_data else None
-
         start_index += delta_index
         query_count += 1
 
@@ -201,6 +199,7 @@ def get_all_listings(
                 listings[listing_hash]["sell_price_text"] = listing["sell_price_text"]
 
         else:
+            status_code = resp_data.status_code if resp_data else None
             print(
                 f"Wrong status code ({status_code}) for start_index = {start_index} after {query_count} queries.",
             )
