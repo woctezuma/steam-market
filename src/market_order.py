@@ -108,15 +108,12 @@ def download_market_order_data(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        status_code = resp_data.status_code if resp_data else None
-
     else:
         print(
             f"No query to download market orders for {listing_hash}, because item name ID is unknown.",
         )
 
         resp_data = None
-        status_code = -1
 
     if resp_data and resp_data.ok:
         result = resp_data.json()
@@ -157,6 +154,7 @@ def download_market_order_data(
 
     else:
         if resp_data is not None:
+            status_code = resp_data.status_code
             error_reason = resp_data.reason
             if verbose:
                 print(f"Wrong status code ({status_code}): {error_reason}.")
