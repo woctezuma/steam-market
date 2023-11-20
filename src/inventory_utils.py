@@ -96,8 +96,6 @@ def download_steam_inventory(
     else:
         resp_data = requests.get(url)
 
-    status_code = resp_data.status_code
-
     if resp_data.ok:
         steam_inventory = resp_data.json()
 
@@ -108,6 +106,7 @@ def download_steam_inventory(
         if save_to_disk:
             save_json(steam_inventory, get_steam_inventory_file_name(profile_id))
     else:
+        status_code = resp_data.status_code
         print(
             f"Inventory for profile {profile_id} could not be loaded. Status code {status_code} was returned.",
         )
@@ -170,8 +169,6 @@ def create_booster_pack(
         cookies=cookie,
     )
 
-    status_code = resp_data.status_code
-
     if resp_data.ok:
         # Expected result:
         # {"purchase_result":{"communityitemid":"XXX","appid":685400,"item_type":36, "purchaseid":"XXX",
@@ -182,6 +179,7 @@ def create_booster_pack(
         jar = dict(resp_data.cookies)
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
     else:
+        status_code = resp_data.status_code
         # NB: 401 means "Unauthorized", which must have something to do with wrong/outdated credentials in the cookie.
         if status_code == HTTPStatus.INTERNAL_SERVER_ERROR:
             print(
@@ -265,8 +263,6 @@ def sell_booster_pack(
         cookies=cookie,
     )
 
-    status_code = resp_data.status_code
-
     if resp_data.ok:
         # Expected result:
         # {"success":true,"requires_confirmation":0}
@@ -284,6 +280,7 @@ def sell_booster_pack(
                 f"Booster pack {asset_id} not sold for {price_in_cents} cents, despite OK status code.",
             )
     else:
+        status_code = resp_data.status_code
         # NB: 400 means "Bad Request".
         print(
             f"Booster pack {asset_id} not sold for {price_in_cents} cents. Status code {status_code} was returned.",

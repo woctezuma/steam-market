@@ -284,8 +284,6 @@ def get_listing_details(
     else:
         resp_data = requests.get(url, params=req_data)
 
-    status_code = resp_data.status_code
-
     if resp_data.ok:
         html_doc = resp_data.text
 
@@ -309,6 +307,7 @@ def get_listing_details(
         listing_details[listing_hash]["is_marketable"] = is_marketable
         listing_details[listing_hash]["item_type_no"] = item_type_no
 
+    status_code = resp_data.status_code
     return listing_details, status_code
 
 
