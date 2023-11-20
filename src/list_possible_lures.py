@@ -2,12 +2,12 @@
 # - a booster pack was crafted at least once in the past,
 # - the sell price (without the Steam Market fee) is higher than the cost to craft a Booster Pack.
 
-from creation_time_utils import load_next_creation_time_data
-from market_search import load_all_listings
-from parsing_utils import parse_badge_creation_details
-from sack_of_gems import get_num_gems_per_sack_of_gems, load_sack_of_gems_price
-from transaction_fee import compute_sell_price_without_fee
-from utils import convert_listing_hash_to_app_id
+from src.creation_time_utils import load_next_creation_time_data
+from src.market_search import load_all_listings
+from src.parsing_utils import parse_badge_creation_details
+from src.sack_of_gems import get_num_gems_per_sack_of_gems, load_sack_of_gems_price
+from src.transaction_fee import compute_sell_price_without_fee
+from src.utils import convert_listing_hash_to_app_id
 
 
 def get_app_ids_of_interest() -> list[str]:
@@ -33,8 +33,7 @@ def get_sell_prices_without_fee(
     sell_prices = {}
 
     for listing_hash in data:
-        app_id_as_int = convert_listing_hash_to_app_id(listing_hash)
-        app_id = str(app_id_as_int)
+        app_id = convert_listing_hash_to_app_id(listing_hash)
 
         if app_id in app_ids:
             current_data = data[listing_hash]
@@ -62,7 +61,7 @@ def get_gem_amount_for_a_booster_pack(app_ids: list[str]) -> dict[str, int]:
 
     for app_id in app_ids:
         try:
-            current_data = data[int(app_id)]
+            current_data = data[app_id]
         except KeyError:
             current_data = {"gem_value": 9999}
 
@@ -79,7 +78,7 @@ def filter_app_ids_with_potential_profit(
     gem_amounts_for_a_booster_pack: dict[str, int],
     gem_sack_price_in_euros: float | None = None,
     verbose: bool = True,
-) -> list[int]:
+) -> list[str]:
     # Filter out appIDs for which the sell price (without fee) is lower than the cost to craft a Booster Pack.
     # Indeed, a profit is impossible for these appIDs.
 
@@ -91,13 +90,11 @@ def filter_app_ids_with_potential_profit(
 
     filtered_app_ids = []
 
-    app_ids_as_int = [int(i) for i in app_ids]
-
-    for app_id in app_ids_as_int:
-        gem_amount = gem_amounts_for_a_booster_pack[str(app_id)]
+    for app_id in app_ids:
+        gem_amount = gem_amounts_for_a_booster_pack[app_id]
         gem_price = gem_amount * gem_sack_price_in_euros / num_gems_per_sack
 
-        sell_price_without_fee = sell_prices_without_fee[str(app_id)]
+        sell_price_without_fee = sell_prices_without_fee[app_id]
 
         profit = sell_price_without_fee - gem_price
 
@@ -107,8 +104,8 @@ def filter_app_ids_with_potential_profit(
             filtered_app_ids.append(app_id)
 
     if verbose:
-        positive = sorted(filtered_app_ids)
-        negative = sorted(set(app_ids_as_int).difference(filtered_app_ids))
+        positive = sorted(filtered_app_ids, key=int)
+        negative = sorted(set(app_ids).difference(filtered_app_ids), key=int)
 
         print(
             "\nPositive ({}): {}\n\nNegative ({}): {}\n\nTotal ({})".format(
@@ -116,7 +113,7 @@ def filter_app_ids_with_potential_profit(
                 positive,
                 len(negative),
                 negative,
-                len(app_ids_as_int),
+                len(app_ids),
             ),
         )
 
@@ -124,10 +121,10 @@ def filter_app_ids_with_potential_profit(
 
 
 def remove_app_ids_previously_processed(
-    filtered_app_ids: list[int],
-    app_ids_previously_processed: list[int] | None = None,
+    filtered_app_ids: list[str],
+    app_ids_previously_processed: list[str] | None = None,
     verbose: bool = True,
-) -> list[int]:
+) -> list[str]:
     # Manually remove previously processed appIDs from the list of returned appIDs of interest.
 
     if app_ids_previously_processed is None:
@@ -135,6 +132,7 @@ def remove_app_ids_previously_processed(
 
     app_ids_to_do = sorted(
         set(filtered_app_ids).difference(app_ids_previously_processed),
+        key=int,
     )
 
     if verbose:
@@ -278,7 +276,7 @@ def main() -> None:
 
     remove_app_ids_previously_processed(
         filtered_app_ids,
-        app_ids_previously_processed=app_ids_previously_processed,
+        app_ids_previously_processed=[str(i) for i in app_ids_previously_processed],
         verbose=True,
     )
 

@@ -21,10 +21,10 @@
         "is_marketable": true
     },
     "299660-6180 the moon Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.58,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.27,
+        "ask": 0.48,
+        "bid_volume": 7,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "253230-A Hat in Time Booster Pack": {
@@ -42,10 +42,10 @@
         "is_marketable": true
     },
     "206500-AirMech Strike Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.39,
-        "bid_volume": 5,
-        "ask_volume": 6,
+        "bid": 0.16,
+        "ask": 0.37,
+        "bid_volume": 28,
+        "ask_volume": 22,
         "is_marketable": true
     },
     "323450-Alphadia Genesis Booster Pack": {
@@ -56,9 +56,9 @@
         "is_marketable": true
     },
     "379610-Animated Puzzles Booster Pack": {
-        "bid": 0.17,
-        "ask": 2.21,
-        "bid_volume": 3,
+        "bid": 0.14,
+        "ask": 1.75,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -119,9 +119,9 @@
         "is_marketable": true
     },
     "293260-Card Hunter Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.38,
-        "bid_volume": 2,
+        "bid": 0.21,
+        "ask": 0.37,
+        "bid_volume": 20,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -133,10 +133,10 @@
         "is_marketable": true
     },
     "214610-Cherry Tree High Comedy Club Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.28,
-        "bid_volume": 9,
-        "ask_volume": 3,
+        "bid": 0.2,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "293680-Cinders Booster Pack": {
@@ -154,10 +154,10 @@
         "is_marketable": true
     },
     "349140-Corrosion: Cold Winter Waiting [Enhanced Edition] Booster Pack": {
-        "bid": 0.3,
-        "ask": 0.48,
-        "bid_volume": 25,
-        "ask_volume": 8,
+        "bid": 0.21,
+        "ask": 0.81,
+        "bid_volume": 42,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "731490-Crash Bandicoot™ N. Sane Trilogy Booster Pack": {
@@ -182,10 +182,10 @@
         "is_marketable": true
     },
     "46750-Dark Fall: Lost Souls Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.2,
-        "bid_volume": 19,
-        "ask_volume": 12,
+        "bid": 0.06,
+        "ask": 0.17,
+        "bid_volume": 36,
+        "ask_volume": 7,
         "is_marketable": true
     },
     "300-Day of Defeat: Source Booster Pack": {
@@ -204,9 +204,9 @@
     },
     "432180-Discouraged Workers TEEN Booster Pack": {
         "bid": 0.13,
-        "ask": 0.73,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "371400-Downpour  Booster Pack": {
@@ -224,16 +224,16 @@
         "is_marketable": true
     },
     "335820-Dream Of Mirror Online Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.19,
-        "bid_volume": 8,
+        "bid": 0.1,
+        "ask": 0.39,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "291410-Duelyst Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 25,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -266,14 +266,14 @@
         "is_marketable": null
     },
     "207370-eXceed - Gun Bullet Children Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.46,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.18,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "469830-Fable Fortune Booster Pack": {
-        "bid": 0.87,
+        "bid": 0.92,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
@@ -287,10 +287,10 @@
         "is_marketable": true
     },
     "327060-Feist Booster Pack": {
-        "bid": 0.04,
-        "ask": 0.26,
-        "bid_volume": 17,
-        "ask_volume": 2,
+        "bid": 0.2,
+        "ask": 0.55,
+        "bid_volume": 15,
+        "ask_volume": 15,
         "is_marketable": true
     },
     "856880-Fighting Fantasy Classics Booster Pack": {
@@ -315,14 +315,14 @@
         "is_marketable": true
     },
     "461910-Forge of Gods (RPG) Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "310380-Fractured Space Booster Pack": {
-        "bid": 0.16,
+        "bid": 0.17,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -350,9 +350,9 @@
         "is_marketable": true
     },
     "214420-Gear Up Booster Pack": {
-        "bid": 0.28,
-        "ask": 0.58,
-        "bid_volume": 21,
+        "bid": 0.25,
+        "ask": 0.6,
+        "bid_volume": 16,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -364,10 +364,10 @@
         "is_marketable": null
     },
     "467320-God of Word Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.58,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.19,
+        "ask": 0.59,
+        "bid_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "232430-Gone Home Booster Pack": {
@@ -378,9 +378,9 @@
         "is_marketable": true
     },
     "206210-Gotham City Impostors: Free To Play Booster Pack": {
-        "bid": 0.24,
+        "bid": 0.48,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -399,24 +399,24 @@
         "is_marketable": true
     },
     "259640-Guise Of The Wolf Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.88,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "bid": 0.24,
+        "ask": 0.93,
+        "bid_volume": 21,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "246280-Happy Wars Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.5,
-        "bid_volume": 1,
+        "bid": 0.18,
+        "ask": 0.83,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
     "331360-Heavy Metal Machines Booster Pack": {
         "bid": 0.18,
-        "ask": 0.3,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "305490-Heileen 3: New Horizons Booster Pack": {
@@ -448,9 +448,9 @@
         "is_marketable": true
     },
     "523680-Honey Rose: Underdog Fighter Extraordinaire Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.49,
-        "bid_volume": 4,
+        "bid": 0.15,
+        "ask": 0.42,
+        "bid_volume": 1,
         "ask_volume": 5,
         "is_marketable": true
     },
@@ -462,16 +462,16 @@
         "is_marketable": true
     },
     "339800-HuniePop Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.29,
-        "bid_volume": 7,
-        "ask_volume": 27,
+        "bid": 0.18,
+        "ask": 0.24,
+        "bid_volume": 10,
+        "ask_volume": 79,
         "is_marketable": true
     },
     "334710-Ilamentia Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.24,
-        "bid_volume": 12,
+        "bid": 0.09,
+        "ask": 0.4,
+        "bid_volume": 20,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -490,17 +490,17 @@
         "is_marketable": true
     },
     "352080-Judge Dredd: Countdown Sector 106 Booster Pack": {
-        "bid": 0.1,
-        "ask": 1.79,
-        "bid_volume": 4,
-        "ask_volume": 2,
+        "bid": 0.21,
+        "ask": 0.43,
+        "bid_volume": 2,
+        "ask_volume": 10,
         "is_marketable": true
     },
     "304170-Kick-Ass 2 Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.46,
-        "bid_volume": 25,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": 0.43,
+        "bid_volume": 26,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "500580-Kitty Cat: Jigsaw Puzzles Booster Pack": {
@@ -511,9 +511,9 @@
         "is_marketable": true
     },
     "587460-Knightfall™: Rivals Booster Pack": {
-        "bid": 0.1,
-        "ask": 1.32,
-        "bid_volume": 1,
+        "bid": 0.16,
+        "ask": 0.99,
+        "bid_volume": 8,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -533,22 +533,22 @@
     },
     "609940-KROSMAGA Booster Pack": {
         "bid": 0.23,
-        "ask": 0.58,
-        "bid_volume": 17,
-        "ask_volume": 2,
+        "ask": 0.38,
+        "bid_volume": 2,
+        "ask_volume": 6,
         "is_marketable": true
     },
     "350280-LawBreakers Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.37,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "bid": 0.08,
+        "ask": 0.27,
+        "bid_volume": 14,
+        "ask_volume": 14,
         "is_marketable": true
     },
     "582960-LIT Booster Pack": {
-        "bid": 0.15,
-        "ask": 1.06,
-        "bid_volume": 1,
+        "bid": 0.06,
+        "ask": 0.7,
+        "bid_volume": 8,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -561,9 +561,9 @@
     },
     "308360-LogiGun Booster Pack": {
         "bid": 0.18,
-        "ask": 1.58,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "ask": 0.57,
+        "bid_volume": 20,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "331400-Luna: Shattered Hearts: Episode 1 Booster Pack": {
@@ -596,9 +596,9 @@
     },
     "58230-MacGuffin's Curse Booster Pack": {
         "bid": 0.09,
-        "ask": 0.17,
-        "bid_volume": 18,
-        "ask_volume": 2,
+        "ask": 0.58,
+        "bid_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "316010-Magic Duels Booster Pack": {
@@ -609,10 +609,10 @@
         "is_marketable": true
     },
     "226320-Marvel Heroes Omega Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.27,
-        "bid_volume": 60,
-        "ask_volume": 1,
+        "bid": 0.18,
+        "ask": 0.31,
+        "bid_volume": 25,
+        "ask_volume": 13,
         "is_marketable": true
     },
     "251850-Master Reboot Booster Pack": {
@@ -630,17 +630,17 @@
         "is_marketable": true
     },
     "363330-Mind Snares: Alice's Journey Booster Pack": {
-        "bid": 0.36,
-        "ask": 0.52,
-        "bid_volume": 18,
-        "ask_volume": 3,
+        "bid": 0.29,
+        "ask": 0.51,
+        "bid_volume": 5,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "310740-NEON STRUCT Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.61,
-        "bid_volume": 7,
-        "ask_volume": 1,
+        "bid": 0.17,
+        "ask": 0.51,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "296550-Niko: Through The Dream Booster Pack": {
@@ -714,9 +714,9 @@
         "is_marketable": true
     },
     "333860-Project Night Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.7,
-        "bid_volume": 6,
+        "bid": 0.16,
+        "ask": 0.83,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -742,17 +742,17 @@
         "is_marketable": true
     },
     "237590-R.I.P.D.: The Game Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.47,
-        "bid_volume": 10,
+        "bid": 0.14,
+        "ask": 0.36,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
     "274130-Rambo The Video Game Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.49,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.17,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "253470-Real World Racing Booster Pack": {
@@ -770,10 +770,10 @@
         "is_marketable": true
     },
     "491130-Red Trigger Booster Pack": {
-        "bid": 0.29,
-        "ask": 0.83,
-        "bid_volume": 2,
-        "ask_volume": 3,
+        "bid": 0.25,
+        "ask": 0.59,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "575510-Sakura Agent Booster Pack": {
@@ -833,9 +833,9 @@
         "is_marketable": true
     },
     "307050-Shan Gui Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.58,
-        "bid_volume": 2,
+        "bid": 0.25,
+        "ask": 0.52,
+        "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -847,10 +847,10 @@
         "is_marketable": true
     },
     "253840-Shantae: Half-Genie Hero Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.29,
-        "bid_volume": 11,
-        "ask_volume": 24,
+        "bid": 0.15,
+        "ask": 0.26,
+        "bid_volume": 3,
+        "ask_volume": 27,
         "is_marketable": true
     },
     "277890-Shantae: Risky's Revenge - Director's Cut Booster Pack": {
@@ -875,9 +875,9 @@
         "is_marketable": true
     },
     "324470-SinaRun Booster Pack": {
-        "bid": 0.28,
-        "ask": 0.55,
-        "bid_volume": 10,
+        "bid": 0.27,
+        "ask": 0.57,
+        "bid_volume": 2,
         "ask_volume": 3,
         "is_marketable": true
     },
@@ -917,10 +917,10 @@
         "is_marketable": true
     },
     "452230-Spellstone Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.27,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.14,
+        "ask": 0.38,
+        "bid_volume": 3,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "332360-Spriter Pro Booster Pack": {
@@ -931,9 +931,9 @@
         "is_marketable": true
     },
     "311720-Sproggiwood Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.51,
-        "bid_volume": 11,
+        "bid": 0.15,
+        "ask": 0.47,
+        "bid_volume": 18,
         "ask_volume": 2,
         "is_marketable": true
     },
@@ -946,8 +946,8 @@
     },
     "334270-Star Traders: 4X Empires Booster Pack": {
         "bid": 0.15,
-        "ask": 0.37,
-        "bid_volume": 5,
+        "ask": 0.38,
+        "bid_volume": 25,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -966,37 +966,37 @@
         "is_marketable": true
     },
     "496930-Sumeru Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.63,
-        "bid_volume": 21,
-        "ask_volume": 2,
+        "bid": 0.19,
+        "ask": 0.57,
+        "bid_volume": 27,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "557890-Sunset's Ashes Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.32,
-        "bid_volume": 3,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "311190-Super Panda Adventures Booster Pack": {
-        "bid": 0.1,
-        "ask": 11.47,
-        "bid_volume": 2,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "342100-Sym Booster Pack": {
-        "bid": 0.11,
-        "ask": 1.06,
+        "bid": 0.19,
+        "ask": 0.93,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
+    "311190-Super Panda Adventures Booster Pack": {
+        "bid": 0.14,
+        "ask": 7.38,
+        "bid_volume": 4,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "342100-Sym Booster Pack": {
+        "bid": 0.21,
+        "ask": 1.08,
+        "bid_volume": 22,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
     "342890-Synonymy Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.51,
-        "bid_volume": 3,
+        "bid": 0.26,
+        "ask": 0.65,
+        "bid_volume": 7,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -1043,10 +1043,10 @@
         "is_marketable": null
     },
     "364470-The Elder Scrolls: Legends Booster Pack": {
-        "bid": 0.3,
-        "ask": 0.37,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.26,
+        "ask": 0.43,
+        "bid_volume": 23,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "454250-The Eyes of Ara Booster Pack": {
@@ -1085,10 +1085,10 @@
         "is_marketable": true
     },
     "252370-The Shivah Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.38,
-        "bid_volume": 15,
-        "ask_volume": 1,
+        "bid": 0.26,
+        "ask": 0.71,
+        "bid_volume": 21,
+        "ask_volume": 8,
         "is_marketable": true
     },
     "340720-The Tiny Tale 2 Booster Pack": {
@@ -1113,10 +1113,10 @@
         "is_marketable": true
     },
     "533690-Think To Die Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.83,
-        "bid_volume": 20,
-        "ask_volume": 2,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 6,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "206440-To the Moon Booster Pack": {
@@ -1127,10 +1127,10 @@
         "is_marketable": true
     },
     "209950-Triple Town Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.26,
-        "bid_volume": 3,
-        "ask_volume": 3,
+        "bid": 0.12,
+        "ask": 0.42,
+        "bid_volume": 20,
+        "ask_volume": 7,
         "is_marketable": true
     },
     "304050-Trove Booster Pack": {
@@ -1169,17 +1169,17 @@
         "is_marketable": true
     },
     "72200-Universe Sandbox Legacy Booster Pack": {
-        "bid": 0.15,
+        "bid": 0.23,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": true
     },
     "414660-Vampire Legends: The True Story of Kisilova Booster Pack": {
-        "bid": 0.27,
-        "ask": 0.55,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "bid": 0.2,
+        "ask": 0.73,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "262150-Vanguard Princess Booster Pack": {
@@ -1197,10 +1197,10 @@
         "is_marketable": true
     },
     "392600-Volvox Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.98,
+        "bid": 0.15,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "215080-WAKFU Booster Pack": {
@@ -1211,9 +1211,9 @@
         "is_marketable": true
     },
     "359400-Why Am I Dead At Sea Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.36,
-        "bid_volume": 1,
+        "bid": 0.09,
+        "ask": 0.4,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -1225,10 +1225,10 @@
         "is_marketable": true
     },
     "602930-Wordlase Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.51,
-        "bid_volume": 24,
-        "ask_volume": 3,
+        "bid": 0.16,
+        "ask": 0.35,
+        "bid_volume": 26,
+        "ask_volume": 12,
         "is_marketable": true
     },
     "638970-Yakuza 0 Booster Pack": {
@@ -1239,10 +1239,10 @@
         "is_marketable": true
     },
     "259430-Zigfrak Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.82,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.18,
+        "ask": 0.29,
+        "bid_volume": 2,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "297450-Zombies on a Plane Booster Pack": {
@@ -1255,28 +1255,28 @@
     "340390-Abomination Tower Booster Pack": {
         "bid": 0.14,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "385200-Absconding Zatwor Booster Pack": {
         "bid": 0.32,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "298890-Adventure Time: The Secret Of The Nameless Kingdom Booster Pack": {
-        "bid": 0.23,
+        "bid": 0.37,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "392870-Attrition: Nuclear Domination Booster Pack": {
         "bid": 0.16,
         "ask": -1,
-        "bid_volume": 16,
+        "bid_volume": 15,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -1288,9 +1288,9 @@
         "is_marketable": true
     },
     "395980-Break Into Zatwor Booster Pack": {
-        "bid": 0.16,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 6,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -1311,19 +1311,19 @@
     "344750-Deadly Profits Booster Pack": {
         "bid": 0.07,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 9,
         "ask_volume": -1,
         "is_marketable": false
     },
     "388870-Devils Share Booster Pack": {
-        "bid": 0.3,
+        "bid": 0.46,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "268830-Doctor Who: The Adventure Games Booster Pack": {
-        "bid": 0.24,
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 3,
         "ask_volume": -1,
@@ -1337,7 +1337,7 @@
         "is_marketable": false
     },
     "410590-Fiends of Imprisonment Booster Pack": {
-        "bid": 0.25,
+        "bid": 0.18,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -1351,23 +1351,23 @@
         "is_marketable": false
     },
     "392050-Galactic Hitman Booster Pack": {
-        "bid": 0.15,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "486340-Gnarltoof's Revenge Booster Pack": {
         "bid": 0.09,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "397620-GooCubelets Booster Pack": {
         "bid": 0.1,
         "ask": -1,
-        "bid_volume": 9,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -1379,44 +1379,44 @@
         "is_marketable": false
     },
     "460660-GooCubelets: OCD Booster Pack": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "419810-House of Hell Booster Pack": {
-        "bid": 0.15,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.16,
+        "ask": 1.01,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "457940-Krog Wars Booster Pack": {
-        "bid": 0.12,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "383030-Medieval Mercs Booster Pack": {
         "bid": 0.09,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473630-Mini Attack Submarine Booster Pack": {
         "bid": 0.14,
         "ask": -1,
-        "bid_volume": 16,
+        "bid_volume": 18,
         "ask_volume": -1,
         "is_marketable": false
     },
     "200110-Nosgoth Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.19,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -1428,14 +1428,14 @@
         "is_marketable": false
     },
     "407750-Paranormal Psychosis Booster Pack": {
-        "bid": 0.08,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 15,
+        "bid_volume": 8,
         "ask_volume": -1,
         "is_marketable": false
     },
     "449630-Rage Parking Simulator 2016 Booster Pack": {
-        "bid": 0.18,
+        "bid": 0.16,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -1444,7 +1444,7 @@
     "346430-Spectrum: First Light Booster Pack": {
         "bid": 0.09,
         "ask": -1,
-        "bid_volume": 15,
+        "bid_volume": 25,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -1458,14 +1458,14 @@
     "373110-Temper Tantrum Booster Pack": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 17,
         "ask_volume": -1,
         "is_marketable": false
     },
     "491250-The Decimation of Olarath Booster Pack": {
-        "bid": 0.13,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -1477,28 +1477,28 @@
         "is_marketable": false
     },
     "432150-They Came From The Moon Booster Pack": {
+        "bid": 0.7,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "331710-Why So Evil Booster Pack": {
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 51,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "354850-Why So Evil 2: Dystopia Booster Pack": {
         "bid": 0.1,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "331710-Why So Evil Booster Pack": {
-        "bid": 0.12,
-        "ask": -1,
-        "bid_volume": 52,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "354850-Why So Evil 2: Dystopia Booster Pack": {
-        "bid": 0.08,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
     "473620-Winged Knights: Penetration Booster Pack": {
-        "bid": 0.21,
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 4,
         "ask_volume": -1,
@@ -1507,21 +1507,21 @@
     "473650-Withering Kingdom: Arcane War Booster Pack": {
         "bid": 0.13,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
     "516230-Withering Kingdom: Flurry Of Arrows Booster Pack": {
         "bid": 0.06,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 12,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473640-Wyatt Derp Booster Pack": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -1674,16 +1674,16 @@
     },
     "406220-Gnomes Vs. Fairies Booster Pack": {
         "bid": 0.12,
-        "ask": 1.4,
+        "ask": 0.53,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
     "361160-Steamalot: Epoch's Journey Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.4,
-        "bid_volume": 10,
-        "ask_volume": 1,
+        "bid": 0.16,
+        "ask": 0.47,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "330990-Demon Hunter: Chronicles from Beyond Booster Pack": {
@@ -1792,10 +1792,10 @@
         "is_marketable": true
     },
     "318860-Malebolgia Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 7,
-        "ask_volume": -1,
+        "bid": 0.16,
+        "ask": 0.49,
+        "bid_volume": 26,
+        "ask_volume": 21,
         "is_marketable": true
     },
     "340340-Domestic Dog Booster Pack": {
@@ -1835,9 +1835,9 @@
     },
     "283980-SPY Fox in: Dry Cereal Booster Pack": {
         "bid": 0.14,
-        "ask": 0.32,
-        "bid_volume": 5,
-        "ask_volume": 2,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "592200-Super Army of Tentacles 3: The Search for Army of Tentacles 2 Booster Pack": {
@@ -1869,10 +1869,10 @@
         "is_marketable": true
     },
     "271670-10 Second Ninja Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.32,
-        "bid_volume": 2,
-        "ask_volume": 3,
+        "bid": 0.2,
+        "ask": 0.55,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "388320-1979 Revolution: Black Friday Booster Pack": {
@@ -1911,7 +1911,7 @@
         "is_marketable": true
     },
     "328600-Frozen Synapse Prime Booster Pack": {
-        "bid": 0.11,
+        "bid": 0.16,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -1981,10 +1981,10 @@
         "is_marketable": true
     },
     "219190-Ultratron Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.47,
-        "bid_volume": 6,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": 0.6,
+        "bid_volume": 59,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "402570-Atlas Reactor Booster Pack": {
@@ -2023,10 +2023,10 @@
         "is_marketable": true
     },
     "330000-Kingdoms CCG Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.38,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "807140-Marble Run 2D Booster Pack": {
@@ -2093,16 +2093,16 @@
         "is_marketable": true
     },
     "251510-Constant C Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.16,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 20,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "446030-Corroded Booster Pack": {
-        "bid": 0.07,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2163,9 +2163,9 @@
         "is_marketable": true
     },
     "487160-Trials of Azra Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.94,
-        "bid_volume": 3,
+        "bid": 0.09,
+        "ask": 0.62,
+        "bid_volume": 11,
         "ask_volume": 2,
         "is_marketable": true
     },
@@ -2184,9 +2184,9 @@
         "is_marketable": true
     },
     "553660-PWND Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.53,
-        "bid_volume": 12,
+        "bid": 0.14,
+        "ask": 0.85,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -2205,17 +2205,17 @@
         "is_marketable": true
     },
     "342130-Hashtag Dungeon Booster Pack": {
-        "bid": 0.06,
-        "ask": 0.76,
-        "bid_volume": 6,
-        "ask_volume": 2,
+        "bid": 0.11,
+        "ask": 0.46,
+        "bid_volume": 7,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "268810-Paranormal State: Poison Spring Collector's Edition Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.28,
-        "bid_volume": 9,
-        "ask_volume": 1,
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "246620-Plague Inc: Evolved Booster Pack": {
@@ -2296,10 +2296,10 @@
         "is_marketable": true
     },
     "375230-Warhammer 40,000: Eternal Crusade Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.34,
-        "bid_volume": 25,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "268500-XCOM 2 Booster Pack": {
@@ -2331,9 +2331,9 @@
         "is_marketable": true
     },
     "208090-Loadout Booster Pack": {
-        "bid": 0.14,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2429,10 +2429,10 @@
         "is_marketable": true
     },
     "230310-Akaneiro: Demon Hunters Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.8,
-        "bid_volume": 14,
-        "ask_volume": 1,
+        "bid": 0.28,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "942800-Hard Work Booster Pack": {
@@ -2485,9 +2485,9 @@
         "is_marketable": true
     },
     "407900-Princess Remedy in a World of Hurt Booster Pack": {
-        "bid": 0.28,
-        "ask": 1.09,
-        "bid_volume": 33,
+        "bid": 0.32,
+        "ask": 0.52,
+        "bid_volume": 7,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -2877,38 +2877,38 @@
         "is_marketable": true
     },
     "380210-Signal to Noise Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.87,
-        "bid_volume": 26,
-        "ask_volume": 1,
+        "bid": 0.14,
+        "ask": 0.93,
+        "bid_volume": 23,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "260430-The Four Kings Casino and Slots Booster Pack": {
-        "bid": 0.21,
-        "ask": 17.25,
-        "bid_volume": 2,
+        "bid": 0.28,
+        "ask": 0.62,
+        "bid_volume": 13,
         "ask_volume": 1,
         "is_marketable": true
     },
     "409070-Fist Slash: Of Ultimate Fury Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.38,
-        "bid_volume": 3,
+        "bid": 0.2,
+        "ask": 0.51,
+        "bid_volume": 10,
         "ask_volume": 1,
         "is_marketable": true
     },
     "596650-Tap Adventure: Time Travel Booster Pack": {
-        "bid": 0.32,
-        "ask": 0.46,
+        "bid": 0.27,
+        "ask": 0.53,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "342570-HIS (Heroes In the Sky) Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.76,
-        "bid_volume": 1,
-        "ask_volume": 3,
+        "bid": 0.16,
+        "ask": 0.63,
+        "bid_volume": 7,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "420530-OneShot Booster Pack": {
@@ -2954,10 +2954,10 @@
         "is_marketable": true
     },
     "540740-Perfect Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.54,
-        "bid_volume": 21,
-        "ask_volume": 1,
+        "bid": 0.25,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "423650-Summer Fling Booster Pack": {
@@ -2975,10 +2975,10 @@
         "is_marketable": true
     },
     "263500-Dragons and Titans Booster Pack": {
-        "bid": 0.31,
-        "ask": 0.77,
-        "bid_volume": 1,
-        "ask_volume": 3,
+        "bid": 0.25,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "298280-XenoRaptor Booster Pack": {
@@ -3017,10 +3017,10 @@
         "is_marketable": true
     },
     "719750-PUSS! Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.35,
-        "bid_volume": 6,
-        "ask_volume": 1,
+        "bid": 0.18,
+        "ask": 0.24,
+        "bid_volume": 2,
+        "ask_volume": 13,
         "is_marketable": true
     },
     "610750-Games&Girls Booster Pack": {
@@ -3178,10 +3178,10 @@
         "is_marketable": true
     },
     "329790-Krosmaster Arena Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.61,
-        "bid_volume": 6,
-        "ask_volume": 2,
+        "bid": 0.13,
+        "ask": 0.57,
+        "bid_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "504560-The Unwelcomed Booster Pack": {
@@ -3192,10 +3192,10 @@
         "is_marketable": true
     },
     "492800-Shonen Idle Z Booster Pack": {
-        "bid": 0.34,
-        "ask": 0.87,
-        "bid_volume": 20,
-        "ask_volume": 2,
+        "bid": 0.2,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "459520-Kinacoustic Booster Pack": {
@@ -3535,10 +3535,10 @@
         "is_marketable": true
     },
     "564080-Metagalactic Blitz Booster Pack": {
-        "bid": 0.15,
-        "ask": 1.52,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.2,
+        "ask": 1.58,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "397820-Let's Sing 2016 Booster Pack": {
@@ -3563,9 +3563,9 @@
         "is_marketable": true
     },
     "538410-Chicken Chase Booster Pack": {
-        "bid": 0.14,
-        "ask": 3.68,
-        "bid_volume": 3,
+        "bid": 0.08,
+        "ask": 3.85,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3598,9 +3598,9 @@
         "is_marketable": true
     },
     "723270-Rumu Booster Pack": {
-        "bid": 0.15,
-        "ask": 1.33,
-        "bid_volume": 1,
+        "bid": 0.05,
+        "ask": 0.47,
+        "bid_volume": 10,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3976,10 +3976,10 @@
         "is_marketable": true
     },
     "493480-ERISLE Booster Pack": {
-        "bid": 0.2,
-        "ask": 1.84,
-        "bid_volume": 2,
-        "ask_volume": 4,
+        "bid": 0.23,
+        "ask": 1.27,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "495820-Lil Tanks Booster Pack": {
@@ -4011,9 +4011,9 @@
         "is_marketable": true
     },
     "241300-Card City Nights 2 Booster Pack": {
-        "bid": 0.12,
-        "ask": 1.32,
-        "bid_volume": 1,
+        "bid": 0.15,
+        "ask": 1.27,
+        "bid_volume": 8,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4193,10 +4193,10 @@
         "is_marketable": true
     },
     "293420-Heldric - The legend of the shoemaker Booster Pack": {
-        "bid": 0.17,
-        "ask": 1.51,
+        "bid": 0.19,
+        "ask": 1.57,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "516790-Fat Mask Booster Pack": {
@@ -4529,10 +4529,10 @@
         "is_marketable": true
     },
     "510730-Grim Seventh Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.7,
+        "bid": 0.21,
+        "ask": 0.78,
         "bid_volume": 1,
-        "ask_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "514650-Orbital X Booster Pack": {
@@ -4683,10 +4683,10 @@
         "is_marketable": true
     },
     "290830-Chaos Heroes Online Booster Pack": {
-        "bid": 0.15,
-        "ask": 1.01,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.19,
+        "ask": 0.71,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "358030-Another Star Booster Pack": {
@@ -4718,10 +4718,10 @@
         "is_marketable": true
     },
     "340700-Aqua Panic! Booster Pack": {
-        "bid": 0.18,
-        "ask": -1,
+        "bid": 0.21,
+        "ask": 0.54,
         "bid_volume": 2,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "467790-Crongdor the Barbarian Booster Pack": {
@@ -4886,16 +4886,16 @@
         "is_marketable": true
     },
     "593850-Davyria: Heroes of Eternity Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.83,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.2,
+        "ask": 0.64,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "492150-RPG World - Action RPG Maker Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.73,
-        "bid_volume": 3,
+        "bid": 0.25,
+        "ask": 0.65,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4914,10 +4914,10 @@
         "is_marketable": true
     },
     "376310-Otherland Booster Pack": {
-        "bid": 0.12,
-        "ask": 1.04,
-        "bid_volume": 9,
-        "ask_volume": 1,
+        "bid": 0.16,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "935360-ItazuraVR Booster Pack": {
@@ -5019,10 +5019,10 @@
         "is_marketable": true
     },
     "547520-Rapture - World Conquest Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.69,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "bid": 0.2,
+        "ask": 0.86,
+        "bid_volume": 4,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "785780-OF MICE AND SAND -REVISED- Booster Pack": {
@@ -5376,16 +5376,16 @@
         "is_marketable": true
     },
     "380570-Axion Booster Pack": {
-        "bid": 0.2,
-        "ask": 2.85,
+        "bid": 0.26,
+        "ask": 0.52,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "627530-Strata inStudio VR Booster Pack": {
-        "bid": 0.11,
-        "ask": 1.15,
-        "bid_volume": 3,
+        "bid": 0.1,
+        "ask": 0.26,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5573,9 +5573,9 @@
     },
     "328060-Tales Runner Booster Pack": {
         "bid": 0.16,
-        "ask": 0.61,
-        "bid_volume": 5,
-        "ask_volume": 3,
+        "ask": 0.29,
+        "bid_volume": 1,
+        "ask_volume": 36,
         "is_marketable": true
     },
     "327520-Traverser Booster Pack": {
@@ -5691,9 +5691,9 @@
         "is_marketable": true
     },
     "396010-The Rise of Chubtan Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.8,
-        "bid_volume": 2,
+        "bid": 0.1,
+        "ask": 1.12,
+        "bid_volume": 8,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5705,10 +5705,10 @@
         "is_marketable": true
     },
     "618080-Martial Arts Brutality Booster Pack": {
-        "bid": 0.04,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.15,
+        "ask": 0.75,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "785880-OVERWHELM Booster Pack": {
@@ -5803,10 +5803,10 @@
         "is_marketable": true
     },
     "626010-Office Space: Idle Profits Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.8,
-        "bid_volume": 9,
-        "ask_volume": 1,
+        "bid": 0.27,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "364790-Voyage to Farland Booster Pack": {
@@ -5943,9 +5943,9 @@
         "is_marketable": true
     },
     "631490-Son of Scoregasm Booster Pack": {
-        "bid": 0.11,
-        "ask": 11.91,
-        "bid_volume": 10,
+        "bid": 0.14,
+        "ask": 9.81,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5971,10 +5971,10 @@
         "is_marketable": true
     },
     "373650-The Assembly Booster Pack": {
-        "bid": 0.16,
-        "ask": 1.15,
-        "bid_volume": 3,
-        "ask_volume": 4,
+        "bid": 0.3,
+        "ask": 0.72,
+        "bid_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "470240-DEMIAN Booster Pack": {
@@ -5993,8 +5993,8 @@
     },
     "566190-The Search Booster Pack": {
         "bid": 0.21,
-        "ask": 0.5,
-        "bid_volume": 5,
+        "ask": 0.35,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -6132,10 +6132,10 @@
         "is_marketable": true
     },
     "448720-Puzzle Box Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.65,
-        "bid_volume": 1,
-        "ask_volume": 4,
+        "bid": 0.03,
+        "ask": 0.55,
+        "bid_volume": 16,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "448550-Minimal Booster Pack": {
@@ -6433,10 +6433,10 @@
         "is_marketable": true
     },
     "557780-Atom Fishing II Booster Pack": {
-        "bid": 0.32,
-        "ask": 0.46,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.23,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "612370-PAKO 2 Booster Pack": {
@@ -6468,10 +6468,10 @@
         "is_marketable": true
     },
     "595120-Cold Space Booster Pack": {
-        "bid": 0.14,
-        "ask": -1,
-        "bid_volume": 5,
-        "ask_volume": -1,
+        "bid": 0.24,
+        "ask": 0.84,
+        "bid_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "336840-Color Guardians Booster Pack": {
@@ -6804,9 +6804,9 @@
         "is_marketable": true
     },
     "531960-Bloody Walls Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.95,
-        "bid_volume": 2,
+        "bid": 0.27,
+        "ask": 0.58,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -6924,15 +6924,15 @@
     },
     "530820-Subject A-119 Booster Pack": {
         "bid": 0.1,
-        "ask": 1.32,
+        "ask": 0.96,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
     "448570-Origin Of Destiny: Crimson Awakening Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.93,
-        "bid_volume": 1,
+        "bid": 0.15,
+        "ask": 0.8,
+        "bid_volume": 2,
         "ask_volume": 2,
         "is_marketable": true
     },
@@ -7064,8 +7064,8 @@
     },
     "486640-Cheaters Blackjack 21 Booster Pack": {
         "bid": 0.19,
-        "ask": 0.43,
-        "bid_volume": 2,
+        "ask": 2.25,
+        "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -7126,9 +7126,9 @@
         "is_marketable": true
     },
     "497940-Destiny of Ancient Kingdoms™ Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.37,
-        "bid_volume": 1,
+        "bid": 0.23,
+        "ask": 0.48,
+        "bid_volume": 2,
         "ask_volume": 2,
         "is_marketable": true
     },
@@ -7294,10 +7294,10 @@
         "is_marketable": true
     },
     "341760-Flem Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.71,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.24,
+        "ask": 0.64,
+        "bid_volume": 3,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "439490-BLUE REVOLVER Booster Pack": {
@@ -7399,9 +7399,9 @@
         "is_marketable": true
     },
     "429680-Spellweaver Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.37,
-        "bid_volume": 2,
+        "bid": 0.16,
+        "ask": 0.59,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -7421,9 +7421,9 @@
     },
     "329280-Avalon Lords: Dawn Rises Booster Pack": {
         "bid": 0.13,
-        "ask": 0.52,
-        "bid_volume": 1,
-        "ask_volume": 4,
+        "ask": 0.43,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "300200-Urban Legends Booster Pack": {
@@ -7477,9 +7477,9 @@
     },
     "727510-Void Memory Booster Pack": {
         "bid": 0.18,
-        "ask": -1,
+        "ask": 0.69,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "648580-428 Shibuya Scramble Booster Pack": {
@@ -7532,16 +7532,16 @@
         "is_marketable": true
     },
     "523060-Planet Smasher Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.26,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.04,
+        "ask": 0.39,
+        "bid_volume": 6,
+        "ask_volume": 21,
         "is_marketable": true
     },
     "675630-Super POTUS Trump Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.43,
-        "bid_volume": 2,
+        "bid": 0.2,
+        "ask": 0.69,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -7553,9 +7553,9 @@
         "is_marketable": true
     },
     "405960-Sunken Booster Pack": {
-        "bid": 0.17,
-        "ask": 2.14,
-        "bid_volume": 1,
+        "bid": 0.2,
+        "ask": 1.66,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -7574,10 +7574,10 @@
         "is_marketable": true
     },
     "479310-Doodler Booster Pack": {
-        "bid": 0.1,
-        "ask": 2.99,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.14,
+        "ask": 0.64,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "753220-Mhakna Gramura and Fairy Bell Booster Pack": {
@@ -7602,10 +7602,10 @@
         "is_marketable": true
     },
     "385030-C. Kane Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.36,
-        "bid_volume": 7,
-        "ask_volume": 3,
+        "bid": 0.12,
+        "ask": 0.6,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "439800-Clouds & Sheep 2 Booster Pack": {
@@ -7644,17 +7644,17 @@
         "is_marketable": true
     },
     "384980-Battle for Blood - Epic battles within 30 seconds! Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.76,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": 0.71,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "734550-Wheel Riders Online OBT Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.31,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.15,
+        "ask": 0.4,
+        "bid_volume": 23,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "349020-Hyperspace Pinball Booster Pack": {
@@ -7686,10 +7686,10 @@
         "is_marketable": true
     },
     "219700-Dogs of War Online - Beta Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.59,
-        "bid_volume": 4,
-        "ask_volume": 3,
+        "bid": 0.24,
+        "ask": 0.93,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "464490-The Afterglow of Grisaia Booster Pack": {
@@ -7791,9 +7791,9 @@
         "is_marketable": true
     },
     "431510-Mystic Destinies: Serendipity of Aeons Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.86,
-        "bid_volume": 2,
+        "bid": 0.21,
+        "ask": 1.12,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -7917,17 +7917,17 @@
         "is_marketable": true
     },
     "422110-Wand Wars Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.51,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.07,
+        "ask": 1.57,
+        "bid_volume": 8,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "512920-Trigger Time Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.81,
+        "bid": 0.25,
+        "ask": 0.89,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "455820-Omensight Booster Pack": {
@@ -7952,10 +7952,10 @@
         "is_marketable": true
     },
     "275060-Alone in the Dark: Illumination Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.14,
+        "ask": 0.43,
+        "bid_volume": 22,
+        "ask_volume": 18,
         "is_marketable": true
     },
     "710760-High Noon VR Booster Pack": {
@@ -7973,10 +7973,10 @@
         "is_marketable": true
     },
     "6370-Bloodline Champions Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.37,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.24,
+        "ask": 0.59,
+        "bid_volume": 22,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "394490-Buildanauts Booster Pack": {
@@ -8022,23 +8022,23 @@
         "is_marketable": true
     },
     "522130-LandTraveller Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.57,
+        "bid": 0.09,
+        "ask": 2.16,
         "bid_volume": 1,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "408930-ePic Character Generator Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.27,
-        "bid_volume": 13,
         "ask_volume": 2,
         "is_marketable": true
     },
+    "408930-ePic Character Generator Booster Pack": {
+        "bid": 0.05,
+        "ask": 0.23,
+        "bid_volume": 30,
+        "ask_volume": 4,
+        "is_marketable": true
+    },
     "495230-Hypnorain Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.89,
-        "bid_volume": 2,
+        "bid": 0.19,
+        "ask": 0.75,
+        "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8071,23 +8071,23 @@
         "is_marketable": true
     },
     "341750-A.V. Booster Pack": {
-        "bid": 0.21,
-        "ask": 4.99,
-        "bid_volume": 10,
-        "ask_volume": 1,
+        "bid": 0.25,
+        "ask": 0.82,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "587570-Elsewhere High: Chapter 1 - A Visual Novel Booster Pack": {
-        "bid": 0.31,
-        "ask": 1.89,
+        "bid": 0.21,
+        "ask": 0.53,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "536470-Magnetized Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.57,
-        "bid_volume": 6,
+        "bid": 0.26,
+        "ask": 0.66,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8113,9 +8113,9 @@
         "is_marketable": true
     },
     "438920-Legends of Callasia Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.3,
-        "bid_volume": 6,
+        "bid": 0.1,
+        "ask": 0.5,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8233,8 +8233,8 @@
     },
     "582350-Zombie Killin' Booster Pack": {
         "bid": 0.1,
-        "ask": 0.18,
-        "bid_volume": 6,
+        "ask": 7.91,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8246,9 +8246,9 @@
         "is_marketable": true
     },
     "368890-AR-K: The Great Escape Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.75,
-        "bid_volume": 2,
+        "bid": 0.14,
+        "ask": 0.84,
+        "bid_volume": 7,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8274,10 +8274,10 @@
         "is_marketable": true
     },
     "565640-Colorful Life Booster Pack": {
-        "bid": 0.2,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.15,
+        "ask": 0.53,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "680340-Omega Strike Booster Pack": {
@@ -8337,10 +8337,10 @@
         "is_marketable": true
     },
     "336040-Combat Monsters Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.55,
-        "bid_volume": 1,
-        "ask_volume": 3,
+        "bid": 0.32,
+        "ask": 0.93,
+        "bid_volume": 6,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "427680-Zwei: The Arges Adventure Booster Pack": {
@@ -8477,16 +8477,16 @@
         "is_marketable": true
     },
     "356640-Metro Conflict Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.66,
-        "bid_volume": 5,
-        "ask_volume": 2,
+        "bid": 0.12,
+        "ask": 3.34,
+        "bid_volume": 32,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "513000-Kuboom Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.88,
-        "bid_volume": 2,
+        "bid": 0.25,
+        "ask": 0.73,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8498,10 +8498,10 @@
         "is_marketable": true
     },
     "318090-Dicetiny Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.59,
-        "bid_volume": 9,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": 0.34,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "431910-Psychocat: The Answer Booster Pack": {
@@ -8526,10 +8526,10 @@
         "is_marketable": true
     },
     "640150-Tale of Toast Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.43,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "bid": 0.15,
+        "ask": 0.4,
+        "bid_volume": 5,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "559130-Inner Voices Booster Pack": {
@@ -8568,16 +8568,16 @@
         "is_marketable": true
     },
     "574270-Lost Grimoires 2: Shard of Mystery Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.83,
-        "bid_volume": 14,
+        "bid": 0.23,
+        "ask": 0.59,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "383690-Mu Complex Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.6,
-        "bid_volume": 1,
+        "bid": 0.15,
+        "ask": 0.46,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8680,9 +8680,9 @@
         "is_marketable": true
     },
     "489930-Adventures of Bertram Fiddle: Episode 2: A Bleaker Predicklement Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.5,
-        "bid_volume": 8,
+        "bid": 0.08,
+        "ask": 0.23,
+        "bid_volume": 17,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8785,10 +8785,10 @@
         "is_marketable": true
     },
     "427700-Zwei: The Ilvard Insurrection Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.2,
-        "bid_volume": 12,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.21,
+        "bid_volume": 24,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "566780-Beats Fever Booster Pack": {
@@ -8806,9 +8806,9 @@
         "is_marketable": true
     },
     "386600-Pixel Fodder Booster Pack": {
-        "bid": 0.29,
-        "ask": 0.88,
-        "bid_volume": 2,
+        "bid": 0.21,
+        "ask": 0.62,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -8834,10 +8834,10 @@
         "is_marketable": true
     },
     "530630-Empires Apart Booster Pack": {
-        "bid": 0.29,
-        "ask": 0.73,
-        "bid_volume": 4,
-        "ask_volume": 2,
+        "bid": 0.21,
+        "ask": 0.6,
+        "bid_volume": 2,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "299400-XING: The Land Beyond Booster Pack": {
@@ -8918,9 +8918,9 @@
         "is_marketable": true
     },
     "528460-Rogalia Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.49,
-        "bid_volume": 9,
+        "bid": 0.19,
+        "ask": 0.27,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -9072,9 +9072,9 @@
         "is_marketable": true
     },
     "446770-Skeet: VR Target Shooting Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.73,
-        "bid_volume": 4,
+        "bid": 0.16,
+        "ask": 0.61,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -9100,8 +9100,8 @@
         "is_marketable": true
     },
     "442290-Pointless Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.81,
+        "bid": 0.26,
+        "ask": 0.6,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -9121,9 +9121,9 @@
         "is_marketable": true
     },
     "502210-Super Markup Man Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.39,
-        "bid_volume": 30,
+        "bid": 0.06,
+        "ask": 1.88,
+        "bid_volume": 39,
         "ask_volume": 1,
         "is_marketable": null
     },
@@ -9255,9 +9255,9 @@
     },
     "350020-The Gate Booster Pack": {
         "bid": 0.25,
-        "ask": 0.59,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "400580-Black Closet Booster Pack": {
@@ -9324,8 +9324,8 @@
         "is_marketable": true
     },
     "454070-Boundel Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.34,
+        "bid": 0.12,
+        "ask": 0.47,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -9338,10 +9338,10 @@
         "is_marketable": true
     },
     "702810-Shooty Skies Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.51,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": 0.61,
+        "bid_volume": 4,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "393220-Super Man Or Monster Booster Pack": {
@@ -9366,7 +9366,7 @@
         "is_marketable": true
     },
     "504730-MOBIUS FINAL FANTASY Booster Pack": {
-        "bid": 0.19,
+        "bid": 0.2,
         "ask": -1,
         "bid_volume": 6,
         "ask_volume": -1,
@@ -9513,10 +9513,10 @@
         "is_marketable": true
     },
     "615340-Mystic Journey: Tri Peaks Solitaire Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.37,
+        "bid": 0.23,
+        "ask": 0.93,
         "bid_volume": 1,
-        "ask_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "544680-Holy Avenger Booster Pack": {
@@ -9555,10 +9555,10 @@
         "is_marketable": true
     },
     "513300-Schacht Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.41,
-        "bid_volume": 9,
-        "ask_volume": 6,
+        "bid": 0.18,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "421660-Harmonia Booster Pack": {
@@ -9696,7 +9696,7 @@
     },
     "588890-Heroes of Arca Booster Pack": {
         "bid": 0.16,
-        "ask": 0.41,
+        "ask": 0.85,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -9934,9 +9934,9 @@
     },
     "568470-Waking the Glares Booster Pack": {
         "bid": 0.15,
-        "ask": 0.53,
-        "bid_volume": 2,
-        "ask_volume": 3,
+        "ask": -1,
+        "bid_volume": 16,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "552880-STARDROP Booster Pack": {
@@ -9954,10 +9954,10 @@
         "is_marketable": true
     },
     "485600-OESE Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.66,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.13,
+        "ask": 0.69,
+        "bid_volume": 4,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "549670-Incursion The Thing Booster Pack": {
@@ -9996,10 +9996,10 @@
         "is_marketable": true
     },
     "680310-Poker World Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.58,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.24,
+        "ask": 0.47,
+        "bid_volume": 3,
+        "ask_volume": 5,
         "is_marketable": true
     },
     "503450-Space Rangers: Quest Booster Pack": {
@@ -10256,8 +10256,8 @@
     },
     "606480-Flood of Light Booster Pack": {
         "bid": 0.18,
-        "ask": 0.52,
-        "bid_volume": 6,
+        "ask": 0.4,
+        "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -10360,9 +10360,9 @@
         "is_marketable": true
     },
     "599060-Age of Heroes: Conquest Booster Pack": {
-        "bid": 0.15,
+        "bid": 0.19,
         "ask": 1.1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -10437,10 +10437,10 @@
         "is_marketable": true
     },
     "440740-Tap Tap Legions - Epic battles within 5 seconds! Booster Pack": {
-        "bid": 0.31,
-        "ask": 1,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.18,
+        "ask": 0.49,
+        "bid_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "436230-Detached Booster Pack": {
@@ -10627,9 +10627,9 @@
     },
     "509860-Baezult Booster Pack": {
         "bid": 0.11,
-        "ask": -1,
+        "ask": 0.92,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "448370-IS Defense Booster Pack": {
@@ -10780,9 +10780,9 @@
         "is_marketable": true
     },
     "460640-Breached Booster Pack": {
-        "bid": 0.31,
-        "ask": 0.7,
-        "bid_volume": 18,
+        "bid": 0.11,
+        "ask": 5.94,
+        "bid_volume": 15,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -10850,10 +10850,10 @@
         "is_marketable": true
     },
     "765870-Leisure Suit Larry - Wet Dreams Don't Dry Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.66,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.12,
+        "ask": 0.2,
+        "bid_volume": 23,
+        "ask_volume": 9,
         "is_marketable": true
     },
     "288860-Realms of Arkania: Star Trail Booster Pack": {
@@ -10864,10 +10864,10 @@
         "is_marketable": true
     },
     "545570-PHAT PHROG Booster Pack": {
-        "bid": 0.21,
+        "bid": 0.06,
         "ask": 0.61,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "355080-Crazy Steam Bros 2 Booster Pack": {
@@ -10878,15 +10878,15 @@
         "is_marketable": true
     },
     "518660-Zone4 Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.42,
-        "bid_volume": 5,
-        "ask_volume": 5,
+        "bid": 0.19,
+        "ask": 0.4,
+        "bid_volume": 1,
+        "ask_volume": 8,
         "is_marketable": true
     },
     "276730-Tango Fiesta Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.97,
+        "bid": 0.16,
+        "ask": 0.55,
         "bid_volume": 1,
         "ask_volume": 2,
         "is_marketable": true
@@ -11032,9 +11032,9 @@
         "is_marketable": true
     },
     "446990-The Huntsman: Winter's Curse Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.86,
-        "bid_volume": 2,
+        "bid": 0.19,
+        "ask": 0.53,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -11109,8 +11109,8 @@
         "is_marketable": true
     },
     "417060-UnSummoning: the Spectral Horde Booster Pack": {
-        "bid": 0.23,
-        "ask": 3.27,
+        "bid": 0.25,
+        "ask": 1.06,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -11188,7 +11188,7 @@
     "563330-Mountain Trap 2: Under the Cloak of Fear Booster Pack": {
         "bid": 0.13,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -11207,10 +11207,10 @@
         "is_marketable": true
     },
     "396030-InCell VR Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.37,
+        "bid": 0.25,
+        "ask": 0.83,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "251110-INFRA Booster Pack": {
@@ -11369,8 +11369,8 @@
     },
     "558490-Crossroad Mysteries: The Broken Deal Booster Pack": {
         "bid": 0.15,
-        "ask": 0.62,
-        "bid_volume": 2,
+        "ask": 0.54,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -11389,9 +11389,9 @@
         "is_marketable": true
     },
     "518320-Soko Match Booster Pack": {
-        "bid": 0.17,
+        "bid": 0.3,
         "ask": -1,
-        "bid_volume": 48,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -11515,10 +11515,10 @@
         "is_marketable": true
     },
     "679400-Relik Booster Pack": {
-        "bid": 0.27,
-        "ask": -1,
-        "bid_volume": 6,
-        "ask_volume": -1,
+        "bid": 0.25,
+        "ask": 0.93,
+        "bid_volume": 5,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "393240-Sir! I'd Like To Report A Bug! Booster Pack": {
@@ -11648,10 +11648,10 @@
         "is_marketable": true
     },
     "625430-Doodle God Blitz Booster Pack": {
-        "bid": 0.27,
-        "ask": 0.88,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.11,
+        "ask": 0.62,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "431280-tiny & Tall: Gleipnir Part One Booster Pack": {
@@ -11698,9 +11698,9 @@
     },
     "499950-Metal Assault - Gigaslave - Europe Booster Pack": {
         "bid": 0.18,
-        "ask": 0.54,
-        "bid_volume": 3,
-        "ask_volume": 3,
+        "ask": 0.49,
+        "bid_volume": 2,
+        "ask_volume": 21,
         "is_marketable": true
     },
     "368140-Tobari and the Night of the Curious Moon Booster Pack": {
@@ -11914,9 +11914,9 @@
         "is_marketable": true
     },
     "643980-Ironbound Booster Pack": {
-        "bid": 0.31,
-        "ask": 0.8,
-        "bid_volume": 10,
+        "bid": 0.2,
+        "ask": 0.93,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -11935,10 +11935,10 @@
         "is_marketable": true
     },
     "509560-Heroes of Dire Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.48,
-        "bid_volume": 16,
-        "ask_volume": 2,
+        "bid": 0.29,
+        "ask": 0.62,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "625940-Tomato Jones 2 Booster Pack": {
@@ -11963,9 +11963,9 @@
         "is_marketable": true
     },
     "803220-Winions: Mana Champions Booster Pack": {
-        "bid": 0.23,
+        "bid": 0.24,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -12026,10 +12026,10 @@
         "is_marketable": true
     },
     "356130-Heroes of Scene Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.88,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.26,
+        "ask": 0.52,
+        "bid_volume": 3,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "598820-Aloha Paradise Hotel Booster Pack": {
@@ -12040,9 +12040,9 @@
         "is_marketable": true
     },
     "444620-SpellKnights Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.8,
-        "bid_volume": 1,
+        "bid": 0.17,
+        "ask": 0.52,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12117,17 +12117,17 @@
         "is_marketable": true
     },
     "361630-404Sight Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.74,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.27,
+        "ask": 0.53,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "645260-Trophy Fishing 2 Booster Pack": {
-        "bid": 0.12,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.08,
+        "ask": 0.93,
+        "bid_volume": 7,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "761460-Lamplight City Booster Pack": {
@@ -12194,10 +12194,10 @@
         "is_marketable": true
     },
     "359060-Switch Galaxy Ultra Booster Pack": {
-        "bid": 0.26,
-        "ask": 0.76,
-        "bid_volume": 9,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": 0.51,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "718560-Scythe: Digital Edition Booster Pack": {
@@ -12293,7 +12293,7 @@
     },
     "563320-Mountain Trap: The Manor of Memories Booster Pack": {
         "bid": 0.12,
-        "ask": 0.61,
+        "ask": 0.96,
         "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
@@ -12327,9 +12327,9 @@
         "is_marketable": true
     },
     "485620-Pick a Hero Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.59,
-        "bid_volume": 2,
+        "bid": 0.12,
+        "ask": 0.58,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12397,9 +12397,9 @@
         "is_marketable": true
     },
     "538990-SugarMill Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.08,
         "ask": 0.94,
-        "bid_volume": 11,
+        "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12446,9 +12446,9 @@
         "is_marketable": true
     },
     "416670-Gunslingers Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.25,
-        "bid_volume": 1,
+        "bid": 0.18,
+        "ask": 0.52,
+        "bid_volume": 14,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12461,8 +12461,8 @@
     },
     "443250-Legacy of the Elder Star Booster Pack": {
         "bid": 0.11,
-        "ask": 0.26,
-        "bid_volume": 7,
+        "ask": 0.74,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12523,10 +12523,10 @@
         "is_marketable": true
     },
     "554640-拯救大魔王2 Rescue the Great Demon 2 Booster Pack": {
-        "bid": 0.21,
+        "bid": 0.23,
         "ask": 0.57,
-        "bid_volume": 2,
-        "ask_volume": 5,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "560730-The Esoterica: Hollow Earth Booster Pack": {
@@ -12600,9 +12600,9 @@
         "is_marketable": true
     },
     "380360-Tap Tap Infinity Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.69,
-        "bid_volume": 1,
+        "bid": 0.12,
+        "ask": 0.35,
+        "bid_volume": 24,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12726,8 +12726,8 @@
         "is_marketable": true
     },
     "260410-Get Off My Lawn! Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.36,
+        "bid": 0.25,
+        "ask": 0.53,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -12782,9 +12782,9 @@
         "is_marketable": true
     },
     "835860-Dreadnought Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.52,
-        "bid_volume": 1,
+        "bid": 0.21,
+        "ask": 0.62,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -12845,10 +12845,10 @@
         "is_marketable": true
     },
     "239660-Soldier Front 2 Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.62,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": -1,
+        "bid_volume": 18,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "591630-Candleman: The Complete Journey Booster Pack": {
@@ -12887,10 +12887,10 @@
         "is_marketable": true
     },
     "587310-Soma Spirits: Rebalance Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.41,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": 0.57,
+        "bid_volume": 15,
+        "ask_volume": 5,
         "is_marketable": true
     },
     "257690-J.U.L.I.A.: Among the Stars Booster Pack": {
@@ -12915,9 +12915,9 @@
         "is_marketable": true
     },
     "649900-Mini Guns Booster Pack": {
-        "bid": 0.11,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -12992,8 +12992,8 @@
         "is_marketable": true
     },
     "433350-BlackShot: Mercenary Warfare FPS Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.58,
+        "bid": 0.14,
+        "ask": 0.52,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -13027,9 +13027,9 @@
         "is_marketable": true
     },
     "360730-Cards and Castles Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.35,
-        "bid_volume": 2,
+        "bid": 0.12,
+        "ask": 0.6,
+        "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -13062,16 +13062,16 @@
         "is_marketable": true
     },
     "630140-Sky Clash: Lords of Clans 3D Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.47,
+        "bid": 0.2,
+        "ask": 0.48,
         "bid_volume": 2,
-        "ask_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "218450-Jagged Alliance Online - Steam Edition Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.54,
-        "bid_volume": 3,
+        "bid": 0.19,
+        "ask": 0.53,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -13125,10 +13125,10 @@
         "is_marketable": true
     },
     "467380-Khimera: Destroy All Monster Girls Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.61,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "bid": 0.24,
+        "ask": 0.5,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "342880-NekoChan Hero - Collection Booster Pack": {
@@ -13160,10 +13160,10 @@
         "is_marketable": true
     },
     "268770-Treasure Adventure World Booster Pack": {
-        "bid": 0.03,
-        "ask": 0.31,
+        "bid": 0.12,
+        "ask": -1,
         "bid_volume": 5,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "606950-Army General Booster Pack": {
@@ -13244,10 +13244,10 @@
         "is_marketable": true
     },
     "368980-Force of Elements Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.35,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.17,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "502940-Calm Down, Stalin Booster Pack": {
@@ -13279,10 +13279,10 @@
         "is_marketable": true
     },
     "418280-Retaliation Booster Pack": {
-        "bid": 0.03,
-        "ask": 0.32,
-        "bid_volume": 13,
-        "ask_volume": 1,
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "336140-Unavowed Booster Pack": {
@@ -13308,7 +13308,7 @@
     },
     "585990-Echoes of the Fey Episode 0: The Immolation Booster Pack": {
         "bid": 0.2,
-        "ask": 0.77,
+        "ask": 0.83,
         "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
@@ -13566,10 +13566,10 @@
         "is_marketable": true
     },
     "338180-Batla Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.37,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "381990-Dragon Saga Booster Pack": {
@@ -13636,10 +13636,10 @@
         "is_marketable": true
     },
     "662320-Metro Conflict: The Origin Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.63,
+        "bid": 0.17,
+        "ask": 0.32,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "572240-Snake 3D Adventures Booster Pack": {
@@ -13776,8 +13776,8 @@
         "is_marketable": true
     },
     "619310-Ways of History Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.88,
+        "bid": 0.28,
+        "ask": 0.93,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -13882,9 +13882,9 @@
     },
     "378480-Badland Bandits Booster Pack": {
         "bid": 0.09,
-        "ask": 0.6,
-        "bid_volume": 3,
-        "ask_volume": 5,
+        "ask": 0.51,
+        "bid_volume": 34,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "358130-Curious Expedition Booster Pack": {
@@ -14112,9 +14112,9 @@
         "is_marketable": true
     },
     "459350-BATTLESLOTHS 2025: The Great Pizza Wars Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.35,
-        "bid_volume": 6,
+        "bid": 0.18,
+        "ask": 0.92,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -14280,10 +14280,10 @@
         "is_marketable": true
     },
     "553330-Clutter Infinity: Joe's Ultimate Quest Booster Pack": {
-        "bid": 0.12,
-        "ask": 1.32,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.2,
+        "ask": 0.59,
+        "bid_volume": 2,
+        "ask_volume": 25,
         "is_marketable": true
     },
     "525740-Slashy Hero Booster Pack": {
@@ -14315,9 +14315,9 @@
         "is_marketable": true
     },
     "520680-Lost Cities Booster Pack": {
-        "bid": 0.41,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -14441,10 +14441,10 @@
         "is_marketable": true
     },
     "350490-Love And Order Booster Pack": {
-        "bid": 0.2,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.25,
+        "ask": 0.66,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "761600-Onimusha: Warlords - 鬼武者 Booster Pack": {
@@ -14511,10 +14511,10 @@
         "is_marketable": true
     },
     "341290-Lazors Booster Pack": {
-        "bid": 0.21,
-        "ask": -1,
+        "bid": 0.18,
+        "ask": 1.16,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "427050-Siege - the card game Booster Pack": {
@@ -14610,9 +14610,9 @@
     },
     "463440-Retool Booster Pack": {
         "bid": 0.1,
-        "ask": 0.35,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "867700-The Wilting Amaranth Booster Pack": {
@@ -14742,23 +14742,23 @@
         "is_marketable": true
     },
     "576690-King of Crowns Chess Online Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.19,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 20,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "338810-Demise of Nations Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.31,
-        "bid_volume": 3,
-        "ask_volume": 7,
+        "bid": 0.24,
+        "ask": 0.58,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "257710-Max Gentlemen Booster Pack": {
-        "bid": 0.16,
+        "bid": 0.18,
         "ask": 0.48,
-        "bid_volume": 1,
+        "bid_volume": 21,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -14819,9 +14819,9 @@
         "is_marketable": true
     },
     "437100-My Night Job Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.94,
-        "bid_volume": 3,
+        "bid": 0.17,
+        "ask": 0.71,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -15134,10 +15134,10 @@
         "is_marketable": true
     },
     "622010-The Fall of Lazarus Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 5,
-        "ask_volume": -1,
+        "bid": 0.16,
+        "ask": 0.8,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "578900-Demonheart Booster Pack": {
@@ -15155,9 +15155,9 @@
         "is_marketable": true
     },
     "543940-Perso Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.69,
-        "bid_volume": 6,
+        "bid": 0.24,
+        "ask": 0.75,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -15358,10 +15358,10 @@
         "is_marketable": true
     },
     "468250-Warfare Online Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.37,
-        "bid_volume": 8,
-        "ask_volume": 3,
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "496030-Dark Parables: The Swan Princess and The Dire Tree Collector's Edition Booster Pack": {
@@ -15414,10 +15414,10 @@
         "is_marketable": true
     },
     "513150-Daylight's End VR Edition Booster Pack": {
-        "bid": 0.31,
-        "ask": -1,
+        "bid": 0.21,
+        "ask": 0.52,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "973760-Thronebreaker: The Witcher Tales Booster Pack": {
@@ -15449,10 +15449,10 @@
         "is_marketable": true
     },
     "790600-Stormbound Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.36,
+        "bid": 0.1,
+        "ask": 0.83,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "503400-Four Last Things Booster Pack": {
@@ -15477,10 +15477,10 @@
         "is_marketable": true
     },
     "591680-Taphouse VR Booster Pack": {
-        "bid": 0.31,
-        "ask": 0.89,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.05,
+        "ask": 1.1,
+        "bid_volume": 8,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "449460-Commands & Colors: The Great War Booster Pack": {
@@ -15533,10 +15533,10 @@
         "is_marketable": true
     },
     "572660-Nick Booster Pack": {
-        "bid": 0.24,
-        "ask": -1,
-        "bid_volume": 12,
-        "ask_volume": -1,
+        "bid": 0.28,
+        "ask": 0.61,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "571340-Seeking Evil: The Wendigo Booster Pack": {
@@ -15624,9 +15624,9 @@
         "is_marketable": true
     },
     "235340-Prime World Booster Pack": {
-        "bid": 0.21,
+        "bid": 0.29,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -15848,10 +15848,10 @@
         "is_marketable": true
     },
     "589870-Learn to Fly 3 Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.28,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "bid": 0.15,
+        "ask": 0.93,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "402180-Sakura Swim Club Booster Pack": {
@@ -15904,10 +15904,10 @@
         "is_marketable": true
     },
     "365070-One Manga Day Booster Pack": {
-        "bid": 0.28,
-        "ask": 0.37,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": 0.62,
+        "bid_volume": 21,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "418150-The Madness of Little Emma Booster Pack": {
@@ -15925,9 +15925,9 @@
         "is_marketable": true
     },
     "760620-Deiland Booster Pack": {
-        "bid": 0.19,
+        "bid": 0.21,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -15962,7 +15962,7 @@
     "354640-The Settlers Online Booster Pack": {
         "bid": 0.31,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -15995,9 +15995,9 @@
         "is_marketable": true
     },
     "300040-Divine Souls Booster Pack": {
-        "bid": 0.15,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -16149,10 +16149,10 @@
         "is_marketable": true
     },
     "315640-Dizzel Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.76,
-        "bid_volume": 8,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": 0.73,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "562480-Corona Blossom Vol.3 Journey to the Stars Booster Pack": {
@@ -16422,9 +16422,9 @@
         "is_marketable": true
     },
     "412310-Labyrinth Booster Pack": {
-        "bid": 0.5,
-        "ask": 0.8,
-        "bid_volume": 9,
+        "bid": 0.26,
+        "ask": 0.93,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -16562,16 +16562,16 @@
         "is_marketable": true
     },
     "348840-UFHO2 Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 4,
-        "ask_volume": -1,
+        "bid": 0.12,
+        "ask": 0.53,
+        "bid_volume": 24,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "590910-炎黄战纪[Legacy of YanHuang] Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.34,
-        "bid_volume": 2,
+        "bid": 0.19,
+        "ask": 0.52,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -16604,10 +16604,10 @@
         "is_marketable": true
     },
     "257670-Elder Sign: Omens Booster Pack": {
-        "bid": 0.25,
+        "bid": 0.18,
         "ask": 0.42,
-        "bid_volume": 14,
-        "ask_volume": 5,
+        "bid_volume": 40,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "629840-Caligo Booster Pack": {
@@ -16625,9 +16625,9 @@
         "is_marketable": true
     },
     "349840-Ancestory Booster Pack": {
-        "bid": 0.04,
-        "ask": 0.54,
-        "bid_volume": 2,
+        "bid": 0.13,
+        "ask": 0.34,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -16695,9 +16695,9 @@
         "is_marketable": true
     },
     "250420-8BitMMO Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.42,
-        "bid_volume": 2,
+        "bid": 0.24,
+        "ask": 0.26,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17080,16 +17080,16 @@
         "is_marketable": true
     },
     "247660-Deadly Premonition: The Director's Cut Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.24,
-        "bid_volume": 32,
-        "ask_volume": 30,
+        "bid": 0.07,
+        "ask": 0.34,
+        "bid_volume": 41,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "382260-8Bit Fiesta Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.37,
-        "bid_volume": 22,
+        "bid": 0.15,
+        "ask": 0.39,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17101,10 +17101,10 @@
         "is_marketable": true
     },
     "314970-Age of Conquest IV Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.6,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.23,
+        "ask": 0.46,
+        "bid_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "381640-Allods Online RU Booster Pack": {
@@ -17129,23 +17129,23 @@
         "is_marketable": true
     },
     "391210-Arclight Cascade Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.41,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.16,
+        "ask": 0.32,
+        "bid_volume": 1,
+        "ask_volume": 6,
         "is_marketable": true
     },
     "385530-Astro Lords Booster Pack": {
-        "bid": 0.28,
-        "ask": 1.01,
-        "bid_volume": 2,
+        "bid": 0.21,
+        "ask": 0.49,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
     "357830-Attack of the Labyrinth + Booster Pack": {
-        "bid": 0.08,
-        "ask": 1.77,
-        "bid_volume": 26,
+        "bid": 0.11,
+        "ask": 0.21,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17157,10 +17157,10 @@
         "is_marketable": true
     },
     "376560-Big Fish Legend Booster Pack": {
-        "bid": 0.08,
-        "ask": 1.22,
-        "bid_volume": 33,
-        "ask_volume": 1,
+        "bid": 0.24,
+        "ask": 0.54,
+        "bid_volume": 20,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "299360-Block N Load Booster Pack": {
@@ -17234,7 +17234,7 @@
         "is_marketable": true
     },
     "356330-Dragomon Hunter Booster Pack": {
-        "bid": 0.51,
+        "bid": 0.53,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -17248,10 +17248,10 @@
         "is_marketable": true
     },
     "321330-ENYO ARCADE Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.69,
+        "bid": 0.23,
+        "ask": 1.01,
         "bid_volume": 1,
-        "ask_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "334030-Epic Arena Booster Pack": {
@@ -17262,24 +17262,24 @@
         "is_marketable": true
     },
     "391820-Evolution Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.92,
-        "bid_volume": 6,
+        "bid": 0.12,
+        "ask": 0.37,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
     "227700-Firefall Booster Pack": {
-        "bid": 0.25,
+        "bid": 0.26,
         "ask": -1,
-        "bid_volume": 23,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "384030-Florensia Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.23,
-        "bid_volume": 1,
-        "ask_volume": 3,
+        "bid": 0.12,
+        "ask": 0.5,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "339610-FreeStyle 2: Street Basketball Booster Pack": {
@@ -17297,31 +17297,31 @@
         "is_marketable": true
     },
     "242720-GunZ 2: The Second Duel Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.88,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.18,
+        "ask": 0.25,
+        "bid_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "271290-HAWKEN Booster Pack": {
-        "bid": 2.38,
+        "bid": 2.48,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "344190-Immortal Empire Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.27,
-        "bid_volume": 1,
+        "bid": 0.1,
+        "ask": 0.39,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
     "345520-Infinite Crisis™ Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.25,
+        "bid": 0.28,
+        "ask": 0.29,
         "bid_volume": 7,
-        "ask_volume": 1,
+        "ask_volume": 24,
         "is_marketable": true
     },
     "393530-Insanity Clicker Booster Pack": {
@@ -17332,10 +17332,10 @@
         "is_marketable": true
     },
     "227180-Kingdom Wars Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.5,
+        "bid": 0.19,
+        "ask": 0.72,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "389430-Knight Online Booster Pack": {
@@ -17346,10 +17346,10 @@
         "is_marketable": true
     },
     "266150-Lost Saga North America Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.62,
-        "bid_volume": 2,
-        "ask_volume": 3,
+        "bid": 0.19,
+        "ask": 0.32,
+        "bid_volume": 1,
+        "ask_volume": 18,
         "is_marketable": true
     },
     "354290-LoveBeat Booster Pack": {
@@ -17361,15 +17361,15 @@
     },
     "283060-Lucent Heart Booster Pack": {
         "bid": 0.14,
-        "ask": 0.2,
-        "bid_volume": 1,
-        "ask_volume": 3,
+        "ask": 0.28,
+        "bid_volume": 20,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "342280-Manyland Booster Pack": {
         "bid": 0.11,
-        "ask": 0.64,
-        "bid_volume": 6,
+        "ask": 0.21,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17381,17 +17381,17 @@
         "is_marketable": true
     },
     "287920-Mortal Online Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.34,
-        "bid_volume": 4,
+        "bid": 0.13,
+        "ask": 0.62,
+        "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
     },
     "338540-Navy Field 2 : Conqueror of the Ocean Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.24,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.16,
+        "ask": 0.3,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "302590-Of Guards And Thieves Booster Pack": {
@@ -17409,8 +17409,8 @@
         "is_marketable": true
     },
     "240320-Panzar Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.59,
+        "bid": 0.17,
+        "ask": 0.61,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -17430,17 +17430,17 @@
         "is_marketable": true
     },
     "201210-Pox Nora Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.25,
-        "bid_volume": 11,
-        "ask_volume": 4,
+        "bid": 0.16,
+        "ask": 0.29,
+        "bid_volume": 19,
+        "ask_volume": 22,
         "is_marketable": true
     },
     "211500-RaceRoom Racing Experience  Booster Pack": {
         "bid": 0.2,
-        "ask": 0.29,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "ask": 0.55,
+        "bid_volume": 27,
+        "ask_volume": 2,
         "is_marketable": null
     },
     "215100-Ragnarok Booster Pack": {
@@ -17452,9 +17452,9 @@
     },
     "250740-Ragnarok Online - Free to Play - European Version Booster Pack": {
         "bid": 0.17,
-        "ask": 0.36,
+        "ask": 0.34,
         "bid_volume": 2,
-        "ask_volume": 5,
+        "ask_volume": 18,
         "is_marketable": true
     },
     "200210-Realm of the Mad God Booster Pack": {
@@ -17479,17 +17479,17 @@
         "is_marketable": false
     },
     "372800-RPG MO Booster Pack": {
-        "bid": 0.23,
-        "ask": 1.32,
-        "bid_volume": 8,
-        "ask_volume": 1,
+        "bid": 0.17,
+        "ask": 0.35,
+        "bid_volume": 4,
+        "ask_volume": 6,
         "is_marketable": true
     },
     "286940-S.K.I.L.L. - Special Force 2 Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.39,
-        "bid_volume": 5,
-        "ask_volume": 17,
+        "bid": 0.17,
+        "ask": 0.4,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "383080-Sakura Clicker Booster Pack": {
@@ -17500,9 +17500,9 @@
         "is_marketable": true
     },
     "390090-Shot Online Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.88,
-        "bid_volume": 3,
+        "bid": 0.12,
+        "ask": 0.83,
+        "bid_volume": 18,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17521,17 +17521,17 @@
         "is_marketable": true
     },
     "339280-Strife Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.32,
-        "bid_volume": 1,
+        "bid": 0.18,
+        "ask": 0.47,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
     "355840-Survarium Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.29,
-        "bid_volume": 21,
-        "ask_volume": 1,
+        "bid": 0.19,
+        "ask": -1,
+        "bid_volume": 27,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "316390-sZone-Online Booster Pack": {
@@ -17542,10 +17542,10 @@
         "is_marketable": true
     },
     "212740-TERA Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.4,
-        "bid_volume": 13,
-        "ask_volume": 6,
+        "bid": 0.32,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "323370-TERA Booster Pack": {
@@ -17591,10 +17591,10 @@
         "is_marketable": true
     },
     "345460-War of Omens Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.6,
-        "bid_volume": 14,
-        "ask_volume": 2,
+        "bid": 0.14,
+        "ask": 0.4,
+        "bid_volume": 19,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "291480-Warface Booster Pack": {
@@ -17635,20 +17635,20 @@
     "410380-HEX: Shards of Fate Booster Pack": {
         "bid": 0.15,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": true
     },
     "411480-BATTLECREW Space Pirates Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.32,
-        "bid_volume": 1,
+        "bid": 0.16,
+        "ask": 0.37,
+        "bid_volume": 2,
         "ask_volume": 2,
         "is_marketable": true
     },
     "414530-Skyforge Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.35,
+        "bid": 0.11,
+        "ask": 0.37,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -17661,17 +17661,17 @@
         "is_marketable": true
     },
     "416450-Emporea Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.31,
-        "bid_volume": 2,
-        "ask_volume": 4,
+        "bid": 0.17,
+        "ask": 1,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "421180-Umbra: Shadow of Death Booster Pack": {
-        "bid": 0.18,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.25,
+        "ask": 1.75,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "427270-Orcs Must Die! Unchained Booster Pack": {
@@ -17682,17 +17682,17 @@
         "is_marketable": true
     },
     "429540-Prime World: Defenders 2 Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.32,
-        "bid_volume": 1,
+        "bid": 0.15,
+        "ask": 0.41,
+        "bid_volume": 9,
         "ask_volume": 1,
         "is_marketable": true
     },
     "432290-Elemental Heroes Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 4,
-        "ask_volume": -1,
+        "bid": 0.21,
+        "ask": 0.72,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "436520-Line of Sight Booster Pack": {
@@ -17731,38 +17731,38 @@
         "is_marketable": true
     },
     "446150-GUNS UP! Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.25,
+        "bid": 0.17,
+        "ask": 0.58,
         "bid_volume": 1,
-        "ask_volume": 10,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "451230-Wartune Booster Pack": {
-        "bid": 0.18,
+        "bid": 0.53,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
     "454540-LuckCatchers Booster Pack": {
-        "bid": 0.03,
-        "ask": 0.41,
-        "bid_volume": 14,
+        "bid": 0.2,
+        "ask": 0.97,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "454600-Age of Cavemen Booster Pack": {
         "bid": 0.14,
-        "ask": 0.4,
-        "bid_volume": 2,
-        "ask_volume": 3,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "454910-Twin Saga Booster Pack": {
         "bid": 0.14,
-        "ask": 0.36,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "455300-Deuterium Wars Booster Pack": {
@@ -17780,17 +17780,17 @@
         "is_marketable": true
     },
     "463250-One Tower Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.81,
+        "bid": 0.16,
+        "ask": 0.83,
         "bid_volume": 2,
-        "ask_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "464800-Twisted Worlds Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.81,
+        "bid": 0.23,
+        "ask": 0.61,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "482920-Hero Zero Booster Pack": {
@@ -17808,10 +17808,10 @@
         "is_marketable": true
     },
     "485650-Campaign Clicker Booster Pack": {
-        "bid": 0.26,
-        "ask": -1,
-        "bid_volume": 10,
-        "ask_volume": -1,
+        "bid": 0.19,
+        "ask": 0.54,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "486460-Twilight Town Booster Pack": {
@@ -17822,10 +17822,10 @@
         "is_marketable": true
     },
     "486490-Witan Booster Pack": {
-        "bid": 0.05,
-        "ask": 1.03,
-        "bid_volume": 9,
-        "ask_volume": 2,
+        "bid": 0.04,
+        "ask": 0.78,
+        "bid_volume": 10,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "489000-The Infinite Black Booster Pack": {
@@ -17836,45 +17836,45 @@
         "is_marketable": true
     },
     "495910-Dungeon Fighter Online Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.21,
-        "bid_volume": 23,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": 0.2,
+        "bid_volume": 33,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "505700-Anyland Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.36,
-        "bid_volume": 28,
-        "ask_volume": 3,
+        "bid": 0.13,
+        "ask": 0.27,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "511800-ONRAID Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.5,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "bid": 0.13,
+        "ask": 0.37,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "512560-HoCWar Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.28,
-        "bid_volume": 11,
-        "ask_volume": 3,
+        "bid": 0.08,
+        "ask": 0.26,
+        "bid_volume": 21,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "513560-Hunger Dungeon Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.39,
-        "bid_volume": 27,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.73,
+        "bid_volume": 4,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "522230-The Fishing Club 3D Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.23,
+        "bid": 0.07,
+        "ask": 0.2,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 26,
         "is_marketable": true
     },
     "523740-TechWars: Global Conflict Booster Pack": {
@@ -17892,10 +17892,10 @@
         "is_marketable": true
     },
     "533540-MONMUSU Booster Pack": {
-        "bid": 0.23,
-        "ask": 0.25,
-        "bid_volume": 1,
-        "ask_volume": 46,
+        "bid": 0.18,
+        "ask": 0.31,
+        "bid_volume": 23,
+        "ask_volume": 16,
         "is_marketable": true
     },
     "537180-Digimon Masters Online Booster Pack": {
@@ -17906,23 +17906,23 @@
         "is_marketable": true
     },
     "539640-Racecar.io Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.39,
-        "bid_volume": 1,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "545820-Wanderland Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.57,
-        "bid_volume": 2,
+        "bid": 0.13,
+        "ask": 0.49,
+        "bid_volume": 3,
         "ask_volume": 2,
         "is_marketable": true
     },
+    "545820-Wanderland Booster Pack": {
+        "bid": 0.17,
+        "ask": 0.52,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
     "547010-Terminal Hacker Booster Pack": {
-        "bid": 0.04,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17934,24 +17934,24 @@
         "is_marketable": true
     },
     "550900-Metin2 Booster Pack": {
-        "bid": 0.2,
-        "ask": 0.32,
+        "bid": 0.27,
+        "ask": -1,
         "bid_volume": 3,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "551170-Onmyoji Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.16,
-        "bid_volume": 3,
+        "bid": 0.08,
+        "ask": 0.21,
+        "bid_volume": 19,
         "ask_volume": 1,
         "is_marketable": true
     },
     "552110-Puzzle Pirates: Dark Seas Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.5,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.46,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "552990-World of Warships Booster Pack": {
@@ -17969,23 +17969,23 @@
         "is_marketable": true
     },
     "555570-Infestation: The New Z Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.24,
+        "bid": 0.09,
+        "ask": 0.3,
         "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
     },
     "557400-Midas Gold Plus Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.39,
+        "bid": 0.18,
+        "ask": 0.38,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "560380-MapleStory 2 Booster Pack": {
-        "bid": 0.29,
+        "bid": 0.93,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -18012,23 +18012,23 @@
     },
     "565020-Global Adventures Booster Pack": {
         "bid": 0.19,
-        "ask": 0.36,
-        "bid_volume": 2,
-        "ask_volume": 4,
+        "ask": 0.62,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "572520-Dropzone Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.23,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.15,
+        "ask": 0.26,
+        "bid_volume": 25,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "574070-Space Wars: Interstellar Empires Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.27,
+        "bid": 0.13,
+        "ask": 0.24,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "578310-BRAIN - OUT Booster Pack": {
@@ -18069,7 +18069,7 @@
     "592890-Insidia Booster Pack": {
         "bid": 0.13,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18081,16 +18081,16 @@
         "is_marketable": true
     },
     "612020-Zombidle: REMONSTERED Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.48,
-        "bid_volume": 14,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.34,
+        "bid_volume": 21,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "615020-King of the World Booster Pack": {
-        "bid": 0.17,
-        "ask": 3.46,
-        "bid_volume": 2,
+        "bid": 0.21,
+        "ask": 0.83,
+        "bid_volume": 3,
         "ask_volume": 2,
         "is_marketable": true
     },
@@ -18102,10 +18102,10 @@
         "is_marketable": true
     },
     "625580-The Cleansing Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.39,
-        "bid_volume": 22,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": 0.73,
+        "bid_volume": 99,
+        "ask_volume": 24,
         "is_marketable": true
     },
     "625860-God Awe-full Clicker Booster Pack": {
@@ -18116,7 +18116,7 @@
         "is_marketable": true
     },
     "630100-SoulWorker Booster Pack": {
-        "bid": 0.27,
+        "bid": 0.39,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18130,10 +18130,10 @@
         "is_marketable": true
     },
     "648430-Hand of the Gods Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.17,
         "ask": 0.5,
-        "bid_volume": 4,
-        "ask_volume": 4,
+        "bid_volume": 8,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "660330-Ragnarok Re:Start Booster Pack": {
@@ -18158,9 +18158,9 @@
         "is_marketable": true
     },
     "667890-Dead Maze Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.42,
-        "bid_volume": 2,
+        "bid": 0.19,
+        "ask": 0.47,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -18173,7 +18173,7 @@
     },
     "685420-Grace of Zordan Booster Pack": {
         "bid": 0.13,
-        "ask": 0.37,
+        "ask": 0.47,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -18200,10 +18200,10 @@
         "is_marketable": true
     },
     "719730-Uptasia Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.5,
-        "bid_volume": 20,
-        "ask_volume": 13,
+        "bid": 0.14,
+        "ask": 0.39,
+        "bid_volume": 30,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "734750-PickCrafter Booster Pack": {
@@ -18214,8 +18214,8 @@
         "is_marketable": true
     },
     "735850-Trailer Park Boys: Greasy Money Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.29,
+        "bid": 0.18,
+        "ask": 0.54,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -18256,36 +18256,36 @@
         "is_marketable": true
     },
     "842150-Wild West Saga Booster Pack": {
-        "bid": 0.18,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": true
-    },
-    "861920-Rocket Valley Tycoon Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.5,
-        "bid_volume": 1,
-        "ask_volume": 2,
-        "is_marketable": true
-    },
-    "874240-MU Legend Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.26,
-        "bid_volume": 30,
-        "ask_volume": 8,
-        "is_marketable": true
-    },
-    "883860-Cadria Item Shop Booster Pack": {
         "bid": 0.2,
-        "ask": 0.42,
-        "bid_volume": 3,
+        "ask": 0.43,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
+    "861920-Rocket Valley Tycoon Booster Pack": {
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "874240-MU Legend Booster Pack": {
+        "bid": 0.12,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "883860-Cadria Item Shop Booster Pack": {
+        "bid": 0.18,
+        "ask": 0.34,
+        "bid_volume": 15,
+        "ask_volume": 22,
+        "is_marketable": true
+    },
     "884090-Idle Dungeons Booster Pack": {
-        "bid": 0.25,
-        "ask": 0.88,
+        "bid": 0.24,
+        "ask": 0.55,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -18298,10 +18298,10 @@
         "is_marketable": true
     },
     "705810-Wuxing Master 五行师(CCG) Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.26,
-        "bid_volume": 18,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.19,
+        "bid_volume": 4,
+        "ask_volume": 20,
         "is_marketable": true
     },
     "535750-VR Fun World Booster Pack": {
@@ -18312,9 +18312,9 @@
         "is_marketable": true
     },
     "431930-Kabounce Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.32,
-        "bid_volume": 3,
+        "bid": 0.13,
+        "ask": 0.46,
+        "bid_volume": 30,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -18438,9 +18438,9 @@
         "is_marketable": true
     },
     "223650-F.E.A.R. Online Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.35,
-        "bid_volume": 17,
+        "bid": 0.17,
+        "ask": 0.4,
+        "bid_volume": 22,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -18816,28 +18816,28 @@
         "is_marketable": true
     },
     "410560-Trinium Wars Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "426970-Age of Magic CCG Booster Pack": {
-        "bid": 0.39,
+        "bid": 0.34,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "534500-Tiger Knight: Empire War Booster Pack": {
-        "bid": 0.31,
+        "bid": 0.28,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "542560-Astro Boy: Edge of Time Booster Pack": {
-        "bid": 0.14,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18845,9 +18845,9 @@
     },
     "558230-Elsword Free-to-Play Booster Pack": {
         "bid": 0.14,
-        "ask": 0.19,
-        "bid_volume": 1,
-        "ask_volume": 15,
+        "ask": 0.28,
+        "bid_volume": 12,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "568810-FreeStyleFootball Booster Pack": {
@@ -18865,16 +18865,16 @@
         "is_marketable": false
     },
     "589370-Fur Fun Booster Pack": {
-        "bid": 0.16,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "513650-Zula Europe Booster Pack": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18907,10 +18907,10 @@
         "is_marketable": true
     },
     "679990-Half-Life: C.A.G.E.D. Booster Pack": {
-        "bid": 0.29,
-        "ask": 1.7,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "1094930-Ninja Girl and the Mysterious Army of Urban Legend Monsters! ~Hunt of the Headless Horseman~ Booster Pack": {
@@ -19131,16 +19131,16 @@
         "is_marketable": true
     },
     "612150-Conran - The dinky Raccoon Booster Pack": {
-        "bid": 0.16,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 8,
         "ask_volume": -1,
         "is_marketable": true
     },
     "412230-InfiniTrap Classic Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.8,
-        "bid_volume": 1,
+        "bid": 0.18,
+        "ask": 0.47,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -19537,16 +19537,16 @@
         "is_marketable": true
     },
     "600750-Star Trek Timelines Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.16,
-        "bid_volume": 7,
-        "ask_volume": 1,
+        "bid": 0.12,
+        "ask": 0.18,
+        "bid_volume": 1,
+        "ask_volume": 6,
         "is_marketable": true
     },
     "459160-Allods Online Booster Pack": {
-        "bid": 0.27,
-        "ask": 0.87,
-        "bid_volume": 2,
+        "bid": 0.23,
+        "ask": 0.73,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -19859,7 +19859,7 @@
         "is_marketable": true
     },
     "284790-Nightmares from the Deep 2: The Siren`s Call Booster Pack": {
-        "bid": 0.08,
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19880,10 +19880,10 @@
         "is_marketable": true
     },
     "558100-Art of War: Red Tides Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.27,
-        "bid_volume": 23,
-        "ask_volume": 1,
+        "bid": 0.14,
+        "ask": 0.31,
+        "bid_volume": 16,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "860950-Mark of the Ninja: Remastered Booster Pack": {
@@ -19915,10 +19915,10 @@
         "is_marketable": true
     },
     "513440-Path of War Booster Pack": {
-        "bid": 0.13,
-        "ask": 0.3,
-        "bid_volume": 2,
-        "ask_volume": 4,
+        "bid": 0.15,
+        "ask": 0.32,
+        "bid_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "205610-Port Royale 3 Booster Pack": {
@@ -20454,9 +20454,9 @@
         "is_marketable": null
     },
     "369200-Ghost in the Shell: Stand Alone Complex - First Assault Online Booster Pack": {
-        "bid": 1.76,
+        "bid": 1.85,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20552,9 +20552,9 @@
         "is_marketable": true
     },
     "390560-Fantasy Strike Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.3,
-        "bid_volume": 1,
+        "bid": 0.13,
+        "ask": 0.29,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -21616,8 +21616,8 @@
         "is_marketable": true
     },
     "331460-ROOMS: The Toymaker's Mansion Booster Pack": {
-        "bid": 0.13,
-        "ask": 1.7,
+        "bid": 0.09,
+        "ask": 0.28,
         "bid_volume": 21,
         "ask_volume": 1,
         "is_marketable": true
@@ -21931,9 +21931,9 @@
         "is_marketable": true
     },
     "448460-Crazy Killer Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.38,
-        "bid_volume": 3,
+        "bid": 0.17,
+        "ask": 0.83,
+        "bid_volume": 10,
         "ask_volume": 2,
         "is_marketable": true
     },
@@ -21945,23 +21945,23 @@
         "is_marketable": false
     },
     "441020-Heavenstrike Rivals® Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.57,
-        "bid_volume": 17,
-        "ask_volume": 1,
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "335950-Insecters War Booster Pack": {
-        "bid": 0.24,
-        "ask": -1,
-        "bid_volume": 8,
-        "ask_volume": -1,
+        "bid": 0.26,
+        "ask": 0.81,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "264360-La Tale Booster Pack": {
         "bid": 0.32,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21973,23 +21973,23 @@
         "is_marketable": false
     },
     "293560-TOME: Immortal Arena Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.81,
-        "bid_volume": 2,
+        "bid": 0.16,
+        "ask": 0.49,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "317110-Uncharted Waters Online: Episode Atlantis Booster Pack": {
         "bid": 0.13,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": false
     },
     "380770-Wind of Luck: Arena Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.74,
-        "bid_volume": 4,
+        "bid": 0.08,
+        "ask": 0.18,
+        "bid_volume": 25,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -22099,10 +22099,10 @@
         "is_marketable": true
     },
     "435600-My Tower, My Home Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.52,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.23,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "331390-Winged Sakura: Mindy's Arc Booster Pack": {
@@ -22771,10 +22771,10 @@
         "is_marketable": true
     },
     "499340-Turner Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.37,
+        "bid": 0.15,
+        "ask": 0.59,
         "bid_volume": 8,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "326840-Heart&Slash Booster Pack": {
@@ -22890,7 +22890,7 @@
         "is_marketable": false
     },
     "612290-ASTA Online Booster Pack": {
-        "bid": 0.17,
+        "bid": 0.18,
         "ask": -1,
         "bid_volume": 5,
         "ask_volume": -1,
@@ -22911,17 +22911,17 @@
         "is_marketable": true
     },
     "357490-Astroloco: Worst Contact Booster Pack": {
-        "bid": 0.1,
-        "ask": 2,
-        "bid_volume": 1,
+        "bid": 0.06,
+        "ask": 0.42,
+        "bid_volume": 15,
         "ask_volume": 1,
         "is_marketable": true
     },
     "365980-Useless Box Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.58,
-        "bid_volume": 12,
-        "ask_volume": 1,
+        "bid": 0.16,
+        "ask": 0.69,
+        "bid_volume": 11,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "569800-LEAVES - The Journey Booster Pack": {
@@ -23030,9 +23030,9 @@
         "is_marketable": true
     },
     "370440-No70: Eye of Basir Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.46,
-        "bid_volume": 21,
+        "bid": 0.15,
+        "ask": 0.74,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -23107,10 +23107,10 @@
         "is_marketable": true
     },
     "544190-Book Series - Alice in Wonderland Booster Pack": {
-        "bid": 0.19,
-        "ask": 0.54,
-        "bid_volume": 27,
-        "ask_volume": 2,
+        "bid": 0.25,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "553000-Escape Artist: The Trial Booster Pack": {
@@ -23177,8 +23177,8 @@
         "is_marketable": true
     },
     "244930-SNOW Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.27,
+        "bid": 0.13,
+        "ask": 0.29,
         "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
@@ -23192,9 +23192,9 @@
     },
     "211360-Offspring Fling! Booster Pack": {
         "bid": 0.17,
-        "ask": 0.43,
+        "ask": 0.31,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "263280-Spintires® Booster Pack": {
@@ -23247,9 +23247,9 @@
         "is_marketable": true
     },
     "344260-Agapan Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -23317,9 +23317,9 @@
         "is_marketable": true
     },
     "840010-Garden Paws Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -23485,9 +23485,9 @@
         "is_marketable": true
     },
     "404770-SUPERFIGHT Booster Pack": {
-        "bid": 0.3,
+        "bid": 0.4,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -23744,9 +23744,9 @@
         "is_marketable": true
     },
     "536990-Redie Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.71,
-        "bid_volume": 3,
+        "bid": 0.2,
+        "ask": 0.46,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -23800,7 +23800,7 @@
         "is_marketable": true
     },
     "620530-Mirt. Tales of the Cold Land Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -24542,10 +24542,10 @@
         "is_marketable": true
     },
     "554660-Puzzle Poker Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.46,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "bid": 0.19,
+        "ask": 0.37,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "534560-Ramify Booster Pack": {
@@ -24990,9 +24990,9 @@
         "is_marketable": true
     },
     "556440-Vicious Circle Booster Pack": {
-        "bid": 0.23,
+        "bid": 0.24,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -25305,9 +25305,9 @@
         "is_marketable": true
     },
     "335190-200% Mixed Juice! Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.26,
-        "bid_volume": 25,
+        "bid": 0.13,
+        "ask": 13.81,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -25655,9 +25655,9 @@
         "is_marketable": true
     },
     "332540-We Slay Monsters Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.87,
-        "bid_volume": 3,
+        "bid": 0.21,
+        "ask": 0.92,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -25676,10 +25676,10 @@
         "is_marketable": true
     },
     "500980-Endangered Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.36,
-        "bid_volume": 59,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": 0.65,
+        "bid_volume": 26,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "746580-HARDCORE MECHA Booster Pack": {
@@ -25774,9 +25774,9 @@
         "is_marketable": true
     },
     "349540-PeriAreion Booster Pack": {
-        "bid": 0.12,
-        "ask": 0.38,
-        "bid_volume": 2,
+        "bid": 0.06,
+        "ask": 0.37,
+        "bid_volume": 21,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -25844,10 +25844,10 @@
         "is_marketable": true
     },
     "748940-Rise of Legions Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.41,
+        "bid": 0.14,
+        "ask": 0.26,
         "bid_volume": 2,
-        "ask_volume": 3,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "594640-Evil Booster Pack": {
@@ -26159,9 +26159,9 @@
         "is_marketable": true
     },
     "434780-The Renegades of Orion 2.0 Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 15,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -26411,10 +26411,10 @@
         "is_marketable": true
     },
     "388490-One Way To Die Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.81,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.2,
+        "ask": 0.54,
+        "bid_volume": 101,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "659540-Warsim: The Realm of Aslona Booster Pack": {
@@ -26488,9 +26488,9 @@
         "is_marketable": true
     },
     "341270-Samphi Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.51,
-        "bid_volume": 2,
+        "bid": 0.09,
+        "ask": 0.52,
+        "bid_volume": 9,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -26509,10 +26509,10 @@
         "is_marketable": true
     },
     "654690-Bermuda - Lost Survival Booster Pack": {
-        "bid": -1,
-        "ask": 0.98,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "703080-Planet Zoo Booster Pack": {
@@ -26586,10 +26586,10 @@
         "is_marketable": true
     },
     "587540-Deliverace - Battle Racing Booster Pack": {
-        "bid": 0.37,
-        "ask": 1.15,
-        "bid_volume": 2,
-        "ask_volume": 2,
+        "bid": 0.35,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "346780-Luminosity Booster Pack": {
@@ -26607,17 +26607,17 @@
         "is_marketable": true
     },
     "539380-Think To Die 2 Booster Pack": {
-        "bid": 0.12,
-        "ask": 1.2,
-        "bid_volume": 7,
-        "ask_volume": 1,
+        "bid": 0.24,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "439350-Kritika:REBOOT Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.5,
+        "bid": 0.09,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "560080-I may die! Booster Pack": {
@@ -26663,9 +26663,9 @@
         "is_marketable": false
     },
     "592750-SPACE-FRIGHT Booster Pack": {
-        "bid": 0.2,
-        "ask": 7.85,
-        "bid_volume": 2,
+        "bid": 0.21,
+        "ask": 0.65,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -27167,7 +27167,7 @@
         "is_marketable": false
     },
     "224220-Pressure Booster Pack": {
-        "bid": 0.21,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28924,9 +28924,9 @@
         "is_marketable": true
     },
     "390730-Sora Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.4,
-        "bid_volume": 21,
+        "bid": 0.13,
+        "ask": 0.31,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -29785,7 +29785,7 @@
         "is_marketable": true
     },
     "342250-Aspectus: Rinascimento Chronicles Booster Pack": {
-        "bid": 0.17,
+        "bid": 0.19,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -30619,9 +30619,9 @@
     },
     "640210-Just One Line Booster Pack": {
         "bid": 0.1,
-        "ask": -1,
+        "ask": 0.53,
         "bid_volume": 5,
-        "ask_volume": -1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "552130-Whiplash - Crash Valley Booster Pack": {
@@ -30674,9 +30674,9 @@
         "is_marketable": true
     },
     "572300-Nyheim Booster Pack": {
-        "bid": 0.19,
+        "bid": 0.21,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -30828,9 +30828,9 @@
         "is_marketable": true
     },
     "437730-Roadclub: League Racing Booster Pack": {
-        "bid": -1,
+        "bid": 0.15,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -30863,10 +30863,10 @@
         "is_marketable": true
     },
     "371120-Discouraged Workers Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.19,
-        "bid_volume": 5,
-        "ask_volume": 4,
+        "bid": 0.12,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "434860-Wanderjahr Booster Pack": {
@@ -31474,7 +31474,7 @@
     "439530-Rock-n-Rogue A Boo Bunny Plague Adventure Booster Pack": {
         "bid": 0.1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 20,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -31605,10 +31605,10 @@
         "is_marketable": true
     },
     "705020-Bottom of the 9th Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.27,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.08,
+        "ask": 0.17,
+        "bid_volume": 6,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "581740-HUNGER Booster Pack": {
@@ -31780,9 +31780,9 @@
         "is_marketable": true
     },
     "567730-Merry Snowballs Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.38,
-        "bid_volume": 1,
+        "bid": 0.23,
+        "ask": 0.46,
+        "bid_volume": 8,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -32319,7 +32319,7 @@
         "is_marketable": true
     },
     "793680-Fission Superstar X Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
@@ -32459,9 +32459,9 @@
         "is_marketable": true
     },
     "1078510-Alluris Booster Pack": {
-        "bid": 0.08,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -32592,9 +32592,9 @@
         "is_marketable": true
     },
     "636700-Crappy Day Enhanced Edition Booster Pack": {
-        "bid": 0.07,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -32643,7 +32643,7 @@
     "527460-Lepofrenia Booster Pack": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 102,
+        "bid_volume": 158,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -32656,23 +32656,23 @@
     },
     "342510-Bret Airborne Booster Pack": {
         "bid": 0.06,
-        "ask": 0.82,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "ask": 0.5,
+        "bid_volume": 22,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "386350-Rise: Battle Lines Booster Pack": {
         "bid": 0.12,
-        "ask": 0.61,
-        "bid_volume": 10,
-        "ask_volume": 1,
+        "ask": 0.96,
+        "bid_volume": 15,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "520910-Kokurase Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.17,
-        "bid_volume": 10,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.4,
+        "bid_volume": 6,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "375420-The Architect Booster Pack": {
@@ -32690,10 +32690,10 @@
         "is_marketable": true
     },
     "341890-Hitbox Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.36,
+        "bid": 0.13,
+        "ask": 0.88,
         "bid_volume": 3,
-        "ask_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "400630-Wuppo - Definitive Edition Booster Pack": {
@@ -32704,10 +32704,10 @@
         "is_marketable": true
     },
     "398140-Ino Booster Pack": {
-        "bid": 0.09,
-        "ask": 1.05,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.11,
+        "ask": 0.78,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "418270-Draw Slasher Booster Pack": {
@@ -32725,10 +32725,10 @@
         "is_marketable": true
     },
     "600630-Spaceship Looter Booster Pack": {
-        "bid": 0.06,
-        "ask": 0.21,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": 0.66,
+        "bid_volume": 19,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "262240-Suguri Booster Pack": {
@@ -32907,10 +32907,10 @@
         "is_marketable": true
     },
     "333220-Cherry Tree High I! My! Girls! Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.32,
-        "bid_volume": 18,
-        "ask_volume": 2,
+        "bid": 0.14,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "333600-NEKOPARA Vol. 1 Booster Pack": {
@@ -34055,9 +34055,9 @@
         "is_marketable": true
     },
     "576670-Sky Is Arrows Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.34,
-        "bid_volume": 1,
+        "bid": 0.06,
+        "ask": 0.42,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -34510,9 +34510,9 @@
         "is_marketable": true
     },
     "452340-Ian's Eyes Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.47,
-        "bid_volume": 3,
+        "bid": 0.16,
+        "ask": 0.51,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -34664,10 +34664,10 @@
         "is_marketable": true
     },
     "509580-The Lord of the Rings: Adventure Card Game - Definitive Edition Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.52,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.25,
+        "ask": 0.55,
+        "bid_volume": 5,
+        "ask_volume": 6,
         "is_marketable": true
     },
     "467810-Splody Booster Pack": {
@@ -35581,9 +35581,9 @@
         "is_marketable": true
     },
     "343820-Deja Vu: MacVenture Series Booster Pack": {
-        "bid": 0.09,
-        "ask": 1.06,
-        "bid_volume": 8,
+        "bid": 0.11,
+        "ask": 0.85,
+        "bid_volume": 21,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -36169,10 +36169,10 @@
         "is_marketable": true
     },
     "910630-Arcade Spirits Booster Pack": {
-        "bid": 0.11,
-        "ask": 0.54,
+        "bid": 0.19,
+        "ask": 0.43,
         "bid_volume": 2,
-        "ask_volume": 1,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "986800-AVICII Invector Booster Pack": {
@@ -36862,9 +36862,9 @@
         "is_marketable": true
     },
     "264560-Quest for Infamy Booster Pack": {
-        "bid": 0.08,
-        "ask": 0.3,
-        "bid_volume": 10,
+        "bid": 0.09,
+        "ask": 0.18,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -36890,10 +36890,10 @@
         "is_marketable": true
     },
     "504310-The Cooking Game Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.39,
-        "bid_volume": 31,
-        "ask_volume": 3,
+        "bid": 0.18,
+        "ask": 1.05,
+        "bid_volume": 16,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "403200-Legends of Dawn Reborn Booster Pack": {
@@ -37136,9 +37136,9 @@
     },
     "580910-idleBeer Booster Pack": {
         "bid": 0.11,
-        "ask": 0.57,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "612110-Sweet fantasy Booster Pack": {
@@ -37471,10 +37471,10 @@
         "is_marketable": true
     },
     "391920-Ether One Redux Booster Pack": {
-        "bid": 0.09,
-        "ask": 1.35,
-        "bid_volume": 18,
-        "ask_volume": 2,
+        "bid": 0.13,
+        "ask": 0.57,
+        "bid_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "246800-BeatBlasters III Booster Pack": {
@@ -37485,16 +37485,16 @@
         "is_marketable": true
     },
     "336280-Chronicles of a Dark Lord: Episode 1 Tides of Fate Complete Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "341780-Chronicles of a Dark Lord: Episode II War of The Abyss Booster Pack": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -37541,16 +37541,16 @@
         "is_marketable": true
     },
     "633130-Nongünz Booster Pack": {
-        "bid": 0.09,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 9,
         "ask_volume": -1,
         "is_marketable": true
     },
     "998340-DragonFang - Drahn's Mystery Dungeon Booster Pack": {
-        "bid": 0.14,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 22,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -37751,9 +37751,9 @@
         "is_marketable": true
     },
     "466830-Remnants of a Beautiful Day Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -37877,9 +37877,9 @@
         "is_marketable": true
     },
     "585770-Prism Collider Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.92,
-        "bid_volume": 25,
+        "bid": 0.28,
+        "ask": 0.93,
+        "bid_volume": 19,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -38136,9 +38136,9 @@
         "is_marketable": true
     },
     "435460-NotCoD™ Booster Pack": {
-        "bid": 0.08,
+        "bid": 0.18,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -38516,7 +38516,7 @@
     "95000-Super Splatters Booster Pack": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -38537,7 +38537,7 @@
     "252770-Vox Booster Pack": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -38696,9 +38696,9 @@
         "is_marketable": true
     },
     "618260-Endurance Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -38984,7 +38984,7 @@
     },
     "616830-Cartoon Strike Booster Pack": {
         "bid": 0.11,
-        "ask": 0.28,
+        "ask": 0.39,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -38997,10 +38997,10 @@
         "is_marketable": true
     },
     "598880-Domiverse Booster Pack": {
-        "bid": 0.05,
-        "ask": -1,
-        "bid_volume": 32,
-        "ask_volume": -1,
+        "bid": 0.1,
+        "ask": 0.26,
+        "bid_volume": 4,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "692930-DreadEye VR Booster Pack": {
@@ -39074,10 +39074,10 @@
         "is_marketable": true
     },
     "393790-Rogue Operatives Booster Pack": {
-        "bid": 0.09,
-        "ask": -1,
-        "bid_volume": 14,
-        "ask_volume": -1,
+        "bid": 0.1,
+        "ask": 0.94,
+        "bid_volume": 5,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "587620-Okami HD Booster Pack": {
@@ -39319,10 +39319,10 @@
         "is_marketable": true
     },
     "304690-Star Sonata 2 Booster Pack": {
-        "bid": 0.2,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.24,
+        "ask": 0.93,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "485610-Ball 3D: First Person Soccer - Football Booster Pack": {
@@ -39333,10 +39333,10 @@
         "is_marketable": null
     },
     "590720-Cobalt WASD Booster Pack": {
-        "bid": 0.04,
-        "ask": -1,
-        "bid_volume": 25,
-        "ask_volume": -1,
+        "bid": 0.2,
+        "ask": 0.92,
+        "bid_volume": 3,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "616610-GetMeBro! Booster Pack": {
@@ -39355,9 +39355,9 @@
     },
     "1153700-Eternal Magic Booster Pack": {
         "bid": 0.08,
-        "ask": 1.72,
+        "ask": -1,
         "bid_volume": 13,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "485610-Ball 3D: Soccer & Sports Online Booster Pack": {
@@ -39389,10 +39389,10 @@
         "is_marketable": true
     },
     "1284410-GWENT: The Witcher Card Game Booster Pack": {
-        "bid": 0.15,
-        "ask": 0.18,
-        "bid_volume": 13,
-        "ask_volume": 5,
+        "bid": 0.12,
+        "ask": 0.17,
+        "bid_volume": 46,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "235620-Small World Booster Pack": {
@@ -39404,36 +39404,36 @@
     },
     "251210-Hive Booster Pack": {
         "bid": 0.1,
-        "ask": 0.27,
-        "bid_volume": 9,
+        "ask": 0.4,
+        "bid_volume": 17,
         "ask_volume": 1,
         "is_marketable": true
     },
     "344040-Qubburo 2 Booster Pack": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "521330-Skull Ball Heroes Booster Pack": {
-        "bid": -1,
-        "ask": 0.36,
-        "bid_volume": -1,
+        "bid": 0.08,
+        "ask": 0.69,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
     "599630-Mountain Mind Booster Pack": {
-        "bid": 0.16,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.17,
+        "ask": 1.61,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "667870-MINDNIGHT Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.37,
-        "bid_volume": 4,
+        "bid": 0.1,
+        "ask": 0.29,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -40909,7 +40909,7 @@
     },
     "299090-Cosplay Maker Booster Pack": {
         "bid": 0.18,
-        "ask": 1.15,
+        "ask": 1.8,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -40929,31 +40929,31 @@
         "is_marketable": true
     },
     "417920-Mistfal Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.55,
+        "bid": 0.15,
+        "ask": 0.59,
         "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
     "465760-Scrap Garden Booster Pack": {
-        "bid": 0.09,
-        "ask": 0.15,
-        "bid_volume": 22,
+        "bid": 0.11,
+        "ask": 0.29,
+        "bid_volume": 43,
         "ask_volume": 1,
         "is_marketable": true
     },
     "532470-In Extremis Booster Pack": {
-        "bid": 0.05,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.11,
+        "ask": 0.69,
+        "bid_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "588440-False Front Booster Pack": {
-        "bid": 0.05,
-        "ask": 134.49,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.12,
+        "ask": 3.42,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "362400-Regimental Chess Booster Pack": {
@@ -40999,9 +40999,9 @@
         "is_marketable": true
     },
     "520530-INTERSHELTER Booster Pack": {
-        "bid": 0.06,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41070,9 +41070,9 @@
     },
     "422100-Heaven Island Life Booster Pack": {
         "bid": 0.09,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "ask": 0.1,
+        "bid_volume": 114,
+        "ask_volume": 8,
         "is_marketable": true
     },
     "493780-Nightork Adventures - Beyond the Moons of Shadalee Booster Pack": {
@@ -41090,58 +41090,58 @@
         "is_marketable": true
     },
     "213850-Magic 2014  Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": true
-    },
-    "965200-Walking Zombie 2 Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.35,
-        "bid_volume": 2,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "404860-Inside Me Booster Pack": {
-        "bid": 0.04,
-        "ask": 0.26,
-        "bid_volume": 12,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "454460-JiPS Booster Pack": {
-        "bid": 0.05,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": true
     },
-    "476480-Heaven Forest - VR MMO Booster Pack": {
-        "bid": 0.06,
+    "965200-Walking Zombie 2 Booster Pack": {
+        "bid": 0.1,
+        "ask": 0.52,
+        "bid_volume": 3,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "404860-Inside Me Booster Pack": {
+        "bid": 0.11,
+        "ask": 0.27,
+        "bid_volume": 3,
+        "ask_volume": 6,
+        "is_marketable": true
+    },
+    "454460-JiPS Booster Pack": {
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
+    "476480-Heaven Forest - VR MMO Booster Pack": {
+        "bid": 0.03,
+        "ask": 0.05,
+        "bid_volume": 875,
+        "ask_volume": 7,
+        "is_marketable": true
+    },
     "564750-Dimension Jump Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 15,
         "ask_volume": -1,
         "is_marketable": true
     },
     "607270-Jack's Gang Booster Pack": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": true
     },
     "629410-VectorWave Booster Pack": {
-        "bid": 0.1,
-        "ask": 0.34,
-        "bid_volume": 3,
+        "bid": 0.08,
+        "ask": 0.23,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -42266,10 +42266,10 @@
         "is_marketable": true
     },
     "1138080-Landlord Girls Booster Pack": {
-        "bid": 0.24,
-        "ask": 0.48,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "724470-Lazy Galaxy Booster Pack": {
@@ -42372,9 +42372,9 @@
     },
     "1160220-Paradise Killer Booster Pack": {
         "bid": 0.1,
-        "ask": 0.17,
-        "bid_volume": 5,
-        "ask_volume": 3,
+        "ask": 0.27,
+        "bid_volume": 2,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "538550-Party Golf Booster Pack": {
@@ -42574,10 +42574,10 @@
         "is_marketable": true
     },
     "1054490-Wingspan Booster Pack": {
-        "bid": 0.21,
-        "ask": 0.25,
+        "bid": 0.12,
+        "ask": 2.49,
         "bid_volume": 2,
-        "ask_volume": 6,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "1284540-Yorna: Monster Girl's Secret Booster Pack": {
@@ -42735,10 +42735,10 @@
         "is_marketable": true
     },
     "717560-Lucifer Within Us Booster Pack": {
-        "bid": 0.07,
-        "ask": 9.38,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.12,
+        "ask": 0.96,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "1434480-Maitetsu:Last Run!! Booster Pack": {
@@ -43239,9 +43239,9 @@
         "is_marketable": true
     },
     "1191940-Deathtrap Dungeon: The Interactive Video Adventure Booster Pack": {
-        "bid": 0.04,
-        "ask": 0.61,
-        "bid_volume": 34,
+        "bid": 0.08,
+        "ask": 0.96,
+        "bid_volume": 8,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -43330,10 +43330,10 @@
         "is_marketable": true
     },
     "603110-Grizzland Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 4,
-        "ask_volume": -1,
+        "bid": 0.12,
+        "ask": 1.52,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "223630-AirBuccaneers Booster Pack": {
@@ -43379,10 +43379,10 @@
         "is_marketable": true
     },
     "589850-Leashed Soul Booster Pack": {
-        "bid": 0.1,
-        "ask": 1.01,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.2,
+        "ask": 0.63,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "466170-Idling to Rule the Gods Booster Pack": {
@@ -43407,10 +43407,10 @@
         "is_marketable": true
     },
     "332070-School of Dragons: How to Train Your Dragon Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.35,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.28,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "346850-Chip's Challenge 1 Booster Pack": {
@@ -43435,17 +43435,17 @@
         "is_marketable": true
     },
     "326160-Shroud of the Avatar: Forsaken Virtues Booster Pack": {
-        "bid": 0.14,
-        "ask": 0.4,
+        "bid": 0.18,
+        "ask": 0.85,
         "bid_volume": 2,
-        "ask_volume": 1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "497560-Crimson Sword Saga: The Peloran Wars Booster Pack": {
         "bid": 0.09,
-        "ask": -1,
-        "bid_volume": 8,
-        "ask_volume": -1,
+        "ask": 0.93,
+        "bid_volume": 7,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "313080-The Masterplan Booster Pack": {
@@ -43470,10 +43470,10 @@
         "is_marketable": true
     },
     "552410-Project Abyss Booster Pack": {
-        "bid": 0.06,
-        "ask": 0.3,
-        "bid_volume": 5,
-        "ask_volume": 3,
+        "bid": 0.08,
+        "ask": 0.35,
+        "bid_volume": 4,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "2400-The Ship Booster Pack": {
@@ -43568,9 +43568,9 @@
         "is_marketable": true
     },
     "224600-Defiance Booster Pack": {
-        "bid": 0.14,
+        "bid": 0.18,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 33,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -43582,24 +43582,24 @@
         "is_marketable": true
     },
     "347510-Rats - Time is running out! Booster Pack": {
-        "bid": 0.09,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "1548650-LudoNarraCon Supporter Pack featuring Cyrano Booster Pack": {
         "bid": 0.1,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
     "258910-Citizens of Earth Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.28,
-        "bid_volume": 23,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 30,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "508300-Strategy & Tactics: Dark Ages Booster Pack": {
@@ -43617,7 +43617,7 @@
         "is_marketable": true
     },
     "243120-Betrayer Booster Pack": {
-        "bid": 1.21,
+        "bid": 0.14,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -43666,8 +43666,8 @@
         "is_marketable": true
     },
     "461040-PICO PARK:Classic Edition Booster Pack": {
-        "bid": 0.17,
-        "ask": 4.05,
+        "bid": 0.23,
+        "ask": 0.69,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -45857,10 +45857,10 @@
         "is_marketable": true
     },
     "1301210-Knockout City™ Booster Pack": {
-        "bid": 0.18,
-        "ask": 0.6,
-        "bid_volume": 30,
-        "ask_volume": 2,
+        "bid": 0.3,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "1219620-Lovely Overseer Booster Pack": {
@@ -45913,10 +45913,10 @@
         "is_marketable": true
     },
     "1167140-Siege Survival: Gloria Victis Booster Pack": {
-        "bid": -1,
-        "ask": 0.37,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.07,
+        "ask": 0.23,
+        "bid_volume": 3,
+        "ask_volume": 5,
         "is_marketable": true
     },
     "1222340-Sockventure Booster Pack": {
@@ -46060,9 +46060,9 @@
         "is_marketable": true
     },
     "493180-Dynasty Feud Booster Pack": {
-        "bid": 0.03,
-        "ask": 0.28,
-        "bid_volume": 49,
+        "bid": 0.1,
+        "ask": 3.08,
+        "bid_volume": 12,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -46151,10 +46151,10 @@
         "is_marketable": true
     },
     "1399780-Spellbreak Booster Pack": {
-        "bid": 0.16,
-        "ask": 0.4,
-        "bid_volume": 6,
-        "ask_volume": 2,
+        "bid": 0.12,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
         "is_marketable": null
     },
     "1407200-World of Tanks Booster Pack": {
@@ -46200,10 +46200,10 @@
         "is_marketable": true
     },
     "1371480-Iron Conflict Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.26,
+        "bid": 0.12,
+        "ask": -1,
         "bid_volume": 10,
-        "ask_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "239120-Final Fantasy III (3D Remake) Booster Pack": {
@@ -46235,9 +46235,9 @@
         "is_marketable": true
     },
     "356050-Beyond Eyes Booster Pack": {
-        "bid": 0.08,
+        "bid": 0.59,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -46361,7 +46361,7 @@
         "is_marketable": true
     },
     "363790-Egg Returns Home Booster Pack": {
-        "bid": 0.23,
+        "bid": 0.19,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -46382,17 +46382,17 @@
         "is_marketable": true
     },
     "280890-GhostshipAftermath Booster Pack": {
-        "bid": 0.05,
-        "ask": 0.23,
-        "bid_volume": 13,
+        "bid": 0.07,
+        "ask": 0.19,
+        "bid_volume": 21,
         "ask_volume": 1,
         "is_marketable": true
     },
     "349580-Burstfire Booster Pack": {
-        "bid": 0.07,
-        "ask": 0.46,
-        "bid_volume": 28,
-        "ask_volume": 3,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 14,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "373480-1993 Space Machine Booster Pack": {
@@ -46403,17 +46403,17 @@
         "is_marketable": true
     },
     "463700-Super Cloudbuilt  Booster Pack": {
-        "bid": 0.08,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": true
     },
     "209630-Magrunner: Dark Pulse Booster Pack": {
-        "bid": 0.07,
-        "ask": 1.07,
+        "bid": 0.16,
+        "ask": 0.73,
         "bid_volume": 16,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "263740-FootLOL: Epic Soccer League Booster Pack": {
@@ -46550,10 +46550,10 @@
         "is_marketable": true
     },
     "1173370-Slapshot: Rebound Booster Pack": {
-        "bid": 0.1,
-        "ask": 5.89,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.17,
+        "ask": 0.5,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "1311070-Greak: Memories of Azur Booster Pack": {
@@ -46578,23 +46578,23 @@
         "is_marketable": true
     },
     "259740-Nightmares from the Deep: The Cursed Heart Booster Pack": {
-        "bid": 0.1,
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "284810-Nightmares from the Deep 3: Davy Jones Booster Pack": {
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
-    "284810-Nightmares from the Deep 3: Davy Jones Booster Pack": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 28,
-        "ask_volume": -1,
-        "is_marketable": true
-    },
     "629420-Super Perspective Booster Pack": {
-        "bid": -1,
-        "ask": 1.38,
-        "bid_volume": -1,
+        "bid": 0.16,
+        "ask": 1.5,
+        "bid_volume": 5,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -47201,9 +47201,9 @@
         "is_marketable": true
     },
     "676630-Attentat 1942 Booster Pack": {
-        "bid": 0.14,
-        "ask": 1,
-        "bid_volume": 2,
+        "bid": 0.11,
+        "ask": 0.2,
+        "bid_volume": 9,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -48160,10 +48160,10 @@
         "is_marketable": true
     },
     "925950-Here Comes Niko! Booster Pack": {
-        "bid": 0.07,
-        "ask": 2.47,
+        "bid": 0.11,
+        "ask": 0.24,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "1553890-Lewd Girls, Leave Me Alone! I Just Want to Play Video Games and Watch Anime! Hentai Edition Booster Pack": {
@@ -48258,10 +48258,10 @@
         "is_marketable": true
     },
     "628720-GODS Remastered Booster Pack": {
-        "bid": 0.17,
-        "ask": 0.26,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "1271700-HOT WHEELS UNLEASHED™ Booster Pack": {
@@ -49021,10 +49021,10 @@
         "is_marketable": true
     },
     "1286280-Pronty Booster Pack": {
-        "bid": 0.15,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 0.25,
+        "bid_volume": 30,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "1510580-Toy Tinker Simulator Booster Pack": {
@@ -49049,9 +49049,9 @@
         "is_marketable": true
     },
     "1239300-Gravewood High Booster Pack": {
-        "bid": 0.15,
-        "ask": 2.04,
-        "bid_volume": 3,
+        "bid": 0.2,
+        "ask": 0.69,
+        "bid_volume": 4,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -49173,5 +49173,397 @@
         "bid_volume": 19,
         "ask_volume": 1,
         "is_marketable": true
+    },
+    "24960-Battlefield: Bad Company™ 2 Booster Pack": {
+        "bid": 0.5,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "108200-Ticket to Ride Booster Pack": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 7,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "212700-Party of Sin Booster Pack": {
+        "bid": 0.08,
+        "ask": 0.37,
+        "bid_volume": 34,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "227480-God Mode Booster Pack": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 37,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "234630-Project CARS Booster Pack": {
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "236870-HITMAN™ Booster Pack": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 55,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "252150-Grimm Booster Pack": {
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "264460-A-men Booster Pack": {
+        "bid": 0.19,
+        "ask": 0.48,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "267750-Shadowrun Chronicles - Boston Lockdown Booster Pack": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "286570-F1 2015 Booster Pack": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "296300-Ballistic Overkill Booster Pack": {
+        "bid": 0.12,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "310560-DiRT Rally Booster Pack": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 7,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "310810-Shiftlings Booster Pack": {
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "315060-Bloop Reloaded Booster Pack": {
+        "bid": 0.39,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "327070-Gloria Victis Booster Pack": {
+        "bid": 1.51,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "365170-Ogrest Booster Pack": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 8,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "367990-3D Paraglider Booster Pack": {
+        "bid": 0.08,
+        "ask": 0.82,
+        "bid_volume": 8,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "369580-NotTheNameWeWanted Booster Pack": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "377200-Daemon Detective Gaiden Booster Pack": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "392620-Lucadian Chronicles Booster Pack": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "394230-Battleborn Booster Pack": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 43,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "397040-Sphere 3 Booster Pack": {
+        "bid": -1,
+        "ask": 0.31,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "399000-Porradaria Upgrade Booster Pack": {
+        "bid": 0.07,
+        "ask": 1.15,
+        "bid_volume": 22,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "402430-Out of the Park Baseball 17 Booster Pack": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "410290-Acorn Assault: Rodent Revolution Booster Pack": {
+        "bid": 0.29,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "419590-Tales from the Void Booster Pack": {
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "434300-Wormhole City Booster Pack": {
+        "bid": 0.16,
+        "ask": 5.75,
+        "bid_volume": 2,
+        "ask_volume": 2,
+        "is_marketable": true
+    },
+    "449770-Legend of Moros Booster Pack": {
+        "bid": 0.06,
+        "ask": 0.96,
+        "bid_volume": 8,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "455590-Skedaddle Booster Pack": {
+        "bid": 0.13,
+        "ask": 0.78,
+        "bid_volume": 6,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "503950-Star Tactics Booster Pack": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 15,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "522990-Spell Casting: Meowgically Enhanced Edition Booster Pack": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 7,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "553210-Warhammer 40,000: Space Wolf Booster Pack": {
+        "bid": 0.19,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "558320-Among the Innocent: A Stricken Tale Booster Pack": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "562290-Zahalia: The Knights of Galiveth Booster Pack": {
+        "bid": 0.06,
+        "ask": 0.13,
+        "bid_volume": 10,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "575550-Hell Girls Booster Pack": {
+        "bid": 4.61,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "610310-Star Story: The Horizon Escape Booster Pack": {
+        "bid": 0.09,
+        "ask": 0.31,
+        "bid_volume": 11,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "619390-Oddworld: Soulstorm Enhanced Edition Booster Pack": {
+        "bid": 0.14,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "639770-UNTITLED Booster Pack": {
+        "bid": 0.07,
+        "ask": 1.86,
+        "bid_volume": 5,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "663380-Tales from Candlekeep: Tomb of Annihilation Booster Pack": {
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "695970-Treadnauts Booster Pack": {
+        "bid": 0.15,
+        "ask": 0.57,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "863550-HITMAN™ 2 Booster Pack": {
+        "bid": 0.3,
+        "ask": -1,
+        "bid_volume": 6,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "872570-Romans: Age of Caesar Booster Pack": {
+        "bid": 0.17,
+        "ask": 1.77,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "938860-Get In The Car, Loser! Booster Pack": {
+        "bid": 0.13,
+        "ask": 0.61,
+        "bid_volume": 4,
+        "ask_volume": 8,
+        "is_marketable": true
+    },
+    "992070-Idle Wizard Booster Pack": {
+        "bid": 0.06,
+        "ask": 0.66,
+        "bid_volume": 3,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1062140-Garden Story Booster Pack": {
+        "bid": 0.11,
+        "ask": 0.65,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1098170-Dark Nights with Poe and Munro Booster Pack": {
+        "bid": 0.07,
+        "ask": 0.2,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1106750-Fault: Elder Orb Booster Pack": {
+        "bid": 0.14,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "1169740-Danger Scavenger Booster Pack": {
+        "bid": 0.09,
+        "ask": 0.13,
+        "bid_volume": 7,
+        "ask_volume": 3,
+        "is_marketable": true
+    },
+    "1265240-Uniform Girl Booster Pack": {
+        "bid": 0.16,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "1285160-Depanneur Nocturne Booster Pack": {
+        "bid": 0.06,
+        "ask": 1.16,
+        "bid_volume": 8,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1418100-Swords of Legends Online Booster Pack": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "1444300-Teacup Booster Pack": {
+        "bid": 0.17,
+        "ask": 0.51,
+        "bid_volume": 5,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1575870-UpGun Booster Pack": {
+        "bid": 0.05,
+        "ask": 0.4,
+        "bid_volume": 7,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1907720-Autonauts vs Piratebots Booster Pack": {
+        "bid": 0.15,
+        "ask": 0.57,
+        "bid_volume": 6,
+        "ask_volume": 4,
+        "is_marketable": true
+    },
+    "1990690-Cooking Live: Restaurant Game Booster Pack": {
+        "bid": 0.09,
+        "ask": 0.71,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "2313250-Cats Hidden in Paris Booster Pack": {
+        "bid": 0.32,
+        "ask": 0.54,
+        "bid_volume": 5,
+        "ask_volume": 1,
+        "is_marketable": false
     }
 }

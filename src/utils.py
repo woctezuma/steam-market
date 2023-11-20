@@ -34,7 +34,7 @@ def get_listing_output_file_name_suffix(
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
 ) -> str:
-    from market_search import get_tag_drop_rate_str
+    from src.market_search import get_tag_drop_rate_str
 
     if tag_drop_rate_str is None:
         tag_drop_rate_str = get_tag_drop_rate_str(rarity=rarity)
@@ -134,8 +134,8 @@ def main() -> bool:
     return True
 
 
-def convert_listing_hash_to_app_id(listing_hash: str) -> int:
-    return int(listing_hash.split("-")[0])
+def convert_listing_hash_to_app_id(listing_hash: str) -> str:
+    return listing_hash.split("-")[0]
 
 
 def get_listing_hash_suffixe() -> str:
@@ -151,7 +151,7 @@ def convert_listing_hash_to_app_name(listing_hash: str) -> str:
 
 
 def convert_to_listing_hash(
-    app_id: int,
+    app_id: str,
     app_name: str,
     listing_hash_suffixe: str | None = None,
 ) -> str:
@@ -161,13 +161,13 @@ def convert_to_listing_hash(
     return f"{app_id}-{app_name}{listing_hash_suffixe}"
 
 
-def get_steamcardexchange_url(app_id: int) -> str:
+def get_steamcardexchange_url(app_id: str) -> str:
     # This page shows the number of cards, and provides links to the store page and the market pages.
     # NB: this allows to compute the crafting cost of a booster pack costs, as an amount of gems equal to 6000/num_cards
     return f"https://www.steamcardexchange.net/index.php?gamepage-appid-{app_id}"
 
 
-def get_steam_store_url(app_id: int) -> str:
+def get_steam_store_url(app_id: str) -> str:
     return f"https://store.steampowered.com/app/{app_id}/"
 
 
@@ -186,7 +186,7 @@ def get_category_name_for_emoticons() -> str:
 def get_bullet_point_for_display(use_numbered_bullet_points: bool = False) -> str:
     # Return a string, which consists of a bullet point followed by three spaces, to display lists in Markdown format.
     #
-    # NB: if the list of bullet points is long, Numbered bullet points improve readability on Github Gist.
+    # NB: if the list of bullet points is long, Numbered bullet points improve readability on GitHub Gist.
 
     bullet_point_character = "1." if use_numbered_bullet_points else "*"
 

@@ -7,12 +7,12 @@ from pathlib import Path
 
 import requests
 
-from personal_info import (
+from src.json_utils import load_json, save_json
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.json_utils import load_json, save_json
-from utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_name
+from src.utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_name
 
 
 def get_steam_market_search_url() -> str:
@@ -170,15 +170,12 @@ def get_all_listings(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        try:
-            status_code = resp_data.status_code
-        except AttributeError:
-            status_code = None
+        status_code = resp_data.status_code if resp_data and resp_data.ok else None
 
         start_index += delta_index
         query_count += 1
 
-        if status_code == HTTPStatus.OK:
+        if resp_data and status_code == HTTPStatus.OK:
             result = resp_data.json()
 
             if has_secured_cookie:
@@ -195,7 +192,7 @@ def get_all_listings(
             else:
                 num_listings = num_listings_based_on_latest_query
 
-            listings = {}
+            listings: dict[str, dict] = {}
             for listing in result["results"]:
                 listing_hash = listing["hash_name"]
 
@@ -245,7 +242,7 @@ def update_all_listings(
     rarity: str | None = None,
 ) -> bool:
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
-    # restart the process without risking to lose anything, in case the process fails again.
+    # restart the process without risking losing anything, in case the process fails again.
 
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()

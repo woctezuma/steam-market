@@ -2,18 +2,37 @@ files: \.(json|py)$
 default_stages: [commit, manual]
 repos:
 
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-    - id: pretty-format-json
-      args: [--autofix, --no-ensure-ascii, --indent, "4", --no-sort-keys]
-
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.1.6
     hooks:
     - id: ruff
-      args: [--fix, --unsafe-fixes, --exit-non-zero-on-fix, --target-version, "py312", --select, "ALL", --ignore, "ANN101,C90,CPY001,D,E501,ERA001,FBT,INP001,PLR091,PLR2004,PLR6301,Q,RUF001,S101,S113,T20"]
+      args: [
+      --fix,
+      --unsafe-fixes,
+      --exit-non-zero-on-fix,
+      --target-version, "py312",
+      --select, "ALL",
+      --ignore, "ANN101,C90,D,E501,ERA001,FBT,PLR091,PLR2004,RUF001,S101,S113,T20"
+      ]
     - id: ruff-format
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.0
+    hooks:
+    - id: mypy
+      additional_dependencies: [types-requests]
+      stages: [manual]
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    - id: pretty-format-json
+      args: [
+      --autofix,
+      --no-ensure-ascii,
+      --indent, "4",
+      --no-sort-keys
+      ]
 
 -   repo: https://github.com/dosisod/refurb
     rev: v1.24.0

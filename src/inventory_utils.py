@@ -2,17 +2,17 @@ from http import HTTPStatus
 
 import requests
 
-from creation_time_utils import (
+from src.creation_time_utils import (
     get_crafting_cooldown_duration_in_days,
     get_formatted_current_time,
     load_next_creation_time_data,
 )
-from personal_info import (
+from src.json_utils import load_json, save_json
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.json_utils import load_json, save_json
-from utils import (
+from src.utils import (
     convert_listing_hash_to_app_id,
     convert_listing_hash_to_app_name,
     get_data_folder,
@@ -26,7 +26,7 @@ def get_my_steam_profile_id() -> str:
 
 def get_steam_inventory_url(
     profile_id: str | None = None,
-    app_id: int = 753,
+    app_id: str = "753",
     context_id: int = 6,
 ) -> str:
     if profile_id is None:
@@ -47,9 +47,11 @@ def get_steam_inventory_file_name(profile_id: str) -> str:
     return get_data_folder() + f"inventory_{profile_id}.json"
 
 
-def load_steam_inventory_from_disk(profile_id: str | None = None) -> [dict | None]:
+def load_steam_inventory_from_disk(profile_id: str | None = None) -> dict | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
+
+    steam_inventory = None
 
     try:
         steam_inventory = load_json(get_steam_inventory_file_name(profile_id))
@@ -62,7 +64,7 @@ def load_steam_inventory_from_disk(profile_id: str | None = None) -> [dict | Non
 def load_steam_inventory(
     profile_id: str | None = None,
     update_steam_inventory: bool = False,
-) -> [dict | None]:
+) -> dict | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -77,7 +79,7 @@ def load_steam_inventory(
 def download_steam_inventory(
     profile_id: str | None = None,
     save_to_disk: bool = True,
-) -> [dict | None]:
+) -> dict | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -126,29 +128,27 @@ def get_steam_booster_pack_creation_url() -> str:
 
 
 def get_booster_pack_creation_parameters(
-    app_id: int,
+    app_id: str,
     session_id: str,
     is_marketable: bool = True,
 ) -> dict[str, str]:
     booster_pack_creation_parameters = {}
 
-    tradability_preference = 1 if is_marketable else 3
+    tradability_preference = "1" if is_marketable else "3"
 
     booster_pack_creation_parameters["sessionid"] = session_id
-    booster_pack_creation_parameters["appid"] = str(app_id)
+    booster_pack_creation_parameters["appid"] = app_id
     booster_pack_creation_parameters["series"] = "1"
-    booster_pack_creation_parameters["tradability_preference"] = str(
-        tradability_preference,
-    )
+    booster_pack_creation_parameters["tradability_preference"] = tradability_preference
 
     return booster_pack_creation_parameters
 
 
 def create_booster_pack(
-    app_id: int,
+    app_id: str,
     is_marketable: bool = True,
     verbose: bool = True,
-) -> [dict | None]:
+) -> dict | None:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -205,7 +205,7 @@ def get_steam_market_sell_url() -> str:
 
 def get_market_sell_parameters(
     asset_id: str,
-    price_in_cents: float,  # this is the money which you, as the seller, will receive
+    price_in_cents: int,  # this is the money which you, as the seller, will receive
     session_id: str,
 ) -> dict[str, str]:
     market_sell_parameters = {}
@@ -236,9 +236,9 @@ def get_request_headers() -> dict[str, str]:
 
 def sell_booster_pack(
     asset_id: str,
-    price_in_cents: float,  # this is the money which you, as the seller, will receive
+    price_in_cents: int,  # this is the money which you, as the seller, will receive
     verbose: bool = True,
-) -> [dict | None]:
+) -> dict | None:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -306,7 +306,7 @@ def retrieve_asset_id(
     if steam_inventory is None:
         steam_inventory = load_steam_inventory(profile_id=profile_id)
 
-    descriptions = steam_inventory["rgDescriptions"]
+    descriptions = steam_inventory["rgDescriptions"] if steam_inventory else {}
 
     matched_element = {}
 
@@ -334,7 +334,7 @@ def retrieve_asset_id(
     has_been_matched = bool(len(matched_element) > 0)
 
     if has_been_matched:
-        community_inventory = steam_inventory["rgInventory"]
+        community_inventory = steam_inventory["rgInventory"] if steam_inventory else {}
 
         for element in community_inventory:
             if (
@@ -375,7 +375,7 @@ def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict 
 
 
 def sell_booster_packs_for_batch(
-    price_dict_for_listing_hashes: dict[str, float],
+    price_dict_for_listing_hashes: dict[str, int],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -404,7 +404,7 @@ def sell_booster_packs_for_batch(
 
 
 def create_then_sell_booster_packs_for_batch(
-    price_dict_for_listing_hashes: dict,
+    price_dict_for_listing_hashes: dict[str, int],
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -429,7 +429,7 @@ def update_and_save_next_creation_times(
     creation_results: dict[str, dict | None],
     verbose: bool = True,
     next_creation_time_file_name: str | None = None,
-) -> dict[int, str]:
+) -> dict[str, str]:
     if next_creation_time_file_name is None:
         next_creation_time_file_name = get_next_creation_time_file_name()
 

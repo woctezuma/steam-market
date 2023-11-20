@@ -2,11 +2,11 @@
 
 import random
 
-from market_listing import get_item_nameid_batch
-from market_search import load_all_listings, update_all_listings
-from parsing_utils import parse_badge_creation_details
-from sack_of_gems import get_gem_price
-from utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
+from src.market_listing import get_item_nameid_batch
+from src.market_search import load_all_listings, update_all_listings
+from src.parsing_utils import parse_badge_creation_details
+from src.sack_of_gems import get_gem_price
+from src.utils import convert_listing_hash_to_app_id, convert_listing_hash_to_app_name
 
 
 def determine_whether_listing_hash_is_dubious(listing_hash: str) -> bool:
@@ -49,10 +49,10 @@ def filter_out_dubious_listing_hashes(
 
 
 def match_badges_with_listing_hashes(
-    badge_creation_details: dict[int, dict] | None = None,
+    badge_creation_details: dict[str, dict] | None = None,
     all_listings: dict[str, dict] | None = None,
     verbose: bool = True,
-) -> dict[int, str | None]:
+) -> dict[str, str | None]:
     # Badges for games which I own
 
     if badge_creation_details is None:
@@ -80,7 +80,7 @@ def match_badges_with_listing_hashes(
 
     # Match badges with listing hashes
 
-    badge_matches = {}
+    badge_matches: dict[str, str | None] = {}
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
 
@@ -107,13 +107,13 @@ def match_badges_with_listing_hashes(
 
 
 def aggregate_badge_data(
-    badge_creation_details: dict[int, dict],
-    badge_matches: dict[int, str | None],
+    badge_creation_details: dict[str, dict],
+    badge_matches: dict[str, str | None],
     all_listings: dict[str, dict] | None = None,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     # Aggregate data:
     #       owned appID --> (gem PRICE, sell price)
     # where:
@@ -137,7 +137,7 @@ def aggregate_badge_data(
 
     badge_app_ids = list(badge_creation_details.keys())
 
-    aggregated_badge_data = {}
+    aggregated_badge_data: dict[str, dict] = {}
 
     for app_id in badge_app_ids:
         app_name = badge_creation_details[app_id]["name"]
@@ -178,7 +178,7 @@ def load_aggregated_badge_data(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     from_javascript: bool = False,
-) -> dict[int, dict]:
+) -> dict[str, dict]:
     badge_creation_details = parse_badge_creation_details(
         from_javascript=from_javascript,
     )
@@ -208,7 +208,7 @@ def load_aggregated_badge_data(
 
 
 def populate_random_samples_of_badge_data(
-    badge_data: dict[int, dict] | None = None,
+    badge_data: dict[str, dict] | None = None,
     num_samples: int = 50,
 ) -> bool:
     if badge_data is None:
@@ -230,7 +230,7 @@ def populate_random_samples_of_badge_data(
 
 def main(populate_all_item_name_ids: bool = False) -> bool:
     if populate_all_item_name_ids:
-        # Pre-retrieval of ALL of the MISSING item name ids.
+        # Pre-retrieval of ALL the MISSING item name ids.
         # Caveat: this may require a long time, due to API rate limits.
 
         all_listings = load_all_listings()

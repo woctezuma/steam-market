@@ -6,20 +6,20 @@ from http import HTTPStatus
 import requests
 from bs4 import BeautifulSoup
 
-from market_search import load_all_listings
-from personal_info import (
+from src.json_utils import load_json, save_json
+from src.market_search import load_all_listings
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.json_utils import load_json, save_json
-from utils import (
+from src.utils import (
     get_cushioned_cooldown_in_seconds,
     get_listing_details_output_file_name,
 )
 
 
 def get_steam_market_listing_url(
-    app_id: int | None = None,
+    app_id: str | None = None,
     listing_hash: str | None = None,
     render_as_json: bool = True,
     replace_spaces: bool = False,
@@ -27,7 +27,7 @@ def get_steam_market_listing_url(
 ) -> str:
     if app_id is None:
         # AppID for the Steam Store. It is the same for all the booster packs.
-        app_id = 753
+        app_id = "753"
 
     if listing_hash is None:
         listing_hash = "511540-MoonQuest Booster Pack"
@@ -56,11 +56,7 @@ def get_steam_market_listing_url(
 
 
 def get_listing_parameters() -> dict[str, str]:
-    params = {}
-
-    params["currency"] = "3"
-
-    return params
+    return {"currency": "3"}
 
 
 def get_steam_api_rate_limits_for_market_listing(
@@ -87,7 +83,7 @@ def figure_out_relevant_id(
     asset_dict: dict[str, dict],
     asset_ids: list[str],
     owner_action_name_of_interest: str,
-) -> int | None:
+) -> str | None:
     actions = set()
     last_relevant_asset_id = None
 
@@ -104,7 +100,7 @@ def figure_out_relevant_id(
     return last_relevant_asset_id
 
 
-def parse_item_type_no_from_script(last_script: str) -> [int | None]:
+def parse_item_type_no_from_script(last_script: str) -> int | None:
     # Reference: https://gaming.stackexchange.com/a/351941
 
     start_str = "var g_rgAssets ="
@@ -220,7 +216,7 @@ def parse_item_type_no_from_script(last_script: str) -> [int | None]:
     return item_type_no
 
 
-def parse_marketability_from_script(last_script: str) -> [bool | None]:
+def parse_marketability_from_script(last_script: str) -> bool | None:
     marketable_key = '"marketable":'
 
     try:
@@ -238,7 +234,7 @@ def parse_marketability_from_script(last_script: str) -> [bool | None]:
     return is_marketable
 
 
-def parse_item_name_id_from_script(last_script: str) -> [int | None]:
+def parse_item_name_id_from_script(last_script: str) -> int | None:
     last_script_token = last_script.split("(")[-1]
 
     item_nameid_str = last_script_token.split(");")[0]
@@ -251,7 +247,7 @@ def parse_item_name_id_from_script(last_script: str) -> [int | None]:
     return item_nameid
 
 
-def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
+def parse_item_name_id(html_doc: str) -> tuple[int | None, bool | None, int | None]:
     soup = BeautifulSoup(html_doc, "html.parser")
 
     last_script = str(soup.find_all("script")[-1])
@@ -266,11 +262,11 @@ def parse_item_name_id(html_doc: str) -> tuple[int, bool, int]:
 
 
 def get_listing_details(
-    listing_hash: str | None = None,
+    listing_hash: str,
     cookie: dict[str, str] | None = None,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
-    listing_details = {}
+    listing_details: dict[str, dict] = {}
 
     url = get_steam_market_listing_url(
         listing_hash=listing_hash,
@@ -317,7 +313,7 @@ def get_listing_details(
 
 
 def get_listing_details_batch(
-    listing_hashes: list[str],
+    listing_hashes: list[str] | dict[str, dict],
     all_listing_details: dict[str, dict] | None = None,
     save_to_disk: bool = True,
     listing_details_output_file_name: str | None = None,
@@ -374,11 +370,11 @@ def get_listing_details_batch(
 
 
 def update_all_listing_details(
-    listing_hashes: list[str] | None = None,
+    listing_hashes: list[str] | dict[str, dict] | None = None,
     listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     # Caveat: this is mostly useful if download_all_listing_details() failed in the middle of the process, and you want
-    # to restart the process without risking to lose anything, in case the process fails again.
+    # to restart the process without risking losing anything, in case the process fails again.
 
     if listing_details_output_file_name is None:
         listing_details_output_file_name = get_listing_details_output_file_name()
@@ -418,25 +414,6 @@ def fix_app_name_for_url_query(app_name: str) -> str:
     return app_name.replace(":", "%3A")
 
 
-def main() -> bool:
-    listing_hashes = [
-        "268830-Doctor Who%3A The Adventure Games Booster Pack",
-        "290970-1849 Booster Pack",
-        "753-Sack of Gems",
-        "511540-MoonQuest Booster Pack",
-        # The item name ID will not be retrieved for the following two listing hashes due to special characters:
-        "614910-#monstercakes Booster Pack",
-        "505730-Holy Potatoes! We’re in Space?! Booster Pack",
-        # This fixes the aforementioned issue:
-        "614910-%23monstercakes Booster Pack",
-        "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
-    ]
-
-    update_all_listing_details(listing_hashes)
-
-    return True
-
-
 def get_item_nameid(
     listing_hash: str,
     listing_details_output_file_name: str | None = None,
@@ -459,7 +436,7 @@ def get_item_nameid(
 
 
 def get_item_nameid_batch(
-    listing_hashes: [dict[str, dict] | list[str]],
+    listing_hashes: list[str] | dict[str, dict],
     listing_details_output_file_name: str | None = None,
     listing_hashes_to_forcefully_process: list[str] | None = None,
 ) -> dict[str, dict]:
@@ -472,7 +449,7 @@ def get_item_nameid_batch(
     try:
         listing_details = load_json(listing_details_output_file_name)
 
-        item_nameids = {}
+        item_nameids: dict[str, dict] = {}
         listing_hashes_to_process = []
         for listing_hash in listing_hashes:
             item_nameids[listing_hash] = {}
@@ -486,11 +463,11 @@ def get_item_nameid_batch(
                 listing_hashes_to_process.append(listing_hash)
 
         listing_hashes_to_process += listing_hashes_to_forcefully_process
-        listing_hashes_to_process = set(listing_hashes_to_process)
+        listing_hashes_to_process = list(set(listing_hashes_to_process))
 
         if listing_hashes_to_process:
             listing_details = update_all_listing_details(
-                listing_hashes=list(listing_hashes_to_process),
+                listing_hashes=listing_hashes_to_process.copy(),
                 listing_details_output_file_name=listing_details_output_file_name,
             )
 
@@ -533,6 +510,25 @@ def update_marketability_status(
         listing_hashes=[],
         listing_hashes_to_forcefully_process=few_selected_listing_hashes,
     )
+
+
+def main() -> bool:
+    listing_hashes = [
+        "268830-Doctor Who%3A The Adventure Games Booster Pack",
+        "290970-1849 Booster Pack",
+        "753-Sack of Gems",
+        "511540-MoonQuest Booster Pack",
+        # The item name ID will not be retrieved for the following two listing hashes due to special characters:
+        "614910-#monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space?! Booster Pack",
+        # This fixes the aforementioned issue:
+        "614910-%23monstercakes Booster Pack",
+        "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
+    ]
+
+    update_all_listing_details(listing_hashes)
+
+    return True
 
 
 if __name__ == "__main__":

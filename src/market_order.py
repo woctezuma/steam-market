@@ -5,14 +5,14 @@ from http import HTTPStatus
 
 import requests
 
-from market_listing import get_item_nameid, get_item_nameid_batch
-from personal_info import (
+from src.cookie_utils import force_update_sessionid
+from src.json_utils import load_json, save_json
+from src.market_listing import get_item_nameid, get_item_nameid_batch
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.cookie_utils import force_update_sessionid
-from src.json_utils import load_json, save_json
-from utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
+from src.utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
 
 INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
 
@@ -108,10 +108,7 @@ def download_market_order_data(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        try:
-            status_code = resp_data.status_code
-        except AttributeError:
-            status_code = None
+        status_code = resp_data.status_code if resp_data and resp_data.ok else None
 
     else:
         print(
@@ -121,7 +118,7 @@ def download_market_order_data(
         resp_data = None
         status_code = -1
 
-    if status_code == HTTPStatus.OK:
+    if resp_data and status_code == HTTPStatus.OK:
         result = resp_data.json()
 
         if has_secured_cookie:
@@ -190,7 +187,7 @@ def download_market_order_data(
 
 
 def download_market_order_data_batch(
-    badge_data: dict[int | str, dict],
+    badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
     verbose: bool = False,
     save_to_disk: bool = True,
@@ -260,7 +257,7 @@ def download_market_order_data_batch(
 
 
 def load_market_order_data(
-    badge_data: dict[int | str, dict] | None = None,
+    badge_data: dict[str, dict],
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -291,10 +288,10 @@ def load_market_order_data(
 
 
 def trim_market_order_data(
-    badge_data: dict[int | str, dict],
+    badge_data: dict[str, dict],
     market_order_dict: dict[str, dict],
-) -> tuple[dict[str, dict], list[int | str]]:
-    trimmed_market_order_dict = {}
+) -> tuple[dict[str, dict], list[str]]:
+    trimmed_market_order_dict: dict[str, dict] = {}
     app_ids_with_missing_data = []
 
     for app_id in badge_data:
@@ -319,14 +316,14 @@ def trim_market_order_data(
 
 def load_market_order_data_from_disk(
     market_order_output_file_name: str | None = None,
-) -> [dict[str, dict] | None]:
+) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
 
     try:
         market_order_dict = load_json(market_order_output_file_name)
     except FileNotFoundError:
-        market_order_dict = None
+        market_order_dict = {}
 
     return market_order_dict
 
@@ -345,7 +342,7 @@ def main() -> bool:
 
     app_id = listing_hash.split("-", maxsplit=1)[0]
 
-    badge_data = {}
+    badge_data: dict[str, dict] = {}
     badge_data[app_id] = {}
     badge_data[app_id]["listing_hash"] = listing_hash
 

@@ -7,19 +7,19 @@ from pathlib import Path
 import requests
 import steamspypi
 
-from market_search import load_all_listings
-from personal_info import (
+from src.market_search import load_all_listings
+from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from utils import convert_listing_hash_to_app_id
+from src.utils import convert_listing_hash_to_app_id
 
 
 def get_user_data_url() -> str:
     return "https://store.steampowered.com/dynamicstore/userdata/"
 
 
-def download_user_data() -> [dict | None]:
+def download_user_data() -> dict | None:
     cookie = get_cookie_dict()
 
     resp_data = requests.get(
@@ -38,28 +38,28 @@ def download_user_data() -> [dict | None]:
     return result
 
 
-def download_owned_apps(verbose: bool = True) -> list[int]:
+def download_owned_apps(verbose: bool = True) -> list[str]:
     result = download_user_data()
 
-    owned_apps = result["rgOwnedApps"]
+    owned_apps = result["rgOwnedApps"] if result else []
 
     if verbose:
         print(f"Owned apps: {len(owned_apps)}")
 
-    return owned_apps
+    return [str(i) for i in owned_apps]
 
 
-def download_free_apps(method: str = "price", verbose: bool = True) -> list[int]:
+def download_free_apps(method: str = "price", verbose: bool = True) -> set[str]:
     if method == "price":
         data = steamspypi.load()
 
-        free_apps = [
-            int(game["appid"])
+        free_apps = {
+            game["appid"]
             for game in data.values()
             if game["initialprice"]
             is not None  # I don't know what to do in the rare case that price is None.
             and int(game["initialprice"]) == 0
-        ]
+        }
 
     else:
         data_request = {}
@@ -73,7 +73,7 @@ def download_free_apps(method: str = "price", verbose: bool = True) -> list[int]
 
         data = steamspypi.download(data_request)
 
-        free_apps = [int(app_id) for app_id in data]
+        free_apps = {str(app_id) for app_id in data}
 
     if verbose:
         print(f"Free apps (based on {method}): {len(free_apps)}")
@@ -81,7 +81,7 @@ def download_free_apps(method: str = "price", verbose: bool = True) -> list[int]
     return free_apps
 
 
-def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
+def load_apps_with_trading_cards(verbose: bool = True) -> list[str]:
     all_listings = load_all_listings()
 
     apps_with_trading_cards = [
@@ -95,10 +95,10 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[int]:
 
 
 def load_free_apps_with_trading_cards(
-    free_apps: set[int] | None = None,
+    free_apps: set[str] | None = None,
     list_of_methods: list[str] | None = None,
     verbose: bool = True,
-) -> set[int]:
+) -> set[str]:
     if list_of_methods is None:
         list_of_methods = ["price", "genre", "tag"]
 
@@ -123,9 +123,9 @@ def load_free_apps_with_trading_cards(
     return free_apps_with_trading_cards
 
 
-def load_file(file_name: str, verbose: bool = True) -> list[int]:
+def load_file(file_name: str, verbose: bool = True) -> list[str]:
     with Path(file_name).open(encoding="utf-8") as f:
-        data = [int(line.strip()) for line in f]
+        data = [line.strip() for line in f]
 
     if verbose:
         print(f"Loaded apps: {len(data)}")
@@ -134,14 +134,14 @@ def load_file(file_name: str, verbose: bool = True) -> list[int]:
 
 
 def format_for_asf_command_line(
-    app_ids: set[int],
+    app_ids: set[str],
     app_prefix: str | None = None,
 ) -> list[str]:
     if app_prefix is None:
         # Reference: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#addlicense-licenses
         app_prefix = "a/"
 
-    return [app_prefix + str(app_id) for app_id in sorted(app_ids)]
+    return [f"{app_prefix}{app_id}" for app_id in sorted(app_ids, key=int)]
 
 
 def chunks(lst: list, n: int) -> collections.abc.Iterator[list]:
@@ -187,7 +187,7 @@ def group_concatenate_to_str(
 def write_to_file(
     data: list[str],
     file_name: str,
-    asf_username: str | None = None,
+    asf_username: str,
     group_size: int = 25,
     verbose: bool = True,
 ) -> None:
@@ -206,7 +206,7 @@ def write_to_file(
 
 def main() -> None:
     # Based on SteamDB: https://steamdb.info/search/?a=app_keynames&keyname=243&operator=1
-    free_apps = load_file("data/free_apps.txt")
+    free_apps = load_file("../data/free_apps.txt")
 
     # Based on SteamSpy:
     free_apps_with_trading_cards = load_free_apps_with_trading_cards(
