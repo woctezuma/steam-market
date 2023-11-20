@@ -853,7 +853,11 @@ def find_representative_listing_hash_for_app_id(
         representative_listing_hash_for_app_id_as_a_set,
     )
 
-    return next(iter(sorted_representative_listing_hash_for_app_id_as_list))
+    return (
+        next(iter(sorted_representative_listing_hash_for_app_id_as_list))
+        if sorted_representative_listing_hash_for_app_id_as_list
+        else ""
+    )
 
 
 def find_item_type_for_app_id(
