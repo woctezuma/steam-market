@@ -260,7 +260,7 @@ where:
 -   C/UC/R patterns are the numbers of Common/Uncommon/Rare items associated with each appID.
 
 Therefore, we choose to estimate the drop-rates for Common rarity, conditionally to C/UC/R patterns.  
-The values hard-coded in `src/drop_rate_estimates.py` are the centers of the [Wilson score intervals](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval) with 95% confidence.
+The values hard-coded in [`src/drop_rate_estimates.py`](src/drop_rate_estimates.py) are the centers of the [Wilson score intervals](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval) with 95% confidence.
 
 ## Results
 
