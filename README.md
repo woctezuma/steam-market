@@ -103,7 +103,7 @@ To have access to the gem cost for crafting Booster Packs, you will need to manu
 
 ## Usage
 
--   To look for games which i) are likely to have high bid orders for their booster packs, and ii) which I may not own yet, run:
+-   To look for games which i) are may have high bids for their booster packs, and ii) which I may not own yet, run:
 
 ```bash
 python market_buzz_detector.py
