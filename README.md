@@ -63,8 +63,7 @@ I have been using the following entries, but you might not need to use all of th
 >    ```json
 >    {
 >      "browserid": "PASTE_YOUR_COOKIE_VALUE_HERE",
->      "steamMachineAuth_PASTE_YOUR_STEAM_ID_HERE": "PASTE_YOUR_COOKIE_VALUE_HERE",
->      "steamRememberLogin": "PASTE_YOUR_COOKIE_VALUE_HERE",
+>      "steamDidLoginRefresh": "PASTE_YOUR_COOKIE_VALUE_HERE",
 >      "sessionid": "PASTE_YOUR_COOKIE_VALUE_HERE",
 >      "steamLoginSecure": "PASTE_YOUR_COOKIE_VALUE_HERE"
 >    }
