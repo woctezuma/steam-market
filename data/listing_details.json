@@ -43388,5 +43388,90 @@
         "item_nameid": 176329473,
         "is_marketable": true,
         "item_type_no": null
+    },
+    "1990690-Cooking Live: Restaurant Game Booster Pack": {
+        "item_nameid": 176391577,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "449770-Legend of Moros Booster Pack": {
+        "item_nameid": 176357086,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1444300-Teacup Booster Pack": {
+        "item_nameid": 176300025,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1907720-Autonauts vs Piratebots Booster Pack": {
+        "item_nameid": 176324639,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1418100-Swords of Legends Online Booster Pack": {
+        "item_nameid": 176251983,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "24960-Battlefield: Bad Company™ 2 Booster Pack": {
+        "item_nameid": 176144755,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "397040-Sphere 3 Booster Pack": {
+        "item_nameid": 176402654,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1169740-Danger Scavenger Booster Pack": {
+        "item_nameid": 176262014,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1098170-Dark Nights with Poe and Munro Booster Pack": {
+        "item_nameid": 176137361,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1062140-Garden Story Booster Pack": {
+        "item_nameid": 176356227,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "2313250-Cats Hidden in Paris Booster Pack": {
+        "item_nameid": 176392727,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "367990-3D Paraglider Booster Pack": {
+        "item_nameid": 176332658,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "992070-Idle Wizard Booster Pack": {
+        "item_nameid": 176398905,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1106750-Fault: Elder Orb Booster Pack": {
+        "item_nameid": 176325534,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "1265240-Uniform Girl Booster Pack": {
+        "item_nameid": 176293752,
+        "is_marketable": false,
+        "item_type_no": null
+    },
+    "639770-UNTITLED Booster Pack": {
+        "item_nameid": 176287188,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "619390-Oddworld: Soulstorm Enhanced Edition Booster Pack": {
+        "item_nameid": 176318985,
+        "is_marketable": true,
+        "item_type_no": null
     }
 }
