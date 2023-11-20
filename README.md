@@ -73,51 +73,6 @@ I have been using the following entries, but you might not need to use all of th
 
 To have access to the gem cost for crafting Booster Packs, you will need to manually copy information available [here](https://steamcommunity.com/tradingcards/boostercreator/).
 
-There are two solutions:
--   solution A is my original solution, but it requires a browser extension called *Augmented Steam*,
--   solution B is a more recent solution, and does not require any third-party browser extension.
-
-#### Solution A
- 
-<details><summary>How to list craftable packs with *Augmented Steam*</summary>
-<p>
-
-1. Install the browser extension called [*Augmented Steam*](https://es.isthereanydeal.com/), so that the number of gems required to craft a Booster Pack appears in the drop-down menu:<br/>
-![browser extension](https://github.com/woctezuma/steam-market/wiki/img/0eovMPR.png)    
-
-2. Then, right-click the drop-down menu and "inspect" the corresponding HTML code in your browser:<br/>
-![drop-down menu](https://github.com/woctezuma/steam-market/wiki/img/jU6iI8n.png)
-
-3. Copy the following line and paste it to `data/booster_game_creator.txt`:<br/>
-![inspection](https://github.com/woctezuma/steam-market/wiki/img/y1QSzS7.png)
-
-4. Add line-breaks, so that the file is formatted in the following way:<br/>
-![formatting](https://github.com/woctezuma/steam-market/wiki/img/YAtWJ5O.png)
-
-   For instance, with [Visual Studio Code](https://code.visualstudio.com/), press `<Ctrl-H>` and run:<br/>
-![Visual Studio Code: replace](https://github.com/woctezuma/steam-market/wiki/img/aPKEI7W.png)
-
-5. Strip the following unnecessary lines:
-
-   - three lines (including an empty line) at the beginning:
-   ```html
-   <select id="booster_game_selector">
-                           <option value="">Select a game...</option>
-    
-   ```
-
-   - one line at the end:
-   ```html
-   </select>
-   ```
-
-</p>
-</details>
-
-#### Solution B
-
-Alternatively, if you wish not to install any browser extension:
-
 <details><summary>How to list craftable packs with the Booster Creation webpage</summary>
 <p>
 
