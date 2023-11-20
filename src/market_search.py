@@ -170,7 +170,7 @@ def get_all_listings(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        status_code = resp_data.status_code if resp_data and resp_data.ok else None
+        status_code = resp_data.status_code if resp_data else None
 
         start_index += delta_index
         query_count += 1

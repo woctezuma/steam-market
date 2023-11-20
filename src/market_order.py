@@ -108,7 +108,7 @@ def download_market_order_data(
         except requests.exceptions.ConnectionError:
             resp_data = None
 
-        status_code = resp_data.status_code if resp_data and resp_data.ok else None
+        status_code = resp_data.status_code if resp_data else None
 
     else:
         print(
