@@ -4422,7 +4422,8 @@
     },
     "356050-Beyond Eyes Booster Pack": {
         "item_nameid": 61941799,
-        "is_marketable": true
+        "is_marketable": null,
+        "item_type_no": null
     },
     "251830-Stick It To The Man! Booster Pack": {
         "item_nameid": 3284219,
@@ -6769,7 +6770,8 @@
     },
     "212740-TERA Booster Pack": {
         "item_nameid": 175871119,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "365850-Starchaser: Priestess of the Night Sky Booster Pack": {
         "item_nameid": 59195746,
@@ -7142,7 +7144,8 @@
     },
     "575550-Hell Girls Booster Pack": {
         "item_nameid": 175865890,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "368160-WORLD END ECONOMiCA episode.02 Booster Pack": {
         "item_nameid": 85291429,
@@ -18723,7 +18726,8 @@
     },
     "451230-Wartune Booster Pack": {
         "item_nameid": 165806799,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "273110-Counter-Strike Nexon: Zombies Booster Pack": {
         "item_nameid": 21575756,
@@ -23086,7 +23090,8 @@
     },
     "327070-Gloria Victis Booster Pack": {
         "item_nameid": 155879273,
-        "is_marketable": true
+        "is_marketable": false,
+        "item_type_no": null
     },
     "346180-David. Booster Pack": {
         "item_nameid": 32699681,
