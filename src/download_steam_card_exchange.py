@@ -52,7 +52,7 @@ def download_data_from_steam_card_exchange(
 
     resp_data = requests.get(url=url, params=req_data)
 
-    if resp_data and resp_data.ok:
+    if resp_data.ok:
         response = resp_data.json()
     else:
         status_code = resp_data.status_code
