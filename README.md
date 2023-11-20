@@ -145,7 +145,7 @@ normal cards and for foil cards.
 
 For the gamble detector, we are interested in drop-rate estimates, when crafting badges, for items of Common rarity.
 
-Based on the data so far (239 crafted badges):
+Based on the data so far (1127 crafted badges):
 -   the drop-rates for Profile Backgrounds and for Emoticons are different (reject null hypothesis with 95% confidence),
 -   conditionally to C/UC/R patterns, the drop-rates may be similar (fail to reject null hypothesis with 95% confidence).
 
