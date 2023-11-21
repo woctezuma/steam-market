@@ -124,6 +124,7 @@ def get_all_listings(
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
     start_index: int = 0,
+    listing_output_file_name: str | None = None,
 ) -> dict[str, dict]:
     if url is None:
         url = get_steam_market_search_url()
@@ -154,6 +155,10 @@ def get_all_listings(
         )
 
         if query_count >= rate_limits["max_num_queries"]:
+            if listing_output_file_name:
+                print(f"Saving temporary data to {listing_output_file_name}.")
+                save_json(all_listings, listing_output_file_name)
+
             cooldown_duration = rate_limits["cooldown"]
             print(
                 f"Number of queries {query_count} reached. Cooldown: {cooldown_duration} seconds",
@@ -264,6 +269,7 @@ def update_all_listings(
         tag_drop_rate_str=tag_drop_rate_str,
         rarity=rarity,
         start_index=start_index,
+        listing_output_file_name=listing_output_file_name,
     )
 
     save_json(all_listings, listing_output_file_name)
