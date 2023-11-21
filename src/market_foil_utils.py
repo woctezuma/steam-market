@@ -176,10 +176,11 @@ def query_goo_value(
 def get_listings_for_foil_cards(
     retrieve_listings_from_scratch: bool,
     listing_output_file_name: str | None = None,
+    start_index: int = 0,
     verbose: bool = True,
 ) -> dict[str, dict]:
     if retrieve_listings_from_scratch:
-        update_all_listings_for_foil_cards()
+        update_all_listings_for_foil_cards(start_index=start_index)
 
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name_for_foil_cards()

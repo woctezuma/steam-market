@@ -30,12 +30,13 @@ from src.utils import (
 )
 
 
-def update_all_listings_for_foil_cards() -> None:
+def update_all_listings_for_foil_cards(start_index: int = 0) -> None:
     print("Downloading listings for foil cards.")
 
     update_all_listings(
         listing_output_file_name=get_listing_output_file_name_for_foil_cards(),
         tag_item_class_no=get_tag_item_class_no_for_trading_cards(),
+        start_index=start_index,
     )
 
 

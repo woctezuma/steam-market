@@ -37,6 +37,7 @@ def apply_workflow_for_foil_cards(
     price_threshold_in_cents_for_a_foil_card: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,
     enforced_sack_of_gems_price: float | None = None,  # price in euros
+    start_index: int = 0,
     verbose: bool = True,
 ) -> bool:
     listing_output_file_name = get_listing_output_file_name_for_foil_cards()
@@ -52,6 +53,7 @@ def apply_workflow_for_foil_cards(
     all_listings = get_listings_for_foil_cards(
         retrieve_listings_from_scratch=retrieve_listings_from_scratch,
         listing_output_file_name=listing_output_file_name,
+        start_index=start_index,
         verbose=verbose,
     )
 
@@ -227,6 +229,7 @@ def main() -> bool:
     price_threshold_in_cents_for_a_foil_card = None
     retrieve_gem_price_from_scratch = True
     enforced_sack_of_gems_price = None  # price in euros
+    start_index = 0  # to resume the update in case of wrong status code
     verbose = True
 
     apply_workflow_for_foil_cards(
@@ -234,6 +237,7 @@ def main() -> bool:
         price_threshold_in_cents_for_a_foil_card=price_threshold_in_cents_for_a_foil_card,
         retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
         enforced_sack_of_gems_price=enforced_sack_of_gems_price,
+        start_index=start_index,
         verbose=verbose,
     )
 

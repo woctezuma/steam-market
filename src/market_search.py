@@ -123,6 +123,7 @@ def get_all_listings(
     tag_item_class_no: int | None = None,
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
+    start_index: int = 0,
 ) -> dict[str, dict]:
     if url is None:
         url = get_steam_market_search_url()
@@ -138,7 +139,6 @@ def get_all_listings(
     num_listings = None
 
     query_count = 0
-    start_index = 0
     delta_index = 100
 
     while (num_listings is None) or (start_index < num_listings):
@@ -217,6 +217,7 @@ def download_all_listings(
     listing_output_file_name: str | None = None,
     url: str | None = None,
     tag_item_class_no: int | None = None,
+    start_index: int = 0,
 ) -> bool:
     if listing_output_file_name is None:
         listing_output_file_name = get_listing_output_file_name()
@@ -225,6 +226,7 @@ def download_all_listings(
         all_listings = get_all_listings(
             url=url,
             tag_item_class_no=tag_item_class_no,
+            start_index=start_index,
         )
 
         save_json(all_listings, listing_output_file_name)
@@ -238,6 +240,7 @@ def update_all_listings(
     tag_item_class_no: int | None = None,
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
+    start_index: int = 0,
 ) -> bool:
     # Caveat: this is mostly useful if download_all_listings() failed in the middle of the process, and you want to
     # restart the process without risking losing anything, in case the process fails again.
@@ -260,6 +263,7 @@ def update_all_listings(
         tag_item_class_no=tag_item_class_no,
         tag_drop_rate_str=tag_drop_rate_str,
         rarity=rarity,
+        start_index=start_index,
     )
 
     save_json(all_listings, listing_output_file_name)
