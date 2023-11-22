@@ -81,7 +81,7 @@ def update_and_save_cookie_to_disk_if_values_changed(
     verbose: bool = False,
 ) -> dict[str, str]:
     if fields is None:
-        fields = ["steamLoginSecure", "sessionid"]
+        fields = ["steamLoginSecure", "sessionid", "steamDidLoginRefresh"]
 
     relevant_fields = set(fields)
     relevant_fields = relevant_fields.intersection(cookie.keys())
