@@ -152,7 +152,7 @@ def print_packs_with_high_buzz(
                     num_different_items_of_rare_rarity,
                 )
             )
-        except TypeError:
+        except (TypeError, KeyError):
             item_rarity_pattern_info = ""
 
         print(
