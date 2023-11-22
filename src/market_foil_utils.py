@@ -758,14 +758,9 @@ def download_missing_goo_details(
         verbose=verbose,
     )
 
-    # Convert appIDs to integers, because:
-    # - dictionary keys are strings in 'all_goo_details',
-    # - appIDs are stored as integers in 'groups_by_app_id'.
-    app_ids_with_known_goo_details = [int(app_id) for app_id in all_goo_details]
-
     all_app_ids = set(groups_by_app_id)
     app_ids_with_unknown_goo_details = all_app_ids.difference(
-        app_ids_with_known_goo_details,
+        all_goo_details,
     )
 
     eligible_enforced_app_ids_to_process = all_app_ids.intersection(
