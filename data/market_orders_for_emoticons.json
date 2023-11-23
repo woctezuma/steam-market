@@ -77,10 +77,10 @@
         "is_marketable": true
     },
     "647530-:grassyheart:": {
-        "bid": 0.12,
-        "ask": -1,
+        "bid": 0.52,
+        "ask": 4.22,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "479110-:ikkisad:": {
@@ -140,10 +140,10 @@
         "is_marketable": true
     },
     "496490-:EmoteGrass:": {
-        "bid": 0.09,
-        "ask": -1,
-        "bid_volume": 5,
-        "ask_volume": -1,
+        "bid": 0.1,
+        "ask": 482.84,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "581740-:guitars:": {
@@ -196,9 +196,9 @@
         "is_marketable": true
     },
     "491110-:BlueDuckie:": {
-        "bid": 0.05,
-        "ask": 5.42,
-        "bid_volume": 1,
+        "bid": 0.03,
+        "ask": 5.75,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -259,16 +259,16 @@
         "is_marketable": true
     },
     "520370-:pigeoneye:": {
-        "bid": 0.04,
-        "ask": 5.84,
+        "bid": 0.18,
+        "ask": 2.59,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "334350-:dmninja:": {
-        "bid": 0.05,
-        "ask": 23.39,
-        "bid_volume": 2,
+        "bid": 0.08,
+        "ask": 7.99,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -420,9 +420,9 @@
         "is_marketable": true
     },
     "486460-:roses:": {
-        "bid": 1.96,
-        "ask": 5.24,
-        "bid_volume": 2,
+        "bid": 2.38,
+        "ask": 4.34,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -434,9 +434,9 @@
         "is_marketable": true
     },
     "502600-:einar:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -456,9 +456,9 @@
     },
     "293220-:GreenUp:": {
         "bid": 0.11,
-        "ask": 4.57,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "954650-:druidstonecrystal:": {
@@ -485,14 +485,14 @@
     "519980-:trainwagon:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
     "486170-:lovesweetheart:": {
-        "bid": 1.92,
-        "ask": 6.26,
-        "bid_volume": 1,
+        "bid": 2.85,
+        "ask": 4.08,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -546,9 +546,9 @@
         "is_marketable": true
     },
     "585500-:SeagullHead:": {
-        "bid": 0.06,
-        "ask": 2.92,
-        "bid_volume": 1,
+        "bid": 0.04,
+        "ask": 3.59,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -574,10 +574,10 @@
         "is_marketable": true
     },
     "347470-:robotnuke:": {
-        "bid": 0.25,
-        "ask": 14.99,
+        "bid": 0.08,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "403300-:gbviolet:": {
@@ -623,10 +623,10 @@
         "is_marketable": true
     },
     "789950-:HarvestingFinger:": {
-        "bid": 0.03,
-        "ask": 14.16,
-        "bid_volume": 4,
-        "ask_volume": 3,
+        "bid": 0.04,
+        "ask": 10,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "525050-:artisanshock:": {
@@ -651,17 +651,17 @@
         "is_marketable": true
     },
     "380770-:wolSkull:": {
-        "bid": 0.16,
-        "ask": 6.75,
-        "bid_volume": 1,
+        "bid": 0.18,
+        "ask": 6.04,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
     "591130-:KingAlan:": {
         "bid": 0.07,
-        "ask": 11.36,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "345230-:MacheteKiller:": {
@@ -861,10 +861,10 @@
         "is_marketable": true
     },
     "526580-:WP_Binoculars:": {
-        "bid": 0.03,
-        "ask": 9.02,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "589220-:Calendar_Artifact:": {
@@ -875,10 +875,10 @@
         "is_marketable": true
     },
     "492800-:shonen_worried:": {
-        "bid": 0.05,
-        "ask": 0.87,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "384320-:frleague:": {
@@ -917,10 +917,10 @@
         "is_marketable": true
     },
     "635790-:uso_star:": {
-        "bid": 0.24,
-        "ask": 3.77,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.08,
+        "ask": 2.77,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "531680-:xenodog:": {
@@ -980,8 +980,8 @@
         "is_marketable": true
     },
     "552190-:PH_Heart:": {
-        "bid": 2.32,
-        "ask": 4.92,
+        "bid": 2.37,
+        "ask": 10.15,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -1051,7 +1051,7 @@
     },
     "585820-:silthar:": {
         "bid": 0.03,
-        "ask": 6.72,
+        "ask": 5.42,
         "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
@@ -1169,10 +1169,10 @@
         "is_marketable": true
     },
     "420500-:rynn:": {
-        "bid": 0.21,
-        "ask": 4.48,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 12,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "577320-:QuanticBall:": {
@@ -1204,24 +1204,24 @@
         "is_marketable": true
     },
     "781480-:shutdown:": {
-        "bid": 0.27,
-        "ask": 6.73,
-        "bid_volume": 5,
+        "bid": 0.03,
+        "ask": 10.35,
+        "bid_volume": 34,
         "ask_volume": 1,
         "is_marketable": true
     },
     "488260-:simonplanet:": {
-        "bid": 0.27,
-        "ask": 5.49,
+        "bid": 0.55,
+        "ask": 4.45,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "402630-:whiteheart:": {
-        "bid": 1.27,
-        "ask": 5.54,
+        "bid": 2.08,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "491240-:sillyguy:": {
@@ -1240,9 +1240,9 @@
     },
     "576700-:Wheelchaired:": {
         "bid": -1,
-        "ask": 4.88,
+        "ask": 4.76,
         "bid_volume": -1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "403300-:gbblue:": {
@@ -1290,7 +1290,7 @@
     "534230-:blunder:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -1344,7 +1344,7 @@
         "is_marketable": true
     },
     "446030-:JuTired:": {
-        "bid": 0.12,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -1393,10 +1393,10 @@
         "is_marketable": true
     },
     "448720-:paint_a_rainbow:": {
-        "bid": 0.78,
-        "ask": 3.06,
+        "bid": 0.65,
+        "ask": 1.09,
         "bid_volume": 2,
-        "ask_volume": 1,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "650440-:heal_warbanners:": {
@@ -1421,10 +1421,10 @@
         "is_marketable": true
     },
     "510830-:heart86:": {
-        "bid": 1.41,
-        "ask": 5.88,
+        "bid": 1.31,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "514530-:goldrugbyball:": {
@@ -1463,10 +1463,10 @@
         "is_marketable": true
     },
     "553330-:LittleCat:": {
-        "bid": 1.1,
-        "ask": 3.72,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 2.68,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "1092000-:ruri_skirt:": {
@@ -1477,9 +1477,9 @@
         "is_marketable": true
     },
     "546150-:shockball:": {
-        "bid": 0.03,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -1575,9 +1575,9 @@
         "is_marketable": true
     },
     "556090-:admiralblunt:": {
-        "bid": -1,
-        "ask": 4.67,
-        "bid_volume": -1,
+        "bid": 0.03,
+        "ask": 4.44,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -1617,8 +1617,8 @@
         "is_marketable": true
     },
     "342250-:rat:": {
-        "bid": 1.31,
-        "ask": 10.01,
+        "bid": 1.11,
+        "ask": 11.97,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -1659,10 +1659,10 @@
         "is_marketable": true
     },
     "615020-:OldFireworks:": {
-        "bid": 0.21,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.04,
+        "ask": 5.35,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "357690-:aptsilver:": {
@@ -1743,10 +1743,10 @@
         "is_marketable": true
     },
     "497040-:c4explosives:": {
-        "bid": -1,
-        "ask": 4.6,
-        "bid_volume": -1,
-        "ask_volume": 2,
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "342250-:noose:": {
@@ -1757,10 +1757,10 @@
         "is_marketable": true
     },
     "454540-:IMAIRSHIP:": {
-        "bid": 0.04,
-        "ask": 4.11,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.05,
+        "ask": 4.84,
+        "bid_volume": 2,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "454570-:RedLove:": {
@@ -1785,8 +1785,8 @@
         "is_marketable": true
     },
     "299400-:FoxTotem:": {
-        "bid": 0.34,
-        "ask": 5.12,
+        "bid": 0.51,
+        "ask": 3.74,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -1799,15 +1799,15 @@
         "is_marketable": true
     },
     "533690-:ThinkToDie:": {
-        "bid": 0.81,
-        "ask": 13.39,
+        "bid": 1.2,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "332830-:redlaser:": {
-        "bid": 2.15,
-        "ask": 3.8,
+        "bid": 2.53,
+        "ask": 7.37,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -1820,9 +1820,9 @@
         "is_marketable": true
     },
     "441020-:HSRFighter:": {
-        "bid": 0.1,
+        "bid": 0.21,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -1848,10 +1848,10 @@
         "is_marketable": true
     },
     "293220-:1ShotSpecial:": {
-        "bid": 0.08,
-        "ask": 4.02,
+        "bid": 0.04,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "391280-:epicflame:": {
@@ -1968,9 +1968,9 @@
     },
     "266470-:viper:": {
         "bid": 0.03,
-        "ask": 4.38,
-        "bid_volume": 13,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "877810-:ElderSlime:": {
@@ -1981,10 +1981,10 @@
         "is_marketable": true
     },
     "578300-:bscotchseth:": {
-        "bid": 0.08,
-        "ask": 3.59,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "686720-:leonard:": {
@@ -2016,8 +2016,8 @@
         "is_marketable": true
     },
     "224740-:eldritch:": {
-        "bid": 0.94,
-        "ask": 4.14,
+        "bid": 0.92,
+        "ask": 60,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -2030,10 +2030,10 @@
         "is_marketable": true
     },
     "435460-:FluffyCuffs:": {
-        "bid": 0.03,
-        "ask": 4.03,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "1092000-:ruri_uniform:": {
@@ -2101,8 +2101,8 @@
     },
     "440450-:bananaIslands:": {
         "bid": 0.32,
-        "ask": 34.5,
-        "bid_volume": 1,
+        "ask": 18.4,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -2135,9 +2135,9 @@
         "is_marketable": true
     },
     "858060-:assultRifle:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2184,10 +2184,10 @@
         "is_marketable": true
     },
     "356170-:ok:": {
-        "bid": 1.21,
-        "ask": 4.49,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "521000-:USA:": {
@@ -2226,10 +2226,10 @@
         "is_marketable": true
     },
     "486350-:Zomboom:": {
-        "bid": 0.03,
-        "ask": 2.89,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "705810-:ytlove:": {
@@ -2261,10 +2261,10 @@
         "is_marketable": true
     },
     "613450-:headset:": {
-        "bid": 0.03,
-        "ask": 3.51,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "568460-:loveeyes:": {
@@ -2275,10 +2275,10 @@
         "is_marketable": true
     },
     "416530-:taco:": {
-        "bid": 0.3,
-        "ask": 61.44,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "388540-:duckyboo:": {
@@ -2317,10 +2317,10 @@
         "is_marketable": true
     },
     "330000-:intimidate:": {
-        "bid": 0.14,
-        "ask": 2.88,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "618990-:fullheath:": {
@@ -2345,9 +2345,9 @@
         "is_marketable": true
     },
     "543440-:coldironhorseshoe:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2359,10 +2359,10 @@
         "is_marketable": true
     },
     "301930-:gungho:": {
-        "bid": 0.11,
-        "ask": 3.4,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "548470-:ExclamationMarksss:": {
@@ -2373,10 +2373,10 @@
         "is_marketable": true
     },
     "441020-:HSRMage:": {
-        "bid": 0.32,
-        "ask": 3.45,
+        "bid": 0.06,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "496670-:cheesewedge:": {
@@ -2387,9 +2387,9 @@
         "is_marketable": true
     },
     "496670-:ratmaze:": {
-        "bid": 0.06,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2415,9 +2415,9 @@
         "is_marketable": true
     },
     "526350-:firstCommit:": {
-        "bid": 5.42,
-        "ask": 10.9,
-        "bid_volume": 2,
+        "bid": 4.17,
+        "ask": 5.43,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -2429,10 +2429,10 @@
         "is_marketable": true
     },
     "341290-:lazor:": {
-        "bid": 2.15,
-        "ask": 3.37,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 2,
+        "ask": 5.26,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "916050-:clockerwatch:": {
@@ -2478,8 +2478,8 @@
         "is_marketable": true
     },
     "518660-:Z4_Umbrella:": {
-        "bid": 0.38,
-        "ask": 3.33,
+        "bid": 0.8,
+        "ask": 10.32,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -2492,10 +2492,10 @@
         "is_marketable": true
     },
     "413110-:HerosSongRose:": {
-        "bid": 3.05,
-        "ask": 10.9,
+        "bid": 1.75,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "762610-:winksubwaydog:": {
@@ -2534,10 +2534,10 @@
         "is_marketable": true
     },
     "688480-:eveValkyrie:": {
-        "bid": 0.15,
-        "ask": 4.15,
+        "bid": 0.19,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "628290-:rainbowflag:": {
@@ -2548,15 +2548,15 @@
         "is_marketable": true
     },
     "205610-:weed:": {
-        "bid": 2.3,
-        "ask": 3.05,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 2.08,
+        "ask": 2.85,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "458410-:cabalshealth:": {
-        "bid": 0.35,
-        "ask": 3.26,
+        "bid": 0.36,
+        "ask": 5.89,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -2604,8 +2604,8 @@
         "is_marketable": true
     },
     "575450-:gemsparkle:": {
-        "bid": 1.23,
-        "ask": 4.9,
+        "bid": 0.62,
+        "ask": 4.33,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -2625,10 +2625,10 @@
         "is_marketable": true
     },
     "485590-:citadel_joker:": {
-        "bid": 0.08,
-        "ask": 0.5,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "316970-:PixelHeart:": {
@@ -2646,10 +2646,10 @@
         "is_marketable": true
     },
     "607090-:TNTgoesboom:": {
-        "bid": 0.03,
-        "ask": 1.4,
+        "bid": 0.04,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "361130-:crusader:": {
@@ -2660,9 +2660,9 @@
         "is_marketable": true
     },
     "403680-:clashball:": {
-        "bid": 0.05,
-        "ask": 22.04,
-        "bid_volume": 2,
+        "bid": 0.03,
+        "ask": 4.61,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -2681,9 +2681,9 @@
         "is_marketable": true
     },
     "618170-:BLACK_CUBE:": {
-        "bid": 1.04,
+        "bid": 1.63,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2737,10 +2737,10 @@
         "is_marketable": true
     },
     "552000-:BHball:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.05,
+        "ask": 10.32,
+        "bid_volume": 11,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "463470-:YourFace:": {
@@ -2793,16 +2793,16 @@
         "is_marketable": true
     },
     "611810-:BirliHerz:": {
-        "bid": 0.25,
-        "ask": 2.89,
+        "bid": 0.21,
+        "ask": 2.64,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 11,
         "is_marketable": true
     },
     "488070-:flowerpower:": {
-        "bid": 0.18,
-        "ask": 3.1,
-        "bid_volume": 8,
+        "bid": 0.34,
+        "ask": 2.64,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3003,23 +3003,23 @@
         "is_marketable": true
     },
     "564950-:StarfighterPilot:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
     "507270-:LightRedDiamond:": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.28,
+        "ask": 3.5,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "541720-:RedrumButterfly:": {
-        "bid": 2.39,
-        "ask": 3.74,
-        "bid_volume": 2,
+        "bid": 1.2,
+        "ask": 2.99,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3122,8 +3122,8 @@
         "is_marketable": true
     },
     "312900-:gorilla:": {
-        "bid": 0.31,
-        "ask": 9.44,
+        "bid": 3.1,
+        "ask": 29.9,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -3150,10 +3150,10 @@
         "is_marketable": true
     },
     "524970-:smiley_shield:": {
-        "bid": 0.17,
-        "ask": 2.5,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "509770-:highcampfire:": {
@@ -3171,9 +3171,9 @@
         "is_marketable": true
     },
     "619230-:vempirecrown:": {
-        "bid": 0.03,
-        "ask": 6.71,
-        "bid_volume": 11,
+        "bid": 1.1,
+        "ask": 8.81,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3241,17 +3241,17 @@
         "is_marketable": true
     },
     "347440-:N_Pneuma:": {
-        "bid": 0.57,
-        "ask": 2.56,
-        "bid_volume": 6,
+        "bid": 0.47,
+        "ask": 10.36,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "543070-:robertcellphone:": {
-        "bid": 0.2,
-        "ask": -1,
+        "bid": 0.19,
+        "ask": 7.19,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "611980-:bbox:": {
@@ -3276,17 +3276,17 @@
         "is_marketable": true
     },
     "418210-:MetalSkull:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "602080-:solaroidsL:": {
-        "bid": 0.26,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.41,
+        "ask": 7.36,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "342190-:battle_swords:": {
@@ -3297,9 +3297,9 @@
         "is_marketable": true
     },
     "534980-:smallredrose:": {
-        "bid": 0.96,
-        "ask": 7.99,
-        "bid_volume": 2,
+        "bid": 0.38,
+        "ask": 3.7,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3423,23 +3423,23 @@
         "is_marketable": true
     },
     "516450-:GalaxyWhoa:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "572300-:nyawareness:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "513680-:skunky:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 20,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -3472,17 +3472,17 @@
         "is_marketable": true
     },
     "623810-:rabbitstory:": {
-        "bid": 0.28,
-        "ask": 1.81,
+        "bid": 0.37,
+        "ask": 2.56,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "536670-:FOTYellowCar:": {
         "bid": -1,
-        "ask": 2.48,
+        "ask": -1,
         "bid_volume": -1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "427050-:siegeBomb:": {
@@ -3514,9 +3514,9 @@
         "is_marketable": true
     },
     "609170-:dtvrdrumming:": {
-        "bid": 0.05,
-        "ask": 16.75,
-        "bid_volume": 3,
+        "bid": 0.07,
+        "ask": 10.15,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3584,9 +3584,9 @@
         "is_marketable": true
     },
     "458410-:cabalstoughness:": {
-        "bid": 0.08,
-        "ask": 2.3,
-        "bid_volume": 1,
+        "bid": 0.03,
+        "ask": 5.84,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -3619,10 +3619,10 @@
         "is_marketable": true
     },
     "266470-:targeting:": {
-        "bid": 0.05,
-        "ask": 0.49,
+        "bid": 0.07,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "475960-:4clover:": {
@@ -3655,9 +3655,9 @@
     },
     "470240-:Red_Justice:": {
         "bid": -1,
-        "ask": 2.3,
+        "ask": -1,
         "bid_volume": -1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "619310-:wofh:": {
@@ -3717,8 +3717,8 @@
         "is_marketable": true
     },
     "492150-:MyPig:": {
-        "bid": 0.19,
-        "ask": 2.35,
+        "bid": 0.16,
+        "ask": 2.59,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -3732,16 +3732,16 @@
     },
     "366400-:valantraider:": {
         "bid": 0.03,
-        "ask": 1.93,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "560080-:IMD_Hey:": {
-        "bid": 0.04,
-        "ask": 2.24,
-        "bid_volume": 15,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "910630-:arcadeheart:": {
@@ -3801,10 +3801,10 @@
         "is_marketable": true
     },
     "321330-:e_nyo:": {
-        "bid": 0.5,
-        "ask": 4.66,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 0.21,
+        "ask": 7.4,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "432940-:breakneck_artifact:": {
@@ -3843,16 +3843,16 @@
         "is_marketable": true
     },
     "524970-:stop_sign_shield:": {
-        "bid": 0.23,
-        "ask": 2.15,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "359450-:iswb_music:": {
-        "bid": 0.75,
+        "bid": 0.95,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -3892,8 +3892,8 @@
         "is_marketable": true
     },
     "350210-:schoolgirl:": {
-        "bid": 0.11,
-        "ask": 2.09,
+        "bid": 0.08,
+        "ask": 5.52,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -3927,10 +3927,10 @@
         "is_marketable": true
     },
     "618570-:wavey:": {
-        "bid": 1.8,
-        "ask": 5.19,
+        "bid": 1.56,
+        "ask": 5.92,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "496660-:TheLetterI:": {
@@ -3969,10 +3969,10 @@
         "is_marketable": true
     },
     "511120-:ikenie_water:": {
-        "bid": 0.04,
-        "ask": 2.12,
-        "bid_volume": 4,
-        "ask_volume": 3,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "496660-:TheLetterO:": {
@@ -3983,14 +3983,14 @@
         "is_marketable": true
     },
     "544190-:Theroses:": {
-        "bid": 0.89,
-        "ask": 2.09,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 2,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "359450-:iswb_fire:": {
-        "bid": 0.04,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -4004,8 +4004,8 @@
         "is_marketable": true
     },
     "587920-:phflare:": {
-        "bid": 0.21,
-        "ask": 2.08,
+        "bid": 0.12,
+        "ask": 5.07,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4039,8 +4039,8 @@
         "is_marketable": true
     },
     "535630-:OMNcigar:": {
-        "bid": 0.47,
-        "ask": 2.03,
+        "bid": 0.4,
+        "ask": 115,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4067,8 +4067,8 @@
         "is_marketable": true
     },
     "403680-:basicball:": {
-        "bid": 0.1,
-        "ask": 1.99,
+        "bid": 0.06,
+        "ask": 5.18,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4082,8 +4082,8 @@
     },
     "576960-:moremoney:": {
         "bid": 0.04,
-        "ask": 2,
-        "bid_volume": 2,
+        "ask": 6.62,
+        "bid_volume": 10,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4193,16 +4193,16 @@
         "is_marketable": true
     },
     "441020-:HSRGunner:": {
-        "bid": 0.04,
-        "ask": 1.98,
-        "bid_volume": 16,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "497710-:holosleepy:": {
-        "bid": 0.04,
-        "ask": 2,
-        "bid_volume": 4,
+        "bid": -1,
+        "ask": 11.5,
+        "bid_volume": -1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4256,10 +4256,10 @@
         "is_marketable": true
     },
     "532470-:inxsa:": {
-        "bid": -1,
-        "ask": 1.96,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "842100-:D98_Cards:": {
@@ -4277,10 +4277,10 @@
         "is_marketable": true
     },
     "369390-:RedLion:": {
-        "bid": 0.52,
-        "ask": 5.53,
+        "bid": 2.3,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "566540-:Refrain_Heart:": {
@@ -4319,9 +4319,9 @@
         "is_marketable": true
     },
     "476920-:AoD_flower:": {
-        "bid": 0.63,
-        "ask": 1.91,
-        "bid_volume": 8,
+        "bid": 0.48,
+        "ask": 51.78,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4375,10 +4375,10 @@
         "is_marketable": true
     },
     "330000-:kingk:": {
-        "bid": 0.55,
-        "ask": 4.97,
+        "bid": 0.61,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "260530-:hmmm:": {
@@ -4585,17 +4585,17 @@
         "is_marketable": true
     },
     "218450-:DeadSmile1:": {
-        "bid": 0.36,
-        "ask": 1.67,
-        "bid_volume": 1,
+        "bid": 0.38,
+        "ask": 4.2,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
     "625580-:highbornclass:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "bid": 0.12,
+        "ask": 11.5,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "363500-:hemlockscholar:": {
@@ -4690,8 +4690,8 @@
         "is_marketable": true
     },
     "259720-:fadeheart:": {
-        "bid": 1.67,
-        "ask": 3.27,
+        "bid": 2.19,
+        "ask": 3.04,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4788,9 +4788,9 @@
         "is_marketable": true
     },
     "375210-:palmtrees:": {
-        "bid": 0.23,
-        "ask": 11.07,
-        "bid_volume": 1,
+        "bid": 0.14,
+        "ask": 10.36,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4837,10 +4837,10 @@
         "is_marketable": true
     },
     "621050-:Veggies_Grass:": {
-        "bid": 0.18,
-        "ask": 1.72,
+        "bid": 0.15,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "781480-:musicwidget:": {
@@ -4851,15 +4851,15 @@
         "is_marketable": true
     },
     "263640-:tentacles:": {
-        "bid": 0.05,
-        "ask": 1.7,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 25,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "282590-:beam:": {
-        "bid": 1.05,
-        "ask": 4.2,
+        "bid": 1.51,
+        "ask": 7.9,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4928,9 +4928,9 @@
         "is_marketable": true
     },
     "605250-:pixel_skeleton:": {
-        "bid": 0.18,
-        "ask": 1.68,
-        "bid_volume": 6,
+        "bid": 0.27,
+        "ask": 57.4,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4949,7 +4949,7 @@
         "is_marketable": true
     },
     "517860-:KUMAMAKERKUMA:": {
-        "bid": 0.18,
+        "bid": 0.51,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -5014,7 +5014,7 @@
     "283450-:ThePanda:": {
         "bid": 0.29,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -5110,9 +5110,9 @@
         "is_marketable": true
     },
     "544400-:Tat:": {
-        "bid": 0.3,
-        "ask": 1.63,
-        "bid_volume": 2,
+        "bid": 0.09,
+        "ask": 9.75,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5166,10 +5166,10 @@
         "is_marketable": true
     },
     "599670-:crazyface:": {
-        "bid": 0.03,
-        "ask": 10.59,
-        "bid_volume": 11,
-        "ask_volume": 2,
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "583240-:ClassicCup:": {
@@ -5187,10 +5187,10 @@
         "is_marketable": true
     },
     "497880-:DoodleMushroom:": {
-        "bid": 0.08,
-        "ask": 16.99,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "510830-:skel86:": {
@@ -5250,9 +5250,9 @@
         "is_marketable": true
     },
     "520680-:mosaic:": {
-        "bid": 0.16,
-        "ask": 9.11,
-        "bid_volume": 2,
+        "bid": 0.08,
+        "ask": 4.5,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5271,10 +5271,10 @@
         "is_marketable": true
     },
     "454600-:caverock:": {
-        "bid": 0.05,
-        "ask": 1.57,
-        "bid_volume": 7,
-        "ask_volume": 1,
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "634180-:Sheepy_Smile:": {
@@ -5285,9 +5285,9 @@
         "is_marketable": true
     },
     "618370-:heartgreen:": {
-        "bid": 0.08,
-        "ask": 1.8,
-        "bid_volume": 2,
+        "bid": 1,
+        "ask": 7.73,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5320,9 +5320,9 @@
         "is_marketable": true
     },
     "594950-:twtpstar:": {
-        "bid": 1.97,
-        "ask": 7.25,
-        "bid_volume": 2,
+        "bid": 1.67,
+        "ask": 22.89,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5334,9 +5334,9 @@
         "is_marketable": true
     },
     "283450-:TheMonkey:": {
-        "bid": 0.13,
+        "bid": 0.25,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -5509,10 +5509,10 @@
         "is_marketable": true
     },
     "688480-:Ran:": {
-        "bid": 0.08,
-        "ask": 1.52,
+        "bid": 0.04,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "608190-:TinyBunny:": {
@@ -5607,10 +5607,10 @@
         "is_marketable": true
     },
     "605250-:pixel_bat:": {
-        "bid": 0.12,
-        "ask": -1,
+        "bid": 0.13,
+        "ask": 3.57,
         "bid_volume": 2,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "452230-:spellstone_hex:": {
@@ -5796,7 +5796,7 @@
         "is_marketable": true
     },
     "595270-:scup:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -5936,16 +5936,16 @@
         "is_marketable": true
     },
     "522020-:be_sad:": {
-        "bid": 0.05,
-        "ask": 1.39,
-        "bid_volume": 7,
+        "bid": 0.11,
+        "ask": 4.21,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "438260-:rewindrewind:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -5971,9 +5971,9 @@
         "is_marketable": true
     },
     "307920-:FarmAnimalKeeper:": {
-        "bid": 0.04,
-        "ask": 1.15,
-        "bid_volume": 6,
+        "bid": 0.08,
+        "ask": 11.5,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -6006,9 +6006,9 @@
         "is_marketable": true
     },
     "299400-:DolphinTotem:": {
-        "bid": -1,
+        "bid": 0.19,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -6050,14 +6050,14 @@
     "386390-:Splattaroo:": {
         "bid": 0.06,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "783190-:ssrich:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -6090,10 +6090,10 @@
         "is_marketable": true
     },
     "267790-:Blue_Stone:": {
-        "bid": 0.16,
-        "ask": 1.34,
-        "bid_volume": 5,
-        "ask_volume": 1,
+        "bid": 0.2,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "386260-:Antibody:": {
@@ -6118,10 +6118,10 @@
         "is_marketable": true
     },
     "569870-:10c_soda:": {
-        "bid": 0.03,
-        "ask": 1.33,
-        "bid_volume": 12,
-        "ask_volume": 2,
+        "bid": 0.26,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "504920-:rustyspanner:": {
@@ -6188,8 +6188,8 @@
         "is_marketable": true
     },
     "415080-:ctm_mouse:": {
-        "bid": 0.11,
-        "ask": 5.07,
+        "bid": 0.48,
+        "ask": 3.13,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -6251,10 +6251,10 @@
         "is_marketable": true
     },
     "585290-:SlowTurtle:": {
-        "bid": 0.21,
-        "ask": 3.45,
+        "bid": 0.13,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "510380-:GoVentureStress:": {
@@ -6398,8 +6398,8 @@
         "is_marketable": true
     },
     "610500-:wnk_portal:": {
-        "bid": 0.54,
-        "ask": 3.74,
+        "bid": 1.05,
+        "ask": 2.9,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -6448,9 +6448,9 @@
     },
     "338310-:grass:": {
         "bid": 0.03,
-        "ask": 1.23,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "ask": 99.99,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "301990-:kiss:": {
@@ -6545,16 +6545,16 @@
         "is_marketable": true
     },
     "267790-:Purple_Stone:": {
-        "bid": 0.12,
-        "ask": 1.2,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 6,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "500090-:FireSymbol:": {
-        "bid": 0.07,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -6601,10 +6601,10 @@
         "is_marketable": true
     },
     "330880-:Silver_Cross:": {
-        "bid": 0.77,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.78,
+        "ask": 20.09,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "304910-:sgsr_plane:": {
@@ -13027,10 +13027,10 @@
         "is_marketable": true
     },
     "339640-:DeadSmile:": {
-        "bid": 0.3,
-        "ask": 3,
+        "bid": 0.43,
+        "ask": 2.59,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "437060-:m3handshake:": {
@@ -13055,10 +13055,10 @@
         "is_marketable": true
     },
     "392620-:lucadia:": {
-        "bid": 0.03,
-        "ask": 0.97,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "510520-:lrlsarah:": {
@@ -13069,10 +13069,10 @@
         "is_marketable": true
     },
     "1087720-:chick_kimi:": {
-        "bid": 0.05,
-        "ask": -1,
+        "bid": 0.12,
+        "ask": 14.61,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "559280-:WaterElement:": {
@@ -13118,9 +13118,9 @@
         "is_marketable": true
     },
     "636700-:second_take:": {
-        "bid": -1,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -13132,10 +13132,10 @@
         "is_marketable": true
     },
     "450950-:du3_dan:": {
-        "bid": 0.12,
-        "ask": 0.77,
-        "bid_volume": 6,
-        "ask_volume": 2,
+        "bid": 0.32,
+        "ask": 5.54,
+        "bid_volume": 26,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "717850-:HelSablesGrimoire:": {
@@ -15421,7 +15421,7 @@
         "is_marketable": true
     },
     "914700-:mmax_sword:": {
-        "bid": 0.04,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -17172,8 +17172,8 @@
     },
     "486940-:yellowballhba:": {
         "bid": 0.03,
-        "ask": 6.72,
-        "bid_volume": 11,
+        "ask": 5.78,
+        "bid_volume": 21,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17248,9 +17248,9 @@
         "is_marketable": true
     },
     "522220-:surprise_inmind:": {
-        "bid": 0.06,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17262,10 +17262,10 @@
         "is_marketable": true
     },
     "431700-:aofvampire:": {
-        "bid": 0.06,
-        "ask": 9.98,
+        "bid": 0.2,
+        "ask": -1,
         "bid_volume": 2,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "555450-:datashard:": {
@@ -17290,10 +17290,10 @@
         "is_marketable": true
     },
     "513300-:guri_happy:": {
-        "bid": 0.16,
-        "ask": 3.65,
+        "bid": 0.07,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "368000-:corgi:": {
@@ -17311,10 +17311,10 @@
         "is_marketable": true
     },
     "422300-:attackunit:": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 2.89,
+        "bid_volume": 16,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "453030-:t5e_survivor:": {
@@ -17374,24 +17374,24 @@
         "is_marketable": true
     },
     "421900-:orc_sad:": {
-        "bid": 0.15,
-        "ask": 1.8,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "444550-:d4:": {
-        "bid": 0.16,
-        "ask": 3.76,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.05,
+        "ask": 5.18,
+        "bid_volume": 3,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "607090-:gameboard:": {
-        "bid": 0.03,
-        "ask": 3.52,
+        "bid": 0.13,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "805660-:RadNoHeart:": {
@@ -17402,9 +17402,9 @@
         "is_marketable": true
     },
     "439420-:metal_thumb_up:": {
-        "bid": 0.08,
+        "bid": 0.26,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17424,8 +17424,8 @@
     },
     "598640-:halleysmug:": {
         "bid": 0.03,
-        "ask": 3.81,
-        "bid_volume": 1,
+        "ask": 5.01,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17486,23 +17486,23 @@
         "is_marketable": true
     },
     "605490-:shaolinyin:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "588080-:numantianwarrior:": {
         "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 5,
-        "ask_volume": -1,
+        "ask": 7.3,
+        "bid_volume": 14,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "496450-:ctool:": {
         "bid": 0.05,
-        "ask": 3.99,
-        "bid_volume": 9,
+        "ask": 5.03,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17528,16 +17528,16 @@
         "is_marketable": true
     },
     "563390-:homemars:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.13,
+        "ask": 8.22,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "433660-:blockgold:": {
-        "bid": 0.05,
+        "bid": 0.5,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17598,16 +17598,16 @@
         "is_marketable": true
     },
     "573680-:realpig:": {
-        "bid": 0.09,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "780280-:sf_sun:": {
-        "bid": 0.41,
-        "ask": 3.53,
-        "bid_volume": 11,
+        "bid": 0.04,
+        "ask": 0.06,
+        "bid_volume": 12,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -17698,7 +17698,7 @@
     "785660-:sub_train:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17718,16 +17718,16 @@
     },
     "491350-:redseed:": {
         "bid": 0.03,
-        "ask": 2.62,
+        "ask": -1,
         "bid_volume": 11,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "592550-:cosygoat:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 9,
-        "ask_volume": -1,
+        "bid": 0.04,
+        "ask": 11.5,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "533960-:humantired:": {
@@ -17745,9 +17745,9 @@
         "is_marketable": true
     },
     "296790-:yellowcar:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17773,7 +17773,7 @@
         "is_marketable": true
     },
     "958740-:kinghat:": {
-        "bid": 0.21,
+        "bid": 0.13,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -17794,9 +17794,9 @@
         "is_marketable": true
     },
     "587440-:galactickeep:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -17836,10 +17836,10 @@
         "is_marketable": true
     },
     "464800-:EmptyBottle:": {
-        "bid": 0.05,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 4.87,
+        "bid_volume": 13,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "369700-:TanziaEmuri:": {
@@ -17864,10 +17864,10 @@
         "is_marketable": true
     },
     "391280-:iceicebaby:": {
-        "bid": 0.2,
-        "ask": 1.9,
+        "bid": 0.12,
+        "ask": 2.48,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "876650-:aground_pie:": {
@@ -17885,10 +17885,10 @@
         "is_marketable": true
     },
     "626010-:osprinter:": {
-        "bid": 0.04,
-        "ask": 5.75,
-        "bid_volume": 12,
-        "ask_volume": 1,
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "602430-:yonocrouch:": {
@@ -17913,10 +17913,10 @@
         "is_marketable": true
     },
     "607090-:judgephil:": {
-        "bid": 0.4,
-        "ask": 3.97,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "352210-:excited_cell:": {
@@ -17941,14 +17941,14 @@
         "is_marketable": true
     },
     "628450-:shipslighthouse:": {
-        "bid": 0.03,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "496510-:mentis:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -17969,10 +17969,10 @@
         "is_marketable": true
     },
     "433660-:blockstun:": {
-        "bid": 0.03,
-        "ask": -1,
+        "bid": 0.12,
+        "ask": 5.72,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "562250-:gold_key:": {
@@ -17983,10 +17983,10 @@
         "is_marketable": true
     },
     "877080-:sorskill:": {
-        "bid": 0.07,
-        "ask": 4.38,
+        "bid": 0.25,
+        "ask": 7.29,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "623160-:jedi:": {
@@ -18062,7 +18062,7 @@
     "503390-:swordrst:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18081,10 +18081,10 @@
         "is_marketable": true
     },
     "590780-:ShadowWick:": {
-        "bid": 0.03,
-        "ask": 2.53,
+        "bid": 0.09,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "342100-:symplant:": {
@@ -18123,10 +18123,10 @@
         "is_marketable": true
     },
     "338890-:FatMan:": {
-        "bid": 0.07,
-        "ask": 11.57,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": 9.32,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "497940-:sHush:": {
@@ -18172,10 +18172,10 @@
         "is_marketable": true
     },
     "370560-:huntergeek:": {
-        "bid": 0.08,
-        "ask": -1,
+        "bid": 0.03,
+        "ask": 5.11,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "685690-:more_booze:": {
@@ -18207,10 +18207,10 @@
         "is_marketable": true
     },
     "454600-:club:": {
-        "bid": 0.04,
-        "ask": 9.98,
-        "bid_volume": 4,
-        "ask_volume": 1,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "417310-:stagdeer:": {
@@ -18222,9 +18222,9 @@
     },
     "868260-:constructorsoftdrink:": {
         "bid": 0.04,
-        "ask": -1,
+        "ask": 4.98,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "508930-:ninjaz:": {
@@ -18235,10 +18235,10 @@
         "is_marketable": true
     },
     "592390-:infested:": {
-        "bid": 0.03,
-        "ask": 3.45,
-        "bid_volume": 10,
-        "ask_volume": 2,
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "609720-:Huginn:": {
@@ -18284,16 +18284,16 @@
         "is_marketable": true
     },
     "467990-:vsshield:": {
-        "bid": 0.03,
-        "ask": 2.65,
-        "bid_volume": 11,
-        "ask_volume": 2,
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "618640-:persec:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18313,9 +18313,9 @@
     },
     "592300-:slowdrive:": {
         "bid": 0.03,
-        "ask": 1440.55,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "1013750-:legalstar:": {
@@ -18335,7 +18335,7 @@
     "519980-:traintracks:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18347,7 +18347,7 @@
         "is_marketable": true
     },
     "524430-:Ping:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": 15.7,
         "bid_volume": 1,
         "ask_volume": 1,
@@ -18431,16 +18431,16 @@
         "is_marketable": true
     },
     "588440-:huntsman:": {
-        "bid": -1,
-        "ask": 4.31,
-        "bid_volume": -1,
+        "bid": 0.04,
+        "ask": 4.22,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
     "553150-:diamondVRD:": {
-        "bid": 0.03,
-        "ask": 4.56,
-        "bid_volume": 12,
+        "bid": 0.18,
+        "ask": 3.88,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -18459,10 +18459,10 @@
         "is_marketable": true
     },
     "664250-:HorseTrainer:": {
-        "bid": 0.03,
-        "ask": -1,
+        "bid": 0.32,
+        "ask": 6.73,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "600440-:veye:": {
@@ -18494,23 +18494,23 @@
         "is_marketable": true
     },
     "499140-:ooorb:": {
-        "bid": 0.07,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "593730-:ouroSteel:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "569520-:mineangry:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18522,9 +18522,9 @@
         "is_marketable": true
     },
     "515060-:Indra:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18578,9 +18578,9 @@
         "is_marketable": true
     },
     "748940-:rolblue:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18600,7 +18600,7 @@
     },
     "563320-:mt_key:": {
         "bid": -1,
-        "ask": 2.27,
+        "ask": 15.57,
         "bid_volume": -1,
         "ask_volume": 1,
         "is_marketable": true
@@ -18613,7 +18613,7 @@
         "is_marketable": true
     },
     "591090-:golden_owl:": {
-        "bid": 0.34,
+        "bid": 0.15,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18655,16 +18655,16 @@
         "is_marketable": true
     },
     "466480-:rage_pig:": {
-        "bid": 0.53,
+        "bid": 0.55,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "526390-:like_toxic:": {
-        "bid": 0.05,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -18676,7 +18676,7 @@
         "is_marketable": true
     },
     "526390-:hmm_toxic:": {
-        "bid": 1,
+        "bid": 1.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -25396,10 +25396,10 @@
         "is_marketable": true
     },
     "563680-:dwvr_target:": {
-        "bid": -1,
-        "ask": 2.27,
-        "bid_volume": -1,
-        "ask_volume": 2,
+        "bid": 0.13,
+        "ask": 9.2,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "628800-:shmupheart:": {
@@ -25461,7 +25461,7 @@
     "560150-:pithin:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -25739,16 +25739,16 @@
         "is_marketable": true
     },
     "607400-:doorred:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.04,
+        "ask": 6.96,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "896460-:ImpulseFamiliar:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -25783,7 +25783,7 @@
     "803220-:winionsundead:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -25972,28 +25972,28 @@
     "560150-:noria:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 9,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
     "958740-:corruption:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 10,
-        "ask_volume": -1,
+        "bid": 0.09,
+        "ask": 2.3,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "504410-:bride:": {
-        "bid": 0.03,
-        "ask": 42.51,
-        "bid_volume": 12,
+        "bid": 0.17,
+        "ask": 40.97,
+        "bid_volume": 10,
         "ask_volume": 1,
         "is_marketable": true
     },
     "413290-:saddropsy:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -26007,7 +26007,7 @@
     "618080-:MABDragon:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -26047,10 +26047,10 @@
         "is_marketable": true
     },
     "501050-:emerland_unicorn:": {
-        "bid": 0.3,
-        "ask": -1,
+        "bid": 0.18,
+        "ask": 3.3,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "657860-:dphazineavcisi:": {
@@ -26061,10 +26061,10 @@
         "is_marketable": true
     },
     "624780-:Corb_PrincessBow:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.04,
+        "ask": 4.02,
+        "bid_volume": 5,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "895950-:bh2umbrella:": {
@@ -26082,9 +26082,9 @@
         "is_marketable": true
     },
     "438780-:Watchinghead:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -26096,7 +26096,7 @@
         "is_marketable": true
     },
     "459780-:discube:": {
-        "bid": 0.03,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -26124,9 +26124,9 @@
         "is_marketable": true
     },
     "612670-:moonelement:": {
-        "bid": 0.03,
-        "ask": 4.3,
-        "bid_volume": 12,
+        "bid": 0.05,
+        "ask": 4.16,
+        "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -26138,9 +26138,9 @@
         "is_marketable": true
     },
     "471400-:sjcoin:": {
-        "bid": 0.03,
-        "ask": 5.81,
-        "bid_volume": 3,
+        "bid": -1,
+        "ask": 5.18,
+        "bid_volume": -1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -26350,7 +26350,7 @@
     "464740-:mmblue:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 22,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -27335,7 +27335,7 @@
         "is_marketable": true
     },
     "359450-:iswb_time:": {
-        "bid": 0.12,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -27349,14 +27349,14 @@
         "is_marketable": true
     },
     "436560-:HorsingAround:": {
-        "bid": 0.21,
-        "ask": 5.13,
-        "bid_volume": 30,
-        "ask_volume": 4,
+        "bid": 0.27,
+        "ask": 7.9,
+        "bid_volume": 42,
+        "ask_volume": 5,
         "is_marketable": true
     },
     "359450-:iswb_target:": {
-        "bid": 0.05,
+        "bid": 0.06,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -27377,23 +27377,23 @@
         "is_marketable": true
     },
     "408860-:ZombiePunk:": {
-        "bid": -1,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "611230-:heathenhand:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 4.15,
+        "bid_volume": 11,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "513460-:NationalEconomy:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -27414,15 +27414,15 @@
     "366040-:IEA_Egg:": {
         "bid": 0.15,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "559990-:PurpleGuardian:": {
-        "bid": 0.04,
-        "ask": -1,
-        "bid_volume": 10,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 1339.22,
+        "bid_volume": 11,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "598820-:rubberduck_aloha:": {
@@ -27503,16 +27503,16 @@
         "is_marketable": true
     },
     "513920-:boolit:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 10,
-        "ask_volume": -1,
+        "bid": 0.04,
+        "ask": 11.5,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "623180-:z_ombie:": {
-        "bid": 0.15,
-        "ask": 1.69,
-        "bid_volume": 19,
+        "bid": 0.25,
+        "ask": 4.14,
+        "bid_volume": 26,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -27552,7 +27552,7 @@
         "is_marketable": true
     },
     "500090-:AirSymbol:": {
-        "bid": 0.18,
+        "bid": 0.5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -27595,7 +27595,7 @@
     },
     "380770-:wolPirate:": {
         "bid": 0.4,
-        "ask": 26.69,
+        "ask": 4.15,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -27629,9 +27629,9 @@
         "is_marketable": true
     },
     "469830-:fable_chicken:": {
-        "bid": 0.98,
+        "bid": 0.82,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -27671,7 +27671,7 @@
         "is_marketable": true
     },
     "552690-:coral:": {
-        "bid": 0.28,
+        "bid": 0.29,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -27685,17 +27685,17 @@
         "is_marketable": true
     },
     "243300-:centration:": {
-        "bid": 0.03,
-        "ask": 3.38,
-        "bid_volume": 16,
+        "bid": 0.05,
+        "ask": 5.76,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "488260-:simoncomet:": {
-        "bid": 0.87,
-        "ask": 3.88,
-        "bid_volume": 1,
-        "ask_volume": 2,
+        "bid": 1.44,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "724250-:pm5_eat:": {
@@ -27729,7 +27729,7 @@
     "413540-:sleet:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -27895,9 +27895,9 @@
         "is_marketable": true
     },
     "517860-:KUMAMAKERDonut:": {
-        "bid": 0.06,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -27937,30 +27937,30 @@
         "is_marketable": true
     },
     "319550-:atom:": {
-        "bid": 0.28,
+        "bid": 0.57,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "366040-:IEA_Meat:": {
-        "bid": 0.11,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "384230-:bpsblueteam:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "415890-:bisou:": {
-        "bid": -1,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -27973,9 +27973,9 @@
     },
     "546870-:MandMCavalry:": {
         "bid": -1,
-        "ask": -1,
+        "ask": 3.01,
         "bid_volume": -1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "532070-:bearminer:": {
@@ -28002,7 +28002,7 @@
     "386390-:Cheeeeeeeez:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -28021,9 +28021,9 @@
         "is_marketable": true
     },
     "461910-:fog_gem:": {
-        "bid": 0.09,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -28035,7 +28035,7 @@
         "is_marketable": true
     },
     "446030-:ScrapRoll:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28051,7 +28051,7 @@
     "619210-:16cell:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 12,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -28084,7 +28084,7 @@
         "is_marketable": true
     },
     "319550-:photon:": {
-        "bid": 0.46,
+        "bid": 0.77,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28093,7 +28093,7 @@
     "357010-:HappyCollider:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -28126,7 +28126,7 @@
         "is_marketable": true
     },
     "469830-:twinblade:": {
-        "bid": 0.42,
+        "bid": 0.46,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28147,9 +28147,9 @@
         "is_marketable": true
     },
     "469830-:guild_seal:": {
-        "bid": 0.98,
+        "bid": 0.46,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -28182,14 +28182,14 @@
         "is_marketable": true
     },
     "359450-:iswb_ship:": {
-        "bid": 0.04,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "469830-:guildmaster:": {
-        "bid": 0.42,
+        "bid": 0.92,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28238,9 +28238,9 @@
         "is_marketable": true
     },
     "319550-:neutrino:": {
-        "bid": -1,
+        "bid": 0.25,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -29547,9 +29547,9 @@
         "is_marketable": true
     },
     "712060-:ChomperFlower:": {
-        "bid": 0.04,
-        "ask": 10.12,
-        "bid_volume": 2,
+        "bid": 0.24,
+        "ask": 4.71,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -29561,7 +29561,7 @@
         "is_marketable": true
     },
     "418210-:GuitarMetal:": {
-        "bid": 0.31,
+        "bid": 0.29,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -29687,10 +29687,10 @@
         "is_marketable": true
     },
     "628710-:HellWardersSad:": {
-        "bid": 0.21,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": -1,
+        "ask": 4.34,
+        "bid_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "878420-:aquiangry:": {
@@ -29701,10 +29701,10 @@
         "is_marketable": true
     },
     "421890-:AvarisSyuriken:": {
-        "bid": 0.04,
-        "ask": 3.34,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": -1,
+        "ask": 10.04,
+        "bid_volume": -1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "938220-:hrtfl:": {
@@ -29743,9 +29743,9 @@
         "is_marketable": true
     },
     "336510-:daggers:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -30443,10 +30443,10 @@
         "is_marketable": true
     },
     "660330- (Emoticon)": {
-        "bid": 0.63,
-        "ask": 2.95,
+        "bid": 0.86,
+        "ask": 1.42,
         "bid_volume": 2,
-        "ask_volume": 1,
+        "ask_volume": 4,
         "is_marketable": true
     },
     "589870-:pingu:": {
@@ -30471,8 +30471,8 @@
         "is_marketable": true
     },
     "618080-:Shaolin:": {
-        "bid": 0.1,
-        "ask": 3.57,
+        "bid": 0.13,
+        "ask": 5.8,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -30480,7 +30480,7 @@
     "454600-:purplemeteor:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -30506,7 +30506,7 @@
         "is_marketable": true
     },
     "418210-:UptheIRONS:": {
-        "bid": 0.11,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -30520,7 +30520,7 @@
         "is_marketable": true
     },
     "618640-:froggerz:": {
-        "bid": 0.06,
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -30569,15 +30569,15 @@
         "is_marketable": true
     },
     "600640-:daggerhand:": {
-        "bid": 0.12,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.29,
+        "ask": 1150.61,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "359420-:agent3:": {
-        "bid": 0.16,
-        "ask": 299.99,
+        "bid": 0.19,
+        "ask": 57.5,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -30590,9 +30590,9 @@
         "is_marketable": true
     },
     "534780-:XFOG:": {
-        "bid": 0.06,
-        "ask": 11.5,
-        "bid_volume": 2,
+        "bid": 0.09,
+        "ask": 8.44,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -30611,9 +30611,9 @@
         "is_marketable": true
     },
     "619620-:Platelet:": {
-        "bid": 0.5,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -30632,7 +30632,7 @@
         "is_marketable": true
     },
     "347030-:coeur:": {
-        "bid": 2,
+        "bid": 3,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -30730,9 +30730,9 @@
         "is_marketable": true
     },
     "548350-:GreenEnergyContainer:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -30744,9 +30744,9 @@
         "is_marketable": true
     },
     "658320-:maidenrly:": {
-        "bid": 0.04,
-        "ask": 47.95,
-        "bid_volume": 2,
+        "bid": 0.1,
+        "ask": 4.61,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -30765,10 +30765,10 @@
         "is_marketable": true
     },
     "517210-:melikey:": {
-        "bid": 0.04,
-        "ask": -1,
+        "bid": 0.21,
+        "ask": 1.19,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "568340-:huntingrifle:": {
@@ -30807,10 +30807,10 @@
         "is_marketable": true
     },
     "517500-:ff1:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.05,
+        "ask": 6.37,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "509620-:brainflask:": {
@@ -30842,10 +30842,10 @@
         "is_marketable": true
     },
     "620330-:rockchunk:": {
-        "bid": 0.03,
-        "ask": 132.49,
-        "bid_volume": 12,
-        "ask_volume": 1,
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "459780-:Pike:": {
@@ -30954,9 +30954,9 @@
         "is_marketable": true
     },
     "658320-:maidenwtf:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": 5,
-        "bid_volume": 2,
+        "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -30968,10 +30968,10 @@
         "is_marketable": true
     },
     "332540-:fig_wsm_skull:": {
-        "bid": 0.03,
-        "ask": 10.84,
-        "bid_volume": 3,
-        "ask_volume": 1,
+        "bid": 0.12,
+        "ask": 26.29,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "513840-:FnbaGold:": {
@@ -30989,10 +30989,10 @@
         "is_marketable": true
     },
     "464800-:CallMeBaby:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.15,
+        "ask": 11.5,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "398160-:SquareEnemy:": {
@@ -31017,9 +31017,9 @@
         "is_marketable": true
     },
     "246700-:IronSkull:": {
-        "bid": 0.16,
+        "bid": 0.28,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31031,9 +31031,9 @@
         "is_marketable": true
     },
     "536930-:MFF_Chocobo:": {
-        "bid": 0.38,
+        "bid": 0.4,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31108,14 +31108,14 @@
         "is_marketable": true
     },
     "568340-:showtime:": {
-        "bid": 0.17,
+        "bid": 0.16,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "560380-:OrangeMushroom:": {
-        "bid": 0.81,
+        "bid": 0.83,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -31157,9 +31157,9 @@
         "is_marketable": true
     },
     "491350-:moneychest:": {
-        "bid": 0.04,
-        "ask": 538.01,
-        "bid_volume": 2,
+        "bid": 0.03,
+        "ask": 46,
+        "bid_volume": 10,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -31199,21 +31199,21 @@
         "is_marketable": true
     },
     "1100970-:ShoeEmoticon:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": true
     },
     "547010-:HelloWorld:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "560380-:MS2Slime:": {
-        "bid": 0.77,
+        "bid": 0.84,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -32739,23 +32739,23 @@
         "is_marketable": true
     },
     "374640-:moi_dragon:": {
-        "bid": 0.23,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 24,
         "ask_volume": -1,
         "is_marketable": true
     },
     "523810-:emoticon_3:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": true
     },
     "415890-:frogbert:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -32802,9 +32802,9 @@
         "is_marketable": true
     },
     "611620-:jackInTheBox:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -32837,14 +32837,14 @@
         "is_marketable": true
     },
     "553040-:gnoblin:": {
-        "bid": 0.03,
-        "ask": 70.16,
-        "bid_volume": 12,
+        "bid": 0.09,
+        "ask": 56.39,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "639450-:FlowerPot:": {
-        "bid": 0.1,
+        "bid": 0.51,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -32859,9 +32859,9 @@
     },
     "603790-:ninjaavengersickle:": {
         "bid": 0.05,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
+        "ask": 100,
+        "bid_volume": 5,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "341290-:lazormirror:": {
@@ -32900,7 +32900,7 @@
         "is_marketable": true
     },
     "392190-:goof2:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -32928,23 +32928,23 @@
         "is_marketable": true
     },
     "511960-:PlanetGS:": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": -1,
+        "ask": 0.03,
+        "bid_volume": -1,
+        "ask_volume": 3,
         "is_marketable": true
     },
     "639450-:ManlyMan:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "371440-:journeyl:": {
-        "bid": -1,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -32977,9 +32977,9 @@
         "is_marketable": false
     },
     "472690-:mrmoney:": {
-        "bid": 0.1,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -33733,9 +33733,9 @@
         "is_marketable": true
     },
     "575000-:wooden_coffin:": {
-        "bid": 0.03,
+        "bid": 0.73,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -33747,7 +33747,7 @@
         "is_marketable": true
     },
     "698720-:EMO_POOP:": {
-        "bid": 0.19,
+        "bid": 1.2,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
@@ -33791,22 +33791,22 @@
     "506560-:dlneutral:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "504730-:MOBIUSFF_Chocobo:": {
-        "bid": 0.38,
+        "bid": 0.54,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "436410- (Emoticon)": {
-        "bid": 0.77,
-        "ask": 2.94,
+        "bid": 0.14,
+        "ask": -1,
         "bid_volume": 2,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "450030-:radioactiveworld:": {
@@ -33817,9 +33817,9 @@
         "is_marketable": false
     },
     "392060-:Rosita:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -33838,9 +33838,9 @@
         "is_marketable": true
     },
     "698720-:EMO_WHUAT:": {
-        "bid": 0.31,
+        "bid": 0.43,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -33852,16 +33852,16 @@
         "is_marketable": true
     },
     "598640-:slynova:": {
-        "bid": 0.07,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 46,
+        "bid_volume": 11,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "568180-:SKLog:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -33887,9 +33887,9 @@
         "is_marketable": true
     },
     "501440-:RedStarOfStars:": {
-        "bid": -1,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -33901,35 +33901,35 @@
         "is_marketable": true
     },
     "698720-:EMO_HIHI:": {
-        "bid": 0.06,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 9,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "496510-:mdot:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "496510-:brydon:": {
-        "bid": 0.11,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "346760-:printplasma:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 6,
         "ask_volume": -1,
         "is_marketable": true
     },
     "431860-:bluetile:": {
-        "bid": 0.3,
+        "bid": 0.73,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -33943,23 +33943,23 @@
         "is_marketable": true
     },
     "293220-:1Shot:": {
-        "bid": 0.06,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
     "578010-:AFCBall:": {
-        "bid": 0.05,
-        "ask": 6.36,
-        "bid_volume": 1,
+        "bid": 0.03,
+        "ask": 0.73,
+        "bid_volume": 14,
         "ask_volume": 1,
         "is_marketable": true
     },
     "510040-:MoM_Axe:": {
-        "bid": 0.11,
-        "ask": 131.14,
-        "bid_volume": 2,
+        "bid": 0.18,
+        "ask": 58.81,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -33971,7 +33971,7 @@
         "is_marketable": true
     },
     "698720-:EMO_DUDE:": {
-        "bid": 1.29,
+        "bid": 1.44,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -34008,7 +34008,7 @@
     "428440-:ThisSucks:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34027,7 +34027,7 @@
         "is_marketable": true
     },
     "431860-:yellowtile:": {
-        "bid": 3.07,
+        "bid": 5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -34041,9 +34041,9 @@
         "is_marketable": true
     },
     "345460-:vespitole:": {
-        "bid": 0.04,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -34069,10 +34069,10 @@
         "is_marketable": true
     },
     "523610-:TacovCV7:": {
-        "bid": 0.07,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 9.74,
+        "bid_volume": 12,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "503130-:RID:": {
@@ -34146,17 +34146,17 @@
         "is_marketable": false
     },
     "504730-:MOBIUSFF_Treasure:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473480-:mikocroc:": {
         "bid": -1,
-        "ask": -1,
+        "ask": 69,
         "bid_volume": -1,
-        "ask_volume": -1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "353080-:Redrum2Skeleton:": {
@@ -34223,22 +34223,22 @@
         "is_marketable": false
     },
     "384230-:bpsredteam:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "431860-:redtile:": {
-        "bid": 0.13,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
+    "431860-:redtile:": {
+        "bid": 0.16,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
     "396660-:furiousb:": {
         "bid": 0.05,
-        "ask": 3.51,
+        "ask": 3.11,
         "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
@@ -34265,9 +34265,9 @@
         "is_marketable": true
     },
     "380790-:Implo:": {
-        "bid": 0.99,
+        "bid": 1.2,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": null
     },
@@ -34279,9 +34279,9 @@
         "is_marketable": null
     },
     "385630-:space_money:": {
-        "bid": 0.04,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34295,7 +34295,7 @@
     "873290-:OukaNarimoto:": {
         "bid": 0.05,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34349,9 +34349,9 @@
         "is_marketable": true
     },
     "434780-:OrionHomePlanet:": {
-        "bid": 0.07,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34384,9 +34384,9 @@
         "is_marketable": false
     },
     "508140-:MiniTheDog:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34428,7 +34428,7 @@
     "873290-:WakanaKamikawa:": {
         "bid": 0.08,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34440,9 +34440,9 @@
         "is_marketable": true
     },
     "585030-:WFMedicico:": {
-        "bid": 0.04,
-        "ask": 5,
-        "bid_volume": 8,
+        "bid": 0.03,
+        "ask": 4.61,
+        "bid_volume": 19,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -38584,9 +38584,9 @@
         "is_marketable": true
     },
     "605250-:pixel_plant:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -38598,38 +38598,38 @@
         "is_marketable": true
     },
     "793680-:GrayAlien:": {
-        "bid": 0.06,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 16,
         "ask_volume": -1,
         "is_marketable": true
     },
     "350490-:paperclip:": {
-        "bid": 0.05,
-        "ask": 3.3,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.13,
+        "ask": 2.33,
+        "bid_volume": 1,
+        "ask_volume": 2,
         "is_marketable": true
     },
     "300040-:Skillz:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "311930-:WeldonRocket:": {
-        "bid": 0.06,
-        "ask": 5.75,
-        "bid_volume": 2,
+        "bid": 0.04,
+        "ask": 4.43,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "665270-:MistyFireBall:": {
-        "bid": 0.11,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.06,
+        "ask": 8.92,
+        "bid_volume": 29,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "665270-:FrenioMagicCircle:": {
@@ -38691,7 +38691,7 @@
     "312430-:shapeshifter:": {
         "bid": 0.05,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38745,9 +38745,9 @@
         "is_marketable": true
     },
     "914700-:mmax_pickax:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38808,9 +38808,9 @@
         "is_marketable": true
     },
     "555340-:pixel02:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38829,9 +38829,9 @@
         "is_marketable": true
     },
     "510710-:BloxiqColours:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -38843,23 +38843,23 @@
         "is_marketable": true
     },
     "555340-:pixel01:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "434360-:kittenexplosion:": {
-        "bid": 0.06,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "295850-:vladv:": {
-        "bid": 0.07,
+        "bid": 0.3,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38878,9 +38878,9 @@
         "is_marketable": true
     },
     "1084400-:Anime:": {
-        "bid": 0.09,
+        "bid": 0.21,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38892,9 +38892,9 @@
         "is_marketable": true
     },
     "537100-:Shuffle_Kurotama1:": {
-        "bid": 0.13,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38906,9 +38906,9 @@
         "is_marketable": true
     },
     "512600-:momoko_anger:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38922,7 +38922,7 @@
     "592890-:insidia_coma:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38934,9 +38934,9 @@
         "is_marketable": true
     },
     "504670-:skye:": {
-        "bid": 0.06,
-        "ask": 5.55,
-        "bid_volume": 2,
+        "bid": 0.51,
+        "ask": 2.99,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -39039,9 +39039,9 @@
         "is_marketable": true
     },
     "344240-:Corsair_warning:": {
-        "bid": 0.05,
+        "bid": 0.18,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39095,30 +39095,30 @@
         "is_marketable": true
     },
     "235340-:bombs:": {
-        "bid": 0.05,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 9,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "783190-:sssleepyhead:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "537100-:Shuffle_Kurotama2:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "530550-:Ball1:": {
-        "bid": 0.52,
+        "bid": 0.54,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39172,7 +39172,7 @@
         "is_marketable": false
     },
     "354640-:peasant:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -39186,9 +39186,9 @@
         "is_marketable": true
     },
     "295850-:dracul:": {
-        "bid": -1,
+        "bid": 0.3,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39200,16 +39200,16 @@
         "is_marketable": true
     },
     "295550-:smiley:": {
-        "bid": 0.14,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "513650-:zgold:": {
-        "bid": 0.09,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39230,28 +39230,28 @@
     "410380-:shinhare:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "307600-:reddark:": {
-        "bid": 0.05,
+        "bid": 0.21,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "295550-:desu:": {
-        "bid": 0.48,
+        "bid": 0.13,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "300040-:dart:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -41650,10 +41650,10 @@
         "is_marketable": true
     },
     "380770-:wolChest:": {
-        "bid": 0.14,
-        "ask": -1,
+        "bid": 0.15,
+        "ask": 5.99,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "513560-:Emoticons03:": {
@@ -41664,9 +41664,9 @@
         "is_marketable": true
     },
     "942580-:ocean_gem:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41678,24 +41678,24 @@
         "is_marketable": false
     },
     "555580-:Chocolate_Donut:": {
-        "bid": 0.08,
-        "ask": 7.09,
-        "bid_volume": 3,
+        "bid": 1,
+        "ask": 7.77,
+        "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
     },
     "438090-:DF_Husky:": {
-        "bid": 0.17,
-        "ask": 27.69,
-        "bid_volume": 19,
-        "ask_volume": 2,
+        "bid": 0.09,
+        "ask": 0.28,
+        "bid_volume": 18,
+        "ask_volume": 8,
         "is_marketable": true
     },
     "341570-:Ughlar_full:": {
         "bid": -1,
-        "ask": -1,
+        "ask": 4.61,
         "bid_volume": -1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "552880-:vektra:": {
@@ -41706,9 +41706,9 @@
         "is_marketable": true
     },
     "387090-:Diceroll2:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 14,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41720,16 +41720,16 @@
         "is_marketable": true
     },
     "430230-:gmgrass:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "467470-:orangefriendship:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41776,23 +41776,23 @@
         "is_marketable": true
     },
     "501440-:SandStarOfStars:": {
-        "bid": 0.05,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "733610-:TalesofWinds_WhiteFox:": {
-        "bid": 0.12,
+        "bid": 1.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "352050-:greenjewel:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41867,16 +41867,16 @@
         "is_marketable": true
     },
     "842120-:ap_crystal:": {
-        "bid": 0.04,
-        "ask": 853.95,
-        "bid_volume": 6,
+        "bid": 0.03,
+        "ask": 46,
+        "bid_volume": 23,
         "ask_volume": 1,
         "is_marketable": true
     },
     "431630-:algrenadecrate:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41888,9 +41888,9 @@
         "is_marketable": true
     },
     "595430-:skbombs:": {
-        "bid": 0.04,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41902,9 +41902,9 @@
         "is_marketable": true
     },
     "456180-:BurgerAD:": {
-        "bid": 0.14,
-        "ask": 3.83,
-        "bid_volume": 19,
+        "bid": 0.21,
+        "ask": 3,
+        "bid_volume": 40,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -41918,7 +41918,7 @@
     "346760-:placebo:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 6,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41932,7 +41932,7 @@
     "511010-:Chopy:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 22,
+        "bid_volume": 8,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41946,7 +41946,7 @@
     "356090-:bent:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 12,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -41958,17 +41958,17 @@
         "is_marketable": true
     },
     "345460-:metris:": {
-        "bid": 0.04,
-        "ask": -1,
-        "bid_volume": 8,
-        "ask_volume": -1,
+        "bid": 0.07,
+        "ask": 156,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "342910-:PrimitiveAxe:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 9.12,
+        "bid_volume": 11,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "342910-:ChopScrapeHack:": {
@@ -41986,7 +41986,7 @@
         "is_marketable": true
     },
     "318680-:HILtorch:": {
-        "bid": 0.1,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42000,35 +42000,35 @@
         "is_marketable": true
     },
     "610250-:glitch_happy:": {
-        "bid": 0.03,
-        "ask": 9.98,
-        "bid_volume": 12,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "590570-:paperletter:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
-        "is_marketable": true
-    },
-    "413040-:YumYum:": {
-        "bid": -1,
-        "ask": 881.56,
-        "bid_volume": -1,
-        "ask_volume": 1,
-        "is_marketable": true
-    },
-    "593740-:pizzad:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
+    "590570-:paperletter:": {
+        "bid": -1,
+        "ask": 0.78,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "413040-:YumYum:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "593740-:pizzad:": {
+        "bid": -1,
+        "ask": 0.03,
+        "bid_volume": -1,
+        "ask_volume": 67,
+        "is_marketable": true
+    },
     "573680-:realchicken:": {
-        "bid": 0.07,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42056,16 +42056,16 @@
         "is_marketable": true
     },
     "361130-:dungeondoor:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "438920-:locmissile:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -42091,7 +42091,7 @@
         "is_marketable": true
     },
     "365440-:Scene:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42112,24 +42112,24 @@
         "is_marketable": true
     },
     "760620-:Fung:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "467470-:yellowfriendship:": {
         "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 10,
-        "ask_volume": -1,
+        "ask": 11.5,
+        "bid_volume": 12,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "473050-:Fish2:": {
-        "bid": 0.07,
-        "ask": -1,
+        "bid": 0.46,
+        "ask": 22.88,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "499110-:QueensOrb:": {
@@ -42140,16 +42140,16 @@
         "is_marketable": true
     },
     "72200-:moon:": {
-        "bid": 0.35,
+        "bid": 1.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "365440-:FrownyMan:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42161,9 +42161,9 @@
         "is_marketable": false
     },
     "310380-:BombSkill:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42175,10 +42175,10 @@
         "is_marketable": true
     },
     "307150-:jane:": {
-        "bid": -1,
-        "ask": 382.78,
-        "bid_volume": -1,
-        "ask_volume": 2,
+        "bid": 0.05,
+        "ask": 5.75,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "375090-:empathygauntlet:": {
@@ -42189,7 +42189,7 @@
         "is_marketable": false
     },
     "336520-:cuirass:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42203,17 +42203,17 @@
         "is_marketable": true
     },
     "568470-:jester_wtg:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
+        "bid": 0.11,
+        "ask": 6.45,
+        "bid_volume": 29,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "626010-:osburnit:": {
-        "bid": 0.09,
-        "ask": 10.09,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "491020-:Iamaqueen:": {
@@ -42252,9 +42252,9 @@
         "is_marketable": true
     },
     "270410-:VampireGirl:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42266,24 +42266,24 @@
         "is_marketable": true
     },
     "473050-:Fish1:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 7,
         "ask_volume": -1,
         "is_marketable": true
     },
     "727510-:VMskel:": {
-        "bid": 0.07,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 0.05,
+        "bid_volume": 27,
+        "ask_volume": 5,
         "is_marketable": true
     },
     "725370-:Bessie:": {
-        "bid": 0.06,
-        "ask": 22.04,
-        "bid_volume": 1,
-        "ask_volume": 1,
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "460970-:sack_of_gold:": {
@@ -42315,9 +42315,9 @@
         "is_marketable": false
     },
     "760620-:Arco:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42336,16 +42336,16 @@
         "is_marketable": true
     },
     "363790-:the_egg:": {
-        "bid": 0.05,
+        "bid": 0.13,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "573680-:realsheep:": {
-        "bid": 0.03,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42357,9 +42357,9 @@
         "is_marketable": true
     },
     "367600-:Nukerz:": {
-        "bid": 0.1,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42371,16 +42371,16 @@
         "is_marketable": true
     },
     "573300-:bacchus:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
     "394450-:bolter:": {
-        "bid": -1,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42413,9 +42413,9 @@
         "is_marketable": true
     },
     "473050-:Fish4:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -42427,16 +42427,16 @@
         "is_marketable": true
     },
     "394450-:heavybolter:": {
-        "bid": 0.04,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "1097800-:unamusedlucas:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42483,37 +42483,37 @@
         "is_marketable": true
     },
     "573680-:realcow:": {
-        "bid": 0.03,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "336520-:heatershield:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "1097800-:maxsmile:": {
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "336520-:heatershield:": {
-        "bid": 0.04,
-        "ask": -1,
-        "bid_volume": 7,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "1097800-:maxsmile:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 19,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
     "206210-:gciknife:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "492760-:striker:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 9,
+        "bid_volume": 6,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42527,21 +42527,21 @@
     "1097800-:hoppereyes:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 20,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "206210-:gcihatchet:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 20,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "587540-:dchrono:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -45869,5 +45869,1741 @@
         "bid_volume": 10,
         "ask_volume": 1,
         "is_marketable": true
+    },
+    "522020-:be_evil_smile:": {
+        "bid": 0.03,
+        "ask": 5.08,
+        "bid_volume": 10,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "499510-:relievedpanda:": {
+        "bid": 0.1,
+        "ask": 9.01,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "1016720-:SK_Pig:": {
+        "bid": 0.03,
+        "ask": 1.04,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "422980-:RobotEmoticon:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "803220-:winionsfight:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "268810-:computer:": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "421900-:SRCI:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "630830-:tl1_skull:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "330000-:cursed:": {
+        "bid": 0.29,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "585290-:QuickLikeBunny:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "415000-:Disapproval:": {
+        "bid": 0.11,
+        "ask": 8.28,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "497710-:holoangry:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "375030-:KorwinCrown:": {
+        "bid": 0.92,
+        "ask": 3.83,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "366920-:rbd_love:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "631780-:Beerzerker:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "631780-:HeadUnit:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "394950-:mc_gemstone:": {
+        "bid": 0.1,
+        "ask": 3.25,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": null
+    },
+    "471260-:Miew:": {
+        "bid": 0.14,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "332540-:fig_wsm_cow:": {
+        "bid": 0.05,
+        "ask": 4.99,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "548840-:RT_moon:": {
+        "bid": 0.15,
+        "ask": 1.28,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": null
+    },
+    "500420-:PlayerSoul:": {
+        "bid": 0.07,
+        "ask": 4.74,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "793680-:Bearwiser:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 15,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "1100970-:BunnyEmoticon:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "513300-:guri:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "267790-:Yellow_Stone:": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "532290-:graveyard_neon:": {
+        "bid": 0.41,
+        "ask": 2.44,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "725370-:12th:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 12,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "592300-:slowmobile:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "492800-:shonen_suspicious:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "462950-:fun:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "267790-:Green_Stone:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "563680-:dwvr_crosshair:": {
+        "bid": 0.13,
+        "ask": 4.34,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "856880-:skellyhead:": {
+        "bid": 0.09,
+        "ask": 2.99,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "601770-:SparcShield:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "369390-:SilverEagle:": {
+        "bid": 0.5,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "643980-:AssassinInsignia:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "568440-:NDT_Money:": {
+        "bid": 0.3,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "592750-:ZombieHelmet:": {
+        "bid": 0.03,
+        "ask": 4.61,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "553210-:chaos_star:": {
+        "bid": 0.15,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "588890-:HoA_Random:": {
+        "bid": 0.29,
+        "ask": 4.76,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "357690-:apt:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "553210-:wolf_paw:": {
+        "bid": 0.23,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "354230-:phi:": {
+        "bid": 0.27,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "287920-:MoFish:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 23,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "553210-:wolf_fangs:": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "389840-:ds_Motorbike:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "600640-:greensnaketouth:": {
+        "bid": 0.34,
+        "ask": 2.56,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "314760-:nova:": {
+        "bid": 0.11,
+        "ask": 3.7,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "333220-:raburabu:": {
+        "bid": 0.3,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "613130-:ufopowerup:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "427810-:calEye:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "598880-:domibomb:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 9,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "546150-:divided:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "793450-:lyrillian:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "508940-:elspooky:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "587920-:phlantern:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 12,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "566180-:LargeY:": {
+        "bid": 0.1,
+        "ask": 1655.21,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "588080-:enterbattlefield:": {
+        "bid": 0.07,
+        "ask": 6.09,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "236130-:saturn:": {
+        "bid": 0.28,
+        "ask": 4.34,
+        "bid_volume": 21,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "468250-:wousa:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "272490-:diablo:": {
+        "bid": 0.05,
+        "ask": 3.63,
+        "bid_volume": 6,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "611320-:ThinkToDie3:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "470240-:Blue_Justice:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "369390-:BronzeEagle:": {
+        "bid": 0.17,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "604190-:woodyleaf:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "440450-:avgas:": {
+        "bid": 0.04,
+        "ask": 249.98,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "688480-:Schism:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "572300-:nyendurance:": {
+        "bid": 0.34,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "345340-:beatingheart:": {
+        "bid": 0.06,
+        "ask": 81.73,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "357490-:cuddlybear:": {
+        "bid": -1,
+        "ask": 79.19,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "532090-:dl2tyson:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "564950-:TargetLock:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "566530-:rogueandroid:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "595270-:blobbie:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "620330-:salvage:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "527250-:VilleTownHall:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "483820-:airgem:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "500090-:IronSymbol:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "553040-:ooo:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "467990-:vssword:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "574070-:laserbeamweapon:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "568920-:THOM:": {
+        "bid": 0.04,
+        "ask": 11.5,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": null
+    },
+    "392600-:mitochondrion:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "601770-:SparcCore:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "443630-:chickuface:": {
+        "bid": 0.06,
+        "ask": 15,
+        "bid_volume": 5,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "485600-:FrozenFrog:": {
+        "bid": 0.59,
+        "ask": 7.37,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "678560-:RX01:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 9,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "470240-:Pink_Justice:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "374990-:triq:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "643980-:CrusaderInsignia:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "471700-:weaponbadge:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 21,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "501430-:quartchip:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "575800-:arizonacoin:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "599060-:tomboffire:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 6,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "539380-:ThinkToDieMonkey:": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "270030-:bobhorse:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 6,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "526370-:SuperKinky_BurrowingBuddy:": {
+        "bid": 0.6,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "374670-:puffer_left_eye:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "521000-:GBR:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "438780-:Undermining:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "526580-:WP_Carrot:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "657730-:direfisherman:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "513680-:onlydoe:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 20,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "414950-:stims:": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "480410-:aleaf:": {
+        "bid": 0.05,
+        "ask": 91.96,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "610410-:pawchukaru:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "488250-:deathjar:": {
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "387070-:OFBHeart:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "268810-:feather:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "578600-:ASIDtree:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "513300-:guri_angry:": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "454430-:cccneutral:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "510680-:riri02:": {
+        "bid": 0.15,
+        "ask": 5.44,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "697440-:jointhecult:": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "621050-:Veggies_Tomato:": {
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "492800-:shonen_dead:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "500090-:FrostSymbol:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "424200-:lm_earthworm:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "556340-:Helicopters:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "626640-:ll4_skull:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "266470-:skullsquad:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "473900-:holyhand:": {
+        "bid": 0.42,
+        "ask": 3.57,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "349450-:lockedgame:": {
+        "bid": 0.04,
+        "ask": 7.77,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "583890-:PugTheBrave:": {
+        "bid": 0.07,
+        "ask": 81.01,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "448160-:wbomb:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "432380-:hstitan:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "499510-:startled:": {
+        "bid": 0.03,
+        "ask": 4.51,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "572300-:nyspeed:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "322600-:4wheel:": {
+        "bid": 0.05,
+        "ask": 3.61,
+        "bid_volume": 6,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "418280-:Retaliation:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "470250-:Rule_3_Emoticon:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "333220-:zzzzz:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "462950-:afraid:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "381880-:skeletontrader:": {
+        "bid": -1,
+        "ask": 9.35,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "367930-:riiight:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "258910-:zeds:": {
+        "bid": 0.5,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "700520-:shiftsweat:": {
+        "bid": 0.03,
+        "ask": 11.5,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "588890-:HoA_Treasure:": {
+        "bid": 0.08,
+        "ask": 6.9,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "364790-:oba:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "578190-:gate3d:": {
+        "bid": -1,
+        "ask": 10,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "339720-:sophielove:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "367930-:luisfurious:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "357700-:speedboots:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "368980-:trachewsky:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "290870-:riffles:": {
+        "bid": 0.03,
+        "ask": 2.38,
+        "bid_volume": 12,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "341270-:boy:": {
+        "bid": -1,
+        "ask": 14.97,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "239660-:delta:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "392580-:warshift_blackhole:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "435600-:spiritguard:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "265950-:Ribbon:": {
+        "bid": 0.14,
+        "ask": 5.33,
+        "bid_volume": 3,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "475960-:bombslinger:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "601770-:SparcBall:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "352430-:ElectricBattery:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "760800-:CLIS_Fish_3:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "291930-:Fancygraph:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "673190-:clementineflower:": {
+        "bid": 0.03,
+        "ask": 5.4,
+        "bid_volume": 1,
+        "ask_volume": 2,
+        "is_marketable": true
+    },
+    "404770-:CharacterCard:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "317330-:Deathsplit:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "367910-:Goodnews:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "365980-:dislikeUselessBox:": {
+        "bid": 0.13,
+        "ask": 10.35,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "496930-:SmallSkull:": {
+        "bid": -1,
+        "ask": 4.61,
+        "bid_volume": -1,
+        "ask_volume": 2,
+        "is_marketable": true
+    },
+    "861920-:Production:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 10,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "621050-:Veggies_Red_Pepper:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "271730-:Light2:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "576670-:CancelThat:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "673190-:greencactus:": {
+        "bid": 0.05,
+        "ask": 3.1,
+        "bid_volume": 1,
+        "ask_volume": 2,
+        "is_marketable": true
+    },
+    "274130-:rambo_skull:": {
+        "bid": 0.12,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "526370-:SuperKinky_Atomic:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "420520-:LostTechnology_Poison:": {
+        "bid": 0.1,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "233510-:confused:": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "454430-:ccchappy:": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "994890-:no_entry_allowed:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "766370-:hives:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "611320-:ohreally:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "831980-:20pitcher:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "311850-:ConfusedZombie:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "251390-:forbiddenpower:": {
+        "bid": 0.3,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "470240-:Green_Justice:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "365980-:starUselessBox:": {
+        "bid": 0.08,
+        "ask": 3.42,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "222180-:ghostpax:": {
+        "bid": 0.04,
+        "ask": 25.41,
+        "bid_volume": 3,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "308520-:draky:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "718790-:arslan:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "375230-:blood_angels:": {
+        "bid": 0.14,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "375230-:dark_angels:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "263500-:fireball:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "831980-:20ball:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "272670-:baseball:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "526370-:SuperKinky_PuddingCup:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "564080-:inshock:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "766370-:bloodsample:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 281,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "325860-:CornBomb:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "372250-:rocketturret:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "678560-:R1005:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 19,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "333660-:fortress:": {
+        "bid": -1,
+        "ask": 10,
+        "bid_volume": -1,
+        "ask_volume": 3,
+        "is_marketable": true
+    },
+    "317330-:Swarm:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "393220-:frage:": {
+        "bid": -1,
+        "ask": 41.4,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "553210-:ur_rune:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "471400-:coincrate:": {
+        "bid": -1,
+        "ask": 10.35,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "421180-:acidic:": {
+        "bid": 0.07,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "390930-:AIPD_finalgift:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "580890-:smilebirb:": {
+        "bid": 0.03,
+        "ask": 1800,
+        "bid_volume": 11,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "271730-:Light1:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "338180-:cluster_grenade:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "515980-:ironwarrior:": {
+        "bid": 0.07,
+        "ask": 5.86,
+        "bid_volume": 1,
+        "ask_volume": 1,
+        "is_marketable": null
+    },
+    "390910-:blackcat:": {
+        "bid": 0.51,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "375230-:ultramarines:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "376310-:OLBrain:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "697440-:alpinehat:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "537180-:DM_Marcus:": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "331360-:wildfire:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 4,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "468250-:wocover:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "400020-:centipede:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "339280-:strife:": {
+        "bid": 0.12,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "434410-:mayo:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "267900-:roblush:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "550900-:m2pearl:": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "994890-:train_is_coming:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "746650-:Vanillaova2:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "819500-:FTWrad:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "454600-:dinoskull:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "418280-:ElectricBandwidth:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "274130-:rambo_headshot:": {
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "553210-:rad_rune:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "553210-:sigel_rune:": {
+        "bid": 0.23,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "342190-:skytreasure:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "429020-:assaultRifle:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "440450-:dirtyh2o:": {
+        "bid": 0.03,
+        "ask": 7.74,
+        "bid_volume": 12,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "322750-:dl_exclamation:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 17,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "439350-:kritika_cheer:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "363920-:swrdoggie:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "454910-:tschill:": {
+        "bid": 0.2,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "499910-:shinrai:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 13,
+        "ask_volume": -1,
+        "is_marketable": true
+    },
+    "207400-:celestia:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "626010-:ospinacolada:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "241990-:fungi:": {
+        "bid": 0.05,
+        "ask": 1756.02,
+        "bid_volume": 4,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "376310-:OLSinister:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "508190-:expression1:": {
+        "bid": 0.08,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "331360-:hmmlogo:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "367950-:furrrious:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "515980-:mechanicum:": {
+        "bid": 0.1,
+        "ask": 6,
+        "bid_volume": 2,
+        "ask_volume": 1,
+        "is_marketable": null
+    },
+    "365070-:lexa:": {
+        "bid": -1,
+        "ask": 9.21,
+        "bid_volume": -1,
+        "ask_volume": 1,
+        "is_marketable": true
+    },
+    "439350-:kritika_grr:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 23,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "631780-:SheLeader:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "619290-:19bat:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "270030-:fallhorse:": {
+        "bid": 0.05,
+        "ask": -1,
+        "bid_volume": 8,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "367950-:happyaz:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": null
+    },
+    "485120-:neutralfrog:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "725370-:Osgood:": {
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 11,
+        "ask_volume": -1,
+        "is_marketable": false
     }
 }
