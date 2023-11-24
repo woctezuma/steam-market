@@ -1206,7 +1206,7 @@
     "781480-:shutdown:": {
         "bid": 0.03,
         "ask": 10.35,
-        "bid_volume": 34,
+        "bid_volume": 30,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -1218,7 +1218,7 @@
         "is_marketable": true
     },
     "402630-:whiteheart:": {
-        "bid": 2.08,
+        "bid": 2.27,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -1463,10 +1463,10 @@
         "is_marketable": true
     },
     "553330-:LittleCat:": {
-        "bid": 2.68,
-        "ask": -1,
+        "bid": 1.85,
+        "ask": 9.98,
         "bid_volume": 1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "1092000-:ruri_skirt:": {
@@ -2135,9 +2135,9 @@
         "is_marketable": true
     },
     "858060-:assultRifle:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2184,10 +2184,10 @@
         "is_marketable": true
     },
     "356170-:ok:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 1.61,
+        "ask": 7.77,
+        "bid_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "521000-:USA:": {
@@ -2226,9 +2226,9 @@
         "is_marketable": true
     },
     "486350-:Zomboom:": {
-        "bid": -1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2261,10 +2261,10 @@
         "is_marketable": true
     },
     "613450-:headset:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.03,
+        "ask": 10.58,
+        "bid_volume": 11,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "568460-:loveeyes:": {
@@ -2275,10 +2275,10 @@
         "is_marketable": true
     },
     "416530-:taco:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.27,
+        "ask": 3.79,
+        "bid_volume": 1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "388540-:duckyboo:": {
@@ -2345,9 +2345,9 @@
         "is_marketable": true
     },
     "543440-:coldironhorseshoe:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2359,9 +2359,9 @@
         "is_marketable": true
     },
     "301930-:gungho:": {
-        "bid": -1,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -2416,7 +2416,7 @@
     },
     "526350-:firstCommit:": {
         "bid": 4.17,
-        "ask": 5.43,
+        "ask": 5.25,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -3299,7 +3299,7 @@
     "534980-:smallredrose:": {
         "bid": 0.38,
         "ask": 3.7,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4321,7 +4321,7 @@
     "476920-:AoD_flower:": {
         "bid": 0.48,
         "ask": 51.78,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -4593,7 +4593,7 @@
     },
     "625580-:highbornclass:": {
         "bid": 0.12,
-        "ask": 11.5,
+        "ask": 10.36,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4691,7 +4691,7 @@
     },
     "259720-:fadeheart:": {
         "bid": 2.19,
-        "ask": 3.04,
+        "ask": 3.02,
         "bid_volume": 1,
         "ask_volume": 1,
         "is_marketable": true
@@ -4860,7 +4860,7 @@
     "282590-:beam:": {
         "bid": 1.51,
         "ask": 7.9,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -5111,9 +5111,9 @@
     },
     "544400-:Tat:": {
         "bid": 0.09,
-        "ask": 9.75,
+        "ask": -1,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "884090-:goldCoinsBag:": {
@@ -13134,7 +13134,7 @@
     "450950-:du3_dan:": {
         "bid": 0.32,
         "ask": 5.54,
-        "bid_volume": 26,
+        "bid_volume": 22,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -15463,10 +15463,10 @@
         "is_marketable": true
     },
     "207400-:remedy:": {
-        "bid": 0.03,
-        "ask": 68.94,
-        "bid_volume": 11,
-        "ask_volume": 1,
+        "bid": 0.21,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "602790-:fs3man:": {
@@ -18600,9 +18600,9 @@
     },
     "563320-:mt_key:": {
         "bid": -1,
-        "ask": 15.57,
+        "ask": -1,
         "bid_volume": -1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "577360-:princessluna:": {
@@ -18613,9 +18613,9 @@
         "is_marketable": true
     },
     "591090-:golden_owl:": {
-        "bid": 0.15,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -18713,12 +18713,12 @@
     "409350-:fs_hohol:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473740-:crystal_cond_2:": {
-        "bid": 1.78,
+        "bid": 3.91,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18789,9 +18789,9 @@
     },
     "577150-:icelaunch:": {
         "bid": -1,
-        "ask": -1,
+        "ask": 11.5,
         "bid_volume": -1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "1058130-:PrinceSutter:": {
@@ -18809,9 +18809,9 @@
         "is_marketable": true
     },
     "493280-:plaza:": {
-        "bid": 3.47,
+        "bid": 2.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -18831,8 +18831,8 @@
     },
     "485750-:Limux:": {
         "bid": 0.03,
-        "ask": 7.96,
-        "bid_volume": 3,
+        "ask": 7.82,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -18844,7 +18844,7 @@
         "is_marketable": true
     },
     "449440-:The_Wrong_Heart:": {
-        "bid": 0.13,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18879,9 +18879,9 @@
         "is_marketable": true
     },
     "603890-:MachineGunEdition:": {
-        "bid": 0.12,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -18900,14 +18900,14 @@
         "is_marketable": true
     },
     "526390-:acidhazard:": {
-        "bid": 0.03,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "625950-:pg_sad:": {
-        "bid": 0.89,
+        "bid": 1.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18921,30 +18921,30 @@
         "is_marketable": true
     },
     "462200-:heartris:": {
-        "bid": 1.03,
+        "bid": 1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "591950-:ZTD_knife:": {
         "bid": 0.12,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "518320-:sokomatchada:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "422870-:60_level:": {
-        "bid": 0.23,
+        "bid": 0.3,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -18984,7 +18984,7 @@
         "is_marketable": false
     },
     "644100-:PizzaR:": {
-        "bid": 0.18,
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -18998,7 +18998,7 @@
         "is_marketable": true
     },
     "409350-:fs_orthodoxy:": {
-        "bid": 0.87,
+        "bid": 0.92,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19012,21 +19012,21 @@
         "is_marketable": true
     },
     "491080-:BB_Moon:": {
-        "bid": 1.03,
+        "bid": 1.54,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "647410-:king_crown:": {
-        "bid": 0.38,
+        "bid": 0.39,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "422870-:80_level:": {
-        "bid": 0.53,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19047,14 +19047,14 @@
         "is_marketable": true
     },
     "348020-:hatanon:": {
-        "bid": 1.27,
+        "bid": 1.2,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "606050-:gr_cat:": {
-        "bid": 0.29,
+        "bid": 0.27,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19068,7 +19068,7 @@
         "is_marketable": false
     },
     "549810-:sweetcarrots:": {
-        "bid": 0.61,
+        "bid": 1.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19103,154 +19103,154 @@
         "is_marketable": true
     },
     "603290-:sadcat:": {
-        "bid": 0.42,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "543770-:red_ball:": {
-        "bid": 0.81,
+        "bid": 0.46,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
+    "543770-:red_ball:": {
+        "bid": 0.8,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
     "458940-:money_money_money_money:": {
-        "bid": 0.21,
+        "bid": 0.3,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "528080-:xmas_tree:": {
-        "bid": 0.31,
+        "bid": 0.5,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "556010-:NAsad:": {
-        "bid": 0.11,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "474820-:Old_TV:": {
-        "bid": 0.03,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "556010-:NAhappy:": {
-        "bid": 0.11,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "490940-:bheart:": {
-        "bid": 1.07,
+        "bid": 2.5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "603290-:kissyou:": {
-        "bid": 0.18,
+        "bid": 0.16,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473740-:crystal_cond_1:": {
-        "bid": 0.23,
+        "bid": 0.25,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "556010-:NAangry:": {
-        "bid": 0.11,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "541100-:snowman1:": {
-        "bid": 0.16,
+        "bid": 0.18,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "555700-:good_shot:": {
-        "bid": 1.85,
+        "bid": 1.81,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "348020-:hat228:": {
-        "bid": 0.24,
+        "bid": 0.2,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "625950-:pg_smile:": {
-        "bid": 0.05,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "873150-:ss_beer2:": {
-        "bid": 0.13,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "491030-:red_pig:": {
-        "bid": 0.08,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "422870-:70_level:": {
-        "bid": 0.23,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "422870-:90_level:": {
-        "bid": 0.46,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "580990-:woman_glitch:": {
-        "bid": 0.72,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "539360-:Pk_smile:": {
-        "bid": 0.04,
+        "bid": 0.17,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
+    "491030-:red_pig:": {
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "422870-:70_level:": {
+        "bid": 0.69,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "422870-:90_level:": {
+        "bid": 0.54,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "580990-:woman_glitch:": {
+        "bid": 1.01,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "539360-:Pk_smile:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
     "591950-:ZTD_assault:": {
-        "bid": 0.06,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19264,16 +19264,16 @@
         "is_marketable": true
     },
     "527490-:em_skull:": {
-        "bid": 0.34,
+        "bid": 1.1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "562670-:the_scarecrow:": {
         "bid": 0.15,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19292,14 +19292,14 @@
         "is_marketable": true
     },
     "633370-:deer88:": {
-        "bid": 0.62,
+        "bid": 18.37,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "341980-:D_Stop:": {
-        "bid": 0.09,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19313,9 +19313,9 @@
         "is_marketable": false
     },
     "341980-:D_Pills:": {
-        "bid": 0.03,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19341,7 +19341,7 @@
         "is_marketable": false
     },
     "348020-:kamina:": {
-        "bid": 0.25,
+        "bid": 0.3,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19362,7 +19362,7 @@
         "is_marketable": false
     },
     "638690-:vatnik_happy:": {
-        "bid": 0.04,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19371,19 +19371,19 @@
     "647410-:jii_est:": {
         "bid": 0.05,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "546380-:ccHappy:": {
-        "bid": 0.18,
+        "bid": 0.23,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "631530-:fod2PB:": {
-        "bid": 6,
+        "bid": 6.99,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19397,44 +19397,44 @@
         "is_marketable": false
     },
     "545250-:BloodyShoes:": {
-        "bid": 2.88,
+        "bid": 3.39,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "541100-:candymandy:": {
-        "bid": 0.1,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "605500-:Blot99:": {
-        "bid": 0.5,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
+    "605500-:Blot99:": {
+        "bid": 0.87,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
     "495120-:beer_bb:": {
-        "bid": 0.2,
+        "bid": 0.4,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "535400-:BFcat:": {
-        "bid": 0.05,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
     "527490-:em_boom:": {
-        "bid": 0.17,
+        "bid": 0.35,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19446,14 +19446,14 @@
         "is_marketable": false
     },
     "599100-:greencat:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "432020-:Cats99:": {
-        "bid": 0.16,
+        "bid": 0.2,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19462,47 +19462,47 @@
     "509990-:Puzzle_Smile:": {
         "bid": 0.05,
         "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "549810-:squarebunny:": {
-        "bid": 0.21,
-        "ask": -1,
         "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "476880-:blood_sucker:": {
-        "bid": -1,
+    "549810-:squarebunny:": {
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "606050-:gr_serious:": {
+    "476880-:blood_sucker:": {
         "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
+    "606050-:gr_serious:": {
+        "bid": 0.13,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
     "603290-:marchcat:": {
-        "bid": 0.16,
+        "bid": 0.13,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "569840-:fbimania_i:": {
-        "bid": 0.26,
+        "bid": 0.27,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "509990-:Puzzle_Tooth:": {
-        "bid": 0.04,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19523,7 +19523,7 @@
         "is_marketable": false
     },
     "546380-:ccAmazed:": {
-        "bid": 0.08,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19532,7 +19532,7 @@
     "575870-:camera10:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19544,9 +19544,9 @@
         "is_marketable": false
     },
     "454040-:1cactus1:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19558,21 +19558,21 @@
         "is_marketable": false
     },
     "555700-:ok_abs:": {
-        "bid": 0.05,
+        "bid": 0.06,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "491030-:blue_penguin:": {
-        "bid": 0.14,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "463050-:h_cross:": {
-        "bid": 2.03,
+        "bid": 5.2,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19600,16 +19600,16 @@
         "is_marketable": false
     },
     "588090-:zombietw:": {
-        "bid": 0.03,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "591080-:boxedtnt:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19628,9 +19628,9 @@
         "is_marketable": false
     },
     "513530-:aghh:": {
-        "bid": 0.05,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19642,58 +19642,58 @@
         "is_marketable": false
     },
     "474820-:The_Old_Hat:": {
-        "bid": 0.55,
+        "bid": 0.6,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473740-:sad_crystal:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "628850-:tastymushroom:": {
-        "bid": 0.11,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "571910-:Elis:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "348020-:hatfbi:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 3,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "603890-:AREdition:": {
         "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "569840-:fbimania_b:": {
-        "bid": 0.17,
+    "571910-:Elis:": {
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "348020-:hatfbi:": {
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "603890-:AREdition:": {
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "569840-:fbimania_b:": {
+        "bid": 0.18,
+        "ask": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "390970-:ment:": {
-        "bid": 0.07,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19705,9 +19705,9 @@
         "is_marketable": false
     },
     "493280-:rc:": {
-        "bid": 0.25,
+        "bid": 0.27,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19726,9 +19726,9 @@
         "is_marketable": false
     },
     "610390-:Sugar_Click:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19740,7 +19740,7 @@
         "is_marketable": false
     },
     "391560-:CW_ArmyChicka:": {
-        "bid": 0.29,
+        "bid": 0.28,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19761,7 +19761,7 @@
         "is_marketable": false
     },
     "585790-:CunningPepe:": {
-        "bid": 0.57,
+        "bid": 0.58,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -19775,9 +19775,9 @@
         "is_marketable": false
     },
     "545250-:LastCandle:": {
-        "bid": 0.09,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19791,14 +19791,14 @@
     "541100-:christmasbag:": {
         "bid": 0.5,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "603890-:ShotgunEdition:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19824,16 +19824,16 @@
         "is_marketable": false
     },
     "390970-:gopnik:": {
-        "bid": 0.26,
+        "bid": 0.5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "459100-:keycode:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19875,7 +19875,7 @@
     "431990-:whathell:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19887,9 +19887,9 @@
         "is_marketable": false
     },
     "528170-:norway:": {
-        "bid": 0.81,
+        "bid": 0.66,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19901,9 +19901,9 @@
         "is_marketable": false
     },
     "581700-:crosscross:": {
-        "bid": -1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19936,9 +19936,9 @@
         "is_marketable": false
     },
     "587830-:ap1:": {
-        "bid": 0.03,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -19964,14 +19964,14 @@
         "is_marketable": false
     },
     "543770-:cactus_altguard:": {
-        "bid": 0.6,
+        "bid": 0.64,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "485410-:ar_earth:": {
-        "bid": 0.19,
+        "bid": 0.21,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20013,9 +20013,9 @@
         "is_marketable": false
     },
     "545370-:skull_tos:": {
-        "bid": -1,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20062,9 +20062,9 @@
         "is_marketable": false
     },
     "578180-:llost:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20083,23 +20083,23 @@
         "is_marketable": false
     },
     "463040-:flswar:": {
-        "bid": 0.61,
+        "bid": 0.57,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "527490-:em_rose:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "556120-:ussr_leader:": {
-        "bid": 0.27,
+        "bid": 0.28,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20132,14 +20132,14 @@
         "is_marketable": false
     },
     "556110-:ufo_galaxy:": {
-        "bid": 0.05,
+        "bid": 0.16,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "463040-:dangerph:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20153,16 +20153,16 @@
         "is_marketable": false
     },
     "463550-:spacy1:": {
-        "bid": -1,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "434010-:BullyGirl:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20188,7 +20188,7 @@
         "is_marketable": false
     },
     "580990-:cyclo_glitch:": {
-        "bid": 0.07,
+        "bid": 0.2,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20202,7 +20202,7 @@
         "is_marketable": false
     },
     "618030-:HeroTale:": {
-        "bid": 0.51,
+        "bid": 0.5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20230,7 +20230,7 @@
         "is_marketable": false
     },
     "491030-:old_chair:": {
-        "bid": 0.13,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20258,7 +20258,7 @@
         "is_marketable": false
     },
     "618030-:XTale:": {
-        "bid": 0.54,
+        "bid": 0.52,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20272,16 +20272,16 @@
         "is_marketable": false
     },
     "599100-:greencatwhat:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "603040-:I_drink_blood:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20300,9 +20300,9 @@
         "is_marketable": false
     },
     "580990-:ufo_glitch:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20328,7 +20328,7 @@
         "is_marketable": false
     },
     "523790-:flyingbat:": {
-        "bid": 0.17,
+        "bid": 0.2,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20356,16 +20356,16 @@
         "is_marketable": false
     },
     "566060-:cr3:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "556120-:ussr_redstar:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20407,14 +20407,14 @@
     "586090-:snowmandoctor:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "345920-:KeyForDoors:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20426,9 +20426,9 @@
         "is_marketable": false
     },
     "610390-:Sugar_Reload:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20454,7 +20454,7 @@
         "is_marketable": false
     },
     "582580-:chagrin:": {
-        "bid": 0.03,
+        "bid": 0.25,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20468,7 +20468,7 @@
         "is_marketable": false
     },
     "543770-:octopus_green:": {
-        "bid": 0.37,
+        "bid": 0.34,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20477,7 +20477,7 @@
     "485580-:Smilingdemon:": {
         "bid": 0.07,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20503,9 +20503,9 @@
         "is_marketable": false
     },
     "432020-:Father99:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20580,9 +20580,9 @@
         "is_marketable": false
     },
     "466790-:teddybr:": {
-        "bid": 0.03,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20622,9 +20622,9 @@
         "is_marketable": false
     },
     "556120-:ussr_pipe:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20678,9 +20678,9 @@
         "is_marketable": false
     },
     "555620-:UltraCrazyMoney:": {
-        "bid": 0.13,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20692,9 +20692,9 @@
         "is_marketable": false
     },
     "545370-:blood_tos:": {
-        "bid": -1,
+        "bid": 0.27,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20720,16 +20720,16 @@
         "is_marketable": false
     },
     "566990-:abscar:": {
-        "bid": -1,
+        "bid": 0.25,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "586540-:skull_zombie:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20790,9 +20790,9 @@
         "is_marketable": false
     },
     "567170-:madminer:": {
-        "bid": -1,
+        "bid": 0.51,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20811,9 +20811,9 @@
         "is_marketable": false
     },
     "567250-:mypaw:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 15,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20827,7 +20827,7 @@
     "448250-:NK_Smile:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20839,7 +20839,7 @@
         "is_marketable": false
     },
     "607700-:dibth_axe:": {
-        "bid": 0.03,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20860,9 +20860,9 @@
         "is_marketable": false
     },
     "527550-:green_platro:": {
-        "bid": -1,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20888,9 +20888,9 @@
         "is_marketable": false
     },
     "508960-:redmarkedblock:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20902,9 +20902,9 @@
         "is_marketable": false
     },
     "603370-:Cowboyhats:": {
-        "bid": 0.09,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20916,9 +20916,9 @@
         "is_marketable": false
     },
     "555980-:gold_tdod:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20937,16 +20937,16 @@
         "is_marketable": false
     },
     "414290-:HearthAmulet:": {
-        "bid": 0.1,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "513630-:sqzhello:": {
-        "bid": 0.03,
+        "bid": 0.92,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -20979,7 +20979,7 @@
         "is_marketable": false
     },
     "556070-:iamarichboyandhereisastar:": {
-        "bid": 0.06,
+        "bid": 0.18,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -20993,9 +20993,9 @@
         "is_marketable": false
     },
     "451830-:know:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21119,9 +21119,9 @@
         "is_marketable": false
     },
     "586480-:gun_noir:": {
-        "bid": 0.15,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21154,9 +21154,9 @@
         "is_marketable": false
     },
     "545370-:blood_axe:": {
-        "bid": 0.05,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21182,23 +21182,23 @@
         "is_marketable": false
     },
     "533640-:voxredhp:": {
-        "bid": -1,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "485410-:ar_pill:": {
-        "bid": 0.09,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "633370-:bell88:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21210,9 +21210,9 @@
         "is_marketable": false
     },
     "501900-:blue_ship:": {
-        "bid": 0.06,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21224,23 +21224,23 @@
         "is_marketable": false
     },
     "543790-:mars_mi:": {
-        "bid": 0.03,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "575130-:redappledanko:": {
-        "bid": -1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "575130-:theblackspiderdanko:": {
-        "bid": -1,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21259,44 +21259,44 @@
         "is_marketable": false
     },
     "444790-:ak_princess:": {
-        "bid": 0.03,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": false
     },
     "444790-:ak_chest:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 16,
         "ask_volume": -1,
         "is_marketable": false
     },
     "527490-:em_bomb:": {
-        "bid": 0.07,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "601650-:ucoffee:": {
-        "bid": 1.76,
+        "bid": 1.84,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "490940-:devild:": {
-        "bid": 0.25,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "604810-:yetiflower:": {
-        "bid": -1,
+        "bid": 0.85,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21308,16 +21308,16 @@
         "is_marketable": false
     },
     "588420-:trashcorn:": {
-        "bid": -1,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "567250-:justacat:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21371,7 +21371,7 @@
         "is_marketable": false
     },
     "458940-:sheriff_atomy:": {
-        "bid": 0.88,
+        "bid": 0.93,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -21385,7 +21385,7 @@
         "is_marketable": false
     },
     "588420-:trashNose:": {
-        "bid": 0.06,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -21406,23 +21406,23 @@
         "is_marketable": false
     },
     "617240-:thepistol:": {
-        "bid": 0.07,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "531490-:elf_gs:": {
-        "bid": 0.78,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "391300-:dccube:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21434,44 +21434,44 @@
         "is_marketable": false
     },
     "509240-:energyball:": {
+        "bid": 0.09,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "462200-:cointris:": {
+        "bid": 0.06,
+        "ask": -1,
+        "bid_volume": 2,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "513540-:deadm_mask:": {
         "bid": -1,
         "ask": -1,
         "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "462200-:cointris:": {
-        "bid": 0.07,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "513540-:deadm_mask:": {
-        "bid": 0.23,
-        "ask": -1,
-        "bid_volume": 1,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
     "513540-:zombie_metal:": {
-        "bid": 0.09,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "348020-:hatpaket:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "513530-:yep:": {
-        "bid": 0.1,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21504,23 +21504,23 @@
         "is_marketable": false
     },
     "431990-:vottak:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "582580-:apathy:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "562760-:RUSINI:": {
-        "bid": 0.17,
+        "bid": 3.08,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21532,9 +21532,9 @@
         "is_marketable": false
     },
     "443940-:joyUB:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21560,9 +21560,9 @@
         "is_marketable": false
     },
     "533640-:voxredface:": {
-        "bid": 0.12,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21574,7 +21574,7 @@
         "is_marketable": false
     },
     "449440-:The_Serious_Hedgehog:": {
-        "bid": 0.2,
+        "bid": 0.38,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -21588,30 +21588,30 @@
         "is_marketable": false
     },
     "581470-:SpeedMeterSign:": {
-        "bid": 0.37,
+        "bid": 0.5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "461720-:tank_fire:": {
-        "bid": 0.06,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "509990-:Puzzle_Science:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "473710-:JustMonfo:": {
-        "bid": 0.17,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21637,9 +21637,9 @@
         "is_marketable": false
     },
     "605910-:TrollTrig:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21679,9 +21679,9 @@
         "is_marketable": false
     },
     "466790-:strblue:": {
-        "bid": 0.03,
+        "bid": 0.15,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21714,7 +21714,7 @@
         "is_marketable": false
     },
     "605500-:lovepatch99:": {
-        "bid": 0.11,
+        "bid": 0.2,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -21735,9 +21735,9 @@
         "is_marketable": false
     },
     "533150-:loh_chest:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21763,9 +21763,9 @@
         "is_marketable": false
     },
     "492130-:alanhead:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -21777,9 +21777,9 @@
         "is_marketable": false
     },
     "566220-:blackhead:": {
-        "bid": 0.05,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -25543,7 +25543,7 @@
         "is_marketable": true
     },
     "528080-:nf_worm:": {
-        "bid": 0.13,
+        "bid": 0.46,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -26446,9 +26446,9 @@
         "is_marketable": true
     },
     "820770-:xinyan:": {
-        "bid": 0.14,
+        "bid": 0.13,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -26537,10 +26537,10 @@
         "is_marketable": true
     },
     "454430-:cccclientsad:": {
-        "bid": 0.04,
-        "ask": 9.71,
-        "bid_volume": 2,
-        "ask_volume": 1,
+        "bid": 0.23,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "820770-:qiao:": {
@@ -26565,10 +26565,10 @@
         "is_marketable": true
     },
     "453130-:greenblobbie:": {
-        "bid": -1,
-        "ask": 11.98,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "417920-:eyewatching:": {
@@ -27351,7 +27351,7 @@
     "436560-:HorsingAround:": {
         "bid": 0.27,
         "ask": 7.9,
-        "bid_volume": 42,
+        "bid_volume": 34,
         "ask_volume": 5,
         "is_marketable": true
     },
@@ -28273,9 +28273,9 @@
         "is_marketable": true
     },
     "461910-:fog_meat:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -28352,12 +28352,12 @@
     "529000-:ahead:": {
         "bid": 0.1,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "588210-:hellionfunny:": {
-        "bid": 0.03,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28386,8 +28386,8 @@
     },
     "630310-:mummy_ammo:": {
         "bid": 0.03,
-        "ask": 0.63,
-        "bid_volume": 6,
+        "ask": 20.3,
+        "bid_volume": 11,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -28406,14 +28406,14 @@
         "is_marketable": false
     },
     "291410-:birdsweatdrop:": {
-        "bid": 0.38,
+        "bid": 0.39,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "291410-:crycry:": {
-        "bid": 0.86,
+        "bid": 0.92,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28427,9 +28427,9 @@
         "is_marketable": false
     },
     "942580-:bigpotionbottle:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -28441,10 +28441,10 @@
         "is_marketable": true
     },
     "485590-:citadel_rookie:": {
-        "bid": -1,
-        "ask": 10,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.03,
+        "ask": -1,
+        "bid_volume": 7,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "431260-:Spiderant:": {
@@ -28504,14 +28504,14 @@
         "is_marketable": false
     },
     "340390-:spikes:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "418310-:entrancetoinferni:": {
-        "bid": 0.52,
+        "bid": 0.54,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -28546,9 +28546,9 @@
         "is_marketable": true
     },
     "567220-:srcgasmask:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -29549,7 +29549,7 @@
     "712060-:ChomperFlower:": {
         "bid": 0.24,
         "ask": 4.71,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -29834,9 +29834,9 @@
         "is_marketable": true
     },
     "603280-:5floppy:": {
-        "bid": 0.03,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -29848,7 +29848,7 @@
         "is_marketable": true
     },
     "336510-:barque:": {
-        "bid": 0.04,
+        "bid": 0.51,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -29967,9 +29967,9 @@
         "is_marketable": true
     },
     "529480-:chopperld_suv:": {
-        "bid": -1,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -29988,9 +29988,9 @@
         "is_marketable": false
     },
     "529480-:chopperld_tanker:": {
-        "bid": -1,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -30445,7 +30445,7 @@
     "660330- (Emoticon)": {
         "bid": 0.86,
         "ask": 1.42,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": 4,
         "is_marketable": true
     },
@@ -31241,9 +31241,9 @@
         "is_marketable": true
     },
     "252770-:Skeleton:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31276,7 +31276,7 @@
         "is_marketable": true
     },
     "560380-:RibbonPig:": {
-        "bid": 0.76,
+        "bid": 0.92,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -31339,7 +31339,7 @@
         "is_marketable": false
     },
     "348530-:angel:": {
-        "bid": 0.51,
+        "bid": 0.13,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -31367,9 +31367,9 @@
         "is_marketable": true
     },
     "536930-:MFF_Treasure:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31381,23 +31381,23 @@
         "is_marketable": true
     },
     "246700-:StrikeVector:": {
-        "bid": 0.17,
+        "bid": -1,
+        "ask": -1,
+        "bid_volume": -1,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
+    "347030-:HandgunRevolver:": {
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
-    "347030-:HandgunRevolver:": {
-        "bid": 0.11,
-        "ask": -1,
-        "bid_volume": 2,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
     "389850-:hob_flamer:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31409,23 +31409,23 @@
         "is_marketable": false
     },
     "255220-:ABS:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "255220-:Engines:": {
-        "bid": 0.07,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "255220-:Flashback:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31458,9 +31458,9 @@
         "is_marketable": true
     },
     "252770-:Mimic:": {
-        "bid": 0.05,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31542,24 +31542,24 @@
         "is_marketable": false
     },
     "348530-:caligula:": {
-        "bid": 0.07,
+        "bid": 0.06,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "533320-:bluedot:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "387070-:OFBAward:": {
-        "bid": -1,
-        "ask": 6,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.04,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "341860-:mordred:": {
@@ -31570,9 +31570,9 @@
         "is_marketable": false
     },
     "348530-:calc:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -31584,9 +31584,9 @@
         "is_marketable": false
     },
     "533320-:brewsky:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -32741,7 +32741,7 @@
     "374640-:moi_dragon:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 24,
+        "bid_volume": 18,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -33054,7 +33054,7 @@
         "is_marketable": true
     },
     "344040-:pinktulip:": {
-        "bid": 0.29,
+        "bid": 1.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -33089,9 +33089,9 @@
         "is_marketable": true
     },
     "639450-:ToughGuys:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -33110,9 +33110,9 @@
         "is_marketable": false
     },
     "639450-:DoggoBork:": {
-        "bid": -1,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -33124,30 +33124,30 @@
         "is_marketable": true
     },
     "371440-:journeyj:": {
-        "bid": 0.05,
+        "bid": 0.5,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "378930-:purplepoison:": {
-        "bid": 0.2,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "530010-:icepiece:": {
         "bid": -1,
-        "ask": 5.25,
+        "ask": -1,
         "bid_volume": -1,
-        "ask_volume": 1,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "416070-:Botanist:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34468,30 +34468,30 @@
         "is_marketable": true
     },
     "451230-:WartuneLaugh:": {
-        "bid": 0.07,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "326630-:BallzofLeather:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 30,
+        "bid_volume": 31,
         "ask_volume": -1,
         "is_marketable": false
     },
     "255420-:flying:": {
-        "bid": 0.05,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "567220-:srchand:": {
-        "bid": 0.04,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34524,16 +34524,16 @@
         "is_marketable": false
     },
     "567270-:SKULLFACEHAPPY:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "399270-:dngr:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34552,9 +34552,9 @@
         "is_marketable": false
     },
     "487420-:SpRad_Sad:": {
-        "bid": 0.07,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34566,30 +34566,30 @@
         "is_marketable": false
     },
     "608830-:igosleep:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "323370-:tera_alert:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "555760-:jump2:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "608830-:butno:": {
-        "bid": 0.05,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34603,14 +34603,14 @@
     "555760-:Jump1:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 12,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "323370-:tera_threat:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34622,42 +34622,42 @@
         "is_marketable": false
     },
     "323370-:tera_enraged:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "475430-:ImGoingToTheNorth:": {
-        "bid": 0.04,
+        "bid": 0.26,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "213850-:red:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 13,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "608830-:protectyou:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "618170-:DARKPORTAL:": {
-        "bid": 0.04,
+        "bid": 0.18,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "475430-:SwagCoolRelax:": {
-        "bid": 0.35,
+        "bid": 1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -34666,21 +34666,21 @@
     "255420-:deathtouch:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 11,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "385630-:star_points:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "213850-:green:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 14,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34692,9 +34692,9 @@
         "is_marketable": false
     },
     "631910-:iEarth:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34706,16 +34706,16 @@
         "is_marketable": true
     },
     "398070-:minipowerup:": {
-        "bid": 0.94,
+        "bid": 1.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "434780-:SmallHitStrike:": {
-        "bid": 0.03,
+        "bid": 0.12,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34741,14 +34741,14 @@
         "is_marketable": false
     },
     "475430-:MiniTheDogBmcStudio:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "700520-:shiftwb:": {
-        "bid": 0.04,
+        "bid": 0.18,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -34804,9 +34804,9 @@
         "is_marketable": false
     },
     "508140-:OMP:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34846,9 +34846,9 @@
         "is_marketable": true
     },
     "604200-:100lit:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34867,7 +34867,7 @@
         "is_marketable": false
     },
     "567600-:RBGoodluck:": {
-        "bid": 0.3,
+        "bid": 0.37,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -34888,9 +34888,9 @@
         "is_marketable": true
     },
     "377200-:huapo:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
@@ -34902,9 +34902,9 @@
         "is_marketable": true
     },
     "468000-:bigbucksdiner:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34916,7 +34916,7 @@
         "is_marketable": true
     },
     "443680-:rrrGoodLuck:": {
-        "bid": 0.1,
+        "bid": 0.29,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -34937,9 +34937,9 @@
         "is_marketable": false
     },
     "551670-:allergy:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -34972,10 +34972,10 @@
         "is_marketable": false
     },
     "593340-:vgabenshield:": {
-        "bid": -1,
-        "ask": -1,
-        "bid_volume": -1,
-        "ask_volume": -1,
+        "bid": 0.04,
+        "ask": 5.43,
+        "bid_volume": 5,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "468000-:jacknbeans:": {
@@ -35021,9 +35021,9 @@
         "is_marketable": true
     },
     "528700-:mooncorn:": {
-        "bid": 0.34,
+        "bid": 0.35,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35056,16 +35056,16 @@
         "is_marketable": false
     },
     "604200-:teddyb:": {
-        "bid": 0.38,
+        "bid": 0.41,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "357770-:Maddyson:": {
-        "bid": 0.34,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35077,16 +35077,16 @@
         "is_marketable": false
     },
     "485740-:PlayWithMe:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "413510-:space_fire:": {
-        "bid": 0.03,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35126,9 +35126,9 @@
         "is_marketable": false
     },
     "582280-:litteras_I:": {
-        "bid": 0.03,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35168,16 +35168,16 @@
         "is_marketable": false
     },
     "543320-:happyalchemist:": {
-        "bid": -1,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "380790-:buhu:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35217,16 +35217,16 @@
         "is_marketable": false
     },
     "636470-:gokey:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "587210-:skullsml:": {
-        "bid": 0.04,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35238,9 +35238,9 @@
         "is_marketable": true
     },
     "443680-:rrrSmile:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35259,9 +35259,9 @@
         "is_marketable": false
     },
     "398070-:slowclock:": {
-        "bid": -1,
+        "bid": 0.06,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35280,16 +35280,16 @@
         "is_marketable": true
     },
     "456980-:pc_hammer:": {
-        "bid": 0.21,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "594640-:Evil_Statue_Samurai:": {
-        "bid": -1,
+        "bid": 0.2,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35343,7 +35343,7 @@
         "is_marketable": false
     },
     "480780-:pentastar:": {
-        "bid": 0.1,
+        "bid": 0.11,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -35392,14 +35392,14 @@
         "is_marketable": false
     },
     "543320-:happypotion:": {
-        "bid": -1,
+        "bid": 0.18,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "633350-:WtSmileLove:": {
-        "bid": 0.59,
+        "bid": 0.57,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -35441,9 +35441,9 @@
         "is_marketable": false
     },
     "497350-:lcube:": {
-        "bid": 0.03,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35462,16 +35462,16 @@
         "is_marketable": false
     },
     "585220-:m_tartarus:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "487420-:SpRad_O_o:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35490,9 +35490,9 @@
         "is_marketable": false
     },
     "264480-:pistol_9mm:": {
-        "bid": 0.23,
+        "bid": 0.3,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35504,16 +35504,16 @@
         "is_marketable": false
     },
     "537280-:HiQuestion:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "528700-:unibee:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35553,9 +35553,9 @@
         "is_marketable": false
     },
     "500100-:unclear:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35588,16 +35588,16 @@
         "is_marketable": false
     },
     "543320-:mushroomred:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "542430-:1Key1:": {
-        "bid": 0.03,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35672,7 +35672,7 @@
         "is_marketable": false
     },
     "553180-:Pricel:": {
-        "bid": 0.12,
+        "bid": 0.34,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -35702,7 +35702,7 @@
     "732110-:OSWGreenBox:": {
         "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35756,7 +35756,7 @@
         "is_marketable": false
     },
     "406670-:igblack:": {
-        "bid": 0.09,
+        "bid": 0.08,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -35791,7 +35791,7 @@
         "is_marketable": false
     },
     "432280-:bshealth:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -35854,9 +35854,9 @@
         "is_marketable": false
     },
     "497350-:SmileCube:": {
-        "bid": 0.07,
+        "bid": 0.27,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -35917,7 +35917,7 @@
         "is_marketable": false
     },
     "397700-:Slave:": {
-        "bid": 0.21,
+        "bid": 0.23,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -36008,9 +36008,9 @@
         "is_marketable": false
     },
     "497350-:ragecube:": {
-        "bid": 0.03,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -36030,9 +36030,9 @@
     },
     "400250-:paradiseisland:": {
         "bid": -1,
-        "ask": -1,
+        "ask": 0.03,
         "bid_volume": -1,
-        "ask_volume": -1,
+        "ask_volume": 102,
         "is_marketable": false
     },
     "400240-:squirrely:": {
@@ -36113,9 +36113,9 @@
         "is_marketable": false
     },
     "480780-:sulphuris:": {
-        "bid": 0.08,
+        "bid": 2.76,
         "ask": -1,
-        "bid_volume": 6,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -38606,9 +38606,9 @@
     },
     "350490-:paperclip:": {
         "bid": 0.13,
-        "ask": 2.33,
+        "ask": 2.31,
         "bid_volume": 1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "300040-:Skillz:": {
@@ -38628,7 +38628,7 @@
     "665270-:MistyFireBall:": {
         "bid": 0.06,
         "ask": 8.92,
-        "bid_volume": 29,
+        "bid_volume": 27,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -39200,9 +39200,9 @@
         "is_marketable": true
     },
     "295550-:smiley:": {
-        "bid": 0.13,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39263,21 +39263,21 @@
         "is_marketable": false
     },
     "410380-:necrotic:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "494320-:Wizrogue_Elixir:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "410380-:hexdwarf:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -39291,23 +39291,23 @@
         "is_marketable": true
     },
     "348710-:Shiryu:": {
-        "bid": 0.11,
+        "bid": 0.12,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "348820-:speedwaytuning:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 60,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "348710-:Hyoga:": {
-        "bid": 0.05,
+        "bid": 0.11,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39349,7 +39349,7 @@
     "300040-:fashion:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39368,9 +39368,9 @@
         "is_marketable": false
     },
     "15540-:burger:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39382,23 +39382,23 @@
         "is_marketable": true
     },
     "472690-:tipsombrero:": {
-        "bid": 0.04,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": true
     },
     "224600-:nametag:": {
-        "bid": 0.04,
+        "bid": 0.14,
         "ask": -1,
-        "bid_volume": 14,
+        "bid_volume": 111,
         "ask_volume": -1,
         "is_marketable": false
     },
     "235340-:helm:": {
         "bid": 0.05,
         "ask": -1,
-        "bid_volume": 7,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39419,26 +39419,26 @@
     "618260-:TheComputer:": {
         "bid": 0.1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "224600-:shield:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "224600-:coop:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 3,
         "ask_volume": -1,
         "is_marketable": false
     },
     "410380-:hexbanner:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -39459,9 +39459,9 @@
         "is_marketable": false
     },
     "1084400-:Peaceee:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 3,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39475,7 +39475,7 @@
     "348820-:speedwayhelmet:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 17,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39487,23 +39487,23 @@
         "is_marketable": true
     },
     "263280-:spintires_gears:": {
-        "bid": 0.04,
+        "bid": 0.07,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "263280-:spintires_mud:": {
-        "bid": 0.49,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 10,
         "ask_volume": -1,
         "is_marketable": false
     },
     "263280-:spintires_logs:": {
-        "bid": 0.05,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 11,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39522,9 +39522,9 @@
         "is_marketable": true
     },
     "15540-:pentak:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39543,9 +39543,9 @@
         "is_marketable": false
     },
     "243120-:petrifiedear:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39557,16 +39557,16 @@
         "is_marketable": true
     },
     "243120-:petrifiedeye:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "243120-:petrifiedtongue:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39592,9 +39592,9 @@
         "is_marketable": false
     },
     "517110-:mrred:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39613,7 +39613,7 @@
         "is_marketable": false
     },
     "618260-:TheScreen:": {
-        "bid": 0.06,
+        "bid": 0.99,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -39655,9 +39655,9 @@
         "is_marketable": false
     },
     "287340-:JustGo:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39676,9 +39676,9 @@
         "is_marketable": true
     },
     "287340-:ChequredFlag:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39690,7 +39690,7 @@
         "is_marketable": false
     },
     "347510-:RatsCheese:": {
-        "bid": 0.03,
+        "bid": 0.05,
         "ask": -1,
         "bid_volume": 2,
         "ask_volume": -1,
@@ -39704,9 +39704,9 @@
         "is_marketable": true
     },
     "510330-:GoldJewel:": {
-        "bid": -1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39739,9 +39739,9 @@
         "is_marketable": false
     },
     "467120-:rr_key:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -39760,9 +39760,9 @@
         "is_marketable": false
     },
     "618260-:ThePhone:": {
-        "bid": -1,
+        "bid": 0.04,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -41687,7 +41687,7 @@
     "438090-:DF_Husky:": {
         "bid": 0.09,
         "ask": 0.28,
-        "bid_volume": 18,
+        "bid_volume": 19,
         "ask_volume": 8,
         "is_marketable": true
     },
@@ -42024,7 +42024,7 @@
         "bid": -1,
         "ask": 0.03,
         "bid_volume": -1,
-        "ask_volume": 67,
+        "ask_volume": 68,
         "is_marketable": true
     },
     "573680-:realchicken:": {
@@ -42205,7 +42205,7 @@
     "568470-:jester_wtg:": {
         "bid": 0.11,
         "ask": 6.45,
-        "bid_volume": 29,
+        "bid_volume": 23,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -42275,7 +42275,7 @@
     "727510-:VMskel:": {
         "bid": 0.03,
         "ask": 0.05,
-        "bid_volume": 27,
+        "bid_volume": 31,
         "ask_volume": 5,
         "is_marketable": true
     },
@@ -42560,16 +42560,16 @@
         "is_marketable": true
     },
     "336520-:headgear:": {
-        "bid": 0.04,
+        "bid": 0.1,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "310380-:ZAREK:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42588,7 +42588,7 @@
         "is_marketable": true
     },
     "327650-:mm_bananas:": {
-        "bid": 1.3,
+        "bid": 1.4,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42604,7 +42604,7 @@
     "492760-:abubbles:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 5,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42616,14 +42616,14 @@
         "is_marketable": true
     },
     "206210-:desperado:": {
-        "bid": 0.04,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": 20,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "382890-:bartz:": {
-        "bid": 0.06,
+        "bid": 0.04,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42651,9 +42651,9 @@
         "is_marketable": true
     },
     "367600-:skullerz:": {
-        "bid": 0.1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42665,9 +42665,9 @@
         "is_marketable": true
     },
     "356050-:Duckie:": {
-        "bid": -1,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42687,15 +42687,15 @@
     },
     "352740-:pbdiamond:": {
         "bid": 0.11,
-        "ask": 4.5,
-        "bid_volume": 4,
+        "ask": 4.98,
+        "bid_volume": 6,
         "ask_volume": 1,
         "is_marketable": true
     },
     "727090-:Adventurers_3:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 4,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42723,7 +42723,7 @@
     "630100-:swsad:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 6,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42735,9 +42735,9 @@
         "is_marketable": true
     },
     "726990-:rem_2:": {
-        "bid": -1,
+        "bid": 2.02,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42749,7 +42749,7 @@
         "is_marketable": true
     },
     "295110-:WaterBottle:": {
-        "bid": 0.08,
+        "bid": 0.1,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42763,9 +42763,9 @@
         "is_marketable": true
     },
     "394450-:powerax:": {
-        "bid": 0.04,
+        "bid": 0.08,
         "ask": -1,
-        "bid_volume": 2,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42777,9 +42777,9 @@
         "is_marketable": true
     },
     "389040-:pgsorrow:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 10,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42793,14 +42793,14 @@
     "630100-:swhello:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 8,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
     "727090-:Adventurers_5:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42812,21 +42812,21 @@
         "is_marketable": true
     },
     "382890-:krile:": {
-        "bid": 0.04,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": 17,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "417990-:Kila:": {
-        "bid": 0.04,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": 54,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "404770-:Location:": {
-        "bid": 1.19,
+        "bid": 0.03,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
@@ -42835,14 +42835,14 @@
     "382900-:ffviedgar:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 14,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "417990-:bronzegear:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 55,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42863,14 +42863,14 @@
     "224540-:miner:": {
         "bid": 0.04,
         "ask": -1,
-        "bid_volume": 101,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "367600-:Mechanicsigil:": {
-        "bid": 0.04,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 5,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42882,9 +42882,9 @@
         "is_marketable": true
     },
     "727090-:Adventurers_4:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42896,9 +42896,9 @@
         "is_marketable": false
     },
     "404770-:Superfight:": {
-        "bid": -1,
+        "bid": 0.3,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42924,9 +42924,9 @@
         "is_marketable": true
     },
     "72200-:comet:": {
-        "bid": 0.03,
+        "bid": -1,
         "ask": -1,
-        "bid_volume": 83,
+        "bid_volume": -1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -42938,38 +42938,38 @@
         "is_marketable": true
     },
     "72200-:gasgiant:": {
-        "bid": 0.03,
-        "ask": -1,
-        "bid_volume": 7,
-        "ask_volume": -1,
-        "is_marketable": false
-    },
-    "739000-:Grobda_1:": {
-        "bid": 0.05,
+        "bid": 0.09,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
+    "739000-:Grobda_1:": {
+        "bid": 0.11,
+        "ask": -1,
+        "bid_volume": 3,
+        "ask_volume": -1,
+        "is_marketable": false
+    },
     "739000-:Grobda_2:": {
-        "bid": 0.05,
+        "bid": 0.37,
         "ask": -1,
         "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "726990-:rem_1:": {
-        "bid": -1,
+        "bid": 2.02,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "435460-:TheQueen:": {
-        "bid": -1,
-        "ask": 28.53,
-        "bid_volume": -1,
-        "ask_volume": 1,
+        "bid": 0.18,
+        "ask": -1,
+        "bid_volume": 5,
+        "ask_volume": -1,
         "is_marketable": true
     },
     "511960-:MissleGS:": {
@@ -43022,9 +43022,9 @@
         "is_marketable": true
     },
     "259740-:nftd:": {
-        "bid": -1,
+        "bid": 0.15,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -43064,16 +43064,16 @@
         "is_marketable": true
     },
     "284810-:galleon:": {
-        "bid": -1,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
     "726990-:rem_3:": {
-        "bid": -1,
+        "bid": 2.02,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -43113,16 +43113,16 @@
         "is_marketable": false
     },
     "259740-:nftd_frightening2:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 4,
         "ask_volume": -1,
         "is_marketable": false
     },
     "404770-:KittenCannon:": {
-        "bid": -1,
+        "bid": 0.15,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -43183,16 +43183,16 @@
         "is_marketable": true
     },
     "284790-:pirateskull:": {
-        "bid": -1,
+        "bid": 0.05,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
     "356050-:Rae:": {
-        "bid": -1,
+        "bid": 0.03,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -46007,7 +46007,7 @@
         "bid": 0.15,
         "ask": 1.28,
         "bid_volume": 1,
-        "ask_volume": 1,
+        "ask_volume": 3,
         "is_marketable": null
     },
     "500420-:PlayerSoul:": {
@@ -46279,7 +46279,7 @@
     "236130-:saturn:": {
         "bid": 0.28,
         "ask": 4.34,
-        "bid_volume": 21,
+        "bid_volume": 27,
         "ask_volume": 1,
         "is_marketable": true
     },
@@ -46558,9 +46558,9 @@
     },
     "521000-:GBR:": {
         "bid": 0.04,
-        "ask": -1,
+        "ask": 103.55,
         "bid_volume": 2,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "438780-:Undermining:": {
@@ -47348,9 +47348,9 @@
         "is_marketable": false
     },
     "400020-:centipede:": {
-        "bid": 0.04,
+        "bid": 0.09,
         "ask": -1,
-        "bid_volume": 1,
+        "bid_volume": 2,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -48931,9 +48931,9 @@
     },
     "417730-:srosmile:": {
         "bid": -1,
-        "ask": 3.92,
+        "ask": 3.13,
         "bid_volume": -1,
-        "ask_volume": 2,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "315670-:SA07_1:": {
@@ -49504,9 +49504,9 @@
         "is_marketable": null
     },
     "410290-:aarrbarrel:": {
-        "bid": -1,
+        "bid": 0.07,
         "ask": -1,
-        "bid_volume": -1,
+        "bid_volume": 1,
         "ask_volume": -1,
         "is_marketable": false
     },
@@ -49939,9 +49939,9 @@
     },
     "375120-:sspalien2:": {
         "bid": -1,
-        "ask": -1,
+        "ask": 0.15,
         "bid_volume": -1,
-        "ask_volume": -1,
+        "ask_volume": 1,
         "is_marketable": true
     },
     "297100-:dangerous:": {
