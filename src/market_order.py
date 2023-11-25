@@ -1,11 +1,14 @@
 # Objective: retrieve the ask and bid for Booster Packs.
 
 import time
+from contextlib import suppress
+from datetime import timedelta
 from http import HTTPStatus
 
 import requests
 
 from src.cookie_utils import force_update_sessionid
+from src.creation_time_utils import get_current_time, to_timestamp
 from src.json_utils import load_json, save_json
 from src.market_listing import get_item_nameid, get_item_nameid_batch
 from src.personal_info import (
@@ -15,6 +18,9 @@ from src.personal_info import (
 from src.utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
 
 INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
+
+UPDATE_COOLDOWN_FIELD = "update_timestamp"
+UPDATE_COOLDOWN_IN_HOURS = 12
 
 
 def get_steam_market_order_url() -> str:
@@ -217,8 +223,26 @@ def download_market_order_data_batch(
 
     query_count = 0
 
+    current_time = get_current_time()
+    update_timestamp = to_timestamp(current_time)
+    threshold_timestamp = to_timestamp(
+        current_time - timedelta(hours=UPDATE_COOLDOWN_IN_HOURS),
+    )
+
     for app_id in badge_data:
         listing_hash = badge_data[app_id]["listing_hash"]
+
+        with suppress(KeyError):
+            last_update_timestamp = market_order_dict[listing_hash][
+                UPDATE_COOLDOWN_FIELD
+            ]
+            if threshold_timestamp < last_update_timestamp:
+                if verbose:
+                    print(
+                        f"Skipping download of orders for {listing_hash} (last updated: {last_update_timestamp}).",
+                    )
+                continue
+
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
             verbose=verbose,
@@ -233,6 +257,7 @@ def download_market_order_data_batch(
         market_order_dict[listing_hash]["is_marketable"] = item_nameids[listing_hash][
             "is_marketable"
         ]
+        market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = update_timestamp
 
         if query_count >= rate_limits["max_num_queries"]:
             if save_to_disk:
