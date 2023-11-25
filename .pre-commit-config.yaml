@@ -12,7 +12,7 @@ repos:
       --exit-non-zero-on-fix,
       --target-version, "py312",
       --select, "ALL",
-      --ignore, "ANN101,C90,D,E501,ERA001,FBT,PLR091,PLR2004,RUF001,S101,S113,T20"
+      --ignore, "ANN101,C90,D,E501,ERA001,FBT,PLR091,PLR2004,RUF001,S101,T20"
       ]
     - id: ruff-format
 
