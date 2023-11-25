@@ -13,6 +13,7 @@ from src.personal_info import (
     update_and_save_cookie_to_disk_if_values_changed,
 )
 from src.utils import (
+    TIMEOUT_IN_SECONDS,
     get_cushioned_cooldown_in_seconds,
     get_listing_details_output_file_name,
 )
@@ -280,9 +281,14 @@ def get_listing_details(
     has_secured_cookie = bool(len(cookie) > 0)
 
     if has_secured_cookie:
-        resp_data = requests.get(url, params=req_data, cookies=cookie)
+        resp_data = requests.get(
+            url,
+            params=req_data,
+            cookies=cookie,
+            timeout=TIMEOUT_IN_SECONDS,
+        )
     else:
-        resp_data = requests.get(url, params=req_data)
+        resp_data = requests.get(url, params=req_data, timeout=TIMEOUT_IN_SECONDS)
 
     if resp_data.ok:
         html_doc = resp_data.text

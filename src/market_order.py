@@ -15,7 +15,11 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
+from src.utils import (
+    TIMEOUT_IN_SECONDS,
+    get_cushioned_cooldown_in_seconds,
+    get_market_order_file_name,
+)
 
 INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
 
@@ -104,12 +108,14 @@ def download_market_order_data(
                     params=req_data,
                     cookies=cookie,
                     headers=get_market_order_headers(),
+                    timeout=TIMEOUT_IN_SECONDS,
                 )
             else:
                 resp_data = requests.get(
                     url,
                     params=req_data,
                     headers=get_market_order_headers(),
+                    timeout=TIMEOUT_IN_SECONDS,
                 )
         except requests.exceptions.ConnectionError:
             resp_data = None

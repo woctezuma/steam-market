@@ -12,7 +12,7 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.utils import convert_listing_hash_to_app_id
+from src.utils import TIMEOUT_IN_SECONDS, convert_listing_hash_to_app_id
 
 
 def get_user_data_url() -> str:
@@ -25,6 +25,7 @@ def download_user_data() -> dict | None:
     resp_data = requests.get(
         get_user_data_url(),
         cookies=cookie,
+        timeout=TIMEOUT_IN_SECONDS,
     )
 
     if resp_data.ok:

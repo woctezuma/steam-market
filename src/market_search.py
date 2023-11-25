@@ -11,7 +11,11 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.utils import get_cushioned_cooldown_in_seconds, get_listing_output_file_name
+from src.utils import (
+    TIMEOUT_IN_SECONDS,
+    get_cushioned_cooldown_in_seconds,
+    get_listing_output_file_name,
+)
 
 
 def get_steam_market_search_url() -> str:
@@ -168,9 +172,18 @@ def get_all_listings(
 
         try:
             if has_secured_cookie:
-                resp_data = requests.get(url, params=req_data, cookies=cookie)
+                resp_data = requests.get(
+                    url,
+                    params=req_data,
+                    cookies=cookie,
+                    timeout=TIMEOUT_IN_SECONDS,
+                )
             else:
-                resp_data = requests.get(url, params=req_data)
+                resp_data = requests.get(
+                    url,
+                    params=req_data,
+                    timeout=TIMEOUT_IN_SECONDS,
+                )
         except requests.exceptions.ConnectionError:
             resp_data = None
 

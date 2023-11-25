@@ -14,6 +14,7 @@ from src.personal_info import (
 )
 from src.sack_of_gems import get_num_gems_per_sack_of_gems, load_sack_of_gems_price
 from src.utils import (
+    TIMEOUT_IN_SECONDS,
     convert_listing_hash_to_app_id,
     get_bullet_point_for_display,
     get_goo_details_file_nam_for_for_foil_cards,
@@ -150,9 +151,14 @@ def query_goo_value(
     )
 
     if has_secured_cookie:
-        resp_data = requests.get(url, params=req_data, cookies=cookie)
+        resp_data = requests.get(
+            url,
+            params=req_data,
+            cookies=cookie,
+            timeout=TIMEOUT_IN_SECONDS,
+        )
     else:
-        resp_data = requests.get(url, params=req_data)
+        resp_data = requests.get(url, params=req_data, timeout=TIMEOUT_IN_SECONDS)
 
     if resp_data.ok:
         result = resp_data.json()

@@ -1,5 +1,7 @@
 from pathlib import Path
 
+TIMEOUT_IN_SECONDS = 5
+
 
 def get_cushioned_cooldown_in_seconds(num_minutes: int) -> int:
     num_seconds = num_minutes * 60

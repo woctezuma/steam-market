@@ -13,6 +13,7 @@ from src.personal_info import (
     update_and_save_cookie_to_disk_if_values_changed,
 )
 from src.utils import (
+    TIMEOUT_IN_SECONDS,
     convert_listing_hash_to_app_id,
     convert_listing_hash_to_app_name,
     get_data_folder,
@@ -92,9 +93,10 @@ def download_steam_inventory(
         resp_data = requests.get(
             url,
             cookies=cookie,
+            timeout=TIMEOUT_IN_SECONDS,
         )
     else:
-        resp_data = requests.get(url)
+        resp_data = requests.get(url, timeout=TIMEOUT_IN_SECONDS)
 
     if resp_data.ok:
         steam_inventory = resp_data.json()
@@ -167,6 +169,7 @@ def create_booster_pack(
         url,
         data=req_data,
         cookies=cookie,
+        timeout=TIMEOUT_IN_SECONDS,
     )
 
     if resp_data.ok:
@@ -261,6 +264,7 @@ def sell_booster_pack(
         headers=get_request_headers(),
         data=req_data,
         cookies=cookie,
+        timeout=TIMEOUT_IN_SECONDS,
     )
 
     if resp_data.ok:
