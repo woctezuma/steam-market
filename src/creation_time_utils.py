@@ -68,6 +68,10 @@ def get_current_time() -> datetime.datetime:
     return datetime.datetime.now(tz=datetime.UTC)
 
 
+def to_timestamp(date: datetime.datetime) -> int:
+    return int(date.timestamp())
+
+
 def get_creation_time_format(prepend_year: bool = False) -> str:
     # Reference: https://docs.python.org/3/library/time.html#time.strftime
 
