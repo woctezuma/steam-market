@@ -197,6 +197,7 @@ def download_market_order_data_batch(
     save_to_disk: bool = True,
     market_order_output_file_name: str | None = None,
     listing_details_output_file_name: str | None = None,
+    enforce_cooldown: bool = True,
 ) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
@@ -236,7 +237,7 @@ def download_market_order_data_batch(
             last_update_timestamp = market_order_dict[listing_hash][
                 UPDATE_COOLDOWN_FIELD
             ]
-            if threshold_timestamp < last_update_timestamp:
+            if enforce_cooldown and (threshold_timestamp < last_update_timestamp):
                 if verbose:
                     print(
                         f"Skipping download of orders for {listing_hash} (last updated: {last_update_timestamp}).",
