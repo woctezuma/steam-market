@@ -5,7 +5,7 @@ import time
 import requests
 
 from src.json_utils import load_json, save_json
-from src.utils import get_steam_card_exchange_file_name
+from src.utils import TIMEOUT_IN_SECONDS, get_steam_card_exchange_file_name
 
 
 def get_current_unix_time_in_ms() -> int:
@@ -50,7 +50,7 @@ def download_data_from_steam_card_exchange(
     url = get_steamcardexchange_api_end_point_url()
     req_data = get_steamcardexchange_api_params()
 
-    resp_data = requests.get(url=url, params=req_data)
+    resp_data = requests.get(url=url, params=req_data, timeout=TIMEOUT_IN_SECONDS)
 
     if resp_data.ok:
         response = resp_data.json()

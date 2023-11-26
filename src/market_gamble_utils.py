@@ -211,6 +211,8 @@ def get_market_orders(
     focus_on_listing_hashes_never_seen_before: bool,
     listing_details_output_file_name: str,
     market_order_output_file_name: str,
+    enforce_cooldown: bool = True,
+    allow_to_skip_dummy_data: bool = False,
     verbose: bool = False,
 ) -> dict[str, dict]:
     # Load market orders (bid, ask) from disk
@@ -243,6 +245,8 @@ def get_market_orders(
             market_order_output_file_name=market_order_output_file_name,
             listing_details_output_file_name=listing_details_output_file_name,
             verbose=verbose,
+            enforce_cooldown=enforce_cooldown,
+            allow_to_skip_dummy_data=allow_to_skip_dummy_data,
         )
 
     # After the **most comprehensive** dictionary of market orders has been loaded from disk by:

@@ -1,20 +1,31 @@
 # Objective: retrieve the ask and bid for Booster Packs.
 
 import time
+from contextlib import suppress
+from datetime import timedelta
 from http import HTTPStatus
 
 import requests
+from requests.exceptions import ConnectionError, ReadTimeout
 
 from src.cookie_utils import force_update_sessionid
+from src.creation_time_utils import get_current_time, to_timestamp
 from src.json_utils import load_json, save_json
 from src.market_listing import get_item_nameid, get_item_nameid_batch
 from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.utils import get_cushioned_cooldown_in_seconds, get_market_order_file_name
+from src.utils import (
+    TIMEOUT_IN_SECONDS,
+    get_cushioned_cooldown_in_seconds,
+    get_market_order_file_name,
+)
 
 INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
+
+UPDATE_COOLDOWN_FIELD = "update_timestamp"
+UPDATE_COOLDOWN_IN_HOURS = 72
 
 
 def get_steam_market_order_url() -> str:
@@ -98,14 +109,19 @@ def download_market_order_data(
                     params=req_data,
                     cookies=cookie,
                     headers=get_market_order_headers(),
+                    timeout=TIMEOUT_IN_SECONDS,
                 )
             else:
                 resp_data = requests.get(
                     url,
                     params=req_data,
                     headers=get_market_order_headers(),
+                    timeout=TIMEOUT_IN_SECONDS,
                 )
-        except requests.exceptions.ConnectionError:
+        except ReadTimeout:
+            print(f"[WARNING] Request timeout for {listing_hash}.")
+            resp_data = None
+        except ConnectionError:
             resp_data = None
 
     else:
@@ -184,6 +200,26 @@ def download_market_order_data(
     return bid_price, ask_price, bid_volume, ask_volume
 
 
+def is_dummy_market_order_data(
+    market_order_data: dict[str, float | int | bool],
+) -> bool:
+    bid_price = market_order_data["bid"]
+    ask_price = market_order_data["ask"]
+    bid_volume = market_order_data["bid_volume"]
+    ask_volume = market_order_data["ask_volume"]
+
+    return bid_price < 0 and ask_price < 0 and bid_volume < 0 and ask_volume < 0
+
+
+def has_a_recent_timestamp(
+    market_order_data: dict[str, float | int | bool],
+    threshold_timestamp: int,
+) -> bool:
+    last_update_timestamp = market_order_data[UPDATE_COOLDOWN_FIELD]
+
+    return threshold_timestamp < last_update_timestamp
+
+
 def download_market_order_data_batch(
     badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
@@ -191,6 +227,8 @@ def download_market_order_data_batch(
     save_to_disk: bool = True,
     market_order_output_file_name: str | None = None,
     listing_details_output_file_name: str | None = None,
+    enforce_cooldown: bool = True,
+    allow_to_skip_dummy_data: bool = False,
 ) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
@@ -217,8 +255,36 @@ def download_market_order_data_batch(
 
     query_count = 0
 
+    current_time = get_current_time()
+    update_timestamp = to_timestamp(current_time)
+    threshold_timestamp = to_timestamp(
+        current_time - timedelta(hours=UPDATE_COOLDOWN_IN_HOURS),
+    )
+
     for app_id in badge_data:
         listing_hash = badge_data[app_id]["listing_hash"]
+
+        with suppress(KeyError):
+            last_update_timestamp = market_order_dict[listing_hash][
+                UPDATE_COOLDOWN_FIELD
+            ]
+            if (
+                enforce_cooldown
+                and has_a_recent_timestamp(
+                    market_order_dict[listing_hash],
+                    threshold_timestamp,
+                )
+                and (
+                    allow_to_skip_dummy_data
+                    or not is_dummy_market_order_data(market_order_dict[listing_hash])
+                )
+            ):
+                if verbose:
+                    print(
+                        f"Skipping download of orders for {listing_hash} (last updated: {last_update_timestamp}).",
+                    )
+                continue
+
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
             verbose=verbose,
@@ -233,6 +299,7 @@ def download_market_order_data_batch(
         market_order_dict[listing_hash]["is_marketable"] = item_nameids[listing_hash][
             "is_marketable"
         ]
+        market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = update_timestamp
 
         if query_count >= rate_limits["max_num_queries"]:
             if save_to_disk:
