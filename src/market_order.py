@@ -211,6 +211,15 @@ def is_dummy_market_order_data(
     return bid_price < 0 and ask_price < 0 and bid_volume < 0 and ask_volume < 0
 
 
+def has_a_recent_timestamp(
+    market_order_data: dict[str, float | int | bool],
+    threshold_timestamp: int,
+) -> bool:
+    last_update_timestamp = market_order_data[UPDATE_COOLDOWN_FIELD]
+
+    return threshold_timestamp < last_update_timestamp
+
+
 def download_market_order_data_batch(
     badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
@@ -258,7 +267,10 @@ def download_market_order_data_batch(
             last_update_timestamp = market_order_dict[listing_hash][
                 UPDATE_COOLDOWN_FIELD
             ]
-            if enforce_cooldown and (threshold_timestamp < last_update_timestamp):
+            if enforce_cooldown and has_a_recent_timestamp(
+                market_order_dict[listing_hash],
+                threshold_timestamp,
+            ):
                 if verbose:
                     print(
                         f"Skipping download of orders for {listing_hash} (last updated: {last_update_timestamp}).",
