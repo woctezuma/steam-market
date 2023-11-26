@@ -5,6 +5,7 @@ import time
 from pathlib import Path
 
 import requests
+from requests.exceptions import ConnectionError
 
 from src.json_utils import load_json, save_json
 from src.personal_info import (
@@ -184,7 +185,7 @@ def get_all_listings(
                     params=req_data,
                     timeout=TIMEOUT_IN_SECONDS,
                 )
-        except requests.exceptions.ConnectionError:
+        except ConnectionError:
             resp_data = None
 
         start_index += delta_index
