@@ -200,6 +200,17 @@ def download_market_order_data(
     return bid_price, ask_price, bid_volume, ask_volume
 
 
+def is_dummy_market_order_data(
+    market_order_data: dict[str, float | int | bool],
+) -> bool:
+    bid_price = market_order_data["bid"]
+    ask_price = market_order_data["ask"]
+    bid_volume = market_order_data["bid_volume"]
+    ask_volume = market_order_data["ask_volume"]
+
+    return bid_price < 0 and ask_price < 0 and bid_volume < 0 and ask_volume < 0
+
+
 def download_market_order_data_batch(
     badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
@@ -260,10 +271,6 @@ def download_market_order_data_batch(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
-        is_dummy_market_order_data = (
-            bid_price < 0 and ask_price < 0 and bid_volume < 0 and ask_volume < 0
-        )
-
         market_order_dict[listing_hash] = {}
         market_order_dict[listing_hash]["bid"] = bid_price
         market_order_dict[listing_hash]["ask"] = ask_price
@@ -273,7 +280,9 @@ def download_market_order_data_batch(
             "is_marketable"
         ]
         market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = (
-            0 if is_dummy_market_order_data else update_timestamp
+            0
+            if is_dummy_market_order_data(market_order_dict[listing_hash])
+            else update_timestamp
         )
 
         if query_count >= rate_limits["max_num_queries"]:
