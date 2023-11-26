@@ -228,6 +228,7 @@ def download_market_order_data_batch(
     market_order_output_file_name: str | None = None,
     listing_details_output_file_name: str | None = None,
     enforce_cooldown: bool = True,
+    allow_to_skip_dummy_data: bool = False,
 ) -> dict[str, dict]:
     if market_order_output_file_name is None:
         market_order_output_file_name = get_market_order_file_name()
@@ -273,7 +274,10 @@ def download_market_order_data_batch(
                     market_order_dict[listing_hash],
                     threshold_timestamp,
                 )
-                and not is_dummy_market_order_data(market_order_dict[listing_hash])
+                and (
+                    allow_to_skip_dummy_data
+                    or not is_dummy_market_order_data(market_order_dict[listing_hash])
+                )
             ):
                 if verbose:
                     print(
