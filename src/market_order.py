@@ -267,9 +267,13 @@ def download_market_order_data_batch(
             last_update_timestamp = market_order_dict[listing_hash][
                 UPDATE_COOLDOWN_FIELD
             ]
-            if enforce_cooldown and has_a_recent_timestamp(
-                market_order_dict[listing_hash],
-                threshold_timestamp,
+            if (
+                enforce_cooldown
+                and has_a_recent_timestamp(
+                    market_order_dict[listing_hash],
+                    threshold_timestamp,
+                )
+                and not is_dummy_market_order_data(market_order_dict[listing_hash])
             ):
                 if verbose:
                     print(
@@ -291,11 +295,7 @@ def download_market_order_data_batch(
         market_order_dict[listing_hash]["is_marketable"] = item_nameids[listing_hash][
             "is_marketable"
         ]
-        market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = (
-            0
-            if is_dummy_market_order_data(market_order_dict[listing_hash])
-            else update_timestamp
-        )
+        market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = update_timestamp
 
         if query_count >= rate_limits["max_num_queries"]:
             if save_to_disk:
