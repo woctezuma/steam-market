@@ -119,7 +119,7 @@ def download_market_order_data(
                     timeout=TIMEOUT_IN_SECONDS,
                 )
         except ReadTimeout:
-            print(f"The request timed out for {listing_hash}.")
+            print(f"[WARNING] Request timeout for {listing_hash}.")
             resp_data = None
         except ConnectionError:
             resp_data = None
