@@ -25,7 +25,7 @@ from src.utils import (
 INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
 
 UPDATE_COOLDOWN_FIELD = "update_timestamp"
-UPDATE_COOLDOWN_IN_HOURS = 12
+UPDATE_COOLDOWN_IN_HOURS = 72
 
 
 def get_steam_market_order_url() -> str:
