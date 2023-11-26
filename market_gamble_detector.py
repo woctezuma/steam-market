@@ -48,6 +48,8 @@ def main(
     drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
     | None = None,
     num_packs_to_display: int = 10,
+    enforce_cooldown: bool = True,
+    allow_to_skip_dummy_data: bool = False,
     verbose: bool = False,
 ) -> bool:
     if look_for_profile_backgrounds:
@@ -136,6 +138,8 @@ def main(
         focus_on_listing_hashes_never_seen_before,
         listing_details_output_file_name,
         market_order_output_file_name,
+        enforce_cooldown=enforce_cooldown,
+        allow_to_skip_dummy_data=allow_to_skip_dummy_data,
         verbose=verbose,
     )
 
@@ -190,5 +194,7 @@ if __name__ == "__main__":
         price_threshold_in_cents=None,
         drop_rate_estimates_for_common_rarity=None,
         num_packs_to_display=100,
+        enforce_cooldown=True,
+        allow_to_skip_dummy_data=False,
         verbose=True,
     )
