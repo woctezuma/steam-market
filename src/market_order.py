@@ -6,7 +6,7 @@ from datetime import timedelta
 from http import HTTPStatus
 
 import requests
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError, ReadTimeout
 
 from src.cookie_utils import force_update_sessionid
 from src.creation_time_utils import get_current_time, to_timestamp
@@ -118,6 +118,9 @@ def download_market_order_data(
                     headers=get_market_order_headers(),
                     timeout=TIMEOUT_IN_SECONDS,
                 )
+        except ReadTimeout:
+            print(f"The request timed out for {listing_hash}.")
+            resp_data = None
         except ConnectionError:
             resp_data = None
 
