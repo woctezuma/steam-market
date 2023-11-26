@@ -260,6 +260,10 @@ def download_market_order_data_batch(
             listing_details_output_file_name=listing_details_output_file_name,
         )
 
+        is_dummy_market_order_data = (
+            bid_price < 0 and ask_price < 0 and bid_volume < 0 and ask_volume < 0
+        )
+
         market_order_dict[listing_hash] = {}
         market_order_dict[listing_hash]["bid"] = bid_price
         market_order_dict[listing_hash]["ask"] = ask_price
@@ -268,7 +272,9 @@ def download_market_order_data_batch(
         market_order_dict[listing_hash]["is_marketable"] = item_nameids[listing_hash][
             "is_marketable"
         ]
-        market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = update_timestamp
+        market_order_dict[listing_hash][UPDATE_COOLDOWN_FIELD] = (
+            0 if is_dummy_market_order_data else update_timestamp
+        )
 
         if query_count >= rate_limits["max_num_queries"]:
             if save_to_disk:
