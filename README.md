@@ -76,7 +76,7 @@ To have access to the gem cost for crafting Booster Packs, you will need to manu
 <details><summary>How to list craftable packs with the Booster Creation webpage</summary>
 <p>
 
-1. Press `<Ctrl-U>` to display the HTML code of [the Booser Creation webpage](https://steamcommunity.com/tradingcards/boostercreator/). 
+1. Press `<Ctrl-U>` to display the HTML code of [the Booster Creation webpage](https://steamcommunity.com/tradingcards/boostercreator/). 
 
 2. At the end of the HTML code, find and copy the line below `CBoosterCreatorPage.Init`:<br/>
 ![javascript list of games](https://github.com/woctezuma/steam-market/wiki/img/JBxJue8.png)
