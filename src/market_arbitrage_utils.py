@@ -44,10 +44,7 @@ def filter_out_badges_never_crafted(
 
     if verbose:
         print(
-            "There are {} booster packs which are tracked, as they were crafted at least once. ({} omitted)".format(
-                len(filtered_badge_data),
-                len(aggregated_badge_data) - len(filtered_badge_data),
-            ),
+            f"There are {len(filtered_badge_data)} booster packs which are tracked, as they were crafted at least once. ({len(aggregated_badge_data) - len(filtered_badge_data)} omitted)",
         )
 
     return filtered_badge_data
@@ -77,10 +74,7 @@ def filter_out_badges_recently_crafted(
 
     if verbose:
         print(
-            "There are {} booster packs which can be immediately crafted. ({} excluded because of cooldown)".format(
-                len(filtered_badge_data),
-                len(aggregated_badge_data) - len(filtered_badge_data),
-            ),
+            f"There are {len(filtered_badge_data)} booster packs which can be immediately crafted. ({len(aggregated_badge_data) - len(filtered_badge_data)} excluded because of cooldown)",
         )
 
     return filtered_badge_data
@@ -169,13 +163,7 @@ def filter_out_badges_with_low_sell_price(
 
     if verbose:
         print(
-            "There are {} {} with sell price unknown ({}) or strictly higher than {} ({}).".format(
-                len(filtered_badge_data),
-                category_name,
-                unknown_price_counter,
-                threshold_name,
-                len(filtered_badge_data) - unknown_price_counter,
-            ),
+            f"There are {len(filtered_badge_data)} {category_name} with sell price unknown ({unknown_price_counter}) or strictly higher than {threshold_name} ({len(filtered_badge_data) - unknown_price_counter}).",
         )
 
     return filtered_badge_data
@@ -209,9 +197,7 @@ def find_badge_arbitrages(
 
             if verbose:
                 print(
-                    "Bid not found for {}. Reason is likely that you asked not to retrieve market orders.".format(
-                        listing_hash,
-                    ),
+                    f"Bid not found for {listing_hash}. Reason is likely that you asked not to retrieve market orders.",
                 )
 
         bid_without_fee = compute_sell_price_without_fee(bid_including_fee)
@@ -244,9 +230,9 @@ def find_badge_arbitrages(
                 ]
             except KeyError:
                 badge_arbitrages[listing_hash]["gem_amount"] = None
-            badge_arbitrages[listing_hash][
-                "gem_price_including_fee"
-            ] = individual_badge_data["gem_price"]
+            badge_arbitrages[listing_hash]["gem_price_including_fee"] = (
+                individual_badge_data["gem_price"]
+            )
             badge_arbitrages[listing_hash]["sell_price"] = individual_badge_data[
                 "sell_price"
             ]
@@ -305,14 +291,7 @@ def print_arbitrages(
                 replace_spaces=True,
             )
 
-            listing_hash_formatted_for_markdown = (
-                "[[store]({})][[market]({})] [{}]({})".format(
-                    get_steam_store_url(app_id),
-                    markdown_compatible_steam_market_url,
-                    listing_hash,
-                    get_steamcardexchange_url(app_id),
-                )
-            )
+            listing_hash_formatted_for_markdown = f"[[store]({get_steam_store_url(app_id)})][[market]({markdown_compatible_steam_market_url})] [{listing_hash}]({get_steamcardexchange_url(app_id)})"
         else:
             listing_hash_formatted_for_markdown = listing_hash
 

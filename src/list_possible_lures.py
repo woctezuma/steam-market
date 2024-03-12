@@ -108,13 +108,7 @@ def filter_app_ids_with_potential_profit(
         negative = sorted(set(app_ids).difference(filtered_app_ids), key=int)
 
         print(
-            "\nPositive ({}): {}\n\nNegative ({}): {}\n\nTotal ({})".format(
-                len(positive),
-                positive,
-                len(negative),
-                negative,
-                len(app_ids),
-            ),
+            f"\nPositive ({len(positive)}): {positive}\n\nNegative ({len(negative)}): {negative}\n\nTotal ({len(app_ids)})",
         )
 
     return filtered_app_ids

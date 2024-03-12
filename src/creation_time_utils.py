@@ -40,11 +40,7 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
             app_name = aggregated_badge_data[app_id]["name"]
             if previously_loaded_next_creation_time is None:
                 print(
-                    "Loading the next creation time ({}) for {} (appID = {}) from disk.".format(
-                        next_creation_time,
-                        app_name,
-                        app_id,
-                    ),
+                    f"Loading the next creation time ({next_creation_time}) for {app_name} (appID = {app_id}) from disk.",
                 )
             else:
                 # NB: Data stored in data/next_creation_times.json is assumed to be more up-to-date compared to
@@ -53,12 +49,7 @@ def fill_in_badges_with_next_creation_times_loaded_from_disk(
                 #     and you should delete it. Therefore, if the .json file is present on your disk, it can be
                 #     assumed that it was created by running this program, thus is more recent than the .txt file.
                 print(
-                    "Replacing the next creation time ({}) for {} (appID = {}) with {}, loaded from disk.".format(
-                        previously_loaded_next_creation_time,
-                        app_name,
-                        app_id,
-                        next_creation_time,
-                    ),
+                    f"Replacing the next creation time ({previously_loaded_next_creation_time}) for {app_name} (appID = {app_id}) with {next_creation_time}, loaded from disk.",
                 )
 
     return aggregated_badge_data
