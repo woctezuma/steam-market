@@ -145,27 +145,12 @@ def print_packs_with_high_buzz(
             num_different_items_of_uncommon_rarity = item_rarity_pattern["uncommon"]
             num_different_items_of_rare_rarity = item_rarity_pattern["rare"]
 
-            item_rarity_pattern_info = (
-                " ; rarity pattern C/UC/R: {}/{}/{} items".format(
-                    num_different_items_of_common_rarity,
-                    num_different_items_of_uncommon_rarity,
-                    num_different_items_of_rare_rarity,
-                )
-            )
+            item_rarity_pattern_info = f" ; rarity pattern C/UC/R: {num_different_items_of_common_rarity}/{num_different_items_of_uncommon_rarity}/{num_different_items_of_rare_rarity} items"
         except (TypeError, KeyError):
             item_rarity_pattern_info = ""
 
         print(
-            "{:3}) [[store]({})][[market]({})] [{}]({}) ; bid: {}€ (volume: {}){}".format(
-                i + 1,
-                get_steam_store_url(app_id),
-                markdown_compatible_steam_market_url,
-                app_name,
-                get_steamcardexchange_url(app_id),
-                bid,
-                bid_volume,
-                item_rarity_pattern_info,
-            ),
+            f"{i + 1:3}) [[store]({get_steam_store_url(app_id)})][[market]({markdown_compatible_steam_market_url})] [{app_name}]({get_steamcardexchange_url(app_id)}) ; bid: {bid}€ (volume: {bid_volume}){item_rarity_pattern_info}",
         )
 
 
@@ -212,9 +197,9 @@ def fill_in_badge_data_with_data_from_steam_card_exchange(
             "gem_amount"
         ]
 
-        aggregated_badge_data[app_id][
-            "gem_amount"
-        ] = gem_amount_required_to_craft_booster_pack
+        aggregated_badge_data[app_id]["gem_amount"] = (
+            gem_amount_required_to_craft_booster_pack
+        )
         aggregated_badge_data[app_id]["gem_price"] = (
             gem_amount_required_to_craft_booster_pack * gem_price
         )

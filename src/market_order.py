@@ -187,14 +187,7 @@ def download_market_order_data(
 
     if verbose:
         print(
-            "Listing: {} ; item id: {} ; ask: {:.2f}€ ({}) ; bid: {:.2f}€ ({})".format(
-                listing_hash,
-                item_nameid,
-                ask_price,
-                ask_volume,
-                bid_price,
-                bid_volume,
-            ),
+            f"Listing: {listing_hash} ; item id: {item_nameid} ; ask: {ask_price:.2f}€ ({ask_volume}) ; bid: {bid_price:.2f}€ ({bid_volume})",
         )
 
     return bid_price, ask_price, bid_volume, ask_volume

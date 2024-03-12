@@ -551,10 +551,7 @@ def find_listing_hashes_with_unknown_goo_value(
 
     if verbose:
         print(
-            "Unknown goo values for:\n{}\nTotal: {} appIDs with unknown goo value.".format(
-                app_ids_with_unknown_goo_value,
-                len(app_ids_with_unknown_goo_value),
-            ),
+            f"Unknown goo values for:\n{app_ids_with_unknown_goo_value}\nTotal: {len(app_ids_with_unknown_goo_value)} appIDs with unknown goo value.",
         )
 
     return app_ids_with_unknown_goo_value
@@ -725,10 +722,7 @@ def find_app_ids_with_unknown_item_type_for_their_representatives(
 
     if verbose:
         print(
-            "Unknown item types for:\n{}\nTotal: {} appIDs with unknown item type for their representative listing hashes.".format(
-                app_ids_with_unreliable_goo_details,
-                len(app_ids_with_unreliable_goo_details),
-            ),
+            f"Unknown item types for:\n{app_ids_with_unreliable_goo_details}\nTotal: {len(app_ids_with_unreliable_goo_details)} appIDs with unknown item type for their representative listing hashes.",
         )
 
     return app_ids_with_unreliable_goo_details

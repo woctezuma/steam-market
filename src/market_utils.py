@@ -39,10 +39,7 @@ def filter_out_dubious_listing_hashes(
 
     if verbose:
         print(
-            "There are {} seemingly valid market listings. ({} omitted because of a dubious listing hash)".format(
-                len(filtered_listings),
-                len(all_listings) - len(filtered_listings),
-            ),
+            f"There are {len(filtered_listings)} seemingly valid market listings. ({len(all_listings) - len(filtered_listings)} omitted because of a dubious listing hash)",
         )
 
     return filtered_listings
@@ -161,9 +158,9 @@ def aggregate_badge_data(
         aggregated_badge_data[app_id] = {}
         aggregated_badge_data[app_id]["name"] = app_name
         aggregated_badge_data[app_id]["listing_hash"] = listing_hash
-        aggregated_badge_data[app_id][
-            "gem_amount"
-        ] = gem_amount_required_to_craft_booster_pack
+        aggregated_badge_data[app_id]["gem_amount"] = (
+            gem_amount_required_to_craft_booster_pack
+        )
         aggregated_badge_data[app_id]["gem_price"] = (
             gem_amount_required_to_craft_booster_pack * gem_price
         )
