@@ -4,6 +4,7 @@ import time
 from contextlib import suppress
 from datetime import timedelta
 from http import HTTPStatus
+from typing import Final
 
 import requests
 from requests.exceptions import ConnectionError, ReadTimeout
@@ -24,8 +25,8 @@ from src.utils import (
 
 INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
 
-UPDATE_COOLDOWN_FIELD = "update_timestamp"
-UPDATE_COOLDOWN_IN_HOURS = 72
+UPDATE_COOLDOWN_FIELD: Final[str] = "update_timestamp"
+UPDATE_COOLDOWN_IN_HOURS: Final[int] = 72
 
 
 def get_steam_market_order_url() -> str:

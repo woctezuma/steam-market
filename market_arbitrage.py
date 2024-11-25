@@ -1,6 +1,8 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
 
+from typing import Annotated
+
 from src.inventory_utils import create_then_sell_booster_packs_for_batch
 from src.market_arbitrage_utils import (
     convert_arbitrages_for_batch_create_then_sell,
@@ -20,7 +22,7 @@ def apply_workflow(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     automatically_create_then_sell_booster_packs: bool = False,
-    profit_threshold: float = 0.01,  # profit in euros
+    profit_threshold: Annotated[float, "profit in euros"] = 0.01,
     quick_check_with_tracked_booster_packs: bool = False,
     enforce_update_of_marketability_status: bool = False,
     from_javascript: bool = False,
