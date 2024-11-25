@@ -22,6 +22,7 @@ from src.utils import (
 def get_steam_market_listing_url(
     app_id: str | None = None,
     listing_hash: str | None = None,
+    *,
     render_as_json: bool = True,
     replace_spaces: bool = False,
     replace_parenthesis: bool = False,
@@ -245,6 +246,7 @@ def parse_item_name_id(html_doc: str) -> tuple[int | None, bool | None, int | No
 def get_listing_details(
     listing_hash: str,
     cookie: dict[str, str] | None = None,
+    *,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
     listing_details: dict[str, dict] = {}
@@ -301,6 +303,7 @@ def get_listing_details(
 def get_listing_details_batch(
     listing_hashes: list[str] | dict[str, dict],
     all_listing_details: dict[str, dict] | None = None,
+    *,
     save_to_disk: bool = True,
     listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:

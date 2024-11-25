@@ -17,6 +17,7 @@ def determine_whether_listing_hash_is_dubious(listing_hash: str) -> bool:
 
 def filter_out_dubious_listing_hashes(
     all_listings: dict[str, dict],
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     # Filter out listing hashes which hint at a dubious market listing for the booster pack. For instance:
@@ -46,6 +47,7 @@ def filter_out_dubious_listing_hashes(
 def match_badges_with_listing_hashes(
     badge_creation_details: dict[str, dict] | None = None,
     all_listings: dict[str, dict] | None = None,
+    *,
     verbose: bool = True,
 ) -> dict[str, str | None]:
     # Badges for games which I own
@@ -107,6 +109,7 @@ def aggregate_badge_data(
     all_listings: dict[str, dict] | None = None,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
+    *,
     retrieve_gem_price_from_scratch: bool = False,
 ) -> dict[str, dict]:
     # Aggregate data:
@@ -169,6 +172,7 @@ def aggregate_badge_data(
 
 
 def load_aggregated_badge_data(
+    *,
     retrieve_listings_from_scratch: bool = False,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
@@ -223,7 +227,7 @@ def populate_random_samples_of_badge_data(
     return True
 
 
-def main(populate_all_item_name_ids: bool = False) -> bool:
+def main(*, populate_all_item_name_ids: bool = False) -> bool:
     if populate_all_item_name_ids:
         # Pre-retrieval of ALL the MISSING item name ids.
         # Caveat: this may require a long time, due to API rate limits.

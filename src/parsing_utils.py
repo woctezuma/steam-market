@@ -13,6 +13,7 @@ from src.utils import get_badge_creation_file_name
 
 def parse_javascript_one_liner(
     badges_as_str: str,
+    *,
     verbose: bool = False,
 ) -> dict[str, dict]:
     badge_creation_details = {}
@@ -44,6 +45,7 @@ def parse_javascript_one_liner(
 
 def parse_augmented_steam_drop_down_menu(
     lines: list[str],
+    *,
     verbose: bool = False,
 ) -> dict[str, dict]:
     badge_creation_details: dict[str, dict] = {}
@@ -75,6 +77,7 @@ def parse_augmented_steam_drop_down_menu(
 
 def parse_badge_creation_details(
     badge_creation_file_name: str | None = None,
+    *,
     from_javascript: bool = False,
     verbose: bool = False,
 ) -> dict[str, dict]:

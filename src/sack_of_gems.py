@@ -19,6 +19,7 @@ def get_num_gems_per_sack_of_gems() -> int:
 
 def download_sack_of_gems_price(
     sack_of_gems_listing_file_name: str | None = None,
+    *,
     verbose: bool = True,
 ) -> float:
     if sack_of_gems_listing_file_name is None:
@@ -55,6 +56,7 @@ def download_sack_of_gems_price(
 
 
 def load_sack_of_gems_price(
+    *,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
     sack_of_gems_listing_file_name: str | None = None,
@@ -87,6 +89,7 @@ def load_sack_of_gems_price(
 def get_gem_price(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
+    *,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
 ) -> float:
@@ -115,6 +118,7 @@ def get_gem_price(
 def print_gem_price_reminder(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
+    *,
     retrieve_gem_price_from_scratch: bool | None = None,
 ) -> None:
     if retrieve_gem_price_from_scratch is None:

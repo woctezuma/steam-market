@@ -64,6 +64,7 @@ def load_steam_inventory_from_disk(profile_id: str | None = None) -> dict | None
 
 def load_steam_inventory(
     profile_id: str | None = None,
+    *,
     update_steam_inventory: bool = False,
 ) -> dict | None:
     if profile_id is None:
@@ -76,6 +77,7 @@ def load_steam_inventory(
 
 def download_steam_inventory(
     profile_id: str | None = None,
+    *,
     save_to_disk: bool = True,
 ) -> dict | None:
     if profile_id is None:
@@ -128,6 +130,7 @@ def get_steam_booster_pack_creation_url() -> str:
 def get_booster_pack_creation_parameters(
     app_id: str,
     session_id: str,
+    *,
     is_marketable: bool = True,
 ) -> dict[str, str]:
     booster_pack_creation_parameters = {}
@@ -144,6 +147,7 @@ def get_booster_pack_creation_parameters(
 
 def create_booster_pack(
     app_id: str,
+    *,
     is_marketable: bool = True,
     verbose: bool = True,
 ) -> dict | None:
@@ -233,6 +237,7 @@ def get_request_headers() -> dict[str, str]:
 def sell_booster_pack(
     asset_id: str,
     price_in_cents: int,  # this is the money which you, as the seller, will receive
+    *,
     verbose: bool = True,
 ) -> dict | None:
     cookie = get_cookie_dict()
@@ -295,6 +300,7 @@ def sell_booster_pack(
 def retrieve_asset_id(
     listing_hash: str,
     steam_inventory: dict | None = None,
+    *,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
     verbose: bool = True,
@@ -372,6 +378,7 @@ def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict 
 
 def sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict[str, int],
+    *,
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -401,6 +408,7 @@ def sell_booster_packs_for_batch(
 
 def create_then_sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict[str, int],
+    *,
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -423,6 +431,7 @@ def create_then_sell_booster_packs_for_batch(
 
 def update_and_save_next_creation_times(
     creation_results: dict[str, dict | None],
+    *,
     verbose: bool = True,
     next_creation_time_file_name: str | None = None,
 ) -> dict[str, str]:

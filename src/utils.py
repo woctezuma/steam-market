@@ -19,7 +19,7 @@ def get_data_folder() -> str:
     return data_folder
 
 
-def get_badge_creation_file_name(from_javascript: bool = False) -> str:
+def get_badge_creation_file_name(*, from_javascript: bool = False) -> str:
     badge_creation_file_name = get_data_folder() + "booster_game_creator"
 
     if from_javascript:
@@ -185,7 +185,7 @@ def get_category_name_for_emoticons() -> str:
     return "emoticons"
 
 
-def get_bullet_point_for_display(use_numbered_bullet_points: bool = False) -> str:
+def get_bullet_point_for_display(*, use_numbered_bullet_points: bool = False) -> str:
     # Return a string, which consists of a bullet point followed by three spaces, to display lists in Markdown format.
     #
     # NB: if the list of bullet points is long, Numbered bullet points improve readability on GitHub Gist.

@@ -40,6 +40,7 @@ from src.utils import (
 
 
 def main(
+    *,
     look_for_profile_backgrounds: bool = True,  # if True, profile backgrounds, otherwise, emoticons.
     retrieve_listings_from_scratch: bool = False,
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,

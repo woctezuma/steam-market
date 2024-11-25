@@ -16,6 +16,7 @@ def filter_listings(
     min_sell_price: int = 30,  # in cents
     min_num_listings: int = 20,
     # to remove listings with very few sellers, who chose unrealistic sell prices
+    *,
     verbose: bool = True,
 ) -> list[str]:
     if all_listings is None:
@@ -157,6 +158,7 @@ def print_packs_with_high_buzz(
 def fill_in_badge_data_with_data_from_steam_card_exchange(
     all_listings: dict[str, dict],
     aggregated_badge_data: dict[str, dict] | None = None,
+    *,
     force_update_from_steam_card_exchange: bool = False,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,

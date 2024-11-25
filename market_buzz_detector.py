@@ -25,6 +25,7 @@ DEFAULT_NUM_PACKS_TO_DISPLAY: Final[int] = 10
 
 
 def main(
+    *,
     retrieve_listings_from_scratch: bool = False,
     retrieve_market_orders_online: bool = False,
     force_update_from_steam_card_exchange: bool = False,
