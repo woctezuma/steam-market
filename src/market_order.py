@@ -24,7 +24,7 @@ from src.utils import (
     get_market_order_file_name,
 )
 
-INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
+type MarketOrderData = dict[str, float | int | bool]
 
 UPDATE_COOLDOWN_FIELD: Final[str] = "update_timestamp"
 UPDATE_COOLDOWN_IN_HOURS: Final[int] = 72
@@ -174,7 +174,7 @@ def download_market_order_data(
 
 
 def is_dummy_market_order_data(
-    market_order_data: dict[str, float | int | bool],
+    market_order_data: MarketOrderData,
 ) -> bool:
     bid_price = market_order_data["bid"]
     ask_price = market_order_data["ask"]
@@ -185,7 +185,7 @@ def is_dummy_market_order_data(
 
 
 def has_a_recent_timestamp(
-    market_order_data: dict[str, float | int | bool],
+    market_order_data: MarketOrderData,
     threshold_timestamp: int,
 ) -> bool:
     last_update_timestamp = market_order_data[UPDATE_COOLDOWN_FIELD]
