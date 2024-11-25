@@ -17,6 +17,7 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.api_utils import get_rate_limits, INTER_REQUEST_COOLDOWN_FIELD
 from src.utils import (
     TIMEOUT_IN_SECONDS,
     get_cushioned_cooldown_in_seconds,
@@ -43,28 +44,6 @@ def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
     params["two_factor"] = "0"
 
     return params
-
-
-def get_steam_api_rate_limits_for_market_order(
-    has_secured_cookie: bool = False,
-) -> dict[str, int]:
-    # Objective: return the rate limits of Steam API for the market.
-
-    if has_secured_cookie:
-        rate_limits = {
-            "max_num_queries": 50,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=1),
-        }
-
-    else:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
-        }
-
-    rate_limits[INTER_REQUEST_COOLDOWN_FIELD] = 0
-
-    return rate_limits
 
 
 def get_market_order_headers() -> dict[str, str]:
@@ -242,7 +221,7 @@ def download_market_order_data_batch(
     cookie = force_update_sessionid(cookie)
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_order(has_secured_cookie)
+    rate_limits = get_rate_limits("market_order", has_secured_cookie=has_secured_cookie)
 
     if market_order_dict is None:
         market_order_dict = {}

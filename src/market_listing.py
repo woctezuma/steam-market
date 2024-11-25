@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from src.json_utils import load_json, save_json
+from src.api_utils import get_rate_limits
 from src.market_search import load_all_listings
 from src.personal_info import (
     get_cookie_dict,
@@ -58,26 +59,6 @@ def get_steam_market_listing_url(
 
 def get_listing_parameters() -> dict[str, str]:
     return {"currency": "3"}
-
-
-def get_steam_api_rate_limits_for_market_listing(
-    has_secured_cookie: bool = False,
-) -> dict[str, int]:
-    # Objective: return the rate limits of Steam API for the market.
-
-    if has_secured_cookie:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=3),
-        }
-
-    else:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
-        }
-
-    return rate_limits
 
 
 def figure_out_relevant_id(
@@ -329,7 +310,10 @@ def get_listing_details_batch(
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
+    rate_limits = get_rate_limits(
+        "market_listing",
+        has_secured_cookie=has_secured_cookie,
+    )
 
     if all_listing_details is None:
         all_listing_details = {}

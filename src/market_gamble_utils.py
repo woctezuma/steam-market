@@ -1,5 +1,6 @@
 import time
 
+from src.api_utils import get_rate_limits
 from src.drop_rate_estimates import (
     clamp_proportion,
     get_drop_rate_estimates_based_on_item_rarity_pattern,
@@ -12,7 +13,6 @@ from src.market_order import (
     load_market_order_data_from_disk,
 )
 from src.market_search import (
-    get_steam_api_rate_limits_for_market_search,
     get_tag_item_class_no_for_emoticons,
     get_tag_item_class_no_for_profile_backgrounds,
     get_tag_item_class_no_for_trading_cards,
@@ -94,7 +94,10 @@ def update_all_listings_for_items_other_than_cards(
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
+    rate_limits = get_rate_limits(
+        "market_search",
+        has_secured_cookie=has_secured_cookie,
+    )
 
     cooldown_duration = rate_limits["cooldown"]
     print(
