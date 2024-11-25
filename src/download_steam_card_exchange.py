@@ -40,6 +40,7 @@ def save_data_from_steam_card_exchange(
 
 def download_data_from_steam_card_exchange(
     steam_card_exchange_file_name: str | None = None,
+    *,
     save_to_disk: bool = True,
 ) -> dict | None:
     if steam_card_exchange_file_name is None:
@@ -97,6 +98,7 @@ def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set: int) ->
 
 def parse_data_from_steam_card_exchange(
     response: dict | None = None,
+    *,
     force_update_from_steam_card_exchange: bool = False,
     steam_card_exchange_file_name: str | None = None,
 ) -> dict[str, dict]:
@@ -140,7 +142,7 @@ def parse_data_from_steam_card_exchange(
     return dico
 
 
-def main(force_update: bool = False) -> bool:
+def main(*, force_update: bool = False) -> bool:
     if force_update:
         response = download_data_from_steam_card_exchange()
     else:

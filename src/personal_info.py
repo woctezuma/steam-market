@@ -36,7 +36,7 @@ def save_steam_cookie_to_disk(
     return is_cookie_to_be_saved
 
 
-def get_cookie_dict(verbose: bool = False) -> dict[str, str]:
+def get_cookie_dict(*, verbose: bool = False) -> dict[str, str]:
     cookie = load_steam_cookie_from_disk()
 
     if verbose:
@@ -49,6 +49,7 @@ def get_cookie_dict(verbose: bool = False) -> dict[str, str]:
 def update_cookie_dict(
     original_cookie: dict[str, str],
     dict_with_new_values: dict[str, str],
+    *,
     verbose: bool = False,
 ) -> dict[str, str]:
     cookie = original_cookie
@@ -77,6 +78,7 @@ def update_and_save_cookie_to_disk_if_values_changed(
     dict_with_new_values: dict[str, str],
     fields: list[str] | None = None,
     file_name_with_personal_info: str | None = None,
+    *,
     verbose: bool = False,
 ) -> dict[str, str]:
     if fields is None:

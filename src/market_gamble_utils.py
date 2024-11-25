@@ -118,6 +118,7 @@ def update_all_listings_for_items_other_than_cards(
 
 def get_listings(
     listing_output_file_name: str,
+    *,
     retrieve_listings_from_scratch: bool = False,
 ) -> dict[str, dict]:
     if retrieve_listings_from_scratch:
@@ -134,6 +135,7 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
     category_name: str | None = None,
     drop_rate_estimates_for_common_rarity: DropRateEstimates | None = None,
     gem_price_in_euros: float | None = None,
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     if gem_price_in_euros is None:
@@ -212,6 +214,7 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
 
 def get_market_orders(
     filtered_badge_data: dict[str, dict],
+    *,
     retrieve_market_orders_online: bool,
     focus_on_listing_hashes_never_seen_before: bool,
     listing_details_output_file_name: str,
@@ -297,6 +300,7 @@ def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[str, 
 
 
 def get_listings_with_other_rarity_tags(
+    *,
     look_for_profile_backgrounds: bool,
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
 ) -> tuple[dict[str, dict], dict[str, dict]]:

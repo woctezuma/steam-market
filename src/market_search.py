@@ -46,6 +46,7 @@ def get_search_parameters(
     tag_item_class_no: int | None = None,
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
+    *,
     is_foil_trading_card: bool = True,
 ) -> dict[str, str]:
     if tag_drop_rate_str is None:

@@ -63,6 +63,7 @@ def get_market_order_headers() -> dict[str, str]:
 def download_market_order_data(
     listing_hash: str,
     item_nameid: str | None = None,
+    *,
     verbose: bool = False,
     listing_details_output_file_name: str | None = None,
 ) -> tuple[float, float, int, int]:
@@ -193,6 +194,7 @@ def has_a_recent_timestamp(
 def download_market_order_data_batch(
     badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
+    *,
     verbose: bool = False,
     save_to_disk: bool = True,
     market_order_output_file_name: str | None = None,
@@ -293,6 +295,7 @@ def download_market_order_data_batch(
 
 def load_market_order_data(
     badge_data: dict[str, dict],
+    *,
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,

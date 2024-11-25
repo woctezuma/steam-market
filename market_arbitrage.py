@@ -17,6 +17,7 @@ from src.sack_of_gems import print_gem_price_reminder
 
 
 def apply_workflow(
+    *,  # enforce keyword arguments
     retrieve_listings_from_scratch: bool = True,
     retrieve_market_orders_online: bool = True,
     enforced_sack_of_gems_price: float | None = None,

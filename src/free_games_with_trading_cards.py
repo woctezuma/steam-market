@@ -38,7 +38,7 @@ def download_user_data() -> dict | None:
     return result
 
 
-def download_owned_apps(verbose: bool = True) -> list[str]:
+def download_owned_apps(*, verbose: bool = True) -> list[str]:
     result = download_user_data()
 
     owned_apps = result["rgOwnedApps"] if result else []
@@ -49,7 +49,7 @@ def download_owned_apps(verbose: bool = True) -> list[str]:
     return [str(i) for i in owned_apps]
 
 
-def download_free_apps(method: str = "price", verbose: bool = True) -> set[str]:
+def download_free_apps(method: str = "price", *, verbose: bool = True) -> set[str]:
     if method == "price":
         data = steamspypi.load()
 
@@ -81,7 +81,7 @@ def download_free_apps(method: str = "price", verbose: bool = True) -> set[str]:
     return free_apps
 
 
-def load_apps_with_trading_cards(verbose: bool = True) -> list[str]:
+def load_apps_with_trading_cards(*, verbose: bool = True) -> list[str]:
     all_listings = load_all_listings()
 
     apps_with_trading_cards = [
@@ -97,6 +97,7 @@ def load_apps_with_trading_cards(verbose: bool = True) -> list[str]:
 def load_free_apps_with_trading_cards(
     free_apps: set[str] | None = None,
     list_of_methods: list[str] | None = None,
+    *,
     verbose: bool = True,
 ) -> set[str]:
     if list_of_methods is None:
@@ -123,7 +124,7 @@ def load_free_apps_with_trading_cards(
     return free_apps_with_trading_cards
 
 
-def load_file(file_name: str, verbose: bool = True) -> list[str]:
+def load_file(file_name: str, *, verbose: bool = True) -> list[str]:
     with Path(file_name).open(encoding="utf-8") as f:
         data = [line.strip() for line in f]
 
@@ -189,6 +190,7 @@ def write_to_file(
     file_name: str,
     asf_username: str,
     group_size: int = 25,
+    *,
     verbose: bool = True,
 ) -> None:
     output = group_concatenate_to_str(

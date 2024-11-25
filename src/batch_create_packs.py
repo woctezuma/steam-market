@@ -15,6 +15,7 @@ def get_manually_selected_app_ids() -> list[str]:
 
 def filter_app_ids_based_on_badge_data(
     manually_selected_app_ids: list[str],
+    *,
     check_ask_price: bool = False,
     filtered_badge_data: dict[str, dict] | None = None,
 ) -> tuple[list[str], dict[str, dict]]:
@@ -44,6 +45,7 @@ def filter_app_ids_based_on_badge_data(
 def create_packs_for_app_ids(
     manually_selected_app_ids: list[str],
     filtered_badge_data: dict[str, dict] | None = None,
+    *,
     check_ask_price: bool = False,
     is_a_simulation: bool = True,
     # Caveat: if False, then packs will be crafted, which costs money!
@@ -111,6 +113,7 @@ def create_packs_for_app_ids(
 
 
 def main(
+    *,
     retrieve_listings_from_scratch: bool = False,
     # Set to True & run once if you get "No match found for" games you own.
     is_a_simulation: bool = True,  # Caveat: if False, then packs will be crafted, which costs money!
