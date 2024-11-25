@@ -3,6 +3,7 @@
 
 import time
 from src.api_utils import get_rate_limits
+from src.tag_utils import get_tag_drop_rate_str
 from pathlib import Path
 
 import requests
@@ -38,23 +39,6 @@ def get_tag_item_class_no_for_emoticons() -> int:
 
 def get_tag_item_class_no_for_booster_packs() -> int:
     return 5
-
-
-def get_tag_drop_rate_str(rarity: str | None = None) -> str:
-    if rarity is None:
-        rarity = "common"
-
-    if rarity == "extraordinary":
-        tag_drop_rate_no = 3
-    elif rarity == "rare":
-        tag_drop_rate_no = 2
-    elif rarity == "uncommon":
-        tag_drop_rate_no = 1
-    else:
-        # Rarity: Common
-        tag_drop_rate_no = 0
-
-    return f"tag_droprate_{tag_drop_rate_no}"
 
 
 def get_search_parameters(
