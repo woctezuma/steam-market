@@ -2,6 +2,7 @@
 #            along with the sell price, and the volume available at this price.
 
 import time
+from src.api_utils import get_rate_limits
 from pathlib import Path
 
 import requests
@@ -102,26 +103,6 @@ def get_search_parameters(
     return params
 
 
-def get_steam_api_rate_limits_for_market_search(
-    has_secured_cookie: bool = False,
-) -> dict[str, int]:
-    # Objective: return the rate limits of Steam API for the market.
-
-    if has_secured_cookie:
-        rate_limits = {
-            "max_num_queries": 50,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=1),
-        }
-
-    else:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
-        }
-
-    return rate_limits
-
-
 def get_all_listings(
     all_listings: dict[str, dict] | None = None,
     url: str | None = None,
@@ -137,7 +118,10 @@ def get_all_listings(
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
+    rate_limits = get_rate_limits(
+        "market_search",
+        has_secured_cookie=has_secured_cookie,
+    )
 
     if all_listings is None:
         all_listings = {}
