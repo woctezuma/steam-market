@@ -29,6 +29,9 @@ from src.utils import (
     get_listing_output_file_name_for_profile_backgrounds,
 )
 
+type ItemRarityPattern = tuple[int, int, int]
+type DropRateEstimates = dict[ItemRarityPattern, float]
+
 
 def update_all_listings_for_foil_cards(start_index: int = 0) -> None:
     print("Downloading listings for foil cards.")
@@ -129,8 +132,7 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
     item_rarity_patterns_per_app_id: dict[str, dict],
     price_threshold_in_cents: float | None = None,
     category_name: str | None = None,
-    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
-    | None = None,
+    drop_rate_estimates_for_common_rarity: DropRateEstimates | None = None,
     gem_price_in_euros: float | None = None,
     verbose: bool = True,
 ) -> dict[str, dict]:

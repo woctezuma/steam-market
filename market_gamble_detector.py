@@ -18,6 +18,7 @@ from src.market_buzz_utils import (
     sort_according_to_buzz,
 )
 from src.market_gamble_utils import (
+    DropRateEstimates,
     count_listing_hashes_per_app_id,
     enumerate_item_rarity_patterns,
     filter_out_candidates_whose_ask_price_is_below_threshold,
@@ -45,8 +46,7 @@ def main(
     retrieve_market_orders_online: bool = True,
     focus_on_listing_hashes_never_seen_before: bool = True,
     price_threshold_in_cents: float | None = None,
-    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
-    | None = None,
+    drop_rate_estimates_for_common_rarity: DropRateEstimates | None = None,
     num_packs_to_display: int = 10,
     enforce_cooldown: bool = True,
     allow_to_skip_dummy_data: bool = False,
