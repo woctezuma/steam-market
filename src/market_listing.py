@@ -324,7 +324,7 @@ def get_listing_details_batch(
     query_count = 0
 
     for count, listing_hash in enumerate(listing_hashes):
-        if count + 1 % 100 == 0:
+        if (count + 1) % 100 == 0:
             print(f"[{count + 1}/{num_listings}]")
 
         listing_details, status_code = get_listing_details(
