@@ -69,17 +69,17 @@ def filter_out_unmarketable_packs(
     marketable_market_order_dict = {}
     unknown_market_order_dict = {}
 
-    for listing_hash in market_order_dict:
+    for listing_hash, current_data in market_order_dict.items():
         try:
-            is_marketable = market_order_dict[listing_hash]["is_marketable"]
+            is_marketable = current_data["is_marketable"]
         except KeyError:
             print(f"Marketable status not found for {listing_hash}")
-            unknown_market_order_dict[listing_hash] = market_order_dict[listing_hash]
+            unknown_market_order_dict[listing_hash] = current_data
 
             is_marketable = False  # avoid taking any risk: ASSUME the booster pack is NOT marketable
 
         if is_marketable:
-            marketable_market_order_dict[listing_hash] = market_order_dict[listing_hash]
+            marketable_market_order_dict[listing_hash] = current_data
 
     return marketable_market_order_dict, unknown_market_order_dict
 

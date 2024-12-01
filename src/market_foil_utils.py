@@ -224,9 +224,7 @@ def find_cheapest_listing_hashes(
 ) -> list[str]:
     cheapest_listing_hashes = []
 
-    for app_id in groups_by_app_id:
-        listing_hashes = groups_by_app_id[app_id]
-
+    for listing_hashes in groups_by_app_id.values():
         # Sort with respect to two attributes:
         #   - ascending sell prices,
         #   - **descending** volumes.
@@ -253,7 +251,7 @@ def find_representative_listing_hashes(
 ) -> list[str]:
     representative_listing_hashes = []
 
-    for app_id in groups_by_app_id:
+    for app_id, listing_hashes in groups_by_app_id.items():
         if dictionary_of_representative_listing_hashes is not None:
             try:
                 # For retro-compatibility, we try to use representative for which we previously downloaded item name ids
@@ -264,8 +262,6 @@ def find_representative_listing_hashes(
                 previously_used_listing_hashes_for_app_id = None
         else:
             previously_used_listing_hashes_for_app_id = None
-
-        listing_hashes = groups_by_app_id[app_id]
 
         # Sort with respect to lexicographical order.
 
@@ -491,9 +487,7 @@ def discard_necessarily_unrewarding_app_ids(
 
     potentially_rewarding_app_ids = []
 
-    for app_id in all_goo_details:
-        goo_value_in_gems = all_goo_details[app_id]
-
+    for app_id, goo_value_in_gems in all_goo_details.items():
         if app_id in app_ids_to_omit:
             continue
 

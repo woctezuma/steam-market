@@ -25,9 +25,7 @@ def filter_out_dubious_listing_hashes(
 
     filtered_listings = {}
 
-    for listing_hash in all_listings:
-        individual_market_listing = all_listings[listing_hash]
-
+    for listing_hash, individual_market_listing in all_listings.items():
         booster_pack_is_dubious = determine_whether_listing_hash_is_dubious(
             listing_hash,
         )
