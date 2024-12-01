@@ -444,9 +444,7 @@ def update_and_save_next_creation_times(
     save_to_disk = False
     is_first_displayed_line = True
 
-    for listing_hash in creation_results:
-        result = creation_results[listing_hash]
-
+    for listing_hash, result in creation_results.items():
         if result is not None:
             app_id = convert_listing_hash_to_app_id(listing_hash)
             next_creation_times[app_id] = formatted_next_creation_time
