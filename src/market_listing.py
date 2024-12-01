@@ -289,10 +289,11 @@ def get_listing_details(
         if item_type_no is None:
             print(f"Item type not found for {listing_hash}")
 
-        listing_details[listing_hash] = {}
-        listing_details[listing_hash]["item_nameid"] = item_nameid
-        listing_details[listing_hash]["is_marketable"] = is_marketable
-        listing_details[listing_hash]["item_type_no"] = item_type_no
+        listing_details[listing_hash] = {
+            "item_nameid": item_nameid,
+            "is_marketable": is_marketable,
+            "item_type_no": item_type_no,
+        }
 
     status_code = resp_data.status_code
     return listing_details, status_code
