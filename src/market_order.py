@@ -371,7 +371,7 @@ def main() -> bool:
 
     # Download based on a listing hash
 
-    bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
+    _bid_price, _ask_price, _bid_volume, _ask_volume = download_market_order_data(
         listing_hash,
         verbose=True,
     )
@@ -401,7 +401,7 @@ def main() -> bool:
         "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
     ]
     for listing_hash_to_test in listing_hashes:
-        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
+        _bid_price, _ask_price, _bid_volume, _ask_volume = download_market_order_data(
             listing_hash_to_test,
             verbose=True,
         )
