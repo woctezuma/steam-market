@@ -78,10 +78,9 @@ def get_search_parameters(
     params["count"] = str(delta_index)
 
     if tag_item_class_no == get_tag_item_class_no_for_trading_cards():
-        if is_foil_trading_card:
-            params["category_753_cardborder[]"] = "tag_cardborder_1"
-        else:
-            params["category_753_cardborder[]"] = "tag_cardborder_0"
+        params["category_753_cardborder[]"] = (
+            "tag_cardborder_1" if is_foil_trading_card else "tag_cardborder_0"
+        )
 
     return params
 

@@ -25,20 +25,11 @@ def filter_out_badges_never_crafted(
 ) -> dict[str, dict]:
     # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
     # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
-
-    filtered_badge_data = {}
-
-    for app_id in aggregated_badge_data:
-        individual_badge_data = aggregated_badge_data[app_id]
-
-        booster_pack_is_tracked = (
-            determine_whether_booster_pack_was_crafted_at_least_once(
-                individual_badge_data,
-            )
-        )
-
-        if booster_pack_is_tracked:
-            filtered_badge_data[app_id] = individual_badge_data
+    filtered_badge_data = {
+        app_id: data
+        for app_id, data in aggregated_badge_data.items()
+        if determine_whether_booster_pack_was_crafted_at_least_once(data)
+    }
 
     if verbose:
         print(

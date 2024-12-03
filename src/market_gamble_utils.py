@@ -228,13 +228,11 @@ def get_market_orders(
 
     # Filter out listing hashes which have already been encountered at least once
 
-    first_encountered_filtered_badge_data = {}
-
-    for dummy_app_id in filtered_badge_data:
-        if filtered_badge_data[dummy_app_id]["listing_hash"] not in market_order_dict:
-            first_encountered_filtered_badge_data[dummy_app_id] = filtered_badge_data[
-                dummy_app_id
-            ]
+    first_encountered_filtered_badge_data = {
+        dummy_app_id: dummy_data
+        for dummy_app_id, dummy_data in filtered_badge_data.items()
+        if dummy_data["listing_hash"] not in market_order_dict
+    }
 
     # Retrieval of market orders (bid, ask)
 
