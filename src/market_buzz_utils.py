@@ -13,7 +13,7 @@ from src.utils import (
 
 def filter_listings(
     all_listings: dict[str, dict] | None = None,
-    min_sell_price: float = 30,  # in cents
+    min_sell_price: int = 30,  # in cents
     min_num_listings: int = 20,
     # to remove listings with very few sellers, who chose unrealistic sell prices
     verbose: bool = True,
