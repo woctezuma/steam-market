@@ -135,10 +135,10 @@ def main(
 
     market_order_dict = get_market_orders(
         filtered_badge_data,
-        retrieve_market_orders_online,
-        focus_on_listing_hashes_never_seen_before,
-        listing_details_output_file_name,
-        market_order_output_file_name,
+        retrieve_market_orders_online=retrieve_market_orders_online,
+        focus_on_listing_hashes_never_seen_before=focus_on_listing_hashes_never_seen_before,
+        listing_details_output_file_name=listing_details_output_file_name,
+        market_order_output_file_name=market_order_output_file_name,
         enforce_cooldown=enforce_cooldown,
         allow_to_skip_dummy_data=allow_to_skip_dummy_data,
         verbose=verbose,

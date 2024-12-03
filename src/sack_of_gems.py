@@ -39,7 +39,7 @@ def download_sack_of_gems_price(
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
             item_nameid,
-            verbose,
+            verbose=verbose,
         )
         listing_details[listing_hash]["bid"] = bid_price
         listing_details[listing_hash]["ask"] = ask_price
@@ -95,7 +95,7 @@ def get_gem_price(
 ) -> float:
     if enforced_sack_of_gems_price is None:
         sack_of_gems_price = load_sack_of_gems_price(
-            retrieve_gem_price_from_scratch,
+            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
             verbose=verbose,
         )
     else:
