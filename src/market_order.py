@@ -9,6 +9,7 @@ from typing import Final
 import requests
 from requests.exceptions import ConnectionError, ReadTimeout
 
+from src.api_utils import INTER_REQUEST_COOLDOWN_FIELD, get_rate_limits
 from src.cookie_utils import force_update_sessionid
 from src.creation_time_utils import get_current_time, to_timestamp
 from src.json_utils import load_json, save_json
@@ -17,10 +18,8 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.api_utils import get_rate_limits, INTER_REQUEST_COOLDOWN_FIELD
 from src.utils import (
     TIMEOUT_IN_SECONDS,
-    get_cushioned_cooldown_in_seconds,
     get_market_order_file_name,
 )
 
