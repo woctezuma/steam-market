@@ -70,11 +70,8 @@ def load_steam_inventory(
         profile_id = get_my_steam_profile_id()
 
     if update_steam_inventory:
-        steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
-    else:
-        steam_inventory = load_steam_inventory_from_disk(profile_id=profile_id)
-
-    return steam_inventory
+        return download_steam_inventory(profile_id, save_to_disk=True)
+    return load_steam_inventory_from_disk(profile_id)
 
 
 def download_steam_inventory(
