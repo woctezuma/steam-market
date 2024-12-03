@@ -206,17 +206,15 @@ def get_market_sell_parameters(
     price_in_cents: int,  # this is the money which you, as the seller, will receive
     session_id: str,
 ) -> dict[str, str]:
-    market_sell_parameters = {}
-
-    market_sell_parameters["sessionid"] = session_id
-    market_sell_parameters["appid"] = "753"
-    market_sell_parameters["contextid"] = "6"
-    market_sell_parameters["assetid"] = asset_id
     # To automatically determine asset ID, use retrieve_asset_id().
-    market_sell_parameters["amount"] = "1"
-    market_sell_parameters["price"] = str(price_in_cents)
-
-    return market_sell_parameters
+    return {
+        "sessionid": session_id,
+        "appid": "753",
+        "contextid": "6",
+        "assetid": asset_id,
+        "amount": "1",
+        "price": str(price_in_cents),
+    }
 
 
 def get_request_headers() -> dict[str, str]:

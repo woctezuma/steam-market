@@ -126,11 +126,11 @@ def get_steam_goo_value_parameters(
 
     border_color = get_border_color_no_for_trading_cards(is_foil=is_foil)
 
-    params: dict[str, str | int] = {}
-
-    params["appid"] = app_id
-    params["item_type"] = item_type
-    params["border_color"] = border_color
+    params: dict[str, str | int] = {
+        "appid": app_id,
+        "item_type": item_type,
+        "border_color": border_color,
+    }
 
     return params
 
@@ -628,11 +628,12 @@ def determine_whether_an_arbitrage_might_exist_for_foil_cards(
         is_arbitrage = bool(profit_in_cents > 0)
 
         if is_arbitrage:
-            arbitrage = {}
-            arbitrage["profit"] = profit_in_cents / 100
-            arbitrage["ask"] = ask_in_cents / 100
-            arbitrage["goo_amount"] = goo_value_in_gems
-            arbitrage["goo_value"] = goo_value_in_cents / 100
+            arbitrage = {
+                "profit": profit_in_cents / 100,
+                "ask": ask_in_cents / 100,
+                "goo_amount": goo_value_in_gems,
+                "goo_value": goo_value_in_cents / 100,
+            }
 
             arbitrages[listing_hash] = arbitrage
 
