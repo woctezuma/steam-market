@@ -1,5 +1,7 @@
 # Objective: detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders
 
+from typing import Final
+
 from src.market_arbitrage_utils import (
     filter_out_badges_with_low_sell_price,
     find_badge_arbitrages,
@@ -17,17 +19,22 @@ from src.market_order import load_market_order_data
 from src.market_search import load_all_listings, update_all_listings
 from src.market_utils import filter_out_dubious_listing_hashes
 
+DEFAULT_MIN_SELL_PRICE: Final[int] = 30
+DEFAULT_MIN_NUM_LISTINGS: Final[int] = 3
+DEFAULT_NUM_PACKS_TO_DISPLAY: Final[int] = 10
+
 
 def main(
+    *,
     retrieve_listings_from_scratch: bool = False,
     retrieve_market_orders_online: bool = False,
     force_update_from_steam_card_exchange: bool = False,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     use_a_constant_price_threshold: bool = False,
-    min_sell_price: float = 30,
-    min_num_listings: int = 3,
-    num_packs_to_display: int = 10,
+    min_sell_price: int = DEFAULT_MIN_SELL_PRICE,
+    min_num_listings: int = DEFAULT_MIN_NUM_LISTINGS,
+    num_packs_to_display: int = DEFAULT_NUM_PACKS_TO_DISPLAY,
     verbose: bool = False,
 ) -> None:
     # Load list of all listing hashes
@@ -94,7 +101,7 @@ def main(
 
     (
         marketable_market_order_dict,
-        unknown_market_order_dict,
+        _unknown_market_order_dict,
     ) = filter_out_unmarketable_packs(market_order_dict)
 
     # Sort by bid value

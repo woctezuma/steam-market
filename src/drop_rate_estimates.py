@@ -29,7 +29,10 @@ def clamp_proportion(input_proportion: float) -> float:
     return min(1.0, max(0.0, input_proportion))
 
 
-def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -> dict:
+def get_drop_rate_estimates_based_on_item_rarity_pattern(
+    *,
+    verbose: bool = True,
+) -> dict:
     # Drop-rate estimates conditionally on the item rarity pattern C/UC/R (the numbers of possible items of each rarity)
 
     drop_rate_estimates: dict = {}
@@ -162,7 +165,7 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(verbose: bool = True) -
     return drop_rate_estimates
 
 
-def get_drop_rate_estimates(verbose: bool = True) -> dict:
+def get_drop_rate_estimates(*, verbose: bool = True) -> dict:
     # Drop-rate estimates conditionally on the category (profile backgrounds, emoticons)
 
     drop_rate_estimates: dict = {}

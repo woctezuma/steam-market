@@ -64,21 +64,20 @@ def load_steam_inventory_from_disk(profile_id: str | None = None) -> dict | None
 
 def load_steam_inventory(
     profile_id: str | None = None,
+    *,
     update_steam_inventory: bool = False,
 ) -> dict | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
     if update_steam_inventory:
-        steam_inventory = download_steam_inventory(profile_id, save_to_disk=True)
-    else:
-        steam_inventory = load_steam_inventory_from_disk(profile_id=profile_id)
-
-    return steam_inventory
+        return download_steam_inventory(profile_id, save_to_disk=True)
+    return load_steam_inventory_from_disk(profile_id)
 
 
 def download_steam_inventory(
     profile_id: str | None = None,
+    *,
     save_to_disk: bool = True,
 ) -> dict | None:
     if profile_id is None:
@@ -131,6 +130,7 @@ def get_steam_booster_pack_creation_url() -> str:
 def get_booster_pack_creation_parameters(
     app_id: str,
     session_id: str,
+    *,
     is_marketable: bool = True,
 ) -> dict[str, str]:
     booster_pack_creation_parameters = {}
@@ -147,6 +147,7 @@ def get_booster_pack_creation_parameters(
 
 def create_booster_pack(
     app_id: str,
+    *,
     is_marketable: bool = True,
     verbose: bool = True,
 ) -> dict | None:
@@ -209,17 +210,15 @@ def get_market_sell_parameters(
     price_in_cents: int,  # this is the money which you, as the seller, will receive
     session_id: str,
 ) -> dict[str, str]:
-    market_sell_parameters = {}
-
-    market_sell_parameters["sessionid"] = session_id
-    market_sell_parameters["appid"] = "753"
-    market_sell_parameters["contextid"] = "6"
-    market_sell_parameters["assetid"] = asset_id
     # To automatically determine asset ID, use retrieve_asset_id().
-    market_sell_parameters["amount"] = "1"
-    market_sell_parameters["price"] = str(price_in_cents)
-
-    return market_sell_parameters
+    return {
+        "sessionid": session_id,
+        "appid": "753",
+        "contextid": "6",
+        "assetid": asset_id,
+        "amount": "1",
+        "price": str(price_in_cents),
+    }
 
 
 def get_request_headers() -> dict[str, str]:
@@ -238,6 +237,7 @@ def get_request_headers() -> dict[str, str]:
 def sell_booster_pack(
     asset_id: str,
     price_in_cents: int,  # this is the money which you, as the seller, will receive
+    *,
     verbose: bool = True,
 ) -> dict | None:
     cookie = get_cookie_dict()
@@ -300,6 +300,7 @@ def sell_booster_pack(
 def retrieve_asset_id(
     listing_hash: str,
     steam_inventory: dict | None = None,
+    *,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
     verbose: bool = True,
@@ -377,6 +378,7 @@ def create_booster_packs_for_batch(listing_hashes: list[str]) -> dict[str, dict 
 
 def sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict[str, int],
+    *,
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -406,6 +408,7 @@ def sell_booster_packs_for_batch(
 
 def create_then_sell_booster_packs_for_batch(
     price_dict_for_listing_hashes: dict[str, int],
+    *,
     update_steam_inventory: bool = True,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,
@@ -428,6 +431,7 @@ def create_then_sell_booster_packs_for_batch(
 
 def update_and_save_next_creation_times(
     creation_results: dict[str, dict | None],
+    *,
     verbose: bool = True,
     next_creation_time_file_name: str | None = None,
 ) -> dict[str, str]:
@@ -444,9 +448,7 @@ def update_and_save_next_creation_times(
     save_to_disk = False
     is_first_displayed_line = True
 
-    for listing_hash in creation_results:
-        result = creation_results[listing_hash]
-
+    for listing_hash, result in creation_results.items():
         if result is not None:
             app_id = convert_listing_hash_to_app_id(listing_hash)
             next_creation_times[app_id] = formatted_next_creation_time
@@ -476,7 +478,7 @@ def main() -> None:
 
     price_dict_for_listing_hashes = {listing_hash: price_in_cents}
 
-    creation_results, sale_results = create_then_sell_booster_packs_for_batch(
+    _creation_results, _sale_results = create_then_sell_booster_packs_for_batch(
         price_dict_for_listing_hashes,
     )
 

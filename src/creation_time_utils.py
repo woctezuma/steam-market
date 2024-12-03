@@ -20,6 +20,7 @@ def load_next_creation_time_data(
 
 def fill_in_badges_with_next_creation_times_loaded_from_disk(
     aggregated_badge_data: dict[str, dict],
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     next_creation_times_loaded_from_disk = load_next_creation_time_data()
@@ -63,7 +64,7 @@ def to_timestamp(date: datetime.datetime) -> int:
     return int(date.timestamp())
 
 
-def get_creation_time_format(prepend_year: bool = False) -> str:
+def get_creation_time_format(*, prepend_year: bool = False) -> str:
     # Reference: https://docs.python.org/3/library/time.html#time.strftime
 
     # The format used in: "14 Sep @ 10:48pm"
@@ -98,6 +99,7 @@ def prepend_year_to_time_as_str(
 
 def get_time_struct_from_str(
     formatted_time_as_str: str,
+    *,
     use_current_year: bool = False,
 ) -> datetime.datetime:
     if use_current_year:

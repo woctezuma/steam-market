@@ -6,6 +6,7 @@ from http import HTTPStatus
 import requests
 from bs4 import BeautifulSoup
 
+from src.api_utils import get_rate_limits
 from src.json_utils import load_json, save_json
 from src.market_search import load_all_listings
 from src.personal_info import (
@@ -14,7 +15,6 @@ from src.personal_info import (
 )
 from src.utils import (
     TIMEOUT_IN_SECONDS,
-    get_cushioned_cooldown_in_seconds,
     get_listing_details_output_file_name,
 )
 
@@ -22,6 +22,7 @@ from src.utils import (
 def get_steam_market_listing_url(
     app_id: str | None = None,
     listing_hash: str | None = None,
+    *,
     render_as_json: bool = True,
     replace_spaces: bool = False,
     replace_parenthesis: bool = False,
@@ -58,26 +59,6 @@ def get_steam_market_listing_url(
 
 def get_listing_parameters() -> dict[str, str]:
     return {"currency": "3"}
-
-
-def get_steam_api_rate_limits_for_market_listing(
-    has_secured_cookie: bool = False,
-) -> dict[str, int]:
-    # Objective: return the rate limits of Steam API for the market.
-
-    if has_secured_cookie:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=3),
-        }
-
-    else:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
-        }
-
-    return rate_limits
 
 
 def figure_out_relevant_id(
@@ -265,6 +246,7 @@ def parse_item_name_id(html_doc: str) -> tuple[int | None, bool | None, int | No
 def get_listing_details(
     listing_hash: str,
     cookie: dict[str, str] | None = None,
+    *,
     render_as_json: bool = False,
 ) -> tuple[dict[str, dict], int]:
     listing_details: dict[str, dict] = {}
@@ -308,10 +290,11 @@ def get_listing_details(
         if item_type_no is None:
             print(f"Item type not found for {listing_hash}")
 
-        listing_details[listing_hash] = {}
-        listing_details[listing_hash]["item_nameid"] = item_nameid
-        listing_details[listing_hash]["is_marketable"] = is_marketable
-        listing_details[listing_hash]["item_type_no"] = item_type_no
+        listing_details[listing_hash] = {
+            "item_nameid": item_nameid,
+            "is_marketable": is_marketable,
+            "item_type_no": item_type_no,
+        }
 
     status_code = resp_data.status_code
     return listing_details, status_code
@@ -320,6 +303,7 @@ def get_listing_details(
 def get_listing_details_batch(
     listing_hashes: list[str] | dict[str, dict],
     all_listing_details: dict[str, dict] | None = None,
+    *,
     save_to_disk: bool = True,
     listing_details_output_file_name: str | None = None,
 ) -> dict[str, dict]:
@@ -329,7 +313,10 @@ def get_listing_details_batch(
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_listing(has_secured_cookie)
+    rate_limits = get_rate_limits(
+        "market_listing",
+        has_secured_cookie=has_secured_cookie,
+    )
 
     if all_listing_details is None:
         all_listing_details = {}
@@ -339,7 +326,7 @@ def get_listing_details_batch(
     query_count = 0
 
     for count, listing_hash in enumerate(listing_hashes):
-        if count + 1 % 100 == 0:
+        if (count + 1) % 100 == 0:
             print(f"[{count + 1}/{num_listings}]")
 
         listing_details, status_code = get_listing_details(

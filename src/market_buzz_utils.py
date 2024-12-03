@@ -13,9 +13,10 @@ from src.utils import (
 
 def filter_listings(
     all_listings: dict[str, dict] | None = None,
-    min_sell_price: float = 30,  # in cents
+    min_sell_price: int = 30,  # in cents
     min_num_listings: int = 20,
     # to remove listings with very few sellers, who chose unrealistic sell prices
+    *,
     verbose: bool = True,
 ) -> list[str]:
     if all_listings is None:
@@ -69,17 +70,17 @@ def filter_out_unmarketable_packs(
     marketable_market_order_dict = {}
     unknown_market_order_dict = {}
 
-    for listing_hash in market_order_dict:
+    for listing_hash, current_data in market_order_dict.items():
         try:
-            is_marketable = market_order_dict[listing_hash]["is_marketable"]
+            is_marketable = current_data["is_marketable"]
         except KeyError:
             print(f"Marketable status not found for {listing_hash}")
-            unknown_market_order_dict[listing_hash] = market_order_dict[listing_hash]
+            unknown_market_order_dict[listing_hash] = current_data
 
             is_marketable = False  # avoid taking any risk: ASSUME the booster pack is NOT marketable
 
         if is_marketable:
-            marketable_market_order_dict[listing_hash] = market_order_dict[listing_hash]
+            marketable_market_order_dict[listing_hash] = current_data
 
     return marketable_market_order_dict, unknown_market_order_dict
 
@@ -91,7 +92,7 @@ def sort_according_to_buzz(
     if marketable_market_order_dict is None:
         (
             marketable_market_order_dict,
-            unknown_market_order_dict,
+            _unknown_market_order_dict,
         ) = filter_out_unmarketable_packs(market_order_dict)
 
     return sorted(
@@ -157,6 +158,7 @@ def print_packs_with_high_buzz(
 def fill_in_badge_data_with_data_from_steam_card_exchange(
     all_listings: dict[str, dict],
     aggregated_badge_data: dict[str, dict] | None = None,
+    *,
     force_update_from_steam_card_exchange: bool = False,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,

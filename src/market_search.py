@@ -7,14 +7,15 @@ from pathlib import Path
 import requests
 from requests.exceptions import ConnectionError
 
+from src.api_utils import get_rate_limits
 from src.json_utils import load_json, save_json
 from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
+from src.tag_utils import get_tag_drop_rate_str
 from src.utils import (
     TIMEOUT_IN_SECONDS,
-    get_cushioned_cooldown_in_seconds,
     get_listing_output_file_name,
 )
 
@@ -39,29 +40,13 @@ def get_tag_item_class_no_for_booster_packs() -> int:
     return 5
 
 
-def get_tag_drop_rate_str(rarity: str | None = None) -> str:
-    if rarity is None:
-        rarity = "common"
-
-    if rarity == "extraordinary":
-        tag_drop_rate_no = 3
-    elif rarity == "rare":
-        tag_drop_rate_no = 2
-    elif rarity == "uncommon":
-        tag_drop_rate_no = 1
-    else:
-        # Rarity: Common
-        tag_drop_rate_no = 0
-
-    return f"tag_droprate_{tag_drop_rate_no}"
-
-
 def get_search_parameters(
     start_index: int = 0,
     delta_index: int = 100,
     tag_item_class_no: int | None = None,
     tag_drop_rate_str: str | None = None,
     rarity: str | None = None,
+    *,
     is_foil_trading_card: bool = True,
 ) -> dict[str, str]:
     if tag_drop_rate_str is None:
@@ -81,45 +66,24 @@ def get_search_parameters(
     column_to_sort_by = "name"
     sort_direction = "asc"
 
-    params = {}
-
-    params["norender"] = "1"
-    params["category_753_Game[]"] = "any"
-    params["category_753_droprate[]"] = tag_drop_rate_str
-    params["category_753_item_class[]"] = f"tag_item_class_{tag_item_class_no}"
-    params["appid"] = "753"
-    params["sort_column"] = column_to_sort_by
-    params["sort_dir"] = sort_direction
-    params["start"] = str(start_index)
-    params["count"] = str(delta_index)
+    params = {
+        "norender": "1",
+        "category_753_Game[]": "any",
+        "category_753_droprate[]": tag_drop_rate_str,
+        "category_753_item_class[]": f"tag_item_class_{tag_item_class_no}",
+        "appid": "753",
+        "sort_column": column_to_sort_by,
+        "sort_dir": sort_direction,
+        "start": str(start_index),
+        "count": str(delta_index),
+    }
 
     if tag_item_class_no == get_tag_item_class_no_for_trading_cards():
-        if is_foil_trading_card:
-            params["category_753_cardborder[]"] = "tag_cardborder_1"
-        else:
-            params["category_753_cardborder[]"] = "tag_cardborder_0"
+        params["category_753_cardborder[]"] = (
+            "tag_cardborder_1" if is_foil_trading_card else "tag_cardborder_0"
+        )
 
     return params
-
-
-def get_steam_api_rate_limits_for_market_search(
-    has_secured_cookie: bool = False,
-) -> dict[str, int]:
-    # Objective: return the rate limits of Steam API for the market.
-
-    if has_secured_cookie:
-        rate_limits = {
-            "max_num_queries": 50,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=1),
-        }
-
-    else:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
-        }
-
-    return rate_limits
 
 
 def get_all_listings(
@@ -137,7 +101,10 @@ def get_all_listings(
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
+    rate_limits = get_rate_limits(
+        "market_search",
+        has_secured_cookie=has_secured_cookie,
+    )
 
     if all_listings is None:
         all_listings = {}
@@ -211,11 +178,11 @@ def get_all_listings(
             listings: dict[str, dict] = {}
             for listing in result["results"]:
                 listing_hash = listing["hash_name"]
-
-                listings[listing_hash] = {}
-                listings[listing_hash]["sell_listings"] = listing["sell_listings"]
-                listings[listing_hash]["sell_price"] = listing["sell_price"]
-                listings[listing_hash]["sell_price_text"] = listing["sell_price_text"]
+                listings[listing_hash] = {
+                    "sell_listings": listing["sell_listings"],
+                    "sell_price": listing["sell_price"],
+                    "sell_price_text": listing["sell_price_text"],
+                }
 
         else:
             status_code = resp_data.status_code if resp_data else None

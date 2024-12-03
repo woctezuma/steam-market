@@ -4,10 +4,12 @@ import time
 from contextlib import suppress
 from datetime import timedelta
 from http import HTTPStatus
+from typing import Final
 
 import requests
 from requests.exceptions import ConnectionError, ReadTimeout
 
+from src.api_utils import INTER_REQUEST_COOLDOWN_FIELD, get_rate_limits
 from src.cookie_utils import force_update_sessionid
 from src.creation_time_utils import get_current_time, to_timestamp
 from src.json_utils import load_json, save_json
@@ -18,14 +20,13 @@ from src.personal_info import (
 )
 from src.utils import (
     TIMEOUT_IN_SECONDS,
-    get_cushioned_cooldown_in_seconds,
     get_market_order_file_name,
 )
 
-INTER_REQUEST_COOLDOWN_FIELD = "cooldown_between_each_request"
+type MarketOrderData = dict[str, float | int | bool]
 
-UPDATE_COOLDOWN_FIELD = "update_timestamp"
-UPDATE_COOLDOWN_IN_HOURS = 72
+UPDATE_COOLDOWN_FIELD: Final[str] = "update_timestamp"
+UPDATE_COOLDOWN_IN_HOURS: Final[int] = 72
 
 
 def get_steam_market_order_url() -> str:
@@ -33,37 +34,13 @@ def get_steam_market_order_url() -> str:
 
 
 def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
-    params = {}
-
-    params["country"] = "FR"
-    params["language"] = "english"
-    params["currency"] = "3"
-    params["item_nameid"] = item_nameid
-    params["two_factor"] = "0"
-
-    return params
-
-
-def get_steam_api_rate_limits_for_market_order(
-    has_secured_cookie: bool = False,
-) -> dict[str, int]:
-    # Objective: return the rate limits of Steam API for the market.
-
-    if has_secured_cookie:
-        rate_limits = {
-            "max_num_queries": 50,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=1),
-        }
-
-    else:
-        rate_limits = {
-            "max_num_queries": 25,
-            "cooldown": get_cushioned_cooldown_in_seconds(num_minutes=5),
-        }
-
-    rate_limits[INTER_REQUEST_COOLDOWN_FIELD] = 0
-
-    return rate_limits
+    return {
+        "country": "FR",
+        "language": "english",
+        "currency": "3",
+        "item_nameid": item_nameid,
+        "two_factor": "0",
+    }
 
 
 def get_market_order_headers() -> dict[str, str]:
@@ -86,6 +63,7 @@ def get_market_order_headers() -> dict[str, str]:
 def download_market_order_data(
     listing_hash: str,
     item_nameid: str | None = None,
+    *,
     verbose: bool = False,
     listing_details_output_file_name: str | None = None,
 ) -> tuple[float, float, int, int]:
@@ -194,7 +172,7 @@ def download_market_order_data(
 
 
 def is_dummy_market_order_data(
-    market_order_data: dict[str, float | int | bool],
+    market_order_data: MarketOrderData,
 ) -> bool:
     bid_price = market_order_data["bid"]
     ask_price = market_order_data["ask"]
@@ -205,7 +183,7 @@ def is_dummy_market_order_data(
 
 
 def has_a_recent_timestamp(
-    market_order_data: dict[str, float | int | bool],
+    market_order_data: MarketOrderData,
     threshold_timestamp: int,
 ) -> bool:
     last_update_timestamp = market_order_data[UPDATE_COOLDOWN_FIELD]
@@ -216,6 +194,7 @@ def has_a_recent_timestamp(
 def download_market_order_data_batch(
     badge_data: dict[str, dict],
     market_order_dict: dict[str, dict] | None = None,
+    *,
     verbose: bool = False,
     save_to_disk: bool = True,
     market_order_output_file_name: str | None = None,
@@ -241,7 +220,7 @@ def download_market_order_data_batch(
     cookie = force_update_sessionid(cookie)
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_order(has_secured_cookie)
+    rate_limits = get_rate_limits("market_order", has_secured_cookie=has_secured_cookie)
 
     if market_order_dict is None:
         market_order_dict = {}
@@ -316,6 +295,7 @@ def download_market_order_data_batch(
 
 def load_market_order_data(
     badge_data: dict[str, dict],
+    *,
     trim_output: bool = False,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
@@ -391,7 +371,7 @@ def main() -> bool:
 
     # Download based on a listing hash
 
-    bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
+    _bid_price, _ask_price, _bid_volume, _ask_volume = download_market_order_data(
         listing_hash,
         verbose=True,
     )
@@ -400,8 +380,7 @@ def main() -> bool:
 
     app_id = listing_hash.split("-", maxsplit=1)[0]
 
-    badge_data: dict[str, dict] = {}
-    badge_data[app_id] = {}
+    badge_data: dict[str, dict] = {app_id: {}}
     badge_data[app_id]["listing_hash"] = listing_hash
 
     download_market_order_data_batch(
@@ -421,7 +400,7 @@ def main() -> bool:
         "505730-Holy Potatoes! We’re in Space%3F! Booster Pack",
     ]
     for listing_hash_to_test in listing_hashes:
-        bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
+        _bid_price, _ask_price, _bid_volume, _ask_volume = download_market_order_data(
             listing_hash_to_test,
             verbose=True,
         )

@@ -16,35 +16,27 @@ from src.utils import (
 
 
 def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -> bool:
-    next_creation_time = badge_data["next_creation_time"]
-
-    return bool(next_creation_time is not None)
+    return badge_data["next_creation_time"] is not None
 
 
 def filter_out_badges_never_crafted(
     aggregated_badge_data: dict[str, dict],
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     # Filter out games for which a booster pack was never crafted (according to 'data/next_creation_times.json'),
     # thus focus on games which are tracked more closely, because they are likely to show a market arbitrage (again).
-
-    filtered_badge_data = {}
-
-    for app_id in aggregated_badge_data:
-        individual_badge_data = aggregated_badge_data[app_id]
-
-        booster_pack_is_tracked = (
-            determine_whether_booster_pack_was_crafted_at_least_once(
-                individual_badge_data,
-            )
-        )
-
-        if booster_pack_is_tracked:
-            filtered_badge_data[app_id] = individual_badge_data
+    filtered_badge_data = {
+        app_id: data
+        for app_id, data in aggregated_badge_data.items()
+        if determine_whether_booster_pack_was_crafted_at_least_once(data)
+    }
 
     if verbose:
         print(
-            f"There are {len(filtered_badge_data)} booster packs which are tracked, as they were crafted at least once. ({len(aggregated_badge_data) - len(filtered_badge_data)} omitted)",
+            f"There are {len(filtered_badge_data)} booster packs which are tracked, "
+            f"as they were crafted at least once. "
+            f"({len(aggregated_badge_data) - len(filtered_badge_data)} omitted)",
         )
 
     return filtered_badge_data
@@ -52,6 +44,7 @@ def filter_out_badges_never_crafted(
 
 def filter_out_badges_recently_crafted(
     aggregated_badge_data: dict[str, dict],
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     # Filter out games for which a booster pack was crafted less than 24 hours ago,
@@ -61,9 +54,7 @@ def filter_out_badges_recently_crafted(
 
     current_time = get_current_time()
 
-    for app_id in aggregated_badge_data:
-        individual_badge_data = aggregated_badge_data[app_id]
-
+    for app_id, individual_badge_data in aggregated_badge_data.items():
         booster_pack_can_be_crafted = determine_whether_a_booster_pack_can_be_crafted(
             individual_badge_data,
             current_time,
@@ -74,7 +65,8 @@ def filter_out_badges_recently_crafted(
 
     if verbose:
         print(
-            f"There are {len(filtered_badge_data)} booster packs which can be immediately crafted. ({len(aggregated_badge_data) - len(filtered_badge_data)} excluded because of cooldown)",
+            f"There are {len(filtered_badge_data)} booster packs which can be immediately crafted. "
+            f"({len(aggregated_badge_data) - len(filtered_badge_data)} excluded because of cooldown)",
         )
 
     return filtered_badge_data
@@ -124,6 +116,7 @@ def filter_out_badges_with_low_sell_price(
     aggregated_badge_data: dict[str, dict],
     user_chosen_price_threshold: float | None = None,
     category_name: str | None = None,
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     # Filter out games for which the sell price (ask) is lower than the gem price,
@@ -143,9 +136,7 @@ def filter_out_badges_with_low_sell_price(
 
     unknown_price_counter = 0
 
-    for app_id in aggregated_badge_data:
-        individual_badge_data = aggregated_badge_data[app_id]
-
+    for app_id, individual_badge_data in aggregated_badge_data.items():
         sell_price_is_unknown = determine_whether_sell_price_is_unknown(
             individual_badge_data,
         )
@@ -172,6 +163,7 @@ def filter_out_badges_with_low_sell_price(
 def find_badge_arbitrages(
     badge_data: dict,
     market_order_dict: dict[str, dict] | None = None,
+    *,
     verbose: bool = False,
 ) -> dict[str, dict]:
     if market_order_dict is None:
@@ -183,9 +175,7 @@ def find_badge_arbitrages(
 
     badge_arbitrages: dict[str, dict] = {}
 
-    for app_id in badge_data:
-        individual_badge_data = badge_data[app_id]
-
+    for app_id, individual_badge_data in badge_data.items():
         gem_price_including_fee = individual_badge_data["gem_price"]
 
         listing_hash = individual_badge_data["listing_hash"]
@@ -264,6 +254,7 @@ def find_badge_arbitrages(
 
 def print_arbitrages(
     badge_arbitrages: dict[str, dict],
+    *,
     use_numbered_bullet_points: bool = False,
     use_hyperlink: bool = False,
 ) -> None:
@@ -316,6 +307,7 @@ def print_arbitrages(
 def convert_arbitrages_for_batch_create_then_sell(
     badge_arbitrages: dict[str, dict],
     profit_threshold: float = 0.01,  # profit in euros
+    *,
     verbose: bool = True,
 ) -> dict[str, int]:
     # Code inspired from print_arbitrages()
@@ -348,6 +340,7 @@ def convert_arbitrages_for_batch_create_then_sell(
 def update_badge_arbitrages_with_latest_market_order_data(
     badge_data: dict[str, dict],
     arbitrage_data: dict[str, dict],
+    *,
     retrieve_market_orders_online: bool = True,
     verbose: bool = False,
 ) -> dict[str, dict]:
@@ -356,9 +349,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
     # Based on arbitrage_data, select the badge_data for which we want to download (again) the latest market orders:
     selected_badge_data = {}
 
-    for listing_hash in arbitrage_data:
-        arbitrage = arbitrage_data[listing_hash]
-
+    for listing_hash, arbitrage in arbitrage_data.items():
         if arbitrage["is_marketable"] and arbitrage["profit"] > 0:
             app_id = convert_listing_hash_to_app_id(listing_hash)
             selected_badge_data[app_id] = badge_data[app_id]
@@ -377,6 +368,7 @@ def update_badge_arbitrages_with_latest_market_order_data(
 
 
 def get_filtered_badge_data(
+    *,
     retrieve_listings_from_scratch: bool = True,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
@@ -385,7 +377,7 @@ def get_filtered_badge_data(
     from_javascript: bool = False,
 ) -> dict[str, dict]:
     aggregated_badge_data = load_aggregated_badge_data(
-        retrieve_listings_from_scratch,
+        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
         enforced_sack_of_gems_price=enforced_sack_of_gems_price,
         minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
         from_javascript=from_javascript,

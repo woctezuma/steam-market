@@ -33,6 +33,7 @@ from src.utils import (
 
 
 def apply_workflow_for_foil_cards(
+    *,
     retrieve_listings_from_scratch: bool = False,
     price_threshold_in_cents_for_a_foil_card: float | None = None,
     retrieve_gem_price_from_scratch: bool = False,

@@ -77,6 +77,7 @@ def filter_app_ids_with_potential_profit(
     sell_prices_without_fee: dict[str, float],
     gem_amounts_for_a_booster_pack: dict[str, int],
     gem_sack_price_in_euros: float | None = None,
+    *,
     verbose: bool = True,
 ) -> list[str]:
     # Filter out appIDs for which the sell price (without fee) is lower than the cost to craft a Booster Pack.
@@ -117,6 +118,7 @@ def filter_app_ids_with_potential_profit(
 def remove_app_ids_previously_processed(
     filtered_app_ids: list[str],
     app_ids_previously_processed: list[str] | None = None,
+    *,
     verbose: bool = True,
 ) -> list[str]:
     # Manually remove previously processed appIDs from the list of returned appIDs of interest.

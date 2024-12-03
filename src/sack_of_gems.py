@@ -19,6 +19,7 @@ def get_num_gems_per_sack_of_gems() -> int:
 
 def download_sack_of_gems_price(
     sack_of_gems_listing_file_name: str | None = None,
+    *,
     verbose: bool = True,
 ) -> float:
     if sack_of_gems_listing_file_name is None:
@@ -38,7 +39,7 @@ def download_sack_of_gems_price(
         bid_price, ask_price, bid_volume, ask_volume = download_market_order_data(
             listing_hash,
             item_nameid,
-            verbose,
+            verbose=verbose,
         )
         listing_details[listing_hash]["bid"] = bid_price
         listing_details[listing_hash]["ask"] = ask_price
@@ -55,6 +56,7 @@ def download_sack_of_gems_price(
 
 
 def load_sack_of_gems_price(
+    *,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
     sack_of_gems_listing_file_name: str | None = None,
@@ -87,12 +89,13 @@ def load_sack_of_gems_price(
 def get_gem_price(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
+    *,
     retrieve_gem_price_from_scratch: bool = False,
     verbose: bool = True,
 ) -> float:
     if enforced_sack_of_gems_price is None:
         sack_of_gems_price = load_sack_of_gems_price(
-            retrieve_gem_price_from_scratch,
+            retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
             verbose=verbose,
         )
     else:
@@ -115,6 +118,7 @@ def get_gem_price(
 def print_gem_price_reminder(
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
+    *,
     retrieve_gem_price_from_scratch: bool | None = None,
 ) -> None:
     if retrieve_gem_price_from_scratch is None:

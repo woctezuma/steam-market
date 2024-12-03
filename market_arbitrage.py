@@ -1,6 +1,8 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
 
+from typing import Annotated
+
 from src.inventory_utils import create_then_sell_booster_packs_for_batch
 from src.market_arbitrage_utils import (
     convert_arbitrages_for_batch_create_then_sell,
@@ -15,12 +17,13 @@ from src.sack_of_gems import print_gem_price_reminder
 
 
 def apply_workflow(
+    *,  # enforce keyword arguments
     retrieve_listings_from_scratch: bool = True,
     retrieve_market_orders_online: bool = True,
     enforced_sack_of_gems_price: float | None = None,
     minimum_allowed_sack_of_gems_price: float | None = None,
     automatically_create_then_sell_booster_packs: bool = False,
-    profit_threshold: float = 0.01,  # profit in euros
+    profit_threshold: Annotated[float, "profit in euros"] = 0.01,
     quick_check_with_tracked_booster_packs: bool = False,
     enforce_update_of_marketability_status: bool = False,
     from_javascript: bool = False,
@@ -34,7 +37,9 @@ def apply_workflow(
         retrieve_market_orders_online = True
 
         print(
-            f"Overwriting two arguments:\n\ti) retrieve listings: {retrieve_listings_from_scratch},\n\tii) retrieve market orders: {retrieve_market_orders_online}.",
+            f"Overwriting two arguments:\n"
+            f"\ti) retrieve listings: {retrieve_listings_from_scratch},\n"
+            f"\tii) retrieve market orders: {retrieve_market_orders_online}.",
         )
 
     filtered_badge_data = get_filtered_badge_data(
@@ -107,7 +112,7 @@ def apply_workflow(
             profit_threshold=profit_threshold,
         )
 
-        creation_results, sale_results = create_then_sell_booster_packs_for_batch(
+        _creation_results, _sale_results = create_then_sell_booster_packs_for_batch(
             price_dict_for_listing_hashes,
             focus_on_marketable_items=True,
             profile_id=profile_id,

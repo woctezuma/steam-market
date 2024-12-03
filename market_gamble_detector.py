@@ -18,6 +18,7 @@ from src.market_buzz_utils import (
     sort_according_to_buzz,
 )
 from src.market_gamble_utils import (
+    DropRateEstimates,
     count_listing_hashes_per_app_id,
     enumerate_item_rarity_patterns,
     filter_out_candidates_whose_ask_price_is_below_threshold,
@@ -39,14 +40,14 @@ from src.utils import (
 
 
 def main(
+    *,
     look_for_profile_backgrounds: bool = True,  # if True, profile backgrounds, otherwise, emoticons.
     retrieve_listings_from_scratch: bool = False,
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
     retrieve_market_orders_online: bool = True,
     focus_on_listing_hashes_never_seen_before: bool = True,
     price_threshold_in_cents: float | None = None,
-    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
-    | None = None,
+    drop_rate_estimates_for_common_rarity: DropRateEstimates | None = None,
     num_packs_to_display: int = 10,
     enforce_cooldown: bool = True,
     allow_to_skip_dummy_data: bool = False,
@@ -134,10 +135,10 @@ def main(
 
     market_order_dict = get_market_orders(
         filtered_badge_data,
-        retrieve_market_orders_online,
-        focus_on_listing_hashes_never_seen_before,
-        listing_details_output_file_name,
-        market_order_output_file_name,
+        retrieve_market_orders_online=retrieve_market_orders_online,
+        focus_on_listing_hashes_never_seen_before=focus_on_listing_hashes_never_seen_before,
+        listing_details_output_file_name=listing_details_output_file_name,
+        market_order_output_file_name=market_order_output_file_name,
         enforce_cooldown=enforce_cooldown,
         allow_to_skip_dummy_data=allow_to_skip_dummy_data,
         verbose=verbose,
@@ -147,7 +148,7 @@ def main(
 
     (
         marketable_market_order_dict,
-        unknown_market_order_dict,
+        _unknown_market_order_dict,
     ) = filter_out_unmarketable_packs(market_order_dict)
 
     # Sort by bid value

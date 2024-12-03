@@ -1,5 +1,6 @@
 import time
 
+from src.api_utils import get_rate_limits
 from src.drop_rate_estimates import (
     clamp_proportion,
     get_drop_rate_estimates_based_on_item_rarity_pattern,
@@ -12,7 +13,6 @@ from src.market_order import (
     load_market_order_data_from_disk,
 )
 from src.market_search import (
-    get_steam_api_rate_limits_for_market_search,
     get_tag_item_class_no_for_emoticons,
     get_tag_item_class_no_for_profile_backgrounds,
     get_tag_item_class_no_for_trading_cards,
@@ -28,6 +28,9 @@ from src.utils import (
     get_listing_output_file_name_for_foil_cards,
     get_listing_output_file_name_for_profile_backgrounds,
 )
+
+type ItemRarityPattern = tuple[int, int, int]
+type DropRateEstimates = dict[ItemRarityPattern, float]
 
 
 def update_all_listings_for_foil_cards(start_index: int = 0) -> None:
@@ -94,7 +97,10 @@ def update_all_listings_for_items_other_than_cards(
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
-    rate_limits = get_steam_api_rate_limits_for_market_search(has_secured_cookie)
+    rate_limits = get_rate_limits(
+        "market_search",
+        has_secured_cookie=has_secured_cookie,
+    )
 
     cooldown_duration = rate_limits["cooldown"]
     print(
@@ -112,6 +118,7 @@ def update_all_listings_for_items_other_than_cards(
 
 def get_listings(
     listing_output_file_name: str,
+    *,
     retrieve_listings_from_scratch: bool = False,
 ) -> dict[str, dict]:
     if retrieve_listings_from_scratch:
@@ -126,9 +133,9 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
     item_rarity_patterns_per_app_id: dict[str, dict],
     price_threshold_in_cents: float | None = None,
     category_name: str | None = None,
-    drop_rate_estimates_for_common_rarity: dict[tuple[int, int, int], float]
-    | None = None,
+    drop_rate_estimates_for_common_rarity: DropRateEstimates | None = None,
     gem_price_in_euros: float | None = None,
+    *,
     verbose: bool = True,
 ) -> dict[str, dict]:
     if gem_price_in_euros is None:
@@ -207,6 +214,7 @@ def filter_out_candidates_whose_ask_price_is_below_threshold(
 
 def get_market_orders(
     filtered_badge_data: dict[str, dict],
+    *,
     retrieve_market_orders_online: bool,
     focus_on_listing_hashes_never_seen_before: bool,
     listing_details_output_file_name: str,
@@ -223,13 +231,11 @@ def get_market_orders(
 
     # Filter out listing hashes which have already been encountered at least once
 
-    first_encountered_filtered_badge_data = {}
-
-    for dummy_app_id in filtered_badge_data:
-        if filtered_badge_data[dummy_app_id]["listing_hash"] not in market_order_dict:
-            first_encountered_filtered_badge_data[dummy_app_id] = filtered_badge_data[
-                dummy_app_id
-            ]
+    first_encountered_filtered_badge_data = {
+        dummy_app_id: dummy_data
+        for dummy_app_id, dummy_data in filtered_badge_data.items()
+        if dummy_data["listing_hash"] not in market_order_dict
+    }
 
     # Retrieval of market orders (bid, ask)
 
@@ -294,6 +300,7 @@ def count_listing_hashes_per_app_id(all_listings: dict[str, dict]) -> dict[str, 
 
 
 def get_listings_with_other_rarity_tags(
+    *,
     look_for_profile_backgrounds: bool,
     retrieve_listings_with_another_rarity_tag_from_scratch: bool = False,
 ) -> tuple[dict[str, dict], dict[str, dict]]:
