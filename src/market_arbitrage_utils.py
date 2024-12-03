@@ -44,7 +44,9 @@ def filter_out_badges_never_crafted(
 
     if verbose:
         print(
-            f"There are {len(filtered_badge_data)} booster packs which are tracked, as they were crafted at least once. ({len(aggregated_badge_data) - len(filtered_badge_data)} omitted)",
+            f"There are {len(filtered_badge_data)} booster packs which are tracked, "
+            f"as they were crafted at least once. "
+            f"({len(aggregated_badge_data) - len(filtered_badge_data)} omitted)",
         )
 
     return filtered_badge_data
@@ -72,7 +74,8 @@ def filter_out_badges_recently_crafted(
 
     if verbose:
         print(
-            f"There are {len(filtered_badge_data)} booster packs which can be immediately crafted. ({len(aggregated_badge_data) - len(filtered_badge_data)} excluded because of cooldown)",
+            f"There are {len(filtered_badge_data)} booster packs which can be immediately crafted. "
+            f"({len(aggregated_badge_data) - len(filtered_badge_data)} excluded because of cooldown)",
         )
 
     return filtered_badge_data

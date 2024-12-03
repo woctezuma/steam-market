@@ -36,7 +36,9 @@ def apply_workflow(
         retrieve_market_orders_online = True
 
         print(
-            f"Overwriting two arguments:\n\ti) retrieve listings: {retrieve_listings_from_scratch},\n\tii) retrieve market orders: {retrieve_market_orders_online}.",
+            f"Overwriting two arguments:\n"
+            f"\ti) retrieve listings: {retrieve_listings_from_scratch},\n"
+            f"\tii) retrieve market orders: {retrieve_market_orders_online}.",
         )
 
     filtered_badge_data = get_filtered_badge_data(
