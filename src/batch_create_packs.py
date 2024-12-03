@@ -140,7 +140,7 @@ def main(
         from_javascript=from_javascript,
     )
 
-    creation_results, next_creation_times = create_packs_for_app_ids(
+    _creation_results, _next_creation_times = create_packs_for_app_ids(
         manually_selected_app_ids,
         filtered_badge_data=filtered_badge_data,
         check_ask_price=check_ask_price,

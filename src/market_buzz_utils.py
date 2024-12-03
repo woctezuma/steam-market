@@ -91,7 +91,7 @@ def sort_according_to_buzz(
     if marketable_market_order_dict is None:
         (
             marketable_market_order_dict,
-            unknown_market_order_dict,
+            _unknown_market_order_dict,
         ) = filter_out_unmarketable_packs(market_order_dict)
 
     return sorted(

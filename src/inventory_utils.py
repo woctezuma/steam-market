@@ -474,7 +474,7 @@ def main() -> None:
 
     price_dict_for_listing_hashes = {listing_hash: price_in_cents}
 
-    creation_results, sale_results = create_then_sell_booster_packs_for_batch(
+    _creation_results, _sale_results = create_then_sell_booster_packs_for_batch(
         price_dict_for_listing_hashes,
     )
 
