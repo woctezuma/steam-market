@@ -34,15 +34,13 @@ def get_steam_market_order_url() -> str:
 
 
 def get_market_order_parameters(item_nameid: str) -> dict[str, str]:
-    params = {}
-
-    params["country"] = "FR"
-    params["language"] = "english"
-    params["currency"] = "3"
-    params["item_nameid"] = item_nameid
-    params["two_factor"] = "0"
-
-    return params
+    return {
+        "country": "FR",
+        "language": "english",
+        "currency": "3",
+        "item_nameid": item_nameid,
+        "two_factor": "0",
+    }
 
 
 def get_market_order_headers() -> dict[str, str]:
@@ -379,8 +377,7 @@ def main() -> bool:
 
     app_id = listing_hash.split("-", maxsplit=1)[0]
 
-    badge_data: dict[str, dict] = {}
-    badge_data[app_id] = {}
+    badge_data: dict[str, dict] = {app_id: {}}
     badge_data[app_id]["listing_hash"] = listing_hash
 
     download_market_order_data_batch(
