@@ -377,7 +377,7 @@ def get_filtered_badge_data(
     from_javascript: bool = False,
 ) -> dict[str, dict]:
     aggregated_badge_data = load_aggregated_badge_data(
-        retrieve_listings_from_scratch,
+        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
         enforced_sack_of_gems_price=enforced_sack_of_gems_price,
         minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
         from_javascript=from_javascript,
