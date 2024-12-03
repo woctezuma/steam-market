@@ -16,9 +16,7 @@ from src.utils import (
 
 
 def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -> bool:
-    next_creation_time = badge_data["next_creation_time"]
-
-    return bool(next_creation_time is not None)
+    return badge_data["next_creation_time"] is not None
 
 
 def filter_out_badges_never_crafted(
