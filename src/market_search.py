@@ -65,17 +65,17 @@ def get_search_parameters(
     column_to_sort_by = "name"
     sort_direction = "asc"
 
-    params = {}
-
-    params["norender"] = "1"
-    params["category_753_Game[]"] = "any"
-    params["category_753_droprate[]"] = tag_drop_rate_str
-    params["category_753_item_class[]"] = f"tag_item_class_{tag_item_class_no}"
-    params["appid"] = "753"
-    params["sort_column"] = column_to_sort_by
-    params["sort_dir"] = sort_direction
-    params["start"] = str(start_index)
-    params["count"] = str(delta_index)
+    params = {
+        "norender": "1",
+        "category_753_Game[]": "any",
+        "category_753_droprate[]": tag_drop_rate_str,
+        "category_753_item_class[]": f"tag_item_class_{tag_item_class_no}",
+        "appid": "753",
+        "sort_column": column_to_sort_by,
+        "sort_dir": sort_direction,
+        "start": str(start_index),
+        "count": str(delta_index),
+    }
 
     if tag_item_class_no == get_tag_item_class_no_for_trading_cards():
         params["category_753_cardborder[]"] = (
@@ -177,11 +177,11 @@ def get_all_listings(
             listings: dict[str, dict] = {}
             for listing in result["results"]:
                 listing_hash = listing["hash_name"]
-
-                listings[listing_hash] = {}
-                listings[listing_hash]["sell_listings"] = listing["sell_listings"]
-                listings[listing_hash]["sell_price"] = listing["sell_price"]
-                listings[listing_hash]["sell_price_text"] = listing["sell_price_text"]
+                listings[listing_hash] = {
+                    "sell_listings": listing["sell_listings"],
+                    "sell_price": listing["sell_price"],
+                    "sell_price_text": listing["sell_price_text"],
+                }
 
         else:
             status_code = resp_data.status_code if resp_data else None
