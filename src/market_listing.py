@@ -6,8 +6,8 @@ from http import HTTPStatus
 import requests
 from bs4 import BeautifulSoup
 
-from src.json_utils import load_json, save_json
 from src.api_utils import get_rate_limits
+from src.json_utils import load_json, save_json
 from src.market_search import load_all_listings
 from src.personal_info import (
     get_cookie_dict,
@@ -15,7 +15,6 @@ from src.personal_info import (
 )
 from src.utils import (
     TIMEOUT_IN_SECONDS,
-    get_cushioned_cooldown_in_seconds,
     get_listing_details_output_file_name,
 )
 
