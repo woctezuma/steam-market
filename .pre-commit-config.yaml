@@ -33,10 +33,3 @@ repos:
       --indent, "4",
       --no-sort-keys
       ]
-
--   repo: https://github.com/dosisod/refurb
-    rev: v2.0.0
-    hooks:
-    - id: refurb
-      args: [--python-version, "3.12"]
-      stages: [manual]
