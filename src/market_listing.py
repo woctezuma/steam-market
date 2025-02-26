@@ -14,7 +14,7 @@ from src.personal_info import (
     update_and_save_cookie_to_disk_if_values_changed,
 )
 from src.utils import (
-    TIMEOUT_IN_SECONDS,
+    LISTING_TIMEOUT_IN_SECONDS,
     get_listing_details_output_file_name,
 )
 
@@ -267,10 +267,14 @@ def get_listing_details(
             url,
             params=req_data,
             cookies=cookie,
-            timeout=TIMEOUT_IN_SECONDS,
+            timeout=LISTING_TIMEOUT_IN_SECONDS,
         )
     else:
-        resp_data = requests.get(url, params=req_data, timeout=TIMEOUT_IN_SECONDS)
+        resp_data = requests.get(
+            url,
+            params=req_data,
+            timeout=LISTING_TIMEOUT_IN_SECONDS,
+        )
 
     if resp_data.ok:
         html_doc = resp_data.text

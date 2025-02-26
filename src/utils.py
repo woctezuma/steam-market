@@ -3,6 +3,8 @@ from pathlib import Path
 from src.tag_utils import get_tag_drop_rate_str
 
 TIMEOUT_IN_SECONDS = 5
+SEARCH_TIMEOUT_IN_SECONDS = 3 * TIMEOUT_IN_SECONDS
+LISTING_TIMEOUT_IN_SECONDS = 3 * TIMEOUT_IN_SECONDS
 
 
 def get_cushioned_cooldown_in_seconds(num_minutes: int) -> int:
