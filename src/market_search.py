@@ -15,7 +15,7 @@ from src.personal_info import (
 )
 from src.tag_utils import get_tag_drop_rate_str
 from src.utils import (
-    TIMEOUT_IN_SECONDS,
+    SEARCH_TIMEOUT_IN_SECONDS,
     get_listing_output_file_name,
 )
 
@@ -144,13 +144,13 @@ def get_all_listings(
                     url,
                     params=req_data,
                     cookies=cookie,
-                    timeout=TIMEOUT_IN_SECONDS,
+                    timeout=SEARCH_TIMEOUT_IN_SECONDS,
                 )
             else:
                 resp_data = requests.get(
                     url,
                     params=req_data,
-                    timeout=TIMEOUT_IN_SECONDS,
+                    timeout=SEARCH_TIMEOUT_IN_SECONDS,
                 )
         except ConnectionError:
             resp_data = None
