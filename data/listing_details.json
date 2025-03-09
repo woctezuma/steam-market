@@ -53542,5 +53542,35 @@
         "item_nameid": 176486153,
         "is_marketable": true,
         "item_type_no": null
+    },
+    "2479830-The Braves Booster Pack": {
+        "item_nameid": 176462223,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1038370-Trials of Fire Booster Pack": {
+        "item_nameid": 176243317,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1815570-Aces and Adventures Booster Pack": {
+        "item_nameid": 176363869,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "2977660-Cats Booster Pack": {
+        "item_nameid": 176448414,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "1730680-Klonoa Phantasy Reverie Series Booster Pack": {
+        "item_nameid": 176322026,
+        "is_marketable": true,
+        "item_type_no": null
+    },
+    "651340-Shephy Booster Pack": {
+        "item_nameid": 176326436,
+        "is_marketable": true,
+        "item_type_no": null
     }
 }
