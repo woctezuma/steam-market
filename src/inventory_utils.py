@@ -250,7 +250,7 @@ def sell_booster_pack(
 
     # Format the price (in cents) as an integer before sending a request to Steam API
     # Otherwise, a price like 18.0 would still work, but a price like 14.000000000000002 would return status code 400.
-    price_in_cents = round(price_in_cents)
+    price_in_cents = price_in_cents
 
     url = get_steam_market_sell_url()
     req_data = get_market_sell_parameters(
