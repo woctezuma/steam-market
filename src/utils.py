@@ -10,7 +10,7 @@ LISTING_TIMEOUT_IN_SECONDS = 3 * TIMEOUT_IN_SECONDS
 
 
 def get_jar(resp_data: requests.Response) -> dict:
-    return dict(resp_data.cookies)
+    return resp_data.cookies.get_dict()
 
 
 def get_cushioned_cooldown_in_seconds(num_minutes: int) -> int:
