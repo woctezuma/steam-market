@@ -17,6 +17,7 @@ from src.utils import (
     convert_listing_hash_to_app_id,
     convert_listing_hash_to_app_name,
     get_data_folder,
+    get_jar,
     get_next_creation_time_file_name,
 )
 
@@ -101,7 +102,7 @@ def download_steam_inventory(
         steam_inventory = resp_data.json()
 
         if has_secured_cookie:
-            jar = dict(resp_data.cookies)
+            jar = get_jar(resp_data)
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if save_to_disk:
@@ -180,7 +181,7 @@ def create_booster_pack(
         print(f"\n[appID = {app_id}] Booster pack successfully created.")
         result = resp_data.json()
 
-        jar = dict(resp_data.cookies)
+        jar = get_jar(resp_data)
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
     else:
         status_code = resp_data.status_code
@@ -272,7 +273,7 @@ def sell_booster_pack(
         # {"success":true,"requires_confirmation":0}
         result = resp_data.json()
 
-        jar = dict(resp_data.cookies)
+        jar = get_jar(resp_data)
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         if result["success"]:

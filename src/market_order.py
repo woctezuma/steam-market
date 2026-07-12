@@ -18,10 +18,7 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.utils import (
-    TIMEOUT_IN_SECONDS,
-    get_market_order_file_name,
-)
+from src.utils import TIMEOUT_IN_SECONDS, get_jar, get_market_order_file_name
 
 type MarketOrderData = dict[str, float | int | bool]
 
@@ -113,7 +110,7 @@ def download_market_order_data(
         result = resp_data.json()
 
         if has_secured_cookie:
-            jar = dict(resp_data.cookies)
+            jar = get_jar(resp_data)
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         try:

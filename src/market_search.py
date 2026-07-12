@@ -14,10 +14,7 @@ from src.personal_info import (
     update_and_save_cookie_to_disk_if_values_changed,
 )
 from src.tag_utils import get_tag_drop_rate_str
-from src.utils import (
-    SEARCH_TIMEOUT_IN_SECONDS,
-    get_listing_output_file_name,
-)
+from src.utils import SEARCH_TIMEOUT_IN_SECONDS, get_jar, get_listing_output_file_name
 
 
 def get_steam_market_search_url() -> str:
@@ -162,7 +159,7 @@ def get_all_listings(
             result = resp_data.json()
 
             if has_secured_cookie:
-                jar = dict(resp_data.cookies)
+                jar = get_jar(resp_data)
                 cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
             num_listings_based_on_latest_query = result["total_count"]

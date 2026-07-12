@@ -18,6 +18,7 @@ from src.utils import (
     convert_listing_hash_to_app_id,
     get_bullet_point_for_display,
     get_goo_details_file_nam_for_for_foil_cards,
+    get_jar,
     get_listing_details_output_file_name_for_foil_cards,
     get_listing_output_file_name_for_foil_cards,
 )
@@ -167,7 +168,7 @@ def query_goo_value(
         result = resp_data.json()
 
         if has_secured_cookie:
-            jar = dict(resp_data.cookies)
+            jar = get_jar(resp_data)
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         goo_value = int(result["goo_value"])

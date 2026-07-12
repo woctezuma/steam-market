@@ -15,6 +15,7 @@ from src.personal_info import (
 )
 from src.utils import (
     LISTING_TIMEOUT_IN_SECONDS,
+    get_jar,
     get_listing_details_output_file_name,
 )
 
@@ -280,7 +281,7 @@ def get_listing_details(
         html_doc = resp_data.text
 
         if has_secured_cookie:
-            jar = dict(resp_data.cookies)
+            jar = get_jar(resp_data)
             cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
 
         item_nameid, is_marketable, item_type_no = parse_item_name_id(html_doc)

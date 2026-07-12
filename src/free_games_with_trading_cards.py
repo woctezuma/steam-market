@@ -11,7 +11,7 @@ from src.personal_info import (
     get_cookie_dict,
     update_and_save_cookie_to_disk_if_values_changed,
 )
-from src.utils import TIMEOUT_IN_SECONDS, convert_listing_hash_to_app_id
+from src.utils import TIMEOUT_IN_SECONDS, convert_listing_hash_to_app_id, get_jar
 
 
 def get_user_data_url() -> str:
@@ -30,7 +30,7 @@ def download_user_data() -> dict | None:
     if resp_data.ok:
         result = resp_data.json()
 
-        jar = dict(resp_data.cookies)
+        jar = get_jar(resp_data)
         cookie = update_and_save_cookie_to_disk_if_values_changed(cookie, jar)
     else:
         result = None
