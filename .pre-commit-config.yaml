@@ -7,12 +7,12 @@ repos:
     hooks:
     - id: ruff-check
       args: [
-      --fix,
-      --unsafe-fixes,
-      --exit-non-zero-on-fix,
-      --target-version, "py313",
-      --select, "ALL",
-      --ignore, "A004,C901,CPY001,D,DOC,E501,ERA001,INP001,PLR091,PLR2004,RUF001,RUF057,S101,T201"
+        --fix,
+        --unsafe-fixes,
+        --exit-non-zero-on-fix,
+        --target-version, "py313",
+        --select, "ALL",
+        --ignore, "A004,C901,CPY001,D,DOC,E501,ERA001,INP001,PLR091,PLR2004,RUF001,RUF057,S101,T201"
       ]
     - id: ruff-format
 
@@ -28,8 +28,8 @@ repos:
     hooks:
     - id: pretty-format-json
       args: [
-      --autofix,
-      --no-ensure-ascii,
-      --indent, "4",
-      --no-sort-keys
+        --autofix,
+        --no-ensure-ascii,
+        --indent, "4",
+        --no-sort-keys
       ]
