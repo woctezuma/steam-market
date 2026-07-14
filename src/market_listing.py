@@ -218,7 +218,7 @@ def parse_marketability_from_script(last_script: str) -> bool | None:
 
 
 def parse_item_name_id_from_script(last_script: str) -> int | None:
-    last_script_token = last_script.split("(")[-1]
+    last_script_token = last_script.rsplit("(", maxsplit=1)[-1]
 
     item_nameid_str = last_script_token.split(");")[0]
 
