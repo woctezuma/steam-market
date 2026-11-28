@@ -1,4 +1,5 @@
 import datetime
+from typing import Any
 
 from src.json_utils import load_json
 from src.utils import get_next_creation_time_file_name
@@ -151,7 +152,7 @@ def get_crafting_cooldown_duration_in_seconds() -> int:
 
 
 def determine_whether_a_booster_pack_can_be_crafted(
-    badge_data: dict,
+    badge_data: dict[str, Any],
     current_time: datetime.datetime | None = None,
 ) -> bool:
     if current_time is None:

@@ -4,6 +4,8 @@
 # ALL the computations are performed with fee included: opportunities are compared from the perspective of the buyer.
 #
 # In summary, we do not care about buy orders here! We only care about sell orders!
+import argparse
+
 from src.market_foil_utils import (
     build_dictionary_of_representative_listing_hashes,
     determine_whether_an_arbitrage_might_exist_for_foil_cards,
@@ -225,22 +227,51 @@ def apply_workflow_for_foil_cards(
     return True
 
 
-def main() -> bool:
-    retrieve_listings_from_scratch = True
-    price_threshold_in_cents_for_a_foil_card = None
-    retrieve_gem_price_from_scratch = True
-    enforced_sack_of_gems_price = None  # price in euros
-    start_index = 0  # to resume the update in case of wrong status code
-    verbose = True
-
-    apply_workflow_for_foil_cards(
-        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-        price_threshold_in_cents_for_a_foil_card=price_threshold_in_cents_for_a_foil_card,
-        retrieve_gem_price_from_scratch=retrieve_gem_price_from_scratch,
-        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-        start_index=start_index,
-        verbose=verbose,
+def build_argument_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Find market arbitrages with foil cards, e.g. buy a foil card and turn it into more gems than its cost.",
     )
+
+    parser.add_argument(
+        "--retrieve-listings-from-scratch",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--price-threshold-in-cents-for-a-foil-card",
+        type=float,
+        default=None,
+    )
+    parser.add_argument(
+        "--retrieve-gem-price-from-scratch",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--enforced-sack-of-gems-price",
+        type=float,
+        default=None,
+        help="price in euros",
+    )
+    parser.add_argument(
+        "--start-index",
+        type=int,
+        default=0,
+        help="to resume the update in case of wrong status code",
+    )
+    parser.add_argument(
+        "--verbose",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> bool:
+    args = build_argument_parser().parse_args(argv)
+
+    apply_workflow_for_foil_cards(**vars(args))
 
     return True
 

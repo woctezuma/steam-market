@@ -11,6 +11,8 @@
 # Therefore, the cost of crafting a badge is identical for every game: that is twice the price of a sack of 1000 gems.
 # If you pay 0.31 € per sack of gems, which you then turn into booster packs, then your *badge* crafting cost is 0.62 €.
 
+import argparse
+
 from src.market_arbitrage_utils import find_badge_arbitrages, print_arbitrages
 from src.market_buzz_utils import (
     filter_out_unmarketable_packs,
@@ -39,7 +41,7 @@ from src.utils import (
 )
 
 
-def main(
+def apply_workflow(
     *,
     look_for_profile_backgrounds: bool = True,  # if True, profile backgrounds, otherwise, emoticons.
     retrieve_listings_from_scratch: bool = False,
@@ -185,17 +187,63 @@ def main(
     return True
 
 
-if __name__ == "__main__":
-    main(
-        look_for_profile_backgrounds=True,  # if True, profile backgrounds, otherwise, emoticons.
-        retrieve_listings_from_scratch=False,
-        retrieve_listings_with_another_rarity_tag_from_scratch=False,
-        retrieve_market_orders_online=True,
-        focus_on_listing_hashes_never_seen_before=True,
-        price_threshold_in_cents=None,
-        drop_rate_estimates_for_common_rarity=None,
-        num_packs_to_display=100,
-        enforce_cooldown=True,
-        allow_to_skip_dummy_data=False,
-        verbose=True,
+def build_argument_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Detect gambles which might be worth a try, i.e. profile backgrounds and emoticons of Common rarity with high bid orders.",
     )
+
+    parser.add_argument(
+        "--look-for-profile-backgrounds",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="if enabled, profile backgrounds, otherwise, emoticons",
+    )
+    parser.add_argument(
+        "--retrieve-listings-from-scratch",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--retrieve-listings-with-another-rarity-tag-from-scratch",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--retrieve-market-orders-online",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--focus-on-listing-hashes-never-seen-before",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument("--price-threshold-in-cents", type=float, default=None)
+    parser.add_argument("--num-packs-to-display", type=int, default=100)
+    parser.add_argument(
+        "--enforce-cooldown",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--allow-to-skip-dummy-data",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--verbose",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> bool:
+    args = build_argument_parser().parse_args(argv)
+
+    return apply_workflow(**vars(args), drop_rate_estimates_for_common_rarity=None)
+
+
+if __name__ == "__main__":
+    main()

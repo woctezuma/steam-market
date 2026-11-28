@@ -6,6 +6,8 @@
 # NB²: we assume that the drop-rates are identical for every game. However, I have suspicions that the drop-rates may
 # vary based on the number of items of each rarity.
 
+from typing import Any
+
 from src.utils import (
     get_category_name_for_emoticons,
     get_category_name_for_profile_backgrounds,
@@ -32,10 +34,10 @@ def clamp_proportion(input_proportion: float) -> float:
 def get_drop_rate_estimates_based_on_item_rarity_pattern(
     *,
     verbose: bool = True,
-) -> dict:
+) -> dict[str, Any]:
     # Drop-rate estimates conditionally on the item rarity pattern C/UC/R (the numbers of possible items of each rarity)
 
-    drop_rate_estimates: dict = {}
+    drop_rate_estimates: dict[str, Any] = {}
 
     drop_rate_field = get_drop_rate_field()
     badge_count_field = get_badge_count_field()
@@ -165,10 +167,10 @@ def get_drop_rate_estimates_based_on_item_rarity_pattern(
     return drop_rate_estimates
 
 
-def get_drop_rate_estimates(*, verbose: bool = True) -> dict:
+def get_drop_rate_estimates(*, verbose: bool = True) -> dict[str, Any]:
     # Drop-rate estimates conditionally on the category (profile backgrounds, emoticons)
 
-    drop_rate_estimates: dict = {}
+    drop_rate_estimates: dict[str, Any] = {}
 
     category_field = get_category_name_for_profile_backgrounds()
     drop_rate_field = get_drop_rate_field()

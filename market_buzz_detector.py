@@ -1,5 +1,6 @@
 # Objective: detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders
 
+import argparse
 from typing import Final
 
 from src.market_arbitrage_utils import (
@@ -24,7 +25,7 @@ DEFAULT_MIN_NUM_LISTINGS: Final[int] = 3
 DEFAULT_NUM_PACKS_TO_DISPLAY: Final[int] = 10
 
 
-def main(
+def apply_workflow(
     *,
     retrieve_listings_from_scratch: bool = False,
     retrieve_market_orders_online: bool = False,
@@ -134,16 +135,54 @@ def main(
     )
 
 
-if __name__ == "__main__":
-    main(
-        retrieve_listings_from_scratch=True,
-        retrieve_market_orders_online=True,
-        force_update_from_steam_card_exchange=True,
-        enforced_sack_of_gems_price=None,
-        minimum_allowed_sack_of_gems_price=None,
-        use_a_constant_price_threshold=False,
-        min_sell_price=30,
-        min_num_listings=3,
-        num_packs_to_display=100,
-        verbose=True,
+def build_argument_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Detect the buzz, for games which I do not own yet, i.e. find packs which are likely to have high bid orders.",
     )
+
+    parser.add_argument(
+        "--retrieve-listings-from-scratch",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--retrieve-market-orders-online",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--force-update-from-steam-card-exchange",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument("--enforced-sack-of-gems-price", type=float, default=None)
+    parser.add_argument(
+        "--minimum-allowed-sack-of-gems-price",
+        type=float,
+        default=None,
+    )
+    parser.add_argument(
+        "--use-a-constant-price-threshold",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument("--min-sell-price", type=int, default=30)
+    parser.add_argument("--min-num-listings", type=int, default=3)
+    parser.add_argument("--num-packs-to-display", type=int, default=100)
+    parser.add_argument(
+        "--verbose",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> None:
+    args = build_argument_parser().parse_args(argv)
+
+    apply_workflow(**vars(args))
+
+
+if __name__ == "__main__":
+    main()
