@@ -1,14 +1,15 @@
 import json
 from pathlib import Path
+from typing import Any
 
 
-def load_json(fname: str) -> dict:
+def load_json(fname: str) -> dict[str, Any]:
     with Path(fname).open(encoding="utf8") as f:
         return json.load(f)
 
 
 def save_json(
-    data: dict,
+    data: dict[str, Any],
     fname: str,
     *,
     prettify: bool = True,

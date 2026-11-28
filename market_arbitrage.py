@@ -1,6 +1,6 @@
 # Objective: find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).
 
-
+import argparse
 from typing import Annotated
 
 from src.inventory_utils import create_then_sell_booster_packs_for_batch
@@ -121,32 +121,67 @@ def apply_workflow(
     return True
 
 
-def main() -> bool:
-    retrieve_listings_from_scratch = True
-    retrieve_market_orders_online = True
-    enforced_sack_of_gems_price = None
-    minimum_allowed_sack_of_gems_price = None
-    automatically_create_then_sell_booster_packs = True
-    profit_threshold = 0.0  # profit in euros
-    quick_check_with_tracked_booster_packs = False
-    enforce_update_of_marketability_status = True
-    from_javascript = True
-    profile_id = None
-    verbose = True
-
-    apply_workflow(
-        retrieve_listings_from_scratch=retrieve_listings_from_scratch,
-        retrieve_market_orders_online=retrieve_market_orders_online,
-        enforced_sack_of_gems_price=enforced_sack_of_gems_price,
-        minimum_allowed_sack_of_gems_price=minimum_allowed_sack_of_gems_price,
-        automatically_create_then_sell_booster_packs=automatically_create_then_sell_booster_packs,
-        profit_threshold=profit_threshold,
-        quick_check_with_tracked_booster_packs=quick_check_with_tracked_booster_packs,
-        enforce_update_of_marketability_status=enforce_update_of_marketability_status,
-        from_javascript=from_javascript,
-        profile_id=profile_id,
-        verbose=verbose,
+def build_argument_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Find market arbitrages, e.g. sell a pack for more (fee excluded) than the cost to craft it (fee included).",
     )
+
+    parser.add_argument(
+        "--retrieve-listings-from-scratch",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--retrieve-market-orders-online",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument("--enforced-sack-of-gems-price", type=float, default=None)
+    parser.add_argument(
+        "--minimum-allowed-sack-of-gems-price",
+        type=float,
+        default=None,
+    )
+    parser.add_argument(
+        "--automatically-create-then-sell-booster-packs",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--profit-threshold",
+        type=float,
+        default=0.0,
+        help="profit in euros",
+    )
+    parser.add_argument(
+        "--quick-check-with-tracked-booster-packs",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--enforce-update-of-marketability-status",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument(
+        "--from-javascript",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument("--profile-id", type=str, default=None)
+    parser.add_argument(
+        "--verbose",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> bool:
+    args = build_argument_parser().parse_args(argv)
+
+    apply_workflow(**vars(args))
 
     return True
 

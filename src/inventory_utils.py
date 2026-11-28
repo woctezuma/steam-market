@@ -1,4 +1,5 @@
 from http import HTTPStatus
+from typing import Any
 
 import requests
 
@@ -49,7 +50,9 @@ def get_steam_inventory_file_name(profile_id: str) -> str:
     return get_data_folder() + f"inventory_{profile_id}.json"
 
 
-def load_steam_inventory_from_disk(profile_id: str | None = None) -> dict | None:
+def load_steam_inventory_from_disk(
+    profile_id: str | None = None,
+) -> dict[str, Any] | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -67,7 +70,7 @@ def load_steam_inventory(
     profile_id: str | None = None,
     *,
     update_steam_inventory: bool = False,
-) -> dict | None:
+) -> dict[str, Any] | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -80,7 +83,7 @@ def download_steam_inventory(
     profile_id: str | None = None,
     *,
     save_to_disk: bool = True,
-) -> dict | None:
+) -> dict[str, Any] | None:
     if profile_id is None:
         profile_id = get_my_steam_profile_id()
 
@@ -151,7 +154,7 @@ def create_booster_pack(
     *,
     is_marketable: bool = True,
     verbose: bool = True,
-) -> dict | None:
+) -> dict[str, Any] | None:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -240,7 +243,7 @@ def sell_booster_pack(
     price_in_cents: int,  # this is the money which you, as the seller, will receive
     *,
     verbose: bool = True,
-) -> dict | None:
+) -> dict[str, Any] | None:
     cookie = get_cookie_dict()
     has_secured_cookie = bool(len(cookie) > 0)
 
@@ -300,7 +303,7 @@ def sell_booster_pack(
 
 def retrieve_asset_id(
     listing_hash: str,
-    steam_inventory: dict | None = None,
+    steam_inventory: dict[str, Any] | None = None,
     *,
     focus_on_marketable_items: bool = True,
     profile_id: str | None = None,

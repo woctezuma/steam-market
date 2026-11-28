@@ -1,4 +1,13 @@
+import json
+import re
+import shutil
+import tempfile
 import unittest
+from pathlib import Path
+from typing import Any
+from unittest import mock
+
+import responses
 
 import market_arbitrage
 from src import (
@@ -14,6 +23,103 @@ from src import (
     transaction_fee,
     utils,
 )
+
+REPO_ROOT = Path(__file__).resolve().parent
+
+MOCK_LISTING_HTML = """<html><body>
+<script>
+var g_rgAssets = {"753":{"6":{"123":{"owner_actions":[{"link":"javascript:GetGooValue( '6', '123', 753, 3, 1 )","name":"Turn into Gems..."}]}}}};
+var g_rgListingInfo = {"marketable":1};
+Market_LoadOrderSpread( 123456789 );
+</script>
+</body></html>
+"""
+
+MOCK_MARKET_ORDER_DATA = {
+    "success": 1,
+    "sell_order_graph": [[0.25, 10]],
+    "buy_order_graph": [[0.2, 100]],
+    "highest_buy_order": "20",
+    "lowest_sell_order": "25",
+}
+
+MOCK_SEARCH_RESULTS = {"success": 1, "total_count": 0, "results": []}
+
+DUMMY_COOKIE = {
+    "browserid": "dummy_browserid",
+    "sessionid": "dummy_sessionid",
+    "steamDidLoginRefresh": "dummy_steamDidLoginRefresh",
+    "steamLoginSecure": "dummy_steamLoginSecure",
+}
+
+TEST_STATE: dict[str, str] = {}
+
+requests_mock = responses.RequestsMock(assert_all_requests_are_fired=False)
+patchers: list[Any] = []
+
+
+def setUpModule() -> None:
+    # Run the whole test suite offline: mock every Steam endpoint, and redirect
+    # data files (including the cookie file) to a temporary copy of data/.
+    tmp_dir = tempfile.mkdtemp(prefix="steam-market-tests-")
+    TEST_STATE["tmp_dir"] = tmp_dir
+
+    data_dir = str(Path(tmp_dir) / "data") + "/"
+    shutil.copytree(REPO_ROOT / "data", Path(tmp_dir) / "data")
+
+    cookie_file = Path(tmp_dir) / "personal_info.json"
+    cookie_file.write_text(json.dumps(DUMMY_COOKIE), encoding="utf8")
+
+    requests_mock.start()
+    requests_mock.add(
+        responses.GET,
+        re.compile(r"https://steamcommunity\.com/market/listings/\d+/.*"),
+        body=MOCK_LISTING_HTML,
+        status=200,
+        content_type="text/html",
+    )
+    requests_mock.add(
+        responses.GET,
+        "https://steamcommunity.com/market/itemordershistogram",
+        json=MOCK_MARKET_ORDER_DATA,
+        status=200,
+    )
+    requests_mock.add(
+        responses.GET,
+        "https://steamcommunity.com/market/search/render/",
+        json=MOCK_SEARCH_RESULTS,
+        status=200,
+    )
+    requests_mock.add(responses.GET, "https://steamcommunity.com/", status=200)
+
+    patchers.extend(
+        mock.patch(target, return_value=data_dir)
+        for target in (
+            "src.utils.get_data_folder",
+            "src.inventory_utils.get_data_folder",
+        )
+    )
+    patchers.append(
+        mock.patch(
+            "src.personal_info.get_steam_cookie_file_name",
+            return_value=str(cookie_file),
+        ),
+    )
+    patchers.append(mock.patch("time.sleep"))
+
+    for patcher in patchers:
+        patcher.start()
+
+
+def tearDownModule() -> None:
+    for patcher in patchers:
+        patcher.stop()
+    patchers.clear()
+
+    requests_mock.stop()
+    requests_mock.reset()
+
+    shutil.rmtree(TEST_STATE["tmp_dir"], ignore_errors=True)
 
 
 class TestMarketListingMethods(unittest.TestCase):
@@ -80,14 +186,10 @@ class TestMarketUtilsMethods(unittest.TestCase):
 class TestMarketArbitrageMethods(unittest.TestCase):
     @staticmethod
     def test_apply_workflow() -> None:
-        try:
-            flag = market_arbitrage.apply_workflow(
-                retrieve_listings_from_scratch=False,
-                retrieve_market_orders_online=False,
-            )
-        except KeyError:
-            # The steamLoginSecure cookie cannot be made public for the test.
-            flag = True
+        flag = market_arbitrage.apply_workflow(
+            retrieve_listings_from_scratch=False,
+            retrieve_market_orders_online=False,
+        )
 
         assert flag
 
@@ -95,13 +197,7 @@ class TestMarketArbitrageMethods(unittest.TestCase):
 class TestMarketOrderMethods(unittest.TestCase):
     @staticmethod
     def test_main() -> None:
-        try:
-            flag = market_order.main()
-        except KeyError:
-            # The steamLoginSecure cookie cannot be made public for the test.
-            flag = True
-
-        assert flag
+        assert market_order.main() is True
 
 
 class TestUtilsMethods(unittest.TestCase):

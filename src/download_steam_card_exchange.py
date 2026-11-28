@@ -1,6 +1,7 @@
 # Objective: automatically download the number of cards per set from SteamCardExchange.net
 
 import time
+from typing import Any
 
 import requests
 
@@ -28,7 +29,7 @@ def get_steamcardexchange_api_params() -> dict[str, str]:
 
 
 def save_data_from_steam_card_exchange(
-    response: dict,
+    response: dict[str, Any],
     steam_card_exchange_file_name: str | None = None,
 ) -> None:
     if steam_card_exchange_file_name is None:
@@ -42,7 +43,7 @@ def download_data_from_steam_card_exchange(
     steam_card_exchange_file_name: str | None = None,
     *,
     save_to_disk: bool = True,
-) -> dict | None:
+) -> dict[str, Any] | None:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -73,7 +74,7 @@ def download_data_from_steam_card_exchange(
 
 def load_data_from_steam_card_exchange(
     steam_card_exchange_file_name: str | None = None,
-) -> dict | None:
+) -> dict[str, Any] | None:
     if steam_card_exchange_file_name is None:
         steam_card_exchange_file_name = get_steam_card_exchange_file_name()
 
@@ -97,7 +98,7 @@ def compute_gem_amount_required_to_craft_booster_pack(num_cards_per_set: int) ->
 
 
 def parse_data_from_steam_card_exchange(
-    response: dict | None = None,
+    response: dict[str, Any] | None = None,
     *,
     force_update_from_steam_card_exchange: bool = False,
     steam_card_exchange_file_name: str | None = None,

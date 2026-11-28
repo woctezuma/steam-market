@@ -1,3 +1,5 @@
+from typing import Any
+
 from src.creation_time_utils import (
     determine_whether_a_booster_pack_can_be_crafted,
     fill_in_badges_with_next_creation_times_loaded_from_disk,
@@ -15,7 +17,9 @@ from src.utils import (
 )
 
 
-def determine_whether_booster_pack_was_crafted_at_least_once(badge_data: dict) -> bool:
+def determine_whether_booster_pack_was_crafted_at_least_once(
+    badge_data: dict[str, Any],
+) -> bool:
     return badge_data["next_creation_time"] is not None
 
 
@@ -73,7 +77,7 @@ def filter_out_badges_recently_crafted(
 
 
 def determine_whether_an_arbitrage_might_exist(
-    badge_data: dict,
+    badge_data: dict[str, Any],
     user_chosen_price_threshold: float | None = None,
 ) -> bool:
     sell_price_including_fee = badge_data["sell_price"]
@@ -103,7 +107,7 @@ def determine_whether_an_arbitrage_might_exist(
     return bool(price_threshold < sell_price_without_fee)
 
 
-def determine_whether_sell_price_is_unknown(badge_data: dict) -> bool:
+def determine_whether_sell_price_is_unknown(badge_data: dict[str, Any]) -> bool:
     sell_price_including_fee = badge_data["sell_price"]
 
     sell_price_was_not_retrieved = bool(sell_price_including_fee < 0)
@@ -161,7 +165,7 @@ def filter_out_badges_with_low_sell_price(
 
 
 def find_badge_arbitrages(
-    badge_data: dict,
+    badge_data: dict[str, Any],
     market_order_dict: dict[str, dict] | None = None,
     *,
     verbose: bool = False,

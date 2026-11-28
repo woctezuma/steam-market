@@ -9,7 +9,7 @@ SEARCH_TIMEOUT_IN_SECONDS = 3 * TIMEOUT_IN_SECONDS
 LISTING_TIMEOUT_IN_SECONDS = 3 * TIMEOUT_IN_SECONDS
 
 
-def get_jar(resp_data: requests.Response) -> dict:
+def get_jar(resp_data: requests.Response) -> dict[str, str]:
     return resp_data.cookies.get_dict()
 
 
